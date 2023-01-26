@@ -18,12 +18,12 @@ import useLocalStorage from './useLocalStorage'
 import { FlipCards, Card } from './FlipCards'
 import { Embed } from './Embed'
 import { Details, DetailsGroup } from './Details'
-import { Callout } from './Callout'
 import StickyHeader from './StickyHeader'
 import TableOfContents from './TableOfContents'
 import Map from './Map'
-import { Quote } from '@prif/shared'
+import { Quote, Callout } from '@prif/shared'
 import * as QuoteStyles from './Quote.module.scss'
+import * as CalloutStyles from './Callout.module.scss'
 
 const shortCodes = {
   Embed,
@@ -43,7 +43,7 @@ const shortCodes = {
   DetailsGroup,
   Tabs,
   Tab,
-  Callout,
+  Callout: ({ ...props }) => <Callout {...props} styles={CalloutStyles} />,
   Map,
 }
 

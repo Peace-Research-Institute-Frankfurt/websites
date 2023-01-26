@@ -1,2 +1,4 @@
 import Quote from './components/Quote'
-export { Quote }
+import Callout from './components/Callout'
+
+export { Quote, Callout }

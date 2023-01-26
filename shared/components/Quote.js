@@ -2,6 +2,7 @@ import React from 'react'
 import MarkdownRenderer from 'react-markdown-renderer'
 
 export default function Quote({ styles, children, cite, type, fullDocument }) {
+  if (!styles) styles = {}
   const quoteType = type || 'speech'
   return (
     <blockquote className={`${styles.container} ${styles[quoteType]}`}>
