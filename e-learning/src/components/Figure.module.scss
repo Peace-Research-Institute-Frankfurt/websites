@@ -13,7 +13,7 @@
     white-space: nowrap;
   }
 }
-.caption {
+.captions {
   font-size: var(--ms--1);
   padding-top: 0.75em;
   line-height: 1.15;
@@ -39,7 +39,7 @@
       margin-bottom: 1.5rem;
     }
   }
-  .caption {
+  .captions {
     @include bp(l) {
       max-width: 18em;
       grid-column: 1 / 3;

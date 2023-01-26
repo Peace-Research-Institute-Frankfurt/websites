@@ -2,15 +2,16 @@ import { MDXProvider } from '@mdx-js/react'
 import React from 'react'
 import { Embed, Vimeo, Youtube } from './Embed'
 import EmbedChoices from './EmbedChoices'
-import Figure from './Figure'
 import Leadin from './Leadin'
 import FileAdapter from './FileAdapter'
-import { Quote } from '@prif/shared'
+import FigureAdapter from './FigureAdapter'
+import { Quote, Figure } from '@prif/shared'
 import * as QuoteStyles from './Quote.module.scss'
 import * as FileStyles from './File.module.scss'
+import * as FigureStyles from './Figure.module.scss'
 
 const shortCodes = {
-  Figure,
+  Figure: ({ ...props }) => <FigureAdapter {...props} styles={FigureStyles} />,
   Quote: ({ ...props }) => <Quote {...props} styles={QuoteStyles} />,
   File: ({ ...props }) => <FileAdapter {...props} styles={FileStyles} />,
   Leadin,

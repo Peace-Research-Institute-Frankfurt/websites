@@ -8,7 +8,7 @@ import Meta from './Meta'
 import { Quiz, RadioChoice, Question } from './Quiz.js'
 import { Choice } from './MultipleChoice'
 import Term from './Term'
-import Figure from './Figure'
+import FigureAdapter from './FigureAdapter'
 import SiteHeader from './SiteHeader'
 import LectureVideo from './LectureVideo'
 import SiteFooter from './SiteFooter'
@@ -24,6 +24,7 @@ import { Quote, Callout, Tab, Tabs } from '@prif/shared'
 import * as QuoteStyles from './Quote.module.scss'
 import * as CalloutStyles from './Callout.module.scss'
 import * as TabStyles from './Tabs.module.scss'
+import * as FigureStyles from './Figure.module.scss'
 
 const shortCodes = {
   Embed,
@@ -33,7 +34,7 @@ const shortCodes = {
   Choice,
   Quote: ({ ...props }) => <Quote {...props} styles={QuoteStyles} />,
   Term,
-  Figure,
+  Figure: ({ ...props }) => <FigureAdapter styles={FigureStyles} {...props} />,
   LectureVideo,
   Event,
   Timeline,
