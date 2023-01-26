@@ -1,0 +1,73 @@
+{
+  "config": {
+    "thumb": ""
+  },
+  "items": [
+    { 
+      "headline": "<small>25. Mar</small> 1957",
+      "copy": "Belgium, Netherlands, Luxembourg, Germany, France, Italy",
+      "image": "images/EC06-1957-58_European_Community_map.svg",
+      "credit": "1/ cmglee, Júlio Reis, Kolja21, <a href='https://commons.wikimedia.org/wiki/File:Enlargement_of_the_European_Union_SMIL.svg'>Enlargement of the European Union SMIL</a>, removed timline, changed label font von HSFK/PRIF, <a href='https://creativecommons.org/licenses/by-sa/2.5/legalcode' rel='license'>CC BY-SA 2.5</a>"
+    },
+    { 
+      "headline": "<small>01. Jan</small> 1973",
+      "copy": "UK, Ireland, Denmark",
+      "image": "images/EC09-1973_European_Community_map.svg",
+      "credit": "2/ cmglee, Júlio Reis, Kolja21, <a href='https://commons.wikimedia.org/wiki/File:Enlargement_of_the_European_Union_SMIL.svg'>Enlargement of the European Union SMIL</a>, removed timline, changed label font von HSFK/PRIF, <a href='https://creativecommons.org/licenses/by-sa/2.5/legalcode' rel='license'>CC BY-SA 2.5</a>"
+    },
+    { 
+      "headline": "<small>01. Jan</small> 1981",
+      "copy": "Greece",
+      "image": "images/EC10-1981_European_Community_map.svg",
+      "credit": "3/ cmglee, Júlio Reis, Kolja21, <a href='https://commons.wikimedia.org/wiki/File:Enlargement_of_the_European_Union_SMIL.svg'>Enlargement of the European Union SMIL</a>, removed timline, changed label font von HSFK/PRIF, <a href='https://creativecommons.org/licenses/by-sa/2.5/legalcode' rel='license'>CC BY-SA 2.5</a>"
+    },
+    { 
+      "headline": "<small>01. Jan</small> 1986",
+      "copy": "Portugal, Spain",
+      "image": "images/EC12-1986_European_Community_map.svg",
+      "credit": "4/ cmglee, Júlio Reis, Kolja21, <a href='https://commons.wikimedia.org/wiki/File:Enlargement_of_the_European_Union_SMIL.svg'>Enlargement of the European Union SMIL</a>, removed timline, changed label font von HSFK/PRIF, <a href='https://creativecommons.org/licenses/by-sa/2.5/legalcode' rel='license'>CC BY-SA 2.5</a>"
+    },
+    { 
+      "headline": "1992",
+      "copy": "?",
+      "image": "images/EU12-1992-93_European_Union_map.svg",
+      "credit": "5/ cmglee, Júlio Reis, Kolja21, <a href='https://commons.wikimedia.org/wiki/File:Enlargement_of_the_European_Union_SMIL.svg'>Enlargement of the European Union SMIL</a>, removed timline, changed label font von HSFK/PRIF, <a href='https://creativecommons.org/licenses/by-sa/2.5/legalcode' rel='license'>CC BY-SA 2.5</a>"
+    },
+    { 
+      "headline": "<small>01. Jan</small> 1995",
+      "copy": "Austria, Finland, Sweden",
+      "image": "images/EU15-1995_European_Union_map.svg",
+      "credit": "6/ cmglee, Júlio Reis, Kolja21, <a href='https://commons.wikimedia.org/wiki/File:Enlargement_of_the_European_Union_SMIL.svg'>Enlargement of the European Union SMIL</a>, removed timline, changed label font von HSFK/PRIF, <a href='https://creativecommons.org/licenses/by-sa/2.5/legalcode' rel='license'>CC BY-SA 2.5</a>"
+    },
+    { 
+      "headline": "<small>01. May</small> 2004",
+      "copy": "Estonia, Latvia, Lithuania, Poland, Czech Republic, Slovakia, Hungary, Slovena, Malta, Cyprus",
+      "image": "images/EU25-2004_European_Union_map.svg",
+      "credit": "7/ cmglee, Júlio Reis, Kolja21, <a href='https://commons.wikimedia.org/wiki/File:Enlargement_of_the_European_Union_SMIL.svg'>Enlargement of the European Union SMIL</a>, removed timline, changed label font von HSFK/PRIF, <a href='https://creativecommons.org/licenses/by-sa/2.5/legalcode' rel='license'>CC BY-SA 2.5</a>"
+    },
+    { 
+      "headline": "<small>01. Jan</small> 2007",
+      "copy": "Romania, Bulgaria",
+      "image": "images/EU27-2007_European_Union_map.svg",
+      "credit": "8/ cmglee, Júlio Reis, Kolja21, <a href='https://commons.wikimedia.org/wiki/File:Enlargement_of_the_European_Union_SMIL.svg'>Enlargement of the European Union SMIL</a>, removed timline, changed label font von HSFK/PRIF, <a href='https://creativecommons.org/licenses/by-sa/2.5/legalcode' rel='license'>CC BY-SA 2.5</a>"
+    },
+    { 
+      "headline": "<small>01. Jul</small> 2008",
+      "copy": "?",
+      "image": "images/EU27-2008_European_Union_map.svg",
+      "credit": "9/ cmglee, Júlio Reis, Kolja21, <a href='https://commons.wikimedia.org/wiki/File:Enlargement_of_the_European_Union_SMIL.svg'>Enlargement of the European Union SMIL</a>, removed timline, changed label font von HSFK/PRIF, <a href='https://creativecommons.org/licenses/by-sa/2.5/legalcode' rel='license'>CC BY-SA 2.5</a>"
+    },
+    { 
+      "headline": "<small>01. Jul</small> 2013",
+      "copy": "Croatia",
+      "image": "images/EU28-2013_European_Union_map.svg",
+      "credit": "A/ cmglee, Júlio Reis, Kolja21, <a href='https://commons.wikimedia.org/wiki/File:Enlargement_of_the_European_Union_SMIL.svg'>Enlargement of the European Union SMIL</a>, removed timline, changed label font von HSFK/PRIF, <a href='https://creativecommons.org/licenses/by-sa/2.5/legalcode' rel='license'>CC BY-SA 2.5</a>"
+    },
+    { 
+      "headline": "2022",
+      "copy": "?",
+      "image": "images/EU-Eastern_Partnership.svg",
+      "credit": "B/ cmglee, Júlio Reis, Kolja21, <a href='https://commons.wikimedia.org/wiki/File:Enlargement_of_the_European_Union_SMIL.svg'>Enlargement of the European Union SMIL</a>, removed timline, changed label font von HSFK/PRIF, <a href='https://creativecommons.org/licenses/by-sa/2.5/legalcode' rel='license'>CC BY-SA 2.5</a>"
+    }
+  ]
+}

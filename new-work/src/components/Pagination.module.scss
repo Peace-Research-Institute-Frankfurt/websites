@@ -1,0 +1,38 @@
+@import 'vars.scss';
+
+.container {
+  margin-top: 1.5rem;
+}
+
+.next {
+  display: block;
+  border: 1px solid var(--black);
+  padding: 1rem;
+  border-radius: var(--br);
+  text-decoration: none !important;
+  margin-bottom: 0.5rem;
+  .label {
+    @extend %caption;
+    display: block;
+    margin-bottom: 0.1em;
+  }
+  &:hover,
+  &:focus-visible {
+    .next-title {
+      text-decoration: underline;
+    }
+  }
+}
+
+.next-title {
+  @extend %h2;
+  display: block;
+}
+
+.next-intro {
+  margin-top: 0.25em;
+}
+
+.previous {
+  @extend %caption;
+}

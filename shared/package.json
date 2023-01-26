@@ -1,0 +1,15 @@
+{
+  "name": "@prif/shared",
+  "version": "0.0.1",
+  "private": true,
+  "description": "",
+  "author": "Max Kohler",
+  "scripts": {},
+  "dependencies": {
+    "react": "18.2.0",
+    "react-dom": "^18.2.0",
+    "react-markdown-renderer": "^1.4.0"
+  },
+  "devDependencies": {},
+  "overrides": {}
+}

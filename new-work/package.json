@@ -1,0 +1,58 @@
+{
+  "name": "new-work",
+  "version": "1.0.0",
+  "private": true,
+  "description": "new-work",
+  "author": "Max Kohler",
+  "scripts": {
+    "build": "gatsby build",
+    "clean": "gatsby clean",
+    "develop": "gatsby develop",
+    "serve": "gatsby serve",
+    "start": "gatsby develop"
+  },
+  "dependencies": {
+    "@prif/shared": "0.0.1",
+    "@hcaptcha/react-hcaptcha": "^1.4.4",
+    "@mdx-js/react": "^2.2.1",
+    "dotenv": "^16.0.3",
+    "gatsby": "^5.4.2",
+    "gatsby-plugin-image": "^3.4.0",
+    "gatsby-plugin-manifest": "^5.4.0",
+    "gatsby-plugin-mdx": "^5.4.0",
+    "gatsby-plugin-netlify": "^5.1.0",
+    "gatsby-plugin-react-svg": "^3.3.0",
+    "gatsby-plugin-remark-footnotes": "^0.0.1",
+    "gatsby-plugin-sass": "^6.4.0",
+    "gatsby-plugin-sharp": "^5.4.0",
+    "gatsby-plugin-sitemap": "^6.4.0",
+    "gatsby-remark-smartypants": "^6.4.0",
+    "gatsby-source-filesystem": "^5.4.0",
+    "gatsby-transformer-json": "^5.4.0",
+    "gatsby-transformer-sharp": "^5.4.0",
+    "hcaptcha": "^0.1.1",
+    "mdast-util-to-string": "^3.1.0",
+    "react": "18.2.0",
+    "react-dom": "^18.2.0",
+    "react-markdown-renderer": "^1.4.0",
+    "remark-gfm": "^1.0.0",
+    "remark-smartypants": "^2.0.0",
+    "sass": "^1.57.1",
+    "slug": "^8.2.2",
+    "unist-util-visit": "^4.1.1",
+    "validator": "^13.7.0"
+  },
+  "devDependencies": {
+    "@sendgrid/mail": "^7.7.0",
+    "cheerio": "^1.0.0-rc.12",
+    "form-data": "^4.0.0",
+    "handlebars": "^4.7.7",
+    "mailgun.js": "^8.0.6",
+    "postmark": "^3.0.15",
+    "webpack": "^5.75.0"
+  },
+  "overrides": {
+    "json5": "^1.0.2",
+    "loader-utils": "^2.0.4"
+  }
+}

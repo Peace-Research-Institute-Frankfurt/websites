@@ -1,0 +1,79 @@
+@import 'vars';
+.container {
+  display: inline-flex;
+  font-family: var(--haas-text);
+  letter-spacing: -0.01em;
+  line-height: 1;
+  cursor: pointer;
+  align-items: center;
+  font-size: var(--ms-0);
+  border-radius: var(--br);
+  background: var(--gray-light);
+  border: 1px solid var(--gray-light);
+  gap: 0.35rem;
+  font-weight: 600;
+  padding: 0 0.75em;
+  height: 2.25em;
+  position: relative;
+  @include bp(m) {
+    height: 1.85em;
+    padding: 0 0.5em;
+    padding-bottom: 0.15em;
+  }
+  &:hover,
+  &:focus-visible {
+    border-color: var(--black);
+  }
+
+  &.has-icon {
+    padding-right: 2em;
+  }
+  &.hide-label {
+    width: 2.1em;
+    padding: 0;
+    .label {
+      position: absolute;
+      font-size: 0;
+    }
+  }
+}
+
+.loading {
+  cursor: progress;
+  .label {
+    opacity: 0.75;
+  }
+}
+.disabled {
+  cursor: default;
+  .label {
+    opacity: 0.75;
+  }
+  &:hover {
+    border: 1px solid var(--gray-light);
+  }
+}
+
+.primary {
+  background: var(--black);
+  border: 1px solid var(--black);
+  color: white;
+  &.loading {
+    background: var(--gray);
+    border: 1px solid var(--gray);
+    cursor: progress;
+  }
+}
+
+.icon {
+  width: 1.1em;
+  display: flex;
+  position: absolute;
+  right: 0.45em;
+  top: 50%;
+  transform: translateY(-50%);
+  & > * {
+    width: 100%;
+    height: auto;
+  }
+}

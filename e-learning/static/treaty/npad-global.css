@@ -1,0 +1,605 @@
+/*
+  These are LERNBAR styles, recreated here to have apps a.k.a “external content”
+  visually match the LERNBAR contents.
+
+  LERNBAR-specific selectors .widget-page and .widget-content have been disabled 
+  to make these styles work in the apps.
+*/
+/*
+  ╔═══════════════╗
+  ║  C O L O R S  ║
+  ╚═══════════════╝
+*/
+:root {
+    
+  --color-blue-dark:     #0d425b; /* Blau     100% */
+  --color-blue-medium:   #426b7e; /* Abstufung 78% neu*/
+  --color-blue-light:    #7996a5; /* Abstufung 55% */
+  --color-blue-light-2:  #afc0c8; /* Abstufung 33% neu */
+  --color-blue-light-3:  #ced9de; /* Abstufung 20% neu */
+  --color-blue-light-4:  #e8eef0; /* Abstufung 10% ex:lighter */
+  --color-blue-light-5:  #f3f6f7; /* Abstufung  5% ex:lightest */
+  
+  --color-accent-yellow: #fbc202;
+  --color-accent-red:    #921f35;
+  --color-accent-red-2:  #c3838f; /* Abstufung 55% */
+  --color-accent-red-3:  #921f35; /* Abstufung 20% */
+  --color-accent-orange: #f08b00;
+  --color-accent-green:  #bccf0f;
+  --color-accent-green-2:#d6e26e; /* Abstufung 60% */
+  --color-accent-green-3:#eaf0b7; /* Abstufung 30% */
+  --color-accent-dark-green: #678d35;
+  
+  --color-white:         #ffffff;
+
+  --color-gray-dark:     #424242; /* Top Nav BG */
+  --color-gray:          #555555; /* Menu BG */
+  --color-gray-light:    #d5d5d5;
+  
+}
+
+/*
+╔══════════════════╗
+║  G E N E R A L   ║
+╚══════════════════╝
+*/
+/* 
+        — (Empty)
+*/
+/*
+https://nonproliferation-elearning.eu/learningunits/assets/webfonts/roboto/
+https://www.rolf-brocke.de/preview/hsfk-npad-tBBHPlX-RcSxWr6wfTfApe0C49od7g/webfonts/roboto/
+*/
+/* roboto-100 - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 100;
+  src: /*local(''),*/
+       url('https://nonproliferation-elearning.eu/learningunits/assets/webfonts/roboto/roboto-v20-latin-ext_latin-100.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('https://nonproliferation-elearning.eu/learningunits/assets/webfonts/roboto/roboto-v20-latin-ext_latin-100.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-300 - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: /*local(''),*/
+       url('https://nonproliferation-elearning.eu/learningunits/assets/webfonts/roboto/roboto-v20-latin-ext_latin-300.woff2') format('woff2'),
+       url('https://nonproliferation-elearning.eu/learningunits/assets/webfonts/roboto/roboto-v20-latin-ext_latin-300.woff') format('woff');
+}
+/* roboto-100italic - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 100;
+  src: /*local(''),*/
+       url('https://nonproliferation-elearning.eu/learningunits/assets/webfonts/roboto/roboto-v20-latin-ext_latin-100italic.woff2') format('woff2'),
+       url('https://nonproliferation-elearning.eu/learningunits/assets/webfonts/roboto/roboto-v20-latin-ext_latin-100italic.woff') format('woff');
+}
+/* roboto-300italic - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 300;
+  src: /*local(''),*/
+       url('https://nonproliferation-elearning.eu/learningunits/assets/webfonts/roboto/roboto-v20-latin-ext_latin-300italic.woff2') format('woff2'),
+       url('https://nonproliferation-elearning.eu/learningunits/assets/webfonts/roboto/roboto-v20-latin-ext_latin-300italic.woff') format('woff');
+}
+/* roboto-regular - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: /*local(''),*/
+       url('https://nonproliferation-elearning.eu/learningunits/assets/webfonts/roboto/roboto-v20-latin-ext_latin-regular.woff2') format('woff2'),
+       url('https://nonproliferation-elearning.eu/learningunits/assets/webfonts/roboto/roboto-v20-latin-ext_latin-regular.woff') format('woff');
+}
+/* roboto-italic - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 400;
+  src: /*local(''),*/
+       url('https://nonproliferation-elearning.eu/learningunits/assets/webfonts/roboto/roboto-v20-latin-ext_latin-italic.woff2') format('woff2'),
+       url('https://nonproliferation-elearning.eu/learningunits/assets/webfonts/roboto/roboto-v20-latin-ext_latin-italic.woff') format('woff');
+}
+/* roboto-500 - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: /*local(''),*/
+       url('https://nonproliferation-elearning.eu/learningunits/assets/webfonts/roboto/roboto-v20-latin-ext_latin-500.woff2') format('woff2'),
+       url('https://nonproliferation-elearning.eu/learningunits/assets/webfonts/roboto/roboto-v20-latin-ext_latin-500.woff') format('woff');
+}
+/* roboto-500italic - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 500;
+  src: /*local(''),*/
+       url('https://nonproliferation-elearning.eu/learningunits/assets/webfonts/roboto/roboto-v20-latin-ext_latin-500italic.woff2') format('woff2'),
+       url('https://nonproliferation-elearning.eu/learningunits/assets/webfonts/roboto/roboto-v20-latin-ext_latin-500italic.woff') format('woff');
+}
+/* roboto-700italic - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 700;
+  src: /*local(''),*/
+       url('https://nonproliferation-elearning.eu/learningunits/assets/webfonts/roboto/roboto-v20-latin-ext_latin-700italic.woff2') format('woff2'),
+       url('https://nonproliferation-elearning.eu/learningunits/assets/webfonts/roboto/roboto-v20-latin-ext_latin-700italic.woff') format('woff');
+}
+/* roboto-700 - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: /*local(''),*/
+       url('https://nonproliferation-elearning.eu/learningunits/assets/webfonts/roboto/roboto-v20-latin-ext_latin-700.woff2') format('woff2'),
+       url('https://nonproliferation-elearning.eu/learningunits/assets/webfonts/roboto/roboto-v20-latin-ext_latin-700.woff') format('woff');
+}
+/* roboto-900 - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 900;
+  src: /*local(''),*/
+       url('https://nonproliferation-elearning.eu/learningunits/assets/webfonts/roboto/roboto-v20-latin-ext_latin-900.woff2') format('woff2'),
+       url('https://nonproliferation-elearning.eu/learningunits/assets/webfonts/roboto/roboto-v20-latin-ext_latin-900.woff') format('woff');
+}
+/* roboto-900italic - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 900;
+  src: /*local(''),*/
+       url('https://nonproliferation-elearning.eu/learningunits/assets/webfonts/roboto/roboto-v20-latin-ext_latin-900italic.woff2') format('woff2'),
+       url('https://nonproliferation-elearning.eu/learningunits/assets/webfonts/roboto/roboto-v20-latin-ext_latin-900italic.woff') format('woff');
+}
+/*
+╔════════════════════════╗
+║  T Y P O G R A P H Y   ║
+╚════════════════════════╝
+*/
+/* required:
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&amp;display=swap" rel="stylesheet">
+
+with italic :
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400&display=swap" rel="stylesheet">
+*/
+/* DON'T! This would override e.g. timeline's zoom button :hover colors
+body * {
+*/
+body {
+  color: var(--color-blue-dark);
+  font-family: Roboto;
+  line-height: 1.4;
+}
+/* 
+  For LernBar, these breakpoints are set on 
+  .widget-page:not(.widget-special-page)
+*/
+@media (min-width: 83em) { body { font-size: 1.2em; }}
+@media (min-width: 60em) { body { font-size: 1.0em; }}
+@media (min-width: 44em) { body { font-size: 1.4em; }}
+@media (min-width: 33em) { body { font-size: 1.2em; }}
+/*
+  ⚠ iframed content will query the frame, NOT the parent,
+  so we're also calulcating and setting 'min-width' attributes
+*/
+body[data-min-width="83em"] { font-size: 1.2em; }
+body[data-min-width="60em"] { font-size: 1.0em; }
+body[data-min-width="44em"] { font-size: 1.4em; }
+body[data-min-width="33em"] { font-size: 1.2em; }
+p {
+  font-weight: 400;
+}
+b, strong {
+  font-weight: 700;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  letter-spacing: 0.003em;
+  line-height: 1.2;
+}
+h1 {
+  font-size: 2.6rem;
+}
+h2 {
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.6rem;
+  line-height: 1.2;
+}
+/*.widget-page*/
+h2.lesson-name {
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 0;
+}
+/*.widget-page*/
+h3.page-title {
+  font-size: 2.6rem;
+  font-weight: 900;
+  line-height: 1.2;
+  margin-top: 0.3rem;
+}
+h3 {
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+/* disable margin-top for any first child of each column */
+/* !! breaks chapter titles */
+/* .widget-content *:first-child {
+  margin-top: 0;
+} */
+/* 
+        — Typography
+*/
+
+/*
+╔══════════════════════════╗
+║  B L O C K   Q U O T E   ║
+╚══════════════════════════╝
+*/
+
+blockquote {
+  margin: 1em 0;
+  padding-left: 1.5em;
+  position: relative; /* enable ::before position */
+  font-style: italic;
+}
+
+blockquote::before {
+  position: absolute;
+  content: '”';
+  font-size: 3rem;
+  line-height: 1rem;
+  font-weight: 400!important;
+  color: var(--color-accent-yellow);
+  top: .1rem;
+  left: .2rem;
+}
+
+blockquote::after {
+  position: absolute;
+  content: '';
+  color: var(--color-accent-yellow);
+  border-left: .12em solid;
+  width: .12em;
+  height: calc(100% - .8em);
+  bottom: -.1em;
+  top: .5em;
+  left: .6em;
+}
+
+/*
+╔════════════╗
+║  C I T E   ║
+╚════════════╝
+*/
+
+cite {
+  display: block;
+  
+  color: var(--color-blue-light) !important;
+  font-size: 0.8em;
+  line-height: 1.6em;
+}
+
+cite::before {
+  content: '';
+  display: block;
+  float: left;
+  width: 0.8em;
+  margin-right: 0.4em;
+  height: 0.73em;
+  border-bottom: 0.05em solid;
+}
+
+/*
+cite {
+  display: block;
+  padding-left: 1.4em; /* == line-height * /
+  color: var(--color-blue-light) !important;
+}
+cite::before {
+  content: '';
+  position: absolute;
+  position: relative;
+  display: block;
+  float: left;
+  left: -1.4em; /* == line-height * /
+  width: 1em; /* results in 0.4em gap to first char * /
+  margin-right: -1em; /* same as width * /
+  height: 0.73em;
+  border-bottom: 0.05em solid;
+}
+*/
+
+/* @import "./content/image.css"; */
+
+/*
+╔══════════════╗
+║  L I N K S   ║
+╚══════════════╝
+*/
+
+/* from https://codepen.io/Wking/pen/BdmpVx */
+
+a {
+  padding: 0 0.1em;
+  text-decoration: none;
+  color: var(--color-blue-dark);
+
+  /* gradient */
+  /* background-image: linear-gradient(120deg, var(--color-accent-yellow) 0%, #fbe220 100%); */
+  /* no gradient */
+  background-image: linear-gradient(120deg, var(--color-accent-yellow) 0%, var(--color-accent-yellow) 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.2em;
+  background-position: 0 1.05em;
+  transition: all 0.25s ease-in;
+
+  /* multi-line padding */
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+a:hover {
+  /*box-shadow: rgb(251 194 2 / 0.7) 0 -1.5em 0 0 inset; /* alpha to reduce visual impact of line vs area*/ 
+
+  transition: all .1s ease-out;
+  background-size: 100% 1.4em;
+  background-position: 0;
+}
+
+/*
+a[data-arg],
+.widget-content a[data-arg] {
+  box-shadow: var(--color-accent-yellow) 0 -0.1em 0 inset;
+}
+*/
+
+/* a link arrow */
+
+.widget-content a[data-arg]::after{
+/*   content: '🡥'; */
+  content: '';
+  padding: 0 0.5em;
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+  background-repeat: no-repeat;
+  
+  /* B */
+  background-image: url(http://rolf-brocke.de/preview/hsfk-npad-tBBHPlX-RcSxWr6wfTfApe0C49od7g/arrow-external-1-3pt.svg);
+  
+  background-size: 0.5em;
+  background-position: 0.4em 0.3em;
+  
+  /* A */
+  /*
+  background-image: url(http://rolf-brocke.de/preview/hsfk-npad-tBBHPlX-RcSxWr6wfTfApe0C49od7g/arrow-external-1-2pt.svg);
+  background-size: 0.7em;
+  background-position: 0.3em 0.3em;
+  */
+  
+  /* GLOSSARY */
+  /*
+  background-size: 1.1em;
+  background-position: 0.3em 0.1em;
+  width: 1.2em;
+  height: 1.2em;
+  margin-bottom: -0.2em;
+  background-image: url(https://nonproliferation-elearning.eu/learningunits/test_LU16/lernbar/js/src/mod/lernbar/widget/course/img/hsfk_glossary.svg);
+  */
+}
+
+/*
+╔══════════════╗
+║  L I S T S   ║
+╚══════════════╝
+*/
+
+ul, 
+ol {
+  list-style-type: none !important; /* !important needed for some lists in zozo-tabs that define 'circle' inline */
+  margin-bottom: 1em;
+}
+
+ul{
+  padding-left: 1em;
+  overflow: hidden;
+}
+
+ol {
+  padding-left: 1.7em;
+}
+
+ul > li,
+ol > li {
+  position: relative; /* enable positioning of custom list style images (::before/::after)*/
+  margin-bottom: 1em;
+}
+
+ul > li::after,
+ol > li::after {
+  content: '';
+  background: var(--color-blue-dark);
+  display: block;
+  position: absolute;
+  transform: skewX(-15deg);
+}
+
+ul > li::after {
+  top: .58em;
+  left: -1em;
+  width: 0.25em;
+  height: 0.25em;
+  transform: none;
+}
+
+ol > li::after {
+  top: 0.18em;
+  left: -0.9em;
+  width: 0.14em;
+  height: 1em;
+}
+
+ol > li::before {
+  position: absolute;
+  left: -1.7em;
+  top: 0;
+  z-index: 1;
+  font-weight: bold;
+}
+
+ol > li:nth-child(1)::before { content: '1'; }
+
+ol > li:nth-child(2)::before { content: '2'; }
+
+ol > li:nth-child(3)::before { content: '3'; }
+
+ol > li:nth-child(4)::before { content: '4'; }
+
+ol > li:nth-child(5)::before { content: '5'; }
+
+ol > li:nth-child(6)::before { content: '6'; }
+
+ol > li:nth-child(7)::before { content: '7'; }
+
+ol > li:nth-child(8)::before { content: '8'; }
+
+ol > li:nth-child(9)::before { content: '9'; }
+
+/*
+╔═════════════╗
+║  V I D E O  ║
+╚═════════════╝
+*/
+
+.flowplayer {
+  font-family: Roboto;
+}
+
+.flowplayer.is-poster.is-ready {
+  animation: video-poster-motion 50s forwards infinite ease-in-out;
+}
+
+@keyframes video-poster-motion {
+    0% { background-position: 30%  10%; background-size: 130%; }
+   20% { background-position:  10%  10%; background-size: 130%; }
+   50% { background-position: 30% 30%; background-size: 130%; }
+   75% { background-position:  10% 30%; background-size: 130%; }
+  100% { background-position: 30%   10%; background-size: 130%; }
+}
+
+.flowplayer.fp-ui-shown .fp-ui, 
+.flowplayer.is-paused .fp-ui, 
+.flowplayer.is-mouseover .fp-ui, 
+.flowplayer.is-loading .fp-ui {
+  background-image: none;
+}
+
+.flowplayer .fp-header {
+  background-image: none;
+}
+
+.flowplayer .controlbutton {
+  filter: none; /* remove drop shadow */
+}
+
+.flowplayer {
+  background-color: hsl(205deg 56% 24%); /* Blue-Dark */
+  background-color: hsl(194deg 21% 59%); /* Blue-Light */
+  background-color: hsl(200deg 38% 41%); /* right in the middle */
+  background-color: hsl(200deg 56% 41%); /* right in the middle + saturation of Blue-Dark */
+  background-blend-mode: soft-light;
+}
+
+/* iframe background visible while video player(!) has not loaded */
+
+.widget-iframe .widget-content {
+  background-color: var(--color-blue-light-5);
+}
+
+/* color overlay while video poster is shown */
+
+.flowplayer::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -5%;
+  bottom: 0;
+  right: -5%;
+  background: hsl(200deg 54% 27% / 50%);
+  mix-blend-mode: hard-light;
+  z-index: 1;
+  transition: all 0.3s ease-in;
+  transform: skewX(-10deg);
+}
+
+.fp-ui {
+  z-index: 2; /* pull above color overlay */
+}
+
+.flowplayer.is-playing::after {
+  transform: translateX(100%) skewX(-10deg);
+}
+
+.flowplayer video {
+  transition: transform 0.2s ease;
+}
+
+/* setting bg color is here to avoid gray border when blurring the video on pause */
+
+.flowplayer.is-paused,
+.flowplayer.is-ready:not(.is-poster) {
+  background: white;
+}
+
+.flowplayer.is-paused video {
+  filter: blur(2px);
+}
+/*  
+        — Blockquote
+        — Cite
+        — Image
+        — Links
+        — List
+        — Video
+*/
+
+/* @import "./lernbar.css"; */
+/*
+        — Loading Circles
+        — Progress Indicator
+        — Menu Background Color
+        — Top Navigator
+        — Mobile Bottom Navigator
+        — Prev / Next / Bookmark
+        — Title (Start)
+        — Quiz
+        — Panel Background Color
+        — Panel General
+        — — panel shadow
+        — Panel : Pages
+        — — page spacing
+        — — page colors
+        — — page hover colors
+        — — page active colors
+        — — page number
+        — — lesson title font size
+        — Panel : Bookmarks
+        — Panel : Contributors
+        — Panel : References
+        — Panel : Download
+        — Panel : Terms of Use
+        — Panel : Modules
+*/

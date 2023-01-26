@@ -1,0 +1,73 @@
+@import 'vars';
+
+.input {
+  position: absolute;
+  left: -9999px;
+}
+
+.container {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  --height: 1.25rem;
+  --width: 2rem;
+  @include bp(m) {
+    --height: 1.25rem;
+    --width: 2rem;
+  }
+  &:focus-within {
+    outline: 3px solid var(--focus-color);
+  }
+  &:hover,
+  &:focus-within {
+  }
+}
+
+.small {
+  --height: 1rem;
+  --width: 1.8rem;
+  align-items: center;
+  top: 1px;
+}
+.label {
+  margin-right: 0.5em;
+  font-size: var(--ms-1);
+  position: relative;
+  top: -0.05em;
+  @include bp(m) {
+    font-size: var(--ms-0);
+  }
+}
+
+.outer {
+  width: var(--width);
+  display: block;
+  border-radius: 1000px;
+  height: var(--height);
+  overflow: hidden;
+  position: relative;
+  border: 1px solid var(--gray-dark);
+  background-color: var(--gray-dark);
+  transition: var(--fast);
+  position: relative;
+}
+.inner {
+  display: block;
+  background-color: white;
+  width: calc(var(--height));
+  height: 105%;
+  border-radius: 100px;
+  position: absolute;
+  top: 50%;
+  transition: var(--fast);
+  transform: translateY(-50%) translateX(0);
+  left: -1px;
+  .is-checked & {
+    transform: translateY(-50%) translateX(calc(var(--width) - 100%));
+  }
+}
+
+.is-checked {
+  background-color: var(--black);
+  border-color: var(--black);
+}

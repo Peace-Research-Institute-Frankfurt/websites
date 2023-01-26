@@ -1,0 +1,23 @@
+.chip {
+  background: grey;
+  padding: 0.15rem 0.7rem;
+  font-size: var(--ms--1);
+  display: inline-flex;
+  border-radius: 100px;
+  color: rgba(black, 0.9);
+}
+
+.chip-green {
+  composes: chip;
+  background: rgb(201, 243, 173);
+}
+
+.chip-yellow {
+  composes: chip;
+  background: rgb(255, 238, 200);
+}
+
+.chip-red {
+  composes: chip;
+  background: rgb(253, 190, 167);
+}

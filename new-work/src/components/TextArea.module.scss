@@ -1,0 +1,15 @@
+@import 'vars';
+.container {
+  position: relative;
+}
+.remaining {
+  @extend %caption;
+  color: var(--gray-dark);
+  position: absolute;
+  top: -1.5rem;
+  right: 0;
+}
+
+.warning {
+  color: rgb(255, 102, 0);
+}

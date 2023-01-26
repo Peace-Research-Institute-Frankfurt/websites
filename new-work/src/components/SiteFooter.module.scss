@@ -1,0 +1,31 @@
+@import 'vars';
+
+.container {
+  @extend %caption;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 var(--padding);
+  padding-bottom: 1rem;
+  flex-flow: column;
+  align-items: center;
+  @include bp(s) {
+    flex-flow: row;
+  }
+}
+
+.nav {
+  ul {
+    margin-bottom: 0.25em;
+    gap: 0.65em;
+    display: flex;
+    justify-content: center;
+    line-height: 1.5;
+    list-style: none;
+    flex-wrap: wrap;
+  }
+}
+
+.meta {
+  padding-top: 0.25rem;
+  font-size: var(--ms--1);
+}

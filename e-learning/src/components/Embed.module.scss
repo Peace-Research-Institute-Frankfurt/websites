@@ -1,0 +1,37 @@
+@import 'vars';
+
+.container {
+  background: white;
+  border-radius: var(--br);
+}
+
+.iframe-container {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  iframe {
+    display: block;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    height: 100%;
+  }
+}
+
+.caption {
+  padding: 0.5rem;
+  font-size: var(--ms--1);
+}
+
+.large {
+  grid-column: 1 / 6;
+  @include bp(m) {
+    grid-column: 2 / 5;
+  }
+}
+.medium {
+  grid-column: 1 / 6;
+  @include bp(m) {
+    grid-column: 3 / 4;
+  }
+}

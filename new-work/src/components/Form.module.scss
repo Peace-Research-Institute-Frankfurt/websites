@@ -1,0 +1,93 @@
+@import './vars';
+
+.field {
+  margin-bottom: 0.85rem;
+  text-align: left;
+  label {
+    @extend %caption;
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+  input,
+  textarea {
+    width: 100%;
+    display: block;
+    font-family: inherit;
+    border-radius: var(--br);
+    padding: 0.15em 0.5em;
+    padding-bottom: 0.3em;
+    line-height: 1;
+    border: 1px solid var(--gray);
+    &:hover,
+    &:focus-visible {
+      border: 1px solid var(--black);
+    }
+    &::placeholder {
+      opacity: 0.75;
+    }
+  }
+  textarea {
+    padding: 0.35em 0.5em;
+    resize: vertical;
+    line-height: 1.35;
+  }
+}
+
+.error {
+  input {
+    border-color: hsl(20, 90%, 35%);
+    &:hover,
+    &:focus-visible {
+      border-color: hsl(20, 90%, 25%);
+    }
+  }
+}
+.disabled {
+  input,
+  textarea {
+    background: rgba(black, 0.025);
+    &:hover,
+    &:focus-visible {
+      border-color: var(--gray);
+    }
+  }
+}
+
+.captcha {
+  margin-bottom: -10px; // Correct for extra space at the bottom of the hCaptcha embed
+}
+
+.input-wrapper {
+  position: relative;
+}
+.error-indicator {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  font-size: 0;
+  transform: translateY(-50%);
+  svg {
+    width: 1.5rem;
+  }
+  path {
+    fill: hsl(25, 90%, 35%);
+  }
+}
+
+.is-required {
+  color: var(--gray-dark);
+  margin-left: 0.25em;
+}
+
+.field-errors {
+  list-style: none;
+}
+
+.field-error {
+  @extend %caption;
+  padding: 0.75rem;
+  border-radius: var(--br);
+  background: hsl(25, 95%, 90%);
+  color: hsl(25, 90%, 5%);
+  margin-top: 0.5rem;
+}

@@ -1,0 +1,86 @@
+{
+  "__comment__": "boxes[n].position and size are now ignored and only remain here for possible future reference",
+  "labels": [
+    "In Theory",
+    "In Practice: Example of the CWC"
+  ],
+  "intro": {
+    "headline": "Life Cycle of a Multilateral Treaty",
+    "copy": [
+      "Discover the life cycle of a multi-lateral treaty step by step. Use the 'next' button below to begin.", 
+      "Discover the life cycle of a multi-lateral treaty step by step. Use the 'next' button below to begin."
+    ]
+  },
+  "boxes": [
+    {
+      "headline": "",
+      "copy": [
+        "Drafting and adoption of the treaty text", 
+        "The CWC was negotiated and <strong>drafted</strong> in the Conference on Disarmament and adopted on 3 September 1992. France organised a <strong>signing</strong> ceremony in Paris on 13 January 1993, after which the treaty remained open for signature. 165 states signed the CWC."
+      ],
+      "position": {
+        "left": "50%",
+        "top": "15vh"
+      },
+      "size": {
+        "max_width": "40%"
+      }
+    },
+    {
+      "headline": "",
+      "copy": [
+        "States express their consent to be bound by the treaty (i.e. states join the treaty)",
+        "States started expressing their <strong>consent to be bound</strong> by the CWC. Fiji was the first state to express by depositing its instrument of ratification with the UN Secretary-General on 20 January 1993."
+      ],
+      "position": {
+        "left": "50%",
+        "top": "15vh"
+      },
+      "size": {
+        "max_width": "40%"
+      }
+    },
+    {
+      "headline": "",
+      "copy": [
+        "Treaty enters into force (i.e. treaty becomes legally binding for those states that have already expressed their consent to be bound)",
+        "Hungary was the 65th state to express its consent to be bound by ratification on 31 October 1996. Per Article XXI(1) of the CWC, the CWC entered into force on 29 April 1997, 180 days after this 65th deposit, for all 65 states that had already expressed their consent."
+      ],
+      "position": {
+        "left": "50%",
+        "top": "15vh"
+      },
+      "size": {
+        "max_width": "40%"
+      }
+    },
+    {
+      "headline": "",
+      "copy": [
+        "Pacta sunt servanda: Treaty is observed, interpreted and possibly amended",
+        "Pacta sunt servanda: the CWC is applied and enforced in many different ways, from the destruction of chemical weapons stockpiles to the conduct of inspections by the OPCW and the adoption of implementation measures by its States Parties."
+      ],
+      "position": {
+        "left": "50%",
+        "top": "15vh"
+      },
+      "size": {
+        "max_width": "40%"
+      }
+    },
+    {
+      "headline": "",
+      "copy": [
+        "Not all treaties live forever. The treaty may be terminated or replaced by its States Parties by a new treaty",
+        "The CWC is of unlimited duration (Article XVI(1)) and is silent on termination. It could therefore only be terminated if all States Parties consent to it (VCLT, Article 54). The CWC today has 193 States Parties."
+      ],
+      "position": {
+        "left": "50%",
+        "top": "15vh"
+      },
+      "size": {
+        "max_width": "40%"
+      }
+    }
+  ]
+}

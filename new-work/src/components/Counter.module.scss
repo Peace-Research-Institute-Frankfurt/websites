@@ -1,0 +1,15 @@
+@import 'vars';
+.container {
+  @extend %caption;
+  font-size: var(--ms--1);
+  background-color: var(--black);
+  color: white;
+  border-radius: 100px;
+  min-width: 1.5em;
+  height: 1.5em;
+  line-height: 1.25em;
+  font-feature-settings: 'tnum';
+  text-align: center;
+  font-weight: 500;
+  display: block;
+}

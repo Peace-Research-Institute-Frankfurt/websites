@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+</head>
+
+<body style="
+      font-family: 'Helvetica Neue', sans-serif;
+      margin: 0 auto;
+      padding: 16px;
+      ">
+  <div style="text-align: center; margin-bottom: 16px; margin-top: 12px">
+    <img src="https://leibniz-nw.netlify.app/static/17079df841292e1deaa14c5c34454e1d/aa029/leibniz-head.png" alt="Leibinz-Portrait">
+  </div>
+  <div style="border: 1px solid black;padding: 16px;margin: 0 auto;border-radius: 4px;text-align: center; max-width: 600px
+      ">
+    <h1 style="font-size: 20px; line-height: 1.1; font-weight: 500; hyphens: auto">{{userEmail}} hat {{posts.length}} Artikel aus der Publikation <a href="{{origin}}">Work New @ Leibniz</a> mit dir geteilt.</h1>
+    <p>
+      {{#with message }}
+      {{this}}
+      {{else }}
+      (Keine Nachricht)
+      {{/with }}
+    </p>
+    <ul style="padding: 0; margin-bottom: 16px; border-bottom: 1px solid lightgray">
+      {{#each posts}}
+      <li style="text-align: left; list-style: none; border-top: 1px solid lightgray; margin-left: 0; padding: 12px 0">
+        <a href="{{link}}" style="text-decoration: none">
+          <div style="margin-bottom: 0px">{{authors}}</div>
+          <div style="font-size: 20px; font-weight: 600">
+            {{title}}
+          </div>
+        </a>
+      </li>
+      {{/each}}
+    </ul>
+    <div style="background: rgb(236, 237, 241); padding: 12px; border-radius: 4px; text-align: left">
+      <div>Passwort: <span style="font-family: Courier New, monospace; font-size: 17px">Leibniz123</span></div>
+    </div>
+  </div>
+  <div style="max-width: 500px; margin: 0 auto">
+    <p style="font-size: 12px; text-align: center; margin-bottom: 2px;">
+      "New Work @ Leibniz" ist ein Angebot der <a href="https://www.hsfk.de/">Hessischen Stiftung für Friedens- und Konfliktforschung (HSFK)</a>, Baseler Straße 27-31
+      D-60329, Frankfurt am Main.
+    </p>
+    <p style="font-size: 12px; text-align: center; margin: 0;"><a href="{{origin}}/impressum/" style="margin-right: 4px">Impressum</a> <a href="{{origin}}/datenschutz/">Datenschutz</a></p>
+  </div>
+</body>
+
+</html>

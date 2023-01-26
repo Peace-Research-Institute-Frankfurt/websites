@@ -1,0 +1,80 @@
+@import 'vars';
+
+.container {
+  background: white;
+  grid-column: 1/ 6;
+  @include bp(m) {
+    grid-column: 3/ 4;
+  }
+}
+
+.iframe-container {
+  width: 100%;
+  padding-bottom: 56.25%;
+  position: relative;
+  overflow: hidden;
+  iframe {
+    border-bottom: 1px solid var(--gray-50);
+    display: block;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    height: 100%;
+  }
+}
+
+.caption {
+  padding: 0.5rem;
+  font-size: var(--ms--1);
+}
+
+.tab {
+  background: var(--blue-10);
+  line-height: 1.25;
+  transition: var(--fast);
+  font-size: var(--ms--1);
+
+  button {
+    display: block;
+    padding: 0.3em 1.2em;
+    padding-bottom: 0.45em;
+    cursor: pointer;
+    text-decoration: none;
+    overflow: hidden;
+    text-transform: capitalize;
+    &:hover,
+    &:focus-visible {
+      text-decoration: underline;
+    }
+  }
+}
+
+.tab-active {
+  background: var(--blue-80);
+  button {
+    font-weight: 600;
+    color: white !important;
+  }
+}
+
+.tabs-list {
+  border-bottom: 0;
+  list-style: none;
+  display: inline-flex;
+  margin-left: 0 !important;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid var(--blue-90);
+  li {
+    margin-bottom: 0;
+  }
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content-active {
+  display: block;
+}

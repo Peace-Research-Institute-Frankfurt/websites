@@ -1,0 +1,113 @@
+@import 'vars';
+.container {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  padding-top: 2rem;
+  align-items: center;
+  max-width: 45rem;
+  position: relative;
+  @include bp(m) {
+    padding-top: 2.5rem;
+    padding-bottom: 0.5em;
+    margin-bottom: 0;
+    min-height: 0;
+    background: linear-gradient(to bottom, var(--color) 60%, transparent 70%);
+  }
+}
+
+.is-full-height {
+  min-height: calc(100vh);
+  max-width: none;
+  padding-top: 0;
+  @include bp(m) {
+    min-height: 0;
+  }
+  .title {
+    margin-bottom: 0;
+    text-align: center;
+  }
+}
+
+.title {
+  font-family: var(--haas-text);
+  font-size: var(--ms-6);
+  line-height: 0.95;
+  letter-spacing: -0.045em;
+  font-weight: 800;
+  max-width: 20em;
+  hyphens: none;
+  margin-top: 1.5em;
+  margin-bottom: .5em;
+  @include bp(xs) {
+    font-size: var(--ms-7);
+    margin-bottom: .75em;
+  }
+  @include bp(m) {
+    font-size: var(--ms-8);
+    hyphens: none;
+    max-width: 10em;
+  }
+  @include bp(l) {
+    font-size: var(--ms-9);
+  }
+}
+
+.intro {
+  @extend %copy-large;
+  hyphens: none;
+  padding: 1em;
+  padding-top: 0.75em;
+  line-height: 1.25;
+  margin: 0 auto;
+  margin-bottom: 2em;
+  max-width: 30em;
+  @include bp(m) {
+    padding-top: 1em;
+    margin-bottom: 0;
+    hyphens: none;
+  }
+}
+
+.header-copy {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  flex-grow: 1;
+  padding: var(--padding);
+  background: linear-gradient(to bottom, var(--color) 70%, transparent 90%);
+  @include bp(m) {
+    background: transparent;
+    display: contents;
+  }
+}
+
+.header-copy-inner {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: center;
+  @include bp(m) {
+    margin-bottom: 2rem;
+  }
+}
+
+.meta {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  @include bp(m) {
+    justify-content: flex-start;
+    order: 3;
+    max-width: 45rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+}

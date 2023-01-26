@@ -1,0 +1,58 @@
+@import 'vars';
+
+.container {
+  @extend %caption;
+  line-height: 1.15;
+  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 35em;
+  align-items: center;
+  flex-flow: column;
+  gap: 0.5rem;
+  @include bp(m) {
+    flex-flow: row;
+    gap: 1.25rem;
+  }
+}
+
+.byline {
+  display: flex;
+  line-height: 1;
+  font-size: var(--ms-0);
+  @include bp(m) {
+    align-items: center;
+  }
+}
+
+.person {
+  display: inline-block;
+}
+.name {
+  @extend %caption-bold;
+}
+
+.names {
+  flex-basis: 50%;
+  flex-grow: 1;
+}
+
+.images {
+  display: flex;
+  max-width: 15rem;
+  flex-wrap: wrap;
+}
+
+.image {
+  width: 2.5rem;
+  flex-shrink: 0;
+  transform-origin: center;
+  margin-right: -0.25rem;
+  @include bp(m) {
+    width: auto;
+    flex-shrink: 1;
+    width: 3rem;
+    left: 0;
+    margin-right: -0.5rem;
+  }
+}

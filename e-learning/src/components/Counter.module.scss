@@ -1,0 +1,17 @@
+.container {
+  background: var(--blue-80);
+  color: white;
+  font-weight: 600;
+  font-size: 0.75rem;
+  font-feature-settings: 'tnum';
+  border-radius: var(--br);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.3rem;
+  height: 1.3rem;
+  text-align: center;
+  margin-right: 0.5rem;
+  position: relative;
+  top: -0.25rem;
+}

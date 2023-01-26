@@ -1,0 +1,35 @@
+@import 'vars';
+
+.container {
+  padding-top: var(--padding);
+  margin: var(--padding);
+  font-size: var(--ms--1);
+  border-top: 1px solid var(--gray-30);
+  p {
+    max-width: 60em;
+    opacity: 0.75;
+  }
+}
+
+.funding {
+  margin-bottom: 0.75rem;
+  height: 2.5rem;
+  width: auto;
+  @include bp(m) {
+    height: 3.5rem;
+  }
+}
+
+.nav {
+  margin-bottom: 0.5rem;
+  ul {
+    display: flex;
+    gap: 0.5rem;
+    list-style: none;
+  }
+}
+
+.meta {
+  padding-top: 0.5rem;
+  font-size: var(--ms--2);
+}

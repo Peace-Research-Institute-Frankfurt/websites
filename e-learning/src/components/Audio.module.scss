@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 0.1rem;
+  cursor: pointer;
+  text-decoration: underline;
+  font-weight: 700;
+  svg {
+    top: 0.1em;
+    position: relative;
+    width: 1.25rem;
+  }
+}

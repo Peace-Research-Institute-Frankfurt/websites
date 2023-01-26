@@ -1,0 +1,167 @@
+---
+title: This is the Chapter Title
+intro: This is an optional introduction to the chapter. It can give additional context to the chapter title, or otherwise prepare the reader for the text that follows. There is no character limit, but aim for 20-30 words.
+order: 1
+reading_time: 9
+---
+
+This is the main body of the chapter. It can contain **bold**, _italics_, [links](#example), footnotes[^1], subheadings, lists, and a series of advanced components listed below.
+
+## Components
+
+### Callout
+
+<Callout title="This is the title">
+
+This is the content of the callout. It can contain **bold**, _italics_, and other rich text.
+
+</Callout>
+
+### Table
+
+Show an inline table.
+
+| Column A | Column B | Column C                    |
+| -------- | -------- | --------------------------- |
+| Alice    | Apples   | Tables can contain **bold** |
+| Bob      | Oranges  | and _italics_               |
+| Charlie  | Bananas  | and [links](#1)             |
+
+### Lecture video
+
+<LectureVideo lu="15" vl="vl1" provider="">
+
+This is the video's transcript. It can contain **bold**, _italics_, [links](#1), and most of the components listed below.
+
+</LectureVideo>
+
+### Glossary Terms
+
+Show an inline definition for technical terms or abbreviations like <Term t="UNSCR-1540"/> or <Term t="CWC"/>. Term definitions are global across all learning units, and you can embed existing definitions into your text. Definitions you provide will in turn become available to all other learning unit authors.
+
+### Figure
+
+Both raster images (PNG, JPG, etc.) and vector images (SVG) are supported. Raster images are automatically scaled and converted to web-ready formats.
+
+#### Medium
+
+<Figure
+  size="medium"
+  src="ban-is-coming.jpg"
+  caption="This is the caption for this medium-sized image."
+  credit="This is the image credit."
+  alt=""
+></Figure>
+
+#### Large
+
+<Figure size="large" src="ban-is-coming.jpg" caption="This is a large image" credit="This is the image credit." alt=""></Figure>
+
+#### Full
+
+<Figure size="full" src="ban-is-coming.jpg" caption="This is a full-bleed image." credit="This is the image credit." alt=""></Figure>
+
+### Tabs
+
+<Tabs>
+  <Tab title="Tab A">This is the content of tab A. There is no length restriction, and you can use *italics*, [links](#1) and other formatting.</Tab>
+  <Tab title="Tab B">Tab content B</Tab>
+  <Tab title="Tab C">Tab content C</Tab>
+</Tabs>
+
+### Detail/Expand
+
+<DetailsGroup>
+<Details summary="Title A">
+
+This is an expanded description of a concept. There is no length restriction, and you can use _italics_, [links](#1) and other formatting.
+
+</Details>
+<Details summary="Title B">
+
+Description B.
+
+</Details>
+</DetailsGroup>
+
+### Flipcards
+
+<FlipCards>
+<Card front="This the front of the card.">
+
+This is the back of the card. Both sides of the card shouldn't have more than 25 words.
+
+</Card>
+
+<Card front="And here is another card">
+
+... and here's the back of that one.
+
+</Card>
+</FlipCards>
+
+### Timeline
+
+<Timeline>
+  <Event date="1675" title="Strasbourg Agreement">
+    Signed between France and the Holy Roman Empire following the Siege of Groningen (1672), this treaty was the first international agreement banning
+    the use of chemical weapons, specifically poisoned bullets.
+  </Event>
+  <Event date="1863" title="Lieber Code">
+    The Lieber Code (named after its author, the legal scholar Franz Lieber) was a set of instructions issued by Abraham Lincoln to Union soldiers in
+    the American Civil War. Among other provisions, it prohibited the use of poison on the battlefield:
+  </Event>
+</Timeline>
+
+### Quote
+
+Both styles support a citation, an optional audio file and an optional link to the full document.
+
+#### Style A (Default)
+
+<Quote audio="eisenhower-chance-for-peace.mp3" fullDocument="https://en.wikisource.org/wiki/The_Chance_for_Peace" cite='Dwight D. Eisenhower, "Chance for Peace", speech to American Society of Newspaper Editors.'>
+    
+[...] Every gun that is made, every warship launched, every rocket fired signifies, in the final sense, a theft from those who hunger and are not fed, those who are cold and are not clothed.
+
+</Quote>
+
+#### Style B (Document)
+
+<Quote audio="eisenhower-chance-for-peace.mp3" type="document" fullDocument="https://en.wikisource.org/wiki/The_Chance_for_Peace" cite='Dwight D. Eisenhower, "Chance for Peace", speech to American Society of Newspaper Editors.'>
+    
+[...] **Every gun that is made, every warship launched, every rocket fired signifies, in the final sense, a theft from those who hunger and are not fed, those who are cold and are not clothed.**
+
+This world in arms is not spending money alone. **It is spending the sweat of its laborers, the genius of its scientists, the hopes of its children.**
+
+</Quote>
+
+### Embedded graphics
+
+Our existing learning units include a series of interactive graphics produced by an external agency. These can be embedded in new learning units and should behave as expected:
+
+#### Medium
+
+<Embed src="/treaty/index.html" size="medium" caption="Embeds can have a caption to give additional context. This has no character limit." />
+
+#### Large
+
+<Embed src="/treaty/index.html" size="large" />
+
+### Quiz
+
+<Quiz>
+  <Question type="MultipleChoice" question="What is the goal of arms control?" hint="Select all that apply.">
+    <Choice correct="true" value="World peace" />
+    <Choice value="Protection of civilians" />
+    <Choice correct="true" value="Limiting the number of weapons" />
+    <Choice value="Eliminating all weapons" />
+  </Question>
+  <Question type="Radio" question="Which instrument is considered the first attempt at arms control in modern history?">
+    <RadioChoice correct="true" value="The Strasbourg Agreement" />
+    <RadioChoice value="The Geneva Protocol" />
+    <RadioChoice correct="true" value="The Lieber Code" />
+    <RadioChoice value="The Hague Conference" />
+  </Question>
+</Quiz>
+
+[^1]: This is the footnote content

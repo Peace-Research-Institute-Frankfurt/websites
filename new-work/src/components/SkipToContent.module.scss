@@ -1,0 +1,23 @@
+@import 'vars';
+
+.container {
+  @extend %caption;
+  display: inline-block;
+  position: absolute;
+  top: var(--padding);
+  left: var(--padding);
+  padding: 0.6em 0.8em;
+  z-index: 10000;
+  font-weight: 600;
+  background: var(--white);
+  border-radius: var(--br);
+  opacity: 0;
+  transform: scale(0.98);
+  transition: var(--fast);
+  pointer-events: none;
+  &:focus-visible {
+    transform: scale(1);
+    pointer-events: all;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,21 @@
+[
+    {
+        "provider": "youtube",
+        "title": "Youtube",
+        "description": "Hier finden Sie ein eingebettetes Youtube-Video, das Daten über Sie sammeln und an Dritte übermitteln kann. Tippen Sie auf **Eingebetteten Inhalt laden** um das Video anzuzeigen, oder lesen Sie die [Datenschutzhinweise von Google](https://policies.google.com/?hl=en) um mehr zu erfahren."
+    },
+    {
+        "provider": "vimeo",
+        "title": "Vimeo",
+        "description": "Hier finden Sie ein eingebettetes Video von Vimeo, das Daten über Sie sammeln und an Dritte übermitteln kann. Tippen Sie auf **Vimeo-Inhalte anzeigen** um es zu laden, oder lesen Sie die [Datenschutzhinweise von Vimeo](https://vimeo.com/privacy) um mehr zu erfahren."
+    },
+    {
+        "provider": "spotify",
+        "title": "Spotify",
+        "description": "Hier finden Sie einen eingebetteten Inhalt von Spotify, der Daten über Sie sammeln und an Dritte übermitteln kann. Tippen Sie auf **Eingebetteten Inhalt laden** um diesen Inhalt anzuzeigen, oder lesen Sie [die Datenschutzhinweise von Spotify](https://www.spotify.com/us/privacy) um mehr zu erfahren."
+    },
+    {
+        "provider": "default",
+        "description": "Hier finden Sie einen externen Inhalt, der Daten über Sie sammeln und an Dritte übermitteln kann. Tippen Sie auf **Eingebetteten Inhalt laden** um diesen Inhalt anzuzeigen."
+    }
+]

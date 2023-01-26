@@ -1,0 +1,24 @@
+@import 'vars';
+
+.container {
+  grid-column: 1 / 6;
+  @include bp(m) {
+    grid-column: 1 / 6;
+  }
+}
+
+.map {
+  min-height: 500px;
+}
+
+.caption {
+  text-align: center;
+}
+
+.credit {
+  @extend %caption;
+  text-align: center;
+  display: flex;
+  gap: 0.5em;
+  justify-content: center;
+}

@@ -1,0 +1,53 @@
+@import 'vars';
+
+.container {
+  border: 1px solid var(--gray-30);
+  border-radius: var(--br);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  grid-column: 1/6;
+  @include bp(m) {
+    grid-column: 3/4;
+  }
+}
+.summary {
+  font-weight: 600;
+  padding: 0.75rem;
+  padding-left: 1rem;
+  cursor: pointer;
+  &:hover,
+  &:focus-visible {
+    .summary-text {
+      text-underline-offset: 0.1em;
+      text-decoration: underline;
+    }
+  }
+}
+.body {
+  padding: 1rem;
+  padding-top: 0;
+  :last-child {
+    margin-bottom: 0;
+  }
+}
+
+.details-group {
+  border: 1px solid var(--gray-40);
+  border-radius: var(--br);
+  grid-column: 1/6;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  @include bp(m) {
+    grid-column: 3/4;
+  }
+  .container {
+    border: 0;
+    margin-top: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    border-bottom: 1px solid var(--gray-40);
+    &:last-of-type {
+      border-bottom: 0;
+    }
+  }
+}
