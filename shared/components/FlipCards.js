@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
-import * as styles from './FlipCards.module.scss'
 
 function Card() {
   return null
 }
 
-function FlipCards({ children }) {
+function FlipCards({ styles, children }) {
+  if (!styles) styles = {}
+
   const [activeCard, setActiveCard] = useState(null)
 
   function handleClick(i) {
@@ -28,9 +29,6 @@ function FlipCards({ children }) {
     )
   })
 
-  // const cardElements = cards.map((c, i) => {
-  //   return <Card key={i} isActive={activeCard === i} front={c.front} back={c.back} clickHandler={handleClick} index={i} />;
-  // });
   return (
     <>
       <ul className={styles.container}>{cards}</ul>

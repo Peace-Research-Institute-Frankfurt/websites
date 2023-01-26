@@ -14,17 +14,17 @@ import LectureVideo from './LectureVideo'
 import SiteFooter from './SiteFooter'
 import { Timeline, Event } from './Timeline'
 import useLocalStorage from './useLocalStorage'
-import { FlipCards, Card } from './FlipCards'
 import { Embed } from './Embed'
 import StickyHeader from './StickyHeader'
 import TableOfContents from './TableOfContents'
 import Map from './Map'
-import { Quote, Callout, Tab, Tabs, Details, DetailsGroup } from '@prif/shared'
+import { Quote, Callout, Tab, Tabs, Details, DetailsGroup, FlipCards, Card } from '@prif/shared'
 import * as QuoteStyles from './Quote.module.scss'
 import * as CalloutStyles from './Callout.module.scss'
 import * as TabStyles from './Tabs.module.scss'
 import * as FigureStyles from './Figure.module.scss'
 import * as DetailsStyles from './Details.module.scss'
+import * as FlipCardsStyles from './FlipCards.module.scss'
 
 const shortCodes = {
   Embed,
@@ -38,8 +38,8 @@ const shortCodes = {
   LectureVideo,
   Event,
   Timeline,
-  FlipCards,
-  Card,
+  FlipCards: ({ ...props }) => <FlipCards styles={FlipCardsStyles} {...props} />,
+  Card: ({ ...props }) => <Card styles={FlipCardsStyles} {...props} />,
   Details: ({ ...props }) => <Details {...props} styles={DetailsStyles} />,
   DetailsGroup: ({ ...props }) => <DetailsGroup {...props} styles={DetailsStyles} />,
   Tabs: ({ ...props }) => <Tabs {...props} styles={TabStyles} />,
