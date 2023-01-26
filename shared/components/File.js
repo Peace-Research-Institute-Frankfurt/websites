@@ -1,9 +1,9 @@
 import { graphql, useStaticQuery } from 'gatsby'
 import React from 'react'
-import DownloadIcon from '../images/download.svg'
-import * as styles from './File.module.scss'
+import DownloadIcon from '../assets/download.svg'
 
-export default function File(props) {
+export default function File({ styles, file, title }) {
+  if (!styles) styles = {}
   const data = useStaticQuery(graphql`
     query {
       files: allFile {
@@ -20,19 +20,19 @@ export default function File(props) {
   `)
 
   // Let's find our file
-  let file = null
+  let fileNode = null
   data.files.nodes.forEach((f) => {
-    if (f.base === props.file) {
-      file = f
+    if (f.base === file) {
+      fileNode = f
     }
   })
   return (
-    <a download href={file.publicURL} className={styles.container}>
+    <a download href={fileNode.publicURL} className={styles.container}>
       <div>
-        <span>{props.title}</span>
+        <span>{title}</span>
         <p className={styles.meta}>
-          <span className={styles.type}>{file.extension}</span>
-          <span>{file.prettySize.replace('.', ',')}</span>
+          <span className={styles.type}>{fileNode.extension}</span>
+          <span>{fileNode.prettySize.replace('.', ',')}</span>
         </p>
       </div>
       <DownloadIcon />

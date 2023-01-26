@@ -3,15 +3,15 @@ import React from 'react'
 import { Embed, Vimeo, Youtube } from './Embed'
 import EmbedChoices from './EmbedChoices'
 import Figure from './Figure'
-import File from './File'
 import Leadin from './Leadin'
-import { Quote } from '@prif/shared'
+import { Quote, File } from '@prif/shared'
 import * as QuoteStyles from './Quote.module.scss'
+import * as FileStyles from './File.module.scss'
 
 const shortCodes = {
   Figure,
   Quote: ({ ...props }) => <Quote {...props} styles={QuoteStyles} />,
-  File,
+  File: ({ ...props }) => <File {...props} styles={FileStyles} />,
   Leadin,
   Vimeo,
   Youtube,
