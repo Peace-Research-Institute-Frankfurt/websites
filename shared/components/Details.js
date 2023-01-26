@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
-import * as styles from './Details.module.scss'
 
-function DetailsGroup({ children }) {
+function DetailsGroup({ styles, children }) {
   return <div className={styles.detailsGroup}>{children}</div>
 }
 
-function Details({ summary, children, open }) {
+function Details({ styles, summary, children, open }) {
   const [isOpen, setIsOpen] = useState(open || false)
 
   function toggleOpen(e) {

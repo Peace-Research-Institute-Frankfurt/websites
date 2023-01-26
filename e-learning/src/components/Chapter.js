@@ -16,15 +16,15 @@ import { Timeline, Event } from './Timeline'
 import useLocalStorage from './useLocalStorage'
 import { FlipCards, Card } from './FlipCards'
 import { Embed } from './Embed'
-import { Details, DetailsGroup } from './Details'
 import StickyHeader from './StickyHeader'
 import TableOfContents from './TableOfContents'
 import Map from './Map'
-import { Quote, Callout, Tab, Tabs } from '@prif/shared'
+import { Quote, Callout, Tab, Tabs, Details, DetailsGroup } from '@prif/shared'
 import * as QuoteStyles from './Quote.module.scss'
 import * as CalloutStyles from './Callout.module.scss'
 import * as TabStyles from './Tabs.module.scss'
 import * as FigureStyles from './Figure.module.scss'
+import * as DetailsStyles from './Details.module.scss'
 
 const shortCodes = {
   Embed,
@@ -40,8 +40,8 @@ const shortCodes = {
   Timeline,
   FlipCards,
   Card,
-  Details,
-  DetailsGroup,
+  Details: ({ ...props }) => <Details {...props} styles={DetailsStyles} />,
+  DetailsGroup: ({ ...props }) => <DetailsGroup {...props} styles={DetailsStyles} />,
   Tabs: ({ ...props }) => <Tabs {...props} styles={TabStyles} />,
   Tab: ({ ...props }) => <Tab {...props} styles={TabStyles} />,
   Callout: ({ ...props }) => <Callout {...props} styles={CalloutStyles} />,
