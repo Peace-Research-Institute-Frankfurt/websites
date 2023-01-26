@@ -13,7 +13,6 @@ import SiteHeader from './SiteHeader'
 import LectureVideo from './LectureVideo'
 import SiteFooter from './SiteFooter'
 import { Timeline, Event } from './Timeline'
-import { Tabs, Tab } from './Tabs'
 import useLocalStorage from './useLocalStorage'
 import { FlipCards, Card } from './FlipCards'
 import { Embed } from './Embed'
@@ -21,9 +20,10 @@ import { Details, DetailsGroup } from './Details'
 import StickyHeader from './StickyHeader'
 import TableOfContents from './TableOfContents'
 import Map from './Map'
-import { Quote, Callout } from '@prif/shared'
+import { Quote, Callout, Tab, Tabs } from '@prif/shared'
 import * as QuoteStyles from './Quote.module.scss'
 import * as CalloutStyles from './Callout.module.scss'
+import * as TabStyles from './Tabs.module.scss'
 
 const shortCodes = {
   Embed,
@@ -41,8 +41,8 @@ const shortCodes = {
   Card,
   Details,
   DetailsGroup,
-  Tabs,
-  Tab,
+  Tabs: ({ ...props }) => <Tabs {...props} styles={TabStyles} />,
+  Tab: ({ ...props }) => <Tab {...props} styles={TabStyles} />,
   Callout: ({ ...props }) => <Callout {...props} styles={CalloutStyles} />,
   Map,
 }
