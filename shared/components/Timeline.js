@@ -1,12 +1,11 @@
-import React, { useState } from 'react'
-import { useId } from 'react'
-import * as styles from './Timeline.module.scss'
+import React, { useState, useId } from 'react'
 
-function Timeline(props) {
+function Timeline({ styles, children }) {
+  if (!styles) styles = {}
   const baseId = useId()
-  const events = React.Children.map(props.children, (child, i) => {
+  const events = React.Children.map(children, (child, i) => {
     return React.cloneElement(child, {
-      key: `baseId-${i}`,
+      key: `${baseId}-${i}`,
     })
   })
   return (
@@ -16,7 +15,8 @@ function Timeline(props) {
     </div>
   )
 }
-function Event({ date, title, collapsed, children }) {
+function Event({ styles, date, title, collapsed, children }) {
+  if (!styles) styles = {}
   const [isCollapsed, setIsCollapsed] = useState(collapsed)
   const handleToggle = () => {
     setIsCollapsed(!isCollapsed)
@@ -29,7 +29,6 @@ function Event({ date, title, collapsed, children }) {
             <span className={styles.eventDate}>{date}</span>
             <h3 className={styles.eventTitle}>{title}</h3>
           </div>
-          {/* {collapsed !== undefined && ( */}
           <button className={styles.eventToggle} onClick={handleToggle}>
             {isCollapsed ? 'Expand' : 'Collapse'}
           </button>
