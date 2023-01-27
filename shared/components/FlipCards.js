@@ -1,7 +1,12 @@
 import React, { useState } from 'react'
 
-function Card() {
-  return null
+function Card({front, children, active, styles, index, onClick}) {
+  return(
+    <li className={`${styles.card} + ${active ? styles.active : null}`} onClick={(e) => onClick(index)}>
+        <div className={styles.front}>{front}</div>
+        <div className={styles.back}>{children}</div>
+      </li>
+  )
 }
 
 function FlipCards({ styles, children }) {
@@ -18,15 +23,7 @@ function FlipCards({ styles, children }) {
   }
 
   const cards = React.Children.map(children, (child, index) => {
-    const isActive = activeCard === index
-    const activeClass = isActive ? styles.cardActive : ''
-
-    return (
-      <li className={`${styles.card} + ${activeClass}`} onClick={(e) => handleClick(index)}>
-        <div className={styles.front}>{child.props.front}</div>
-        <div className={styles.back}>{child.props.children}</div>
-      </li>
-    )
+    return (React.cloneElement(child, {styles: styles, active: activeCard === index, onClick: handleClick, index: index}))
   })
 
   return <ul className={styles.container}>{cards}</ul>
