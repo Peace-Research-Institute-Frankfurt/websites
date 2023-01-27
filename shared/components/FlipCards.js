@@ -29,11 +29,7 @@ function FlipCards({ styles, children }) {
     )
   })
 
-  return (
-    <>
-      <ul className={styles.container}>{cards}</ul>
-    </>
-  )
+  return <ul className={styles.container}>{cards}</ul>
 }
 
 export { FlipCards, Card }
