@@ -1,7 +1,8 @@
 import React from 'react'
+import Audio from './Audio'
 import MarkdownRenderer from 'react-markdown-renderer'
 
-export default function Quote({ styles, children, cite, type, fullDocument }) {
+export default function Quote({ styles, children, cite, type, fullDocument, audio }) {
   if (!styles) styles = {}
   const quoteType = type || 'speech'
   return (
@@ -16,9 +17,8 @@ export default function Quote({ styles, children, cite, type, fullDocument }) {
             Read full document
           </a>
         )}
+        {audio && <Audio src={audio} type="minimal" />}
       </div>
     </blockquote>
   )
 }
-
-// {/* {props.audio && <Audio src={props.audio} type="minimal"></Audio>} */}

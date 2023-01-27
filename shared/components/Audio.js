@@ -1,29 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react'
-import PlayIcon from '../assets/icon-play.svg'
+import PlayIcon from '../assets/play.svg'
 import PauseIcon from '../assets/pause.svg'
-import { graphql, useStaticQuery } from 'gatsby'
 import * as Styles from './Audio.module.scss'
 
 export default function Audio({ src, type }) {
-  const data = useStaticQuery(graphql`
-    query {
-      files: allFile {
-        nodes {
-          base
-          publicURL
-        }
-      }
-    }
-  `)
-
-  // Let's find our image
-  let file = null
-  data.files.nodes.forEach((f) => {
-    if (f.base === src) {
-      file = f
-    }
-  })
-
   const [playing, setPlaying] = useState(false)
   const [remaining, setRemaining] = useState(0)
   const audioRef = useRef()
@@ -44,7 +24,6 @@ export default function Audio({ src, type }) {
     if (seconds < 10) {
       seconds = '0' + seconds
     }
-    // return `${minutes}${d}`;
     return `${minutes}:${seconds}`
   }
 
@@ -59,7 +38,7 @@ export default function Audio({ src, type }) {
   }
   return (
     <>
-      <audio src={file.publicURL} ref={audioRef} onError={handleAudioError}></audio>
+      <audio src={src.publicURL} ref={audioRef} onError={handleAudioError}></audio>
       <button className={Styles.container} onClick={toggleAudio}>
         {playing ? <PauseIcon /> : <PlayIcon />}
         {playing ? <>{formatDuration(remaining)}</> : 'Listen'}

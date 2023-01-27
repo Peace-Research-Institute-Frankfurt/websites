@@ -9,6 +9,7 @@ import { Quiz, RadioChoice, Question } from './Quiz.js'
 import { Choice } from './MultipleChoice'
 import Term from './Term'
 import FigureAdapter from './FigureAdapter'
+import QuoteAdapter from './QuoteAdapter'
 import SiteHeader from './SiteHeader'
 import LectureVideo from './LectureVideo'
 import SiteFooter from './SiteFooter'
@@ -17,7 +18,7 @@ import { Embed } from './Embed'
 import StickyHeader from './StickyHeader'
 import TableOfContents from './TableOfContents'
 import Map from './Map'
-import { Quote, Callout, Tab, Tabs, Details, DetailsGroup, FlipCards, Card, Timeline, Event } from '@prif/shared'
+import { Callout, Tab, Tabs, Details, DetailsGroup, FlipCards, Card, Timeline, Event } from '@prif/shared'
 import * as QuoteStyles from './Quote.module.scss'
 import * as CalloutStyles from './Callout.module.scss'
 import * as TabStyles from './Tabs.module.scss'
@@ -32,7 +33,7 @@ const shortCodes = {
   RadioChoice,
   Question,
   Choice,
-  Quote: ({ ...props }) => <Quote {...props} styles={QuoteStyles} />,
+  Quote: ({ ...props }) => <QuoteAdapter {...props} styles={QuoteStyles} />,
   Term,
   Figure: ({ ...props }) => <FigureAdapter styles={FigureStyles} {...props} />,
   LectureVideo,
