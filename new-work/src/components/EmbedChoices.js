@@ -1,7 +1,7 @@
 import { graphql, useStaticQuery } from 'gatsby'
 import React, { useContext, useId } from 'react'
 import { EmbedChoicesContext } from '../context/EmbedChoicesContext'
-import Toggle from '@prif/shared'
+import { Toggle } from '@prif/shared'
 import * as styles from './EmbedChoices.module.scss'
 
 export default function EmbedChoices() {
