@@ -22,9 +22,6 @@
   }
 }
 
-.tools {
-  display: flex;
-}
 .logo {
   composes: navigation-item;
   position: relative;
@@ -61,13 +58,6 @@
   }
 }
 
-.bookmarks-container {
-  position: relative;
-}
-
-.bookmarks-toggle {
-  composes: navigation-item;
-}
 .bookmarks-active {
   opacity: 1;
   transform: translateY(0px);

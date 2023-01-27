@@ -1,11 +1,12 @@
-import React, { useState } from 'react'
+import React, { useState, useRef} from 'react'
 import { Link } from 'gatsby'
 import Logo from '../assets/logo.png'
-import Tooltip from './Tooltip'
+import {Tooltip} from "@prif/shared"
 import * as styles from './SiteHeader.module.scss'
 
 export default function SiteHeader({ unit, chapter, bookmarks }) {
   const [bookmarksActive, setBookmarksActive] = useState(false)
+  const bookmarksTriggerRef = useRef();
   let bookmarkItems = []
   if (bookmarks) {
     bookmarkItems = bookmarks.map((b) => {
@@ -35,11 +36,10 @@ export default function SiteHeader({ unit, chapter, bookmarks }) {
         EUNPDC E-Learning
       </Link>
       <div className={styles.tools}>
-        <div className={styles.bookmarksContainer}>
-          <button aria-controls="bookmarksOverlay" className={styles.bookmarksToggle} onClick={toggleBookmarks}>
+          <button ref={bookmarksTriggerRef} aria-controls="bookmarksOverlay" className={styles.bookmarksToggle} onClick={toggleBookmarks}>
             Bookmarks
           </button>
-          <Tooltip id="bookmarksOverlay" position="bottom-left" arrow="top-right" active={bookmarksActive}>
+          <Tooltip triggerEl={bookmarksTriggerRef.current} id="bookmarksOverlay" position="bottomRight" active={bookmarksActive}>
             <ul
               onFocusCapture={showBookmarks}
               onBlurCapture={hideBookmarks}
@@ -48,7 +48,6 @@ export default function SiteHeader({ unit, chapter, bookmarks }) {
               {bookmarkItems}
             </ul>
           </Tooltip>
-        </div>
       </div>
     </header>
   )

@@ -1,4 +1,4 @@
-.tooltip {
+.container {
   position: absolute;
   background: white;
   font-size: var(--ms--1);
@@ -17,16 +17,22 @@
   pointer-events: all;
 }
 
-.tooltip-top-center {
-  composes: tooltip;
-  transform: translateX(-50%) translateY(calc(-100% + 5px));
-  &.active {
-    transform: translateX(-50%) translateY(-100%);
-  }
+.top-center {
+  border: 2px solid red;
+  transform: translateX(-50%) translateY(-100%);
   .arrow {
     transform: translateX(-50%) translateY(50%) rotate(45deg);
     bottom: -1px;
     left: 50%;
+  }
+}
+
+.bottom-right {
+  transform: translateY(15px);
+  .arrow {
+    transform: translateY(-50%) rotate(-135deg);
+    top: -1px;
+    right: 2rem;
   }
 }
 

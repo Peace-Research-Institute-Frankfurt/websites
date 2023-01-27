@@ -17,7 +17,7 @@ export default function Term({styles, term, children, ...props}) {
         <button type="button" ref={triggerRef} onClick={toggleTooltip} className={styles.container}>
           {props.children ? <>{children}</> : <>{term.term_id}</>}
         </button>
-        <Tooltip position="top-center" active={active} triggerEl={triggerRef.current}>
+        <Tooltip position="topCenter" active={active} triggerEl={triggerRef.current}>
           <span className={styles.content}>
             <span className={styles.header}>
               <em className={styles.title}>{term.title}</em>
