@@ -8,5 +8,6 @@ import { FlipCards, Card } from './components/FlipCards'
 import { Timeline, Event } from './components/Timeline'
 import { Embed, Vimeo, Youtube } from './components/Embed'
 import Toggle from './components/Toggle'
+import Term from "./components/Term"
 
-export { Quote, Callout, Tabs, Tab, File, Figure, Details, DetailsGroup, Card, FlipCards, Timeline, Event, Embed, Vimeo, Youtube, Toggle }
+export { Quote, Callout, Tabs, Tab, File, Figure, Details, DetailsGroup, Card, FlipCards, Timeline, Event, Embed, Vimeo, Youtube, Toggle, Term}

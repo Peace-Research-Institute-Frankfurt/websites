@@ -1,41 +1,21 @@
 import React, { useState, useRef } from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
-import * as styles from './Term.module.scss'
 import Tooltip from './Tooltip'
 import CloseIcon from '../assets/close.svg'
 
-export default function Term(props) {
-  const data = useStaticQuery(graphql`
-    query TermQuery {
-      terms: allTermsJson {
-        nodes {
-          term_id
-          title
-          description
-        }
-      }
-    }
-  `)
-
+export default function Term({styles, term, children, ...props}) {
+  if (!styles) styles = {};
   const [active, setActive] = useState(false)
   const triggerRef = useRef()
-  // Let's find our term
-  let term = null
-  data.terms.nodes.forEach((t) => {
-    if (t.term_id === props.t) {
-      term = t
-    }
-  })
 
   function toggleTooltip() {
     setActive(!active)
   }
-
+  
   if (term) {
     return (
       <>
         <button type="button" ref={triggerRef} onClick={toggleTooltip} className={styles.container}>
-          {props.children ? <>{props.children}</> : <>{term.term_id}</>}
+          {props.children ? <>{children}</> : <>{term.term_id}</>}
         </button>
         <Tooltip position="top-center" active={active} triggerEl={triggerRef.current}>
           <span className={styles.content}>
@@ -52,6 +32,6 @@ export default function Term(props) {
       </>
     )
   } else {
-    return <>{props.t}</>
+    return <>(TERM){children}</>
   }
 }

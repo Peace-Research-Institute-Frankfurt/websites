@@ -7,7 +7,7 @@ import * as ChapterStyles from './Chapter.module.scss'
 import Meta from './Meta'
 import { Quiz, RadioChoice, Question } from './Quiz.js'
 import { Choice } from './MultipleChoice'
-import Term from './Term'
+import TermAdapter from './TermAdapter'
 import FigureAdapter from './FigureAdapter'
 import QuoteAdapter from './QuoteAdapter'
 import SiteHeader from './SiteHeader'
@@ -26,6 +26,7 @@ import * as FigureStyles from './Figure.module.scss'
 import * as DetailsStyles from './Details.module.scss'
 import * as FlipCardsStyles from './FlipCards.module.scss'
 import * as TimelineStyles from './Timeline.module.scss'
+import * as TermStyles from './Term.module.scss'
 
 const shortCodes = {
   Embed,
@@ -34,7 +35,7 @@ const shortCodes = {
   Question,
   Choice,
   Quote: ({ ...props }) => <QuoteAdapter {...props} styles={QuoteStyles} />,
-  Term,
+  Term: ({...props}) => <TermAdapter styles={TermStyles} {...props}/>, 
   Figure: ({ ...props }) => <FigureAdapter styles={FigureStyles} {...props} />,
   LectureVideo,
   Event: ({ ...props }) => <Event styles={TimelineStyles} {...props} />,
