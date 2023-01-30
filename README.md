@@ -4,7 +4,7 @@ This is a monorepo for all our React-based editoral products.
 
 ## Workflow
 
-### Setting up your depevelopment environment
+### Setting up your development environment
 
 You only need to do these steps once. If you've never worked in software engineering before, you might want to read this [gentler introduction](https://awesomephant.github.io/untitled-coding-workshop/chapters/tools/) to the process before you get started.
 
