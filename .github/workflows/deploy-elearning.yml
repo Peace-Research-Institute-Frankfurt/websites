@@ -1,0 +1,53 @@
+name: Build and deploy
+
+on:
+  # push:
+  #   branches: ['main']
+  #   paths: ['./e-learning', './shared']
+  workflow_dispatch:
+permissions:
+  contents: read
+
+concurrency:
+  group: 'deploy'
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: npm
+      - name: Restore cache
+        uses: actions/cache@v3
+        with:
+          path: |
+            public
+            .cache
+          key: ${{ runner.os }}-gatsby-build-${{ hashFiles('public') }}
+          restore-keys: |
+            ${{ runner.os }}-gatsby-build-
+      - name: Install dependencies
+        working-directory: ./e-learning/
+        run: npm install
+      - name: Run Gatsby build
+        working-directory: ./e-learning/
+        env:
+          PREFIX_PATHS: 'true'
+        run: npm run build
+      - name: FTP Deploy
+        working-directory: ./e-learning/
+        uses: SamKirkland/FTP-Deploy-Action@4.3.3
+        with:
+          server: ${{ secrets.ELEARNING_FTP_HOST }}
+          username: ${{ secrets.ELEARNING_FTP_USER }}
+          password: ${{ secrets.ELEARNING_FTP_PASSWORD }}
+          local-dir: ./public/
+          server-dir: ./lu/
+          log-level: standard
+          dry-run: true
