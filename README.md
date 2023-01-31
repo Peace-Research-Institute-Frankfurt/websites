@@ -25,4 +25,4 @@ You only need to do these steps once. If you've never worked in software enginee
 1. Open your project's _subfolder_ (like `/new-work`) in Visual Studio Code
 2. Run `npm run start` in the built-in command line to start a live preview at `localhost:8000`.
 3. Make your changes
-4. Use the command line or the version control panel in Visual Studio Code to `commit` and `push` your changes to the repository. Your changes should be automatically deployed in about 60 seconds. The [deployment status](https://github.com/Peace-Research-Institute-Frankfurt/websites#deployment-status) section at the top of this page will show your project's deployment status in real time.
+4. Use the command line or the version control panel in Visual Studio Code to `commit` and `push` your changes to the repository. Your changes should be automatically deployed in about 60 seconds. The [deployment status](https://github.com/Peace-Research-Institute-Frankfurt/websites#deployment-status) section at the top of this page shows your project's deployment status in real time.
