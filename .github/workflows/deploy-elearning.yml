@@ -41,13 +41,12 @@ jobs:
           PREFIX_PATHS: 'true'
         run: npm run build
       - name: FTP Deploy
-        working-directory: ./e-learning/
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
         with:
           server: ${{ secrets.ELEARNING_FTP_HOST }}
           username: ${{ secrets.ELEARNING_FTP_USER }}
           password: ${{ secrets.ELEARNING_FTP_PASSWORD }}
-          local-dir: ./public/
+          local-dir: ./e-learning/public/
           server-dir: ./lu/
           log-level: standard
           dry-run: true
