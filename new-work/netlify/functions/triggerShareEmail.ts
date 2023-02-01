@@ -121,9 +121,10 @@ const handler: Handler = async function (event) {
       }),
     });
     if (res.status !== 200) {
+      const body = await res.body
       console.log(res.status)
       console.log(res.statusText)
-      console.log(res.body)
+      console.log(body)
       return {
         statusCode: 500,
         body: JSON.stringify({ message: "Server error, could not deliver email." }),
