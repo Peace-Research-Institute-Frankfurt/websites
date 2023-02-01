@@ -8,5 +8,5 @@
 [[plugins]]
     package = "@netlify/plugin-gatsby"
 
-[functions]
+[functions.emails]
     included_files = ["emails/**"]
