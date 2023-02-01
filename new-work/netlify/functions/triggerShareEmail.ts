@@ -121,7 +121,7 @@ const handler: Handler = async function (event) {
       }),
     });
     if (res.status !== 200) {
-      const body = await res.body
+      const body = await res.json();
       console.log(res.status)
       console.log(res.statusText)
       console.log(body)
