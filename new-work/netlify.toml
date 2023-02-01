@@ -1,9 +1,8 @@
-[build]
-    base = "new-work/"
-    publish = "public/"
-
 [[plugins]]
     package = "@netlify/plugin-emails"
 
 [[plugins]]
     package = "@netlify/plugin-gatsby"
+
+[functions]
+    included_files=["./emails/**"]
