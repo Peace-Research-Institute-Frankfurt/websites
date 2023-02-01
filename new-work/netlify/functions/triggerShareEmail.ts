@@ -123,6 +123,7 @@ const handler: Handler = async function (event) {
     if (res.status !== 200) {
       console.log(res.status)
       console.log(res.statusText)
+      console.log(res.body)
       return {
         statusCode: 500,
         body: JSON.stringify({ message: "Server error, could not deliver email." }),
