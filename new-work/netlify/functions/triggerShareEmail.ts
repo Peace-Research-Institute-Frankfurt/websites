@@ -99,7 +99,7 @@ const handler: Handler = async function (event) {
       return validator.normalizeEmail(email)
     })
     const message = validator.escape(requestBody.message)
-    const url = `${process.env.URL}/.netlify/functions/emails/share/`
+    const url = `https://leibniz-nw.netlify.app/.netlify/functions/emails/share/`
     console.log(url)
     const res = await fetch(url, {
       headers: {
