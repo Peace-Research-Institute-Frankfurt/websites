@@ -99,7 +99,7 @@ const handler: Handler = async function (event) {
       return validator.normalizeEmail(email)
     })
     const message = validator.escape(requestBody.message)
-    const url = `${process.env.URL}/.netlify/functions/emails/share`
+    const url = `${process.env.URL}/.netlify/functions/emails/share/`
     console.log(url)
     const res = await fetch(url, {
       headers: {
@@ -121,7 +121,8 @@ const handler: Handler = async function (event) {
       }),
     });
     if (res.status !== 200) {
-      console.log(res)
+      console.log(res.status)
+      console.log(res.statusText)
       return {
         statusCode: 500,
         body: JSON.stringify({ message: "Server error, could not deliver email." }),
