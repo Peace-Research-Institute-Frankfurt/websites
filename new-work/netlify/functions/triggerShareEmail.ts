@@ -1,6 +1,7 @@
 import { Handler } from "@netlify/functions";
 import validator from "validator";
 import fetch from "node-fetch";
+import fs from "fs"
 
 // const HCAPTCHA_SECRET = process.env.HCAPTCHA_SECRET;
 
@@ -92,6 +93,8 @@ const handler: Handler = async function (event) {
 
   const requestBody = JSON.parse(event.body) as RequestBody
   const errors = await validateRequestBody(requestBody);
+
+  console.log(`Email directory exists: ${fs.existsSync(process.env.NETLIFY_EMAILS_DIRECTORY)}`)
 
   if (errors.length === 0) {
     const userEmail = validator.normalizeEmail(requestBody.userEmail)
