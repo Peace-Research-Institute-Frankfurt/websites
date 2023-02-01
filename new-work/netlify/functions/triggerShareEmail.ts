@@ -99,7 +99,9 @@ const handler: Handler = async function (event) {
       return validator.normalizeEmail(email)
     })
     const message = validator.escape(requestBody.message)
-    const res = await fetch(`${process.env.URL}/.netlify/functions/emails/share`, {
+    const url = `${process.env.URL}/.netlify/functions/emails/share`
+    console.log(url)
+    const res = await fetch(url, {
       headers: {
         "netlify-emails-secret": process.env.NETLIFY_EMAILS_SECRET as string,
       },
