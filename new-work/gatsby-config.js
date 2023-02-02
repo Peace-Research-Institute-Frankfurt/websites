@@ -85,6 +85,7 @@ module.exports = {
             // This will start to work in Gatsby 5.6, when we can use
             // gatsby-config.mjs to load a local version of this plugin
             // that uses the latest (ESM) version of retext-smartypants.
+            // See https://github.com/Peace-Research-Institute-Frankfurt/websites/issues/3
             options: {
               openingQuotes: { single: '‚', double: '„' },
               closingQuotes: { single: '‘', double: '“' },
