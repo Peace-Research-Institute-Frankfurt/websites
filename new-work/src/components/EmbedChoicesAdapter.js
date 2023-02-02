@@ -6,11 +6,11 @@ import { EmbedChoices } from '@prif/shared'
 export default function EmbedChoicesAdapter({ ...props }) {
   const data = useStaticQuery(graphql`
     query {
-      providers: allEmbedProvidersJson(filter: { provider: { ne: "default" } }) {
+      providers: allEmbedProvidersJson(filter: { name: { ne: "default" } }) {
         nodes {
-          description
-          provider
+          name
           title
+          description
         }
       }
     }
@@ -24,5 +24,5 @@ export default function EmbedChoicesAdapter({ ...props }) {
       return newChoices
     })
   }
-  return <EmbedChoices providers={data.providers} choices={choices} onChange={onChange} {...props} />
+  return <EmbedChoices providers={data.providers.nodes} choices={choices} onChange={onChange} {...props} />
 }

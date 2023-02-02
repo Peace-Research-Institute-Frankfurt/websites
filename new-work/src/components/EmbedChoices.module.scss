@@ -21,19 +21,20 @@
 
 .choice {
   margin-left: 0;
-  padding: 0.75em;
-  border-bottom: 1px solid var(--black);
+  padding: 1em;
   display: flex;
-  span {
-    font-size: var(--ms-1);
-  }
+  border-bottom: 1px solid var(--black);
   justify-content: space-between;
-  &:hover,
-  &:focus-visible {
-    background: var(--gray-light);
-    text-decoration: underline;
+  gap: 1em;
+  align-items: baseline;
+  &:last-child {
+    border-bottom: 0;
   }
-  &:before {
-    display: none;
+  h3 {
+    margin-top: 0;
   }
+}
+
+.description {
+  @extend %caption;
 }

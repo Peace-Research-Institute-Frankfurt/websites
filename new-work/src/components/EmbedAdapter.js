@@ -8,9 +8,9 @@ function EmbedAdapter({ provider, ...props }) {
     query {
       providers: allEmbedProvidersJson {
         nodes {
-          description
-          provider
+          name
           title
+          description
         }
       }
     }
@@ -19,7 +19,7 @@ function EmbedAdapter({ provider, ...props }) {
 
   let providerData = null
   data.providers.nodes.forEach((p) => {
-    if (p.provider === provider) {
+    if (p.name === provider) {
       providerData = p
     }
   })
