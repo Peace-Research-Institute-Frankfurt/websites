@@ -23,9 +23,9 @@ function EmbedAdapter({ provider, ...props }) {
       providerData = p
     }
   })
-  const { embedChoices, setEmbedChoices } = useContext(EmbedChoicesContext)
+  const { choices, setChoices } = useContext(EmbedChoicesContext)
 
-  return <Embed provider={providerData} embedChoices={embedChoices} setEmbedChoices={setEmbedChoices} {...props} />
+  return <Embed provider={providerData} embedChoices={choices} setEmbedChoices={setChoices} {...props} />
 }
 
 function Vimeo({ styles, url, width, height, caption }) {
