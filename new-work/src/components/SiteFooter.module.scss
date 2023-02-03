@@ -19,9 +19,13 @@
     gap: 0.65em;
     display: flex;
     justify-content: center;
-    line-height: 1.5;
+    line-height: 1;
     list-style: none;
     flex-wrap: wrap;
+  }
+  margin-bottom: 1em;
+  @include bp(m) {
+    margin-bottom: 0;
   }
 }
 
