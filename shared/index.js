@@ -11,6 +11,7 @@ import Toggle from './components/Toggle'
 import Term from './components/Term'
 import Tooltip from './components/Tooltip'
 import EmbedChoices from './components/EmbedChoices'
+import Expandable from './components/Expandable'
 
 export {
   Quote,
@@ -30,4 +31,5 @@ export {
   Term,
   Tooltip,
   EmbedChoices,
+  Expandable,
 }
