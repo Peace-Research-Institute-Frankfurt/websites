@@ -18,6 +18,31 @@
   }
 }
 
+%h2 {
+  font-size: var(--ms-2);
+  line-height: 1.15;
+  font-weight: 700;
+  margin-top: 1em;
+  margin-bottom: 0.75rem;
+  &:first-child {
+    margin-top: 0;
+  }
+  & + h3 {
+    margin-top: 0;
+  }
+}
+
+%h3 {
+  font-size: var(--ms-1);
+  font-weight: 600;
+  line-height: 1.2;
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+  & + table {
+    margin-top: 0;
+  }
+}
+
 %caption {
   font-size: var(--ms--1);
 }

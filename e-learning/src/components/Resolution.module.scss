@@ -1,0 +1,34 @@
+@import 'vars';
+
+.container {
+  background: var(--yellow-10);
+  border-radius: var(--br);
+  padding: 1em;
+}
+
+.eyebrow {
+  @extend %caption;
+}
+
+.title {
+  @extend %h3;
+  margin-top: 0;
+}
+
+.meta {
+  @extend %caption;
+  display: flex;
+  gap: 0.5em;
+  padding-top: 0.5em;
+  padding-bottom: 0.25em;
+}
+
+.meta-item {
+  border: 1px solid rgba(black, 0.25);
+  border-radius: 100px;
+  padding: 0.25em 0.65em;
+  padding-bottom: 0.35em;
+  display: inline-block;
+  line-height: 1;
+  font-feature-settings: 'tnum' 1;
+}
