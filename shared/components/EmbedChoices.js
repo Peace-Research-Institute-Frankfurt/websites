@@ -1,12 +1,14 @@
 import React, { useId } from 'react'
-import { Toggle } from '@prif/shared'
+import MarkdownRenderer from 'react-markdown-renderer'
 
 export default function EmbedChoices({ styles, providers, choices, onChange }) {
   const baseId = useId()
   const items = providers.map((p, i) => {
     return (
       <li key={`${baseId}-${i}`} className={styles.choice}>
-        <Toggle
+        <input
+          className={styles.checkbox}
+          type="checkbox"
           checked={choices[p.name] || false}
           onChange={(e) => {
             onChange(e, p.name)
@@ -14,7 +16,7 @@ export default function EmbedChoices({ styles, providers, choices, onChange }) {
         />
         <div className={styles.description}>
           <h3>{p.title}</h3>
-          <p>{p.description}</p>
+          <MarkdownRenderer markdown={p.shortDescription} />
         </div>
       </li>
     )

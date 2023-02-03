@@ -10,7 +10,7 @@ export default function EmbedChoicesAdapter({ ...props }) {
         nodes {
           name
           title
-          description
+          shortDescription
         }
       }
     }
