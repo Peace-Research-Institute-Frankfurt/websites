@@ -228,9 +228,8 @@
   }
   a {
     text-decoration: underline;
-    text-underline-offset: 0.14em;
+    text-underline-offset: 0.15em;
     color: var(--gray-60);
-    text-decoration-color: var(--gray-30);
     &:hover,
     &:focus-visible {
       text-decoration-color: var(--gray-70);

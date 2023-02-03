@@ -1,5 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
+import Button from './Button'
+import CheckIcon from '../assets/check.svg'
+import CrossIcon from '../assets/cross.svg'
+import ArrowDownIcon from '../assets/arrow-down.svg'
+import ArrowUpIcon from '../assets/arrow-up.svg'
+import DownloadIcon from '../assets/download.svg'
 import * as styles from './Resolution.module.scss'
 
 export default function Resolution({ name }) {
@@ -20,7 +26,6 @@ export default function Resolution({ name }) {
     }
   `)
 
-  // Let's find our term
   let res = null
   data.resolutions.nodes.forEach((node) => {
     if (node.name === name) {
@@ -28,18 +33,42 @@ export default function Resolution({ name }) {
     }
   })
 
+  const [isCollapsed, setCollapsed] = useState(true)
+
   const meta = [
-    { label: 'Introduced', data: res.date },
+    {
+      label: 'Status',
+      data: (
+        <>
+          {res.status === 'adopted' ? (
+            <>
+              <CheckIcon />
+              Adopted {res.date}
+            </>
+          ) : (
+            <>
+              <CrossIcon />
+              {res.status}
+            </>
+          )}
+        </>
+      ),
+    },
     { label: 'Meeting', data: res.meeting },
-    { label: 'Status', data: res.status },
   ]
 
   return (
-    <section className={styles.container}>
+    <section className={`${styles.container} ${isCollapsed ? styles.collapsed : null}`}>
       <span className={styles.eyebrow}>Resolution</span>
       <h2 className={styles.title}>
         {res.title}
-        <span className={styles.name}>{res.name}</span>
+        {res.text ? (
+          <a className={styles.name} href={res.text}>
+            {res.name}
+          </a>
+        ) : (
+          <span className={styles.name}>{res.name}</span>
+        )}
       </h2>
       <p className={styles.meta}>
         {meta.map((el) => {
@@ -51,9 +80,16 @@ export default function Resolution({ name }) {
         })}
       </p>
       <p className={styles.description}>{res.description}</p>
-      <p className={styles.actions}>
-        <a href={res.text}>Full text</a>
-      </p>
+      {res.comment && <p className={styles.comment}>{res.comment}</p>}
+      <div className={styles.toggle}>
+        <Button
+          icon={isCollapsed ? <ArrowDownIcon /> : <ArrowUpIcon />}
+          label={isCollapsed ? 'Expand' : 'Collapse'}
+          onClick={() => {
+            setCollapsed(!isCollapsed)
+          }}
+        />
+      </div>
     </section>
   )
 }
