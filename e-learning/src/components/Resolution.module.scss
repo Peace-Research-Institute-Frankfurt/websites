@@ -15,6 +15,13 @@
   margin-top: 0;
 }
 
+.name {
+  font-family: var(--mono);
+  font-weight: 300;
+  margin-left: 0.65em;
+  opacity: 0.6;
+}
+
 .meta {
   @extend %caption;
   display: flex;
@@ -24,10 +31,10 @@
 }
 
 .meta-item {
-  border: 1px solid rgba(black, 0.25);
+  border: 1px solid rgba(black, 0.3);
   border-radius: 100px;
-  padding: 0.25em 0.65em;
-  padding-bottom: 0.35em;
+  padding: 0.2em 0.65em;
+  padding-bottom: 0.3em;
   display: inline-block;
   line-height: 1;
   font-feature-settings: 'tnum' 1;

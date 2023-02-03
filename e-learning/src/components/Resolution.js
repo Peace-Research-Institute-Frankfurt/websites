@@ -37,7 +37,10 @@ export default function Resolution({ name }) {
   return (
     <section className={styles.container}>
       <span className={styles.eyebrow}>Resolution</span>
-      <h2 className={styles.title}>{res.title}</h2>
+      <h2 className={styles.title}>
+        {res.title}
+        <span className={styles.name}>{res.name}</span>
+      </h2>
       <p className={styles.meta}>
         {meta.map((el) => {
           return (
