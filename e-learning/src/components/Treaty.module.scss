@@ -1,7 +1,7 @@
 @import 'vars';
 
 .container {
-  background: var(--yellow-10);
+  background: var(--blue-10);
   border-radius: var(--br);
   padding: 1em;
 }
@@ -14,6 +14,14 @@
 .title {
   @extend %h3;
   margin-top: 0;
+}
+
+.long-title {
+  @extend %caption;
+  max-width: 30em;
+  padding-top: 0.25em;
+  font-weight: normal;
+  display: block;
 }
 
 .name {
