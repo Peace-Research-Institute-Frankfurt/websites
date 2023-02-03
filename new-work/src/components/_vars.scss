@@ -22,41 +22,6 @@
   }
 }
 
-:root {
-  --white: rgb(254, 251, 251);
-  --gray-light: rgb(244, 241, 241);
-  --gray: rgb(145, 145, 145);
-  --gray-dark: rgb(90, 90, 90);
-  --orange: #ff9720;
-  --orange-light: #feeedc;
-  --highlight: rgb(252, 235, 188);
-  --shadow: rgba(0, 0, 0, 0.7);
-  --black: rgba(0, 0, 0, 1);
-  --focus-color: rgb(37, 93, 216);
-  --haas-display: 'acumin-pro-condensed', serif;
-  --haas-text: 'acumin-pro', sans-serif;
-  --suisse: 'Suisse', Georgia, serif;
-  --ratio: 1.2; // Minor 3
-  --ms-0: clamp(0.75rem, calc(1.4vw + 0.1rem), 1.05rem);
-  --ms--2: calc(var(--ms--1) / var(--ratio));
-  --ms--1: calc(var(--ms-0) / var(--ratio));
-  --ms-1: calc(var(--ms-0) * var(--ratio));
-  --ms-2: calc(var(--ms-1) * var(--ratio));
-  --ms-3: calc(var(--ms-2) * var(--ratio));
-  --ms-4: calc(var(--ms-3) * var(--ratio));
-  --ms-5: calc(var(--ms-4) * var(--ratio));
-  --ms-6: calc(var(--ms-5) * var(--ratio));
-  --ms-7: calc(var(--ms-6) * var(--ratio));
-  --ms-8: calc(var(--ms-7) * var(--ratio));
-  --ms-9: calc(var(--ms-8) * var(--ratio));
-  --ms-10: calc(var(--ms-9) * var(--ratio));
-  --ms-11: calc(var(--ms-10) * var(--ratio));
-  --ms-12: calc(var(--ms-11) * var(--ratio));
-  --br: 3px;
-  --fast: 100ms;
-  --padding: max(2vw, 1rem);
-}
-
 %h2 {
   font-family: var(--haas-text);
   line-height: 1.1;

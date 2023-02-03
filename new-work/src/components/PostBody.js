@@ -1,6 +1,6 @@
 import { MDXProvider } from '@mdx-js/react'
 import React from 'react'
-import EmbedChoices from './EmbedChoices'
+import EmbedChoicesAdapter from './EmbedChoicesAdapter'
 import Leadin from './Leadin'
 import FileAdapter from './FileAdapter'
 import FigureAdapter from './FigureAdapter'
@@ -10,6 +10,7 @@ import * as QuoteStyles from './Quote.module.scss'
 import * as FileStyles from './File.module.scss'
 import * as FigureStyles from './Figure.module.scss'
 import * as EmbedStyles from './Embed.module.scss'
+import * as EmbedChoicesStyles from './EmbedChoices.module.scss'
 
 const shortCodes = {
   Figure: ({ ...props }) => <FigureAdapter {...props} styles={FigureStyles} />,
@@ -17,9 +18,9 @@ const shortCodes = {
   File: ({ ...props }) => <FileAdapter {...props} styles={FileStyles} />,
   Youtube: ({ ...props }) => <Youtube styles={EmbedStyles} {...props} />,
   Vimeo: ({ ...props }) => <Vimeo styles={EmbedStyles} {...props} />,
-  Leadin,
-  EmbedChoices,
+  EmbedChoices: ({ ...props }) => <EmbedChoicesAdapter styles={EmbedChoicesStyles} />,
   Embed: ({ ...props }) => <EmbedAdapter styles={EmbedStyles} {...props} />,
+  Leadin,
 }
 
 export default function PostBody({ children }) {
