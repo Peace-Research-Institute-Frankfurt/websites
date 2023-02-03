@@ -7,9 +7,7 @@ reading_time: 9
 
 This is the main body of the chapter. It can contain **bold**, _italics_, [links](#example), footnotes[^1], subheadings, lists, and a series of advanced components listed below.
 
-## Components
-
-### Callout
+## Callout
 
 <Callout title="This is the title">
 
@@ -17,7 +15,7 @@ This is the content of the callout. It can contain **bold**, _italics_, and othe
 
 </Callout>
 
-### Table
+## Table
 
 Show an inline table.
 
@@ -27,7 +25,7 @@ Show an inline table.
 | Bob      | Oranges  | and _italics_               |
 | Charlie  | Bananas  | and [links](#1)             |
 
-### Lecture video
+## Lecture video
 
 <LectureVideo lu="15" vl="vl1" provider="">
 
@@ -35,15 +33,15 @@ This is the video's transcript. It can contain **bold**, _italics_, [links](#1),
 
 </LectureVideo>
 
-### Glossary Terms
+## Glossary Terms
 
 Show an inline definition for technical terms or abbreviations like <Term t="UNSCR-1540"/> or <Term t="CWC"/>. Term definitions are global across all learning units, and you can embed existing definitions into your text. Definitions you provide will in turn become available to all other learning unit authors.
 
-### Figure
+## Figure
 
 Both raster images (PNG, JPG, etc.) and vector images (SVG) are supported. Raster images are automatically scaled and converted to web-ready formats.
 
-#### Medium
+### Medium
 
 <Figure
   size="medium"
@@ -53,15 +51,15 @@ Both raster images (PNG, JPG, etc.) and vector images (SVG) are supported. Raste
   alt=""
 ></Figure>
 
-#### Large
+### Large
 
 <Figure size="large" src="ban-is-coming.jpg" caption="This is a large image" credit="This is the image credit." alt=""></Figure>
 
-#### Full
+### Full
 
 <Figure size="full" src="ban-is-coming.jpg" caption="This is a full-bleed image." credit="This is the image credit." alt=""></Figure>
 
-### Tabs
+## Tabs
 
 <Tabs>
   <Tab title="Tab A">This is the content of tab A. There is no length restriction, and you can use *italics*, [links](#1) and other formatting.</Tab>
@@ -69,7 +67,7 @@ Both raster images (PNG, JPG, etc.) and vector images (SVG) are supported. Raste
   <Tab title="Tab C">Tab content C</Tab>
 </Tabs>
 
-### Detail/Expand
+## Detail/Expand
 
 <DetailsGroup>
 <Details summary="Title A">
@@ -84,7 +82,7 @@ Description B.
 </Details>
 </DetailsGroup>
 
-### Flipcards
+## Flipcards
 
 <FlipCards>
 <Card front="This the front of the card.">
@@ -113,11 +111,11 @@ This is the back of the card. Both sides of the card shouldn't have more than 25
   </Event>
 </Timeline>
 
-### Quote
+## Quote
 
 Both styles support a citation, an optional audio file and an optional link to the full document.
 
-#### Style A (Default)
+### Style A (Default)
 
 <Quote audio="eisenhower-chance-for-peace.mp3" fullDocument="https://en.wikisource.org/wiki/The_Chance_for_Peace" cite='Dwight D. Eisenhower, "Chance for Peace", speech to American Society of Newspaper Editors.'>
     
@@ -125,7 +123,7 @@ Both styles support a citation, an optional audio file and an optional link to t
 
 </Quote>
 
-#### Style B (Document)
+### Style B (Document)
 
 <Quote audio="eisenhower-chance-for-peace.mp3" type="document" fullDocument="https://en.wikisource.org/wiki/The_Chance_for_Peace" cite='Dwight D. Eisenhower, "Chance for Peace", speech to American Society of Newspaper Editors.'>
     
@@ -135,19 +133,23 @@ This world in arms is not spending money alone. **It is spending the sweat of it
 
 </Quote>
 
-### Embedded graphics
+## Embedded graphics
 
 Our existing learning units include a series of interactive graphics produced by an external agency. These can be embedded in new learning units and should behave as expected:
 
-#### Medium
+### Medium
 
 <Embed src="/treaty/index.html" size="medium" caption="Embeds can have a caption to give additional context. This has no character limit." />
 
-#### Large
+### Large
 
 <Embed src="/treaty/index.html" size="large" />
 
-### Quiz
+## Resolution
+
+<Resolution name="S/RES/1540" />
+
+## Quiz
 
 <Quiz>
   <Question type="MultipleChoice" question="What is the goal of arms control?" hint="Select all that apply.">

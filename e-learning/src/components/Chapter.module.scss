@@ -123,6 +123,7 @@
   h5,
   h6,
   blockquote,
+  section,
   table {
     grid-column: 1 / 6;
     line-height: 1.4;
@@ -130,7 +131,10 @@
       grid-column: 3 / 4;
     }
   }
+}
 
+.body-text {
+  display: contents;
   figure {
     margin-bottom: 1rem;
     margin-top: 1rem;
@@ -152,28 +156,11 @@
   p {
     margin-bottom: 0.5em;
   }
-  h2 {
-    font-size: var(--ms-2);
-    margin-top: 1em;
-    line-height: 1.15;
-    margin-bottom: 0.75rem;
-    font-weight: 700;
-    &:first-child {
-      margin-top: 0;
-    }
-    & + h3 {
-      margin-top: 0;
-    }
+  & > h2 {
+    @extend %h2;
   }
-  h3 {
-    font-size: var(--ms-0);
-    font-weight: 600;
-    line-height: 1.2;
-    margin-top: 1rem;
-    margin-bottom: 0.25rem;
-    & + table {
-      margin-top: 0;
-    }
+  & > h3 {
+    @extend %h3;
   }
   h4 {
     text-transform: uppercase;
@@ -241,18 +228,13 @@
   }
   a {
     text-decoration: underline;
-    text-underline-offset: 0.14em;
+    text-underline-offset: 0.15em;
     color: var(--gray-60);
-    text-decoration-color: var(--gray-30);
     &:hover,
     &:focus-visible {
       text-decoration-color: var(--gray-70);
     }
   }
-}
-
-.body-text {
-  display: contents;
 }
 
 .next {

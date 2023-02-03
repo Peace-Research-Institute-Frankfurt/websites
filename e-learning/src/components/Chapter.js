@@ -18,6 +18,7 @@ import { Embed } from './Embed'
 import StickyHeader from './StickyHeader'
 import TableOfContents from './TableOfContents'
 import Map from './Map'
+import Resolution from './Resolution'
 import { Callout, Tab, Tabs, Details, DetailsGroup, FlipCards, Card, Timeline, Event } from '@prif/shared'
 import * as QuoteStyles from './Quote.module.scss'
 import * as CalloutStyles from './Callout.module.scss'
@@ -34,8 +35,9 @@ const shortCodes = {
   RadioChoice,
   Question,
   Choice,
+  Resolution,
   Quote: ({ ...props }) => <QuoteAdapter {...props} styles={QuoteStyles} />,
-  Term: ({...props}) => <TermAdapter styles={TermStyles} {...props}/>, 
+  Term: ({ ...props }) => <TermAdapter styles={TermStyles} {...props} />,
   Figure: ({ ...props }) => <FigureAdapter styles={FigureStyles} {...props} />,
   LectureVideo,
   Event: ({ ...props }) => <Event styles={TimelineStyles} {...props} />,
