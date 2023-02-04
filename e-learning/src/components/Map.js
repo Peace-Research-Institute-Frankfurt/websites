@@ -10,7 +10,9 @@ export default function Map({ caption }) {
       treaties: allTreatiesJson(filter: { name: { eq: "cwc" } }) {
         nodes {
           name
-          members
+          members {
+            cca2
+          }
         }
       }
     }
@@ -62,7 +64,7 @@ export default function Map({ caption }) {
         'admin-1-boundary-bg'
       )
     })
-  }, [])
+  }, [data.treaties.nodes])
 
   return (
     <figure className={styles.container}>

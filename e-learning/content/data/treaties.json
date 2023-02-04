@@ -4,9 +4,23 @@
     "title": "Convention on the Prohibition of the Development, Production, Stockpiling and Use of Chemical Weapons and on their Destruction",
     "shortTitle": "Chemical Weapons Convention",
     "date": "1997-04-29",
-    "members": ["AF", "AU", "AL", "DZ", "AD"],
-    "signatories": ["AF", "AU", "AL", "DZ", "AD"],
     "description": "The Chemical Weapons Convention prohibits the large-scale use, development, production, stockpiling and transfer of chemical weapons and their precursors. It entered into force in 1997 and is administered by the Organisation for the Prohibition of Chemical Weapons (OPCW).",
-    "comment": "This is a comment by an author"
+    "comment": "This is a comment by an author",
+    "members": [
+      {
+        "cca2": "AF",
+        "events": [
+          { "type": "signature", "date": "1993-01-14" },
+          { "type": "ratification", "date": "2003-09-24" }
+        ]
+      },
+      {
+        "cca2": "BE",
+        "events": [
+          { "type": "signature", "date": "1993-01-13" },
+          { "type": "ratification", "date": "1997-01-27" }
+        ]
+      }
+    ]
   }
 ]
