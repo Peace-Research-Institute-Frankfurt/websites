@@ -174,21 +174,23 @@
   table {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
+    display: inline-block;
   }
   td,
   th {
-    padding: 0.2rem;
+    padding: 0.2em;
     padding-left: 0;
-    padding-right: 1rem;
-    border-bottom: 1px solid var(--gray-30);
+    padding-right: 3em;
+    border-bottom: 2px solid var(--blue-20);
     vertical-align: top;
   }
   th {
     text-transform: uppercase;
     font-size: var(--ms--2);
     text-align: left;
-    letter-spacing: 0.04em;
-    font-weight: 400;
+    letter-spacing: 0.025em;
+    font-weight: 700;
+    padding-bottom: 0.45em;
   }
   sup {
     font-size: var(--ms--2);
