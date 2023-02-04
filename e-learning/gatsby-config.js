@@ -1,5 +1,3 @@
-const path = require('path')
-console.log(path.resolve(__dirname, 'src/assets/icons'))
 const wrapESMPlugin = (name) =>
   function wrapESM(opts) {
     return async (...args) => {
@@ -42,7 +40,6 @@ module.exports = {
       options: {
         rule: {
           include: /icons/,
-          // exclude: /\.url\.svg$/,
           omitKeys: ['xmlnsDc', 'xmlnsCc', 'xmlnsRdf', 'xmlnsSvg', 'xmlnsSodipodi', 'xmlnsInkscape'],
         },
       },
