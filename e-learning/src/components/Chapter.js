@@ -117,7 +117,7 @@ export const query = graphql`
 
 const Chapter = ({ data, children }) => {
   const frontmatter = data.post.childMdx.frontmatter
-  const [bookmarks, setBookmarks] = useLocalStorage('bookmarks', [])
+  const [bookmarks] = useLocalStorage('bookmarks', [])
   const currentIndex = data.chapters.nodes.findIndex((el) => {
     return el.childMdx.frontmatter.order === frontmatter.order
   })

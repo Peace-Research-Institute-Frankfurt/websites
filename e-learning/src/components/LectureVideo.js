@@ -61,9 +61,7 @@ export default function LectureVideo({ lu, vl, transcript, size, provider, child
 
   return (
     <div className={styles.container}>
-      <ul className={styles.tabsList} role="tablist">
-        {tabItems}
-      </ul>
+      <ul className={styles.tabsList}>{tabItems}</ul>
       <div>{tabContent}</div>
     </div>
   )

@@ -76,7 +76,7 @@ export default function Resolution({ name }) {
             )
           })}
         </p>
-        <p className={styles.description}>{res.description}</p>
+        <p>{res.description}</p>
         {res.comment && <p className={styles.comment}>{res.comment}</p>}
       </Expandable>
     </section>
