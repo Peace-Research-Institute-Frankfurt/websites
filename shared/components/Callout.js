@@ -1,11 +1,14 @@
 import React from 'react'
+import Expandable from './Expandable'
 
-function Callout({ styles, title, children }) {
+function Callout({ styles, buttonStyles, title, children }) {
   if (!styles) styles = {}
   return (
     <section className={styles.container}>
-      <h3>{title}</h3>
-      {children}
+      <Expandable buttonStyles={buttonStyles}>
+        <h3 className={styles.title}>{title}</h3>
+        {children}
+      </Expandable>
     </section>
   )
 }

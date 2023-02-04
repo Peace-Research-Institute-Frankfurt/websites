@@ -2,15 +2,15 @@
 
 .container {
   grid-column: 1/6;
-  background: var(--blue-10);
+  border: 2px solid var(--blue-20);
   margin-top: 2rem;
   margin-bottom: 1rem;
-  padding: 1.5rem;
+  padding: 1em;
   border-radius: var(--br);
   h2 + &,
   h3 + &,
   h4 + & {
-    margin-top: 0.5rem;
+    margin-top: 0.5em;
   }
   h3 {
     margin-top: 0;
@@ -21,4 +21,8 @@
   @include bp(m) {
     grid-column: 3/4;
   }
+}
+
+.title {
+  @extend %h3;
 }
