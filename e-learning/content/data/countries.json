@@ -1,0 +1,1747 @@
+[
+  {
+    "name": {
+      "common": "Afghanistan",
+      "official": "Afghanistan"
+    },
+    "cca2": "AF",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Angola",
+      "official": "Angola"
+    },
+    "cca2": "AO",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Albania",
+      "official": "Albania"
+    },
+    "cca2": "AL",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Andorra",
+      "official": "Andorra"
+    },
+    "cca2": "AD",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "United Arab Emirates",
+      "official": "United Arab Emirates"
+    },
+    "cca2": "AE",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Argentina",
+      "official": "Argentina"
+    },
+    "cca2": "AR",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Armenia",
+      "official": "Armenia"
+    },
+    "cca2": "AM",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Antigua and Barbuda",
+      "official": "Antigua and Barbuda"
+    },
+    "cca2": "AG",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Australia",
+      "official": "Australia"
+    },
+    "cca2": "AU",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Austria",
+      "official": "Austria"
+    },
+    "cca2": "AT",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Azerbaijan",
+      "official": "Azerbaijan"
+    },
+    "cca2": "AZ",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Burundi",
+      "official": "Burundi"
+    },
+    "cca2": "BI",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Belgium",
+      "official": "Belgium"
+    },
+    "cca2": "BE",
+    "unMember": true
+  },
+  {
+    "name": {
+      "common": "Benin",
+      "official": "Benin"
+    },
+    "cca2": "BJ",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Burkina Faso",
+      "official": "Burkina Faso"
+    },
+    "cca2": "BF",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Bangladesh",
+      "official": "Bangladesh"
+    },
+    "cca2": "BD",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Bulgaria",
+      "official": "Bulgaria"
+    },
+    "cca2": "BG",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Bahrain",
+      "official": "Bahrain"
+    },
+    "cca2": "BH",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Bahamas",
+      "official": "Bahamas"
+    },
+    "cca2": "BS",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Bosnia and Herzegovina",
+      "official": "Bosnia and Herzegovina"
+    },
+    "cca2": "BA",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Belarus",
+      "official": "Belarus"
+    },
+    "cca2": "BY",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Belize",
+      "official": "Belize"
+    },
+    "cca2": "BZ",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Bolivia",
+      "official": "Bolivia"
+    },
+    "cca2": "BO",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Brazil",
+      "official": "Brazil"
+    },
+    "cca2": "BR",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Barbados",
+      "official": "Barbados"
+    },
+    "cca2": "BB",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Brunei",
+      "official": "Brunei"
+    },
+    "cca2": "BN",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Bhutan",
+      "official": "Bhutan"
+    },
+    "cca2": "BT",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Botswana",
+      "official": "Botswana"
+    },
+    "cca2": "BW",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Central African Republic",
+      "official": "Central African Republic"
+    },
+    "cca2": "CF",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Canada",
+      "official": "Canada"
+    },
+    "cca2": "CA",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Switzerland",
+      "official": "Switzerland"
+    },
+    "cca2": "CH",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Chile",
+      "official": "Chile"
+    },
+    "cca2": "CL",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "China",
+      "official": "China"
+    },
+    "cca2": "CN",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Ivory Coast",
+      "official": "Ivory Coast"
+    },
+    "cca2": "CI",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Cameroon",
+      "official": "Cameroon"
+    },
+    "cca2": "CM",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "DR Congo",
+      "official": "DR Congo"
+    },
+    "cca2": "CD",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Republic of the Congo",
+      "official": "Republic of the Congo"
+    },
+    "cca2": "CG",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Colombia",
+      "official": "Colombia"
+    },
+    "cca2": "CO",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Comoros",
+      "official": "Comoros"
+    },
+    "cca2": "KM",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Cape Verde",
+      "official": "Cape Verde"
+    },
+    "cca2": "CV",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Costa Rica",
+      "official": "Costa Rica"
+    },
+    "cca2": "CR",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Cuba",
+      "official": "Cuba"
+    },
+    "cca2": "CU",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Cyprus",
+      "official": "Cyprus"
+    },
+    "cca2": "CY",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Czechia",
+      "official": "Czechia"
+    },
+    "cca2": "CZ",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Germany",
+      "official": "Germany"
+    },
+    "cca2": "DE",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Djibouti",
+      "official": "Djibouti"
+    },
+    "cca2": "DJ",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Dominica",
+      "official": "Dominica"
+    },
+    "cca2": "DM",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Denmark",
+      "official": "Denmark"
+    },
+    "cca2": "DK",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Dominican Republic",
+      "official": "Dominican Republic"
+    },
+    "cca2": "DO",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Algeria",
+      "official": "Algeria"
+    },
+    "cca2": "DZ",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Ecuador",
+      "official": "Ecuador"
+    },
+    "cca2": "EC",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Egypt",
+      "official": "Egypt"
+    },
+    "cca2": "EG",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Eritrea",
+      "official": "Eritrea"
+    },
+    "cca2": "ER",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Spain",
+      "official": "Spain"
+    },
+    "cca2": "ES",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Estonia",
+      "official": "Estonia"
+    },
+    "cca2": "EE",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Ethiopia",
+      "official": "Ethiopia"
+    },
+    "cca2": "ET",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Finland",
+      "official": "Finland"
+    },
+    "cca2": "FI",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Fiji",
+      "official": "Fiji"
+    },
+    "cca2": "FJ",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "France",
+      "official": "France"
+    },
+    "cca2": "FR",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Micronesia",
+      "official": "Micronesia"
+    },
+    "cca2": "FM",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Gabon",
+      "official": "Gabon"
+    },
+    "cca2": "GA",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "United Kingdom",
+      "official": "United Kingdom"
+    },
+    "cca2": "GB",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Georgia",
+      "official": "Georgia"
+    },
+    "cca2": "GE",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Ghana",
+      "official": "Ghana"
+    },
+    "cca2": "GH",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Guinea",
+      "official": "Guinea"
+    },
+    "cca2": "GN",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Gambia",
+      "official": "Gambia"
+    },
+    "cca2": "GM",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Guinea-Bissau",
+      "official": "Guinea-Bissau"
+    },
+    "cca2": "GW",
+    "unMember": false,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Equatorial Guinea",
+      "official": "Equatorial Guinea"
+    },
+    "cca2": "GQ",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Greece",
+      "official": "Greece"
+    },
+    "cca2": "GR",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Grenada",
+      "official": "Grenada"
+    },
+    "cca2": "GD",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Guatemala",
+      "official": "Guatemala"
+    },
+    "cca2": "GT",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Guyana",
+      "official": "Guyana"
+    },
+    "cca2": "GY",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Honduras",
+      "official": "Honduras"
+    },
+    "cca2": "HN",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Croatia",
+      "official": "Croatia"
+    },
+    "cca2": "HR",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Haiti",
+      "official": "Haiti"
+    },
+    "cca2": "HT",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Hungary",
+      "official": "Hungary"
+    },
+    "cca2": "HU",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Indonesia",
+      "official": "Indonesia"
+    },
+    "cca2": "ID",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "India",
+      "official": "India"
+    },
+    "cca2": "IN",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Ireland",
+      "official": "Ireland"
+    },
+    "cca2": "IE",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Iran",
+      "official": "Iran"
+    },
+    "cca2": "IR",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Iraq",
+      "official": "Iraq"
+    },
+    "cca2": "IQ",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Iceland",
+      "official": "Iceland"
+    },
+    "cca2": "IS",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Israel",
+      "official": "Israel"
+    },
+    "cca2": "IL",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Italy",
+      "official": "Italy"
+    },
+    "cca2": "IT",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Jamaica",
+      "official": "Jamaica"
+    },
+    "cca2": "JM",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Jordan",
+      "official": "Jordan"
+    },
+    "cca2": "JO",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Japan",
+      "official": "Japan"
+    },
+    "cca2": "JP",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Kazakhstan",
+      "official": "Kazakhstan"
+    },
+    "cca2": "KZ",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Kenya",
+      "official": "Kenya"
+    },
+    "cca2": "KE",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Kyrgyzstan",
+      "official": "Kyrgyzstan"
+    },
+    "cca2": "KG",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Cambodia",
+      "official": "Cambodia"
+    },
+    "cca2": "KH",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Kiribati",
+      "official": "Kiribati"
+    },
+    "cca2": "KI",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Saint Kitts and Nevis",
+      "official": "Saint Kitts and Nevis"
+    },
+    "cca2": "KN",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "South Korea",
+      "official": "South Korea"
+    },
+    "cca2": "KR",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Kuwait",
+      "official": "Kuwait"
+    },
+    "cca2": "KW",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Laos",
+      "official": "Laos"
+    },
+    "cca2": "LA",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Lebanon",
+      "official": "Lebanon"
+    },
+    "cca2": "LB",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Liberia",
+      "official": "Liberia"
+    },
+    "cca2": "LR",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Libya",
+      "official": "Libya"
+    },
+    "cca2": "LY",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Saint Lucia",
+      "official": "Saint Lucia"
+    },
+    "cca2": "LC",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Liechtenstein",
+      "official": "Liechtenstein"
+    },
+    "cca2": "LI",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Sri Lanka",
+      "official": "Sri Lanka"
+    },
+    "cca2": "LK",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Lesotho",
+      "official": "Lesotho"
+    },
+    "cca2": "LS",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Lithuania",
+      "official": "Lithuania"
+    },
+    "cca2": "LT",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Luxembourg",
+      "official": "Luxembourg"
+    },
+    "cca2": "LU",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Latvia",
+      "official": "Latvia"
+    },
+    "cca2": "LV",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Morocco",
+      "official": "Morocco"
+    },
+    "cca2": "MA",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Monaco",
+      "official": "Monaco"
+    },
+    "cca2": "MC",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Moldova",
+      "official": "Moldova"
+    },
+    "cca2": "MD",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Madagascar",
+      "official": "Madagascar"
+    },
+    "cca2": "MG",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Maldives",
+      "official": "Maldives"
+    },
+    "cca2": "MV",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Mexico",
+      "official": "Mexico"
+    },
+    "cca2": "MX",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Marshall Islands",
+      "official": "Marshall Islands"
+    },
+    "cca2": "MH",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "North Macedonia",
+      "official": "North Macedonia"
+    },
+    "cca2": "MK",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Mali",
+      "official": "Mali"
+    },
+    "cca2": "ML",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Malta",
+      "official": "Malta"
+    },
+    "cca2": "MT",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Myanmar",
+      "official": "Myanmar"
+    },
+    "cca2": "MM",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Montenegro",
+      "official": "Montenegro"
+    },
+    "cca2": "ME",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Mongolia",
+      "official": "Mongolia"
+    },
+    "cca2": "MN",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Mozambique",
+      "official": "Mozambique"
+    },
+    "cca2": "MZ",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Mauritania",
+      "official": "Mauritania"
+    },
+    "cca2": "MR",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Mauritius",
+      "official": "Mauritius"
+    },
+    "cca2": "MU",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Malawi",
+      "official": "Malawi"
+    },
+    "cca2": "MW",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Malaysia",
+      "official": "Malaysia"
+    },
+    "cca2": "MY",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Namibia",
+      "official": "Namibia"
+    },
+    "cca2": "NA",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Niger",
+      "official": "Niger"
+    },
+    "cca2": "NE",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Nigeria",
+      "official": "Nigeria"
+    },
+    "cca2": "NG",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Nicaragua",
+      "official": "Nicaragua"
+    },
+    "cca2": "NI",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Netherlands",
+      "official": "Netherlands"
+    },
+    "cca2": "NL",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Norway",
+      "official": "Norway"
+    },
+    "cca2": "NO",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Nepal",
+      "official": "Nepal"
+    },
+    "cca2": "NP",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Nauru",
+      "official": "Nauru"
+    },
+    "cca2": "NR",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "New Zealand",
+      "official": "New Zealand"
+    },
+    "cca2": "NZ",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Oman",
+      "official": "Oman"
+    },
+    "cca2": "OM",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Pakistan",
+      "official": "Pakistan"
+    },
+    "cca2": "PK",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Panama",
+      "official": "Panama"
+    },
+    "cca2": "PA",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Peru",
+      "official": "Peru"
+    },
+    "cca2": "PE",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Philippines",
+      "official": "Philippines"
+    },
+    "cca2": "PH",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Palau",
+      "official": "Palau"
+    },
+    "cca2": "PW",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Papua New Guinea",
+      "official": "Papua New Guinea"
+    },
+    "cca2": "PG",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Poland",
+      "official": "Poland"
+    },
+    "cca2": "PL",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "North Korea",
+      "official": "North Korea"
+    },
+    "cca2": "KP",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Portugal",
+      "official": "Portugal"
+    },
+    "cca2": "PT",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Paraguay",
+      "official": "Paraguay"
+    },
+    "cca2": "PY",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Qatar",
+      "official": "Qatar"
+    },
+    "cca2": "QA",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Romania",
+      "official": "Romania"
+    },
+    "cca2": "RO",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Russia",
+      "official": "Russia"
+    },
+    "cca2": "RU",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Rwanda",
+      "official": "Rwanda"
+    },
+    "cca2": "RW",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Saudi Arabia",
+      "official": "Saudi Arabia"
+    },
+    "cca2": "SA",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Sudan",
+      "official": "Sudan"
+    },
+    "cca2": "SD",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Senegal",
+      "official": "Senegal"
+    },
+    "cca2": "SN",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Singapore",
+      "official": "Singapore"
+    },
+    "cca2": "SG",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Solomon Islands",
+      "official": "Solomon Islands"
+    },
+    "cca2": "SB",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Sierra Leone",
+      "official": "Sierra Leone"
+    },
+    "cca2": "SL",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "El Salvador",
+      "official": "El Salvador"
+    },
+    "cca2": "SV",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "San Marino",
+      "official": "San Marino"
+    },
+    "cca2": "SM",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Somalia",
+      "official": "Somalia"
+    },
+    "cca2": "SO",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Serbia",
+      "official": "Serbia"
+    },
+    "cca2": "RS",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "South Sudan",
+      "official": "South Sudan"
+    },
+    "cca2": "SS",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "São Tomé and Príncipe",
+      "official": "São Tomé and Príncipe"
+    },
+    "cca2": "ST",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Suriname",
+      "official": "Suriname"
+    },
+    "cca2": "SR",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Slovakia",
+      "official": "Slovakia"
+    },
+    "cca2": "SK",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Slovenia",
+      "official": "Slovenia"
+    },
+    "cca2": "SI",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Sweden",
+      "official": "Sweden"
+    },
+    "cca2": "SE",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Eswatini",
+      "official": "Eswatini"
+    },
+    "cca2": "SZ",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Seychelles",
+      "official": "Seychelles"
+    },
+    "cca2": "SC",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Syria",
+      "official": "Syria"
+    },
+    "cca2": "SY",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Chad",
+      "official": "Chad"
+    },
+    "cca2": "TD",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Togo",
+      "official": "Togo"
+    },
+    "cca2": "TG",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Thailand",
+      "official": "Thailand"
+    },
+    "cca2": "TH",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Tajikistan",
+      "official": "Tajikistan"
+    },
+    "cca2": "TJ",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Turkmenistan",
+      "official": "Turkmenistan"
+    },
+    "cca2": "TM",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Timor-Leste",
+      "official": "Timor-Leste"
+    },
+    "cca2": "TL",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Tonga",
+      "official": "Tonga"
+    },
+    "cca2": "TO",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Trinidad and Tobago",
+      "official": "Trinidad and Tobago"
+    },
+    "cca2": "TT",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Tunisia",
+      "official": "Tunisia"
+    },
+    "cca2": "TN",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Turkey",
+      "official": "Turkey"
+    },
+    "cca2": "TR",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Tuvalu",
+      "official": "Tuvalu"
+    },
+    "cca2": "TV",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Tanzania",
+      "official": "Tanzania"
+    },
+    "cca2": "TZ",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Uganda",
+      "official": "Uganda"
+    },
+    "cca2": "UG",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Ukraine",
+      "official": "Ukraine"
+    },
+    "cca2": "UA",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Uruguay",
+      "official": "Uruguay"
+    },
+    "cca2": "UY",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "United States",
+      "official": "United States"
+    },
+    "cca2": "US",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Uzbekistan",
+      "official": "Uzbekistan"
+    },
+    "cca2": "UZ",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Vatican City",
+      "official": "Vatican City"
+    },
+    "cca2": "VA",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Saint Vincent and the Grenadines",
+      "official": "Saint Vincent and the Grenadines"
+    },
+    "cca2": "VC",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Venezuela",
+      "official": "Venezuela"
+    },
+    "cca2": "VE",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Vietnam",
+      "official": "Vietnam"
+    },
+    "cca2": "VN",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Vanuatu",
+      "official": "Vanuatu"
+    },
+    "cca2": "VU",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Samoa",
+      "official": "Samoa"
+    },
+    "cca2": "WS",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Yemen",
+      "official": "Yemen"
+    },
+    "cca2": "YE",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "South Africa",
+      "official": "South Africa"
+    },
+    "cca2": "ZA",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Zambia",
+      "official": "Zambia"
+    },
+    "cca2": "ZM",
+    "unMember": true,
+    "treaties": []
+  },
+  {
+    "name": {
+      "common": "Zimbabwe",
+      "official": "Zimbabwe"
+    },
+    "cca2": "ZW",
+    "unMember": true,
+    "treaties": []
+  }
+]

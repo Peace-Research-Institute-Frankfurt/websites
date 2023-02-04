@@ -53,7 +53,7 @@ export default function LectureVideo({ lu, vl, transcript, size, provider, child
 
   const tabContent = tabs.map((c, i) => {
     return (
-      <Tab tabId={generateId(baseId, i)} isActive={currentTab === i}>
+      <Tab key={`tabs-${i}`} tabId={generateId(baseId, i)} isActive={currentTab === i}>
         {[videoEl, textEl][i]}
       </Tab>
     )

@@ -10,23 +10,23 @@ export default function Tooltip({ active, position, children, id, triggerEl }) {
   if (triggerEl) {
     const { x, y, width, height, right } = triggerEl.getBoundingClientRect()
     triggerEl.innerHTML
-    if (position === "topCenter"){ 
+    if (position === 'topCenter') {
       containerStyles = {
-       top: `${y - 10 + offsetY}px`,
-       left: `${x + width / 2}px`,
+        top: `${y - 10 + offsetY}px`,
+        left: `${x + width / 2}px`,
       }
     }
-    if (position === "bottomRight"){
+    if (position === 'bottomRight') {
       containerStyles = {
-       top: `${y + height + offsetY}px`,
-       right: `${document.documentElement.clientWidth - right}px`
+        top: `${y + height + offsetY}px`,
+        right: `${document.documentElement.clientWidth - right}px`,
       }
     }
   }
   return (
-    <div style={containerStyles} id={id} role="tooltip" className={`${styles.container} ${styles[position]} ${active ? styles.active : ''}`}>
+    <span style={containerStyles} id={id} role="tooltip" className={`${styles.container} ${styles[position]} ${active ? styles.active : ''}`}>
       {children}
       <span className={styles.arrow}></span>
-    </div>
+    </span>
   )
 }

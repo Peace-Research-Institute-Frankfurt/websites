@@ -19,6 +19,7 @@ import StickyHeader from './StickyHeader'
 import TableOfContents from './TableOfContents'
 import Map from './Map'
 import Resolution from './Resolution'
+import Treaty from './Treaty'
 import { Callout, Tab, Tabs, Details, DetailsGroup, FlipCards, Card, Timeline, Event } from '@prif/shared'
 import * as QuoteStyles from './Quote.module.scss'
 import * as CalloutStyles from './Callout.module.scss'
@@ -36,6 +37,7 @@ const shortCodes = {
   Question,
   Choice,
   Resolution,
+  Treaty,
   Quote: ({ ...props }) => <QuoteAdapter {...props} styles={QuoteStyles} />,
   Term: ({ ...props }) => <TermAdapter styles={TermStyles} {...props} />,
   Figure: ({ ...props }) => <FigureAdapter styles={FigureStyles} {...props} />,

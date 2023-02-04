@@ -7,10 +7,12 @@ import './mapbox.scss'
 export default function Map({ caption }) {
   const data = useStaticQuery(graphql`
     query {
-      treaties: allTreatiesJson(filter: { name: { eq: "CWC" } }) {
+      treaties: allTreatiesJson(filter: { name: { eq: "cwc" } }) {
         nodes {
           name
-          members
+          participants {
+            cca2
+          }
         }
       }
     }
@@ -40,7 +42,7 @@ export default function Map({ caption }) {
         url: 'mapbox://mapbox.country-boundaries-v1',
       })
 
-      const matchExpression = ['match', ['get', 'name_en']]
+      const matchExpression = ['match', ['get', 'code']]
 
       for (const row of countryData) {
         const color = `rgb(50, 70, 102)`
@@ -62,7 +64,7 @@ export default function Map({ caption }) {
         'admin-1-boundary-bg'
       )
     })
-  }, [])
+  }, [data.treaties.nodes])
 
   return (
     <figure className={styles.container}>
