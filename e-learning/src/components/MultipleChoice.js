@@ -1,6 +1,6 @@
 import React from 'react'
 import * as styles from './Quiz.module.scss'
-import Check from '../assets/check.svg'
+import Check from '../assets/icons/check.svg'
 
 const Choice = function (props) {
   function handleChange(e) {

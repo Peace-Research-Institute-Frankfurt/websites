@@ -1,7 +1,7 @@
 import React from 'react'
 import * as styles from './StickyHeader.module.scss'
 import { useScrollPosition } from './useScrollPosition'
-import BookIcon from '../assets/favicon.svg'
+import BookIcon from '../assets/icons/favicon.svg'
 import { Link } from 'gatsby'
 
 export default function StickyHeader({ post, unit, next, prev }) {

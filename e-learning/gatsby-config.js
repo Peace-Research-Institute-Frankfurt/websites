@@ -1,3 +1,5 @@
+const path = require('path')
+console.log(path.resolve(__dirname, 'src/assets/icons'))
 const wrapESMPlugin = (name) =>
   function wrapESM(opts) {
     return async (...args) => {
@@ -39,6 +41,8 @@ module.exports = {
       resolve: 'gatsby-plugin-react-svg',
       options: {
         rule: {
+          include: /icons/,
+          // exclude: /\.url\.svg$/,
           omitKeys: ['xmlnsDc', 'xmlnsCc', 'xmlnsRdf', 'xmlnsSvg', 'xmlnsSodipodi', 'xmlnsInkscape'],
         },
       },
@@ -46,7 +50,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        icon: 'src/assets/favicon.png',
+        icon: 'src/assets/icons/favicon.svg',
       },
     },
     {
