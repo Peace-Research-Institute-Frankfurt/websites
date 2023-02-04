@@ -14,7 +14,8 @@ export default function Treaty({ name }) {
           shortTitle
           date: date(formatString: "DD MMMM YYYY")
           description
-          members {
+          legalStatus
+          participants {
             cca2
             events {
               type
@@ -34,7 +35,7 @@ export default function Treaty({ name }) {
     }
   })
 
-  const meta = [<>In force since {treaty.date}</>, <>{treaty.members.length} Members</>]
+  const meta = [<>Established {treaty.date}</>, <>{treaty.legalStatus}</>, <>{treaty.participants.length} Members</>]
 
   return (
     <section className={styles.container}>

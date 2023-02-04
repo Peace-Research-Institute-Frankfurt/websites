@@ -10,7 +10,7 @@ export default function Map({ caption }) {
       treaties: allTreatiesJson(filter: { name: { eq: "cwc" } }) {
         nodes {
           name
-          members {
+          participants {
             cca2
           }
         }
