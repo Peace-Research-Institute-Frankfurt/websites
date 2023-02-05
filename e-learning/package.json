@@ -12,9 +12,9 @@
     "start": "gatsby develop"
   },
   "dependencies": {
-    "@prif/shared": "0.0.1",
     "@mdx-js/mdx": "^2.2.1",
     "@mdx-js/react": "^2.2.1",
+    "@prif/shared": "0.0.1",
     "dotenv": "^16.0.3",
     "gatsby": "^5.4.2",
     "gatsby-plugin-image": "^3.4.0",
@@ -22,7 +22,6 @@
     "gatsby-plugin-manifest": "^5.4.0",
     "gatsby-plugin-mdx": "^5.4.0",
     "gatsby-plugin-netlify": "^5.1.0",
-    "gatsby-plugin-react-svg": "^3.3.0",
     "gatsby-plugin-remark-footnotes": "^0.0.1",
     "gatsby-plugin-sass": "^6.4.0",
     "gatsby-plugin-sharp": "^5.4.0",
@@ -36,12 +35,12 @@
     "react": "18.2.0",
     "react-dom": "^18.2.0",
     "react-markdown-renderer": "^1.4.0",
+    "svg-react-loader": "^0.4.6",
     "react-use-flexsearch": "^0.1.1",
     "rehype-slug": "^5.1.0",
     "remark-gfm": "^1.0.0",
     "remark-smartypants": "^2.0.0",
     "slug": "^8.2.2",
     "unist-util-visit": "^4.1.1"
-  },
-  "devDependencies": {}
+  }
 }

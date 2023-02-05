@@ -102,3 +102,30 @@ exports.createSchemaCustomization = async ({ getNode, getNodesByType, pathPrefix
   `
   createTypes(typeDefs)
 }
+
+exports.onCreateWebpackConfig = ({ rules, actions, getConfig }) => {
+  // This code does the following:
+  // - Adds the react-svg-loader to our webpack config so we can use inline SVG in React components
+  // - Removes the default URL loader, then re-adds two copies of it (once set to ignore SVGs),
+  //   and once to include SVGs, but only when they're imported in CSS files
+
+  const cfg = getConfig()
+  const imgsRule = rules.images()
+
+  cfg.module.rules = [
+    ...cfg.module.rules.filter((rule) => {
+      if (rule.test) {
+        return rule.test.toString() !== imgsRule.test.toString()
+      }
+      return true
+    }),
+    {
+      test: /\.svg$/,
+      issuer: { not: /\.(css|scss|sass)$/ },
+      use: { loader: `svg-react-loader`, options: {} },
+    },
+    { ...imgsRule, test: new RegExp(imgsRule.test.toString().replace('svg|', '').slice(1, -1)) },
+    { ...imgsRule, issuer: /\.(css|scss|sass)$/ },
+  ]
+  actions.replaceWebpackConfig(cfg)
+}
