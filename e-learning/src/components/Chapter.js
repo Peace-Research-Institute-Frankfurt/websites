@@ -30,6 +30,7 @@ import * as DetailsStyles from './Details.module.scss'
 import * as FlipCardsStyles from './FlipCards.module.scss'
 import * as TimelineStyles from './Timeline.module.scss'
 import * as TermStyles from './Term.module.scss'
+import * as buttonStyles from './Button.module.scss'
 
 const shortCodes = {
   Embed,
@@ -52,7 +53,7 @@ const shortCodes = {
   DetailsGroup: ({ ...props }) => <DetailsGroup {...props} styles={DetailsStyles} />,
   Tabs: ({ ...props }) => <Tabs {...props} styles={TabStyles} />,
   Tab: ({ ...props }) => <Tab {...props} styles={TabStyles} />,
-  Callout: ({ ...props }) => <Callout {...props} styles={CalloutStyles} />,
+  Callout: ({ ...props }) => <Callout {...props} buttonStyles={buttonStyles} styles={CalloutStyles} />,
   Map,
 }
 
