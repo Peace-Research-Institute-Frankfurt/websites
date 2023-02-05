@@ -1,6 +1,7 @@
 import React from 'react'
 import * as styles from './LearningUnitHeader.module.scss'
 import { GatsbyImage } from 'gatsby-plugin-image'
+import ArrowRight from '../assets/icons/arrow-right.svg'
 import { Link } from 'gatsby'
 
 export default function LearningUnitHeader({ image, alt, order, title, intro, startLink, background, bylines }) {
@@ -17,7 +18,7 @@ export default function LearningUnitHeader({ image, alt, order, title, intro, st
             <h1 className={styles.headerTitle}>{title}</h1>
             <p className={styles.headerIntro}>{intro}</p>
             <Link className={styles.headerCta} to={startLink}>
-              Start
+              Start <ArrowRight />
             </Link>
           </div>
           <ul className={styles.headerBylines}>{bylines}</ul>
