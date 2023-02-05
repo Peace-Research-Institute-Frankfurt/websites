@@ -80,7 +80,7 @@ const LearningUnit = ({ data, context }) => {
   const frontmatter = data.post.childMdx.frontmatter
   const authors = data.post.childMdx.frontmatter.authors
   const heroImage = getImage(frontmatter.hero_image)
-  const [bookmarks, setBookmarks] = useLocalStorage('bookmarks', [])
+  const [bookmarks] = useLocalStorage('bookmarks', [])
 
   const bylines = authors.map((author) => {
     const fm = author.frontmatter

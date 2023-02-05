@@ -1,6 +1,6 @@
 import React from 'react'
 import * as styles from './LearningUnitHeader.module.scss'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import { Link } from 'gatsby'
 
 export default function LearningUnitHeader({ image, alt, order, title, intro, startLink, background, bylines }) {

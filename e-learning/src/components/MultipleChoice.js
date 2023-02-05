@@ -7,8 +7,6 @@ const Choice = function (props) {
     props.handleChange(props.questionId, props.choiceId)
   }
 
-  const correctlyChecked = props.checked === props.correct && props.correct
-
   return (
     <label className={props.checked ? styles.radioChoiceChecked : styles.radioChoice} htmlFor={props.id}>
       <input data-index={props.index} checked={props.checked} type="checkbox" name={props.name} id={props.id} onChange={handleChange} />
