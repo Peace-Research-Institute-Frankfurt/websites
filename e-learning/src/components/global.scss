@@ -9,26 +9,28 @@
 @font-face {
   font-family: 'GT Super';
   font-weight: 500;
-  src: url('../assets/fonts/GT-Super-Text-Medium.woff2') format('woff2');
+  src: url('../assets/fonts/GT-Super-Text-Regular.woff2') format('woff2');
 }
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap');
 :root {
-  --gray-10: rgb(255, 255, 255);
-  --gray-20: rgb(249, 249, 248);
-  --gray-30: hsl(0, 0%, 90%);
-  --gray-40: rgb(108, 116, 126);
-  --gray-50: rgb(87, 94, 101);
-  --gray-60: rgb(72, 72, 73);
-  --gray-70: rgb(14, 14, 14);
-  --black: rgb(14, 14, 14);
-  --blue-90: hsl(210, 37%, 7%);
-  --blue-80: hsl(210, 25%, 15%);
-  --blue-70: #464f58;
-  --blue-60: #36526d;
-  --blue-50: #8db8e2;
-  --blue-20: hsl(220, 15%, 90%);
-  --blue-10: hsl(220, 20%, 95%);
-  --yellow: hsl(49, 98%, 55%);
+  --gray-10: hsl(0, 0%, 100%);
+  --gray-20: hsl(0, 0%, 90%);
+  --gray-30: hsl(0, 0%, 55%);
+  --gray-40: hsl(0, 1%, 40%);
+  --gray-50: hsl(0, 2%, 30%);
+  --gray-60: hsl(0, 2%, 20%);
+  --gray-70: hsl(0, 0%, 10%);
+  --black: hsl(0, 0%, 5%);
+  --blue-90: hsl(209, 22%, 7%);
+  --blue-80: hsl(209, 25%, 15%);
+  --blue-70: hsl(209, 30%, 25%);
+  --blue-60: hsl(209, 30%, 32%);
+  --blue-50: hsl(210, 30%, 58%);
+  --blue-40: hsl(210, 55%, 75%);
+  --blue-30: hsl(210, 55%, 80%);
+  --blue-20: hsl(210, 35%, 90%);
+  --blue-10: hsl(210, 30%, 95%);
+  --yellow-50: hsl(49, 98%, 55%);
   --yellow-40: hsl(49, 100%, 70%);
   --yellow-20: hsl(49, 100%, 85%);
   --yellow-10: hsl(49, 90%, 94%);
