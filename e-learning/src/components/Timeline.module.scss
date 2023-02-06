@@ -20,13 +20,13 @@
 }
 
 .line {
-  width: 1px;
+  width: 2px;
   position: absolute;
   top: 1rem;
   bottom: 0;
   display: block;
   grid-column: 1 / 2;
-  background: var(--gray-30);
+  background: var(--gray-20);
 }
 
 .event {
@@ -47,9 +47,9 @@
     left: -1rem;
     top: 0;
     transform: translateX(-50%);
-    background: var(--gray-70);
-    width: 10px;
-    height: 10px;
+    background: var(--gray-30);
+    width: 11px;
+    height: 11px;
     border-radius: 100%;
     grid-column: 2/3;
     border: 5px solid var(--gray-10);
@@ -59,7 +59,7 @@
   grid-column: 2/3;
 }
 .event-title {
-  font-weight: 500;
+  @extend %h3;
   margin-top: 0 !important;
 }
 
@@ -70,19 +70,16 @@
 
 .event-toggle {
   @extend %caption;
-  border-radius: var(--br);
+  border-radius: 6px;
   padding: 0.1em 0.35em;
+  padding-bottom: 0.25em;
   line-height: 1;
-  margin-left: 0.5rem;
-  padding-bottom: 0.2em;
-  background: white;
-  box-shadow: 0 1px 2px -1px rgba(black, 0.1);
+  margin-left: 0.75em;
   position: relative;
-  top: -0.25em;
-
-  color: var(--gray-50);
+  top: -0.4em;
   cursor: pointer;
-  border: 1px solid var(--gray-50);
+  color: var(--blue-80);
+  border: 1px solid var(--gray-30);
   &:hover,
   &:focus-visible {
     color: var(--black);
