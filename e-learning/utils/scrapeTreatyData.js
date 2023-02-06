@@ -94,7 +94,7 @@ for (let i = 0; i < pages.length; i++) {
 
       // Has the country ratified/accepted/etc. the treaty?
       if (treatyEventEl.innerText.trim() !== '') {
-        const matches = treatyEventEl.innerText.trim().match(/(\d+ [a-zA-z]+ \d+) ?([a-zA-z]?)/)
+        const matches = treatyEventEl.innerText.trim().match(/(\d+ [a-zA-Z]+ \d+) ?([a-zA-Z]?)/)
         let eventType = 'ratification'
         let eventDate = ''
         if (matches && matches[1]) {
@@ -106,7 +106,7 @@ for (let i = 0; i < pages.length; i++) {
         events.push({ type: eventType, date: eventDate })
       }
       participants.push({
-        name: countryEl.innerText.replace(/\d/g, '').replace('\n', '').trim(),
+        name: countryEl.innerText.replace(/(\d)|(\\n)/g, '').trim(),
         events: events,
       })
     })
