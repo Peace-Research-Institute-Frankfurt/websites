@@ -4,6 +4,7 @@
   "private": true,
   "description": "eunpdc-next",
   "author": "Max Kohler",
+  "type": "module",
   "scripts": {
     "build": "gatsby build",
     "clean": "gatsby clean",
@@ -35,12 +36,17 @@
     "react": "18.2.0",
     "react-dom": "^18.2.0",
     "react-markdown-renderer": "^1.4.0",
-    "svg-react-loader": "^0.4.6",
     "react-use-flexsearch": "^0.1.1",
     "rehype-slug": "^5.1.0",
     "remark-gfm": "^1.0.0",
     "remark-smartypants": "^2.0.0",
     "slug": "^8.2.2",
+    "svg-react-loader": "^0.4.6",
     "unist-util-visit": "^4.1.1"
+  },
+  "devDependencies": {
+    "chalk": "^5.2.0",
+    "luxon": "^3.2.1",
+    "puppeteer": "^19.6.3"
   }
 }

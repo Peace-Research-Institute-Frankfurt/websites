@@ -10,15 +10,4884 @@
       {
         "cca2": "AF",
         "events": [
-          { "type": "signature", "date": "1993-01-14" },
-          { "type": "ratification", "date": "2003-09-24" }
+          {
+            "type": "signature",
+            "date": "1993-01-14"
+          },
+          {
+            "type": "ratification",
+            "date": "2003-09-24"
+          }
+        ]
+      },
+      {
+        "cca2": "AL",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-14"
+          },
+          {
+            "type": "ratification",
+            "date": "1994-05-11"
+          }
+        ]
+      },
+      {
+        "cca2": "DZ",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-13"
+          },
+          {
+            "type": "ratification",
+            "date": "1995-08-14"
+          }
+        ]
+      },
+      {
+        "cca2": "AD",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2003-02-27"
+          }
+        ]
+      },
+      {
+        "cca2": "AO",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2015-09-16"
+          }
+        ]
+      },
+      {
+        "cca2": "AG",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2005-08-29"
+          }
+        ]
+      },
+      {
+        "cca2": "AR",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-13"
+          },
+          {
+            "type": "ratification",
+            "date": "1995-10-02"
+          }
+        ]
+      },
+      {
+        "cca2": "AM",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-03-19"
+          },
+          {
+            "type": "ratification",
+            "date": "1995-01-27"
+          }
+        ]
+      },
+      {
+        "cca2": "AU",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-13"
+          },
+          {
+            "type": "ratification",
+            "date": "1994-05-06"
+          }
+        ]
+      },
+      {
+        "cca2": "AT",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-13"
+          },
+          {
+            "type": "ratification",
+            "date": "1995-08-17"
+          }
+        ]
+      },
+      {
+        "cca2": "AZ",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-13"
+          },
+          {
+            "type": "ratification",
+            "date": "2000-02-29"
+          }
+        ]
+      },
+      {
+        "cca2": "BS",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1994-03-02"
+          },
+          {
+            "type": "ratification",
+            "date": "2009-04-21"
+          }
+        ]
+      },
+      {
+        "cca2": "BH",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-02-24"
+          },
+          {
+            "type": "ratification",
+            "date": "1997-04-28"
+          }
+        ]
+      },
+      {
+        "cca2": "BD",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-14"
+          },
+          {
+            "type": "ratification",
+            "date": "1997-04-25"
+          }
+        ]
+      },
+      {
+        "cca2": "BB",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2007-03-07"
+          }
+        ]
+      },
+      {
+        "cca2": "BY",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-14"
+          },
+          {
+            "type": "ratification",
+            "date": "1996-07-11"
+          }
         ]
       },
       {
         "cca2": "BE",
         "events": [
-          { "type": "signature", "date": "1993-01-13" },
-          { "type": "ratification", "date": "1997-01-27" }
+          {
+            "type": "signature",
+            "date": "1993-01-13"
+          },
+          {
+            "type": "ratification",
+            "date": "1997-01-27"
+          }
+        ]
+      },
+      {
+        "cca2": "BZ",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2003-12-01"
+          }
+        ]
+      },
+      {
+        "cca2": "BJ",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-14"
+          },
+          {
+            "type": "ratification",
+            "date": "1998-05-14"
+          }
+        ]
+      },
+      {
+        "cca2": "BT",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1997-04-24"
+          },
+          {
+            "type": "ratification",
+            "date": "2005-08-18"
+          }
+        ]
+      },
+      {
+        "cca2": "BO",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-14"
+          },
+          {
+            "type": "ratification",
+            "date": "1998-08-14"
+          }
+        ]
+      },
+      {
+        "cca2": "BA",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1997-01-16"
+          },
+          {
+            "type": "ratification",
+            "date": "1997-02-25"
+          }
+        ]
+      },
+      {
+        "cca2": "BW",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1998-08-31"
+          }
+        ]
+      },
+      {
+        "cca2": "BR",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-13"
+          },
+          {
+            "type": "ratification",
+            "date": "1996-03-13"
+          }
+        ]
+      },
+      {
+        "cca2": "BN",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-13"
+          },
+          {
+            "type": "ratification",
+            "date": "1997-07-28"
+          }
+        ]
+      },
+      {
+        "cca2": "BG",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-13"
+          },
+          {
+            "type": "ratification",
+            "date": "1994-08-10"
+          }
+        ]
+      },
+      {
+        "cca2": "BF",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-14"
+          },
+          {
+            "type": "ratification",
+            "date": "1997-07-08"
+          }
+        ]
+      },
+      {
+        "cca2": "BI",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-15"
+          },
+          {
+            "type": "ratification",
+            "date": "1998-09-04"
+          }
+        ]
+      },
+      {
+        "cca2": "CV",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-15"
+          },
+          {
+            "type": "ratification",
+            "date": "2003-10-10"
+          }
+        ]
+      },
+      {
+        "cca2": "KH",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-15"
+          },
+          {
+            "type": "ratification",
+            "date": "2005-07-19"
+          }
+        ]
+      },
+      {
+        "cca2": "CM",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-14"
+          },
+          {
+            "type": "ratification",
+            "date": "1996-09-16"
+          }
+        ]
+      },
+      {
+        "cca2": "CA",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-13"
+          },
+          {
+            "type": "ratification",
+            "date": "1995-09-26"
+          }
+        ]
+      },
+      {
+        "cca2": "CF",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-14"
+          },
+          {
+            "type": "ratification",
+            "date": "2006-09-20"
+          }
+        ]
+      },
+      {
+        "cca2": "TD",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1994-10-11"
+          },
+          {
+            "type": "ratification",
+            "date": "2004-02-13"
+          }
+        ]
+      },
+      {
+        "cca2": "CL",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-14"
+          },
+          {
+            "type": "ratification",
+            "date": "1996-07-12"
+          }
+        ]
+      },
+      {
+        "cca2": "CN",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-13"
+          },
+          {
+            "type": "ratification",
+            "date": "1997-04-25"
+          }
+        ]
+      },
+      {
+        "cca2": "CO",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-13"
+          },
+          {
+            "type": "ratification",
+            "date": "2000-04-05"
+          }
+        ]
+      },
+      {
+        "cca2": "KM",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-13"
+          },
+          {
+            "type": "ratification",
+            "date": "2006-08-18"
+          }
+        ]
+      },
+      {
+        "cca2": "CG",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-15"
+          },
+          {
+            "type": "ratification",
+            "date": "2007-12-04"
+          }
+        ]
+      },
+      {
+        "cca2": "CK",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-14"
+          },
+          {
+            "type": "ratification",
+            "date": "1994-07-15"
+          }
+        ]
+      },
+      {
+        "cca2": "CR",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-14"
+          },
+          {
+            "type": "ratification",
+            "date": "1996-05-31"
+          }
+        ]
+      },
+      {
+        "cca2": "CI",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-13"
+          },
+          {
+            "type": "ratification",
+            "date": "1995-12-18"
+          }
+        ]
+      },
+      {
+        "cca2": "HR",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-13"
+          },
+          {
+            "type": "ratification",
+            "date": "1995-05-23"
+          }
+        ]
+      },
+      {
+        "cca2": "CU",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-13"
+          },
+          {
+            "type": "ratification",
+            "date": "1997-04-29"
+          }
+        ]
+      },
+      {
+        "cca2": "CY",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-13"
+          },
+          {
+            "type": "ratification",
+            "date": "1998-08-28"
+          }
+        ]
+      },
+      {
+        "cca2": "CZ",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-14"
+          },
+          {
+            "type": "ratification",
+            "date": "1996-03-06"
+          }
+        ]
+      },
+      {
+        "cca2": "CD",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-14"
+          },
+          {
+            "type": "ratification",
+            "date": "2005-10-12"
+          }
+        ]
+      },
+      {
+        "cca2": "DK",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-14"
+          },
+          {
+            "type": "ratification",
+            "date": "1995-07-13"
+          }
+        ]
+      },
+      {
+        "cca2": "DJ",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-09-28"
+          },
+          {
+            "type": "ratification",
+            "date": "2006-01-25"
+          }
+        ]
+      },
+      {
+        "cca2": "DM",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-08-02"
+          },
+          {
+            "type": "ratification",
+            "date": "2001-02-12"
+          }
+        ]
+      },
+      {
+        "cca2": "DO",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-13"
+          },
+          {
+            "type": "ratification",
+            "date": "2009-03-27"
+          }
+        ]
+      },
+      {
+        "cca2": "EC",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-14"
+          },
+          {
+            "type": "ratification",
+            "date": "1995-09-06"
+          }
+        ]
+      },
+      {
+        "cca2": "SV",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-14"
+          },
+          {
+            "type": "ratification",
+            "date": "1995-10-30"
+          }
+        ]
+      },
+      {
+        "cca2": "GQ",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-14"
+          },
+          {
+            "type": "ratification",
+            "date": "1997-04-25"
+          }
+        ]
+      },
+      {
+        "cca2": "ER",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2000-02-14"
+          }
+        ]
+      },
+      {
+        "cca2": "EE",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-14"
+          },
+          {
+            "type": "ratification",
+            "date": "1999-05-26"
+          }
+        ]
+      },
+      {
+        "cca2": "SZ",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-09-23"
+          },
+          {
+            "type": "ratification",
+            "date": "1996-11-20"
+          }
+        ]
+      },
+      {
+        "cca2": "ET",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-14"
+          },
+          {
+            "type": "ratification",
+            "date": "1996-05-13"
+          }
+        ]
+      },
+      {
+        "cca2": "FJ",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-14"
+          },
+          {
+            "type": "ratification",
+            "date": "1993-01-20"
+          }
+        ]
+      },
+      {
+        "cca2": "FI",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-14"
+          },
+          {
+            "type": "ratification",
+            "date": "1995-02-07"
+          }
+        ]
+      },
+      {
+        "cca2": "FR",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-13"
+          },
+          {
+            "type": "ratification",
+            "date": "1995-03-02"
+          }
+        ]
+      },
+      {
+        "cca2": "GA",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-13"
+          },
+          {
+            "type": "ratification",
+            "date": "2000-09-08"
+          }
+        ]
+      },
+      {
+        "cca2": "GM",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-13"
+          },
+          {
+            "type": "ratification",
+            "date": "1998-05-19"
+          }
+        ]
+      },
+      {
+        "cca2": "GE",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-14"
+          },
+          {
+            "type": "ratification",
+            "date": "1995-11-27"
+          }
+        ]
+      },
+      {
+        "cca2": "DE",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-13"
+          },
+          {
+            "type": "ratification",
+            "date": "1994-08-12"
+          }
+        ]
+      },
+      {
+        "cca2": "GH",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-14"
+          },
+          {
+            "type": "ratification",
+            "date": "1997-07-09"
+          }
+        ]
+      },
+      {
+        "cca2": "GR",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-13"
+          },
+          {
+            "type": "ratification",
+            "date": "1994-12-22"
+          }
+        ]
+      },
+      {
+        "cca2": "GD",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1997-04-09"
+          },
+          {
+            "type": "ratification",
+            "date": "2005-06-03"
+          }
+        ]
+      },
+      {
+        "cca2": "GT",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-14"
+          },
+          {
+            "type": "ratification",
+            "date": "2003-02-12"
+          }
+        ]
+      },
+      {
+        "cca2": "GN",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-14"
+          },
+          {
+            "type": "ratification",
+            "date": "1997-06-09"
+          }
+        ]
+      },
+      {
+        "cca2": "GW",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-14"
+          },
+          {
+            "type": "ratification",
+            "date": "2008-05-20"
+          }
+        ]
+      },
+      {
+        "cca2": "GY",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-10-06"
+          },
+          {
+            "type": "ratification",
+            "date": "1997-09-12"
+          }
+        ]
+      },
+      {
+        "cca2": "HT",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-14"
+          },
+          {
+            "type": "ratification",
+            "date": "2006-02-22"
+          }
+        ]
+      },
+      {
+        "cca2": "VA",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-14"
+          },
+          {
+            "type": "ratification",
+            "date": "1999-05-12"
+          }
+        ]
+      },
+      {
+        "cca2": "HN",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-13"
+          },
+          {
+            "type": "ratification",
+            "date": "2005-08-29"
+          }
+        ]
+      },
+      {
+        "cca2": "HU",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-13"
+          },
+          {
+            "type": "ratification",
+            "date": "1996-10-31"
+          }
+        ]
+      },
+      {
+        "cca2": "IS",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-13"
+          },
+          {
+            "type": "ratification",
+            "date": "1997-04-28"
+          }
+        ]
+      },
+      {
+        "cca2": "IN",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-14"
+          },
+          {
+            "type": "ratification",
+            "date": "1996-09-03"
+          }
+        ]
+      },
+      {
+        "cca2": "ID",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-13"
+          },
+          {
+            "type": "ratification",
+            "date": "1998-11-12"
+          }
+        ]
+      },
+      {
+        "cca2": "IR",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-13"
+          },
+          {
+            "type": "ratification",
+            "date": "1997-11-03"
+          }
+        ]
+      },
+      {
+        "cca2": "IQ",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2009-01-13"
+          }
+        ]
+      },
+      {
+        "cca2": "IE",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-14"
+          },
+          {
+            "type": "ratification",
+            "date": "1996-06-24"
+          }
+        ]
+      },
+      {
+        "cca2": "IL",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-13"
+          }
+        ]
+      },
+      {
+        "cca2": "IT",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-13"
+          },
+          {
+            "type": "ratification",
+            "date": "1995-12-08"
+          }
+        ]
+      },
+      {
+        "cca2": "JM",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1997-04-18"
+          },
+          {
+            "type": "ratification",
+            "date": "2000-09-08"
+          }
+        ]
+      },
+      {
+        "cca2": "JP",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-13"
+          },
+          {
+            "type": "ratification",
+            "date": "1995-09-15"
+          }
+        ]
+      },
+      {
+        "cca2": "JO",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1997-10-29"
+          }
+        ]
+      },
+      {
+        "cca2": "KZ",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-14"
+          },
+          {
+            "type": "ratification",
+            "date": "2000-03-23"
+          }
+        ]
+      },
+      {
+        "cca2": "KE",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-15"
+          },
+          {
+            "type": "ratification",
+            "date": "1997-04-25"
+          }
+        ]
+      },
+      {
+        "cca2": "KI",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2000-09-07"
+          }
+        ]
+      },
+      {
+        "cca2": "KW",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-27"
+          },
+          {
+            "type": "ratification",
+            "date": "1997-05-29"
+          }
+        ]
+      },
+      {
+        "cca2": "KG",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-02-22"
+          },
+          {
+            "type": "ratification",
+            "date": "2003-09-29"
+          }
+        ]
+      },
+      {
+        "cca2": "LA",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-05-13"
+          },
+          {
+            "type": "ratification",
+            "date": "1997-02-25"
+          }
+        ]
+      },
+      {
+        "cca2": "LV",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-05-06"
+          },
+          {
+            "type": "ratification",
+            "date": "1996-07-23"
+          }
+        ]
+      },
+      {
+        "cca2": "LB",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2008-11-20"
+          }
+        ]
+      },
+      {
+        "cca2": "LS",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1994-12-07"
+          },
+          {
+            "type": "ratification",
+            "date": "1994-12-07"
+          }
+        ]
+      },
+      {
+        "cca2": "LR",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-15"
+          },
+          {
+            "type": "ratification",
+            "date": "2006-02-23"
+          }
+        ]
+      },
+      {
+        "cca2": "LY",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2004-01-06"
+          }
+        ]
+      },
+      {
+        "cca2": "LI",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-07-21"
+          },
+          {
+            "type": "ratification",
+            "date": "1999-11-24"
+          }
+        ]
+      },
+      {
+        "cca2": "LT",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-13"
+          },
+          {
+            "type": "ratification",
+            "date": "1998-04-15"
+          }
+        ]
+      },
+      {
+        "cca2": "LU",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-13"
+          },
+          {
+            "type": "ratification",
+            "date": "1997-04-15"
+          }
+        ]
+      },
+      {
+        "cca2": "MG",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-15"
+          },
+          {
+            "type": "ratification",
+            "date": "2004-10-20"
+          }
+        ]
+      },
+      {
+        "cca2": "MW",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-14"
+          },
+          {
+            "type": "ratification",
+            "date": "1998-06-11"
+          }
+        ]
+      },
+      {
+        "cca2": "MY",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-13"
+          },
+          {
+            "type": "ratification",
+            "date": "2000-04-20"
+          }
+        ]
+      },
+      {
+        "cca2": "MV",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-10-04"
+          },
+          {
+            "type": "ratification",
+            "date": "1994-05-31"
+          }
+        ]
+      },
+      {
+        "cca2": "ML",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-13"
+          },
+          {
+            "type": "ratification",
+            "date": "1997-04-28"
+          }
+        ]
+      },
+      {
+        "cca2": "MT",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-13"
+          },
+          {
+            "type": "ratification",
+            "date": "1997-04-28"
+          }
+        ]
+      },
+      {
+        "cca2": "MH",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-13"
+          },
+          {
+            "type": "ratification",
+            "date": "2004-05-19"
+          }
+        ]
+      },
+      {
+        "cca2": "MR",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-13"
+          },
+          {
+            "type": "ratification",
+            "date": "1998-02-09"
+          }
+        ]
+      },
+      {
+        "cca2": "MU",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-14"
+          },
+          {
+            "type": "ratification",
+            "date": "1993-02-09"
+          }
+        ]
+      },
+      {
+        "cca2": "MX",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-13"
+          },
+          {
+            "type": "ratification",
+            "date": "1994-08-29"
+          }
+        ]
+      },
+      {
+        "cca2": "FM",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-13"
+          },
+          {
+            "type": "ratification",
+            "date": "1999-06-21"
+          }
+        ]
+      },
+      {
+        "cca2": "MC",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-13"
+          },
+          {
+            "type": "ratification",
+            "date": "1995-06-01"
+          }
+        ]
+      },
+      {
+        "cca2": "MN",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-14"
+          },
+          {
+            "type": "ratification",
+            "date": "1995-01-17"
+          }
+        ]
+      },
+      {
+        "cca2": "ME",
+        "events": [
+          {
+            "type": "succession",
+            "date": "2006-10-23"
+          }
+        ]
+      },
+      {
+        "cca2": "MA",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-13"
+          },
+          {
+            "type": "ratification",
+            "date": "1995-12-28"
+          }
+        ]
+      },
+      {
+        "cca2": "MZ",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2000-08-15"
+          }
+        ]
+      },
+      {
+        "cca2": "MM",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-14"
+          },
+          {
+            "type": "ratification",
+            "date": "2015-07-08"
+          }
+        ]
+      },
+      {
+        "cca2": "NA",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-13"
+          },
+          {
+            "type": "ratification",
+            "date": "1995-11-24"
+          }
+        ]
+      },
+      {
+        "cca2": "NR",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-13"
+          },
+          {
+            "type": "ratification",
+            "date": "2001-11-12"
+          }
+        ]
+      },
+      {
+        "cca2": "NP",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-19"
+          },
+          {
+            "type": "ratification",
+            "date": "1997-11-18"
+          }
+        ]
+      },
+      {
+        "cca2": "NL",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-14"
+          },
+          {
+            "type": "ratification",
+            "date": "1995-06-30"
+          }
+        ]
+      },
+      {
+        "cca2": "NZ",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-14"
+          },
+          {
+            "type": "ratification",
+            "date": "1996-07-15"
+          }
+        ]
+      },
+      {
+        "cca2": "NI",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-03-09"
+          },
+          {
+            "type": "ratification",
+            "date": "1999-11-05"
+          }
+        ]
+      },
+      {
+        "cca2": "NE",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-14"
+          },
+          {
+            "type": "ratification",
+            "date": "1997-04-09"
+          }
+        ]
+      },
+      {
+        "cca2": "NG",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-13"
+          },
+          {
+            "type": "ratification",
+            "date": "1999-05-20"
+          }
+        ]
+      },
+      {
+        "cca2": "NU",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2005-04-21"
+          }
+        ]
+      },
+      {
+        "cca2": "MK",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1997-06-20"
+          }
+        ]
+      },
+      {
+        "cca2": "NO",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-13"
+          },
+          {
+            "type": "ratification",
+            "date": "1994-04-07"
+          }
+        ]
+      },
+      {
+        "cca2": "OM",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-02-02"
+          },
+          {
+            "type": "ratification",
+            "date": "1995-02-08"
+          }
+        ]
+      },
+      {
+        "cca2": "PK",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-13"
+          },
+          {
+            "type": "ratification",
+            "date": "1997-10-28"
+          }
+        ]
+      },
+      {
+        "cca2": "PW",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2003-02-03"
+          }
+        ]
+      },
+      {
+        "cca2": "PA",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-06-16"
+          },
+          {
+            "type": "ratification",
+            "date": "1998-10-07"
+          }
+        ]
+      },
+      {
+        "cca2": "PG",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-14"
+          },
+          {
+            "type": "ratification",
+            "date": "1996-04-17"
+          }
+        ]
+      },
+      {
+        "cca2": "PY",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-14"
+          },
+          {
+            "type": "ratification",
+            "date": "1994-12-01"
+          }
+        ]
+      },
+      {
+        "cca2": "PE",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-14"
+          },
+          {
+            "type": "ratification",
+            "date": "1995-07-20"
+          }
+        ]
+      },
+      {
+        "cca2": "PH",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-13"
+          },
+          {
+            "type": "ratification",
+            "date": "1996-12-11"
+          }
+        ]
+      },
+      {
+        "cca2": "PL",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-13"
+          },
+          {
+            "type": "ratification",
+            "date": "1995-08-23"
+          }
+        ]
+      },
+      {
+        "cca2": "PT",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-13"
+          },
+          {
+            "type": "ratification",
+            "date": "1996-09-10"
+          }
+        ]
+      },
+      {
+        "cca2": "QA",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-02-01"
+          },
+          {
+            "type": "ratification",
+            "date": "1997-09-03"
+          }
+        ]
+      },
+      {
+        "cca2": "KR",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-14"
+          },
+          {
+            "type": "ratification",
+            "date": "1997-04-28"
+          }
+        ]
+      },
+      {
+        "cca2": "MD",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-13"
+          },
+          {
+            "type": "ratification",
+            "date": "1996-07-08"
+          }
+        ]
+      },
+      {
+        "cca2": "RO",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-13"
+          },
+          {
+            "type": "ratification",
+            "date": "1995-02-15"
+          }
+        ]
+      },
+      {
+        "cca2": "RU",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-13"
+          },
+          {
+            "type": "ratification",
+            "date": "1997-11-05"
+          }
+        ]
+      },
+      {
+        "cca2": "RW",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-05-17"
+          },
+          {
+            "type": "ratification",
+            "date": "2004-03-31"
+          }
+        ]
+      },
+      {
+        "cca2": "WS",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-14"
+          },
+          {
+            "type": "ratification",
+            "date": "2002-09-27"
+          }
+        ]
+      },
+      {
+        "cca2": "SM",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-13"
+          },
+          {
+            "type": "ratification",
+            "date": "1999-12-10"
+          }
+        ]
+      },
+      {
+        "cca2": "ST",
+        "events": [
+          {
+            "type": "acceptance",
+            "date": "2003-09-09"
+          }
+        ]
+      },
+      {
+        "cca2": "SA",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-20"
+          },
+          {
+            "type": "ratification",
+            "date": "1996-08-09"
+          }
+        ]
+      },
+      {
+        "cca2": "SN",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-13"
+          },
+          {
+            "type": "ratification",
+            "date": "1998-07-20"
+          }
+        ]
+      },
+      {
+        "cca2": "RS",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2000-04-20"
+          }
+        ]
+      },
+      {
+        "cca2": "SC",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-15"
+          },
+          {
+            "type": "ratification",
+            "date": "1993-04-07"
+          }
+        ]
+      },
+      {
+        "cca2": "SL",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-15"
+          },
+          {
+            "type": "ratification",
+            "date": "2004-09-30"
+          }
+        ]
+      },
+      {
+        "cca2": "SG",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-14"
+          },
+          {
+            "type": "ratification",
+            "date": "1997-05-21"
+          }
+        ]
+      },
+      {
+        "cca2": "SK",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-14"
+          },
+          {
+            "type": "ratification",
+            "date": "1995-10-27"
+          }
+        ]
+      },
+      {
+        "cca2": "SI",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-14"
+          },
+          {
+            "type": "ratification",
+            "date": "1997-06-11"
+          }
+        ]
+      },
+      {
+        "cca2": "SB",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2004-09-23"
+          }
+        ]
+      },
+      {
+        "cca2": "SO",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2013-05-29"
+          }
+        ]
+      },
+      {
+        "cca2": "ZA",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-14"
+          },
+          {
+            "type": "ratification",
+            "date": "1995-09-13"
+          }
+        ]
+      },
+      {
+        "cca2": "ES",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-13"
+          },
+          {
+            "type": "ratification",
+            "date": "1994-08-03"
+          }
+        ]
+      },
+      {
+        "cca2": "LK",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-14"
+          },
+          {
+            "type": "ratification",
+            "date": "1994-08-19"
+          }
+        ]
+      },
+      {
+        "cca2": "KN",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1994-03-16"
+          },
+          {
+            "type": "ratification",
+            "date": "2004-05-21"
+          }
+        ]
+      },
+      {
+        "cca2": "LC",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-03-29"
+          },
+          {
+            "type": "ratification",
+            "date": "1997-04-09"
+          }
+        ]
+      },
+      {
+        "cca2": "VC",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-09-20"
+          },
+          {
+            "type": "ratification",
+            "date": "2002-09-18"
+          }
+        ]
+      },
+      {
+        "cca2": "PS",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2017-12-29"
+          }
+        ]
+      },
+      {
+        "cca2": "SD",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1999-05-24"
+          }
+        ]
+      },
+      {
+        "cca2": "SR",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1997-04-28"
+          },
+          {
+            "type": "ratification",
+            "date": "1997-04-28"
+          }
+        ]
+      },
+      {
+        "cca2": "SE",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-13"
+          },
+          {
+            "type": "ratification",
+            "date": "1993-06-17"
+          }
+        ]
+      },
+      {
+        "cca2": "CH",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-14"
+          },
+          {
+            "type": "ratification",
+            "date": "1995-03-10"
+          }
+        ]
+      },
+      {
+        "cca2": "SY",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2013-09-14"
+          }
+        ]
+      },
+      {
+        "cca2": "TJ",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-14"
+          },
+          {
+            "type": "ratification",
+            "date": "1995-01-11"
+          }
+        ]
+      },
+      {
+        "cca2": "TH",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-14"
+          },
+          {
+            "type": "ratification",
+            "date": "2002-12-10"
+          }
+        ]
+      },
+      {
+        "cca2": "TL",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2003-05-07"
+          }
+        ]
+      },
+      {
+        "cca2": "TG",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-13"
+          },
+          {
+            "type": "ratification",
+            "date": "1997-04-23"
+          }
+        ]
+      },
+      {
+        "cca2": "TO",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2003-05-29"
+          }
+        ]
+      },
+      {
+        "cca2": "TT",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1997-06-24"
+          }
+        ]
+      },
+      {
+        "cca2": "TN",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-13"
+          },
+          {
+            "type": "ratification",
+            "date": "1997-04-15"
+          }
+        ]
+      },
+      {
+        "cca2": "TR",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-14"
+          },
+          {
+            "type": "ratification",
+            "date": "1997-05-12"
+          }
+        ]
+      },
+      {
+        "cca2": "TM",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-10-12"
+          },
+          {
+            "type": "ratification",
+            "date": "1994-09-29"
+          }
+        ]
+      },
+      {
+        "cca2": "TV",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2004-01-19"
+          }
+        ]
+      },
+      {
+        "cca2": "UG",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-14"
+          },
+          {
+            "type": "ratification",
+            "date": "2001-11-30"
+          }
+        ]
+      },
+      {
+        "cca2": "UA",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-13"
+          },
+          {
+            "type": "ratification",
+            "date": "1998-10-16"
+          }
+        ]
+      },
+      {
+        "cca2": "AE",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-02-02"
+          },
+          {
+            "type": "ratification",
+            "date": "2000-11-28"
+          }
+        ]
+      },
+      {
+        "cca2": "GB",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-13"
+          },
+          {
+            "type": "ratification",
+            "date": "1996-05-13"
+          }
+        ]
+      },
+      {
+        "cca2": "TZ",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1994-02-25"
+          },
+          {
+            "type": "ratification",
+            "date": "1998-06-25"
+          }
+        ]
+      },
+      {
+        "cca2": "US",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-13"
+          },
+          {
+            "type": "ratification",
+            "date": "1997-04-25"
+          }
+        ]
+      },
+      {
+        "cca2": "UY",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-15"
+          },
+          {
+            "type": "ratification",
+            "date": "1994-10-06"
+          }
+        ]
+      },
+      {
+        "cca2": "UZ",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1995-11-24"
+          },
+          {
+            "type": "ratification",
+            "date": "1996-07-23"
+          }
+        ]
+      },
+      {
+        "cca2": "VU",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2005-09-16"
+          }
+        ]
+      },
+      {
+        "cca2": "VE",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-14"
+          },
+          {
+            "type": "ratification",
+            "date": "1997-12-03"
+          }
+        ]
+      },
+      {
+        "cca2": "VN",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-13"
+          },
+          {
+            "type": "ratification",
+            "date": "1998-09-30"
+          }
+        ]
+      },
+      {
+        "cca2": "YE",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-02-08"
+          },
+          {
+            "type": "ratification",
+            "date": "2000-10-02"
+          }
+        ]
+      },
+      {
+        "cca2": "ZM",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-13"
+          },
+          {
+            "type": "ratification",
+            "date": "2001-02-09"
+          }
+        ]
+      },
+      {
+        "cca2": "ZW",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1993-01-13"
+          },
+          {
+            "type": "ratification",
+            "date": "1997-04-25"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "tpnw",
+    "title": "Treaty on the Prohibition of Nuclear Weapons ",
+    "participants": [
+      {
+        "cca2": "DZ",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2017-09-20"
+          }
+        ]
+      },
+      {
+        "cca2": "AO",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2018-09-27"
+          }
+        ]
+      },
+      {
+        "cca2": "AG",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2018-09-26"
+          },
+          {
+            "type": "ratification",
+            "date": "2019-11-25"
+          }
+        ]
+      },
+      {
+        "cca2": "AT",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2017-09-20"
+          },
+          {
+            "type": "ratification",
+            "date": "2018-05-08"
+          }
+        ]
+      },
+      {
+        "cca2": "BD",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2017-09-20"
+          },
+          {
+            "type": "ratification",
+            "date": "2019-09-26"
+          }
+        ]
+      },
+      {
+        "cca2": "BB",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2022-09-22"
+          }
+        ]
+      },
+      {
+        "cca2": "BZ",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2020-02-06"
+          },
+          {
+            "type": "ratification",
+            "date": "2020-05-19"
+          }
+        ]
+      },
+      {
+        "cca2": "BJ",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2018-09-26"
+          },
+          {
+            "type": "ratification",
+            "date": "2020-12-11"
+          }
+        ]
+      },
+      {
+        "cca2": "BO",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2018-04-16"
+          },
+          {
+            "type": "ratification",
+            "date": "2019-08-06"
+          }
+        ]
+      },
+      {
+        "cca2": "BW",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2019-09-26"
+          },
+          {
+            "type": "ratification",
+            "date": "2020-07-15"
+          }
+        ]
+      },
+      {
+        "cca2": "BR",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2017-09-20"
+          }
+        ]
+      },
+      {
+        "cca2": "BN",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2018-09-26"
+          }
+        ]
+      },
+      {
+        "cca2": "BF",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2022-09-22"
+          }
+        ]
+      },
+      {
+        "cca2": "CV",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2017-09-20"
+          },
+          {
+            "type": "ratification",
+            "date": "2022-06-20"
+          }
+        ]
+      },
+      {
+        "cca2": "KH",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2019-01-09"
+          },
+          {
+            "type": "ratification",
+            "date": "2021-01-22"
+          }
+        ]
+      },
+      {
+        "cca2": "CF",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2017-09-20"
+          }
+        ]
+      },
+      {
+        "cca2": "CL",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2017-09-20"
+          },
+          {
+            "type": "ratification",
+            "date": "2021-09-23"
+          }
+        ]
+      },
+      {
+        "cca2": "CO",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2018-08-03"
+          }
+        ]
+      },
+      {
+        "cca2": "KM",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2017-09-20"
+          },
+          {
+            "type": "ratification",
+            "date": "2021-02-19"
+          }
+        ]
+      },
+      {
+        "cca2": "CG",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2017-09-20"
+          },
+          {
+            "type": "ratification",
+            "date": "2022-05-17"
+          }
+        ]
+      },
+      {
+        "cca2": "CK",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2018-09-04"
+          }
+        ]
+      },
+      {
+        "cca2": "CR",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2017-09-20"
+          },
+          {
+            "type": "ratification",
+            "date": "2018-07-05"
+          }
+        ]
+      },
+      {
+        "cca2": "CI",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2017-09-20"
+          },
+          {
+            "type": "ratification",
+            "date": "2022-03-23"
+          }
+        ]
+      },
+      {
+        "cca2": "CU",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2017-09-20"
+          },
+          {
+            "type": "ratification",
+            "date": "2018-01-30"
+          }
+        ]
+      },
+      {
+        "cca2": "CD",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2017-09-20"
+          },
+          {
+            "type": "ratification",
+            "date": "2022-09-22"
+          }
+        ]
+      },
+      {
+        "cca2": "DJ",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2023-01-09"
+          }
+        ]
+      },
+      {
+        "cca2": "DM",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2019-09-26"
+          },
+          {
+            "type": "ratification",
+            "date": "2019-10-18"
+          }
+        ]
+      },
+      {
+        "cca2": "DO",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2018-06-07"
+          },
+          {
+            "type": "ratification",
+            "date": "2022-09-22"
+          }
+        ]
+      },
+      {
+        "cca2": "EC",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2017-09-20"
+          },
+          {
+            "type": "ratification",
+            "date": "2019-09-25"
+          }
+        ]
+      },
+      {
+        "cca2": "SV",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2017-09-20"
+          },
+          {
+            "type": "ratification",
+            "date": "2019-01-30"
+          }
+        ]
+      },
+      {
+        "cca2": "GQ",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2022-09-22"
+          }
+        ]
+      },
+      {
+        "cca2": "FJ",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2017-09-20"
+          },
+          {
+            "type": "ratification",
+            "date": "2020-07-07"
+          }
+        ]
+      },
+      {
+        "cca2": "GM",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2017-09-20"
+          },
+          {
+            "type": "ratification",
+            "date": "2018-09-26"
+          }
+        ]
+      },
+      {
+        "cca2": "GH",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2017-09-20"
+          }
+        ]
+      },
+      {
+        "cca2": "GD",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2019-09-26"
+          },
+          {
+            "type": "ratification",
+            "date": "2022-06-20"
+          }
+        ]
+      },
+      {
+        "cca2": "GT",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2017-09-20"
+          },
+          {
+            "type": "ratification",
+            "date": "2022-06-13"
+          }
+        ]
+      },
+      {
+        "cca2": "GW",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2018-09-26"
+          },
+          {
+            "type": "ratification",
+            "date": "2021-12-15"
+          }
+        ]
+      },
+      {
+        "cca2": "GY",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2017-09-20"
+          },
+          {
+            "type": "ratification",
+            "date": "2017-09-20"
+          }
+        ]
+      },
+      {
+        "cca2": "HT",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2022-09-22"
+          }
+        ]
+      },
+      {
+        "cca2": "VA",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2017-09-20"
+          },
+          {
+            "type": "ratification",
+            "date": "2017-09-20"
+          }
+        ]
+      },
+      {
+        "cca2": "HN",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2017-09-20"
+          },
+          {
+            "type": "ratification",
+            "date": "2020-10-24"
+          }
+        ]
+      },
+      {
+        "cca2": "ID",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2017-09-20"
+          }
+        ]
+      },
+      {
+        "cca2": "IE",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2017-09-20"
+          },
+          {
+            "type": "ratification",
+            "date": "2020-08-06"
+          }
+        ]
+      },
+      {
+        "cca2": "JM",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2017-12-08"
+          },
+          {
+            "type": "ratification",
+            "date": "2020-10-23"
+          }
+        ]
+      },
+      {
+        "cca2": "KZ",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2018-03-02"
+          },
+          {
+            "type": "ratification",
+            "date": "2019-08-29"
+          }
+        ]
+      },
+      {
+        "cca2": "KI",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2017-09-20"
+          },
+          {
+            "type": "ratification",
+            "date": "2019-09-26"
+          }
+        ]
+      },
+      {
+        "cca2": "LA",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2017-09-21"
+          },
+          {
+            "type": "ratification",
+            "date": "2019-09-26"
+          }
+        ]
+      },
+      {
+        "cca2": "LS",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2019-09-26"
+          },
+          {
+            "type": "ratification",
+            "date": "2020-06-06"
+          }
+        ]
+      },
+      {
+        "cca2": "LY",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2017-09-20"
+          }
+        ]
+      },
+      {
+        "cca2": "LI",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2017-09-20"
+          }
+        ]
+      },
+      {
+        "cca2": "MG",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2017-09-20"
+          }
+        ]
+      },
+      {
+        "cca2": "MW",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2017-09-20"
+          },
+          {
+            "type": "ratification",
+            "date": "2022-06-29"
+          }
+        ]
+      },
+      {
+        "cca2": "MY",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2017-09-20"
+          },
+          {
+            "type": "ratification",
+            "date": "2020-09-30"
+          }
+        ]
+      },
+      {
+        "cca2": "MV",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2019-09-26"
+          },
+          {
+            "type": "ratification",
+            "date": "2019-09-26"
+          }
+        ]
+      },
+      {
+        "cca2": "MT",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2020-08-25"
+          },
+          {
+            "type": "ratification",
+            "date": "2020-09-21"
+          }
+        ]
+      },
+      {
+        "cca2": "MX",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2017-09-20"
+          },
+          {
+            "type": "ratification",
+            "date": "2018-01-16"
+          }
+        ]
+      },
+      {
+        "cca2": "MN",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2021-12-10"
+          }
+        ]
+      },
+      {
+        "cca2": "MZ",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2020-08-18"
+          }
+        ]
+      },
+      {
+        "cca2": "MM",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2018-09-26"
+          }
+        ]
+      },
+      {
+        "cca2": "NA",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2017-12-08"
+          },
+          {
+            "type": "ratification",
+            "date": "2020-03-20"
+          }
+        ]
+      },
+      {
+        "cca2": "NR",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2019-11-22"
+          },
+          {
+            "type": "ratification",
+            "date": "2020-10-23"
+          }
+        ]
+      },
+      {
+        "cca2": "NP",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2017-09-20"
+          }
+        ]
+      },
+      {
+        "cca2": "NZ",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2017-09-20"
+          },
+          {
+            "type": "ratification",
+            "date": "2018-07-31"
+          }
+        ]
+      },
+      {
+        "cca2": "NI",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2017-09-22"
+          },
+          {
+            "type": "ratification",
+            "date": "2018-07-19"
+          }
+        ]
+      },
+      {
+        "cca2": "NE",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2020-12-09"
+          }
+        ]
+      },
+      {
+        "cca2": "NG",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2017-09-20"
+          },
+          {
+            "type": "ratification",
+            "date": "2020-08-06"
+          }
+        ]
+      },
+      {
+        "cca2": "NU",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2020-08-06"
+          }
+        ]
+      },
+      {
+        "cca2": "PW",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2017-09-20"
+          },
+          {
+            "type": "ratification",
+            "date": "2018-05-03"
+          }
+        ]
+      },
+      {
+        "cca2": "PA",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2017-09-20"
+          },
+          {
+            "type": "ratification",
+            "date": "2019-04-11"
+          }
+        ]
+      },
+      {
+        "cca2": "PY",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2017-09-20"
+          },
+          {
+            "type": "ratification",
+            "date": "2020-01-23"
+          }
+        ]
+      },
+      {
+        "cca2": "PE",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2017-09-20"
+          },
+          {
+            "type": "ratification",
+            "date": "2021-12-23"
+          }
+        ]
+      },
+      {
+        "cca2": "PH",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2017-09-20"
+          },
+          {
+            "type": "ratification",
+            "date": "2021-02-18"
+          }
+        ]
+      },
+      {
+        "cca2": "WS",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2017-09-20"
+          },
+          {
+            "type": "ratification",
+            "date": "2018-09-26"
+          }
+        ]
+      },
+      {
+        "cca2": "SM",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2017-09-20"
+          },
+          {
+            "type": "ratification",
+            "date": "2018-09-26"
+          }
+        ]
+      },
+      {
+        "cca2": "ST",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2017-09-20"
+          }
+        ]
+      },
+      {
+        "cca2": "SC",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2018-09-26"
+          },
+          {
+            "type": "ratification",
+            "date": "2021-07-09"
+          }
+        ]
+      },
+      {
+        "cca2": "SL",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2022-09-22"
+          }
+        ]
+      },
+      {
+        "cca2": "ZA",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2017-09-20"
+          },
+          {
+            "type": "ratification",
+            "date": "2019-02-25"
+          }
+        ]
+      },
+      {
+        "cca2": "KN",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2019-09-26"
+          },
+          {
+            "type": "ratification",
+            "date": "2020-08-09"
+          }
+        ]
+      },
+      {
+        "cca2": "LC",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2018-09-27"
+          },
+          {
+            "type": "ratification",
+            "date": "2019-01-23"
+          }
+        ]
+      },
+      {
+        "cca2": "VC",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2017-12-08"
+          },
+          {
+            "type": "ratification",
+            "date": "2019-07-31"
+          }
+        ]
+      },
+      {
+        "cca2": "PS",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2017-09-20"
+          },
+          {
+            "type": "ratification",
+            "date": "2018-03-22"
+          }
+        ]
+      },
+      {
+        "cca2": "SD",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2020-07-22"
+          }
+        ]
+      },
+      {
+        "cca2": "TH",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2017-09-20"
+          },
+          {
+            "type": "ratification",
+            "date": "2017-09-20"
+          }
+        ]
+      },
+      {
+        "cca2": "TL",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2018-09-26"
+          },
+          {
+            "type": "ratification",
+            "date": "2022-06-20"
+          }
+        ]
+      },
+      {
+        "cca2": "TG",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2017-09-20"
+          }
+        ]
+      },
+      {
+        "cca2": "TT",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2019-09-26"
+          },
+          {
+            "type": "ratification",
+            "date": "2019-09-26"
+          }
+        ]
+      },
+      {
+        "cca2": "TV",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2017-09-20"
+          },
+          {
+            "type": "ratification",
+            "date": "2020-10-12"
+          }
+        ]
+      },
+      {
+        "cca2": "TZ",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2019-09-26"
+          }
+        ]
+      },
+      {
+        "cca2": "UY",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2017-09-20"
+          },
+          {
+            "type": "ratification",
+            "date": "2018-07-25"
+          }
+        ]
+      },
+      {
+        "cca2": "VU",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2017-09-20"
+          },
+          {
+            "type": "ratification",
+            "date": "2018-09-26"
+          }
+        ]
+      },
+      {
+        "cca2": "VE",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2017-09-20"
+          },
+          {
+            "type": "ratification",
+            "date": "2018-03-27"
+          }
+        ]
+      },
+      {
+        "cca2": "VN",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2017-09-22"
+          },
+          {
+            "type": "ratification",
+            "date": "2018-05-17"
+          }
+        ]
+      },
+      {
+        "cca2": "ZM",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2019-09-26"
+          }
+        ]
+      },
+      {
+        "cca2": "ZW",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2020-12-04"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ccw",
+    "title": "Convention on Certain Conventional Weapons",
+    "participants": [
+      {
+        "cca2": "AF",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1981-04-10"
+          },
+          {
+            "type": "ratification",
+            "date": "2017-08-09"
+          }
+        ]
+      },
+      {
+        "cca2": "AL",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2002-08-28"
+          }
+        ]
+      },
+      {
+        "cca2": "DZ",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2015-05-06"
+          }
+        ]
+      },
+      {
+        "cca2": "AG",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2010-08-23"
+          }
+        ]
+      },
+      {
+        "cca2": "AR",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1981-12-02"
+          },
+          {
+            "type": "ratification",
+            "date": "1995-10-02"
+          }
+        ]
+      },
+      {
+        "cca2": "AU",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1982-04-08"
+          },
+          {
+            "type": "ratification",
+            "date": "1983-09-29"
+          }
+        ]
+      },
+      {
+        "cca2": "AT",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1981-04-10"
+          },
+          {
+            "type": "ratification",
+            "date": "1983-03-14"
+          }
+        ]
+      },
+      {
+        "cca2": "BH",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2016-03-11"
+          }
+        ]
+      },
+      {
+        "cca2": "BD",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2000-09-06"
+          }
+        ]
+      },
+      {
+        "cca2": "BY",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1981-04-10"
+          },
+          {
+            "type": "ratification",
+            "date": "1982-06-23"
+          }
+        ]
+      },
+      {
+        "cca2": "BE",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1981-04-10"
+          },
+          {
+            "type": "ratification",
+            "date": "1995-02-07"
+          }
+        ]
+      },
+      {
+        "cca2": "BJ",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1989-03-27"
+          }
+        ]
+      },
+      {
+        "cca2": "BO",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2001-09-21"
+          }
+        ]
+      },
+      {
+        "cca2": "BA",
+        "events": [
+          {
+            "type": "succession",
+            "date": "1993-09-01"
+          }
+        ]
+      },
+      {
+        "cca2": "BR",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1995-10-03"
+          }
+        ]
+      },
+      {
+        "cca2": "BG",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1981-04-10"
+          },
+          {
+            "type": "ratification",
+            "date": "1982-10-15"
+          }
+        ]
+      },
+      {
+        "cca2": "BF",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2003-11-26"
+          }
+        ]
+      },
+      {
+        "cca2": "BI",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2012-07-13"
+          }
+        ]
+      },
+      {
+        "cca2": "CV",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1997-09-16"
+          }
+        ]
+      },
+      {
+        "cca2": "KH",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1997-03-25"
+          }
+        ]
+      },
+      {
+        "cca2": "CM",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2006-12-07"
+          }
+        ]
+      },
+      {
+        "cca2": "CA",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1981-04-10"
+          },
+          {
+            "type": "ratification",
+            "date": "1994-06-24"
+          }
+        ]
+      },
+      {
+        "cca2": "CL",
+        "events": [
+          {
+            "type": "acceptance",
+            "date": "2003-10-15"
+          }
+        ]
+      },
+      {
+        "cca2": "CN",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1981-09-14"
+          },
+          {
+            "type": "ratification",
+            "date": "1982-04-07"
+          }
+        ]
+      },
+      {
+        "cca2": "CO",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2000-03-06"
+          }
+        ]
+      },
+      {
+        "cca2": "CR",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1998-12-17"
+          }
+        ]
+      },
+      {
+        "cca2": "CI",
+        "events": [
+          {
+            "type": "acceptance",
+            "date": "2016-05-25"
+          }
+        ]
+      },
+      {
+        "cca2": "HR",
+        "events": [
+          {
+            "type": "succession",
+            "date": "1993-12-02"
+          }
+        ]
+      },
+      {
+        "cca2": "CU",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1981-04-10"
+          },
+          {
+            "type": "ratification",
+            "date": "1987-03-02"
+          }
+        ]
+      },
+      {
+        "cca2": "CY",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1988-12-12"
+          }
+        ]
+      },
+      {
+        "cca2": "CZ",
+        "events": [
+          {
+            "type": "succession",
+            "date": "1993-02-22"
+          }
+        ]
+      },
+      {
+        "cca2": "DK",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1981-04-10"
+          },
+          {
+            "type": "ratification",
+            "date": "1982-07-07"
+          }
+        ]
+      },
+      {
+        "cca2": "DJ",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1996-07-29"
+          }
+        ]
+      },
+      {
+        "cca2": "DO",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2010-06-21"
+          }
+        ]
+      },
+      {
+        "cca2": "EC",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1981-09-09"
+          },
+          {
+            "type": "ratification",
+            "date": "1982-05-04"
+          }
+        ]
+      },
+      {
+        "cca2": "EG",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1981-04-10"
+          }
+        ]
+      },
+      {
+        "cca2": "SV",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2000-01-26"
+          }
+        ]
+      },
+      {
+        "cca2": "EE",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2000-04-20"
+          }
+        ]
+      },
+      {
+        "cca2": "FI",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1981-04-10"
+          },
+          {
+            "type": "ratification",
+            "date": "1982-04-08"
+          }
+        ]
+      },
+      {
+        "cca2": "FR",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1981-04-10"
+          },
+          {
+            "type": "ratification",
+            "date": "1988-03-04"
+          }
+        ]
+      },
+      {
+        "cca2": "GA",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2007-10-01"
+          }
+        ]
+      },
+      {
+        "cca2": "GE",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1996-04-29"
+          }
+        ]
+      },
+      {
+        "cca2": "DE",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1981-04-10"
+          },
+          {
+            "type": "ratification",
+            "date": "1992-11-25"
+          }
+        ]
+      },
+      {
+        "cca2": "GR",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1981-04-10"
+          },
+          {
+            "type": "ratification",
+            "date": "1992-01-28"
+          }
+        ]
+      },
+      {
+        "cca2": "GD",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2014-12-10"
+          }
+        ]
+      },
+      {
+        "cca2": "GT",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1983-07-21"
+          }
+        ]
+      },
+      {
+        "cca2": "GW",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2008-08-06"
+          }
+        ]
+      },
+      {
+        "cca2": "VA",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1997-07-22"
+          }
+        ]
+      },
+      {
+        "cca2": "HN",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2003-10-30"
+          }
+        ]
+      },
+      {
+        "cca2": "HU",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1981-04-10"
+          },
+          {
+            "type": "ratification",
+            "date": "1982-06-14"
+          }
+        ]
+      },
+      {
+        "cca2": "IS",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1981-04-10"
+          },
+          {
+            "type": "ratification",
+            "date": "2008-08-22"
+          }
+        ]
+      },
+      {
+        "cca2": "IN",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1981-05-15"
+          },
+          {
+            "type": "ratification",
+            "date": "1984-03-01"
+          }
+        ]
+      },
+      {
+        "cca2": "IQ",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2014-09-24"
+          }
+        ]
+      },
+      {
+        "cca2": "IE",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1981-04-10"
+          },
+          {
+            "type": "ratification",
+            "date": "1995-03-13"
+          }
+        ]
+      },
+      {
+        "cca2": "IL",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1995-03-22"
+          }
+        ]
+      },
+      {
+        "cca2": "IT",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1981-04-10"
+          },
+          {
+            "type": "ratification",
+            "date": "1995-01-20"
+          }
+        ]
+      },
+      {
+        "cca2": "JM",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2008-09-25"
+          }
+        ]
+      },
+      {
+        "cca2": "JP",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1981-09-22"
+          },
+          {
+            "type": "acceptance",
+            "date": "1982-06-09"
+          }
+        ]
+      },
+      {
+        "cca2": "JO",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1995-10-19"
+          }
+        ]
+      },
+      {
+        "cca2": "KZ",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2009-07-08"
+          }
+        ]
+      },
+      {
+        "cca2": "KW",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2013-05-24"
+          }
+        ]
+      },
+      {
+        "cca2": "LA",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1983-01-03"
+          }
+        ]
+      },
+      {
+        "cca2": "LV",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1993-01-04"
+          }
+        ]
+      },
+      {
+        "cca2": "LB",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2017-04-05"
+          }
+        ]
+      },
+      {
+        "cca2": "LS",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2000-09-06"
+          }
+        ]
+      },
+      {
+        "cca2": "LR",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2005-09-16"
+          }
+        ]
+      },
+      {
+        "cca2": "LI",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1982-02-11"
+          },
+          {
+            "type": "ratification",
+            "date": "1989-08-16"
+          }
+        ]
+      },
+      {
+        "cca2": "LT",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1998-06-03"
+          }
+        ]
+      },
+      {
+        "cca2": "LU",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1981-04-10"
+          },
+          {
+            "type": "ratification",
+            "date": "1996-05-21"
+          }
+        ]
+      },
+      {
+        "cca2": "MG",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2008-03-14"
+          }
+        ]
+      },
+      {
+        "cca2": "MW",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2022-09-23"
+          }
+        ]
+      },
+      {
+        "cca2": "MV",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2000-09-07"
+          }
+        ]
+      },
+      {
+        "cca2": "ML",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2001-10-24"
+          }
+        ]
+      },
+      {
+        "cca2": "MT",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1995-06-26"
+          }
+        ]
+      },
+      {
+        "cca2": "MU",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1996-05-06"
+          }
+        ]
+      },
+      {
+        "cca2": "MX",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1981-04-10"
+          },
+          {
+            "type": "ratification",
+            "date": "1982-02-11"
+          }
+        ]
+      },
+      {
+        "cca2": "MC",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1997-08-12"
+          }
+        ]
+      },
+      {
+        "cca2": "MN",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1981-04-10"
+          },
+          {
+            "type": "ratification",
+            "date": "1982-06-08"
+          }
+        ]
+      },
+      {
+        "cca2": "ME",
+        "events": [
+          {
+            "type": "succession",
+            "date": "2006-10-23"
+          }
+        ]
+      },
+      {
+        "cca2": "MA",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1981-04-10"
+          },
+          {
+            "type": "ratification",
+            "date": "2002-03-19"
+          }
+        ]
+      },
+      {
+        "cca2": "NR",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2001-11-12"
+          }
+        ]
+      },
+      {
+        "cca2": "NL",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1981-04-10"
+          },
+          {
+            "type": "acceptance",
+            "date": "1987-06-18"
+          }
+        ]
+      },
+      {
+        "cca2": "NZ",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1981-04-10"
+          },
+          {
+            "type": "ratification",
+            "date": "1993-10-18"
+          }
+        ]
+      },
+      {
+        "cca2": "NI",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1981-05-20"
+          },
+          {
+            "type": "ratification",
+            "date": "2000-12-05"
+          }
+        ]
+      },
+      {
+        "cca2": "NE",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1992-11-10"
+          }
+        ]
+      },
+      {
+        "cca2": "NG",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1982-01-26"
+          }
+        ]
+      },
+      {
+        "cca2": "MK",
+        "events": [
+          {
+            "type": "succession",
+            "date": "1996-12-30"
+          }
+        ]
+      },
+      {
+        "cca2": "NO",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1981-04-10"
+          },
+          {
+            "type": "ratification",
+            "date": "1983-06-07"
+          }
+        ]
+      },
+      {
+        "cca2": "PK",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1982-01-26"
+          },
+          {
+            "type": "ratification",
+            "date": "1985-04-01"
+          }
+        ]
+      },
+      {
+        "cca2": "PA",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1997-03-26"
+          }
+        ]
+      },
+      {
+        "cca2": "PY",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2004-09-22"
+          }
+        ]
+      },
+      {
+        "cca2": "PE",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1997-07-03"
+          }
+        ]
+      },
+      {
+        "cca2": "PH",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1981-05-15"
+          },
+          {
+            "type": "ratification",
+            "date": "1996-07-15"
+          }
+        ]
+      },
+      {
+        "cca2": "PL",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1981-04-10"
+          },
+          {
+            "type": "ratification",
+            "date": "1983-06-02"
+          }
+        ]
+      },
+      {
+        "cca2": "PT",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1981-04-10"
+          },
+          {
+            "type": "ratification",
+            "date": "1997-04-04"
+          }
+        ]
+      },
+      {
+        "cca2": "QA",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2009-11-16"
+          }
+        ]
+      },
+      {
+        "cca2": "KR",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2001-05-09"
+          }
+        ]
+      },
+      {
+        "cca2": "MD",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2000-09-08"
+          }
+        ]
+      },
+      {
+        "cca2": "RO",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1982-04-08"
+          },
+          {
+            "type": "ratification",
+            "date": "1995-07-26"
+          }
+        ]
+      },
+      {
+        "cca2": "RU",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1981-04-10"
+          },
+          {
+            "type": "ratification",
+            "date": "1982-06-10"
+          }
+        ]
+      },
+      {
+        "cca2": "SA",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2007-12-07"
+          }
+        ]
+      },
+      {
+        "cca2": "SN",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1999-11-29"
+          }
+        ]
+      },
+      {
+        "cca2": "RS",
+        "events": [
+          {
+            "type": "succession",
+            "date": "2001-03-12"
+          }
+        ]
+      },
+      {
+        "cca2": "SC",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2000-06-08"
+          }
+        ]
+      },
+      {
+        "cca2": "SL",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1981-05-01"
+          },
+          {
+            "type": "ratification",
+            "date": "2004-09-30"
+          }
+        ]
+      },
+      {
+        "cca2": "SK",
+        "events": [
+          {
+            "type": "succession",
+            "date": "1993-05-28"
+          }
+        ]
+      },
+      {
+        "cca2": "SI",
+        "events": [
+          {
+            "type": "succession",
+            "date": "1992-07-06"
+          }
+        ]
+      },
+      {
+        "cca2": "ZA",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1995-09-13"
+          }
+        ]
+      },
+      {
+        "cca2": "ES",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1981-04-10"
+          },
+          {
+            "type": "ratification",
+            "date": "1993-12-29"
+          }
+        ]
+      },
+      {
+        "cca2": "LK",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2004-09-24"
+          }
+        ]
+      },
+      {
+        "cca2": "VC",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2010-12-06"
+          }
+        ]
+      },
+      {
+        "cca2": "PS",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2015-01-05"
+          }
+        ]
+      },
+      {
+        "cca2": "SD",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1981-04-10"
+          }
+        ]
+      },
+      {
+        "cca2": "SE",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1981-04-10"
+          },
+          {
+            "type": "ratification",
+            "date": "1982-07-07"
+          }
+        ]
+      },
+      {
+        "cca2": "CH",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1981-06-18"
+          },
+          {
+            "type": "ratification",
+            "date": "1982-08-20"
+          }
+        ]
+      },
+      {
+        "cca2": "TJ",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1999-10-12"
+          }
+        ]
+      },
+      {
+        "cca2": "TG",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1981-09-15"
+          },
+          {
+            "type": "acceptance",
+            "date": "1995-12-04"
+          }
+        ]
+      },
+      {
+        "cca2": "TN",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1987-05-15"
+          }
+        ]
+      },
+      {
+        "cca2": "TR",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1982-03-26"
+          },
+          {
+            "type": "ratification",
+            "date": "2005-03-02"
+          }
+        ]
+      },
+      {
+        "cca2": "TM",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2004-03-19"
+          }
+        ]
+      },
+      {
+        "cca2": "UG",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1995-11-14"
+          }
+        ]
+      },
+      {
+        "cca2": "UA",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1981-04-10"
+          },
+          {
+            "type": "ratification",
+            "date": "1982-06-23"
+          }
+        ]
+      },
+      {
+        "cca2": "AE",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2009-02-26"
+          }
+        ]
+      },
+      {
+        "cca2": "GB",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1981-04-10"
+          },
+          {
+            "type": "ratification",
+            "date": "1995-02-13"
+          }
+        ]
+      },
+      {
+        "cca2": "US",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1982-04-08"
+          },
+          {
+            "type": "ratification",
+            "date": "1995-03-24"
+          }
+        ]
+      },
+      {
+        "cca2": "UY",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1994-10-06"
+          }
+        ]
+      },
+      {
+        "cca2": "UZ",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1997-09-29"
+          }
+        ]
+      },
+      {
+        "cca2": "VE",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2005-04-19"
+          }
+        ]
+      },
+      {
+        "cca2": "VN",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1981-04-10"
+          }
+        ]
+      },
+      {
+        "cca2": "ZM",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2013-09-25"
+          }
         ]
       }
     ]

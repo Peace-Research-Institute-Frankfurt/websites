@@ -1,6 +1,14 @@
 [
   {
     "name": {
+      "common": "Aruba",
+      "official": "Aruba"
+    },
+    "cca2": "AW",
+    "unMember": false
+  },
+  {
+    "name": {
       "common": "Afghanistan",
       "official": "Afghanistan"
     },
@@ -14,6 +22,22 @@
     },
     "cca2": "AO",
     "unMember": true
+  },
+  {
+    "name": {
+      "common": "Anguilla",
+      "official": "Anguilla"
+    },
+    "cca2": "AI",
+    "unMember": false
+  },
+  {
+    "name": {
+      "common": "Åland Islands",
+      "official": "Åland Islands"
+    },
+    "cca2": "AX",
+    "unMember": false
   },
   {
     "name": {
@@ -54,6 +78,30 @@
     },
     "cca2": "AM",
     "unMember": true
+  },
+  {
+    "name": {
+      "common": "American Samoa",
+      "official": "American Samoa"
+    },
+    "cca2": "AS",
+    "unMember": false
+  },
+  {
+    "name": {
+      "common": "Antarctica",
+      "official": "Antarctica"
+    },
+    "cca2": "AQ",
+    "unMember": false
+  },
+  {
+    "name": {
+      "common": "French Southern and Antarctic Lands",
+      "official": "French Southern and Antarctic Lands"
+    },
+    "cca2": "TF",
+    "unMember": false
   },
   {
     "name": {
@@ -161,6 +209,22 @@
   },
   {
     "name": {
+      "common": "Saint Barthélemy",
+      "official": "Saint Barthélemy"
+    },
+    "cca2": "BL",
+    "unMember": false
+  },
+  {
+    "name": {
+      "common": "Saint Helena, Ascension and Tristan da Cunha",
+      "official": "Saint Helena, Ascension and Tristan da Cunha"
+    },
+    "cca2": "SH",
+    "unMember": false
+  },
+  {
+    "name": {
       "common": "Belarus",
       "official": "Belarus"
     },
@@ -177,11 +241,27 @@
   },
   {
     "name": {
+      "common": "Bermuda",
+      "official": "Bermuda"
+    },
+    "cca2": "BM",
+    "unMember": false
+  },
+  {
+    "name": {
       "common": "Bolivia",
       "official": "Bolivia"
     },
     "cca2": "BO",
     "unMember": true
+  },
+  {
+    "name": {
+      "common": "Caribbean Netherlands",
+      "official": "Caribbean Netherlands"
+    },
+    "cca2": "BQ",
+    "unMember": false
   },
   {
     "name": {
@@ -217,6 +297,14 @@
   },
   {
     "name": {
+      "common": "Bouvet Island",
+      "official": "Bouvet Island"
+    },
+    "cca2": "BV",
+    "unMember": false
+  },
+  {
+    "name": {
       "common": "Botswana",
       "official": "Botswana"
     },
@@ -238,6 +326,14 @@
     },
     "cca2": "CA",
     "unMember": true
+  },
+  {
+    "name": {
+      "common": "Cocos (Keeling) Islands",
+      "official": "Cocos (Keeling) Islands"
+    },
+    "cca2": "CC",
+    "unMember": false
   },
   {
     "name": {
@@ -297,6 +393,14 @@
   },
   {
     "name": {
+      "common": "Cook Islands",
+      "official": "Cook Islands"
+    },
+    "cca2": "CK",
+    "unMember": false
+  },
+  {
+    "name": {
       "common": "Colombia",
       "official": "Colombia"
     },
@@ -334,6 +438,30 @@
     },
     "cca2": "CU",
     "unMember": true
+  },
+  {
+    "name": {
+      "common": "Curaçao",
+      "official": "Curaçao"
+    },
+    "cca2": "CW",
+    "unMember": false
+  },
+  {
+    "name": {
+      "common": "Christmas Island",
+      "official": "Christmas Island"
+    },
+    "cca2": "CX",
+    "unMember": false
+  },
+  {
+    "name": {
+      "common": "Cayman Islands",
+      "official": "Cayman Islands"
+    },
+    "cca2": "KY",
+    "unMember": false
   },
   {
     "name": {
@@ -425,6 +553,14 @@
   },
   {
     "name": {
+      "common": "Western Sahara",
+      "official": "Western Sahara"
+    },
+    "cca2": "EH",
+    "unMember": false
+  },
+  {
+    "name": {
       "common": "Spain",
       "official": "Spain"
     },
@@ -465,11 +601,27 @@
   },
   {
     "name": {
+      "common": "Falkland Islands",
+      "official": "Falkland Islands"
+    },
+    "cca2": "FK",
+    "unMember": false
+  },
+  {
+    "name": {
       "common": "France",
       "official": "France"
     },
     "cca2": "FR",
     "unMember": true
+  },
+  {
+    "name": {
+      "common": "Faroe Islands",
+      "official": "Faroe Islands"
+    },
+    "cca2": "FO",
+    "unMember": false
   },
   {
     "name": {
@@ -505,6 +657,14 @@
   },
   {
     "name": {
+      "common": "Guernsey",
+      "official": "Guernsey"
+    },
+    "cca2": "GG",
+    "unMember": false
+  },
+  {
+    "name": {
       "common": "Ghana",
       "official": "Ghana"
     },
@@ -513,11 +673,27 @@
   },
   {
     "name": {
+      "common": "Gibraltar",
+      "official": "Gibraltar"
+    },
+    "cca2": "GI",
+    "unMember": false
+  },
+  {
+    "name": {
       "common": "Guinea",
       "official": "Guinea"
     },
     "cca2": "GN",
     "unMember": true
+  },
+  {
+    "name": {
+      "common": "Guadeloupe",
+      "official": "Guadeloupe"
+    },
+    "cca2": "GP",
+    "unMember": false
   },
   {
     "name": {
@@ -561,6 +737,14 @@
   },
   {
     "name": {
+      "common": "Greenland",
+      "official": "Greenland"
+    },
+    "cca2": "GL",
+    "unMember": false
+  },
+  {
+    "name": {
       "common": "Guatemala",
       "official": "Guatemala"
     },
@@ -569,11 +753,43 @@
   },
   {
     "name": {
+      "common": "French Guiana",
+      "official": "French Guiana"
+    },
+    "cca2": "GF",
+    "unMember": false
+  },
+  {
+    "name": {
+      "common": "Guam",
+      "official": "Guam"
+    },
+    "cca2": "GU",
+    "unMember": false
+  },
+  {
+    "name": {
       "common": "Guyana",
       "official": "Guyana"
     },
     "cca2": "GY",
     "unMember": true
+  },
+  {
+    "name": {
+      "common": "Hong Kong",
+      "official": "Hong Kong"
+    },
+    "cca2": "HK",
+    "unMember": false
+  },
+  {
+    "name": {
+      "common": "Heard Island and McDonald Islands",
+      "official": "Heard Island and McDonald Islands"
+    },
+    "cca2": "HM",
+    "unMember": false
   },
   {
     "name": {
@@ -617,11 +833,27 @@
   },
   {
     "name": {
+      "common": "Isle of Man",
+      "official": "Isle of Man"
+    },
+    "cca2": "IM",
+    "unMember": false
+  },
+  {
+    "name": {
       "common": "India",
       "official": "India"
     },
     "cca2": "IN",
     "unMember": true
+  },
+  {
+    "name": {
+      "common": "British Indian Ocean Territory",
+      "official": "British Indian Ocean Territory"
+    },
+    "cca2": "IO",
+    "unMember": false
   },
   {
     "name": {
@@ -678,6 +910,14 @@
     },
     "cca2": "JM",
     "unMember": true
+  },
+  {
+    "name": {
+      "common": "Jersey",
+      "official": "Jersey"
+    },
+    "cca2": "JE",
+    "unMember": false
   },
   {
     "name": {
@@ -750,6 +990,14 @@
     },
     "cca2": "KR",
     "unMember": true
+  },
+  {
+    "name": {
+      "common": "Kosovo",
+      "official": "Kosovo"
+    },
+    "cca2": "XK",
+    "unMember": false
   },
   {
     "name": {
@@ -846,6 +1094,22 @@
     },
     "cca2": "LV",
     "unMember": true
+  },
+  {
+    "name": {
+      "common": "Macau",
+      "official": "Macau"
+    },
+    "cca2": "MO",
+    "unMember": false
+  },
+  {
+    "name": {
+      "common": "Saint Martin",
+      "official": "Saint Martin"
+    },
+    "cca2": "MF",
+    "unMember": false
   },
   {
     "name": {
@@ -953,6 +1217,14 @@
   },
   {
     "name": {
+      "common": "Northern Mariana Islands",
+      "official": "Northern Mariana Islands"
+    },
+    "cca2": "MP",
+    "unMember": false
+  },
+  {
+    "name": {
       "common": "Mozambique",
       "official": "Mozambique"
     },
@@ -966,6 +1238,22 @@
     },
     "cca2": "MR",
     "unMember": true
+  },
+  {
+    "name": {
+      "common": "Montserrat",
+      "official": "Montserrat"
+    },
+    "cca2": "MS",
+    "unMember": false
+  },
+  {
+    "name": {
+      "common": "Martinique",
+      "official": "Martinique"
+    },
+    "cca2": "MQ",
+    "unMember": false
   },
   {
     "name": {
@@ -993,6 +1281,14 @@
   },
   {
     "name": {
+      "common": "Mayotte",
+      "official": "Mayotte"
+    },
+    "cca2": "YT",
+    "unMember": false
+  },
+  {
+    "name": {
       "common": "Namibia",
       "official": "Namibia"
     },
@@ -1001,11 +1297,27 @@
   },
   {
     "name": {
+      "common": "New Caledonia",
+      "official": "New Caledonia"
+    },
+    "cca2": "NC",
+    "unMember": false
+  },
+  {
+    "name": {
       "common": "Niger",
       "official": "Niger"
     },
     "cca2": "NE",
     "unMember": true
+  },
+  {
+    "name": {
+      "common": "Norfolk Island",
+      "official": "Norfolk Island"
+    },
+    "cca2": "NF",
+    "unMember": false
   },
   {
     "name": {
@@ -1022,6 +1334,14 @@
     },
     "cca2": "NI",
     "unMember": true
+  },
+  {
+    "name": {
+      "common": "Niue",
+      "official": "Niue"
+    },
+    "cca2": "NU",
+    "unMember": false
   },
   {
     "name": {
@@ -1089,6 +1409,14 @@
   },
   {
     "name": {
+      "common": "Pitcairn Islands",
+      "official": "Pitcairn Islands"
+    },
+    "cca2": "PN",
+    "unMember": false
+  },
+  {
+    "name": {
       "common": "Peru",
       "official": "Peru"
     },
@@ -1129,6 +1457,14 @@
   },
   {
     "name": {
+      "common": "Puerto Rico",
+      "official": "Puerto Rico"
+    },
+    "cca2": "PR",
+    "unMember": false
+  },
+  {
+    "name": {
       "common": "North Korea",
       "official": "North Korea"
     },
@@ -1153,11 +1489,35 @@
   },
   {
     "name": {
+      "common": "Palestine",
+      "official": "Palestine"
+    },
+    "cca2": "PS",
+    "unMember": false
+  },
+  {
+    "name": {
+      "common": "French Polynesia",
+      "official": "French Polynesia"
+    },
+    "cca2": "PF",
+    "unMember": false
+  },
+  {
+    "name": {
       "common": "Qatar",
       "official": "Qatar"
     },
     "cca2": "QA",
     "unMember": true
+  },
+  {
+    "name": {
+      "common": "Réunion",
+      "official": "Réunion"
+    },
+    "cca2": "RE",
+    "unMember": false
   },
   {
     "name": {
@@ -1217,6 +1577,22 @@
   },
   {
     "name": {
+      "common": "South Georgia",
+      "official": "South Georgia"
+    },
+    "cca2": "GS",
+    "unMember": false
+  },
+  {
+    "name": {
+      "common": "Svalbard and Jan Mayen",
+      "official": "Svalbard and Jan Mayen"
+    },
+    "cca2": "SJ",
+    "unMember": false
+  },
+  {
+    "name": {
       "common": "Solomon Islands",
       "official": "Solomon Islands"
     },
@@ -1254,6 +1630,14 @@
     },
     "cca2": "SO",
     "unMember": true
+  },
+  {
+    "name": {
+      "common": "Saint Pierre and Miquelon",
+      "official": "Saint Pierre and Miquelon"
+    },
+    "cca2": "PM",
+    "unMember": false
   },
   {
     "name": {
@@ -1321,6 +1705,14 @@
   },
   {
     "name": {
+      "common": "Sint Maarten",
+      "official": "Sint Maarten"
+    },
+    "cca2": "SX",
+    "unMember": false
+  },
+  {
+    "name": {
       "common": "Seychelles",
       "official": "Seychelles"
     },
@@ -1334,6 +1726,14 @@
     },
     "cca2": "SY",
     "unMember": true
+  },
+  {
+    "name": {
+      "common": "Turks and Caicos Islands",
+      "official": "Turks and Caicos Islands"
+    },
+    "cca2": "TC",
+    "unMember": false
   },
   {
     "name": {
@@ -1366,6 +1766,14 @@
     },
     "cca2": "TJ",
     "unMember": true
+  },
+  {
+    "name": {
+      "common": "Tokelau",
+      "official": "Tokelau"
+    },
+    "cca2": "TK",
+    "unMember": false
   },
   {
     "name": {
@@ -1425,6 +1833,14 @@
   },
   {
     "name": {
+      "common": "Taiwan",
+      "official": "Taiwan"
+    },
+    "cca2": "TW",
+    "unMember": false
+  },
+  {
+    "name": {
       "common": "Tanzania",
       "official": "Tanzania"
     },
@@ -1449,6 +1865,14 @@
   },
   {
     "name": {
+      "common": "United States Minor Outlying Islands",
+      "official": "United States Minor Outlying Islands"
+    },
+    "cca2": "UM",
+    "unMember": false
+  },
+  {
+    "name": {
       "common": "Uruguay",
       "official": "Uruguay"
     },
@@ -1457,8 +1881,8 @@
   },
   {
     "name": {
-      "common": "United States",
-      "official": "United States"
+      "common": "United States of America",
+      "official": "United States of America"
     },
     "cca2": "US",
     "unMember": true
@@ -1497,6 +1921,22 @@
   },
   {
     "name": {
+      "common": "British Virgin Islands",
+      "official": "British Virgin Islands"
+    },
+    "cca2": "VG",
+    "unMember": false
+  },
+  {
+    "name": {
+      "common": "United States Virgin Islands",
+      "official": "United States Virgin Islands"
+    },
+    "cca2": "VI",
+    "unMember": false
+  },
+  {
+    "name": {
       "common": "Vietnam",
       "official": "Vietnam"
     },
@@ -1510,6 +1950,14 @@
     },
     "cca2": "VU",
     "unMember": true
+  },
+  {
+    "name": {
+      "common": "Wallis and Futuna",
+      "official": "Wallis and Futuna"
+    },
+    "cca2": "WF",
+    "unMember": false
   },
   {
     "name": {
