@@ -34,7 +34,16 @@ export default function Treaty({ name }) {
     }
   })
 
-  const meta = [<>Established {treaty.date}</>, <>{treaty.legalStatus}</>, <>{treaty.participants.length} Members</>]
+  const memberCount = treaty.participants.reduce((prev, country) => {
+    const s = ['ratification', 'accession', 'acceptance', 'succession']
+    console.log(country)
+    const found = country.events.findIndex((event) => {
+      return s.indexOf(event.type) !== -1
+    })
+    return found !== -1 ? prev + 1 : prev
+  }, 0)
+
+  const meta = [<>Established {treaty.date}</>, <>{treaty.legalStatus}</>, <>{memberCount} Members</>]
 
   return (
     <section className={styles.container}>
