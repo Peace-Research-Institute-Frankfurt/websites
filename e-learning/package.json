@@ -4,7 +4,6 @@
   "private": true,
   "description": "eunpdc-next",
   "author": "Max Kohler",
-  "type": "module",
   "scripts": {
     "build": "gatsby build",
     "clean": "gatsby clean",
