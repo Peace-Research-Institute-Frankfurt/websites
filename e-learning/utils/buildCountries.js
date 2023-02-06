@@ -1,4 +1,4 @@
-const fs = require('fs')
+import fs from 'fs'
 const raw = JSON.parse(fs.readFileSync('./countries_raw.json'))
 
 const out = raw.flatMap((c) => {
@@ -10,10 +10,9 @@ const out = raw.flatMap((c) => {
       },
       cca2: c.cca2,
       unMember: c.unMember,
-      treaties: [],
     }
   }
   return []
 })
 
-fs.writeFileSync('./content/data/countries.json', JSON.stringify(out, null, '  '))
+fs.writeFileSync('../content/data/countries.json', JSON.stringify(out, null, '  '))
