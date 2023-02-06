@@ -23,12 +23,6 @@
   display: inline-flex;
 }
 
-.comment {
-  border-top: 1px dotted currentColor;
-  padding-top: 0.5em;
-  margin-top: 1em;
-}
-
 .meta {
   @extend %caption;
   display: flex;

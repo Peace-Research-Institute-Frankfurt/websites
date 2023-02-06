@@ -20,7 +20,6 @@ export default function Institution({ name }) {
             }
           }
           website
-          comment
         }
       }
     }
@@ -50,7 +49,6 @@ export default function Institution({ name }) {
           })}
         </p>
         <p>{institution.description}</p>
-        {institution.comment && <p className={styles.comment}>{institution.comment}</p>}
       </Expandable>
     </section>
   )

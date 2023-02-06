@@ -22,7 +22,6 @@ export default function Treaty({ name }) {
               date
             }
           }
-          comment
         }
       }
     }
@@ -52,7 +51,6 @@ export default function Treaty({ name }) {
           })}
         </p>
         <p>{treaty.description}</p>
-        {treaty.comment && <p className={styles.comment}>{treaty.comment}</p>}
       </Expandable>
     </section>
   )

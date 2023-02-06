@@ -18,7 +18,6 @@ export default function Resolution({ name }) {
           status
           text
           description
-          comment
         }
       }
     }
@@ -77,7 +76,6 @@ export default function Resolution({ name }) {
           })}
         </p>
         <p>{res.description}</p>
-        {res.comment && <p className={styles.comment}>{res.comment}</p>}
       </Expandable>
     </section>
   )
