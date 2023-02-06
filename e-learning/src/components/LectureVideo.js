@@ -20,7 +20,7 @@ export default function LectureVideo({ lu, vl, transcript, size, provider, child
   }
 
   const [currentTab, setCurrentTab] = useState(1)
-  const tabs = ['video', 'text']
+  const tabs = ['video', 'transcript']
   function generateId(base, index) {
     return `${base}-${index}`
   }
@@ -62,7 +62,7 @@ export default function LectureVideo({ lu, vl, transcript, size, provider, child
   return (
     <div className={styles.container}>
       <ul className={styles.tabsList}>{tabItems}</ul>
-      <div>{tabContent}</div>
+      <div className={styles.content}>{tabContent}</div>
     </div>
   )
 }
