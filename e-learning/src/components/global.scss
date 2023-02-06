@@ -104,10 +104,10 @@ body {
   transition: 100ms;
 }
 .footnotes {
-  border-top: 1px solid var(--gray-30);
+  border-top: 2px solid var(--gray-20);
   font-size: var(--ms--1);
-  padding-top: 2em;
   margin-top: 2em;
+  padding-top: 2em;
   grid-column: 1 / 6;
   @include bp(m) {
     grid-column: 3 / 4;
@@ -117,7 +117,6 @@ body {
     font-size: 0;
   }
   .footnote-backref {
-    // display: none;
     margin-left: 0.2em;
     text-decoration: none;
   }
@@ -144,7 +143,7 @@ body {
     }
   }
   ol {
-    column-gap: 2rem;
+    column-gap: 2.5em;
     @include bp(s) {
       columns: 2;
     }
