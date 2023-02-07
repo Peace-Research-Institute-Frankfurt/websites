@@ -1,17 +1,15 @@
 import React, { useRef, useState } from 'react'
-import { Tooltip } from '@prif/shared'
 import * as styles from './TreatyParticipantGraph.module.scss'
 
 export default function TreatyParticipantGraph({ treaty }) {
-  const [tooltipActive, setTooltipActive] = useState(true)
-  const [tooltipPosition, setTooltipPosition] = useState({ x: 100, y: 100 })
-  const [tooltipText, setTooltipText] = useState('hello')
+  const [tooltipActive, setTooltipActive] = useState(false)
+  const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 })
+  const [tooltipText, setTooltipText] = useState('')
   const containerRef = useRef()
 
   function onMouseOver(e, p) {
     const { x, y, width } = e.target.getBoundingClientRect()
     const status = p.events[p.events.length - 1].type
-    console.log(status)
     setTooltipActive(true)
     setTooltipPosition({ x: x + width / 2, y: y })
     let text = `${p.country.name.common}`
