@@ -1,6 +1,7 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { Expandable } from '@prif/shared'
+import { Chip, ChipGroup } from './Chip'
 import * as styles from './Institution.module.scss'
 import * as buttonStyles from './Button.module.scss'
 
@@ -32,22 +33,15 @@ export default function Institution({ name }) {
     }
   })
 
-  const meta = [<>Established {institution.established}</>, <>{institution.members.length} Members</>]
-
   return (
     <section className={styles.container}>
       <Expandable buttonStyles={buttonStyles}>
         <span className={styles.eyebrow}>Institution</span>
         <h2 className={styles.title}>{institution.title}</h2>
-        <p className={styles.meta}>
-          {meta.map((el, i) => {
-            return (
-              <span key={`meta.${i}`} className={styles.metaItem}>
-                {el}
-              </span>
-            )
-          })}
-        </p>
+        <ChipGroup>
+          <Chip>Established {institution.established}</Chip>
+          <Chip>{institution.members.length} Members</Chip>
+        </ChipGroup>
         <p>{institution.description}</p>
       </Expandable>
     </section>

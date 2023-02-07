@@ -1,5 +1,6 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
+import { Chip, ChipGroup } from './Chip'
 import CheckIcon from '../assets/icons/check.svg'
 import CrossIcon from '../assets/icons/cross.svg'
 import { Expandable } from '@prif/shared'
@@ -30,28 +31,6 @@ export default function Resolution({ name }) {
     }
   })
 
-  const meta = [
-    {
-      label: 'Status',
-      data: (
-        <>
-          {res.status === 'adopted' ? (
-            <>
-              <CheckIcon />
-              Adopted {res.date}
-            </>
-          ) : (
-            <>
-              <CrossIcon />
-              {res.status}
-            </>
-          )}
-        </>
-      ),
-    },
-    { label: 'Meeting', data: res.meeting },
-  ]
-
   return (
     <section className={styles.container}>
       <Expandable buttonStyles={buttonStyles}>
@@ -66,15 +45,20 @@ export default function Resolution({ name }) {
             <span className={styles.name}>{res.name}</span>
           )}
         </h2>
-        <p className={styles.meta}>
-          {meta.map((el) => {
-            return (
-              <span key={el.label} className={styles.metaItem}>
-                {el.data}
-              </span>
-            )
-          })}
-        </p>
+        <ChipGroup>
+          {res.status === 'adopted' ? (
+            <Chip>
+              <CheckIcon />
+              Adopted {res.date}
+            </Chip>
+          ) : (
+            <Chip>
+              <CrossIcon />
+              {res.status}
+            </Chip>
+          )}
+          <Chip>{res.meeting}</Chip>
+        </ChipGroup>
         <p>{res.description}</p>
       </Expandable>
     </section>
