@@ -25,15 +25,10 @@
 %h2 {
   font-family: var(--haas-text);
   line-height: 1.1;
-  letter-spacing: -0.01em;
-  font-size: var(--ms-3);
   hyphens: none;
-  font-weight: 700;
-  @include bp(m) {
-    font-weight: 600;
-    letter-spacing: -0.018em;
-    font-size: var(--ms-4);
-  }
+  font-weight: 600;
+  font-size: var(--ms-4);
+  letter-spacing: -0.02em;
   & + h3 {
     margin-top: 0;
   }
