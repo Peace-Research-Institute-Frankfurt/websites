@@ -21,10 +21,10 @@ import Map from './Map'
 import Resolution from './Resolution'
 import Treaty from './Treaty'
 import Institution from './Institution'
-import { Callout, Tab, Tabs, Details, DetailsGroup, FlipCards, Card, Timeline, Event } from '@prif/shared'
+import { Tab, Tabs } from './TabsAdapter'
+import { Callout, Details, DetailsGroup, FlipCards, Card, Timeline, Event } from '@prif/shared'
 import * as QuoteStyles from './Quote.module.scss'
 import * as CalloutStyles from './Callout.module.scss'
-import * as TabStyles from './Tabs.module.scss'
 import * as FigureStyles from './Figure.module.scss'
 import * as DetailsStyles from './Details.module.scss'
 import * as FlipCardsStyles from './FlipCards.module.scss'
@@ -41,6 +41,8 @@ const shortCodes = {
   Resolution,
   Treaty,
   Institution,
+  Tab,
+  Tabs,
   Quote: ({ ...props }) => <QuoteAdapter {...props} styles={QuoteStyles} />,
   Term: ({ ...props }) => <TermAdapter styles={TermStyles} {...props} />,
   Figure: ({ ...props }) => <FigureAdapter styles={FigureStyles} {...props} />,
@@ -51,8 +53,6 @@ const shortCodes = {
   Card: ({ ...props }) => <Card styles={FlipCardsStyles} {...props} />,
   Details: ({ ...props }) => <Details {...props} styles={DetailsStyles} />,
   DetailsGroup: ({ ...props }) => <DetailsGroup {...props} styles={DetailsStyles} />,
-  Tabs: ({ ...props }) => <Tabs {...props} styles={TabStyles} />,
-  Tab: ({ ...props }) => <Tab {...props} styles={TabStyles} />,
   Callout: ({ ...props }) => <Callout {...props} buttonStyles={buttonStyles} styles={CalloutStyles} />,
   Map,
 }
