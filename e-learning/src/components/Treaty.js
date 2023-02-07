@@ -56,9 +56,9 @@ export default function Treaty({ name }) {
         <span className={styles.eyebrow}>Treaty</span>
         <h2 className={styles.title}>{treaty.shortTitle || treaty.title}</h2>
         <ChipGroup>
-          <Chip>Established {treaty.date}</Chip>
-          <Chip>{treaty.legalStatus}</Chip>
-          <Chip>{memberCount} Members</Chip>
+          {treaty.date && <Chip>Established {treaty.date}</Chip>}
+          {treaty.legalStatus && <Chip>{treaty.legalStatus}</Chip>}
+          <Chip>{memberCount} Member States</Chip>
         </ChipGroup>
         <p className={styles.description}>{treaty.description}</p>
         <TreatyParticipantGraph treaty={treaty} />
