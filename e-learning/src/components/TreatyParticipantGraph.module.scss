@@ -4,8 +4,11 @@ $border-color: var(--gray-50);
 
 .container {
   --col-count: 10;
+  @include bp(s) {
+    --col-count: 18;
+  }
   @include bp(m) {
-    --col-count: 25;
+    --col-count: 24;
   }
 }
 .items {
