@@ -11,6 +11,9 @@
     "serve": "gatsby serve",
     "start": "gatsby develop"
   },
+  "workspaces": [
+    "plugins/prif-gatsby-remark-smartypants"
+  ],
   "dependencies": {
     "@prif/shared": "0.0.1",
     "@hcaptcha/react-hcaptcha": "^1.4.4",

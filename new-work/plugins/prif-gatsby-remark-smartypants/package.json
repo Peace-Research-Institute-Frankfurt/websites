@@ -1,14 +1,14 @@
 {
-    "name": "prif-gatsby-remark-smartypants",
-    "description": "Use retext-smartypants to auto-enhance typography of markdown",
-    "version": "6.6.0-next.0",
-    "author": "Kyle Mathews <mathews.kyle@gmail.com>",
-    "type": "module",
-    "dependencies": {
-        "retext": "^8.1.0",
-        "retext-smartypants": "^5.2.0",
-        "unist-util-visit": "^4.1.1"
-    },
-    "license": "MIT",
-    "main": "index.js"
+  "name": "prif-gatsby-remark-smartypants",
+  "description": "Use retext-smartypants to auto-enhance typography of markdown",
+  "version": "0.0.1",
+  "author": "Max Kohler",
+  "type": "module",
+  "dependencies": {
+    "retext": "^8.1.0",
+    "retext-smartypants": "^5.2.0",
+    "unist-util-visit": "^4.1.1"
+  },
+  "license": "MIT",
+  "main": "index.js"
 }
