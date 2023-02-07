@@ -94,6 +94,12 @@ exports.createSchemaCustomization = async ({ getNode, getNodesByType, pathPrefix
   type InstitutionsJson implements Node {
     members: [CountriesJson] @link(by: "cca2")
   }
+  type TreatyParticipant {
+    country: CountriesJson @link(by: "cca2")
+  }
+  type TreatiesJson implements Node {
+    participants: [TreatyParticipant]
+  }
   type Author implements Node {
     author_id: String
     image: File

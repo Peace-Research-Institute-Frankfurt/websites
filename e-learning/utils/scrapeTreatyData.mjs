@@ -1,6 +1,7 @@
 // This script uses Puppeteer to scrape treaty participants
 // and the dates of the signatures/accession/ratification/etc.
 // from https://treaties.un.org into /content/data/treaties.json
+
 import chalk from 'chalk'
 import { DateTime } from 'luxon'
 import puppeteer from 'puppeteer'
@@ -128,7 +129,9 @@ for (let i = 0; i < pages.length; i++) {
     const events = p.events.map((e) => {
       return { ...e, date: DateTime.fromFormat(e.date, 'd MMM yyyy').toFormat('yyyy-MM-dd') }
     })
-    return { cca2: country.cca2, events: events }
+    // We just save the country's cca2 here,
+    // the join happens later at the GraphQl level
+    return { country: country.cca2, events: events }
   })
   console.log(`Wrote ${treatyParticipants.length} participants\n`)
   treaty.participants = treatyParticipants

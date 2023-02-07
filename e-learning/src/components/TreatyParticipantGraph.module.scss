@@ -2,7 +2,10 @@
 
 $border-color: rgba(black, 0.5);
 $col-count: 26;
+
 .container {
+}
+.items {
   display: grid;
   grid-template-columns: repeat($col-count, 1fr);
   list-style: none;
@@ -15,12 +18,19 @@ $col-count: 26;
   margin-bottom: 0 !important;
   border-bottom: 1px solid $border-color;
   border-left: 1px solid $border-color;
-  padding: 0.15em;
+  padding: 0.1em;
   letter-spacing: 0.015em;
   display: flex;
+  user-select: none;
   align-items: center;
+  cursor: pointer;
   justify-content: center;
+  color: rgba(black, 0.95);
   font-weight: 100;
+  &:hover,
+  &:focus-visible {
+    text-decoration: underline;
+  }
   &:nth-of-type(-n + #{$col-count}) {
     border-top: 1px solid $border-color;
   }
@@ -44,4 +54,33 @@ $col-count: 26;
 .succession,
 .acceptance {
   background: var(--blue-20);
+}
+
+.tooltip {
+  @extend %caption;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: var(--gray-10);
+  z-index: 100;
+  padding: 0.5em;
+  border-radius: var(--br);
+  border: 1px solid rgba(black, 0.85);
+  visibility: hidden;
+  pointer-events: none;
+  max-width: 20em;
+  line-height: 1.25;
+  filter: drop-shadow(0px 2px 3px rgba(black, 0.2));
+  time {
+    background: var(--blue-20);
+    font-family: var(--mono);
+    font-size: 0.9em;
+    word-spacing: -0.25em;
+    padding: 0.05em 0.25em;
+    white-space: nowrap;
+  }
+}
+
+.tooltip-active {
+  visibility: visible;
 }

@@ -9,7 +9,6 @@ export default function Tooltip({ active, position, children, id, triggerEl }) {
   let containerStyles = {}
   if (triggerEl) {
     const { x, y, width, height, right } = triggerEl.getBoundingClientRect()
-    triggerEl.innerHTML
     if (position === 'topCenter') {
       containerStyles = {
         top: `${y - 10 + offsetY}px`,

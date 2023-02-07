@@ -17,10 +17,15 @@ export default function Treaty({ name }) {
           description
           legalStatus
           participants {
-            cca2
+            country {
+              cca2
+              name {
+                common
+              }
+            }
             events {
               type
-              date
+              date: date(formatString: "DD MMMM YYYY")
             }
           }
         }
@@ -37,7 +42,6 @@ export default function Treaty({ name }) {
 
   const memberCount = treaty.participants.reduce((prev, country) => {
     const s = ['ratification', 'accession', 'acceptance', 'succession']
-    console.log(country)
     const found = country.events.findIndex((event) => {
       return s.indexOf(event.type) !== -1
     })

@@ -8,7 +8,7 @@
     "description": "The Chemical Weapons Convention prohibits the large-scale use, development, production, stockpiling and transfer of chemical weapons and their precursors. It entered into force in 1997 and is administered by the Organisation for the Prohibition of Chemical Weapons (OPCW).",
     "participants": [
       {
-        "cca2": "AF",
+        "country": "AF",
         "events": [
           {
             "type": "signature",
@@ -21,7 +21,7 @@
         ]
       },
       {
-        "cca2": "AL",
+        "country": "AL",
         "events": [
           {
             "type": "signature",
@@ -34,7 +34,7 @@
         ]
       },
       {
-        "cca2": "DZ",
+        "country": "DZ",
         "events": [
           {
             "type": "signature",
@@ -47,7 +47,7 @@
         ]
       },
       {
-        "cca2": "AD",
+        "country": "AD",
         "events": [
           {
             "type": "accession",
@@ -56,7 +56,7 @@
         ]
       },
       {
-        "cca2": "AO",
+        "country": "AO",
         "events": [
           {
             "type": "accession",
@@ -65,7 +65,7 @@
         ]
       },
       {
-        "cca2": "AG",
+        "country": "AG",
         "events": [
           {
             "type": "accession",
@@ -74,7 +74,7 @@
         ]
       },
       {
-        "cca2": "AR",
+        "country": "AR",
         "events": [
           {
             "type": "signature",
@@ -87,7 +87,7 @@
         ]
       },
       {
-        "cca2": "AM",
+        "country": "AM",
         "events": [
           {
             "type": "signature",
@@ -100,7 +100,7 @@
         ]
       },
       {
-        "cca2": "AU",
+        "country": "AU",
         "events": [
           {
             "type": "signature",
@@ -113,7 +113,7 @@
         ]
       },
       {
-        "cca2": "AT",
+        "country": "AT",
         "events": [
           {
             "type": "signature",
@@ -126,7 +126,7 @@
         ]
       },
       {
-        "cca2": "AZ",
+        "country": "AZ",
         "events": [
           {
             "type": "signature",
@@ -139,7 +139,7 @@
         ]
       },
       {
-        "cca2": "BS",
+        "country": "BS",
         "events": [
           {
             "type": "signature",
@@ -152,7 +152,7 @@
         ]
       },
       {
-        "cca2": "BH",
+        "country": "BH",
         "events": [
           {
             "type": "signature",
@@ -165,7 +165,7 @@
         ]
       },
       {
-        "cca2": "BD",
+        "country": "BD",
         "events": [
           {
             "type": "signature",
@@ -178,7 +178,7 @@
         ]
       },
       {
-        "cca2": "BB",
+        "country": "BB",
         "events": [
           {
             "type": "accession",
@@ -187,7 +187,7 @@
         ]
       },
       {
-        "cca2": "BY",
+        "country": "BY",
         "events": [
           {
             "type": "signature",
@@ -200,7 +200,7 @@
         ]
       },
       {
-        "cca2": "BE",
+        "country": "BE",
         "events": [
           {
             "type": "signature",
@@ -213,7 +213,7 @@
         ]
       },
       {
-        "cca2": "BZ",
+        "country": "BZ",
         "events": [
           {
             "type": "accession",
@@ -222,7 +222,7 @@
         ]
       },
       {
-        "cca2": "BJ",
+        "country": "BJ",
         "events": [
           {
             "type": "signature",
@@ -235,7 +235,7 @@
         ]
       },
       {
-        "cca2": "BT",
+        "country": "BT",
         "events": [
           {
             "type": "signature",
@@ -248,7 +248,7 @@
         ]
       },
       {
-        "cca2": "BO",
+        "country": "BO",
         "events": [
           {
             "type": "signature",
@@ -261,7 +261,7 @@
         ]
       },
       {
-        "cca2": "BA",
+        "country": "BA",
         "events": [
           {
             "type": "signature",
@@ -274,7 +274,7 @@
         ]
       },
       {
-        "cca2": "BW",
+        "country": "BW",
         "events": [
           {
             "type": "accession",
@@ -283,7 +283,7 @@
         ]
       },
       {
-        "cca2": "BR",
+        "country": "BR",
         "events": [
           {
             "type": "signature",
@@ -296,7 +296,7 @@
         ]
       },
       {
-        "cca2": "BN",
+        "country": "BN",
         "events": [
           {
             "type": "signature",
@@ -309,7 +309,7 @@
         ]
       },
       {
-        "cca2": "BG",
+        "country": "BG",
         "events": [
           {
             "type": "signature",
@@ -322,7 +322,7 @@
         ]
       },
       {
-        "cca2": "BF",
+        "country": "BF",
         "events": [
           {
             "type": "signature",
@@ -335,7 +335,7 @@
         ]
       },
       {
-        "cca2": "BI",
+        "country": "BI",
         "events": [
           {
             "type": "signature",
@@ -348,7 +348,7 @@
         ]
       },
       {
-        "cca2": "CV",
+        "country": "CV",
         "events": [
           {
             "type": "signature",
@@ -361,7 +361,7 @@
         ]
       },
       {
-        "cca2": "KH",
+        "country": "KH",
         "events": [
           {
             "type": "signature",
@@ -374,7 +374,7 @@
         ]
       },
       {
-        "cca2": "CM",
+        "country": "CM",
         "events": [
           {
             "type": "signature",
@@ -387,7 +387,7 @@
         ]
       },
       {
-        "cca2": "CA",
+        "country": "CA",
         "events": [
           {
             "type": "signature",
@@ -400,7 +400,7 @@
         ]
       },
       {
-        "cca2": "CF",
+        "country": "CF",
         "events": [
           {
             "type": "signature",
@@ -413,7 +413,7 @@
         ]
       },
       {
-        "cca2": "TD",
+        "country": "TD",
         "events": [
           {
             "type": "signature",
@@ -426,7 +426,7 @@
         ]
       },
       {
-        "cca2": "CL",
+        "country": "CL",
         "events": [
           {
             "type": "signature",
@@ -439,7 +439,7 @@
         ]
       },
       {
-        "cca2": "CN",
+        "country": "CN",
         "events": [
           {
             "type": "signature",
@@ -452,7 +452,7 @@
         ]
       },
       {
-        "cca2": "CO",
+        "country": "CO",
         "events": [
           {
             "type": "signature",
@@ -465,7 +465,7 @@
         ]
       },
       {
-        "cca2": "KM",
+        "country": "KM",
         "events": [
           {
             "type": "signature",
@@ -478,7 +478,7 @@
         ]
       },
       {
-        "cca2": "CG",
+        "country": "CG",
         "events": [
           {
             "type": "signature",
@@ -491,7 +491,7 @@
         ]
       },
       {
-        "cca2": "CK",
+        "country": "CK",
         "events": [
           {
             "type": "signature",
@@ -504,7 +504,7 @@
         ]
       },
       {
-        "cca2": "CR",
+        "country": "CR",
         "events": [
           {
             "type": "signature",
@@ -517,7 +517,7 @@
         ]
       },
       {
-        "cca2": "CI",
+        "country": "CI",
         "events": [
           {
             "type": "signature",
@@ -530,7 +530,7 @@
         ]
       },
       {
-        "cca2": "HR",
+        "country": "HR",
         "events": [
           {
             "type": "signature",
@@ -543,7 +543,7 @@
         ]
       },
       {
-        "cca2": "CU",
+        "country": "CU",
         "events": [
           {
             "type": "signature",
@@ -556,7 +556,7 @@
         ]
       },
       {
-        "cca2": "CY",
+        "country": "CY",
         "events": [
           {
             "type": "signature",
@@ -569,7 +569,7 @@
         ]
       },
       {
-        "cca2": "CZ",
+        "country": "CZ",
         "events": [
           {
             "type": "signature",
@@ -582,7 +582,7 @@
         ]
       },
       {
-        "cca2": "CD",
+        "country": "CD",
         "events": [
           {
             "type": "signature",
@@ -595,7 +595,7 @@
         ]
       },
       {
-        "cca2": "DK",
+        "country": "DK",
         "events": [
           {
             "type": "signature",
@@ -608,7 +608,7 @@
         ]
       },
       {
-        "cca2": "DJ",
+        "country": "DJ",
         "events": [
           {
             "type": "signature",
@@ -621,7 +621,7 @@
         ]
       },
       {
-        "cca2": "DM",
+        "country": "DM",
         "events": [
           {
             "type": "signature",
@@ -634,7 +634,7 @@
         ]
       },
       {
-        "cca2": "DO",
+        "country": "DO",
         "events": [
           {
             "type": "signature",
@@ -647,7 +647,7 @@
         ]
       },
       {
-        "cca2": "EC",
+        "country": "EC",
         "events": [
           {
             "type": "signature",
@@ -660,7 +660,7 @@
         ]
       },
       {
-        "cca2": "SV",
+        "country": "SV",
         "events": [
           {
             "type": "signature",
@@ -673,7 +673,7 @@
         ]
       },
       {
-        "cca2": "GQ",
+        "country": "GQ",
         "events": [
           {
             "type": "signature",
@@ -686,7 +686,7 @@
         ]
       },
       {
-        "cca2": "ER",
+        "country": "ER",
         "events": [
           {
             "type": "accession",
@@ -695,7 +695,7 @@
         ]
       },
       {
-        "cca2": "EE",
+        "country": "EE",
         "events": [
           {
             "type": "signature",
@@ -708,7 +708,7 @@
         ]
       },
       {
-        "cca2": "SZ",
+        "country": "SZ",
         "events": [
           {
             "type": "signature",
@@ -721,7 +721,7 @@
         ]
       },
       {
-        "cca2": "ET",
+        "country": "ET",
         "events": [
           {
             "type": "signature",
@@ -734,7 +734,7 @@
         ]
       },
       {
-        "cca2": "FJ",
+        "country": "FJ",
         "events": [
           {
             "type": "signature",
@@ -747,7 +747,7 @@
         ]
       },
       {
-        "cca2": "FI",
+        "country": "FI",
         "events": [
           {
             "type": "signature",
@@ -760,7 +760,7 @@
         ]
       },
       {
-        "cca2": "FR",
+        "country": "FR",
         "events": [
           {
             "type": "signature",
@@ -773,7 +773,7 @@
         ]
       },
       {
-        "cca2": "GA",
+        "country": "GA",
         "events": [
           {
             "type": "signature",
@@ -786,7 +786,7 @@
         ]
       },
       {
-        "cca2": "GM",
+        "country": "GM",
         "events": [
           {
             "type": "signature",
@@ -799,7 +799,7 @@
         ]
       },
       {
-        "cca2": "GE",
+        "country": "GE",
         "events": [
           {
             "type": "signature",
@@ -812,7 +812,7 @@
         ]
       },
       {
-        "cca2": "DE",
+        "country": "DE",
         "events": [
           {
             "type": "signature",
@@ -825,7 +825,7 @@
         ]
       },
       {
-        "cca2": "GH",
+        "country": "GH",
         "events": [
           {
             "type": "signature",
@@ -838,7 +838,7 @@
         ]
       },
       {
-        "cca2": "GR",
+        "country": "GR",
         "events": [
           {
             "type": "signature",
@@ -851,7 +851,7 @@
         ]
       },
       {
-        "cca2": "GD",
+        "country": "GD",
         "events": [
           {
             "type": "signature",
@@ -864,7 +864,7 @@
         ]
       },
       {
-        "cca2": "GT",
+        "country": "GT",
         "events": [
           {
             "type": "signature",
@@ -877,7 +877,7 @@
         ]
       },
       {
-        "cca2": "GN",
+        "country": "GN",
         "events": [
           {
             "type": "signature",
@@ -890,7 +890,7 @@
         ]
       },
       {
-        "cca2": "GW",
+        "country": "GW",
         "events": [
           {
             "type": "signature",
@@ -903,7 +903,7 @@
         ]
       },
       {
-        "cca2": "GY",
+        "country": "GY",
         "events": [
           {
             "type": "signature",
@@ -916,7 +916,7 @@
         ]
       },
       {
-        "cca2": "HT",
+        "country": "HT",
         "events": [
           {
             "type": "signature",
@@ -929,7 +929,7 @@
         ]
       },
       {
-        "cca2": "VA",
+        "country": "VA",
         "events": [
           {
             "type": "signature",
@@ -942,7 +942,7 @@
         ]
       },
       {
-        "cca2": "HN",
+        "country": "HN",
         "events": [
           {
             "type": "signature",
@@ -955,7 +955,7 @@
         ]
       },
       {
-        "cca2": "HU",
+        "country": "HU",
         "events": [
           {
             "type": "signature",
@@ -968,7 +968,7 @@
         ]
       },
       {
-        "cca2": "IS",
+        "country": "IS",
         "events": [
           {
             "type": "signature",
@@ -981,7 +981,7 @@
         ]
       },
       {
-        "cca2": "IN",
+        "country": "IN",
         "events": [
           {
             "type": "signature",
@@ -994,7 +994,7 @@
         ]
       },
       {
-        "cca2": "ID",
+        "country": "ID",
         "events": [
           {
             "type": "signature",
@@ -1007,7 +1007,7 @@
         ]
       },
       {
-        "cca2": "IR",
+        "country": "IR",
         "events": [
           {
             "type": "signature",
@@ -1020,7 +1020,7 @@
         ]
       },
       {
-        "cca2": "IQ",
+        "country": "IQ",
         "events": [
           {
             "type": "accession",
@@ -1029,7 +1029,7 @@
         ]
       },
       {
-        "cca2": "IE",
+        "country": "IE",
         "events": [
           {
             "type": "signature",
@@ -1042,7 +1042,7 @@
         ]
       },
       {
-        "cca2": "IL",
+        "country": "IL",
         "events": [
           {
             "type": "signature",
@@ -1051,7 +1051,7 @@
         ]
       },
       {
-        "cca2": "IT",
+        "country": "IT",
         "events": [
           {
             "type": "signature",
@@ -1064,7 +1064,7 @@
         ]
       },
       {
-        "cca2": "JM",
+        "country": "JM",
         "events": [
           {
             "type": "signature",
@@ -1077,7 +1077,7 @@
         ]
       },
       {
-        "cca2": "JP",
+        "country": "JP",
         "events": [
           {
             "type": "signature",
@@ -1090,7 +1090,7 @@
         ]
       },
       {
-        "cca2": "JO",
+        "country": "JO",
         "events": [
           {
             "type": "accession",
@@ -1099,7 +1099,7 @@
         ]
       },
       {
-        "cca2": "KZ",
+        "country": "KZ",
         "events": [
           {
             "type": "signature",
@@ -1112,7 +1112,7 @@
         ]
       },
       {
-        "cca2": "KE",
+        "country": "KE",
         "events": [
           {
             "type": "signature",
@@ -1125,7 +1125,7 @@
         ]
       },
       {
-        "cca2": "KI",
+        "country": "KI",
         "events": [
           {
             "type": "accession",
@@ -1134,7 +1134,7 @@
         ]
       },
       {
-        "cca2": "KW",
+        "country": "KW",
         "events": [
           {
             "type": "signature",
@@ -1147,7 +1147,7 @@
         ]
       },
       {
-        "cca2": "KG",
+        "country": "KG",
         "events": [
           {
             "type": "signature",
@@ -1160,7 +1160,7 @@
         ]
       },
       {
-        "cca2": "LA",
+        "country": "LA",
         "events": [
           {
             "type": "signature",
@@ -1173,7 +1173,7 @@
         ]
       },
       {
-        "cca2": "LV",
+        "country": "LV",
         "events": [
           {
             "type": "signature",
@@ -1186,7 +1186,7 @@
         ]
       },
       {
-        "cca2": "LB",
+        "country": "LB",
         "events": [
           {
             "type": "accession",
@@ -1195,7 +1195,7 @@
         ]
       },
       {
-        "cca2": "LS",
+        "country": "LS",
         "events": [
           {
             "type": "signature",
@@ -1208,7 +1208,7 @@
         ]
       },
       {
-        "cca2": "LR",
+        "country": "LR",
         "events": [
           {
             "type": "signature",
@@ -1221,7 +1221,7 @@
         ]
       },
       {
-        "cca2": "LY",
+        "country": "LY",
         "events": [
           {
             "type": "accession",
@@ -1230,7 +1230,7 @@
         ]
       },
       {
-        "cca2": "LI",
+        "country": "LI",
         "events": [
           {
             "type": "signature",
@@ -1243,7 +1243,7 @@
         ]
       },
       {
-        "cca2": "LT",
+        "country": "LT",
         "events": [
           {
             "type": "signature",
@@ -1256,7 +1256,7 @@
         ]
       },
       {
-        "cca2": "LU",
+        "country": "LU",
         "events": [
           {
             "type": "signature",
@@ -1269,7 +1269,7 @@
         ]
       },
       {
-        "cca2": "MG",
+        "country": "MG",
         "events": [
           {
             "type": "signature",
@@ -1282,7 +1282,7 @@
         ]
       },
       {
-        "cca2": "MW",
+        "country": "MW",
         "events": [
           {
             "type": "signature",
@@ -1295,7 +1295,7 @@
         ]
       },
       {
-        "cca2": "MY",
+        "country": "MY",
         "events": [
           {
             "type": "signature",
@@ -1308,7 +1308,7 @@
         ]
       },
       {
-        "cca2": "MV",
+        "country": "MV",
         "events": [
           {
             "type": "signature",
@@ -1321,7 +1321,7 @@
         ]
       },
       {
-        "cca2": "ML",
+        "country": "ML",
         "events": [
           {
             "type": "signature",
@@ -1334,7 +1334,7 @@
         ]
       },
       {
-        "cca2": "MT",
+        "country": "MT",
         "events": [
           {
             "type": "signature",
@@ -1347,7 +1347,7 @@
         ]
       },
       {
-        "cca2": "MH",
+        "country": "MH",
         "events": [
           {
             "type": "signature",
@@ -1360,7 +1360,7 @@
         ]
       },
       {
-        "cca2": "MR",
+        "country": "MR",
         "events": [
           {
             "type": "signature",
@@ -1373,7 +1373,7 @@
         ]
       },
       {
-        "cca2": "MU",
+        "country": "MU",
         "events": [
           {
             "type": "signature",
@@ -1386,7 +1386,7 @@
         ]
       },
       {
-        "cca2": "MX",
+        "country": "MX",
         "events": [
           {
             "type": "signature",
@@ -1399,7 +1399,7 @@
         ]
       },
       {
-        "cca2": "FM",
+        "country": "FM",
         "events": [
           {
             "type": "signature",
@@ -1412,7 +1412,7 @@
         ]
       },
       {
-        "cca2": "MC",
+        "country": "MC",
         "events": [
           {
             "type": "signature",
@@ -1425,7 +1425,7 @@
         ]
       },
       {
-        "cca2": "MN",
+        "country": "MN",
         "events": [
           {
             "type": "signature",
@@ -1438,7 +1438,7 @@
         ]
       },
       {
-        "cca2": "ME",
+        "country": "ME",
         "events": [
           {
             "type": "succession",
@@ -1447,7 +1447,7 @@
         ]
       },
       {
-        "cca2": "MA",
+        "country": "MA",
         "events": [
           {
             "type": "signature",
@@ -1460,7 +1460,7 @@
         ]
       },
       {
-        "cca2": "MZ",
+        "country": "MZ",
         "events": [
           {
             "type": "accession",
@@ -1469,7 +1469,7 @@
         ]
       },
       {
-        "cca2": "MM",
+        "country": "MM",
         "events": [
           {
             "type": "signature",
@@ -1482,7 +1482,7 @@
         ]
       },
       {
-        "cca2": "NA",
+        "country": "NA",
         "events": [
           {
             "type": "signature",
@@ -1495,7 +1495,7 @@
         ]
       },
       {
-        "cca2": "NR",
+        "country": "NR",
         "events": [
           {
             "type": "signature",
@@ -1508,7 +1508,7 @@
         ]
       },
       {
-        "cca2": "NP",
+        "country": "NP",
         "events": [
           {
             "type": "signature",
@@ -1521,7 +1521,7 @@
         ]
       },
       {
-        "cca2": "NL",
+        "country": "NL",
         "events": [
           {
             "type": "signature",
@@ -1534,7 +1534,7 @@
         ]
       },
       {
-        "cca2": "NZ",
+        "country": "NZ",
         "events": [
           {
             "type": "signature",
@@ -1547,7 +1547,7 @@
         ]
       },
       {
-        "cca2": "NI",
+        "country": "NI",
         "events": [
           {
             "type": "signature",
@@ -1560,7 +1560,7 @@
         ]
       },
       {
-        "cca2": "NE",
+        "country": "NE",
         "events": [
           {
             "type": "signature",
@@ -1573,7 +1573,7 @@
         ]
       },
       {
-        "cca2": "NG",
+        "country": "NG",
         "events": [
           {
             "type": "signature",
@@ -1586,7 +1586,7 @@
         ]
       },
       {
-        "cca2": "NU",
+        "country": "NU",
         "events": [
           {
             "type": "accession",
@@ -1595,7 +1595,7 @@
         ]
       },
       {
-        "cca2": "MK",
+        "country": "MK",
         "events": [
           {
             "type": "accession",
@@ -1604,7 +1604,7 @@
         ]
       },
       {
-        "cca2": "NO",
+        "country": "NO",
         "events": [
           {
             "type": "signature",
@@ -1617,7 +1617,7 @@
         ]
       },
       {
-        "cca2": "OM",
+        "country": "OM",
         "events": [
           {
             "type": "signature",
@@ -1630,7 +1630,7 @@
         ]
       },
       {
-        "cca2": "PK",
+        "country": "PK",
         "events": [
           {
             "type": "signature",
@@ -1643,7 +1643,7 @@
         ]
       },
       {
-        "cca2": "PW",
+        "country": "PW",
         "events": [
           {
             "type": "accession",
@@ -1652,7 +1652,7 @@
         ]
       },
       {
-        "cca2": "PA",
+        "country": "PA",
         "events": [
           {
             "type": "signature",
@@ -1665,7 +1665,7 @@
         ]
       },
       {
-        "cca2": "PG",
+        "country": "PG",
         "events": [
           {
             "type": "signature",
@@ -1678,7 +1678,7 @@
         ]
       },
       {
-        "cca2": "PY",
+        "country": "PY",
         "events": [
           {
             "type": "signature",
@@ -1691,7 +1691,7 @@
         ]
       },
       {
-        "cca2": "PE",
+        "country": "PE",
         "events": [
           {
             "type": "signature",
@@ -1704,7 +1704,7 @@
         ]
       },
       {
-        "cca2": "PH",
+        "country": "PH",
         "events": [
           {
             "type": "signature",
@@ -1717,7 +1717,7 @@
         ]
       },
       {
-        "cca2": "PL",
+        "country": "PL",
         "events": [
           {
             "type": "signature",
@@ -1730,7 +1730,7 @@
         ]
       },
       {
-        "cca2": "PT",
+        "country": "PT",
         "events": [
           {
             "type": "signature",
@@ -1743,7 +1743,7 @@
         ]
       },
       {
-        "cca2": "QA",
+        "country": "QA",
         "events": [
           {
             "type": "signature",
@@ -1756,7 +1756,7 @@
         ]
       },
       {
-        "cca2": "KR",
+        "country": "KR",
         "events": [
           {
             "type": "signature",
@@ -1769,7 +1769,7 @@
         ]
       },
       {
-        "cca2": "MD",
+        "country": "MD",
         "events": [
           {
             "type": "signature",
@@ -1782,7 +1782,7 @@
         ]
       },
       {
-        "cca2": "RO",
+        "country": "RO",
         "events": [
           {
             "type": "signature",
@@ -1795,7 +1795,7 @@
         ]
       },
       {
-        "cca2": "RU",
+        "country": "RU",
         "events": [
           {
             "type": "signature",
@@ -1808,7 +1808,7 @@
         ]
       },
       {
-        "cca2": "RW",
+        "country": "RW",
         "events": [
           {
             "type": "signature",
@@ -1821,7 +1821,7 @@
         ]
       },
       {
-        "cca2": "WS",
+        "country": "WS",
         "events": [
           {
             "type": "signature",
@@ -1834,7 +1834,7 @@
         ]
       },
       {
-        "cca2": "SM",
+        "country": "SM",
         "events": [
           {
             "type": "signature",
@@ -1847,7 +1847,7 @@
         ]
       },
       {
-        "cca2": "ST",
+        "country": "ST",
         "events": [
           {
             "type": "acceptance",
@@ -1856,7 +1856,7 @@
         ]
       },
       {
-        "cca2": "SA",
+        "country": "SA",
         "events": [
           {
             "type": "signature",
@@ -1869,7 +1869,7 @@
         ]
       },
       {
-        "cca2": "SN",
+        "country": "SN",
         "events": [
           {
             "type": "signature",
@@ -1882,7 +1882,7 @@
         ]
       },
       {
-        "cca2": "RS",
+        "country": "RS",
         "events": [
           {
             "type": "accession",
@@ -1891,7 +1891,7 @@
         ]
       },
       {
-        "cca2": "SC",
+        "country": "SC",
         "events": [
           {
             "type": "signature",
@@ -1904,7 +1904,7 @@
         ]
       },
       {
-        "cca2": "SL",
+        "country": "SL",
         "events": [
           {
             "type": "signature",
@@ -1917,7 +1917,7 @@
         ]
       },
       {
-        "cca2": "SG",
+        "country": "SG",
         "events": [
           {
             "type": "signature",
@@ -1930,7 +1930,7 @@
         ]
       },
       {
-        "cca2": "SK",
+        "country": "SK",
         "events": [
           {
             "type": "signature",
@@ -1943,7 +1943,7 @@
         ]
       },
       {
-        "cca2": "SI",
+        "country": "SI",
         "events": [
           {
             "type": "signature",
@@ -1956,7 +1956,7 @@
         ]
       },
       {
-        "cca2": "SB",
+        "country": "SB",
         "events": [
           {
             "type": "accession",
@@ -1965,7 +1965,7 @@
         ]
       },
       {
-        "cca2": "SO",
+        "country": "SO",
         "events": [
           {
             "type": "accession",
@@ -1974,7 +1974,7 @@
         ]
       },
       {
-        "cca2": "ZA",
+        "country": "ZA",
         "events": [
           {
             "type": "signature",
@@ -1987,7 +1987,7 @@
         ]
       },
       {
-        "cca2": "ES",
+        "country": "ES",
         "events": [
           {
             "type": "signature",
@@ -2000,7 +2000,7 @@
         ]
       },
       {
-        "cca2": "LK",
+        "country": "LK",
         "events": [
           {
             "type": "signature",
@@ -2013,7 +2013,7 @@
         ]
       },
       {
-        "cca2": "KN",
+        "country": "KN",
         "events": [
           {
             "type": "signature",
@@ -2026,7 +2026,7 @@
         ]
       },
       {
-        "cca2": "LC",
+        "country": "LC",
         "events": [
           {
             "type": "signature",
@@ -2039,7 +2039,7 @@
         ]
       },
       {
-        "cca2": "VC",
+        "country": "VC",
         "events": [
           {
             "type": "signature",
@@ -2052,7 +2052,7 @@
         ]
       },
       {
-        "cca2": "PS",
+        "country": "PS",
         "events": [
           {
             "type": "accession",
@@ -2061,7 +2061,7 @@
         ]
       },
       {
-        "cca2": "SD",
+        "country": "SD",
         "events": [
           {
             "type": "accession",
@@ -2070,7 +2070,7 @@
         ]
       },
       {
-        "cca2": "SR",
+        "country": "SR",
         "events": [
           {
             "type": "signature",
@@ -2083,7 +2083,7 @@
         ]
       },
       {
-        "cca2": "SE",
+        "country": "SE",
         "events": [
           {
             "type": "signature",
@@ -2096,7 +2096,7 @@
         ]
       },
       {
-        "cca2": "CH",
+        "country": "CH",
         "events": [
           {
             "type": "signature",
@@ -2109,7 +2109,7 @@
         ]
       },
       {
-        "cca2": "SY",
+        "country": "SY",
         "events": [
           {
             "type": "accession",
@@ -2118,7 +2118,7 @@
         ]
       },
       {
-        "cca2": "TJ",
+        "country": "TJ",
         "events": [
           {
             "type": "signature",
@@ -2131,7 +2131,7 @@
         ]
       },
       {
-        "cca2": "TH",
+        "country": "TH",
         "events": [
           {
             "type": "signature",
@@ -2144,7 +2144,7 @@
         ]
       },
       {
-        "cca2": "TL",
+        "country": "TL",
         "events": [
           {
             "type": "accession",
@@ -2153,7 +2153,7 @@
         ]
       },
       {
-        "cca2": "TG",
+        "country": "TG",
         "events": [
           {
             "type": "signature",
@@ -2166,7 +2166,7 @@
         ]
       },
       {
-        "cca2": "TO",
+        "country": "TO",
         "events": [
           {
             "type": "accession",
@@ -2175,7 +2175,7 @@
         ]
       },
       {
-        "cca2": "TT",
+        "country": "TT",
         "events": [
           {
             "type": "accession",
@@ -2184,7 +2184,7 @@
         ]
       },
       {
-        "cca2": "TN",
+        "country": "TN",
         "events": [
           {
             "type": "signature",
@@ -2197,7 +2197,7 @@
         ]
       },
       {
-        "cca2": "TR",
+        "country": "TR",
         "events": [
           {
             "type": "signature",
@@ -2210,7 +2210,7 @@
         ]
       },
       {
-        "cca2": "TM",
+        "country": "TM",
         "events": [
           {
             "type": "signature",
@@ -2223,7 +2223,7 @@
         ]
       },
       {
-        "cca2": "TV",
+        "country": "TV",
         "events": [
           {
             "type": "accession",
@@ -2232,7 +2232,7 @@
         ]
       },
       {
-        "cca2": "UG",
+        "country": "UG",
         "events": [
           {
             "type": "signature",
@@ -2245,7 +2245,7 @@
         ]
       },
       {
-        "cca2": "UA",
+        "country": "UA",
         "events": [
           {
             "type": "signature",
@@ -2258,7 +2258,7 @@
         ]
       },
       {
-        "cca2": "AE",
+        "country": "AE",
         "events": [
           {
             "type": "signature",
@@ -2271,7 +2271,7 @@
         ]
       },
       {
-        "cca2": "GB",
+        "country": "GB",
         "events": [
           {
             "type": "signature",
@@ -2284,7 +2284,7 @@
         ]
       },
       {
-        "cca2": "TZ",
+        "country": "TZ",
         "events": [
           {
             "type": "signature",
@@ -2297,7 +2297,7 @@
         ]
       },
       {
-        "cca2": "US",
+        "country": "US",
         "events": [
           {
             "type": "signature",
@@ -2310,7 +2310,7 @@
         ]
       },
       {
-        "cca2": "UY",
+        "country": "UY",
         "events": [
           {
             "type": "signature",
@@ -2323,7 +2323,7 @@
         ]
       },
       {
-        "cca2": "UZ",
+        "country": "UZ",
         "events": [
           {
             "type": "signature",
@@ -2336,7 +2336,7 @@
         ]
       },
       {
-        "cca2": "VU",
+        "country": "VU",
         "events": [
           {
             "type": "accession",
@@ -2345,7 +2345,7 @@
         ]
       },
       {
-        "cca2": "VE",
+        "country": "VE",
         "events": [
           {
             "type": "signature",
@@ -2358,7 +2358,7 @@
         ]
       },
       {
-        "cca2": "VN",
+        "country": "VN",
         "events": [
           {
             "type": "signature",
@@ -2371,7 +2371,7 @@
         ]
       },
       {
-        "cca2": "YE",
+        "country": "YE",
         "events": [
           {
             "type": "signature",
@@ -2384,7 +2384,7 @@
         ]
       },
       {
-        "cca2": "ZM",
+        "country": "ZM",
         "events": [
           {
             "type": "signature",
@@ -2397,7 +2397,7 @@
         ]
       },
       {
-        "cca2": "ZW",
+        "country": "ZW",
         "events": [
           {
             "type": "signature",
@@ -2416,7 +2416,7 @@
     "title": "Treaty on the Prohibition of Nuclear Weapons ",
     "participants": [
       {
-        "cca2": "DZ",
+        "country": "DZ",
         "events": [
           {
             "type": "signature",
@@ -2425,7 +2425,7 @@
         ]
       },
       {
-        "cca2": "AO",
+        "country": "AO",
         "events": [
           {
             "type": "signature",
@@ -2434,7 +2434,7 @@
         ]
       },
       {
-        "cca2": "AG",
+        "country": "AG",
         "events": [
           {
             "type": "signature",
@@ -2447,7 +2447,7 @@
         ]
       },
       {
-        "cca2": "AT",
+        "country": "AT",
         "events": [
           {
             "type": "signature",
@@ -2460,7 +2460,7 @@
         ]
       },
       {
-        "cca2": "BD",
+        "country": "BD",
         "events": [
           {
             "type": "signature",
@@ -2473,7 +2473,7 @@
         ]
       },
       {
-        "cca2": "BB",
+        "country": "BB",
         "events": [
           {
             "type": "signature",
@@ -2482,7 +2482,7 @@
         ]
       },
       {
-        "cca2": "BZ",
+        "country": "BZ",
         "events": [
           {
             "type": "signature",
@@ -2495,7 +2495,7 @@
         ]
       },
       {
-        "cca2": "BJ",
+        "country": "BJ",
         "events": [
           {
             "type": "signature",
@@ -2508,7 +2508,7 @@
         ]
       },
       {
-        "cca2": "BO",
+        "country": "BO",
         "events": [
           {
             "type": "signature",
@@ -2521,7 +2521,7 @@
         ]
       },
       {
-        "cca2": "BW",
+        "country": "BW",
         "events": [
           {
             "type": "signature",
@@ -2534,7 +2534,7 @@
         ]
       },
       {
-        "cca2": "BR",
+        "country": "BR",
         "events": [
           {
             "type": "signature",
@@ -2543,7 +2543,7 @@
         ]
       },
       {
-        "cca2": "BN",
+        "country": "BN",
         "events": [
           {
             "type": "signature",
@@ -2552,7 +2552,7 @@
         ]
       },
       {
-        "cca2": "BF",
+        "country": "BF",
         "events": [
           {
             "type": "signature",
@@ -2561,7 +2561,7 @@
         ]
       },
       {
-        "cca2": "CV",
+        "country": "CV",
         "events": [
           {
             "type": "signature",
@@ -2574,7 +2574,7 @@
         ]
       },
       {
-        "cca2": "KH",
+        "country": "KH",
         "events": [
           {
             "type": "signature",
@@ -2587,7 +2587,7 @@
         ]
       },
       {
-        "cca2": "CF",
+        "country": "CF",
         "events": [
           {
             "type": "signature",
@@ -2596,7 +2596,7 @@
         ]
       },
       {
-        "cca2": "CL",
+        "country": "CL",
         "events": [
           {
             "type": "signature",
@@ -2609,7 +2609,7 @@
         ]
       },
       {
-        "cca2": "CO",
+        "country": "CO",
         "events": [
           {
             "type": "signature",
@@ -2618,7 +2618,7 @@
         ]
       },
       {
-        "cca2": "KM",
+        "country": "KM",
         "events": [
           {
             "type": "signature",
@@ -2631,7 +2631,7 @@
         ]
       },
       {
-        "cca2": "CG",
+        "country": "CG",
         "events": [
           {
             "type": "signature",
@@ -2644,7 +2644,7 @@
         ]
       },
       {
-        "cca2": "CK",
+        "country": "CK",
         "events": [
           {
             "type": "accession",
@@ -2653,7 +2653,7 @@
         ]
       },
       {
-        "cca2": "CR",
+        "country": "CR",
         "events": [
           {
             "type": "signature",
@@ -2666,7 +2666,7 @@
         ]
       },
       {
-        "cca2": "CI",
+        "country": "CI",
         "events": [
           {
             "type": "signature",
@@ -2679,7 +2679,7 @@
         ]
       },
       {
-        "cca2": "CU",
+        "country": "CU",
         "events": [
           {
             "type": "signature",
@@ -2692,7 +2692,7 @@
         ]
       },
       {
-        "cca2": "CD",
+        "country": "CD",
         "events": [
           {
             "type": "signature",
@@ -2705,7 +2705,7 @@
         ]
       },
       {
-        "cca2": "DJ",
+        "country": "DJ",
         "events": [
           {
             "type": "signature",
@@ -2714,7 +2714,7 @@
         ]
       },
       {
-        "cca2": "DM",
+        "country": "DM",
         "events": [
           {
             "type": "signature",
@@ -2727,7 +2727,7 @@
         ]
       },
       {
-        "cca2": "DO",
+        "country": "DO",
         "events": [
           {
             "type": "signature",
@@ -2740,7 +2740,7 @@
         ]
       },
       {
-        "cca2": "EC",
+        "country": "EC",
         "events": [
           {
             "type": "signature",
@@ -2753,7 +2753,7 @@
         ]
       },
       {
-        "cca2": "SV",
+        "country": "SV",
         "events": [
           {
             "type": "signature",
@@ -2766,7 +2766,7 @@
         ]
       },
       {
-        "cca2": "GQ",
+        "country": "GQ",
         "events": [
           {
             "type": "signature",
@@ -2775,7 +2775,7 @@
         ]
       },
       {
-        "cca2": "FJ",
+        "country": "FJ",
         "events": [
           {
             "type": "signature",
@@ -2788,7 +2788,7 @@
         ]
       },
       {
-        "cca2": "GM",
+        "country": "GM",
         "events": [
           {
             "type": "signature",
@@ -2801,7 +2801,7 @@
         ]
       },
       {
-        "cca2": "GH",
+        "country": "GH",
         "events": [
           {
             "type": "signature",
@@ -2810,7 +2810,7 @@
         ]
       },
       {
-        "cca2": "GD",
+        "country": "GD",
         "events": [
           {
             "type": "signature",
@@ -2823,7 +2823,7 @@
         ]
       },
       {
-        "cca2": "GT",
+        "country": "GT",
         "events": [
           {
             "type": "signature",
@@ -2836,7 +2836,7 @@
         ]
       },
       {
-        "cca2": "GW",
+        "country": "GW",
         "events": [
           {
             "type": "signature",
@@ -2849,7 +2849,7 @@
         ]
       },
       {
-        "cca2": "GY",
+        "country": "GY",
         "events": [
           {
             "type": "signature",
@@ -2862,7 +2862,7 @@
         ]
       },
       {
-        "cca2": "HT",
+        "country": "HT",
         "events": [
           {
             "type": "signature",
@@ -2871,7 +2871,7 @@
         ]
       },
       {
-        "cca2": "VA",
+        "country": "VA",
         "events": [
           {
             "type": "signature",
@@ -2884,7 +2884,7 @@
         ]
       },
       {
-        "cca2": "HN",
+        "country": "HN",
         "events": [
           {
             "type": "signature",
@@ -2897,7 +2897,7 @@
         ]
       },
       {
-        "cca2": "ID",
+        "country": "ID",
         "events": [
           {
             "type": "signature",
@@ -2906,7 +2906,7 @@
         ]
       },
       {
-        "cca2": "IE",
+        "country": "IE",
         "events": [
           {
             "type": "signature",
@@ -2919,7 +2919,7 @@
         ]
       },
       {
-        "cca2": "JM",
+        "country": "JM",
         "events": [
           {
             "type": "signature",
@@ -2932,7 +2932,7 @@
         ]
       },
       {
-        "cca2": "KZ",
+        "country": "KZ",
         "events": [
           {
             "type": "signature",
@@ -2945,7 +2945,7 @@
         ]
       },
       {
-        "cca2": "KI",
+        "country": "KI",
         "events": [
           {
             "type": "signature",
@@ -2958,7 +2958,7 @@
         ]
       },
       {
-        "cca2": "LA",
+        "country": "LA",
         "events": [
           {
             "type": "signature",
@@ -2971,7 +2971,7 @@
         ]
       },
       {
-        "cca2": "LS",
+        "country": "LS",
         "events": [
           {
             "type": "signature",
@@ -2984,7 +2984,7 @@
         ]
       },
       {
-        "cca2": "LY",
+        "country": "LY",
         "events": [
           {
             "type": "signature",
@@ -2993,7 +2993,7 @@
         ]
       },
       {
-        "cca2": "LI",
+        "country": "LI",
         "events": [
           {
             "type": "signature",
@@ -3002,7 +3002,7 @@
         ]
       },
       {
-        "cca2": "MG",
+        "country": "MG",
         "events": [
           {
             "type": "signature",
@@ -3011,7 +3011,7 @@
         ]
       },
       {
-        "cca2": "MW",
+        "country": "MW",
         "events": [
           {
             "type": "signature",
@@ -3024,7 +3024,7 @@
         ]
       },
       {
-        "cca2": "MY",
+        "country": "MY",
         "events": [
           {
             "type": "signature",
@@ -3037,7 +3037,7 @@
         ]
       },
       {
-        "cca2": "MV",
+        "country": "MV",
         "events": [
           {
             "type": "signature",
@@ -3050,7 +3050,7 @@
         ]
       },
       {
-        "cca2": "MT",
+        "country": "MT",
         "events": [
           {
             "type": "signature",
@@ -3063,7 +3063,7 @@
         ]
       },
       {
-        "cca2": "MX",
+        "country": "MX",
         "events": [
           {
             "type": "signature",
@@ -3076,7 +3076,7 @@
         ]
       },
       {
-        "cca2": "MN",
+        "country": "MN",
         "events": [
           {
             "type": "accession",
@@ -3085,7 +3085,7 @@
         ]
       },
       {
-        "cca2": "MZ",
+        "country": "MZ",
         "events": [
           {
             "type": "signature",
@@ -3094,7 +3094,7 @@
         ]
       },
       {
-        "cca2": "MM",
+        "country": "MM",
         "events": [
           {
             "type": "signature",
@@ -3103,7 +3103,7 @@
         ]
       },
       {
-        "cca2": "NA",
+        "country": "NA",
         "events": [
           {
             "type": "signature",
@@ -3116,7 +3116,7 @@
         ]
       },
       {
-        "cca2": "NR",
+        "country": "NR",
         "events": [
           {
             "type": "signature",
@@ -3129,7 +3129,7 @@
         ]
       },
       {
-        "cca2": "NP",
+        "country": "NP",
         "events": [
           {
             "type": "signature",
@@ -3138,7 +3138,7 @@
         ]
       },
       {
-        "cca2": "NZ",
+        "country": "NZ",
         "events": [
           {
             "type": "signature",
@@ -3151,7 +3151,7 @@
         ]
       },
       {
-        "cca2": "NI",
+        "country": "NI",
         "events": [
           {
             "type": "signature",
@@ -3164,7 +3164,7 @@
         ]
       },
       {
-        "cca2": "NE",
+        "country": "NE",
         "events": [
           {
             "type": "signature",
@@ -3173,7 +3173,7 @@
         ]
       },
       {
-        "cca2": "NG",
+        "country": "NG",
         "events": [
           {
             "type": "signature",
@@ -3186,7 +3186,7 @@
         ]
       },
       {
-        "cca2": "NU",
+        "country": "NU",
         "events": [
           {
             "type": "accession",
@@ -3195,7 +3195,7 @@
         ]
       },
       {
-        "cca2": "PW",
+        "country": "PW",
         "events": [
           {
             "type": "signature",
@@ -3208,7 +3208,7 @@
         ]
       },
       {
-        "cca2": "PA",
+        "country": "PA",
         "events": [
           {
             "type": "signature",
@@ -3221,7 +3221,7 @@
         ]
       },
       {
-        "cca2": "PY",
+        "country": "PY",
         "events": [
           {
             "type": "signature",
@@ -3234,7 +3234,7 @@
         ]
       },
       {
-        "cca2": "PE",
+        "country": "PE",
         "events": [
           {
             "type": "signature",
@@ -3247,7 +3247,7 @@
         ]
       },
       {
-        "cca2": "PH",
+        "country": "PH",
         "events": [
           {
             "type": "signature",
@@ -3260,7 +3260,7 @@
         ]
       },
       {
-        "cca2": "WS",
+        "country": "WS",
         "events": [
           {
             "type": "signature",
@@ -3273,7 +3273,7 @@
         ]
       },
       {
-        "cca2": "SM",
+        "country": "SM",
         "events": [
           {
             "type": "signature",
@@ -3286,7 +3286,7 @@
         ]
       },
       {
-        "cca2": "ST",
+        "country": "ST",
         "events": [
           {
             "type": "signature",
@@ -3295,7 +3295,7 @@
         ]
       },
       {
-        "cca2": "SC",
+        "country": "SC",
         "events": [
           {
             "type": "signature",
@@ -3308,7 +3308,7 @@
         ]
       },
       {
-        "cca2": "SL",
+        "country": "SL",
         "events": [
           {
             "type": "signature",
@@ -3317,7 +3317,7 @@
         ]
       },
       {
-        "cca2": "ZA",
+        "country": "ZA",
         "events": [
           {
             "type": "signature",
@@ -3330,7 +3330,7 @@
         ]
       },
       {
-        "cca2": "KN",
+        "country": "KN",
         "events": [
           {
             "type": "signature",
@@ -3343,7 +3343,7 @@
         ]
       },
       {
-        "cca2": "LC",
+        "country": "LC",
         "events": [
           {
             "type": "signature",
@@ -3356,7 +3356,7 @@
         ]
       },
       {
-        "cca2": "VC",
+        "country": "VC",
         "events": [
           {
             "type": "signature",
@@ -3369,7 +3369,7 @@
         ]
       },
       {
-        "cca2": "PS",
+        "country": "PS",
         "events": [
           {
             "type": "signature",
@@ -3382,7 +3382,7 @@
         ]
       },
       {
-        "cca2": "SD",
+        "country": "SD",
         "events": [
           {
             "type": "signature",
@@ -3391,7 +3391,7 @@
         ]
       },
       {
-        "cca2": "TH",
+        "country": "TH",
         "events": [
           {
             "type": "signature",
@@ -3404,7 +3404,7 @@
         ]
       },
       {
-        "cca2": "TL",
+        "country": "TL",
         "events": [
           {
             "type": "signature",
@@ -3417,7 +3417,7 @@
         ]
       },
       {
-        "cca2": "TG",
+        "country": "TG",
         "events": [
           {
             "type": "signature",
@@ -3426,7 +3426,7 @@
         ]
       },
       {
-        "cca2": "TT",
+        "country": "TT",
         "events": [
           {
             "type": "signature",
@@ -3439,7 +3439,7 @@
         ]
       },
       {
-        "cca2": "TV",
+        "country": "TV",
         "events": [
           {
             "type": "signature",
@@ -3452,7 +3452,7 @@
         ]
       },
       {
-        "cca2": "TZ",
+        "country": "TZ",
         "events": [
           {
             "type": "signature",
@@ -3461,7 +3461,7 @@
         ]
       },
       {
-        "cca2": "UY",
+        "country": "UY",
         "events": [
           {
             "type": "signature",
@@ -3474,7 +3474,7 @@
         ]
       },
       {
-        "cca2": "VU",
+        "country": "VU",
         "events": [
           {
             "type": "signature",
@@ -3487,7 +3487,7 @@
         ]
       },
       {
-        "cca2": "VE",
+        "country": "VE",
         "events": [
           {
             "type": "signature",
@@ -3500,7 +3500,7 @@
         ]
       },
       {
-        "cca2": "VN",
+        "country": "VN",
         "events": [
           {
             "type": "signature",
@@ -3513,7 +3513,7 @@
         ]
       },
       {
-        "cca2": "ZM",
+        "country": "ZM",
         "events": [
           {
             "type": "signature",
@@ -3522,7 +3522,7 @@
         ]
       },
       {
-        "cca2": "ZW",
+        "country": "ZW",
         "events": [
           {
             "type": "signature",
@@ -3537,7 +3537,7 @@
     "title": "Convention on Certain Conventional Weapons",
     "participants": [
       {
-        "cca2": "AF",
+        "country": "AF",
         "events": [
           {
             "type": "signature",
@@ -3550,7 +3550,7 @@
         ]
       },
       {
-        "cca2": "AL",
+        "country": "AL",
         "events": [
           {
             "type": "accession",
@@ -3559,7 +3559,7 @@
         ]
       },
       {
-        "cca2": "DZ",
+        "country": "DZ",
         "events": [
           {
             "type": "accession",
@@ -3568,7 +3568,7 @@
         ]
       },
       {
-        "cca2": "AG",
+        "country": "AG",
         "events": [
           {
             "type": "accession",
@@ -3577,7 +3577,7 @@
         ]
       },
       {
-        "cca2": "AR",
+        "country": "AR",
         "events": [
           {
             "type": "signature",
@@ -3590,7 +3590,7 @@
         ]
       },
       {
-        "cca2": "AU",
+        "country": "AU",
         "events": [
           {
             "type": "signature",
@@ -3603,7 +3603,7 @@
         ]
       },
       {
-        "cca2": "AT",
+        "country": "AT",
         "events": [
           {
             "type": "signature",
@@ -3616,7 +3616,7 @@
         ]
       },
       {
-        "cca2": "BH",
+        "country": "BH",
         "events": [
           {
             "type": "accession",
@@ -3625,7 +3625,7 @@
         ]
       },
       {
-        "cca2": "BD",
+        "country": "BD",
         "events": [
           {
             "type": "accession",
@@ -3634,7 +3634,7 @@
         ]
       },
       {
-        "cca2": "BY",
+        "country": "BY",
         "events": [
           {
             "type": "signature",
@@ -3647,7 +3647,7 @@
         ]
       },
       {
-        "cca2": "BE",
+        "country": "BE",
         "events": [
           {
             "type": "signature",
@@ -3660,7 +3660,7 @@
         ]
       },
       {
-        "cca2": "BJ",
+        "country": "BJ",
         "events": [
           {
             "type": "accession",
@@ -3669,7 +3669,7 @@
         ]
       },
       {
-        "cca2": "BO",
+        "country": "BO",
         "events": [
           {
             "type": "accession",
@@ -3678,7 +3678,7 @@
         ]
       },
       {
-        "cca2": "BA",
+        "country": "BA",
         "events": [
           {
             "type": "succession",
@@ -3687,7 +3687,7 @@
         ]
       },
       {
-        "cca2": "BR",
+        "country": "BR",
         "events": [
           {
             "type": "accession",
@@ -3696,7 +3696,7 @@
         ]
       },
       {
-        "cca2": "BG",
+        "country": "BG",
         "events": [
           {
             "type": "signature",
@@ -3709,7 +3709,7 @@
         ]
       },
       {
-        "cca2": "BF",
+        "country": "BF",
         "events": [
           {
             "type": "accession",
@@ -3718,7 +3718,7 @@
         ]
       },
       {
-        "cca2": "BI",
+        "country": "BI",
         "events": [
           {
             "type": "accession",
@@ -3727,7 +3727,7 @@
         ]
       },
       {
-        "cca2": "CV",
+        "country": "CV",
         "events": [
           {
             "type": "accession",
@@ -3736,7 +3736,7 @@
         ]
       },
       {
-        "cca2": "KH",
+        "country": "KH",
         "events": [
           {
             "type": "accession",
@@ -3745,7 +3745,7 @@
         ]
       },
       {
-        "cca2": "CM",
+        "country": "CM",
         "events": [
           {
             "type": "accession",
@@ -3754,7 +3754,7 @@
         ]
       },
       {
-        "cca2": "CA",
+        "country": "CA",
         "events": [
           {
             "type": "signature",
@@ -3767,7 +3767,7 @@
         ]
       },
       {
-        "cca2": "CL",
+        "country": "CL",
         "events": [
           {
             "type": "acceptance",
@@ -3776,7 +3776,7 @@
         ]
       },
       {
-        "cca2": "CN",
+        "country": "CN",
         "events": [
           {
             "type": "signature",
@@ -3789,7 +3789,7 @@
         ]
       },
       {
-        "cca2": "CO",
+        "country": "CO",
         "events": [
           {
             "type": "accession",
@@ -3798,7 +3798,7 @@
         ]
       },
       {
-        "cca2": "CR",
+        "country": "CR",
         "events": [
           {
             "type": "accession",
@@ -3807,7 +3807,7 @@
         ]
       },
       {
-        "cca2": "CI",
+        "country": "CI",
         "events": [
           {
             "type": "acceptance",
@@ -3816,7 +3816,7 @@
         ]
       },
       {
-        "cca2": "HR",
+        "country": "HR",
         "events": [
           {
             "type": "succession",
@@ -3825,7 +3825,7 @@
         ]
       },
       {
-        "cca2": "CU",
+        "country": "CU",
         "events": [
           {
             "type": "signature",
@@ -3838,7 +3838,7 @@
         ]
       },
       {
-        "cca2": "CY",
+        "country": "CY",
         "events": [
           {
             "type": "accession",
@@ -3847,7 +3847,7 @@
         ]
       },
       {
-        "cca2": "CZ",
+        "country": "CZ",
         "events": [
           {
             "type": "succession",
@@ -3856,7 +3856,7 @@
         ]
       },
       {
-        "cca2": "DK",
+        "country": "DK",
         "events": [
           {
             "type": "signature",
@@ -3869,7 +3869,7 @@
         ]
       },
       {
-        "cca2": "DJ",
+        "country": "DJ",
         "events": [
           {
             "type": "accession",
@@ -3878,7 +3878,7 @@
         ]
       },
       {
-        "cca2": "DO",
+        "country": "DO",
         "events": [
           {
             "type": "accession",
@@ -3887,7 +3887,7 @@
         ]
       },
       {
-        "cca2": "EC",
+        "country": "EC",
         "events": [
           {
             "type": "signature",
@@ -3900,7 +3900,7 @@
         ]
       },
       {
-        "cca2": "EG",
+        "country": "EG",
         "events": [
           {
             "type": "signature",
@@ -3909,7 +3909,7 @@
         ]
       },
       {
-        "cca2": "SV",
+        "country": "SV",
         "events": [
           {
             "type": "accession",
@@ -3918,7 +3918,7 @@
         ]
       },
       {
-        "cca2": "EE",
+        "country": "EE",
         "events": [
           {
             "type": "accession",
@@ -3927,7 +3927,7 @@
         ]
       },
       {
-        "cca2": "FI",
+        "country": "FI",
         "events": [
           {
             "type": "signature",
@@ -3940,7 +3940,7 @@
         ]
       },
       {
-        "cca2": "FR",
+        "country": "FR",
         "events": [
           {
             "type": "signature",
@@ -3953,7 +3953,7 @@
         ]
       },
       {
-        "cca2": "GA",
+        "country": "GA",
         "events": [
           {
             "type": "accession",
@@ -3962,7 +3962,7 @@
         ]
       },
       {
-        "cca2": "GE",
+        "country": "GE",
         "events": [
           {
             "type": "accession",
@@ -3971,7 +3971,7 @@
         ]
       },
       {
-        "cca2": "DE",
+        "country": "DE",
         "events": [
           {
             "type": "signature",
@@ -3984,7 +3984,7 @@
         ]
       },
       {
-        "cca2": "GR",
+        "country": "GR",
         "events": [
           {
             "type": "signature",
@@ -3997,7 +3997,7 @@
         ]
       },
       {
-        "cca2": "GD",
+        "country": "GD",
         "events": [
           {
             "type": "accession",
@@ -4006,7 +4006,7 @@
         ]
       },
       {
-        "cca2": "GT",
+        "country": "GT",
         "events": [
           {
             "type": "accession",
@@ -4015,7 +4015,7 @@
         ]
       },
       {
-        "cca2": "GW",
+        "country": "GW",
         "events": [
           {
             "type": "accession",
@@ -4024,7 +4024,7 @@
         ]
       },
       {
-        "cca2": "VA",
+        "country": "VA",
         "events": [
           {
             "type": "accession",
@@ -4033,7 +4033,7 @@
         ]
       },
       {
-        "cca2": "HN",
+        "country": "HN",
         "events": [
           {
             "type": "accession",
@@ -4042,7 +4042,7 @@
         ]
       },
       {
-        "cca2": "HU",
+        "country": "HU",
         "events": [
           {
             "type": "signature",
@@ -4055,7 +4055,7 @@
         ]
       },
       {
-        "cca2": "IS",
+        "country": "IS",
         "events": [
           {
             "type": "signature",
@@ -4068,7 +4068,7 @@
         ]
       },
       {
-        "cca2": "IN",
+        "country": "IN",
         "events": [
           {
             "type": "signature",
@@ -4081,7 +4081,7 @@
         ]
       },
       {
-        "cca2": "IQ",
+        "country": "IQ",
         "events": [
           {
             "type": "accession",
@@ -4090,7 +4090,7 @@
         ]
       },
       {
-        "cca2": "IE",
+        "country": "IE",
         "events": [
           {
             "type": "signature",
@@ -4103,7 +4103,7 @@
         ]
       },
       {
-        "cca2": "IL",
+        "country": "IL",
         "events": [
           {
             "type": "accession",
@@ -4112,7 +4112,7 @@
         ]
       },
       {
-        "cca2": "IT",
+        "country": "IT",
         "events": [
           {
             "type": "signature",
@@ -4125,7 +4125,7 @@
         ]
       },
       {
-        "cca2": "JM",
+        "country": "JM",
         "events": [
           {
             "type": "accession",
@@ -4134,7 +4134,7 @@
         ]
       },
       {
-        "cca2": "JP",
+        "country": "JP",
         "events": [
           {
             "type": "signature",
@@ -4147,7 +4147,7 @@
         ]
       },
       {
-        "cca2": "JO",
+        "country": "JO",
         "events": [
           {
             "type": "accession",
@@ -4156,7 +4156,7 @@
         ]
       },
       {
-        "cca2": "KZ",
+        "country": "KZ",
         "events": [
           {
             "type": "accession",
@@ -4165,7 +4165,7 @@
         ]
       },
       {
-        "cca2": "KW",
+        "country": "KW",
         "events": [
           {
             "type": "accession",
@@ -4174,7 +4174,7 @@
         ]
       },
       {
-        "cca2": "LA",
+        "country": "LA",
         "events": [
           {
             "type": "accession",
@@ -4183,7 +4183,7 @@
         ]
       },
       {
-        "cca2": "LV",
+        "country": "LV",
         "events": [
           {
             "type": "accession",
@@ -4192,7 +4192,7 @@
         ]
       },
       {
-        "cca2": "LB",
+        "country": "LB",
         "events": [
           {
             "type": "accession",
@@ -4201,7 +4201,7 @@
         ]
       },
       {
-        "cca2": "LS",
+        "country": "LS",
         "events": [
           {
             "type": "accession",
@@ -4210,7 +4210,7 @@
         ]
       },
       {
-        "cca2": "LR",
+        "country": "LR",
         "events": [
           {
             "type": "accession",
@@ -4219,7 +4219,7 @@
         ]
       },
       {
-        "cca2": "LI",
+        "country": "LI",
         "events": [
           {
             "type": "signature",
@@ -4232,7 +4232,7 @@
         ]
       },
       {
-        "cca2": "LT",
+        "country": "LT",
         "events": [
           {
             "type": "accession",
@@ -4241,7 +4241,7 @@
         ]
       },
       {
-        "cca2": "LU",
+        "country": "LU",
         "events": [
           {
             "type": "signature",
@@ -4254,7 +4254,7 @@
         ]
       },
       {
-        "cca2": "MG",
+        "country": "MG",
         "events": [
           {
             "type": "accession",
@@ -4263,7 +4263,7 @@
         ]
       },
       {
-        "cca2": "MW",
+        "country": "MW",
         "events": [
           {
             "type": "accession",
@@ -4272,7 +4272,7 @@
         ]
       },
       {
-        "cca2": "MV",
+        "country": "MV",
         "events": [
           {
             "type": "accession",
@@ -4281,7 +4281,7 @@
         ]
       },
       {
-        "cca2": "ML",
+        "country": "ML",
         "events": [
           {
             "type": "accession",
@@ -4290,7 +4290,7 @@
         ]
       },
       {
-        "cca2": "MT",
+        "country": "MT",
         "events": [
           {
             "type": "accession",
@@ -4299,7 +4299,7 @@
         ]
       },
       {
-        "cca2": "MU",
+        "country": "MU",
         "events": [
           {
             "type": "accession",
@@ -4308,7 +4308,7 @@
         ]
       },
       {
-        "cca2": "MX",
+        "country": "MX",
         "events": [
           {
             "type": "signature",
@@ -4321,7 +4321,7 @@
         ]
       },
       {
-        "cca2": "MC",
+        "country": "MC",
         "events": [
           {
             "type": "accession",
@@ -4330,7 +4330,7 @@
         ]
       },
       {
-        "cca2": "MN",
+        "country": "MN",
         "events": [
           {
             "type": "signature",
@@ -4343,7 +4343,7 @@
         ]
       },
       {
-        "cca2": "ME",
+        "country": "ME",
         "events": [
           {
             "type": "succession",
@@ -4352,7 +4352,7 @@
         ]
       },
       {
-        "cca2": "MA",
+        "country": "MA",
         "events": [
           {
             "type": "signature",
@@ -4365,7 +4365,7 @@
         ]
       },
       {
-        "cca2": "NR",
+        "country": "NR",
         "events": [
           {
             "type": "accession",
@@ -4374,7 +4374,7 @@
         ]
       },
       {
-        "cca2": "NL",
+        "country": "NL",
         "events": [
           {
             "type": "signature",
@@ -4387,7 +4387,7 @@
         ]
       },
       {
-        "cca2": "NZ",
+        "country": "NZ",
         "events": [
           {
             "type": "signature",
@@ -4400,7 +4400,7 @@
         ]
       },
       {
-        "cca2": "NI",
+        "country": "NI",
         "events": [
           {
             "type": "signature",
@@ -4413,7 +4413,7 @@
         ]
       },
       {
-        "cca2": "NE",
+        "country": "NE",
         "events": [
           {
             "type": "accession",
@@ -4422,7 +4422,7 @@
         ]
       },
       {
-        "cca2": "NG",
+        "country": "NG",
         "events": [
           {
             "type": "signature",
@@ -4431,7 +4431,7 @@
         ]
       },
       {
-        "cca2": "MK",
+        "country": "MK",
         "events": [
           {
             "type": "succession",
@@ -4440,7 +4440,7 @@
         ]
       },
       {
-        "cca2": "NO",
+        "country": "NO",
         "events": [
           {
             "type": "signature",
@@ -4453,7 +4453,7 @@
         ]
       },
       {
-        "cca2": "PK",
+        "country": "PK",
         "events": [
           {
             "type": "signature",
@@ -4466,7 +4466,7 @@
         ]
       },
       {
-        "cca2": "PA",
+        "country": "PA",
         "events": [
           {
             "type": "accession",
@@ -4475,7 +4475,7 @@
         ]
       },
       {
-        "cca2": "PY",
+        "country": "PY",
         "events": [
           {
             "type": "accession",
@@ -4484,7 +4484,7 @@
         ]
       },
       {
-        "cca2": "PE",
+        "country": "PE",
         "events": [
           {
             "type": "accession",
@@ -4493,7 +4493,7 @@
         ]
       },
       {
-        "cca2": "PH",
+        "country": "PH",
         "events": [
           {
             "type": "signature",
@@ -4506,7 +4506,7 @@
         ]
       },
       {
-        "cca2": "PL",
+        "country": "PL",
         "events": [
           {
             "type": "signature",
@@ -4519,7 +4519,7 @@
         ]
       },
       {
-        "cca2": "PT",
+        "country": "PT",
         "events": [
           {
             "type": "signature",
@@ -4532,7 +4532,7 @@
         ]
       },
       {
-        "cca2": "QA",
+        "country": "QA",
         "events": [
           {
             "type": "accession",
@@ -4541,7 +4541,7 @@
         ]
       },
       {
-        "cca2": "KR",
+        "country": "KR",
         "events": [
           {
             "type": "accession",
@@ -4550,7 +4550,7 @@
         ]
       },
       {
-        "cca2": "MD",
+        "country": "MD",
         "events": [
           {
             "type": "accession",
@@ -4559,7 +4559,7 @@
         ]
       },
       {
-        "cca2": "RO",
+        "country": "RO",
         "events": [
           {
             "type": "signature",
@@ -4572,7 +4572,7 @@
         ]
       },
       {
-        "cca2": "RU",
+        "country": "RU",
         "events": [
           {
             "type": "signature",
@@ -4585,7 +4585,7 @@
         ]
       },
       {
-        "cca2": "SA",
+        "country": "SA",
         "events": [
           {
             "type": "accession",
@@ -4594,7 +4594,7 @@
         ]
       },
       {
-        "cca2": "SN",
+        "country": "SN",
         "events": [
           {
             "type": "accession",
@@ -4603,7 +4603,7 @@
         ]
       },
       {
-        "cca2": "RS",
+        "country": "RS",
         "events": [
           {
             "type": "succession",
@@ -4612,7 +4612,7 @@
         ]
       },
       {
-        "cca2": "SC",
+        "country": "SC",
         "events": [
           {
             "type": "accession",
@@ -4621,7 +4621,7 @@
         ]
       },
       {
-        "cca2": "SL",
+        "country": "SL",
         "events": [
           {
             "type": "signature",
@@ -4634,7 +4634,7 @@
         ]
       },
       {
-        "cca2": "SK",
+        "country": "SK",
         "events": [
           {
             "type": "succession",
@@ -4643,7 +4643,7 @@
         ]
       },
       {
-        "cca2": "SI",
+        "country": "SI",
         "events": [
           {
             "type": "succession",
@@ -4652,7 +4652,7 @@
         ]
       },
       {
-        "cca2": "ZA",
+        "country": "ZA",
         "events": [
           {
             "type": "accession",
@@ -4661,7 +4661,7 @@
         ]
       },
       {
-        "cca2": "ES",
+        "country": "ES",
         "events": [
           {
             "type": "signature",
@@ -4674,7 +4674,7 @@
         ]
       },
       {
-        "cca2": "LK",
+        "country": "LK",
         "events": [
           {
             "type": "accession",
@@ -4683,7 +4683,7 @@
         ]
       },
       {
-        "cca2": "VC",
+        "country": "VC",
         "events": [
           {
             "type": "accession",
@@ -4692,7 +4692,7 @@
         ]
       },
       {
-        "cca2": "PS",
+        "country": "PS",
         "events": [
           {
             "type": "accession",
@@ -4701,7 +4701,7 @@
         ]
       },
       {
-        "cca2": "SD",
+        "country": "SD",
         "events": [
           {
             "type": "signature",
@@ -4710,7 +4710,7 @@
         ]
       },
       {
-        "cca2": "SE",
+        "country": "SE",
         "events": [
           {
             "type": "signature",
@@ -4723,7 +4723,7 @@
         ]
       },
       {
-        "cca2": "CH",
+        "country": "CH",
         "events": [
           {
             "type": "signature",
@@ -4736,7 +4736,7 @@
         ]
       },
       {
-        "cca2": "TJ",
+        "country": "TJ",
         "events": [
           {
             "type": "accession",
@@ -4745,7 +4745,7 @@
         ]
       },
       {
-        "cca2": "TG",
+        "country": "TG",
         "events": [
           {
             "type": "signature",
@@ -4758,7 +4758,7 @@
         ]
       },
       {
-        "cca2": "TN",
+        "country": "TN",
         "events": [
           {
             "type": "accession",
@@ -4767,7 +4767,7 @@
         ]
       },
       {
-        "cca2": "TR",
+        "country": "TR",
         "events": [
           {
             "type": "signature",
@@ -4780,7 +4780,7 @@
         ]
       },
       {
-        "cca2": "TM",
+        "country": "TM",
         "events": [
           {
             "type": "accession",
@@ -4789,7 +4789,7 @@
         ]
       },
       {
-        "cca2": "UG",
+        "country": "UG",
         "events": [
           {
             "type": "accession",
@@ -4798,7 +4798,7 @@
         ]
       },
       {
-        "cca2": "UA",
+        "country": "UA",
         "events": [
           {
             "type": "signature",
@@ -4811,7 +4811,7 @@
         ]
       },
       {
-        "cca2": "AE",
+        "country": "AE",
         "events": [
           {
             "type": "accession",
@@ -4820,7 +4820,7 @@
         ]
       },
       {
-        "cca2": "GB",
+        "country": "GB",
         "events": [
           {
             "type": "signature",
@@ -4833,7 +4833,7 @@
         ]
       },
       {
-        "cca2": "US",
+        "country": "US",
         "events": [
           {
             "type": "signature",
@@ -4846,7 +4846,7 @@
         ]
       },
       {
-        "cca2": "UY",
+        "country": "UY",
         "events": [
           {
             "type": "accession",
@@ -4855,7 +4855,7 @@
         ]
       },
       {
-        "cca2": "UZ",
+        "country": "UZ",
         "events": [
           {
             "type": "accession",
@@ -4864,7 +4864,7 @@
         ]
       },
       {
-        "cca2": "VE",
+        "country": "VE",
         "events": [
           {
             "type": "accession",
@@ -4873,7 +4873,7 @@
         ]
       },
       {
-        "cca2": "VN",
+        "country": "VN",
         "events": [
           {
             "type": "signature",
@@ -4882,7 +4882,7 @@
         ]
       },
       {
-        "cca2": "ZM",
+        "country": "ZM",
         "events": [
           {
             "type": "accession",
