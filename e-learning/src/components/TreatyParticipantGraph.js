@@ -16,27 +16,27 @@ export default function TreatyParticipantGraph({ treaty }) {
     if (status === 'ratification') {
       text = (
         <>
-          <strong>{p.country.name.common}</strong> signed the {treaty.shortTitle || treaty.name} on <time>{p.events[0].date}</time> and ratified it on{' '}
-          <time>{p.events[1].date}</time>.
+          <strong>{p.country.name.common}</strong> signed the {treaty.shortTitle || treaty.title} on <time>{p.events[0].date}</time> and ratified it
+          on <time>{p.events[1].date}</time>.
         </>
       )
     } else if (status === 'accession') {
       text = (
         <>
-          <strong>{p.country.name.common}</strong> acceeded to the {treaty.shortTitle || treaty.name} on <time>{p.events[0].date}</time>.
+          <strong>{p.country.name.common}</strong> acceeded to the {treaty.shortTitle || treaty.title} on <time>{p.events[0].date}</time>.
         </>
       )
     } else if (status === 'signature') {
       text = (
         <>
-          <strong>{p.country.name.common}</strong> signed the {treaty.shortTitle || treaty.name} on <time>{p.events[0].date}</time>, but has not
+          <strong>{p.country.name.common}</strong> signed the {treaty.shortTitle || treaty.title} on <time>{p.events[0].date}</time>, but has not
           ratified it.
         </>
       )
     } else if (status === 'succession' || status === 'approval' || status === 'acceptance') {
       text = (
         <>
-          <strong>{p.country.name.common}</strong> joined the {treaty.shortTitle || treaty.name} by {status} on <time>{p.events[0].date}</time>.
+          <strong>{p.country.name.common}</strong> joined the {treaty.shortTitle || treaty.title} by {status} on <time>{p.events[0].date}</time>.
         </>
       )
     }
