@@ -1,23 +1,30 @@
 @import 'vars';
 
-$border-color: rgba(black, 0.5);
-$col-count: 26;
+$border-color: var(--gray-50);
 
 .container {
+  --col-count: 10;
+  @include bp(m) {
+    --col-count: 25;
+  }
 }
 .items {
   display: grid;
-  grid-template-columns: repeat($col-count, 1fr);
+  grid-template-columns: repeat(var(--col-count), 1fr);
   list-style: none;
   margin-left: 0 !important;
+  overflow: visible;
+  border-top: 1px solid $border-color;
+  border-left: 1px solid $border-color;
 }
 .item {
   font-size: var(--ms--1);
   background: white;
+  border-collapse: collapse;
   font-family: var(--mono);
-  margin-bottom: 0 !important;
+  border-right: 1px solid $border-color;
   border-bottom: 1px solid $border-color;
-  border-left: 1px solid $border-color;
+  margin-bottom: 0 !important;
   padding: 0.1em;
   letter-spacing: 0.015em;
   display: flex;
@@ -27,14 +34,13 @@ $col-count: 26;
   justify-content: center;
   color: rgba(black, 0.95);
   font-weight: 100;
+  position: relative;
   &:hover,
   &:focus-visible {
-    text-decoration: underline;
+    box-shadow: 0px 0 0 2px inset rgba(black, 0.95);
+    border-right: 1px solid black;
+    z-index: 100;
   }
-  &:nth-of-type(-n + #{$col-count}) {
-    border-top: 1px solid $border-color;
-  }
-  &:nth-of-type(#{$col-count}n),
   &:last-of-type {
     border-right: 1px solid $border-color;
   }
@@ -42,10 +48,6 @@ $col-count: 26;
 
 .signature {
   background: var(--yellow-50);
-  outline: 2px solid black;
-  border-radius: 2px;
-  position: relative;
-  z-index: 100;
 }
 .ratification {
   background: var(--blue-40);
@@ -61,12 +63,14 @@ $col-count: 26;
   position: fixed;
   top: 0;
   left: 0;
+  transition: opacity var(--fast);
   background: var(--gray-10);
   z-index: 100;
   padding: 0.5em;
   border-radius: var(--br);
   border: 1px solid rgba(black, 0.85);
   visibility: hidden;
+  opacity: 0;
   pointer-events: none;
   max-width: 20em;
   line-height: 1.25;
@@ -82,5 +86,6 @@ $col-count: 26;
 }
 
 .tooltip-active {
+  opacity: 1;
   visibility: visible;
 }
