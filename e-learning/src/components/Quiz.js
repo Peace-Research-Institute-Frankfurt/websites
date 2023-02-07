@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import Chip from './Chip'
+import { Chip } from './Chip'
 import { Choice } from './MultipleChoice'
 import Check from '../assets/icons/check.svg'
 import * as styles from './Quiz.module.scss'

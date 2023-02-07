@@ -1,7 +1,11 @@
 import React from 'react'
 import * as styles from './Chip.module.scss'
 
-export default function Chip({ text, color }) {
-  const chipClass = styles['chip' + color[0].toUpperCase() + color.substr(1)]
-  return <span className={chipClass}>{text}</span>
+function Chip({ children, color }) {
+  return <span className={`${styles.container} ${color && styles[color]}`}>{children}</span>
 }
+function ChipGroup({ children }) {
+  return <p class={styles.group}>{children}</p>
+}
+
+export { Chip, ChipGroup }
