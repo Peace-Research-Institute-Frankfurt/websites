@@ -64,9 +64,13 @@ for (let i = 0; i < pages.length; i++) {
     console.log(chalk.red(`Error: Could not find treaty "${p.treaty}" in content/data/treaties.json`))
     break
   }
+
   console.log(chalk.blue(`Scraping data for ${treaty.name} (${treaty.shortTitle || treaty.title})`))
+  console.log(`Opening ${p.url}`)
+
   const browser = await puppeteer.launch()
   const page = await browser.newPage()
+
   page.on('console', async (msg) => {
     const msgArgs = msg.args()
     for (let i = 0; i < msgArgs.length; ++i) {
@@ -74,7 +78,6 @@ for (let i = 0; i < pages.length; i++) {
     }
   })
 
-  console.log(`Opening ${p.url}`)
   await page.goto(p.url)
   const container = await page.waitForSelector('#participants')
 
@@ -135,6 +138,7 @@ for (let i = 0; i < pages.length; i++) {
   })
   console.log(`Wrote ${treatyParticipants.length} participants\n`)
   treaty.participants = treatyParticipants
+  treaty.participantsSource = p.url
   out.push(treaty)
 }
 

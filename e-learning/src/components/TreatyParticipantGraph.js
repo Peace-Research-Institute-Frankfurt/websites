@@ -63,6 +63,11 @@ export default function TreatyParticipantGraph({ treaty }) {
   return (
     <div className={styles.container} ref={containerRef}>
       <ul className={styles.items}>{countryEls}</ul>
+      {treaty.participantsSource && (
+        <p className={styles.source}>
+          Data: <a href={treaty.participantsSource}>United Nations Treaty Collection</a>
+        </p>
+      )}
       <div
         className={`${styles.tooltip} ${tooltipActive ? styles.tooltipActive : null}`}
         style={{

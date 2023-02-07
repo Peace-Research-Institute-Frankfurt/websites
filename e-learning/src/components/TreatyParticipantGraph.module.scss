@@ -49,6 +49,11 @@ $border-color: var(--gray-50);
   }
 }
 
+.source {
+  @extend %caption;
+  font-size: var(--ms--2);
+}
+
 .signature {
   background: var(--yellow-50);
 }

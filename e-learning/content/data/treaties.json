@@ -2409,7 +2409,8 @@
           }
         ]
       }
-    ]
+    ],
+    "participantsSource": "https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVI-3&chapter=26"
   },
   {
     "name": "tpnw",
@@ -3530,7 +3531,8 @@
           }
         ]
       }
-    ]
+    ],
+    "participantsSource": "https://treaties.un.org/Pages/ViewDetails.aspx?src=IND&mtdsg_no=XXVI-9&chapter=26&clang=_en"
   },
   {
     "name": "ccw",
@@ -4890,6 +4892,7 @@
           }
         ]
       }
-    ]
+    ],
+    "participantsSource": "https://treaties.un.org/Pages/ViewDetails.aspx?src=IND&mtdsg_no=XXVI-2&chapter=26&clang=_en"
   }
 ]
