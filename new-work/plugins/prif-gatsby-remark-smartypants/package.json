@@ -4,11 +4,6 @@
   "version": "0.0.1",
   "author": "Max Kohler",
   "type": "module",
-  "dependencies": {
-    "retext": "^8.1.0",
-    "retext-smartypants": "^5.2.0",
-    "unist-util-visit": "^4.1.1"
-  },
   "license": "MIT",
   "main": "index.js"
 }

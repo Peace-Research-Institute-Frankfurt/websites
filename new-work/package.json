@@ -11,9 +11,6 @@
     "serve": "gatsby serve",
     "start": "gatsby develop"
   },
-  "workspaces": [
-    "plugins/prif-gatsby-remark-smartypants"
-  ],
   "dependencies": {
     "@prif/shared": "0.0.1",
     "@hcaptcha/react-hcaptcha": "^1.4.4",
@@ -40,7 +37,9 @@
     "sass": "^1.57.1",
     "slug": "^8.2.2",
     "unist-util-visit": "^4.1.1",
-    "validator": "^13.7.0"
+    "validator": "^13.7.0",
+    "retext": "^8.1.0",
+    "retext-smartypants": "^5.2.0"
   },
   "devDependencies": {
     "@sendgrid/mail": "^7.7.0",
