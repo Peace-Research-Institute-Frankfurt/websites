@@ -1,6 +1,6 @@
 @import 'vars';
 
-$border-color: rgba(black, 0.2);
+$border-color: rgba(black, 0.5);
 $col-count: 26;
 .container {
   display: grid;
@@ -9,7 +9,7 @@ $col-count: 26;
   margin-left: 0 !important;
 }
 .item {
-  @extend %caption;
+  font-size: var(--ms--1);
   background: white;
   font-family: var(--mono);
   margin-bottom: 0 !important;
@@ -20,6 +20,7 @@ $col-count: 26;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-weight: 100;
   &:nth-of-type(-n + #{$col-count}) {
     border-top: 1px solid $border-color;
   }
