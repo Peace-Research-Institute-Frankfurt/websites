@@ -1,6 +1,7 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { Expandable } from '@prif/shared'
+import TreatyParticipantGraph from './TreatyParticipantGraph'
 import * as styles from './Treaty.module.scss'
 import * as buttonStyles from './Button.module.scss'
 
@@ -59,7 +60,8 @@ export default function Treaty({ name }) {
             )
           })}
         </p>
-        <p>{treaty.description}</p>
+        <p className={styles.description}>{treaty.description}</p>
+        <TreatyParticipantGraph treaty={treaty} />
       </Expandable>
     </section>
   )

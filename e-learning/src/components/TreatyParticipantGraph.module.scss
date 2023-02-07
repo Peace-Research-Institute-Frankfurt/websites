@@ -1,0 +1,46 @@
+@import 'vars';
+
+$border-color: rgba(black, 0.2);
+$col-count: 26;
+.container {
+  display: grid;
+  grid-template-columns: repeat($col-count, 1fr);
+  list-style: none;
+  margin-left: 0 !important;
+}
+.item {
+  @extend %caption;
+  background: white;
+  font-family: var(--mono);
+  margin-bottom: 0 !important;
+  border-bottom: 1px solid $border-color;
+  border-left: 1px solid $border-color;
+  padding: 0.15em;
+  letter-spacing: 0.015em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:nth-of-type(-n + #{$col-count}) {
+    border-top: 1px solid $border-color;
+  }
+  &:nth-of-type(#{$col-count}n),
+  &:last-of-type {
+    border-right: 1px solid $border-color;
+  }
+}
+
+.signature {
+  background: var(--yellow-50);
+  outline: 2px solid black;
+  border-radius: 2px;
+  position: relative;
+  z-index: 100;
+}
+.ratification {
+  background: var(--blue-40);
+}
+.accession,
+.succession,
+.acceptance {
+  background: var(--blue-20);
+}

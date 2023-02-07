@@ -49,8 +49,8 @@
   line-height: 1;
   gap: 0.25em;
   font-feature-settings: 'tnum' 1;
-  svg {
-    width: 1.2rem;
-    height: auto;
-  }
+}
+
+p.description {
+  margin-bottom: 1em;
 }
