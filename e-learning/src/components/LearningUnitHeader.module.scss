@@ -15,7 +15,7 @@
   flex-flow: column;
   overflow: hidden;
   position: relative;
-  border: 1px solid var(--blue-80);
+  border: 1px solid rgba(black, 0.75);
   @include bp(m) {
     border-radius: var(--br);
     flex-flow: row-reverse;
