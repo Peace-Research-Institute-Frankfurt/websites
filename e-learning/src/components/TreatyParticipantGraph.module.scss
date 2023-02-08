@@ -82,7 +82,7 @@ $border-color: var(--gray-50);
   pointer-events: none;
   max-width: 20em;
   line-height: 1.25;
-  filter: drop-shadow(0px 2px 3px rgba(black, 0.2));
+  box-shadow: 0px 2px 3px rgba(black, 0.25);
   time {
     background: var(--blue-20);
     font-family: var(--mono);
