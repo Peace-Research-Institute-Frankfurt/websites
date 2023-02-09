@@ -53,6 +53,18 @@ export default function TreatyParticipantGraph({ treaty }) {
     setTooltipActive(false)
   }
 
+  treaty.participants.sort((a, b) => {
+    const dateA = new Date(a.events[a.events.length - 1].date)
+    const dateB = new Date(b.events[b.events.length - 1].date)
+    if (dateA > dateB) {
+      return 1
+    }
+    if (dateA < dateB) {
+      return -1
+    }
+    return 0
+  })
+
   const countryEls = treaty.participants.map((p) => {
     const status = p.events[p.events.length - 1].type
     return (
