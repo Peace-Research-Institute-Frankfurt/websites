@@ -1,20 +1,27 @@
-import React from 'react'
-import * as styles from './Tooltip.module.scss'
+import React, { useRef } from 'react'
+import { clamp } from './utils'
 
-export default function Tooltip({ active, position, children, id, triggerEl }) {
+export default function Tooltip({ styles, active, position, children, id, targetEl }) {
+  if (!styles) styles = {}
   let offsetY = 0
   if (typeof window !== 'undefined') {
-    offsetY = window.scrollY
+    // offsetY = window.scrollY
   }
+  const containerRef = useRef()
   let containerStyles = {}
-  if (triggerEl) {
-    const { x, y, width, height, right } = triggerEl.getBoundingClientRect()
+  let arrowStyles = {}
+  if (targetEl) {
+    const tr = targetEl.getBoundingClientRect()
+    const cr = containerRef.current.getBoundingClientRect()
+    const padding = 10
+    const xClamped = clamp(padding, tr.x + tr.width / 2 - cr.width / 2, window.innerWidth - padding - cr.width)
+    const yClamped = Math.max(tr.height + 100, tr.y - 12)
+
     if (position === 'topCenter') {
-      containerStyles = {
-        top: `${y - 10 + offsetY}px`,
-        left: `${x + width / 2}px`,
-      }
+      containerStyles = { transform: `translateY(${yClamped}px) translateY(-100%) translateX(${xClamped}px)` }
+      arrowStyles = { left: `${tr.x - xClamped + tr.width / 2}px` }
     }
+
     if (position === 'bottomRight') {
       containerStyles = {
         top: `${y + height + offsetY}px`,
@@ -23,9 +30,15 @@ export default function Tooltip({ active, position, children, id, triggerEl }) {
     }
   }
   return (
-    <span style={containerStyles} id={id} role="tooltip" className={`${styles.container} ${styles[position]} ${active ? styles.active : ''}`}>
+    <span
+      ref={containerRef}
+      style={containerStyles}
+      id={id}
+      role="tooltip"
+      className={`${styles.container} ${styles[position]} ${active ? styles.active : ''}`}
+    >
       {children}
-      <span className={styles.arrow}></span>
+      <span style={arrowStyles} className={styles.arrow}></span>
     </span>
   )
 }

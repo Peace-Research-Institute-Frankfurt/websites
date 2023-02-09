@@ -1,16 +1,16 @@
+import TooltipAdapter from './TooltipAdapter'
 import React, { useRef, useState } from 'react'
 import * as styles from './TreatyParticipantGraph.module.scss'
 import { clamp } from './utils'
 
 export default function TreatyParticipantGraph({ treaty }) {
   const [tooltipActive, setTooltipActive] = useState(false)
-  const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 })
+  const [tooltipTarget, setTooltipTarget] = useState(null)
   const [tooltipText, setTooltipText] = useState('')
   const containerRef = useRef()
   const tooltipRef = useRef()
 
   function onMouseOver(e, p) {
-    const { x, y, width } = e.target.getBoundingClientRect()
     const status = p.events[p.events.length - 1].type
     setTooltipActive(true)
     let text = `${p.country.name.common}`
@@ -42,12 +42,7 @@ export default function TreatyParticipantGraph({ treaty }) {
       )
     }
     setTooltipText(text)
-    const tr = tooltipRef.current.getBoundingClientRect()
-    const padding = 15
-    setTooltipPosition({
-      x: clamp(padding + tr.width / 2, x + width / 2, window.innerWidth - tr.width / 2 - padding),
-      y: clamp(tr.height + 100, y, window.innerHeight),
-    })
+    setTooltipTarget(e.target)
   }
   function onMouseOut(e) {
     setTooltipActive(false)
@@ -87,15 +82,9 @@ export default function TreatyParticipantGraph({ treaty }) {
           Data: <a href={treaty.participantsSource}>United Nations Treaty Collection</a>
         </p>
       )}
-      <div
-        ref={tooltipRef}
-        className={`${styles.tooltip} ${tooltipActive ? styles.tooltipActive : null}`}
-        style={{
-          transform: `translateX(${tooltipPosition.x}px) translateY(${tooltipPosition.y}px) translateY(-100%) translateY(-5px) translateX(-50%)`,
-        }}
-      >
-        {tooltipText}
-      </div>
+      <TooltipAdapter active={tooltipActive} targetEl={tooltipTarget} position="topCenter">
+        <span className={styles.tooltipContent}>{tooltipText}</span>
+      </TooltipAdapter>
     </div>
   )
 }

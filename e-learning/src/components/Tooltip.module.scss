@@ -1,28 +1,28 @@
 .container {
-  position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
   background: white;
   font-size: var(--ms--1);
   border-radius: var(--br);
   filter: drop-shadow(0px 2px 3px rgba(black, 0.2));
-  border: 1px solid var(--blue-80);
-  display: inline-block;
-  max-width: 28rem;
+  border: 1px solid rgba(black, 0.85);
+  display: block;
   opacity: 0;
-  transition: var(--fast);
+  transition: opacity var(--fast);
   pointer-events: none;
+  z-index: 1000;
 }
 
 .active {
   opacity: 1;
-  pointer-events: all;
+  pointer-events: none;
 }
 
 .top-center {
-  transform: translateX(-50%) translateY(-100%);
   .arrow {
     transform: translateX(-50%) translateY(50%) rotate(45deg);
     bottom: -1px;
-    left: 50%;
   }
 }
 
@@ -37,10 +37,10 @@
 
 .arrow {
   background-color: white;
-  width: 1rem;
-  height: 1rem;
+  width: 12px;
+  height: 12px;
   position: absolute;
   display: block;
-  border-bottom: 1px solid var(--blue-80);
-  border-right: 1px solid var(--blue-80);
+  border-bottom: 1px solid rgba(black, 0.85);
+  border-right: 1px solid rgba(black, 0.85);
 }

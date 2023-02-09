@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react'
 import { Link } from 'gatsby'
 import Logo from '../assets/logo.png'
-import { Tooltip } from '@prif/shared'
+import { TooltipAdapter } from './TooltipAdapter'
 import * as styles from './SiteHeader.module.scss'
 
 export default function SiteHeader({ unit, chapter, bookmarks }) {
@@ -39,7 +39,7 @@ export default function SiteHeader({ unit, chapter, bookmarks }) {
         <button ref={bookmarksTriggerRef} aria-controls="bookmarksOverlay" onClick={toggleBookmarks}>
           Bookmarks
         </button>
-        <Tooltip triggerEl={bookmarksTriggerRef.current} id="bookmarksOverlay" position="bottomRight" active={bookmarksActive}>
+        {/* <TooltipAdapter targetEl={bookmarksTriggerRef.current} id="bookmarksOverlay" position="bottomRight" active={bookmarksActive}>
           <ul
             onFocusCapture={showBookmarks}
             onBlurCapture={hideBookmarks}
@@ -47,7 +47,7 @@ export default function SiteHeader({ unit, chapter, bookmarks }) {
           >
             {bookmarkItems}
           </ul>
-        </Tooltip>
+        </TooltipAdapter> */}
       </div>
     </header>
   )
