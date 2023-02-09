@@ -3,7 +3,8 @@
   "workspaces": [
     "new-work",
     "e-learning",
-    "shared"
+    "shared",
+    "scripts"
   ],
   "overrides": {
     "json5": "^1.0.2",
