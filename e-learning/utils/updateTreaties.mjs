@@ -6,7 +6,7 @@
 // manually and this script won't overwrite our changes.
 
 // @TODO: This should just read treaty URLs from treaties.json,
-// and not create whole new entries.
+// and not create whole new entries, and also not delete entries.
 
 import { DateTime } from 'luxon'
 import puppeteer from 'puppeteer'
@@ -18,16 +18,8 @@ import { fileURLToPath } from 'url'
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 const treatiesFile = path.join(__dirname, '../content/data/treaties.json')
-console.log(`Reading existing treaties from ${treatiesFile}`)
-
 const countries = JSON.parse(fs.readFileSync(path.join(__dirname, '../content/data/countries.json')))
 const treaties = JSON.parse(fs.readFileSync(treatiesFile))
-
-const pages = [
-  { treaty: 'cwc', url: 'https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVI-3&chapter=26' },
-  // { treaty: "tpnw", url: "https://treaties.un.org/Pages/ViewDetails.aspx?src=IND&mtdsg_no=XXVI-9&chapter=26&clang=_en" },
-  // { treaty: "ccw", url: "https://treaties.un.org/Pages/ViewDetails.aspx?src=IND&mtdsg_no=XXVI-2&chapter=26&clang=_en" },
-]
 
 const nameSubs = {
   Türkiye: 'Turkey',
@@ -65,19 +57,13 @@ const eventTypes = {
 
 let out = []
 
+const pages = treaties.filter((el) => el.scrapeURL)
+console.log(`Found scrapeURLs for ${pages.length} treaties.`)
+
 for (let i = 0; i < pages.length; i++) {
   const p = pages[i]
-  let treatyRef = treaties.find((t) => t.name === p.treaty)
-  let treaty = { ...treatyRef }
-
-  if (!treaty) {
-    console.log(`Couldn't find treaty "${p.treaty}", creating a new entry.`)
-    treaty = {
-      name: p.treaty,
-    }
-  } else {
-    console.log(`Found treaty ${treaty.name} (${treaty.shortTitle || treaty.title || treaty.name}, ${treaty.participants.length} participants)`)
-  }
+  let treaty = { ...p }
+  console.log(`Updating ${treaty.name}`)
 
   const browser = await puppeteer.launch()
   const page = await browser.newPage()
@@ -89,8 +75,8 @@ for (let i = 0; i < pages.length; i++) {
     }
   })
 
-  console.log(`Opening ${p.url}`)
-  await page.goto(p.url)
+  console.log(`Opening ${p.scrapeURL}`)
+  await page.goto(p.scrapeURL)
   const container = await page.waitForSelector('#participants')
 
   const participants = await container.evaluate((el, eventTypes) => {
