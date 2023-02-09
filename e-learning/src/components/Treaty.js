@@ -56,7 +56,7 @@ export default function Treaty({ name }) {
         <span className={styles.eyebrow}>Treaty</span>
         <h2 className={styles.title}>{treaty.shortTitle || treaty.title}</h2>
         <ChipGroup>
-          {treaty.date && <Chip>Established {treaty.date}</Chip>}
+          {treaty.date && <Chip>Entered into force {treaty.date}</Chip>}
           {treaty.legalStatus && <Chip>{treaty.legalStatus}</Chip>}
           <Chip>{memberCount} Member States</Chip>
         </ChipGroup>
