@@ -23,23 +23,23 @@ if ((branch_exists == 0)); then
     node ./e-learning/utils/updateTreaties.js
     treaties_changed=$?
     if ((treaties_changed == 0)); then
-        node ./scripts/generateTreatiesMessage.js --head=./e-learning/content/data/treaties.json --base ../main/e-learning/content/data/treaties.json --countryData ./e-learning/content/data/countries.json
+        node ${base_dir}/updates/scripts/generateTreatiesMessage.js --head=${base_dir}/updates/e-learning/content/data/treaties.json --base=${base_dir}/main/e-learning/content/data/treaties.json --countryData=${base_dir}/updates/e-learning/content/data/countries.json
         git add --all
         git commit -m "Update treaty participants"
         git push
-        gh pr edit --body-file ./tmp/pr.md
+        gh pr edit --body-file ${base_dir}/updates/tmp/pr.md
     fi
 else
     echo "Branch ${branch_name} not found, creating a new one..."
     git checkout -b ${branch_name}
-    node ./e-learning/utils/updateTreaties.js
+    node ${base_dir}/updates/e-learning/utils/updateTreaties.js
     treaties_changed=$?
     if ((treaties_changed == 0)); then
-        node ./scripts/generateTreatiesMessage.js --head=./e-learning/content/data/treaties.json --base ../main/e-learning/content/data/treaties.json --countryData ./e-learning/content/data/countries.json
+        node ${base_dir}/updates/scripts/generateTreatiesMessage.js --head=${base_dir}/updates/e-learning/content/data/treaties.json --base=${base_dir}/main/e-learning/content/data/treaties.json --countryData=${base_dir}/updates/e-learning/content/data/countries.json
         git add --all
         git commit -m "Update treaty participants"
         git push -u origin ${branch_name}
-        gh pr create -B main -H ${branch_name} --title 'Update treaty participants' --body-file ./tmp/pr.md --label "E-Learning"
+        gh pr create -B main -H ${branch_name} --title 'Update treaty participants' --body-file ${base_dir}/updates/tmp/pr.md --label "E-Learning"
     fi
     # git checkout main
     # git branch -d ${branch_name}
