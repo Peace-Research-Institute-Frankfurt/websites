@@ -20,7 +20,7 @@ if ((branch_exists == 0)); then
     git fetch --all
     git branch
     git checkout --track -b ${branch_name} origin/${branch_name}
-    node ./e-learning/utils/updateTreaties.js
+    node ./e-learning/utils/updateTreaties.mjs
     treaties_changed=$?
     if ((treaties_changed == 0)); then
         node ${base_dir}/updates/scripts/generateTreatiesMessage.js --head=${base_dir}/updates/e-learning/content/data/treaties.json --base=${base_dir}/main/e-learning/content/data/treaties.json --countryData=${base_dir}/updates/e-learning/content/data/countries.json
@@ -32,7 +32,7 @@ if ((branch_exists == 0)); then
 else
     echo "Branch ${branch_name} not found, creating a new one..."
     git checkout -b ${branch_name}
-    node ${base_dir}/updates/e-learning/utils/updateTreaties.js
+    node ${base_dir}/updates/e-learning/utils/updateTreaties.mjs
     treaties_changed=$?
     if ((treaties_changed == 0)); then
         node ${base_dir}/updates/scripts/generateTreatiesMessage.js --head=${base_dir}/updates/e-learning/content/data/treaties.json --base=${base_dir}/main/e-learning/content/data/treaties.json --countryData=${base_dir}/updates/e-learning/content/data/countries.json
