@@ -14,7 +14,7 @@ export default function Tooltip({ styles, active, position, children, id, target
     const tr = targetEl.getBoundingClientRect()
     const cr = containerRef.current.getBoundingClientRect()
     const padding = 10
-    const xClamped = clamp(padding, tr.x + tr.width / 2 - cr.width / 2, window.innerWidth - padding - cr.width)
+    const xClamped = clamp(padding, tr.x + tr.width / 2 - cr.width / 2, window.innerWidth - cr.width - tr.width / 2 - padding)
     const yClamped = Math.max(tr.height + 100, tr.y - 12)
 
     if (position === 'topCenter') {
