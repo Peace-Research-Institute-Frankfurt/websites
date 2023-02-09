@@ -6,14 +6,15 @@
   line-height: 1;
   cursor: pointer;
   align-items: center;
-  font-size: var(--ms-0);
+  font-size: var(--ms-1);
   border-radius: var(--br);
   background: var(--gray-light);
   border: 1px solid var(--gray-light);
   gap: 0.35rem;
   font-weight: 600;
   padding: 0 0.75em;
-  height: 2.25em;
+  padding-bottom: 0.15em;
+  height: 1.85em;
   position: relative;
   @include bp(m) {
     height: 1.85em;

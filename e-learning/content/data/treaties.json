@@ -6,6 +6,7 @@
     "date": "1997-04-29",
     "legalStatus": "Legally binding",
     "description": "The Chemical Weapons Convention prohibits the large-scale use, development, production, stockpiling and transfer of chemical weapons and their precursors. It entered into force in 1997 and is administered by the Organisation for the Prohibition of Chemical Weapons (OPCW).",
+    "scrapeURL": "https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVI-3&chapter=26",
     "participants": [
       {
         "country": "AF",
@@ -2415,6 +2416,7 @@
   {
     "name": "tpnw",
     "title": "Treaty on the Prohibition of Nuclear Weapons ",
+    "scrapeURL": "https://treaties.un.org/Pages/ViewDetails.aspx?src=IND&mtdsg_no=XXVI-9&chapter=26&clang=_en",
     "participants": [
       {
         "country": "DZ",
@@ -3537,6 +3539,7 @@
   {
     "name": "ccw",
     "title": "Convention on Certain Conventional Weapons",
+    "scrapeURL": "https://treaties.un.org/Pages/ViewDetails.aspx?src=IND&mtdsg_no=XXVI-2&chapter=26&clang=_en",
     "participants": [
       {
         "country": "AF",

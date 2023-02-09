@@ -216,14 +216,14 @@
   display: flex;
   position: relative;
   font-family: var(--haas-text);
-  padding: 0.5rem 0;
+  padding: 0.5em 0;
   flex-flow: column;
   align-items: flex-start;
   @include bp(m) {
-    padding: 1rem;
+    padding: 1em;
   }
   @include bp(l) {
-    padding: 1.5rem;
+    padding: 2em;
   }
   &:hover,
   &:focus-visible {
@@ -253,17 +253,17 @@
   @include bp(l) {
     font-size: var(--ms-6);
   }
-  @include bp(xl) {
-    font-size: var(--ms-7);
-  }
 }
 
 .posts-intro {
   font-family: var(--suisse);
   font-size: var(--ms-1);
+  letter-spacing: -0.01em;
   padding-top: 0.25rem;
   hyphens: auto;
   @include bp(m) {
+    font-size: var(--ms-2);
+    letter-spacing: -0.025em;
     padding-top: 0.75rem;
   }
 }

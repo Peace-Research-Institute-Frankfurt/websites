@@ -1,25 +1,31 @@
 // This script uses Puppeteer to scrape treaty participants
 // and the dates of the signatures/accession/ratification/etc.
+<<<<<<<< HEAD:e-learning/utils/scrapeTreatyData.mjs
 // from https://treaties.un.org into /content/data/treaties.json
 
 import chalk from 'chalk'
+========
+// from https://treaties.un.org into /content/data/treaties.json.
+
+// It's additive, which means we can still edit treaties.json
+// manually and this script won't overwrite our changes.
+
+// @TODO: This should just read treaty URLs from treaties.json,
+// and not create whole new entries, and also not delete entries.
+
+>>>>>>>> main:e-learning/utils/updateTreaties.mjs
 import { DateTime } from 'luxon'
 import puppeteer from 'puppeteer'
 import fs from 'fs'
 import path from 'path'
+import { diff } from 'just-diff'
+import { exit } from 'process'
 import { fileURLToPath } from 'url'
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
-const treatiesFile = '../content/data/treaties.json'
-
+const treatiesFile = path.join(__dirname, '../content/data/treaties.json')
 const countries = JSON.parse(fs.readFileSync(path.join(__dirname, '../content/data/countries.json')))
-const treaties = JSON.parse(fs.readFileSync(path.join(__dirname, treatiesFile)))
-
-const pages = [
-  { treaty: 'cwc', url: 'https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVI-3&chapter=26' },
-  { treaty: 'tpnw', url: 'https://treaties.un.org/Pages/ViewDetails.aspx?src=IND&mtdsg_no=XXVI-9&chapter=26&clang=_en' },
-  { treaty: 'ccw', url: 'https://treaties.un.org/Pages/ViewDetails.aspx?src=IND&mtdsg_no=XXVI-2&chapter=26&clang=_en' },
-]
+const treaties = JSON.parse(fs.readFileSync(treatiesFile))
 
 const nameSubs = {
   Türkiye: 'Turkey',
@@ -57,8 +63,12 @@ const eventTypes = {
 
 let out = []
 
+const pages = treaties.filter((el) => el.scrapeURL)
+console.log(`Found scrapeURLs for ${pages.length} treaties.`)
+
 for (let i = 0; i < pages.length; i++) {
   const p = pages[i]
+<<<<<<<< HEAD:e-learning/utils/scrapeTreatyData.mjs
   const treaty = treaties.find((t) => t.name === p.treaty)
   if (!treaty) {
     console.log(chalk.red(`Error: Could not find treaty "${p.treaty}" in content/data/treaties.json`))
@@ -67,6 +77,10 @@ for (let i = 0; i < pages.length; i++) {
 
   console.log(chalk.blue(`Scraping data for ${treaty.name} (${treaty.shortTitle || treaty.title})`))
   console.log(`Opening ${p.url}`)
+========
+  let treaty = { ...p }
+  console.log(`Updating ${treaty.name}`)
+>>>>>>>> main:e-learning/utils/updateTreaties.mjs
 
   const browser = await puppeteer.launch()
   const page = await browser.newPage()
@@ -78,7 +92,12 @@ for (let i = 0; i < pages.length; i++) {
     }
   })
 
+<<<<<<<< HEAD:e-learning/utils/scrapeTreatyData.mjs
   await page.goto(p.url)
+========
+  console.log(`Opening ${p.scrapeURL}`)
+  await page.goto(p.scrapeURL)
+>>>>>>>> main:e-learning/utils/updateTreaties.mjs
   const container = await page.waitForSelector('#participants')
 
   const participants = await container.evaluate((el, eventTypes) => {
@@ -126,7 +145,7 @@ for (let i = 0; i < pages.length; i++) {
     // Find the corresponding country in countries.json
     const country = countries.find((c) => c.name.common === (nameSubs[p.name] || p.name))
     if (!country) {
-      console.log(chalk.red(`Could not find country ${p.name}`))
+      console.log(`Could not find country ${p.name}`)
       return []
     }
     const events = p.events.map((e) => {
@@ -136,11 +155,18 @@ for (let i = 0; i < pages.length; i++) {
     // the join happens later at the GraphQl level
     return { country: country.cca2, events: events }
   })
-  console.log(`Wrote ${treatyParticipants.length} participants\n`)
   treaty.participants = treatyParticipants
   treaty.participantsSource = p.url
   out.push(treaty)
 }
 
-fs.writeFileSync(path.join(__dirname, treatiesFile), JSON.stringify(out, null, '  '))
-console.log(`Wrote ${out.length} treaties to ${treatiesFile}.`)
+const differences = diff(treaties, out)
+
+if (differences.length === 0) {
+  console.log(`Treaty data is already up-to-date.`)
+  exit(2)
+} else {
+  console.log(`Treaty data has changed, writing new data ...`)
+  fs.writeFileSync(treatiesFile, `${JSON.stringify(out, null, '  ')}\n`, 'utf-8')
+  exit(0)
+}
