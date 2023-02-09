@@ -1,6 +1,10 @@
-require('dotenv').config()
+import path from 'path'
+import { fileURLToPath } from 'url'
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+import remarkGfm from 'remark-gfm'
 
-module.exports = {
+const config = {
   siteMetadata: {
     siteUrl: `https://leibniz-nw.netlify.app`,
     title: 'Work New @Leibniz',
@@ -28,9 +32,6 @@ module.exports = {
     },
     {
       resolve: 'gatsby-plugin-sass',
-      options: {
-        implementation: require('sass'),
-      },
     },
     {
       resolve: 'gatsby-plugin-manifest',
@@ -77,30 +78,24 @@ module.exports = {
       resolve: 'gatsby-plugin-mdx',
       options: {
         mdxOptions: {
-          remarkPlugins: [require('remark-gfm')],
+          remarkPlugins: [remarkGfm],
         },
         gatsbyRemarkPlugins: [
           {
-            resolve: 'gatsby-remark-smartypants',
-            // This will start to work in Gatsby 5.6, when we can use
-            // gatsby-config.mjs to load a local version of this plugin
-            // that uses the latest (ESM) version of retext-smartypants.
-            // See https://github.com/Peace-Research-Institute-Frankfurt/websites/issues/3
+            resolve: 'prif-gatsby-remark-smartypants',
             options: {
               openingQuotes: { single: '‚', double: '„' },
-              closingQuotes: { single: '‘', double: '“' },
+              closingQuotes: { single: '’', double: '“' },
               dashes: 'oldschool',
             },
           },
-          'gatsby-plugin-remark-footnotes',
         ],
       },
     },
     {
       resolve: 'gatsby-plugin-react-svg',
-      options: {
-        rule: {},
-      },
     },
   ],
 }
+
+export default config
