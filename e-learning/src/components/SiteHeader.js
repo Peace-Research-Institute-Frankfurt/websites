@@ -1,7 +1,6 @@
 import React, { useState, useRef } from 'react'
 import { Link } from 'gatsby'
 import Logo from '../assets/logo.png'
-import { TooltipAdapter } from './TooltipAdapter'
 import * as styles from './SiteHeader.module.scss'
 
 export default function SiteHeader({ unit, chapter, bookmarks }) {
