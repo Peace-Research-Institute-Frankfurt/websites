@@ -1,22 +1,21 @@
 import TooltipAdapter from './TooltipAdapter'
 import React, { useRef, useState } from 'react'
 import * as styles from './TreatyParticipantGraph.module.scss'
-import { clamp } from './utils'
 
 export default function TreatyParticipantGraph({ treaty }) {
   const [tooltipActive, setTooltipActive] = useState(false)
   const [tooltipTarget, setTooltipTarget] = useState(null)
   const [tooltipText, setTooltipText] = useState('')
   const containerRef = useRef()
-  const tooltipRef = useRef()
 
   function onMouseOver(e, p) {
     const status = p.events[p.events.length - 1].type
-    setTooltipActive(true)
     let text = `${p.country.name.common}`
+    const article = p.country.name.article ? `${p.country.name.article} ` : null
     if (status === 'ratification') {
       text = (
         <>
+          {article}
           <strong>{p.country.name.common}</strong> signed the {treaty.shortTitle || treaty.title} on <time>{p.events[0].date}</time> and ratified it
           on <time>{p.events[1].date}</time>.
         </>
@@ -24,12 +23,14 @@ export default function TreatyParticipantGraph({ treaty }) {
     } else if (status === 'accession') {
       text = (
         <>
+          {article}
           <strong>{p.country.name.common}</strong> acceeded to the {treaty.shortTitle || treaty.title} on <time>{p.events[0].date}</time>.
         </>
       )
     } else if (status === 'signature') {
       text = (
         <>
+          {article}
           <strong>{p.country.name.common}</strong> signed the {treaty.shortTitle || treaty.title} on <time>{p.events[0].date}</time>, but has not
           ratified it.
         </>
@@ -37,11 +38,13 @@ export default function TreatyParticipantGraph({ treaty }) {
     } else if (status === 'succession' || status === 'approval' || status === 'acceptance') {
       text = (
         <>
+          {article}
           <strong>{p.country.name.common}</strong> joined the {treaty.shortTitle || treaty.title} by {status} on <time>{p.events[0].date}</time>.
         </>
       )
     }
     setTooltipText(text)
+    setTooltipActive(true)
     setTooltipTarget(e.target)
   }
   function onMouseOut(e) {

@@ -23,6 +23,7 @@ export default function Treaty({ name }) {
               cca2
               name {
                 common
+                article
               }
             }
             events {
