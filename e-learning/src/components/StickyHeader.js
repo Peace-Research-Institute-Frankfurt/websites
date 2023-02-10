@@ -5,12 +5,13 @@ import BookIcon from '../assets/icons/favicon.svg'
 import { Link } from 'gatsby'
 
 export default function StickyHeader({ post, unit, next, prev }) {
-  const { scrollY } = useScrollPosition()
+  const scrollPosition = useScrollPosition()
   let scrollProgress = 0
   if (typeof window !== 'undefined') {
-    scrollProgress = scrollY / (document.body.scrollHeight - window.innerHeight)
+    scrollProgress = scrollPosition.y / (document.body.scrollHeight - window.innerHeight)
   }
-  const showStatusClass = scrollY > 50 ? styles.statusActive : ''
+  const showStatusClass = scrollPosition.y > 50 ? styles.statusActive : ''
+  // const showStatusClass = styles.statusActive
 
   return (
     <header className={`${styles.status} ${showStatusClass}`}>
