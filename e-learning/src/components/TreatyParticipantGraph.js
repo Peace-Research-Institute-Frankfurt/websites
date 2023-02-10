@@ -66,14 +66,19 @@ export default function TreatyParticipantGraph({ treaty }) {
   const countryEls = treaty.participants.map((p) => {
     const status = p.events[p.events.length - 1].type
     return (
-      <li
-        key={p.country.cca2}
-        onMouseOver={(e) => onMouseOver(e, p)}
-        onMouseOut={onMouseOut}
-        data-status={status}
-        className={`${styles.item} ${styles[status]}`}
-      >
-        {p.country.cca2}
+      <li>
+        <button
+          key={p.country.cca2}
+          onMouseOver={(e) => onMouseOver(e, p)}
+          onFocus={(e) => onMouseOver(e, p)}
+          onMouseOut={onMouseOut}
+          onBlur={onMouseOut}
+          aria-haspopup={true}
+          data-status={status}
+          className={`${styles.item} ${styles[status]}`}
+        >
+          {p.country.cca2}
+        </button>
       </li>
     )
   })

@@ -19,6 +19,9 @@ $border-color: var(--gray-50);
   overflow: visible;
   border-top: 1px solid $border-color;
   border-left: 1px solid $border-color;
+  li {
+    display: contents;
+  }
 }
 .item {
   font-size: var(--ms--1);
