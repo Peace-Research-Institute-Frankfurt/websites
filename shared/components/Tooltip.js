@@ -5,7 +5,6 @@ import { clamp } from './utils'
 
 export default function Tooltip({ styles, active, position, children, id, targetEl }) {
   if (!styles) styles = {}
-  let offsetY = 0
   const scrollPosition = useScrollPosition()
   const viewportSize = useViewport()
   const containerRef = useRef()
