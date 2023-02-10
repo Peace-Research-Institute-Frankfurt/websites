@@ -14,14 +14,13 @@ export default function StickyHeader({ post, unit, next, prev }) {
 
   return (
     <header className={`${styles.status} ${showStatusClass}`}>
+      <Link className={styles.home} to="/">
+        <BookIcon />
+      </Link>
       <div className={styles.statusLocation}>
-        <Link className={styles.home} to="/">
-          <BookIcon />
-        </Link>
         <Link to={`../#chapters`} className={styles.statusUnit}>
           Unit {unit.childMdx.frontmatter.order} &middot; {unit.childMdx.frontmatter.title}
         </Link>
-        <span>{post.childMdx.frontmatter.title}</span>
       </div>
       <div className={styles.progress}>
         <div style={{ width: `${scrollProgress * 100}%` }} className={styles.progressInner}></div>

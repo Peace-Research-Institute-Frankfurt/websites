@@ -1,18 +1,15 @@
 @import 'vars';
+
 .status {
+  @extend %grid;
+  padding: 0 var(--padding);
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  background: white;
   z-index: 1000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   border-bottom: 1px solid var(--blue-90);
-  opacity: 0;
   transition: var(--fast);
-  pointer-events: none;
   font-weight: 600;
   @include bp(m) {
     font-size: var(--ms--1);
@@ -24,8 +21,14 @@
   }
 }
 
+.status-active {
+  background: white;
+}
+
 .status-location {
-  padding-left: var(--padding);
+  @include bp(m) {
+    grid-column: 3/4;
+  }
 }
 
 .status-unit {
@@ -47,16 +50,17 @@
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   @include bp(m) {
-    padding-top: 0.65rem;
-    padding-bottom: 0.65rem;
+    padding-top: 0.85rem;
+    padding-bottom: 0.85rem;
   }
 }
 
 .status-pagination {
-  padding-right: var(--padding);
   display: none;
   @include bp(m) {
     display: flex;
+    align-items: center;
+    grid-column: 5/6;
   }
   a {
     display: block;
@@ -64,11 +68,6 @@
       margin-right: 1rem;
     }
   }
-}
-
-.status-active {
-  opacity: 1;
-  pointer-events: all;
 }
 
 .progress {
