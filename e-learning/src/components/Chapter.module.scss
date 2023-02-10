@@ -9,12 +9,14 @@
 .header {
   composes: grid;
   padding: var(--padding);
-  background: var(--yellow-10);
+  background: var(--blue-10);
+  border-bottom: 1px solid var(--blue-20);
+  border-top: 1px solid var(--blue-20);
   padding-top: 2rem;
   padding-bottom: 2rem;
   border-radius: var(--br);
   @include bp(m) {
-    padding-top: 6rem;
+    padding-top: 10rem;
     padding-bottom: 6rem;
   }
 }
@@ -43,6 +45,7 @@
   letter-spacing: -0.02em;
   margin-bottom: 1rem;
   @include bp(m) {
+    line-height: 0.975;
     font-size: var(--ms-7);
     letter-spacing: -0.035em;
     grid-column: 3 / 5;
@@ -126,7 +129,6 @@
   section,
   table {
     grid-column: 1 / 6;
-    line-height: 1.4;
     @include bp(m) {
       grid-column: 3 / 4;
     }
@@ -162,14 +164,8 @@
   & > h3 {
     @extend %h3;
   }
-  h4 {
-    text-transform: uppercase;
-    font-size: var(--ms--1);
-    letter-spacing: 0.04em;
-    color: var(--blue-60);
-    margin-top: 1rem;
-    font-weight: 500;
-    margin-bottom: 0.5rem;
+  & > h4 {
+    @extend %h4;
   }
   table {
     margin-top: 0.5em;
@@ -232,18 +228,13 @@
   margin-bottom: 1rem;
   text-decoration: none !important;
   transition: var(--fast);
-  color: var(--gray-90) !important;
-  background: var(--yellow-10);
-  border: 1px solid transparent;
+  color: var(--gray-90);
+  border: 1px solid var(--blue-80);
   @include bp(m) {
     padding: 1.5rem;
   }
   p {
     margin-bottom: 0;
-  }
-  &:hover,
-  &:focus-visible {
-    border: 1px solid var(--gray-70);
   }
 }
 

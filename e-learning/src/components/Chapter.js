@@ -128,10 +128,6 @@ const Chapter = ({ data, children }) => {
   const next = data.chapters.nodes[currentIndex + 1]
   const prev = data.chapters.nodes[currentIndex - 1]
 
-  const headerStyles = {
-    backgroundColor: data.unit.childMdx.frontmatter.hero_background,
-  }
-
   // function toggleBookmark() {
   //   setBookmarks((prevBookmarks) => {
   //     if (bookmarkIndex === -1) {
@@ -153,7 +149,7 @@ const Chapter = ({ data, children }) => {
     <App>
       <SiteHeader bookmarks={bookmarks} unit={data.unit.childMdx.frontmatter.order} chapter={frontmatter.title} />
       <article>
-        <header className={ChapterStyles.header} style={headerStyles}>
+        <header className={ChapterStyles.header}>
           <Link className={ChapterStyles.unit} to={`../`}>
             Unit {data.unit.childMdx.frontmatter.order} &middot; {data.unit.childMdx.frontmatter.title}
           </Link>
@@ -176,8 +172,8 @@ const Chapter = ({ data, children }) => {
           </div>
           <nav className={ChapterStyles.pagination}>
             {next && next.childMdx.frontmatter.title && (
-              <Link style={headerStyles} className={ChapterStyles.next} to={`../${next.childMdx.fields.slug}`}>
-                <span className={ChapterStyles.paginationLabel}>Next</span>
+              <Link className={ChapterStyles.next} to={`../${next.childMdx.fields.slug}`}>
+                <span className={ChapterStyles.paginationLabel}>Continue</span>
                 <span className={ChapterStyles.paginationTitle}>
                   {next.childMdx.frontmatter.order}. {next.childMdx.frontmatter.title}
                 </span>
@@ -186,7 +182,7 @@ const Chapter = ({ data, children }) => {
             )}
             {prev && (
               <>
-                <span className={ChapterStyles.paginationLabel}>Previous</span>
+                <span className={ChapterStyles.paginationLabel}>Back</span>
                 <Link className={ChapterStyles.previous} to={`../${prev.childMdx.fields.slug}`}>
                   <span>{prev.childMdx.frontmatter.title}</span>
                 </Link>

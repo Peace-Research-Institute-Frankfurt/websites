@@ -20,10 +20,11 @@
 
 %h2 {
   font-size: var(--ms-2);
+  letter-spacing: -0.01em;
   line-height: 1.15;
   font-weight: 700;
   margin-top: 1em;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.75em;
   &:first-child {
     margin-top: 0;
   }
@@ -38,9 +39,20 @@
   line-height: 1.2;
   margin-top: 1rem;
   margin-bottom: 0.25rem;
-  & + table {
-    margin-top: 0;
+  & + table,
+  & + h4 {
+    margin-top: 0.65em;
   }
+}
+
+%h4 {
+  text-transform: uppercase;
+  font-size: var(--ms--1);
+  letter-spacing: 0.035em;
+  color: var(--blue-80);
+  margin-top: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
 }
 
 %caption {
