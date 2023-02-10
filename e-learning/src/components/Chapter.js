@@ -147,12 +147,8 @@ const Chapter = ({ data, children }) => {
 
   return (
     <App>
-      <SiteHeader bookmarks={bookmarks} unit={data.unit.childMdx.frontmatter.order} chapter={frontmatter.title} />
       <article>
         <header className={ChapterStyles.header}>
-          <Link className={ChapterStyles.unit} to={`../`}>
-            Unit {data.unit.childMdx.frontmatter.order} &middot; {data.unit.childMdx.frontmatter.title}
-          </Link>
           <h1 className={ChapterStyles.title}>{frontmatter.title}</h1>
           {frontmatter.intro && <p className={ChapterStyles.intro}>{frontmatter.intro}</p>}
           <span className={ChapterStyles.readingTime}>{frontmatter.reading_time} min read</span>

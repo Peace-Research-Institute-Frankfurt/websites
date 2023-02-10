@@ -59,3 +59,9 @@
   font-size: var(--ms--1);
   line-height: 1.25;
 }
+
+%grid {
+  display: grid;
+  grid-template-columns: 1fr minmax(auto, 5rem) minmax(auto, 46rem) minmax(auto, 5rem) 1fr;
+  column-gap: 2rem;
+}

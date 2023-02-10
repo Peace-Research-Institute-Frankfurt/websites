@@ -1,13 +1,7 @@
 @import 'vars';
 
-.grid {
-  display: grid;
-  grid-template-columns: 1fr minmax(auto, 5rem) minmax(auto, 46rem) minmax(auto, 5rem) 1fr;
-  column-gap: 2rem;
-}
-
 .header {
-  composes: grid;
+  @extend %grid;
   padding: var(--padding);
   background: var(--blue-10);
   border-bottom: 1px solid var(--blue-20);
@@ -16,8 +10,8 @@
   padding-bottom: 2rem;
   border-radius: var(--br);
   @include bp(m) {
-    padding-top: 10rem;
-    padding-bottom: 6rem;
+    padding-top: 12rem;
+    padding-bottom: 8rem;
   }
 }
 .unit {
@@ -109,7 +103,7 @@
 }
 
 .body {
-  composes: grid;
+  @extend %grid;
   padding-bottom: 10rem;
   font-feature-settings: 'onum' 1;
   padding: min(5%, 2rem);
