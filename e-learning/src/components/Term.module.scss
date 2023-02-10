@@ -5,14 +5,13 @@
   cursor: pointer;
   text-align: left;
   font-weight: 600;
-  padding: 0.1em 0.2em;
-  line-height: 1;
-  border-radius: 3px;
+  padding: 0 0.2em;
   transition: var(--fast);
-  border: 1px solid rgba(black, 0.1);
+  border-radius: 2px;
+  outline: 1px solid transparent;
   &:hover,
   &:focus-visible {
-    border: 1px solid var(--blue-80);
+    outline: 1px solid var(--blue-80);
   }
 }
 .header {
@@ -23,7 +22,7 @@
   margin-bottom: 0.35rem;
   font-size: var(--ms-0);
   border-bottom: 1px dotted black;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .close {
