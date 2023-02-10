@@ -35,11 +35,11 @@ export default function SiteHeader({ unit, chapter, bookmarks }) {
         <img src={Logo} alt="" />
         EUNPDC E-Learning
       </Link>
-      <div>
+      <div className={styles.bookmarks}>
         <button ref={bookmarksTriggerRef} aria-controls="bookmarksOverlay" onClick={toggleBookmarks}>
           Bookmarks
         </button>
-        {/* <TooltipAdapter targetEl={bookmarksTriggerRef.current} id="bookmarksOverlay" position="bottomRight" active={bookmarksActive}>
+        <div className={`${styles.bookmarksContainer} ${bookmarksActive && styles.bookmarksContainerActive}`} id="bookmarksOverlay">
           <ul
             onFocusCapture={showBookmarks}
             onBlurCapture={hideBookmarks}
@@ -47,7 +47,7 @@ export default function SiteHeader({ unit, chapter, bookmarks }) {
           >
             {bookmarkItems}
           </ul>
-        </TooltipAdapter> */}
+        </div>
       </div>
     </header>
   )

@@ -77,9 +77,9 @@ export default function TreatyParticipantGraph({ treaty }) {
   return (
     <div className={styles.container} ref={containerRef}>
       <ul className={styles.items}>{countryEls}</ul>
-      {treaty.participantsSource && (
+      {treaty.scrapeURL && (
         <p className={styles.source}>
-          Data: <a href={treaty.participantsSource}>United Nations Treaty Collection</a>
+          Data: <a href={treaty.scrapeURL}>United Nations Treaty Collection</a>
         </p>
       )}
       <TooltipAdapter active={tooltipActive} targetEl={tooltipTarget} position="topCenter">

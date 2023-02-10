@@ -17,7 +17,7 @@ export default function Treaty({ name }) {
           date: date(formatString: "DD MMMM YYYY")
           description
           legalStatus
-          participantsSource
+          scrapeURL
           participants {
             country {
               cca2

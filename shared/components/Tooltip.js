@@ -1,17 +1,25 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
+import useScrollPosition from '../hooks/useScrollPosition'
+import useViewport from '../hooks/useViewport'
 import { clamp } from './utils'
 
 export default function Tooltip({ styles, active, position, children, id, targetEl }) {
   if (!styles) styles = {}
   let offsetY = 0
-  if (typeof window !== 'undefined') {
-    // offsetY = window.scrollY
-  }
+  const scrollPosition = useScrollPosition()
+  const viewportSize = useViewport()
   const containerRef = useRef()
+  const [targetRect, setTargetRect] = useState({})
+  useEffect(() => {
+    if (targetEl) {
+      setTargetRect(targetEl.getBoundingClientRect())
+    }
+  }, [targetEl, scrollPosition, viewportSize])
+
   let containerStyles = {}
   let arrowStyles = {}
   if (targetEl) {
-    const tr = targetEl.getBoundingClientRect()
+    const tr = targetRect
     const cr = containerRef.current.getBoundingClientRect()
     const padding = 10
     const xClamped = clamp(padding, tr.x + tr.width / 2 - cr.width / 2, window.innerWidth - cr.width - tr.width / 2 - padding)

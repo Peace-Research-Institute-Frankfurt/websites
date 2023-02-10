@@ -1,6 +1,6 @@
 import React from 'react'
 import * as styles from './StickyHeader.module.scss'
-import { useScrollPosition } from './useScrollPosition'
+import { useScrollPosition } from '@prif/shared'
 import BookIcon from '../assets/icons/favicon.svg'
 import { Link } from 'gatsby'
 
