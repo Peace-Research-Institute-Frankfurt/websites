@@ -19,22 +19,6 @@
   pointer-events: all;
 }
 
-.top-center {
-  .arrow {
-    transform: translateX(-50%) translateY(50%) rotate(45deg);
-    bottom: -1px;
-  }
-}
-
-.bottom-right {
-  transform: translateY(15px);
-  .arrow {
-    transform: translateY(-50%) rotate(-135deg);
-    top: -1px;
-    right: 2rem;
-  }
-}
-
 .arrow {
   background-color: white;
   width: 12px;
@@ -43,4 +27,13 @@
   display: block;
   border-bottom: 1px solid rgba(black, 0.85);
   border-right: 1px solid rgba(black, 0.85);
+}
+
+.arrow-top {
+  transform: translateX(-50%) translateY(-50%) rotate(-135deg);
+  top: -1px;
+}
+.arrow-bottom {
+  transform: translateX(-50%) translateY(50%) rotate(45deg);
+  bottom: -1px;
 }
