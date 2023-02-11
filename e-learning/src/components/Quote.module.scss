@@ -1,7 +1,7 @@
 @import 'vars';
 
 blockquote {
-  margin-top: 1em;
+  margin-top: 1.5em;
   margin-bottom: 1em;
   p:last-child {
     margin-bottom: 0;
@@ -10,7 +10,7 @@ blockquote {
 
 .speech {
   .text {
-    font-size: var(--ms-2);
+    font-size: var(--ms-1);
     font-weight: 400;
     font-style: italic;
 
@@ -28,20 +28,38 @@ blockquote {
   .text {
     border-radius: 2px;
     position: relative;
-    background: url('../assets/rip.svg');
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: 100%;
+    background-color: var(--gray-20);
     font-weight: 400;
     font-family: var(--mono);
-    filter: drop-shadow(0px 1px 1px rgba(black, 0.25));
-    padding: 1rem;
+    padding: 0 1rem;
     font-size: 0.95em;
+    &:before,
+    &:after {
+      z-index: -100;
+      content: '';
+      position: absolute;
+      right: 0;
+      left: 0;
+      height: 4rem;
+      background-size: 110%;
+      background-repeat: no-repeat;
+    }
+    &:before {
+      top: -2rem;
+      background-image: url('../assets/rip.svg');
+      background-position: bottom left;
+    }
+    &:after {
+      bottom: -1rem;
+      transform: rotate(180deg) scaleX(-1);
+      background-image: url('../assets/rip.svg');
+      background-position: top center;
+    }
 
     @include bp(m) {
       padding: 1.25rem;
       font-size: 0.9em;
-      padding-bottom: 2rem;
+      margin-bottom: 1rem;
     }
   }
 
@@ -54,7 +72,7 @@ blockquote {
   strong {
     background: var(--yellow-40);
     font-weight: normal;
-    padding: 0.1rem 0.4rem;
+    padding: 0.1rem 0.3rem;
     border-radius: 2px;
     margin: -0.4rem;
     mix-blend-mode: multiply;
@@ -78,13 +96,9 @@ blockquote {
 }
 
 cite {
-  font-family: var(--sans);
-  font-size: var(--ms--1);
-  line-height: 1.2;
+  @extend %caption;
+  font-weight: 600;
   display: block;
   padding-top: 0.5rem;
-  font-weight: 400;
   font-style: normal;
-  max-width: 45em;
-  letter-spacing: 0.005em;
 }

@@ -1,14 +1,15 @@
 @import 'vars';
 
 .container {
-  background: var(--yellow-20);
+  background: var(--blue-20);
   cursor: pointer;
   text-align: left;
-  font-weight: 600;
-  padding: 0 0.2em;
+  font-weight: 500;
+  padding: 0 0.1em;
   transition: var(--fast);
   border-radius: 2px;
   outline: 1px solid transparent;
+  white-space: nowrap;
   &:hover,
   &:focus-visible {
     outline: 1px solid var(--blue-80);

@@ -10,16 +10,18 @@ export default function StickyHeader({ post, unit, next, prev }) {
   if (typeof window !== 'undefined') {
     scrollProgress = scrollPosition.y / (document.body.scrollHeight - window.innerHeight)
   }
-  const showStatusClass = scrollPosition.y > 50 ? styles.statusActive : ''
+
+  const showStatusClass = scrollY > 100 ? styles.statusActive : ''
 
   return (
     <header className={`${styles.status} ${showStatusClass}`}>
       <Link className={styles.home} to="/">
         <BookIcon />
+        EUNPDC eLearning
       </Link>
       <div className={styles.statusLocation}>
         <Link to={`../#chapters`} className={styles.statusUnit}>
-          Unit {unit.childMdx.frontmatter.order} &middot; {unit.childMdx.frontmatter.title}
+          Unit {unit.childMdx.frontmatter.order} &middot; {post.childMdx.frontmatter.title}
         </Link>
       </div>
       <div className={styles.progress}>

@@ -127,7 +127,7 @@
     }
   }
   a {
-    padding: var(--padding-small);
+    padding: var(--padding);
     display: flex;
     flex-flow: column;
     &:hover,
@@ -141,24 +141,22 @@
 }
 
 .chapter-title {
-  margin-bottom: 0.1em;
+  margin-bottom: 0.5rem;
   display: block;
-  font-weight: 500;
   line-height: 1.075;
-  letter-spacing: -0.0125em;
+  letter-spacing: -0.025em;
   text-underline-offset: 0.12em;
-  font-size: var(--ms-3);
+  font-size: var(--ms-2);
   font-family: var(--serif);
   position: relative;
 }
 
 .chapter-intro {
-  font-size: var(--ms-0);
+  @extend %copy;
   margin-bottom: 0.25rem;
-  line-height: 1.25;
 }
 .chapter-meta {
-  color: var(--gray-50);
+  color: var(--blue-60);
   font-size: var(--ms--1);
 }
 
