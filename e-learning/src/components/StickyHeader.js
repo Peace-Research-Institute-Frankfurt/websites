@@ -11,7 +11,7 @@ export default function StickyHeader({ post, unit, next, prev }) {
     scrollProgress = scrollPosition.y / (document.body.scrollHeight - window.innerHeight)
   }
 
-  const showStatusClass = scrollY > 100 ? styles.statusActive : ''
+  const showStatusClass = scrollPosition.y > 100 ? styles.statusActive : ''
 
   return (
     <header className={`${styles.status} ${showStatusClass}`}>
