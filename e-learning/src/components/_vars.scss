@@ -61,20 +61,21 @@
   &:first-child {
     margin-top: 0;
   }
-  & + h3 {
+  & + h3,
+  & + table {
     margin-top: 0.25rem;
   }
 }
 
 %h3 {
   font-size: var(--ms-1);
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.1;
   margin-top: 1rem;
   margin-bottom: 0.5rem;
   & + table,
   & + h4 {
-    margin-top: 0.65em;
+    margin-top: 0.25rem;
   }
 }
 
@@ -82,7 +83,7 @@
   text-transform: uppercase;
   font-size: var(--ms--1);
   letter-spacing: 0.025em;
-  font-weight: 600;
+  font-weight: 500;
   font-family: var(--sans);
   margin-top: 1rem;
   margin-bottom: 0.5rem;

@@ -19,6 +19,11 @@
 }
 @font-face {
   font-family: 'National';
+  font-weight: 500;
+  src: url('../assets/fonts/test-national-2-medium.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'National';
   font-weight: 600;
   src: url('../assets/fonts/test-national-2-bold.woff2') format('woff2');
 }
@@ -35,7 +40,7 @@
   --blue-80: hsl(209, 25%, 15%);
   --blue-70: hsl(209, 35%, 25%);
   --blue-60: hsl(209, 40%, 32%);
-  --blue-50: hsl(210, 50%, 57%);
+  --blue-50: hsl(210, 55%, 55%);
   --blue-40: hsl(210, 52%, 65%);
   --blue-30: hsl(210, 45%, 75%);
   --blue-20: hsl(210, 30%, 82%);

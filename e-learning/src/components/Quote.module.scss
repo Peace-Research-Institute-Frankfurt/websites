@@ -64,7 +64,6 @@ blockquote {
   }
 
   p {
-    line-height: 1.4;
     margin-bottom: 0.25em;
     word-spacing: -0.05em;
   }
@@ -97,7 +96,7 @@ blockquote {
 
 cite {
   @extend %caption;
-  font-weight: 600;
+  font-weight: 500;
   display: block;
   padding-top: 0.5rem;
   font-style: normal;

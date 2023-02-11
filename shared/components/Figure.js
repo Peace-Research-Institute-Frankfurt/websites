@@ -17,19 +17,19 @@ export default function Figure({ styles, image, license, caption, credit, size, 
   return (
     <figure className={`${styles.container} ${styles[size]}`}>
       {imageEl}
-      <div className={styles.captions}>
-        {caption && <figcaption>{caption}</figcaption>}
+      <figcaption className={styles.captions}>
+        <span className={styles.caption}>{caption && <>{caption}</>}</span>
         {credit && (
-          <figcaption className={styles.credit}>
+          <span className={styles.credit}>
             <>{credit}</>
             {license && (
               <>
                 {','} <a href={license.url}>{license.title}</a>
               </>
             )}
-          </figcaption>
+          </span>
         )}
-      </div>
+      </figcaption>
     </figure>
   )
 }

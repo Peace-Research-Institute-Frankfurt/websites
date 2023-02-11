@@ -3,11 +3,12 @@
 .container {
   display: contents;
 }
+
 .credit {
-  color: var(--gray-60);
+  color: var(--gray-40);
   font-weight: 400;
   font-size: var(--ms--2);
-  padding-top: 0.25rem;
+  padding-left: 0.25rem;
   a {
     text-decoration: underline;
     white-space: nowrap;
@@ -22,9 +23,6 @@
   grid-column: 1 / 6;
   @include bp(m) {
     grid-column: 3 / 4;
-  }
-  span {
-    display: block;
   }
 }
 .image {
