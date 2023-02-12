@@ -344,7 +344,7 @@
           },
           {
             "type": "ratification",
-            "date": "1998-09-04"
+            "date": "1998-09-02"
           }
         ]
       },
@@ -536,10 +536,6 @@
           {
             "type": "signature",
             "date": "1993-01-13"
-          },
-          {
-            "type": "ratification",
-            "date": "1995-05-23"
           }
         ]
       },
@@ -3979,10 +3975,6 @@
           {
             "type": "signature",
             "date": "1981-04-10"
-          },
-          {
-            "type": "ratification",
-            "date": "1992-11-25"
           }
         ]
       },
@@ -4806,10 +4798,6 @@
           {
             "type": "signature",
             "date": "1981-04-10"
-          },
-          {
-            "type": "ratification",
-            "date": "1982-06-23"
           }
         ]
       },
@@ -4828,10 +4816,6 @@
           {
             "type": "signature",
             "date": "1981-04-10"
-          },
-          {
-            "type": "ratification",
-            "date": "1995-02-13"
           }
         ]
       },
@@ -4881,15 +4865,6 @@
           {
             "type": "signature",
             "date": "1981-04-10"
-          }
-        ]
-      },
-      {
-        "cca2": "ZM",
-        "events": [
-          {
-            "type": "accession",
-            "date": "2013-09-25"
           }
         ]
       }
