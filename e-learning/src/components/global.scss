@@ -9,7 +9,7 @@
 @font-face {
   font-family: 'GT Super';
   font-weight: 500;
-  src: url('../assets/fonts/GT-Super-Text-Bold.woff2') format('woff2');
+  src: url('../assets/fonts/GT-Super-Text-Medium.woff2') format('woff2');
 }
 
 @font-face {
@@ -55,7 +55,7 @@
   --serif: 'GT Super', sans-serif;
   --mono: Courier Prime, monospace;
   --ratio: 1.25; // Minor 3
-  --ms-0: clamp(1rem, calc(1.3vw + 0.2rem), 1.35rem);
+  --ms-0: clamp(1rem, calc(1.25vw + 0.3rem), 1.35rem);
   --ms--2: calc(var(--ms--1) / var(--ratio));
   --ms--1: calc(var(--ms-0) / var(--ratio));
   --ms-1: calc(var(--ms-0) * var(--ratio));

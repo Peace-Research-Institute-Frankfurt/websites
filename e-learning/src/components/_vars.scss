@@ -82,18 +82,18 @@
 %h4 {
   text-transform: uppercase;
   font-size: var(--ms--1);
-  letter-spacing: 0.025em;
+  letter-spacing: 0.01em;
   font-weight: 500;
   font-family: var(--sans);
   margin-top: 1rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.125rem;
 }
 
 %caption {
   font-size: var(--ms--1);
   line-height: 1.25;
   font-weight: 400;
-  letter-spacing: -0.015em;
+  letter-spacing: 0.001em;
 }
 
 %grid {

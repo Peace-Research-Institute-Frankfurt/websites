@@ -1,7 +1,10 @@
 @import 'vars';
 
 .container {
-  grid-column: 3/4;
+  grid-column: 1/6;
+  @include bp(m) {
+    grid-column: 3/4;
+  }
 }
 
 .tab-content {

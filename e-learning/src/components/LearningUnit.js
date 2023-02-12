@@ -128,7 +128,6 @@ const LearningUnit = ({ data, context }) => {
 
   return (
     <App>
-      <SiteHeader unit={frontmatter.order} chapter={''} bookmarks={bookmarks} />
       <article className={LuStyles.container}>
         <LearningUnitHeader
           frontmatter={frontmatter}

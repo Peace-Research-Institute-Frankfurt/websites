@@ -32,6 +32,8 @@ blockquote {
     font-weight: 400;
     font-family: var(--mono);
     padding: 0 1rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
     font-size: 0.95em;
     &:before,
     &:after {
@@ -40,8 +42,8 @@ blockquote {
       position: absolute;
       right: 0;
       left: 0;
-      height: 4rem;
-      background-size: 110%;
+      height: 2rem;
+      background-size: 100% 100%;
       background-repeat: no-repeat;
     }
     &:before {
@@ -50,16 +52,14 @@ blockquote {
       background-position: bottom left;
     }
     &:after {
-      bottom: -1rem;
-      transform: rotate(180deg) scaleX(-1);
+      bottom: -2rem;
+      transform: rotate(180deg);
       background-image: url('../assets/rip.svg');
       background-position: top center;
     }
 
     @include bp(m) {
-      padding: 1.25rem;
       font-size: 0.9em;
-      margin-bottom: 1rem;
     }
   }
 
@@ -96,7 +96,6 @@ blockquote {
 
 cite {
   @extend %caption;
-  font-weight: 500;
   display: block;
   padding-top: 0.5rem;
   font-style: normal;
