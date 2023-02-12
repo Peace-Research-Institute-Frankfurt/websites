@@ -80,35 +80,35 @@ module.exports = {
         path: `${__dirname}/content/learning-units`,
       },
     },
-    {
-      resolve: 'gatsby-plugin-local-search',
-      options: {
-        name: 'chapters',
-        engine: 'flexsearch',
-        // engineOptions: 'speed',
-        query: `
-          {
-            allFile(filter: { extension: { eq: "mdx" }, name: { ne: "index" }, sourceInstanceName: { eq: "luContent" } }) {
-              nodes {
-                id
-                childMdx {
-                  frontmatter {
-                    title
-                  }
-                }
-              }
-            }
-          }
-        `,
-        ref: 'id',
-        index: ['title'],
-        store: ['id', 'title'],
-        normalizer: ({ data }) =>
-          data.allFile.nodes.map((node) => ({
-            id: node.id,
-            title: node.childMdx.frontmatter.title,
-          })),
-      },
-    },
+    // {
+    //   resolve: 'gatsby-plugin-local-search',
+    //   options: {
+    //     name: 'chapters',
+    //     engine: 'flexsearch',
+    //     // engineOptions: 'speed',
+    //     query: `
+    //       {
+    //         allFile(filter: { extension: { eq: "mdx" }, name: { ne: "index" }, sourceInstanceName: { eq: "luContent" } }) {
+    //           nodes {
+    //             id
+    //             childMdx {
+    //               frontmatter {
+    //                 title
+    //               }
+    //             }
+    //           }
+    //         }
+    //       }
+    //     `,
+    //     ref: 'id',
+    //     index: ['title'],
+    //     store: ['id', 'title'],
+    //     normalizer: ({ data }) =>
+    //       data.allFile.nodes.map((node) => ({
+    //         id: node.id,
+    //         title: node.childMdx.frontmatter.title,
+    //       })),
+    //   },
+    // },
   ],
 }

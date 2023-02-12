@@ -2,7 +2,6 @@ import { Link } from 'gatsby'
 import * as React from 'react'
 import { graphql } from 'gatsby'
 import Meta from '../components/Meta'
-import { SearchForm } from '../components/SearchFrom'
 
 export const query = graphql`
   query {
@@ -45,7 +44,6 @@ const IndexPage = ({ data }) => {
   return (
     <main>
       <h1>EUNPDC</h1>
-      <SearchForm />
       <div>{units}</div>
     </main>
   )
