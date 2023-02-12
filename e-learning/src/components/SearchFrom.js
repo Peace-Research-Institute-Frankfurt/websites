@@ -1,20 +1,20 @@
 import React, { useState } from 'react'
-import { useFlexSearch } from 'react-use-flexsearch'
-import { graphql, useStaticQuery } from 'gatsby'
+// import { useFlexSearch } from 'react-use-flexsearch'
+// import { graphql, useStaticQuery } from 'gatsby'
 
 function SearchForm() {
-  const data = useStaticQuery(graphql`
-    query {
-      search: localSearchChapters {
-        index
-        store
-      }
-    }
-  `)
+  // const data = useStaticQuery(graphql`
+  //   query {
+  //     search: localSearchChapters {
+  //       index
+  //       store
+  //     }
+  //   }
+  // `)
   const [query, setQuery] = useState('')
-  const index = data.search.index
-  const store = data.search.store
-  const results = useFlexSearch(query, index, store)
+  // const index = data.search.index
+  // const store = data.search.store
+  // const results = useFlexSearch(query, index, store)
 
   function handleChange(e) {
     setQuery(e.target.value)
