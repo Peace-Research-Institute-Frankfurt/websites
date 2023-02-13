@@ -1,4 +1,4 @@
-name: [eLearning] Update Treaty Participants
+name: "[eLearning] Update Treaty Participants"
 
 on:
   workflow_dispatch:
