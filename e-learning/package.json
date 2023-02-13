@@ -12,7 +12,7 @@
     "start": "gatsby develop"
   },
   "dependencies": {
-    "@mdx-js/mdx": "^2.2.1",
+    "@mdx-js/mdx": "^2.3.0",
     "@mdx-js/react": "^2.3.0",
     "@prif/shared": "0.0.1",
     "dotenv": "^16.0.3",
