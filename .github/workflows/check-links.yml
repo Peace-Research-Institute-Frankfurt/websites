@@ -1,4 +1,4 @@
-name: '[eLearning] Check links'
+name: 'Check markdown links'
 
 on:
   workflow_dispatch:
