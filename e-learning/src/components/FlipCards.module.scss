@@ -40,18 +40,18 @@
   cursor: pointer;
   &:hover,
   &:focus-visible {
-    border: 1px solid var(--blue-70);
+    border: 2px solid var(--blue-70);
   }
 }
 
 .front {
-  background: var(--blue-10);
-  border: 1px solid var(--blue-20);
+  background: var(--gray-10);
+  border: 2px solid var(--gray-20);
   position: relative;
 }
 .back {
-  background: var(--gray-20);
-  border: 1px solid var(--gray-30);
+  background: var(--yellow-20);
+  border: 2px solid rgba(black, 0.125);
   position: absolute;
   top: 0;
   bottom: 0;

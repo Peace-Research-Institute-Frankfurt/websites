@@ -5,15 +5,16 @@
   padding: var(--padding);
   background: var(--blue-10);
   margin: var(--padding);
-  border-top: 20px solid var(--blue-50);
+  border-top: 10px solid var(--blue-50);
+  border-radius: var(--br);
   margin-top: 3rem;
   color: var(--blue-90);
   padding-top: 2rem;
   padding-bottom: 2rem;
   margin-bottom: 0;
   @include bp(m) {
-    padding-top: 10rem;
-    padding-bottom: 10rem;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
   }
 }
 
@@ -25,7 +26,7 @@
   color: var(--blue-80);
   margin-bottom: 1rem;
   @include bp(m) {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -39,7 +40,7 @@
   text-align: center;
   margin-bottom: 1rem;
   @include bp(m) {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     font-size: var(--ms-5);
     letter-spacing: -0.04em;
     grid-column: 1 / 6;

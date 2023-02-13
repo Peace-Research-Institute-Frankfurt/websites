@@ -52,7 +52,7 @@
     height: 11px;
     border-radius: 100%;
     grid-column: 2/3;
-    border: 5px solid var(--gray-10);
+    border: 5px solid white;
   }
 }
 .event-description {
@@ -76,7 +76,7 @@
   line-height: 1;
   margin-left: 0.75em;
   position: relative;
-  top: -0.4em;
+  top: -0.75em;
   cursor: pointer;
   color: var(--blue-80);
   border: 1px solid var(--gray-30);

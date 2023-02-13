@@ -12,14 +12,14 @@
 }
 
 .title {
-  @extend %h3;
+  @extend %h2;
   margin-top: 0;
 }
 
 .name {
   font-family: var(--mono);
-  font-size: var(--ms-0);
-  font-weight: 300;
+  font-size: calc(var(--ms-0) * 0.95);
+  font-weight: 100;
   margin-left: 0.65em;
   display: inline-block;
 }

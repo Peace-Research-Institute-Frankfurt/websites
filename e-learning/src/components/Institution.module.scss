@@ -12,13 +12,6 @@
 }
 
 .title {
-  @extend %h3;
+  @extend %h2;
   margin-top: 0;
-}
-
-.name {
-  font-family: var(--mono);
-  font-weight: 300;
-  margin-left: 0.65em;
-  display: inline-flex;
 }
