@@ -7,7 +7,7 @@
   "dependencies": {
     "just-diff": "^5.2.0",
     "luxon": "^3.2.1",
-    "minimist": "^1.2.7",
+    "minimist": "^1.2.8",
     "puppeteer": "^19.7.0"
   }
 }
