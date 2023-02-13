@@ -5,7 +5,7 @@ function Chip({ children, color }) {
   return <span className={`${styles.container} ${color && styles[color]}`}>{children}</span>
 }
 function ChipGroup({ children }) {
-  return <p class={styles.group}>{children}</p>
+  return <p className={styles.group}>{children}</p>
 }
 
 export { Chip, ChipGroup }

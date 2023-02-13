@@ -5,7 +5,18 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 const addedMembers = ['Guinea-Bissau', 'Cook Islands', 'Niue', 'Palestine']
 const nameSubs = { 'DR Congo': 'Democratic Republic of the Congo', 'United States': 'United States of America' }
-const addArticle = ['Netherlands', 'United States', 'United Arab Emirates', 'United Kingdom', 'Central African Republic', 'Dominican Republic']
+const addArticle = [
+  'Netherlands',
+  'United States',
+  'United Arab Emirates',
+  'United Kingdom',
+  'Central African Republic',
+  'Dominican Republic',
+  'Republic of Congo',
+  'Democratic Republic of the Congo',
+  'Marshall Islands',
+  'Solomon Islands',
+]
 
 const raw = JSON.parse(fs.readFileSync(path.join(__dirname, './countries_raw.json')))
 

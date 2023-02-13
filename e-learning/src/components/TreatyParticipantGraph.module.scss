@@ -1,6 +1,6 @@
 @import 'vars';
 
-$border-color: var(--blue-70);
+$border-color: rgba(black, 0.75);
 
 .container {
   --col-count: 10;
@@ -8,7 +8,7 @@ $border-color: var(--blue-70);
     --col-count: 14;
   }
   @include bp(m) {
-    --col-count: 22;
+    --col-count: 20;
   }
 }
 .items {
@@ -24,25 +24,26 @@ $border-color: var(--blue-70);
   }
 }
 .item {
-  font-size: calc(var(--ms--1) * 0.85);
+  font-size: var(--ms--1);
   background: white;
   border-collapse: collapse;
   font-family: var(--mono);
   border-right: 1px solid $border-color;
   border-bottom: 1px solid $border-color;
   margin-bottom: 0 !important;
-  letter-spacing: 0.03em;
   display: flex;
   user-select: none;
   align-items: center;
   cursor: pointer;
   justify-content: center;
-  color: rgba(black, 0.95);
+  color: rgba(black, 0.9);
   font-weight: 100;
   position: relative;
-  padding: 0.3em;
+  padding: 0.35em 0;
+  line-height: 1;
   @include bp(m) {
-    padding: 0.2em;
+    letter-spacing: 0.01em;
+    font-size: calc(var(--ms--1) * 0.9);
   }
   &:hover,
   &:focus-visible {
@@ -61,10 +62,13 @@ $border-color: var(--blue-70);
 }
 
 .signature {
-  background: var(--yellow-50);
+  background: var(--yellow-30);
 }
 .ratification {
   background: var(--blue-40);
+}
+.none {
+  background: var(--orange-50);
 }
 .accession,
 .succession,
@@ -81,10 +85,11 @@ $border-color: var(--blue-70);
   max-width: 20em;
   line-height: 1.25;
   time {
-    background: var(--blue-20);
+    background: var(--gray-20);
     font-family: var(--mono);
     font-size: 0.9em;
     word-spacing: -0.25em;
+    letter-spacing: 0.01em;
     padding: 0.05em 0.25em;
     white-space: nowrap;
   }
