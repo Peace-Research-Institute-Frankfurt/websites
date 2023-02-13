@@ -9,10 +9,17 @@ export default function TreatyParticipantGraph({ treaty }) {
   const containerRef = useRef()
 
   function onMouseOver(e, p) {
-    const status = p.events[p.events.length - 1].type
     let text = `${p.country.name.common}`
     const article = p.country.name.article ? `${p.country.name.article} ` : null
-    if (status === 'ratification') {
+
+    if (p.status === 'none') {
+      text = (
+        <>
+          {article}
+          <strong>{p.country.name.common}</strong> is not a party to the {treaty.shortTitle || treaty.title}.
+        </>
+      )
+    } else if (p.status === 'ratification') {
       text = (
         <>
           {article}
@@ -20,14 +27,14 @@ export default function TreatyParticipantGraph({ treaty }) {
           on <time>{p.events[1].date}</time>.
         </>
       )
-    } else if (status === 'accession') {
+    } else if (p.status === 'accession') {
       text = (
         <>
           {article}
           <strong>{p.country.name.common}</strong> acceeded to the {treaty.shortTitle || treaty.title} on <time>{p.events[0].date}</time>.
         </>
       )
-    } else if (status === 'signature') {
+    } else if (p.status === 'signature') {
       text = (
         <>
           {article}
@@ -35,11 +42,11 @@ export default function TreatyParticipantGraph({ treaty }) {
           ratified it.
         </>
       )
-    } else if (status === 'succession' || status === 'approval' || status === 'acceptance') {
+    } else if (p.status === 'succession' || p.status === 'approval' || p.status === 'acceptance') {
       text = (
         <>
           {article}
-          <strong>{p.country.name.common}</strong> joined the {treaty.shortTitle || treaty.title} by {status} on <time>{p.events[0].date}</time>.
+          <strong>{p.country.name.common}</strong> joined the {treaty.shortTitle || treaty.title} by {p.status} on <time>{p.events[0].date}</time>.
         </>
       )
     }
@@ -51,9 +58,10 @@ export default function TreatyParticipantGraph({ treaty }) {
     setTooltipActive(false)
   }
 
+  const sortOrder = ['ratification', 'accession', 'acceptance', 'succession', 'signature', 'none']
   treaty.participants.sort((a, b) => {
-    const dateA = new Date(a.events[a.events.length - 1].date)
-    const dateB = new Date(b.events[b.events.length - 1].date)
+    const dateA = sortOrder.indexOf(a.status)
+    const dateB = sortOrder.indexOf(b.status)
     if (dateA > dateB) {
       return 1
     }
@@ -64,11 +72,10 @@ export default function TreatyParticipantGraph({ treaty }) {
   })
 
   const countryEls = treaty.participants.map((p) => {
-    const status = p.events[p.events.length - 1].type
+    const status = p.events[p.events.length - 1]?.type || 'none'
     return (
-      <li>
+      <li key={p.country.alpha3}>
         <button
-          key={p.country.alpha3}
           onMouseOver={(e) => onMouseOver(e, p)}
           onFocus={(e) => onMouseOver(e, p)}
           onMouseOut={onMouseOut}

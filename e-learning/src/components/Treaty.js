@@ -9,6 +9,15 @@ import * as buttonStyles from './Button.module.scss'
 export default function Treaty({ name }) {
   const data = useStaticQuery(graphql`
     query treatyQuery {
+      countries: allCountriesJson {
+        nodes {
+          alpha3
+          name {
+            common
+            article
+          }
+        }
+      }
       treaties: allTreatiesJson {
         nodes {
           name
@@ -43,6 +52,20 @@ export default function Treaty({ name }) {
     }
   })
 
+  data.countries.nodes.forEach((node) => {
+    if (treaty.participants.findIndex((el) => el.country.alpha3 === node.alpha3) !== -1) {
+    } else {
+      treaty.participants.push({
+        country: node,
+        events: [],
+      })
+    }
+  })
+
+  treaty.participants.forEach((p) => {
+    p.status = p.events[p.events.length - 1]?.type || 'none'
+  })
+
   const memberCount = treaty.participants.reduce((prev, country) => {
     const s = ['ratification', 'accession', 'acceptance', 'succession']
     const found = country.events.findIndex((event) => {
@@ -63,7 +86,7 @@ export default function Treaty({ name }) {
         </ChipGroup>
         <p className={styles.description}>{treaty.description}</p>
         <h3 className={styles.subtitle}>Current Participants</h3>
-        <TreatyParticipantGraph treaty={treaty} />
+        <TreatyParticipantGraph treaty={treaty} candidates={data.countries.nodes} />
       </Expandable>
     </section>
   )
