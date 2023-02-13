@@ -12,7 +12,7 @@ import Term from './components/Term'
 import Tooltip from './components/Tooltip'
 import EmbedChoices from './components/EmbedChoices'
 import Expandable from './components/Expandable'
-
+import useScrollPosition from './hooks/useScrollPosition'
 export {
   Quote,
   Callout,
@@ -32,4 +32,5 @@ export {
   Tooltip,
   EmbedChoices,
   Expandable,
+  useScrollPosition,
 }

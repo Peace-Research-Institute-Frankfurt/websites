@@ -2,6 +2,7 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { Expandable } from '@prif/shared'
 import { Chip, ChipGroup } from './Chip.js'
+import TreatyParticipantGraph from './TreatyParticipantGraph'
 import * as styles from './Treaty.module.scss'
 import * as buttonStyles from './Button.module.scss'
 
@@ -16,11 +17,18 @@ export default function Treaty({ name }) {
           date: date(formatString: "DD MMMM YYYY")
           description
           legalStatus
+          scrapeURL
           participants {
-            cca2
+            country {
+              cca2
+              name {
+                common
+                article
+              }
+            }
             events {
               type
-              date
+              date: date(formatString: "DD MMMM YYYY")
             }
           }
         }
@@ -37,7 +45,6 @@ export default function Treaty({ name }) {
 
   const memberCount = treaty.participants.reduce((prev, country) => {
     const s = ['ratification', 'accession', 'acceptance', 'succession']
-    console.log(country)
     const found = country.events.findIndex((event) => {
       return s.indexOf(event.type) !== -1
     })
@@ -50,11 +57,12 @@ export default function Treaty({ name }) {
         <span className={styles.eyebrow}>Treaty</span>
         <h2 className={styles.title}>{treaty.shortTitle || treaty.title}</h2>
         <ChipGroup>
-          <Chip>Established {treaty.date}</Chip>
-          <Chip>{treaty.legalStatus}</Chip>
-          <Chip>{memberCount} Members</Chip>
+          {treaty.date && <Chip>Entered into force {treaty.date}</Chip>}
+          {treaty.legalStatus && <Chip>{treaty.legalStatus}</Chip>}
+          <Chip>{memberCount} Member States</Chip>
         </ChipGroup>
-        <p>{treaty.description}</p>
+        <p className={styles.description}>{treaty.description}</p>
+        <TreatyParticipantGraph treaty={treaty} />
       </Expandable>
     </section>
   )

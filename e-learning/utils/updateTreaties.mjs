@@ -1,5 +1,10 @@
 // This script uses Puppeteer to scrape treaty participants
 // and the dates of the signatures/accession/ratification/etc.
+<<<<<<<< HEAD:e-learning/utils/scrapeTreatyData.mjs
+// from https://treaties.un.org into /content/data/treaties.json
+
+import chalk from 'chalk'
+========
 // from https://treaties.un.org into /content/data/treaties.json.
 
 // It's additive, which means we can still edit treaties.json
@@ -8,6 +13,7 @@
 // @TODO: This should just read treaty URLs from treaties.json,
 // and not create whole new entries, and also not delete entries.
 
+>>>>>>>> main:e-learning/utils/updateTreaties.mjs
 import { DateTime } from 'luxon'
 import puppeteer from 'puppeteer'
 import fs from 'fs'
@@ -62,8 +68,19 @@ console.log(`Found scrapeURLs for ${pages.length} treaties.`)
 
 for (let i = 0; i < pages.length; i++) {
   const p = pages[i]
+<<<<<<<< HEAD:e-learning/utils/scrapeTreatyData.mjs
+  const treaty = treaties.find((t) => t.name === p.treaty)
+  if (!treaty) {
+    console.log(chalk.red(`Error: Could not find treaty "${p.treaty}" in content/data/treaties.json`))
+    break
+  }
+
+  console.log(chalk.blue(`Scraping data for ${treaty.name} (${treaty.shortTitle || treaty.title})`))
+  console.log(`Opening ${p.url}`)
+========
   let treaty = { ...p }
   console.log(`Updating ${treaty.name}`)
+>>>>>>>> main:e-learning/utils/updateTreaties.mjs
 
   const browser = await puppeteer.launch()
   const page = await browser.newPage()
@@ -75,8 +92,12 @@ for (let i = 0; i < pages.length; i++) {
     }
   })
 
+<<<<<<<< HEAD:e-learning/utils/scrapeTreatyData.mjs
+  await page.goto(p.url)
+========
   console.log(`Opening ${p.scrapeURL}`)
   await page.goto(p.scrapeURL)
+>>>>>>>> main:e-learning/utils/updateTreaties.mjs
   const container = await page.waitForSelector('#participants')
 
   const participants = await container.evaluate((el, eventTypes) => {
@@ -130,9 +151,12 @@ for (let i = 0; i < pages.length; i++) {
     const events = p.events.map((e) => {
       return { ...e, date: DateTime.fromFormat(e.date, 'd MMM yyyy').toFormat('yyyy-MM-dd') }
     })
-    return { cca2: country.cca2, events: events }
+    // We just save the country's cca2 here,
+    // the join happens later at the GraphQl level
+    return { country: country.cca2, events: events }
   })
   treaty.participants = treatyParticipants
+  treaty.participantsSource = p.url
   out.push(treaty)
 }
 

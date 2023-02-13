@@ -1,16 +1,17 @@
 import React from 'react'
 import * as styles from './StickyHeader.module.scss'
-import { useScrollPosition } from './useScrollPosition'
+import { useScrollPosition } from '@prif/shared'
 import BookIcon from '../assets/icons/favicon.svg'
 import { Link } from 'gatsby'
 
 export default function StickyHeader({ post, unit, next, prev }) {
-  const { scrollY } = useScrollPosition()
+  const scrollPosition = useScrollPosition()
   let scrollProgress = 0
   if (typeof window !== 'undefined') {
-    scrollProgress = scrollY / (document.body.scrollHeight - window.innerHeight)
+    scrollProgress = scrollPosition.y / (document.body.scrollHeight - window.innerHeight)
   }
-  const showStatusClass = scrollY > 100 ? styles.statusActive : ''
+
+  const showStatusClass = scrollPosition.y > 100 ? styles.statusActive : ''
 
   return (
     <header className={`${styles.status} ${showStatusClass}`}>

@@ -38,6 +38,20 @@
 .bookmarks {
   text-align: left;
   font-size: var(--ms-0);
+  position: relative;
+}
+
+.bookmarks-container {
+  position: absolute;
+  transition: var(--fast);
+  top: 100%;
+  right: 0;
+  opacity: 0;
+  border: 1px solid rgba(black, 0.4);
+  border-radius: var(--br);
+  filter: drop-shadow(0px 2px 3px rgba(black, 0.2));
+  min-width: 20rem;
+  background-color: white;
   li {
     list-style: none;
     border-bottom: 1px solid var(--gray-30);
@@ -58,16 +72,15 @@
   }
 }
 
-.bookmarks-active {
+.bookmarks-container-active {
   opacity: 1;
-  transform: translateY(0px);
+  transform: translateY(5px);
 }
 .bookmark-eyebrow {
   display: block;
   font-size: var(--ms--2);
   letter-spacing: 0.05em;
   margin-bottom: 0.02em;
-  text-transform: uppercase;
 }
 .bookmark-title {
   display: block;

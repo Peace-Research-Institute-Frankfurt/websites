@@ -11,7 +11,9 @@ export default function Map({ caption }) {
         nodes {
           name
           participants {
-            cca2
+            country {
+              cca2
+            }
           }
         }
       }

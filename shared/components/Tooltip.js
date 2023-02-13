@@ -1,32 +1,44 @@
-import React from 'react'
-import * as styles from './Tooltip.module.scss'
+import React, { useEffect, useRef, useState } from 'react'
+import useScrollPosition from '../hooks/useScrollPosition'
+import useViewport from '../hooks/useViewport'
+import { clamp } from './utils'
 
-export default function Tooltip({ active, position, children, id, triggerEl }) {
-  let offsetY = 0
-  if (typeof window !== 'undefined') {
-    offsetY = window.scrollY
-  }
+export default function Tooltip({ styles, active, position, children, id, targetEl }) {
+  if (!styles) styles = {}
+  const scrollPosition = useScrollPosition()
+  const viewportSize = useViewport()
+  const containerRef = useRef()
+  const [targetRect, setTargetRect] = useState({})
+  useEffect(() => {
+    if (targetEl) {
+      setTargetRect(targetEl.getBoundingClientRect())
+    }
+  }, [targetEl, scrollPosition, viewportSize])
+
   let containerStyles = {}
-  if (triggerEl) {
-    const { x, y, width, height, right } = triggerEl.getBoundingClientRect()
-    triggerEl.innerHTML
-    if (position === 'topCenter') {
-      containerStyles = {
-        top: `${y - 10 + offsetY}px`,
-        left: `${x + width / 2}px`,
-      }
+  let arrowStyles = {}
+  let arrowClass = null
+  if (targetEl) {
+    const tr = targetRect
+    const cr = containerRef.current.getBoundingClientRect()
+    const padding = 10
+    const xClamped = clamp(padding, tr.x + tr.width / 2 - cr.width / 2, window.innerWidth - cr.width - tr.width / 2 - padding)
+    let yClamped = 0
+    if (tr.y - padding < cr.height + padding) {
+      yClamped = tr.y + tr.height + cr.height + padding
+      arrowClass = styles.arrowTop
+    } else {
+      yClamped = tr.y - padding
+      arrowClass = styles.arrowBottom
     }
-    if (position === 'bottomRight') {
-      containerStyles = {
-        top: `${y + height + offsetY}px`,
-        right: `${document.documentElement.clientWidth - right}px`,
-      }
-    }
+
+    containerStyles = { transform: `translateY(${yClamped}px) translateY(-100%) translateX(${xClamped}px)` }
+    arrowStyles = { ...arrowStyles, left: `${tr.x - xClamped + tr.width / 2}px` }
   }
   return (
-    <span style={containerStyles} id={id} role="tooltip" className={`${styles.container} ${styles[position]} ${active ? styles.active : ''}`}>
+    <span ref={containerRef} style={containerStyles} id={id} role="tooltip" className={`${styles.container} ${active ? styles.active : ''}`}>
       {children}
-      <span className={styles.arrow}></span>
+      <span style={arrowStyles} className={`${styles.arrow} ${arrowClass}`}></span>
     </span>
   )
 }

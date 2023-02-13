@@ -88,11 +88,24 @@ exports.createSchemaCustomization = async ({ getNode, getNodesByType, pathPrefix
   const { createTypes } = actions
 
   const typeDefs = `
+  type CountriesJsonName implements Node {
+    common: String
+    official: String
+    article: String
+  }
   type CountriesJson implements Node {
     cca2: String!
+    article: Boolean
+    name: CountriesJsonName
   }
   type InstitutionsJson implements Node {
     members: [CountriesJson] @link(by: "cca2")
+  }
+  type TreatyParticipant {
+    country: CountriesJson @link(by: "cca2")
+  }
+  type TreatiesJson implements Node {
+    participants: [TreatyParticipant]
   }
   type Author implements Node {
     author_id: String

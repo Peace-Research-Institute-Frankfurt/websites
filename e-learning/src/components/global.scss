@@ -1,9 +1,9 @@
 @import 'vars';
 
 @font-face {
-  font-family: 'Courier Prime';
+  font-family: 'MDIO';
   font-weight: 400;
-  src: url('../assets/fonts/courierprime-regular-webfont.woff2') format('woff2');
+  src: url('../assets/fonts/MDIO0.5-Regular.woff') format('woff'), url('../assets/fonts/MDIO0.5-Regular.woff2') format('woff2');
 }
 
 @font-face {
@@ -27,6 +27,7 @@
   font-weight: 600;
   src: url('../assets/fonts/test-national-2-bold.woff2') format('woff2');
 }
+
 :root {
   --gray-10: #fafafa;
   --gray-20: #ece9e9;
@@ -53,7 +54,7 @@
   --sans: 'National', -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   --serif: 'GT Super', sans-serif;
-  --mono: Courier Prime, monospace;
+  --mono: 'MDIO', serif;
   --ratio: 1.25; // Minor 3
   --ms-0: clamp(0.95rem, calc(1.25vw + 0.3rem), 1.3rem);
   --ms--2: calc(var(--ms--1) / var(--ratio));
