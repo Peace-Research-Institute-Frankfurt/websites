@@ -24,7 +24,7 @@ $border-color: var(--blue-70);
   }
 }
 .item {
-  font-size: calc(var(--ms--1) * 0.85);
+  font-size: calc(var(--ms--1) * 0.9);
   background: white;
   border-collapse: collapse;
   font-family: var(--mono);
@@ -42,7 +42,7 @@ $border-color: var(--blue-70);
   position: relative;
   padding: 0.3em;
   @include bp(m) {
-    padding: 0.2em;
+    padding: 0.25em;
   }
   &:hover,
   &:focus-visible {
