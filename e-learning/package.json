@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@mdx-js/mdx": "^2.2.1",
-    "@mdx-js/react": "^2.2.1",
+    "@mdx-js/react": "^2.3.0",
     "@prif/shared": "0.0.1",
     "dotenv": "^16.0.3",
     "gatsby": "^5.4.2",
