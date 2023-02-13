@@ -1,14 +1,14 @@
 @import 'vars';
 
-$border-color: var(--gray-50);
+$border-color: var(--blue-70);
 
 .container {
   --col-count: 10;
   @include bp(s) {
-    --col-count: 18;
+    --col-count: 14;
   }
   @include bp(m) {
-    --col-count: 24;
+    --col-count: 22;
   }
 }
 .items {
@@ -24,15 +24,14 @@ $border-color: var(--gray-50);
   }
 }
 .item {
-  font-size: var(--ms--1);
+  font-size: calc(var(--ms--1) * 0.85);
   background: white;
   border-collapse: collapse;
   font-family: var(--mono);
   border-right: 1px solid $border-color;
   border-bottom: 1px solid $border-color;
   margin-bottom: 0 !important;
-  padding: 0.1em;
-  letter-spacing: 0.015em;
+  letter-spacing: 0.03em;
   display: flex;
   user-select: none;
   align-items: center;
@@ -41,6 +40,10 @@ $border-color: var(--gray-50);
   color: rgba(black, 0.95);
   font-weight: 100;
   position: relative;
+  padding: 0.3em;
+  @include bp(m) {
+    padding: 0.2em;
+  }
   &:hover,
   &:focus-visible {
     box-shadow: 0px 0 0 2px inset rgba(black, 0.95);

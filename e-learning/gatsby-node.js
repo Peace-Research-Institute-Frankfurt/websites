@@ -94,15 +94,15 @@ exports.createSchemaCustomization = async ({ getNode, getNodesByType, pathPrefix
     article: String
   }
   type CountriesJson implements Node {
-    cca2: String!
+    alpha3: String!
     article: Boolean
     name: CountriesJsonName
   }
   type InstitutionsJson implements Node {
-    members: [CountriesJson] @link(by: "cca2")
+    members: [CountriesJson] @link(by: "alpha3")
   }
   type TreatyParticipant {
-    country: CountriesJson @link(by: "cca2")
+    country: CountriesJson @link(by: "alpha3")
   }
   type TreatiesJson implements Node {
     participants: [TreatyParticipant]

@@ -12,7 +12,7 @@ export default function Map({ caption }) {
           name
           participants {
             country {
-              cca2
+              alpha2
             }
           }
         }

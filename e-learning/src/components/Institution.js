@@ -15,7 +15,7 @@ export default function Institution({ name }) {
           established(formatString: "DD MMMM YYYY")
           description
           members {
-            cca2
+            alpha3
             name {
               common
             }

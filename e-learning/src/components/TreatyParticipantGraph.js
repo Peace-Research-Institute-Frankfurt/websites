@@ -68,7 +68,7 @@ export default function TreatyParticipantGraph({ treaty }) {
     return (
       <li>
         <button
-          key={p.country.cca2}
+          key={p.country.alpha3}
           onMouseOver={(e) => onMouseOver(e, p)}
           onFocus={(e) => onMouseOver(e, p)}
           onMouseOut={onMouseOut}
@@ -77,7 +77,7 @@ export default function TreatyParticipantGraph({ treaty }) {
           data-status={status}
           className={`${styles.item} ${styles[status]}`}
         >
-          {p.country.cca2}
+          {p.country.alpha3}
         </button>
       </li>
     )
