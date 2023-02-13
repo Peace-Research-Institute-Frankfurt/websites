@@ -62,6 +62,7 @@ export default function Treaty({ name }) {
           <Chip>{memberCount} Member States</Chip>
         </ChipGroup>
         <p className={styles.description}>{treaty.description}</p>
+        <h3 className={styles.subtitle}>Current Participants</h3>
         <TreatyParticipantGraph treaty={treaty} />
       </Expandable>
     </section>

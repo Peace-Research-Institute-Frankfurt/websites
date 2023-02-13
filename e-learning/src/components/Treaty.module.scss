@@ -12,7 +12,12 @@
 }
 
 .title {
-  @extend %h3;
+  @extend %h2;
+  margin-top: 0;
+}
+.subtitle {
+  font-weight: 500;
+  margin-bottom: 0.5em;
   margin-top: 0;
 }
 
@@ -32,5 +37,5 @@
 }
 
 p.description {
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
 }
