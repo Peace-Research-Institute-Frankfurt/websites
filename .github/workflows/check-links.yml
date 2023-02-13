@@ -1,4 +1,4 @@
-name: [eLearning] Check links
+name: "[eLearning] Check links"
 
 on:
   workflow_dispatch:
