@@ -474,6 +474,13 @@
   },
   {
     "name": {
+      "common": "Guinea-Bissau"
+    },
+    "alpha2": "GW",
+    "alpha3": "GNB"
+  },
+  {
+    "name": {
       "common": "Equatorial Guinea"
     },
     "alpha2": "GQ",
@@ -1021,6 +1028,13 @@
   },
   {
     "name": {
+      "common": "Palestine"
+    },
+    "alpha2": "PS",
+    "alpha3": "PSE"
+  },
+  {
+    "name": {
       "common": "Qatar"
     },
     "alpha2": "QA",
@@ -1287,8 +1301,7 @@
   },
   {
     "name": {
-      "common": "United States",
-      "article": "The"
+      "common": "United States of America"
     },
     "alpha2": "US",
     "alpha3": "USA"

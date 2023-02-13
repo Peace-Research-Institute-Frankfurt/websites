@@ -31,17 +31,16 @@ try {
     // May as well get meta data from head
     const headTreaty = head[d.path[0]]
     const headCountry = headTreaty.participants[d.path[2]]
-    const headCountryData = countryData.find((el) => el.cca2 === headCountry.cca2)
+    const headCountryData = countryData.find((el) => el.alpha3 === headCountry.alpha3)
 
     const baseTreaty = base.find((el) => el.name === headTreaty.name)
-    const baseCountry = baseTreaty.participants.find((el) => el.cca2 === headCountry.cca2)
-    //   const baseCountryData = countryData.find((el) => el.cca2 === baseCountry.cca2)
+    const baseCountry = baseTreaty.participants.find((el) => el.alpha3 === headCountry.alpha3)
     let message = ''
     let eventMessages = []
     let countryMessage = ''
 
     if (d.op === 'add' && d.path.includes('participants') && d.path.length === 3) {
-      countryMessage = `Added participant: ${headCountryData?.name?.common || headCountry.cca2}`
+      countryMessage = `Added participant: ${headCountryData?.name?.common || headCountry.alpha3}`
       eventMessages = d.value.events.map((e) => `Added \`${e.type} on ${e.date}\` `)
     } else if (d.op === 'add' && d.path.includes('events') && d.path[4]) {
       message = `Added: \`${d.value.type} on ${d.value.date}\``
@@ -62,13 +61,13 @@ try {
       friendlyDiff.treaties.push({
         name: headTreaty.name,
         title: headTreaty.title,
-        countries: [{ cca2: headCountry.cca2, title: headCountryData.name.common, countryMessage: countryMessage, changes: eventMessages }],
+        countries: [{ alpha3: headCountry.alpha3, title: headCountryData.name.common, countryMessage: countryMessage, changes: eventMessages }],
       })
     } else {
-      const ci = friendlyDiff.treaties[ti].countries.findIndex((el) => el.cca2 === headCountry.cca2)
+      const ci = friendlyDiff.treaties[ti].countries.findIndex((el) => el.alpha3 === headCountry.alpha3)
       if (ci === -1) {
         friendlyDiff.treaties[ti].countries.push({
-          cca2: headCountry.cca2,
+          alpha3: headCountry.alpha3,
           title: headCountryData?.name?.common,
           countryMessage: countryMessage,
           changes: eventMessages,
@@ -84,11 +83,11 @@ try {
 
 let copy = ''
 friendlyDiff.treaties.forEach((treaty) => {
-  copy += `- **${treaty.shortTitle || treaty.title || treaty.name}**\n`
+  copy += `### ${treaty.shortTitle || treaty.title || treaty.name}\n`
   treaty.countries.forEach((country) => {
-    copy += `  - ${country.countryMessage || country.title || country.cca2}\n`
+    copy += `- ${country.countryMessage || country.title || country.alpha3}\n`
     country.changes.forEach((change) => {
-      copy += `    - ${change}\n`
+      copy += `  - ${change}\n`
     })
   })
 })

@@ -20,7 +20,7 @@ export default function Treaty({ name }) {
           scrapeURL
           participants {
             country {
-              cca2
+              alpha3
               name {
                 common
                 article
