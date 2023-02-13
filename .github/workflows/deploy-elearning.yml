@@ -1,4 +1,4 @@
-name: Deploy E-Learning
+name: "[eLearning] Build and deploy"
 
 on:
   # push:
@@ -25,11 +25,10 @@ jobs:
           cache: npm
       - name: Restore cache
         uses: actions/cache@v3
-        working-directory: ./e-learning/
         with:
           path: |
-            public
-            .cache
+            ./e-learning/public
+            ./e-learning/.cache
           key: ${{ runner.os }}-gatsby-build-${{ hashFiles('public') }}
           restore-keys: |
             ${{ runner.os }}-gatsby-build-
