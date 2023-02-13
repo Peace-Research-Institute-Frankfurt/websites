@@ -35,7 +35,6 @@ const nameSubs = {
   Congo: 'Republic of the Congo',
   "Côte d'Ivoire": 'Ivory Coast',
   'Czech Republic': 'Czechia',
-  'Democratic Republic of the Congo': 'DR Congo',
   'Holy See': 'Vatican City',
   'Iran (Islamic Republic of)': 'Iran',
   "Lao People's Democratic Republic": 'Laos',
