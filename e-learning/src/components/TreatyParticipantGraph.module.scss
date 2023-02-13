@@ -8,7 +8,7 @@ $border-color: var(--blue-70);
     --col-count: 14;
   }
   @include bp(m) {
-    --col-count: 20;
+    --col-count: 22;
   }
 }
 .items {
@@ -31,7 +31,6 @@ $border-color: var(--blue-70);
   border-right: 1px solid $border-color;
   border-bottom: 1px solid $border-color;
   margin-bottom: 0 !important;
-  padding: 0.2em;
   letter-spacing: 0.03em;
   display: flex;
   user-select: none;
@@ -41,6 +40,10 @@ $border-color: var(--blue-70);
   color: rgba(black, 0.95);
   font-weight: 100;
   position: relative;
+  padding: 0.3em;
+  @include bp(m) {
+    padding: 0.2em;
+  }
   &:hover,
   &:focus-visible {
     box-shadow: 0px 0 0 2px inset rgba(black, 0.95);
