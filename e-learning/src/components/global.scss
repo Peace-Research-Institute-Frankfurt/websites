@@ -47,7 +47,7 @@
   --blue-20: hsl(210, 35%, 80%);
   --blue-10: hsl(195, 20%, 96%);
   --yellow-50: hsl(49, 98%, 55%);
-  --yellow-40: hsl(49, 100%, 65%);
+  --yellow-40: hsl(49, 90%, 68%);
   --yellow-30: hsl(48, 60%, 70%);
   --yellow-20: hsl(49, 95%, 85%);
   --yellow-10: hsl(49, 90%, 93%);
@@ -125,7 +125,7 @@ body {
 .footnotes {
   @extend %caption;
   border-top: 2px solid var(--gray-20);
-  margin-top: 2em;
+  margin-top: 1em;
   padding-top: 2em;
   grid-column: 1 / 6;
   @include bp(m) {
@@ -173,5 +173,5 @@ body {
 }
 
 .data-footnote-backref {
-  font-family: monospaced;
+  display: none;
 }

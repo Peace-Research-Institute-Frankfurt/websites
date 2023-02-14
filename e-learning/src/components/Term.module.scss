@@ -22,8 +22,8 @@
   padding-bottom: 0.35rem;
   margin-bottom: 0.35rem;
   font-size: var(--ms-0);
-  border-bottom: 1px dotted black;
-  align-items: center;
+  border-bottom: 2px solid var(--gray-20);
+  align-items: flex-start;
 }
 
 .close {
@@ -50,6 +50,7 @@
 
 .title {
   display: block;
+  font-size: var(--ms-0);
   font-weight: 600;
   line-height: 1.1;
   font-style: normal;
