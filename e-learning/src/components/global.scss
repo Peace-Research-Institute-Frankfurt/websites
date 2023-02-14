@@ -30,7 +30,7 @@
 
 :root {
   --gray-10: #fafafa;
-  --gray-20: #ece9e9;
+  --gray-20: #eceae5;
   --gray-30: hsl(2, 5%, 75%);
   --gray-40: hsl(2, 1%, 40%);
   --gray-50: hsl(2, 2%, 30%);
@@ -40,12 +40,12 @@
   --blue-90: hsl(209, 22%, 7%);
   --blue-80: hsl(209, 25%, 15%);
   --blue-70: hsl(209, 35%, 25%);
-  --blue-60: hsl(209, 40%, 32%);
+  --blue-60: hsl(209, 45%, 40%);
   --blue-50: hsl(210, 55%, 55%);
   --blue-40: hsl(210, 55%, 60%);
   --blue-30: hsl(210, 45%, 75%);
   --blue-20: hsl(210, 35%, 80%);
-  --blue-10: hsl(195, 30%, 95%);
+  --blue-10: hsl(195, 20%, 96%);
   --yellow-50: hsl(49, 98%, 55%);
   --yellow-40: hsl(49, 100%, 65%);
   --yellow-30: hsl(48, 60%, 70%);
@@ -58,7 +58,7 @@
   --serif: 'GT Super', sans-serif;
   --mono: 'MDIO', serif;
   --ratio: 1.25; // Minor 3
-  --ms-0: clamp(0.95rem, calc(1.25vw + 0.3rem), 1.2rem);
+  --ms-0: clamp(0.95rem, calc(1.25vw + 0.3rem), 1.25rem);
   --ms--2: calc(var(--ms--1) / var(--ratio));
   --ms--1: calc(var(--ms-0) / var(--ratio));
   --ms-1: calc(var(--ms-0) * var(--ratio));
@@ -116,6 +116,7 @@ html {
 body {
   font-family: var(--sans);
   font-size: var(--ms-0);
+  color: var(--blue-90);
 }
 
 .gatsby-image-wrapper [data-main-image] {

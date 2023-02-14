@@ -148,9 +148,11 @@ const Chapter = ({ data, children }) => {
     <App>
       <article>
         <header className={ChapterStyles.header}>
-          <p className={ChapterStyles.eyebrow}>Learning Unit {data.unit.childMdx.frontmatter.order}</p>
-          <h1 className={ChapterStyles.title}>{frontmatter.title}</h1>
-          {frontmatter.intro && <p className={ChapterStyles.intro}>{frontmatter.intro}</p>}
+          <div className={ChapterStyles.headerCopy}>
+            <p className={ChapterStyles.eyebrow}>Learning Unit {data.unit.childMdx.frontmatter.order}</p>
+            <h1 className={ChapterStyles.title}>{frontmatter.title}</h1>
+            {frontmatter.intro && <p className={ChapterStyles.intro}>{frontmatter.intro}</p>}
+          </div>
         </header>
         <StickyHeader unit={data.unit} post={data.post} next={next} prev={prev} />
         <div className={ChapterStyles.body}>

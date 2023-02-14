@@ -22,12 +22,13 @@
   font-feature-settings: 'onum' 1, 'liga' 1;
   text-rendering: optimizeLegibility;
   font-weight: 300;
-  line-height: 1.35;
-  letter-spacing: -0.015em;
+  line-height: 1.375;
+  letter-spacing: 0.001em;
+  word-spacing: 0.001em;
   font-size: var(--ms-0);
 
   p {
-    margin-bottom: 0.5em;
+    margin-bottom: 0.85em;
   }
   & > h2 {
     @extend %h2;
@@ -52,7 +53,7 @@
 
 %h2 {
   font-size: var(--ms-2);
-  letter-spacing: -0.025em;
+  letter-spacing: -0.02em;
   line-height: 1.05;
   font-weight: 600;
   margin-top: 1em;
@@ -68,14 +69,11 @@
 
 %h3 {
   font-size: var(--ms-1);
+  letter-spacing: -0.01em;
   font-weight: 500;
   line-height: 1.1;
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
-  & + table,
-  & + h4 {
-    margin-top: 0.25rem;
-  }
+  margin-top: 1em;
+  margin-bottom: 0.125em;
 }
 
 %h4 {
@@ -92,11 +90,10 @@
   font-size: var(--ms--1);
   line-height: 1.25;
   font-weight: 400;
-  letter-spacing: 0.001em;
 }
 
 %grid {
   display: grid;
-  grid-template-columns: 1fr minmax(auto, 5rem) minmax(auto, 48rem) minmax(auto, 5rem) 1fr;
+  grid-template-columns: 1fr minmax(auto, 5rem) minmax(auto, 45rem) minmax(auto, 5rem) 1fr;
   column-gap: 2rem;
 }

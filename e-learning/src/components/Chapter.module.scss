@@ -3,59 +3,55 @@
 .header {
   @extend %grid;
   padding: var(--padding);
-  background: var(--blue-10);
-  margin: var(--padding);
-  border-top: 10px solid var(--blue-50);
-  border-radius: var(--br);
-  margin-top: 3rem;
+  background: var(--gray-10);
   color: var(--blue-90);
+  margin: var(--padding);
+  margin-top: 2em;
   padding-top: 2rem;
   padding-bottom: 2rem;
   margin-bottom: 0;
   @include bp(m) {
-    padding-top: 8rem;
-    padding-bottom: 8rem;
+    padding-top: 4em;
+    padding-bottom: 6em;
+  }
+  @include bp(l) {
+    padding-top: 6em;
+    padding-bottom: 8em;
+  }
+}
+
+.header-copy {
+  grid-column: 1 / 6;
+  display: flex;
+  flex-flow: column;
+  gap: var(--ms--1);
+  @include bp(m) {
+    grid-column: 3 / 4;
   }
 }
 
 .eyebrow {
-  grid-column: 1 / 6;
+  @extend %caption;
   display: inline-block;
-  justify-self: center;
-  font-size: var(--ms-0);
-  color: var(--blue-80);
-  margin-bottom: 1rem;
-  @include bp(m) {
-    margin-bottom: 1.5rem;
-  }
+  align-self: flex-start;
+  padding: 0.1em 0.35em;
+  padding-bottom: 0.2em;
+  background: var(--yellow-50);
 }
 
 .title {
-  grid-column: 1 / 6;
-  font-family: var(--serif);
   font-size: var(--ms-3);
   line-height: 1;
-  font-weight: 500;
+  font-weight: 900;
   letter-spacing: -0.02em;
-  text-align: center;
-  margin-bottom: 1rem;
   @include bp(m) {
-    margin-bottom: 1.5rem;
+    line-height: 0.95;
     font-size: var(--ms-5);
     letter-spacing: -0.04em;
-    grid-column: 1 / 6;
-    padding: 0 2em;
   }
 }
 .intro {
   @extend %copy-large;
-  grid-column: 1 / 6;
-  margin-top: 0.25em;
-  text-align: center;
-  opacity: 0.95;
-  @include bp(m) {
-    grid-column: 2 / 5;
-  }
 }
 
 .actions {
@@ -101,9 +97,6 @@
   @extend %grid;
   padding: var(--padding);
   padding-bottom: 6rem;
-  @include bp(m) {
-    padding-top: 3rem;
-  }
   p,
   ol,
   ul,
@@ -257,6 +250,7 @@
 .toc-container {
   grid-column: 1/6;
   margin-bottom: 1.5rem;
+  max-width: 20rem;
   @include bp(m) {
     grid-column: 3/6;
   }
@@ -265,7 +259,7 @@
     position: sticky;
     top: 4rem;
     grid-row: 1 / 2;
-    grid-column: 1/2;
+    grid-column: 1 / 3;
   }
 }
 

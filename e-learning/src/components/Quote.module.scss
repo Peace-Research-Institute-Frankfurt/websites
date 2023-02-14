@@ -1,7 +1,7 @@
 @import 'vars';
 
 blockquote {
-  margin-top: 1.5em;
+  margin-top: 1.75em;
   margin-bottom: 1em;
   p:last-child {
     margin-bottom: 0;
@@ -10,9 +10,10 @@ blockquote {
 
 .speech {
   .text {
-    font-size: var(--ms-1);
+    @extend %copy-large;
     font-weight: 400;
     font-style: italic;
+    letter-spacing: -0.01em;
 
     p:before {
       content: '‘';
@@ -31,10 +32,13 @@ blockquote {
     background-color: var(--gray-20);
     font-weight: 400;
     font-family: var(--mono);
-    padding: 0 1rem;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
-    font-size: 0.95em;
+    padding: 0 1em;
+    font-size: 0.9em;
+    margin-bottom: 1.25em;
+    @include bp(m) {
+      margin-bottom: 2em;
+      font-size: 0.9em;
+    }
     &:before,
     &:after {
       z-index: -100;
@@ -43,23 +47,17 @@ blockquote {
       right: 0;
       left: 0;
       height: 2rem;
-      background-size: 100% 100%;
+      background-size: 100%;
       background-repeat: no-repeat;
+      background-position: top center;
+      background-image: url('../assets/rip.svg');
     }
     &:before {
-      top: -2rem;
-      background-image: url('../assets/rip.svg');
-      background-position: bottom left;
+      top: -1.35em;
     }
     &:after {
-      bottom: -2rem;
+      bottom: -1.35em;
       transform: rotate(180deg);
-      background-image: url('../assets/rip.svg');
-      background-position: top center;
-    }
-
-    @include bp(m) {
-      font-size: 0.9em;
     }
   }
 
