@@ -14,15 +14,13 @@
   z-index: 1000;
   text-align: center;
   font-size: var(--ms-1);
+  letter-spacing: -0.02em;
   font-feature-settings: 'tnum';
   border-bottom: 1px solid transparent;
   padding: 0.4rem var(--padding);
   background: rgba(255, 255, 255, calc(var(--scroll) * 0.01 - 0.5));
   padding-left: 0.75rem; // optical adjustment
   border-bottom: 1px solid rgba(0, 0, 0, calc(var(--scroll) * 0.01 - 0.5));
-  @include bp(m) {
-    font-size: var(--ms-0);
-  }
 }
 
 .stuck {

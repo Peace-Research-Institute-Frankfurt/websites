@@ -63,6 +63,7 @@ export const query = graphql`
             title
             order
             intro
+            color
           }
         }
       }

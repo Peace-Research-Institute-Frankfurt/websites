@@ -3,8 +3,14 @@ import React from 'react'
 import * as styles from './Pagination.module.scss'
 
 export default function Pagination({ next, previous }) {
+  let containerStyles = {}
+  if (next) {
+    containerStyles = {
+      '--next-color': next.childMdx.frontmatter.color || 'lightgray',
+    }
+  }
   return (
-    <nav className={styles.container}>
+    <nav className={styles.container} style={containerStyles}>
       {next && next.childMdx.frontmatter.title && (
         <Link to={`../${next.childMdx.fields.slug}`} className={styles.next} rel="next">
           <span className={styles.label}>Nächstes Kapitel</span>

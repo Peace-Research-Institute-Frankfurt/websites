@@ -248,6 +248,7 @@
   }
   @include bp(m) {
     hyphens: none;
+    font-weight: 700;
     line-height: 0.9;
   }
   @include bp(l) {
