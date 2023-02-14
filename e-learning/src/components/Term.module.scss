@@ -49,11 +49,11 @@
 }
 
 .title {
-  display: block;
-  font-size: var(--ms-0);
-  font-weight: 600;
-  line-height: 1.1;
+  @extend %h4;
   font-style: normal;
+  margin: 0;
+  line-height: 1.1;
+  display: block;
 }
 
 .description {
@@ -70,5 +70,5 @@
   padding-top: 0.9em;
   width: 100%;
   hyphens: auto;
-  max-width: 25rem;
+  max-width: 28rem;
 }

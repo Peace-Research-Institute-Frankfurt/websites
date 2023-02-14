@@ -45,22 +45,24 @@
 }
 
 .large {
-  .image {
-    grid-column: 1 / 6;
-    @include bp(m) {
-      grid-column: 2 / 5;
-    }
+  grid-column: 1 / 6;
+  text-align: center;
+  .captions {
+    margin: 0 auto;
+  }
+  @include bp(m) {
+    grid-column: 2 / 5;
   }
 }
 .medium {
+  grid-column: 1 / 6;
+  @include bp(m) {
+    grid-column: 3 / 4;
+  }
   .image {
-    grid-column: 1 / 6;
     max-height: 80vh;
     width: auto;
     max-width: 100%;
-    @include bp(m) {
-      grid-column: 3 / 4;
-    }
   }
 }
 

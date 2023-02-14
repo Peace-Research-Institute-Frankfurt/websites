@@ -14,7 +14,7 @@ export default function LearningUnitHeader({ image, alt, order, title, intro, st
         <GatsbyImage className={styles.headerImage} image={image} alt={alt} />
         <div className={styles.headerCopy} style={headerStyles}>
           <div>
-            <p className={styles.headerEyebrow}>Unit {order}</p>
+            <p className={styles.headerEyebrow}>Learning Unit {order}</p>
             <h1 className={styles.headerTitle}>{title}</h1>
             <p className={styles.headerIntro}>{intro}</p>
             <Link className={styles.headerCta} to={startLink}>

@@ -6,20 +6,24 @@
   right: var(--padding);
   left: var(--padding);
   top: 0;
-  z-index: 1000;
+  z-index: 5000;
   align-content: stretch;
   transition: var(--fast);
   font-weight: 500;
-  background: white;
-  height: 2.75em;
-  border-bottom: 1px solid var(--blue-90);
+  height: 3em;
   @include bp(m) {
+    height: 3.25em;
     font-size: var(--ms--1);
   }
   label {
     position: absolute;
     font-size: 0;
   }
+}
+
+.status-active {
+  background: white;
+  border-bottom: 1px solid var(--blue-90);
 }
 
 .status-location {

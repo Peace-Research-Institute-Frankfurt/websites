@@ -1,14 +1,14 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
-import * as LuStyles from './LearningUnit.module.scss'
 import { GatsbyImage, getImage, getSrc } from 'gatsby-plugin-image'
+import MarkdownRenderer from 'react-markdown-renderer'
 import App from './App'
 import Meta from './Meta'
-import SiteHeader from './SiteHeader'
+import StickyHeader from './StickyHeader'
+import LearningUnitHeader from './LearningUnitHeader'
 import SiteFooter from './SiteFooter'
 import useLocalStorage from './useLocalStorage'
-import LearningUnitHeader from './LearningUnitHeader'
-import MarkdownRenderer from 'react-markdown-renderer'
+import * as LuStyles from './LearningUnit.module.scss'
 
 export const query = graphql`
   query ($id: String, $lu_id: String) {
@@ -128,6 +128,7 @@ const LearningUnit = ({ data, context }) => {
 
   return (
     <App>
+      <StickyHeader unit={data.post} />
       <article className={LuStyles.container}>
         <LearningUnitHeader
           frontmatter={frontmatter}
