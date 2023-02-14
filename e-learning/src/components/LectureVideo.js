@@ -15,7 +15,7 @@ export default function LectureVideo({ lu, vl, provider, children }) {
       <Tabs>
         <Tab title="Video">
           <div className={styles.iframeContainer}>
-            <iframe title={`lecture-${vl}`} src={src} loading="lazy" allowFullScreen></iframe>
+            <iframe frameBorder="0" title={`lecture-${vl}`} src={src} loading="lazy" allowFullScreen></iframe>
           </div>
         </Tab>
         <Tab title="Transcript">{children}</Tab>

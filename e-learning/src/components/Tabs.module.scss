@@ -50,10 +50,11 @@
   position: relative;
   button {
     display: block;
-    padding: 0.3em 0.75em;
+    padding: 0.3em 0.65em;
     padding-bottom: 0.4em;
     cursor: pointer;
     color: var(--gray-70);
+    font-size: var(--ms--1);
     text-decoration: none;
     overflow: hidden;
     text-transform: capitalize;

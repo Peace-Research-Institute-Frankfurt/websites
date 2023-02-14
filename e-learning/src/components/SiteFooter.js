@@ -13,7 +13,6 @@ export default function SiteFooter() {
   `)
   return (
     <footer className={styles.container}>
-      <FundingLogo className={styles.funding} />
       <nav className={styles.nav}>
         <ul>
           <li>
@@ -38,6 +37,8 @@ export default function SiteFooter() {
         produced by PRIF with financial assistance of the European Union. The contents of individual learning units are the sole responsibility of the
         respective authors and don't necessariy reflect the position of the European Union.
       </p>
+      <FundingLogo className={styles.funding} />
+
       <p className={styles.meta}>Built {data.meta.buildTime}</p>
     </footer>
   )

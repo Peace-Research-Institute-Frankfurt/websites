@@ -7,12 +7,12 @@
   left: var(--padding);
   top: 0;
   z-index: 1000;
-  border-bottom: 1px solid var(--blue-90);
   align-content: stretch;
   transition: var(--fast);
   font-weight: 500;
   background: white;
   height: 2.75em;
+  border-bottom: 1px solid var(--blue-90);
   @include bp(m) {
     font-size: var(--ms--1);
   }

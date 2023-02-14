@@ -179,9 +179,8 @@ const Chapter = ({ data, children }) => {
             )}
             {prev && (
               <>
-                <span className={ChapterStyles.paginationLabel}>Back</span>
                 <Link className={ChapterStyles.previous} to={`../${prev.childMdx.fields.slug}`}>
-                  <span>{prev.childMdx.frontmatter.title}</span>
+                  <span>Previous: {prev.childMdx.frontmatter.title}</span>
                 </Link>
               </>
             )}

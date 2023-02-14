@@ -1,9 +1,5 @@
 @import 'vars';
 
-.container {
-  display: contents;
-}
-
 .credit {
   color: var(--gray-40);
   font-weight: 400;
@@ -31,6 +27,7 @@
 }
 
 .full {
+  display: contents;
   .image {
     grid-column: 1 / 6;
     @include bp(l) {
