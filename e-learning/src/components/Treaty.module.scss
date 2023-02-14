@@ -16,7 +16,7 @@
   margin-top: 0;
 }
 .subtitle {
-  font-weight: 500;
+  @extend %h3;
   margin-bottom: 0.5em;
   margin-top: 0;
 }

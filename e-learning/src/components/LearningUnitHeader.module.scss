@@ -2,7 +2,7 @@
 
 .header {
   margin-bottom: var(--padding);
-  background: var(--blue-10);
+  background: var(--blue-20);
   @include bp(m) {
     padding: var(--padding);
     padding-top: 2.75em;

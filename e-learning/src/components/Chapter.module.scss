@@ -3,7 +3,7 @@
 .header {
   @extend %grid;
   padding: var(--padding);
-  background: var(--gray-10);
+  background: var(--blue-20);
   color: var(--blue-90);
   margin: var(--padding);
   border-radius: var(--br);
@@ -13,7 +13,7 @@
   margin-bottom: 0;
   @include bp(m) {
     padding-top: 4em;
-    padding-bottom: 6em;
+    padding-bottom: 4.5em;
   }
 }
 
@@ -187,7 +187,7 @@
 }
 
 .next {
-  background: var(--gray-10);
+  background: var(--blue-20);
   padding: 1em;
   margin-bottom: 1rem;
   text-decoration: none !important;
