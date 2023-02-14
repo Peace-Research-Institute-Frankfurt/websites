@@ -55,18 +55,23 @@
   @include bp(m) {
     flex-basis: 50%;
     min-height: 85vh;
+    padding-right: 4em;
   }
 }
 .header-image {
   flex-grow: 0;
   flex-shrink: 1;
-  background: rgba(white, 0.2);
+  background: var(--blue-40);
   @include bp(m) {
     bottom: 0;
     right: 0;
     top: 0;
     position: absolute !important;
     left: 40%;
+    img {
+      filter: grayscale(1);
+      mix-blend-mode: multiply;
+    }
   }
 }
 
@@ -100,7 +105,7 @@
 }
 
 .header-cta {
-  background: var(--blue-80);
+  background: var(--blue-90);
   color: white;
   display: inline-flex;
   padding: 0.45em 0.75em;
@@ -111,7 +116,7 @@
   align-items: flex-end;
   padding-right: 0.5em;
   transition: var(--fast);
-  font-size: var(--ms-1);
+  font-size: var(--ms-2);
   align-self: flex-start;
   svg {
     width: 0.9em;
@@ -119,18 +124,5 @@
   &:hover,
   &:focus-visible {
     background-color: var(--blue-90);
-  }
-}
-
-.header-bylines {
-  display: flex;
-  gap: 2rem;
-  margin-top: 1rem;
-  padding-top: 1rem;
-  flex-flow: row;
-  flex-wrap: wrap;
-  img {
-    filter: grayscale(1) contrast(1.2);
-    mix-blend-mode: multiply;
   }
 }

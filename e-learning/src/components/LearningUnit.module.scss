@@ -96,12 +96,12 @@
     background: white;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    border-left: 2px solid var(--gray-20);
-    border-top: 2px solid var(--gray-20);
+    border-left: 2px solid var(--gray-30);
+    border-top: 2px solid var(--gray-30);
   }
   li {
-    border-bottom: 2px solid var(--gray-20);
-    border-right: 2px solid var(--gray-20);
+    border-bottom: 2px solid var(--gray-30);
+    border-right: 2px solid var(--gray-30);
     grid-column: span 2;
     @include bp(m) {
       grid-column: span 1;

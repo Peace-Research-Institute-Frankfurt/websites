@@ -21,7 +21,7 @@ export default function StickyHeader({ post, unit, next, prev }) {
       </Link>
       <div className={styles.statusLocation}>
         {unit && (
-          <Link to={`../#chapters`} className={styles.unit}>
+          <Link to={`../`} className={styles.unit}>
             Unit {unit.childMdx.frontmatter.order}
           </Link>
         )}

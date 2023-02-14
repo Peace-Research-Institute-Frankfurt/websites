@@ -40,9 +40,10 @@
 
 .unit {
   @extend %mono;
-  background: var(--yellow-50);
-  padding: 0.25em 0.5em;
-  padding-top: 0.35em;
+  background: var(--blue-60);
+  color: white;
+  padding: 0.3em 0.6em;
+  padding-top: 0.4em;
   line-height: 1;
   opacity: 0;
   @include bp(m) {
@@ -56,7 +57,7 @@
 
 .post {
   transform: translateY(5px);
-  padding-left: 1em;
+  padding-left: 0.75em;
   opacity: 0;
   transition: var(--fast);
   .status-active & {

@@ -248,6 +248,9 @@
     position: sticky;
     top: 4rem;
     grid-row: 1 / 2;
+    grid-column: 4 / 6;
+  }
+  @include bp(xl) {
     grid-column: 5 / 6;
   }
 }
