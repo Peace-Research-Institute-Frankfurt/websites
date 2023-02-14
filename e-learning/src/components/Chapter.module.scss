@@ -3,17 +3,15 @@
 .header {
   @extend %grid;
   padding: var(--padding);
-  background: var(--gray-10);
+  background: var(--blue-10);
   color: var(--blue-90);
-  margin: var(--padding);
+  margin: 0 var(--padding);
   border-radius: var(--br);
-  margin-top: 2.75em;
-  padding-top: 2rem;
   padding-bottom: 2rem;
   margin-bottom: 0;
   @include bp(m) {
-    padding-top: 0;
-    padding-bottom: 6em;
+    padding-top: 6.75em;
+    padding-bottom: 7em;
   }
 }
 
@@ -25,16 +23,6 @@
   @include bp(m) {
     grid-column: 3 / 4;
   }
-}
-
-.eyebrow {
-  @extend %mono;
-  display: inline-block;
-  align-self: flex-start;
-  padding: 0.2em 0.45em;
-  padding-bottom: 0.1em;
-  background: var(--yellow-50);
-  margin-bottom: 6em;
 }
 
 .title {

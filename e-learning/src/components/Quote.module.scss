@@ -56,14 +56,13 @@ blockquote {
   }
 
   p {
-    margin-bottom: 0.25em;
-    word-spacing: -0.05em;
+    margin-bottom: 0.75em;
   }
 
   strong {
-    background: var(--yellow-50);
+    background: rgb(255, 226, 98);
     font-weight: normal;
-    padding: 0.1rem 0.3rem;
+    padding: 0em 0.3rem;
     border-radius: 2px;
     margin: -0.4rem;
     mix-blend-mode: multiply;

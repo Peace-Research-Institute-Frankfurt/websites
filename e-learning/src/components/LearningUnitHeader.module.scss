@@ -1,13 +1,8 @@
 @import 'vars';
 
 .header {
-  margin-bottom: var(--padding);
-  background: var(--blue-20);
-  @include bp(m) {
-    padding: var(--padding);
-    padding-top: 2.75em;
-    margin-bottom: var(--padding);
-  }
+  padding: var(--padding);
+  padding-top: 0;
 }
 
 .inner {
@@ -53,10 +48,10 @@
   justify-content: space-between;
   padding: var(--padding);
   flex-grow: 0;
-  background: var(--blue-90);
+  background: var(--blue-60);
   position: relative;
   z-index: 1000;
-  color: var(--gray-30);
+  color: rgba(white, 0.85);
   @include bp(m) {
     flex-basis: 50%;
     min-height: 85vh;
@@ -98,7 +93,6 @@
 .header-intro {
   line-height: 1.3;
   margin-bottom: 1.5rem;
-  color: var(--gray-30);
   font-size: var(--ms-1);
   @include bp(m) {
     margin-bottom: 2rem;
@@ -124,7 +118,7 @@
   }
   &:hover,
   &:focus-visible {
-    background-color: var(--blue-70);
+    background-color: var(--blue-90);
   }
 }
 

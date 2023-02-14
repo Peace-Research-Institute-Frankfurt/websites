@@ -24,7 +24,7 @@ export default function Tooltip({ styles, active, position, children, id, target
     const padding = 10
     const xClamped = clamp(padding, tr.x + tr.width / 2 - cr.width / 2, window.innerWidth - cr.width - tr.width / 2 - padding)
     let yClamped = 0
-    if (tr.y - padding < cr.height + padding) {
+    if (tr.y - padding < cr.height + 55) {
       yClamped = tr.y + tr.height + cr.height + padding
       arrowClass = styles.arrowTop
     } else {

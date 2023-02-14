@@ -1,13 +1,12 @@
 @import 'vars';
 
 .container {
-  background: var(--yellow-20);
+  background: var(--blue-20);
   cursor: pointer;
   text-align: left;
   font-weight: 500;
-  padding: 0 0.1em;
+  padding: 0 0.2em;
   transition: var(--fast);
-  border-radius: 2px;
   outline: 1px solid transparent;
   white-space: nowrap;
   &:hover,

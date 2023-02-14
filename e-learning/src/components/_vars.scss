@@ -55,9 +55,9 @@
 %mono {
   font-family: var(--mono);
   font-size: var(--mono-size);
-  letter-spacing: -0.01em;
-  word-spacing: -0.02em;
-  line-height: 1.4;
+  letter-spacing: -0.015em;
+  word-spacing: -0.025em;
+  line-height: 1.45;
 }
 
 %h2 {
@@ -83,6 +83,10 @@
   line-height: 1.1;
   margin-top: 1em;
   margin-bottom: 0.125em;
+  & + h4,
+  & + table {
+    margin-top: 0.25rem;
+  }
 }
 
 %h4 {

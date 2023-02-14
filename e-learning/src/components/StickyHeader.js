@@ -20,9 +20,12 @@ export default function StickyHeader({ post, unit, next, prev }) {
         EUNPDC eLearning
       </Link>
       <div className={styles.statusLocation}>
-        <Link to={`../#chapters`} className={styles.statusUnit}>
-          Unit {unit.childMdx.frontmatter.order} {post && <>&middot; {post.childMdx.frontmatter.title}</>}
-        </Link>
+        {unit && (
+          <Link to={`../#chapters`} className={styles.unit}>
+            Unit {unit.childMdx.frontmatter.order}
+          </Link>
+        )}
+        {post && <span className={styles.post}>{post.childMdx.frontmatter.title}</span>}
       </div>
       <div className={styles.progress}>
         <div style={{ width: `${scrollProgress * 100}%` }} className={styles.progressInner}></div>

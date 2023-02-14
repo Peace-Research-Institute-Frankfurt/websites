@@ -128,7 +128,7 @@ const LearningUnit = ({ data, context }) => {
 
   return (
     <App>
-      <StickyHeader unit={data.post} />
+      <StickyHeader />
       <article className={LuStyles.container}>
         <LearningUnitHeader
           frontmatter={frontmatter}

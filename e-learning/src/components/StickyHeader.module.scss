@@ -2,18 +2,20 @@
 
 .status {
   @extend %grid;
-  position: fixed;
-  right: var(--padding);
-  left: var(--padding);
+  position: sticky;
+  margin-right: var(--padding);
+  margin-left: var(--padding);
   top: 0;
   z-index: 5000;
   align-content: stretch;
   transition: var(--fast);
   font-weight: 500;
   height: 3em;
+  border-bottom: 1px solid transparent;
+  background: white;
   @include bp(m) {
-    height: 3.25em;
-    font-size: var(--ms--1);
+    height: 3em;
+    font-size: 1.1rem;
   }
   label {
     position: absolute;
@@ -22,7 +24,6 @@
 }
 
 .status-active {
-  background: white;
   border-bottom: 1px solid var(--blue-90);
 }
 
@@ -37,16 +38,30 @@
   }
 }
 
-.status-unit {
-  text-underline-offset: 0.15em;
+.unit {
+  @extend %mono;
+  background: var(--yellow-50);
+  padding: 0.25em 0.5em;
+  padding-top: 0.35em;
+  line-height: 1;
   opacity: 0;
-  transition: var(--fast);
   @include bp(m) {
     opacity: 1;
   }
   &:hover,
   &:focus-visible {
     text-decoration: underline;
+  }
+}
+
+.post {
+  transform: translateY(5px);
+  padding-left: 1em;
+  opacity: 0;
+  transition: var(--fast);
+  .status-active & {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
