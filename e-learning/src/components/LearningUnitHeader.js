@@ -17,11 +17,10 @@ export default function LearningUnitHeader({ image, alt, order, title, intro, st
             <p className={styles.headerEyebrow}>Learning Unit {order}</p>
             <h1 className={styles.headerTitle}>{title}</h1>
             <p className={styles.headerIntro}>{intro}</p>
-            <Link className={styles.headerCta} to={startLink}>
-              Start <ArrowRight />
-            </Link>
           </div>
-          <ul className={styles.headerBylines}>{bylines}</ul>
+          <Link className={styles.headerCta} to={startLink}>
+            Start <ArrowRight />
+          </Link>
         </div>
       </div>
     </header>

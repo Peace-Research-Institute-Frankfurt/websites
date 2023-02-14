@@ -23,14 +23,13 @@
   text-rendering: optimizeLegibility;
   font-weight: 300;
   line-height: 1.375;
-  letter-spacing: 0.001em;
   word-spacing: 0.001em;
   font-size: var(--ms-0);
   a {
     text-decoration: underline;
   }
   p {
-    margin-bottom: 0.85em;
+    margin-bottom: 0.65em;
   }
   & > h2 {
     @extend %h2;
