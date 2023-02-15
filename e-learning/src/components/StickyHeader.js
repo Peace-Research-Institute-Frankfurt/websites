@@ -14,7 +14,7 @@ import * as styles from './StickyHeader.module.scss'
 
 export default function StickyHeader({ post, unit, next, prev, bookmarks, setBookmarks }) {
   const scrollPosition = useScrollPosition()
-  const [bookmarksActive, setBookmarksActive] = useState(true)
+  const [bookmarksActive, setBookmarksActive] = useState(false)
 
   let scrollProgress = 0
   if (typeof window !== 'undefined') {
@@ -22,9 +22,12 @@ export default function StickyHeader({ post, unit, next, prev, bookmarks, setBoo
   }
 
   const showStatusClass = scrollPosition.y > 10 ? styles.statusActive : ''
-  const bookmarkIndex = bookmarks.findIndex((el) => {
-    return el.id === post.id
-  })
+  let bookmarkIndex = 0
+  if (post) {
+    bookmarkIndex = bookmarks.findIndex((el) => {
+      return el.id === post.id
+    })
+  }
   function toggleBookmark() {
     setBookmarks((prevBookmarks) => {
       if (bookmarkIndex === -1) {
@@ -71,13 +74,15 @@ export default function StickyHeader({ post, unit, next, prev, bookmarks, setBoo
             </Link>
           )}
         </nav>
-        <Button
-          priority="secondary"
-          label={bookmarkIndex === -1 ? 'Add bookmark' : 'Remove bookmark'}
-          hideLabel={true}
-          onClick={toggleBookmark}
-          icon={bookmarkIndex === -1 ? <BookmarkOutline /> : <BookmarkFilled />}
-        ></Button>
+        {post && (
+          <Button
+            priority="secondary"
+            label={bookmarkIndex === -1 ? 'Add bookmark' : 'Remove bookmark'}
+            hideLabel={true}
+            onClick={toggleBookmark}
+            icon={bookmarkIndex === -1 ? <BookmarkOutline /> : <BookmarkFilled />}
+          ></Button>
+        )}
         <Button
           label="Bookmarks"
           priority="secondary"
