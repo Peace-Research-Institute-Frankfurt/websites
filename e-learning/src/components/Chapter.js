@@ -4,7 +4,7 @@ import { graphql, Link } from 'gatsby'
 import { getSrc } from 'gatsby-plugin-image'
 import React from 'react'
 import App from './App'
-import Button from './Button'
+import Button from './ButtonAdapter'
 import { Embed } from './Embed'
 import FigureAdapter from './FigureAdapter'
 import Institution from './Institution'
@@ -122,31 +122,12 @@ const Chapter = ({ data, children }) => {
   const frontmatter = data.post.childMdx.frontmatter
   const [bookmarks, setBookmarks] = useLocalStorage('elearning-bookmarks', [])
 
-  const bookmarkIndex = bookmarks.findIndex((el) => {
-    return el.id === data.post.id
-  })
   const currentIndex = data.chapters.nodes.findIndex((el) => {
     return el.childMdx.frontmatter.order === frontmatter.order
   })
 
   const next = data.chapters.nodes[currentIndex + 1]
   const prev = data.chapters.nodes[currentIndex - 1]
-
-  function toggleBookmark() {
-    console.log(bookmarks)
-    setBookmarks((prevBookmarks) => {
-      if (bookmarkIndex === -1) {
-        const bookmark = {
-          id: data.post.id,
-        }
-        return [...prevBookmarks, bookmark]
-      } else {
-        return prevBookmarks.filter((el) => {
-          return el.id !== data.post.id
-        })
-      }
-    })
-  }
 
   return (
     <App>
@@ -156,9 +137,6 @@ const Chapter = ({ data, children }) => {
           <div className={ChapterStyles.headerCopy}>
             <h1 className={ChapterStyles.title}>{frontmatter.title}</h1>
             {frontmatter.intro && <p className={ChapterStyles.intro}>{frontmatter.intro}</p>}
-            <div className={ChapterStyles.headerActions}>
-              <button onClick={toggleBookmark}>{bookmarkIndex === -1 ? 'Bookmark' : 'Remove bookmark'}</button>
-            </div>
           </div>
         </header>
         <div className={ChapterStyles.body}>

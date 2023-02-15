@@ -68,6 +68,14 @@
   }
 }
 
+.actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+  grid-column: 4 / 6;
+  align-items: center;
+}
+
 .status-pagination {
   display: none;
   font-weight: 300;
@@ -77,12 +85,22 @@
     justify-content: flex-end;
     align-items: center;
     grid-column: 5/6;
+    gap: 0.1rem;
   }
-  a {
-    display: block;
-    &:first-of-type {
-      margin-right: 1rem;
-    }
+}
+
+.pagination-link {
+  font-size: 0;
+  padding: 0.2rem;
+  border-radius: var(--br);
+  border: 1px solid transparent;
+  transition: var(--fast);
+  &:hover,
+  &:focus-visible {
+    border: 1px solid var(--blue-80);
+  }
+  svg {
+    height: 1.4rem;
   }
 }
 
@@ -150,12 +168,4 @@
 .bookmarks-container-active {
   opacity: 1;
   transform: translateY(5px);
-}
-
-.actions {
-  display: flex;
-  gap: 1rem;
-  justify-content: flex-end;
-  grid-column: 4 / 6;
-  align-items: center;
 }

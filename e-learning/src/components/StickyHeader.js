@@ -2,9 +2,14 @@ import { Link } from 'gatsby'
 import React, { useState } from 'react'
 import useScrollPosition from '../../../shared/hooks/useScrollPosition'
 
-import Button from './Button'
+import Button from './ButtonAdapter'
 import BookmarksList from './BookmarksList'
 import BookIcon from '../assets/icons/favicon.svg'
+import ArrowLeft from '../assets/icons/arrow-left.svg'
+import ArrowRight from '../assets/icons/arrow-right.svg'
+import BookmarkOutline from '../assets/icons/bookmark-add.svg'
+import BookmarkFilled from '../assets/icons/bookmark-added.svg'
+
 import * as styles from './StickyHeader.module.scss'
 
 export default function StickyHeader({ post, unit, next, prev, bookmarks, setBookmarks }) {
@@ -17,7 +22,23 @@ export default function StickyHeader({ post, unit, next, prev, bookmarks, setBoo
   }
 
   const showStatusClass = scrollPosition.y > 10 ? styles.statusActive : ''
-
+  const bookmarkIndex = bookmarks.findIndex((el) => {
+    return el.id === post.id
+  })
+  function toggleBookmark() {
+    setBookmarks((prevBookmarks) => {
+      if (bookmarkIndex === -1) {
+        const bookmark = {
+          id: post.id,
+        }
+        return [...prevBookmarks, bookmark]
+      } else {
+        return prevBookmarks.filter((el) => {
+          return el.id !== post.id
+        })
+      }
+    })
+  }
   return (
     <header className={`${styles.status} ${showStatusClass}`}>
       <Link className={styles.home} to="/">
@@ -37,9 +58,26 @@ export default function StickyHeader({ post, unit, next, prev, bookmarks, setBoo
       </div>
       <div className={styles.actions}>
         <nav className={styles.statusPagination}>
-          {prev && <Link to={`../${prev.childMdx.fields.slug}`}>Previous</Link>}
-          {next && <Link to={`../${next.childMdx.fields.slug}`}>Next</Link>}
+          {prev && (
+            <Link className={styles.paginationLink} to={`../${prev.childMdx.fields.slug}`}>
+              Previous Chapter
+              <ArrowLeft />
+            </Link>
+          )}
+          {next && (
+            <Link className={styles.paginationLink} to={`../${next.childMdx.fields.slug}`}>
+              Next Chapter
+              <ArrowRight />
+            </Link>
+          )}
         </nav>
+        <Button
+          priority="secondary"
+          label={bookmarkIndex === -1 ? 'Add bookmark' : 'Remove bookmark'}
+          hideLabel={true}
+          onClick={toggleBookmark}
+          icon={bookmarkIndex === -1 ? <BookmarkOutline /> : <BookmarkFilled />}
+        ></Button>
         <Button
           label="Bookmarks"
           priority="secondary"
