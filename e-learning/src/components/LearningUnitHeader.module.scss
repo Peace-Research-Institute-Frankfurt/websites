@@ -33,8 +33,9 @@
 
 .header-eyebrow {
   @extend %mono;
+  font-size: var(--ms-0);
   background: var(--yellow-50);
-  padding: 0.35em 0.5em;
+  padding: 0.35em 0.65em;
   padding-top: 0.4em;
   margin-bottom: 1rem;
   display: inline-block;
@@ -49,14 +50,15 @@
   flex-flow: column;
   justify-content: space-between;
   padding: var(--padding);
+  padding-top: 0;
   flex-grow: 0;
   background: var(--blue-20);
   position: relative;
   z-index: 1000;
   // color: rgba(white, 0.85);
   @include bp(m) {
-    flex-basis: 45%;
-    min-height: 85vh;
+    flex-basis: 50%;
+    min-height: 75vh;
     padding-right: 4em;
   }
 }
@@ -108,7 +110,8 @@
   background: var(--blue-90);
   color: white;
   display: inline-flex;
-  padding: 0.45em 0.6em;
+  padding: 0.4em 0.6em;
+  padding-bottom: 0.45em;
   line-height: 1;
   border-radius: 8px;
   letter-spacing: 0.025em;

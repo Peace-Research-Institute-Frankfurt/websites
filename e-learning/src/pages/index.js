@@ -45,7 +45,7 @@ const IndexPage = ({ data }) => {
   return (
     <main className={styles.container}>
       <div className={styles.inner}>
-        <h1 className={styles.title}>EUNPDC E-Learning</h1>
+        <h1>EUNPDC E-Learning</h1>
         <p className={styles.note}>
           Hi! This is a temporary index page intended for development purposes only. It will be replaced by{' '}
           <a href="https://nonproliferation-elearning.eu/">nonproliferation-elearning.eu</a> in production.
