@@ -19,21 +19,23 @@
 
 .header-title {
   font-size: var(--ms-4);
-  color: var(--gray-10);
   font-weight: 600;
-  line-height: 0.9;
-  letter-spacing: -0.015em;
+  line-height: 0.85;
+  letter-spacing: -0.03em;
   word-spacing: -0.025em;
   margin-bottom: 1rem;
   margin-left: -0.05em;
   @include bp(m) {
     font-size: var(--ms-6);
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
   }
 }
 
 .header-eyebrow {
   @extend %mono;
+  background: var(--yellow-50);
+  padding: 0.35em 0.5em;
+  padding-top: 0.4em;
   margin-bottom: 1rem;
   display: inline-block;
   line-height: 1;
@@ -48,12 +50,12 @@
   justify-content: space-between;
   padding: var(--padding);
   flex-grow: 0;
-  background: var(--blue-60);
+  background: var(--blue-20);
   position: relative;
   z-index: 1000;
-  color: rgba(white, 0.85);
+  // color: rgba(white, 0.85);
   @include bp(m) {
-    flex-basis: 50%;
+    flex-basis: 45%;
     min-height: 85vh;
     padding-right: 4em;
   }
@@ -61,7 +63,7 @@
 .header-image {
   flex-grow: 0;
   flex-shrink: 1;
-  background: var(--blue-40);
+  background: var(--blue-10);
   @include bp(m) {
     bottom: 0;
     right: 0;
@@ -69,7 +71,6 @@
     position: absolute !important;
     left: 40%;
     img {
-      filter: grayscale(1);
       mix-blend-mode: multiply;
     }
   }
@@ -108,9 +109,9 @@
   background: var(--blue-90);
   color: white;
   display: inline-flex;
-  padding: 0.45em 0.75em;
+  padding: 0.45em 0.6em;
   line-height: 1;
-  border-radius: var(--br);
+  border-radius: 8px;
   letter-spacing: 0.025em;
   gap: 0.25em;
   align-items: flex-end;
@@ -123,6 +124,6 @@
   }
   &:hover,
   &:focus-visible {
-    background-color: var(--blue-90);
+    background-color: var(--blue-80);
   }
 }
