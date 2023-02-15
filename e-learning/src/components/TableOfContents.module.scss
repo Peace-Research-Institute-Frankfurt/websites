@@ -1,4 +1,5 @@
 @import 'vars';
+
 ol.list {
   @extend %caption;
   color: var(--gray-50);
@@ -9,6 +10,7 @@ ol.list {
     padding-left: 1em;
   }
 }
+
 li.item {
   line-height: 1.2;
   a {

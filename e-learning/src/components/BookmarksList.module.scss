@@ -23,9 +23,9 @@
 }
 
 .eyebrow {
-  @extend %caption;
+  @extend %mono;
+  font-size: var(--ms--2);
   display: block;
-  color: var(--blue-70);
 }
 
 .title {

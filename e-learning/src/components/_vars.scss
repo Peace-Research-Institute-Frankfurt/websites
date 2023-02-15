@@ -22,9 +22,9 @@
   font-feature-settings: 'onum' 1, 'liga' 1;
   text-rendering: optimizeLegibility;
   font-weight: 300;
-  line-height: 1.375;
+  line-height: 1.4;
   word-spacing: 0.001em;
-  letter-spacing: 0.001em;
+  letter-spacing: -0.0035em;
   font-size: var(--ms-0);
   a {
     text-decoration: underline;
@@ -76,19 +76,20 @@
   letter-spacing: -0.015em;
   word-spacing: -0.025em;
   line-height: 1.45;
+  text-underline-offset: 0.15em;
 }
 
 %h2 {
   font-size: var(--ms-2);
-  letter-spacing: -0.02em;
+  letter-spacing: -0.015em;
   line-height: 1.05;
   font-weight: 600;
 }
 
 %h3 {
   font-size: var(--ms-1);
-  letter-spacing: -0.01em;
-  font-weight: 500;
+  letter-spacing: -0.015em;
+  font-weight: 600;
   line-height: 1.1;
 }
 

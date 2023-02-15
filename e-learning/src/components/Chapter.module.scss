@@ -186,16 +186,18 @@
 }
 
 .next {
-  background: var(--gray-10);
+  background: var(--blue-10);
+  border: 1px solid var(--blue-90);
   padding: 1em;
   margin-bottom: 1rem;
   text-decoration: none !important;
   transition: var(--fast);
   border-radius: var(--br);
-  outline: 1px solid transparent;
   &:hover,
   &:focus-visible {
-    outline: 1px solid var(--blue-90);
+    .pagination-label {
+      text-decoration: underline;
+    }
   }
   @include bp(m) {
     padding: 1.5em;
