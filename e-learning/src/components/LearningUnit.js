@@ -8,7 +8,7 @@ import Meta from './Meta'
 import StickyHeader from './StickyHeader'
 import useLocalStorage from './useLocalStorage'
 
-import * as LuStyles from './LearningUnit.module.scss'
+import * as styles from './LearningUnit.module.scss'
 
 export const query = graphql`
   query ($id: String, $lu_id: String) {
@@ -86,8 +86,8 @@ const LearningUnit = ({ data, context }) => {
     const fm = author.frontmatter
     const authorImage = getImage(fm.image)
     return (
-      <li key={fm.name} className={LuStyles.byline}>
-        <GatsbyImage className={LuStyles.bylineImage} image={authorImage} alt={`${fm.name} profile image`} />
+      <li key={fm.name} className={styles.byline}>
+        <GatsbyImage className={styles.bylineImage} image={authorImage} alt={`${fm.name} profile image`} />
         <div>
           <em>{fm.name}</em>
           <span>{fm.institution}</span>
@@ -99,12 +99,12 @@ const LearningUnit = ({ data, context }) => {
     const fm = author.frontmatter
     const authorImage = getImage(fm.image)
     return (
-      <li className={LuStyles.author} key={fm.author_id}>
-        <div className={LuStyles.authorHeader}>
-          <GatsbyImage className={LuStyles.authorImage} image={authorImage} alt={`${fm.name} profile image`} />
+      <li className={styles.author} key={fm.author_id}>
+        <div className={styles.authorHeader}>
+          <GatsbyImage className={styles.authorImage} image={authorImage} alt={`${fm.name} profile image`} />
           <div>
-            <h3 className={LuStyles.authorTitle}>{fm.name}</h3>
-            <span className={LuStyles.authorInstitution}>{fm.institution}</span>
+            <h3 className={styles.authorTitle}>{fm.name}</h3>
+            <span className={styles.authorInstitution}>{fm.institution}</span>
           </div>
         </div>
         <MarkdownRenderer markdown={author.parent.body} />
@@ -116,11 +116,11 @@ const LearningUnit = ({ data, context }) => {
     return (
       <li key={node.name}>
         <Link to={node.childMdx.fields.slug}>
-          <h3 className={LuStyles.chapterTitle}>
+          <h3 className={styles.chapterTitle}>
             {index + 1}. {frontmatter.title}
           </h3>
-          <p className={LuStyles.chapterIntro}>{frontmatter.intro}</p>
-          {frontmatter.reading_time && <p className={LuStyles.chapterMeta}>{frontmatter.reading_time} min read</p>}
+          <p className={styles.chapterIntro}>{frontmatter.intro}</p>
+          {frontmatter.reading_time && <p className={styles.chapterMeta}>{frontmatter.reading_time} min read</p>}
         </Link>
       </li>
     )
@@ -129,7 +129,7 @@ const LearningUnit = ({ data, context }) => {
   return (
     <App>
       <StickyHeader bookmarks={bookmarks} setBookmarks={setBookmarks} />
-      <article className={LuStyles.container}>
+      <article className={styles.container}>
         <LearningUnitHeader
           frontmatter={frontmatter}
           title={frontmatter.title}
@@ -141,30 +141,31 @@ const LearningUnit = ({ data, context }) => {
           background={frontmatter.hero_background}
           startLink={data.chapters.nodes[0].childMdx.fields.slug}
         />
-        <main>
-          {frontmatter.learning_objectives && (
-            <section>
-              <h2 className={LuStyles.sectionTitle}>Learning Objectives</h2>
-              <div className={LuStyles.sectionContent}>
-                <MarkdownRenderer markdown={frontmatter.learning_objectives} />
-              </div>
-            </section>
-          )}
-          <section className={LuStyles.chapters}>
-            <h2 className={LuStyles.sectionTitle}>Chapters</h2>
-            <div id="chapters" className={LuStyles.sectionContent}>
+        <main className={styles.main}>
+          <section className={styles.chapters}>
+            <h2 className={styles.sectionTitle}>Chapters</h2>
+            <div id="chapters" className={styles.sectionContent}>
               <ol>{chapterLinks}</ol>
             </div>
           </section>
+          {frontmatter.learning_objectives && (
+            <section>
+              <h2 className={styles.sectionTitle}>Learning Objectives</h2>
+              <div className={styles.sectionContent}>
+                <MarkdownRenderer className={styles.copy} markdown={frontmatter.learning_objectives} />
+              </div>
+            </section>
+          )}
+
           <section>
-            <h2 className={LuStyles.sectionTitle}>About the {bios.length > 1 ? 'authors' : 'author'}</h2>
-            <div className={LuStyles.sectionContent}>
+            <h2 className={styles.sectionTitle}>About the {bios.length > 1 ? 'authors' : 'author'}</h2>
+            <div className={styles.sectionContent}>
               <ul>{bios}</ul>
             </div>
           </section>
           <section>
-            <h2 className={LuStyles.sectionTitle}>Disclosures</h2>
-            <div className={`${LuStyles.disclosures} ${LuStyles.sectionContent}`}>
+            <h2 className={styles.sectionTitle}>Disclosures</h2>
+            <div className={`${styles.disclosures} ${styles.sectionContent}`}>
               <h3>Funding</h3>
               <p>
                 This Learning Unit was produced with financial assistance from the European Union. The contents of this Learning Unit are however the
