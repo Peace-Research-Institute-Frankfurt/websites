@@ -1,13 +1,15 @@
-import React from 'react'
 import { graphql, Link } from 'gatsby'
 import { GatsbyImage, getImage, getSrc } from 'gatsby-plugin-image'
+import React from 'react'
 import MarkdownRenderer from 'react-markdown-renderer'
 import App from './App'
-import Meta from './Meta'
-import StickyHeader from './StickyHeader'
+import { useScrollPosition } from '@prif/shared'
 import LearningUnitHeader from './LearningUnitHeader'
+import Meta from './Meta'
 import SiteFooter from './SiteFooter'
+import StickyHeader from './StickyHeader'
 import useLocalStorage from './useLocalStorage'
+
 import * as LuStyles from './LearningUnit.module.scss'
 
 export const query = graphql`
@@ -80,6 +82,7 @@ const LearningUnit = ({ data, context }) => {
   const frontmatter = data.post.childMdx.frontmatter
   const authors = data.post.childMdx.frontmatter.authors
   const heroImage = getImage(frontmatter.hero_image)
+  const scrollPosition = useScrollPosition()
   const [bookmarks] = useLocalStorage('bookmarks', [])
 
   const bylines = authors.map((author) => {
@@ -128,7 +131,7 @@ const LearningUnit = ({ data, context }) => {
 
   return (
     <App>
-      <StickyHeader />
+      <StickyHeader scrollPosition={scrollPosition} />
       <article className={LuStyles.container}>
         <LearningUnitHeader
           frontmatter={frontmatter}
@@ -156,7 +159,7 @@ const LearningUnit = ({ data, context }) => {
               <ol>{chapterLinks}</ol>
             </div>
           </section>
-          <section className={LuStyles.authors}>
+          <section>
             <h2 className={LuStyles.sectionTitle}>About the {bios.length > 1 ? 'authors' : 'author'}</h2>
             <div className={LuStyles.sectionContent}>
               <ul>{bios}</ul>

@@ -1,35 +1,36 @@
-import React from 'react'
+import { MDXProvider } from '@mdx-js/react'
 import { graphql, Link } from 'gatsby'
 import { getSrc } from 'gatsby-plugin-image'
-import { MDXProvider } from '@mdx-js/react'
+import React from 'react'
 import App from './App'
-import Meta from './Meta'
-import { Quiz, RadioChoice, Question } from './Quiz.js'
-import { Choice } from './MultipleChoice'
-import TermAdapter from './TermAdapter'
-import FigureAdapter from './FigureAdapter'
-import QuoteAdapter from './QuoteAdapter'
-import LectureVideo from './LectureVideo'
-import SiteFooter from './SiteFooter'
-import useLocalStorage from './useLocalStorage'
 import { Embed } from './Embed'
+import FigureAdapter from './FigureAdapter'
+import Institution from './Institution'
+import LectureVideo from './LectureVideo'
+import Map from './Map'
+import Meta from './Meta'
+import { Choice } from './MultipleChoice'
+import { Question, Quiz, RadioChoice } from './Quiz.js'
+import QuoteAdapter from './QuoteAdapter'
+import Resolution from './Resolution'
+import SiteFooter from './SiteFooter'
 import StickyHeader from './StickyHeader'
 import TableOfContents from './TableOfContents'
-import Map from './Map'
-import Resolution from './Resolution'
-import Treaty from './Treaty'
-import Institution from './Institution'
 import { Tab, Tabs } from './TabsAdapter'
-import { Callout, Details, DetailsGroup, FlipCards, Card, Timeline, Event } from '@prif/shared'
-import * as ChapterStyles from './Chapter.module.scss'
-import * as QuoteStyles from './Quote.module.scss'
-import * as CalloutStyles from './Callout.module.scss'
-import * as FigureStyles from './Figure.module.scss'
-import * as DetailsStyles from './Details.module.scss'
-import * as FlipCardsStyles from './FlipCards.module.scss'
-import * as TimelineStyles from './Timeline.module.scss'
-import * as TermStyles from './Term.module.scss'
+import TermAdapter from './TermAdapter'
+import Treaty from './Treaty'
+import useLocalStorage from './useLocalStorage'
+import { Callout, Card, Details, DetailsGroup, Event, FlipCards, Timeline, useScrollPosition } from '@prif/shared'
+
 import * as buttonStyles from './Button.module.scss'
+import * as CalloutStyles from './Callout.module.scss'
+import * as ChapterStyles from './Chapter.module.scss'
+import * as DetailsStyles from './Details.module.scss'
+import * as FigureStyles from './Figure.module.scss'
+import * as FlipCardsStyles from './FlipCards.module.scss'
+import * as QuoteStyles from './Quote.module.scss'
+import * as TermStyles from './Term.module.scss'
+import * as TimelineStyles from './Timeline.module.scss'
 
 const shortCodes = {
   Embed,
@@ -120,6 +121,7 @@ export const query = graphql`
 const Chapter = ({ data, children }) => {
   const frontmatter = data.post.childMdx.frontmatter
   const [bookmarks] = useLocalStorage('bookmarks', [])
+  const scrollPosition = useScrollPosition()
   const currentIndex = data.chapters.nodes.findIndex((el) => {
     return el.childMdx.frontmatter.order === frontmatter.order
   })
@@ -146,7 +148,7 @@ const Chapter = ({ data, children }) => {
 
   return (
     <App>
-      <StickyHeader unit={data.unit} post={data.post} next={next} prev={prev} />
+      <StickyHeader unit={data.unit} post={data.post} next={next} prev={prev} scrollPosition={scrollPosition} />
       <article>
         <header className={ChapterStyles.header}>
           <div className={ChapterStyles.headerCopy}>
