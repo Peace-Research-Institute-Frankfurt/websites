@@ -1,6 +1,6 @@
 # Websites
 
-This is a monorepo for all our React-based editoral products.
+This is a monorepo for all our React-based editorial products.
 
 ## Deployment Status
 
