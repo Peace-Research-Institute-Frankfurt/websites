@@ -53,16 +53,16 @@
 .author {
   @extend %copy;
   list-style: none;
-  gap: 1rem;
+  margin-bottom: 2em;
   &:last-of-type {
-    border-bottom: 0;
+    margin-bottom: 0;
   }
 }
 
 .author-header {
   display: flex;
   align-items: center;
-  margin-bottom: 0.85em;
+  margin-bottom: 0.25em;
   gap: 0.85em;
   align-items: flex-end;
 }

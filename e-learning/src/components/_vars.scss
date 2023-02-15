@@ -24,6 +24,7 @@
   font-weight: 300;
   line-height: 1.375;
   word-spacing: 0.001em;
+  letter-spacing: 0.001em;
   font-size: var(--ms-0);
   a {
     text-decoration: underline;
@@ -60,7 +61,7 @@
 }
 
 %copy-large {
-  line-height: 1.2;
+  line-height: 1.25;
   font-size: var(--ms-0);
   hyphens: auto;
   letter-spacing: -0.015em;
