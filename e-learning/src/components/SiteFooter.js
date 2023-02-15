@@ -1,7 +1,7 @@
-import React from 'react'
-import * as styles from './SiteFooter.module.scss'
 import { graphql, useStaticQuery } from 'gatsby'
+import React from 'react'
 import FundingLogo from '../assets/icons/funded-by-eu.svg'
+import * as styles from './SiteFooter.module.scss'
 
 export default function SiteFooter() {
   const data = useStaticQuery(graphql`

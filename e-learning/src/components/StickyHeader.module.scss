@@ -40,12 +40,13 @@
 
 .unit {
   @extend %mono;
-  background: var(--blue-60);
-  color: white;
+  background: var(--yellow-50);
   padding: 0.3em 0.6em;
   padding-top: 0.4em;
   line-height: 1;
   opacity: 0;
+  border-radius: var(--br);
+
   @include bp(m) {
     opacity: 1;
   }
@@ -66,6 +67,14 @@
   }
 }
 
+.actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+  grid-column: 4 / 6;
+  align-items: center;
+}
+
 .status-pagination {
   display: none;
   font-weight: 300;
@@ -75,12 +84,22 @@
     justify-content: flex-end;
     align-items: center;
     grid-column: 5/6;
+    gap: 0.1rem;
   }
-  a {
-    display: block;
-    &:first-of-type {
-      margin-right: 1rem;
-    }
+}
+
+.pagination-link {
+  font-size: 0;
+  padding: 0.2rem;
+  border-radius: var(--br);
+  border: 1px solid transparent;
+  transition: var(--fast);
+  &:hover,
+  &:focus-visible {
+    border: 1px solid var(--blue-80);
+  }
+  svg {
+    height: 1.4rem;
   }
 }
 
@@ -117,4 +136,35 @@
     left: 0;
     position: absolute;
   }
+}
+
+.bookmarks-container {
+  position: absolute;
+  transition: var(--fast);
+  top: 100%;
+  right: 0;
+  opacity: 0;
+  border: 1px solid rgba(black, 0.75);
+  border-radius: var(--br);
+  filter: drop-shadow(0px 2px 2px rgba(black, 0.2));
+  width: 25rem;
+  background-color: white;
+  top: 4rem;
+  &:before {
+    content: '';
+    position: absolute;
+    width: 0.75rem;
+    height: 0.75rem;
+    border-top: 1px solid rgba(black, 0.75);
+    border-left: 1px solid rgba(black, 0.75);
+    background: white;
+    top: 0;
+    right: 1.2rem;
+    transform: translateY(-50%) rotate(45deg);
+  }
+}
+
+.bookmarks-container-active {
+  opacity: 1;
+  transform: translateY(5px);
 }
