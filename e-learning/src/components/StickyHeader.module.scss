@@ -14,10 +14,7 @@
   border-bottom: 1px solid transparent;
   background: white;
   @include bp(m) {
-    font-size: 1.1rem;
-  }
-  @include bp(l) {
-    font-size: var(--ms-0);
+    font-size: 1rem;
   }
   label {
     position: absolute;

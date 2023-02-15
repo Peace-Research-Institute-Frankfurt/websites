@@ -4,8 +4,8 @@ import { Chip, ChipGroup } from './Chip'
 import CheckIcon from '../assets/icons/check.svg'
 import CrossIcon from '../assets/icons/cross.svg'
 import { Expandable } from '@prif/shared'
+import Button from './ButtonAdapter'
 import * as styles from './Resolution.module.scss'
-import * as buttonStyles from './Button.module.scss'
 
 export default function Resolution({ name }) {
   const data = useStaticQuery(graphql`
@@ -33,7 +33,7 @@ export default function Resolution({ name }) {
 
   return (
     <section className={styles.container}>
-      <Expandable buttonStyles={buttonStyles}>
+      <Expandable buttonComponent={Button}>
         <span className={styles.eyebrow}>Resolution</span>
         <h2 className={styles.title}>
           {res.title}

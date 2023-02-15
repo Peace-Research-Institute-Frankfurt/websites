@@ -3,8 +3,8 @@ import { useStaticQuery, graphql } from 'gatsby'
 import { Expandable } from '@prif/shared'
 import { Chip, ChipGroup } from './Chip.js'
 import TreatyParticipantGraph from './TreatyParticipantGraph'
+import Button from './ButtonAdapter.js'
 import * as styles from './Treaty.module.scss'
-import * as buttonStyles from './Button.module.scss'
 
 export default function Treaty({ name }) {
   const data = useStaticQuery(graphql`
@@ -76,7 +76,7 @@ export default function Treaty({ name }) {
 
   return (
     <section className={styles.container}>
-      <Expandable buttonStyles={buttonStyles}>
+      <Expandable buttonComponent={Button}>
         <span className={styles.eyebrow}>Treaty</span>
         <h2 className={styles.title}>{treaty.shortTitle || treaty.title}</h2>
         <ChipGroup>

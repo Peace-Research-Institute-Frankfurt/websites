@@ -2,8 +2,8 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { Expandable } from '@prif/shared'
 import { Chip, ChipGroup } from './Chip'
+import Button from './ButtonAdapter'
 import * as styles from './Institution.module.scss'
-import * as buttonStyles from './Button.module.scss'
 
 export default function Institution({ name }) {
   const data = useStaticQuery(graphql`
@@ -35,7 +35,7 @@ export default function Institution({ name }) {
 
   return (
     <section className={styles.container}>
-      <Expandable buttonStyles={buttonStyles}>
+      <Expandable buttonComponent={Button}>
         <span className={styles.eyebrow}>Institution</span>
         <h2 className={styles.title}>{institution.title}</h2>
         <ChipGroup>
