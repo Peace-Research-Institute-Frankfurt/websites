@@ -82,8 +82,7 @@ const LearningUnit = ({ data, context }) => {
   const frontmatter = data.post.childMdx.frontmatter
   const authors = data.post.childMdx.frontmatter.authors
   const heroImage = getImage(frontmatter.hero_image)
-  const scrollPosition = useScrollPosition()
-  const [bookmarks] = useLocalStorage('bookmarks', [])
+  const [bookmarks, setBookmarks] = useLocalStorage('elearning-bookmarks', [])
 
   const bylines = authors.map((author) => {
     const fm = author.frontmatter
@@ -131,7 +130,7 @@ const LearningUnit = ({ data, context }) => {
 
   return (
     <App>
-      <StickyHeader scrollPosition={scrollPosition} />
+      <StickyHeader bookmarks={bookmarks} setBookmarks={setBookmarks} />
       <article className={LuStyles.container}>
         <LearningUnitHeader
           frontmatter={frontmatter}

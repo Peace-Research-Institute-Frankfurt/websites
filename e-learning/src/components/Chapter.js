@@ -20,7 +20,7 @@ import { Tab, Tabs } from './TabsAdapter'
 import TermAdapter from './TermAdapter'
 import Treaty from './Treaty'
 import useLocalStorage from './useLocalStorage'
-import { Callout, Card, Details, DetailsGroup, Event, FlipCards, Timeline, useScrollPosition } from '@prif/shared'
+import { Callout, Card, Details, DetailsGroup, Event, FlipCards, Timeline } from '@prif/shared'
 
 import * as buttonStyles from './Button.module.scss'
 import * as CalloutStyles from './Callout.module.scss'
@@ -70,6 +70,7 @@ export const query = graphql`
       }
     }
     post: file(id: { eq: $id }) {
+      id
       childMdx {
         fields {
           slug
@@ -120,8 +121,11 @@ export const query = graphql`
 
 const Chapter = ({ data, children }) => {
   const frontmatter = data.post.childMdx.frontmatter
-  const [bookmarks] = useLocalStorage('bookmarks', [])
-  const scrollPosition = useScrollPosition()
+  const [bookmarks, setBookmarks] = useLocalStorage('elearning-bookmarks', [])
+
+  const bookmarkIndex = bookmarks.findIndex((el) => {
+    return el.id === data.post.id
+  })
   const currentIndex = data.chapters.nodes.findIndex((el) => {
     return el.childMdx.frontmatter.order === frontmatter.order
   })
@@ -129,31 +133,33 @@ const Chapter = ({ data, children }) => {
   const next = data.chapters.nodes[currentIndex + 1]
   const prev = data.chapters.nodes[currentIndex - 1]
 
-  // function toggleBookmark() {
-  //   setBookmarks((prevBookmarks) => {
-  //     if (bookmarkIndex === -1) {
-  //       const bookmark = {
-  //         eyebrow: `Unit ${data.unit.childMdx.frontmatter.order}`,
-  //         title: frontmatter.title,
-  //         slug: data.post.childMdx.slug,
-  //       }
-  //       return [...prevBookmarks, bookmark]
-  //     } else {
-  //       return prevBookmarks.filter((el) => {
-  //         return el.slug !== data.post.childMdx.slug
-  //       })
-  //     }
-  //   })
-  // }
+  function toggleBookmark() {
+    console.log(bookmarks)
+    setBookmarks((prevBookmarks) => {
+      if (bookmarkIndex === -1) {
+        const bookmark = {
+          id: data.post.id,
+        }
+        return [...prevBookmarks, bookmark]
+      } else {
+        return prevBookmarks.filter((el) => {
+          return el.id !== data.post.id
+        })
+      }
+    })
+  }
 
   return (
     <App>
-      <StickyHeader unit={data.unit} post={data.post} next={next} prev={prev} scrollPosition={scrollPosition} />
+      <StickyHeader unit={data.unit} post={data.post} next={next} prev={prev} bookmarks={bookmarks} setBookmarks={setBookmarks} />
       <article>
         <header className={ChapterStyles.header}>
           <div className={ChapterStyles.headerCopy}>
             <h1 className={ChapterStyles.title}>{frontmatter.title}</h1>
             {frontmatter.intro && <p className={ChapterStyles.intro}>{frontmatter.intro}</p>}
+            <div className={ChapterStyles.headerActions}>
+              <button onClick={toggleBookmark}>{bookmarkIndex === -1 ? 'Bookmark' : 'Remove bookmark'}</button>
+            </div>
           </div>
         </header>
         <div className={ChapterStyles.body}>
