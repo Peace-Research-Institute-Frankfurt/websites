@@ -1,7 +1,6 @@
 import { Link, graphql, useStaticQuery } from 'gatsby'
 import React from 'react'
 import CrossIcon from '../assets/icons/cross.svg'
-import Button from './Button'
 import * as styles from './BookmarksList.module.scss'
 
 export default function BookmarksList({ bookmarks, setBookmarks }) {

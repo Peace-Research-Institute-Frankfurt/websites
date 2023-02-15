@@ -3,10 +3,8 @@ import { GatsbyImage, getImage, getSrc } from 'gatsby-plugin-image'
 import React from 'react'
 import MarkdownRenderer from 'react-markdown-renderer'
 import App from './App'
-import { useScrollPosition } from '@prif/shared'
 import LearningUnitHeader from './LearningUnitHeader'
 import Meta from './Meta'
-import SiteFooter from './SiteFooter'
 import StickyHeader from './StickyHeader'
 import useLocalStorage from './useLocalStorage'
 
@@ -185,7 +183,6 @@ const LearningUnit = ({ data, context }) => {
           </section>
         </main>
       </article>
-      <SiteFooter />
     </App>
   )
 }

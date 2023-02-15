@@ -1,10 +1,11 @@
 import { Link } from 'gatsby'
 import React, { useState } from 'react'
-import BookIcon from '../assets/icons/favicon.svg'
-import { useScrollPosition } from '@prif/shared'
-import useLocalStorage from './useLocalStorage'
-import * as styles from './StickyHeader.module.scss'
+import useScrollPosition from '../../../shared/hooks/useScrollPosition'
+
+import Button from './Button'
 import BookmarksList from './BookmarksList'
+import BookIcon from '../assets/icons/favicon.svg'
+import * as styles from './StickyHeader.module.scss'
 
 export default function StickyHeader({ post, unit, next, prev, bookmarks, setBookmarks }) {
   const scrollPosition = useScrollPosition()
@@ -39,14 +40,14 @@ export default function StickyHeader({ post, unit, next, prev, bookmarks, setBoo
           {prev && <Link to={`../${prev.childMdx.fields.slug}`}>Previous</Link>}
           {next && <Link to={`../${next.childMdx.fields.slug}`}>Next</Link>}
         </nav>
-        <button
+        <Button
+          label="Bookmarks"
+          priority="secondary"
           onClick={() => {
             setBookmarksActive(!bookmarksActive)
           }}
           className="toggleBookmarks"
-        >
-          Saved
-        </button>
+        />
       </div>
       <div className={`${styles.bookmarksContainer} ${bookmarksActive ? styles.bookmarksContainerActive : null}`}>
         <BookmarksList bookmarks={bookmarks} setBookmarks={setBookmarks} />

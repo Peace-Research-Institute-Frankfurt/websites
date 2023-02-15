@@ -1,5 +1,4 @@
 .container {
-  background: var(--blue-90);
   color: white;
   font-weight: 500;
   display: inline-flex;
@@ -10,10 +9,16 @@
   cursor: pointer;
   gap: 0.25em;
   align-items: baseline;
+}
+
+.primary {
+  background: var(--blue-90);
   &:hover,
   &:focus-visible {
     background: var(--blue-80);
   }
+}
+.secondary {
 }
 
 .has-icon {

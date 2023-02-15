@@ -1,8 +1,10 @@
 import { MDXProvider } from '@mdx-js/react'
+import { Callout, Card, Details, DetailsGroup, Event, FlipCards, Timeline } from '@prif/shared'
 import { graphql, Link } from 'gatsby'
 import { getSrc } from 'gatsby-plugin-image'
 import React from 'react'
 import App from './App'
+import Button from './Button'
 import { Embed } from './Embed'
 import FigureAdapter from './FigureAdapter'
 import Institution from './Institution'
@@ -13,16 +15,13 @@ import { Choice } from './MultipleChoice'
 import { Question, Quiz, RadioChoice } from './Quiz.js'
 import QuoteAdapter from './QuoteAdapter'
 import Resolution from './Resolution'
-import SiteFooter from './SiteFooter'
 import StickyHeader from './StickyHeader'
 import TableOfContents from './TableOfContents'
 import { Tab, Tabs } from './TabsAdapter'
 import TermAdapter from './TermAdapter'
 import Treaty from './Treaty'
 import useLocalStorage from './useLocalStorage'
-import { Callout, Card, Details, DetailsGroup, Event, FlipCards, Timeline } from '@prif/shared'
 
-import * as buttonStyles from './Button.module.scss'
 import * as CalloutStyles from './Callout.module.scss'
 import * as ChapterStyles from './Chapter.module.scss'
 import * as DetailsStyles from './Details.module.scss'
@@ -53,7 +52,7 @@ const shortCodes = {
   Card: ({ ...props }) => <Card styles={FlipCardsStyles} {...props} />,
   Details: ({ ...props }) => <Details {...props} styles={DetailsStyles} />,
   DetailsGroup: ({ ...props }) => <DetailsGroup {...props} styles={DetailsStyles} />,
-  Callout: ({ ...props }) => <Callout {...props} buttonStyles={buttonStyles} styles={CalloutStyles} />,
+  Callout: ({ ...props }) => <Callout {...props} buttonComponent={Button} styles={CalloutStyles} />,
   Map,
 }
 
@@ -194,7 +193,6 @@ const Chapter = ({ data, children }) => {
           </nav>
         </div>
       </article>
-      <SiteFooter />
     </App>
   )
 }
