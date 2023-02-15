@@ -48,17 +48,11 @@ const Index = ({ data }) => {
       byline = fm.authors.map((a, j) => {
         const authorImage = getImage(a.frontmatter.image)
         const imageStyles = {
-          transform: `rotate(${gri(-30, 10)}deg)`,
+          transform: `translateX(${100 * j}%) rotate(${gri(-20, 20)}deg)`,
         }
         return (
-          <li key={`authors-${i}-${fm.author_id}`}>
-            <GatsbyImage
-              style={imageStyles}
-              objectFit="contain"
-              className={styles.bylineImage}
-              image={authorImage}
-              alt={`${a.frontmatter.name} profile image`}
-            />
+          <li style={imageStyles} key={`authors-${i}-${a.frontmatter.author_id}-${j}`}>
+            <GatsbyImage objectFit="contain" className={styles.bylineImage} image={authorImage} alt={`${a.frontmatter.name} profile image`} />
           </li>
         )
       })
@@ -66,9 +60,11 @@ const Index = ({ data }) => {
     return (
       <li key={`post-${i}`}>
         <Link className={styles.postsItem} to={node.childMdx.fields.slug}>
-          <h2 className={styles.postsTitle}>{fm.title}</h2>
+          <div className={styles.postsHeader}>
+            <h2 className={styles.postsTitle}>{fm.title}</h2>
+            <ul className={styles.postsAuthors}>{byline}</ul>
+          </div>
           <p className={styles.postsIntro}>{fm.intro}</p>
-          <ul className={styles.postsAuthors}>{byline}</ul>
         </Link>
       </li>
     )

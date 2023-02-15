@@ -235,20 +235,25 @@
   }
 }
 
+.posts-header {
+  display: contents;
+  @include bp(m) {
+    display: block;
+  }
+}
+
 .posts-title {
   font-size: var(--ms-4);
   line-height: 1;
-  display: inline-block;
+  display: inline;
   letter-spacing: -0.045em;
-  font-weight: 600;
+  font-weight: 700;
   hyphens: auto;
-  padding-right: 3.5rem;
   @include bp(s) {
     font-size: var(--ms-5);
   }
   @include bp(m) {
     hyphens: none;
-    font-weight: 700;
     line-height: 0.9;
   }
   @include bp(l) {
@@ -262,32 +267,41 @@
   letter-spacing: -0.01em;
   padding-top: 0.25rem;
   hyphens: auto;
-  @include bp(m) {
+  @include bp(s) {
     font-size: var(--ms-2);
     letter-spacing: -0.025em;
+  }
+  @include bp(m) {
     padding-top: 0.75rem;
   }
 }
 .posts-authors {
-  display: flex;
-  padding-top: 0.25rem;
+  display: inline-flex;
+  position: relative;
+  order: 3;
+  height: 2.75em;
   @include bp(m) {
-    padding-top: 0.5rem;
+    bottom: 0.5em;
+    left: 0.5em;
+    height: 0;
   }
   li {
     border: 0 !important;
-    margin-right: -0.5rem;
+    position: absolute;
+    @include bp(m) {
+      bottom: -1.25em;
+    }
   }
 }
 
 .byline-image {
   transform-origin: center;
-  width: 2rem;
+  width: 2.5rem;
   @include bp(s) {
     width: 3rem;
   }
   @include bp(m) {
-    width: 3.5rem;
+    width: 3.25rem;
   }
 }
 
