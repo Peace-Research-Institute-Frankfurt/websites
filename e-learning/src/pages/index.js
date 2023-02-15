@@ -1,7 +1,8 @@
+import React from 'react'
 import { Link } from 'gatsby'
-import * as React from 'react'
 import { graphql } from 'gatsby'
 import Meta from '../components/Meta'
+import * as styles from './index.module.scss'
 
 export const query = graphql`
   query {
@@ -34,7 +35,7 @@ const IndexPage = ({ data }) => {
   const units = data.units.nodes.map((node, i) => {
     return (
       <li key={`unit-${i}`}>
-        <Link to={node.childMdx.fields.slug}>
+        <Link className={styles.item} to={node.childMdx.fields.slug}>
           {node.childMdx.frontmatter.order}. {node.childMdx.frontmatter.title}
         </Link>
       </li>
@@ -42,9 +43,15 @@ const IndexPage = ({ data }) => {
   })
 
   return (
-    <main>
-      <h1>EUNPDC</h1>
-      <div>{units}</div>
+    <main className={styles.container}>
+      <div className={styles.inner}>
+        <h1 className={styles.title}>EUNPDC E-Learning</h1>
+        <p className={styles.note}>
+          Hi! This is a temporary index page intended for development purposes only. It will be replaced by{' '}
+          <a href="https://nonproliferation-elearning.eu/">nonproliferation-elearning.eu</a> in production.
+        </p>
+        <ol className={styles.list}>{units}</ol>
+      </div>
     </main>
   )
 }
