@@ -25,6 +25,7 @@
 .eyebrow {
   @extend %caption;
   display: block;
+  margin-bottom: 0.1rem;
 }
 
 .title {
@@ -35,12 +36,6 @@
   position: absolute;
   top: 0.75rem;
   right: 0.75rem;
-  font-size: 0;
-  cursor: pointer;
-  &:hover,
-  &:focus-visible {
-    opacity: 0.75;
-  }
 }
 
 .empty {

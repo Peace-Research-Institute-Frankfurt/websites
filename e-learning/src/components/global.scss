@@ -58,7 +58,7 @@
   --serif: 'GT Super', sans-serif;
   --mono: 'MDIO', serif;
   --ratio: 1.25; // Minor 3
-  --ms-0: clamp(0.95rem, calc(1.25vw + 0.3rem), 1.3rem);
+  --ms-0: clamp(1rem, calc(1.25vw + 0.3rem), 1.3rem);
   --ms--2: calc(var(--ms--1) / var(--ratio));
   --ms--1: calc(var(--ms-0) / var(--ratio));
   --ms-1: calc(var(--ms-0) * var(--ratio));
@@ -109,6 +109,10 @@ button {
 ::selection {
   background-color: black;
   color: white;
+}
+
+html {
+  scroll-padding-top: 4rem;
 }
 
 body {

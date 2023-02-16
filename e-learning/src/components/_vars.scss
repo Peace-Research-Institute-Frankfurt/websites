@@ -48,11 +48,11 @@ $text-border: 2px solid var(--gray-30);
   }
   & > h3 {
     @extend %h3;
-    margin-top: 1em;
+    margin-top: 0.25em;
     margin-bottom: 0.125em;
     & + h4,
     & + table {
-      margin-top: 0.25rem;
+      margin-top: 0.25em;
     }
   }
   & > h4 {
@@ -83,15 +83,15 @@ $text-border: 2px solid var(--gray-30);
 
 %h2 {
   font-size: var(--ms-2);
-  letter-spacing: -0.015em;
-  line-height: 1.05;
+  letter-spacing: -0.0175em;
+  line-height: 1.1;
   font-weight: 600;
 }
 
 %h3 {
   font-size: var(--ms-1);
   letter-spacing: -0.015em;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.1;
 }
 

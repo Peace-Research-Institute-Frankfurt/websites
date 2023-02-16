@@ -29,7 +29,7 @@
   align-items: center;
   display: none;
   font-weight: 400;
-  @include bp(l) {
+  @include bp(m) {
     display: flex;
     grid-row: 1 / 2;
     grid-column: 3/4;
@@ -109,7 +109,7 @@
   padding-left: 2em;
   position: relative;
   grid-column: 1/4;
-  @include bp(l) {
+  @include bp(m) {
     grid-column: 1/3;
   }
   &:hover,
@@ -134,7 +134,7 @@
   border: 1px solid rgba(black, 0.75);
   border-radius: var(--br);
   filter: drop-shadow(0px 2px 2px rgba(black, 0.2));
-  width: 25rem;
+  width: Min(100vw - var(--padding) * 2, 25rem);
   background-color: white;
   top: 2.5rem;
   z-index: 2000;

@@ -1,6 +1,7 @@
 import { Link, graphql, useStaticQuery } from 'gatsby'
 import React from 'react'
-import CrossIcon from '../assets/icons/cross.svg'
+import DeleteIcon from '../assets/icons/delete.svg'
+import Button from './ButtonAdapter'
 import * as styles from './BookmarksList.module.scss'
 
 export default function BookmarksList({ bookmarks, setBookmarks }) {
@@ -79,10 +80,9 @@ export default function BookmarksList({ bookmarks, setBookmarks }) {
           <span className={styles.eyebrow}>Unit {p.unit.childMdx.frontmatter.order}</span>
           <span className={styles.title}>{p.childMdx.frontmatter.title}</span>
         </Link>
-        <button className={styles.remove} onClick={() => removeBookmark(p.id)}>
-          Delete
-          <CrossIcon />
-        </button>
+        <div className={styles.remove}>
+          <Button priority="ghost" size="small" icon={<DeleteIcon />} label="Delete bookmark" hideLabel={true} onClick={() => removeBookmark(p.id)} />
+        </div>
       </li>
     )
   })
