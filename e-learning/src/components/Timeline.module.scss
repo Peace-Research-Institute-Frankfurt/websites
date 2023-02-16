@@ -60,23 +60,22 @@
 }
 .event-title {
   @extend %h3;
-  margin-top: 0 !important;
 }
 
 .event-header {
   display: flex;
   align-items: flex-end;
+  margin-bottom: 0.2em;
 }
 
 .event-toggle {
   @extend %caption;
-  border-radius: 6px;
-  padding: 0.1em 0.35em;
-  padding-bottom: 0.25em;
+  border-radius: var(--br);
+  padding: 0.2em 0.35em;
   line-height: 1;
-  margin-left: 0.75em;
+  margin-left: 0.5em;
   position: relative;
-  top: -0.75em;
+  top: -0.1em;
   cursor: pointer;
   color: var(--blue-80);
   border: 1px solid var(--gray-30);
