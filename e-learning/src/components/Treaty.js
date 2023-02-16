@@ -51,6 +51,9 @@ export default function Treaty({ name }) {
       treaty = node
     }
   })
+  if (!treaty) {
+    return <p>Treaty not found</p>
+  }
 
   data.countries.nodes.forEach((node) => {
     if (treaty.participants.findIndex((el) => el.country.alpha3 === node.alpha3) !== -1) {
