@@ -11,6 +11,7 @@ export default function Treaty({ name }) {
     query treatyQuery {
       countries: allCountriesJson {
         nodes {
+          alpha2
           alpha3
           name {
             common
@@ -29,6 +30,7 @@ export default function Treaty({ name }) {
           scrapeURL
           participants {
             country {
+              alpha2
               alpha3
               name {
                 common
@@ -83,7 +85,7 @@ export default function Treaty({ name }) {
         <span className={styles.eyebrow}>Treaty</span>
         <h2 className={styles.title}>{treaty.shortTitle || treaty.title}</h2>
         <ChipGroup>
-          {treaty.date && <Chip>Entered into force {treaty.date}</Chip>}
+          {treaty.date && <Chip>Effective {treaty.date}</Chip>}
           {treaty.legalStatus && <Chip>{treaty.legalStatus}</Chip>}
           <Chip>{memberCount} Member States</Chip>
         </ChipGroup>
