@@ -1,0 +1,27 @@
+@import 'vars';
+
+.container {
+  @extend %mono;
+  font-size: inherit;
+  padding: 0.35em 0.6em;
+  padding-top: 0.45em;
+  line-height: 1;
+  opacity: 0;
+  text-decoration: inherit;
+  position: relative;
+  display: inline-block;
+  &:after {
+    content: '';
+    background: var(--yellow-50);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -10;
+    transform: skewX(-12deg);
+  }
+  @include bp(m) {
+    opacity: 1;
+  }
+}

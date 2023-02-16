@@ -32,16 +32,10 @@
 }
 
 .header-eyebrow {
-  @extend %mono;
   font-size: var(--ms-0);
-  background: var(--yellow-50);
-  padding: 0.35em 0.65em;
-  padding-top: 0.4em;
-  margin-bottom: 1rem;
-  display: inline-block;
-  line-height: 1;
+  margin-bottom: 1em;
   @include bp(m) {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.5em;
   }
 }
 
@@ -55,10 +49,9 @@
   background: var(--blue-20);
   position: relative;
   z-index: 1000;
-  // color: rgba(white, 0.85);
   @include bp(m) {
     flex-basis: 50%;
-    min-height: 75vh;
+    min-height: 80vh;
     padding-right: 4em;
   }
 }

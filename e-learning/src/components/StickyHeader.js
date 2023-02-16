@@ -4,6 +4,7 @@ import useScrollPosition from '../../../shared/hooks/useScrollPosition'
 
 import Button from './ButtonAdapter'
 import BookmarksList from './BookmarksList'
+import UnitChip from './UnitChip'
 import BookIcon from '../assets/icons/favicon.svg'
 import ArrowLeft from '../assets/icons/arrow-left.svg'
 import ArrowRight from '../assets/icons/arrow-right.svg'
@@ -53,7 +54,7 @@ export default function StickyHeader({ post, unit, next, prev, bookmarks, setBoo
         <div className={styles.statusLocation}>
           {unit && (
             <Link to={`../`} className={styles.unit}>
-              Unit {unit.childMdx.frontmatter.order}
+              <UnitChip>Unit {unit.childMdx.frontmatter.order}</UnitChip>
             </Link>
           )}
           {post && <span className={styles.post}>{post.childMdx.frontmatter.title}</span>}
