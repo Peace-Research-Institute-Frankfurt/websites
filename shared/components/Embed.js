@@ -2,7 +2,7 @@ import React from 'react'
 import MarkdownRenderer from 'react-markdown-renderer'
 import Toggle from './Toggle'
 
-function Embed({ styles, url, caption, title, provider, width, height, embedChoices, setEmbedChoices }) {
+export default function Embed({ styles, url, caption, title, provider, width, height, embedChoices, setEmbedChoices }) {
   if (!styles) styles = {}
   const embedStyles = {
     paddingTop: `${(height / width) * 100}%`,
@@ -51,5 +51,3 @@ function Embed({ styles, url, caption, title, provider, width, height, embedChoi
     </figure>
   )
 }
-
-export { Embed }
