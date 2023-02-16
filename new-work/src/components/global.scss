@@ -73,7 +73,7 @@
   --haas-text: 'acumin-pro', sans-serif;
   --suisse: 'Suisse', Georgia, serif;
   --ratio: 1.2; // Minor 3
-  --ms-0: clamp(0.85rem, calc(1.4vw + 0.1rem), 1.05rem);
+  --ms-0: clamp(0.75rem, calc(1.4vw + 0.1rem), 1.05rem);
   --ms--2: calc(var(--ms--1) / var(--ratio));
   --ms--1: calc(var(--ms-0) / var(--ratio));
   --ms-1: calc(var(--ms-0) * var(--ratio));
