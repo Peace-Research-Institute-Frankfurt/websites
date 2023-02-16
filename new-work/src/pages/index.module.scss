@@ -84,17 +84,17 @@
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  letter-spacing: -0.06em;
+  letter-spacing: -0.1em;
   font-weight: 300;
   font-size: 30vw;
   line-height: 0.8;
   margin-bottom: 0.15em;
-  margin-left: -0.08em;
+  margin-left: -0.1em;
+  font-family: var(--haas-text);
 
   @include bp(xs) {
     margin-bottom: 0.15em;
     font-size: 30vw;
-    font-family: var(--haas-text);
     font-weight: 100;
     margin-left: -0.15em;
     letter-spacing: -0.1em;
@@ -116,7 +116,6 @@
 
 .tagline {
   font-family: var(--suisse);
-  line-height: 1.1;
   letter-spacing: -0.05em;
   display: flex;
   flex-flow: column;
@@ -126,10 +125,14 @@
   font-weight: 100;
   padding: 0 var(--padding);
   text-decoration: underline;
-  text-underline-offset: 0.1em;
-  font-size: var(--ms-2);
+  text-underline-offset: 0.15em;
+  font-size: var(--ms-3);
   text-decoration-thickness: 1px;
   max-width: 20em;
+  line-height: 1.25;
+  @include bp(s) {
+    font-size: var(--ms-4);
+  }
   @include bp(m) {
     max-width: 14em;
     font-weight: 100;
