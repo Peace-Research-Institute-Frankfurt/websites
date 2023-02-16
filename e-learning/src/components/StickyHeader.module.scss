@@ -48,7 +48,7 @@
   padding-left: 0.75em;
   opacity: 0;
   transition: var(--fast);
-  .status-active & {
+  .container-active & {
     opacity: 1;
     transform: translateY(0);
   }
