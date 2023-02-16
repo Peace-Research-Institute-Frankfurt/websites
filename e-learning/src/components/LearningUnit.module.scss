@@ -30,12 +30,12 @@
     padding: 0 var(--padding);
     margin-bottom: var(--padding);
     display: grid;
-    @extend %grid;
+    grid-template-columns: 1fr 3fr;
   }
 }
 .section-title {
   @extend %mono;
-  grid-column: 1 / 6;
+  grid-column: 1 / 3;
   margin-bottom: 0.5rem;
   @include bp(m) {
     margin-bottom: 1rem;
@@ -44,10 +44,10 @@
 }
 
 .section-content {
-  grid-column: 1 / 6;
+  grid-column: 1 / 3;
   scroll-margin-top: 2rem;
   @include bp(m) {
-    grid-column: 3 / 6;
+    grid-column: 2 / 3;
   }
 }
 
@@ -96,20 +96,31 @@
 .chapters {
   ol {
     list-style: none;
-    border-radius: var(--br);
-    border-left: $text-border;
-    border-top: $text-border;
     display: grid;
     grid-template-columns: 50% 50%;
+    @include bp(m) {
+      border-radius: var(--br);
+      border-left: $text-border;
+      border-top: $text-border;
+    }
   }
   li {
     border-bottom: $text-border;
-    border-right: $text-border;
+    grid-column: span 2;
+    @include bp(m) {
+      border-right: $text-border;
+    }
+    @include bp(l) {
+      grid-column: span 1;
+    }
   }
   a {
-    padding: 1.5em;
     display: flex;
     flex-flow: column;
+    padding: 1em 0;
+    @include bp(m) {
+      padding: 1.5em;
+    }
     &:hover,
     &:focus-visible {
       h3 {

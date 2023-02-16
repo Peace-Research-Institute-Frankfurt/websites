@@ -1,10 +1,10 @@
 @mixin bp($point) {
   @if $point==xl {
-    @media (min-width: 100rem) {
+    @media (min-width: 85rem) {
       @content;
     }
   } @else if $point==l {
-    @media (min-width: 80rem) {
+    @media (min-width: 70rem) {
       @content;
     }
   } @else if $point==m {
@@ -30,6 +30,9 @@ $text-border: 2px solid var(--gray-30);
   font-size: var(--ms-0);
   a {
     text-decoration: underline;
+    text-underline-offset: 0.15em;
+    color: var(--blue-70);
+    text-decoration-color: var(--blue-60);
   }
   p {
     margin-bottom: 0.65em;

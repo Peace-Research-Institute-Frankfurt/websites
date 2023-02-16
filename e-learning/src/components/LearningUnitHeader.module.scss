@@ -1,8 +1,10 @@
 @import 'vars';
 
 .header {
-  padding: var(--padding);
-  padding-top: 0;
+  margin-bottom: var(--padding);
+  @include bp(m) {
+    padding: 0 var(--padding);
+  }
 }
 
 .inner {
@@ -10,7 +12,7 @@
   flex-flow: column;
   overflow: hidden;
   position: relative;
-  @include bp(m) {
+  @include bp(l) {
     border-radius: var(--br);
     flex-flow: row-reverse;
     justify-content: flex-end;
@@ -18,23 +20,28 @@
 }
 
 .header-title {
-  font-size: var(--ms-4);
+  font-size: var(--ms-3);
   font-weight: 600;
-  line-height: 0.85;
   letter-spacing: -0.03em;
   word-spacing: -0.025em;
-  margin-bottom: 1rem;
+  margin-bottom: 0.25em;
   margin-left: -0.05em;
+  line-height: 1;
   @include bp(m) {
     font-size: var(--ms-6);
+    line-height: 0.85;
     margin-bottom: 2rem;
   }
 }
 
 .header-eyebrow {
-  font-size: var(--ms-0);
+  font-size: var(--ms--1);
+  margin-top: 1em;
   margin-bottom: 1em;
+
   @include bp(m) {
+    font-size: var(--ms-0);
+    margin-top: 0;
     margin-bottom: 1.5em;
   }
 }
@@ -49,7 +56,7 @@
   background: var(--blue-20);
   position: relative;
   z-index: 1000;
-  @include bp(m) {
+  @include bp(l) {
     flex-basis: 50%;
     min-height: 80vh;
     padding-right: 4em;
@@ -59,7 +66,7 @@
   flex-grow: 0;
   flex-shrink: 1;
   background: var(--blue-10);
-  @include bp(m) {
+  @include bp(l) {
     bottom: 0;
     right: 0;
     top: 0;
@@ -93,7 +100,7 @@
 
 .header-intro {
   @extend %copy-large;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1em;
   @include bp(m) {
     margin-bottom: 2rem;
   }
