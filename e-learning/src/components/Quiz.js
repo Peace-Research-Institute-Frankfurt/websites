@@ -182,7 +182,11 @@ const Question = function (props) {
     <div className={styles.question}>
       <div className={styles.questionHeader}>
         <p className={styles.questionText}>{props.question}</p>
-        {props.resultsVisible && <Chip text={statusString} color={color} />}
+        {props.resultsVisible && (
+          <div className={styles.resultChip}>
+            <Chip color={color}>{statusString}</Chip>
+          </div>
+        )}
       </div>
       {props.hint && <p className={styles.questionHint}>{props.hint}</p>}
       {props.children}
@@ -198,7 +202,12 @@ const RadioChoice = function (props) {
     <label className={props.checked ? styles.radioChoiceChecked : styles.radioChoice} htmlFor={props.id}>
       <input type="radio" name={props.questionId} id={props.id} checked={props.checked} onChange={handleChange} />
       {props.value}
-      {props.correct && props.resultsVisible && <img className={styles.correctIndicator} alt="" src={Check} />}
+      {props.correct && props.resultsVisible && (
+        <span className={styles.correctIndicator}>
+          (Correct Answer)
+          <Check />
+        </span>
+      )}
     </label>
   )
 }

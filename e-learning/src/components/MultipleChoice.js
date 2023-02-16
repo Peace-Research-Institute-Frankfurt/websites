@@ -11,7 +11,13 @@ const Choice = function (props) {
     <label className={props.checked ? styles.radioChoiceChecked : styles.radioChoice} htmlFor={props.id}>
       <input data-index={props.index} checked={props.checked} type="checkbox" name={props.name} id={props.id} onChange={handleChange} />
       {props.value}
-      {props.correct && props.resultsVisible && <img className={styles.correctIndicator} alt="" src={Check} />}
+
+      {props.correct && props.resultsVisible && (
+        <span className={styles.correctIndicator}>
+          (Correct Answer)
+          <Check />
+        </span>
+      )}
     </label>
   )
 }
