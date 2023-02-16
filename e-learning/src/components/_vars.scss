@@ -89,20 +89,22 @@ $text-border: 2px solid var(--gray-30);
 }
 
 %h2 {
-  font-size: var(--ms-2);
   letter-spacing: -0.0175em;
   font-weight: 600;
-  line-height: 1;
+  line-height: 1.1;
+  font-size: var(--ms-1);
   @include bp(m) {
-    line-height: 1.1;
+    font-size: var(--ms-2);
   }
 }
 
 %h3 {
-  font-size: var(--ms-1);
   letter-spacing: -0.015em;
   font-weight: 500;
   line-height: 1.1;
+  @include bp(m) {
+    font-size: var(--ms-1);
+  }
 }
 
 %h4 {
