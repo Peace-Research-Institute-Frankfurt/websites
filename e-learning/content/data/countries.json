@@ -30,7 +30,8 @@
   {
     "name": {
       "common": "United Arab Emirates",
-      "article": "The"
+      "article": "The",
+      "isPlural": true
     },
     "alpha2": "AE",
     "alpha3": "ARE"
@@ -248,21 +249,25 @@
   },
   {
     "name": {
-      "common": "Democratic Republic of the Congo"
+      "common": "Democratic Republic of the Congo",
+      "article": "The"
     },
     "alpha2": "CD",
     "alpha3": "COD"
   },
   {
     "name": {
-      "common": "Republic of the Congo"
+      "common": "Republic of the Congo",
+      "article": "The"
     },
     "alpha2": "CG",
     "alpha3": "COG"
   },
   {
     "name": {
-      "common": "Cook Islands"
+      "common": "Cook Islands",
+      "article": "The",
+      "isPlural": true
     },
     "alpha2": "CK",
     "alpha3": "COK"
@@ -782,7 +787,9 @@
   },
   {
     "name": {
-      "common": "Maldives"
+      "common": "Maldives",
+      "article": "The",
+      "isPlural": true
     },
     "alpha2": "MV",
     "alpha3": "MDV"
@@ -796,7 +803,9 @@
   },
   {
     "name": {
-      "common": "Marshall Islands"
+      "common": "Marshall Islands",
+      "article": "The",
+      "isPlural": true
     },
     "alpha2": "MH",
     "alpha3": "MHL"
@@ -916,7 +925,8 @@
   {
     "name": {
       "common": "Netherlands",
-      "article": "The"
+      "article": "The",
+      "isPlural": true
     },
     "alpha2": "NL",
     "alpha3": "NLD"
@@ -979,7 +989,9 @@
   },
   {
     "name": {
-      "common": "Philippines"
+      "common": "Philippines",
+      "article": "The",
+      "isPlural": true
     },
     "alpha2": "PH",
     "alpha3": "PHL"
@@ -1091,7 +1103,9 @@
   },
   {
     "name": {
-      "common": "Solomon Islands"
+      "common": "Solomon Islands",
+      "article": "The",
+      "isPlural": true
     },
     "alpha2": "SB",
     "alpha3": "SLB"
@@ -1140,7 +1154,8 @@
   },
   {
     "name": {
-      "common": "São Tomé and Príncipe"
+      "common": "São Tomé and Príncipe",
+      "isPlural": true
     },
     "alpha2": "ST",
     "alpha3": "STP"
@@ -1182,7 +1197,9 @@
   },
   {
     "name": {
-      "common": "Seychelles"
+      "common": "Seychelles",
+      "article": "The",
+      "isPlural": true
     },
     "alpha2": "SC",
     "alpha3": "SYC"
@@ -1301,7 +1318,9 @@
   },
   {
     "name": {
-      "common": "United States of America"
+      "common": "United States of America",
+      "article": "The",
+      "isPlural": true
     },
     "alpha2": "US",
     "alpha3": "USA"
@@ -1322,7 +1341,8 @@
   },
   {
     "name": {
-      "common": "Saint Vincent and the Grenadines"
+      "common": "Saint Vincent and the Grenadines",
+      "isPlural": true
     },
     "alpha2": "VC",
     "alpha3": "VCT"

@@ -16,7 +16,7 @@ export default function TreatyParticipantGraph({ treaty }) {
       text = (
         <>
           {article}
-          <strong>{p.country.name.common}</strong> is not a party to the {treaty.shortTitle || treaty.title}.
+          <strong>{p.country.name.common}</strong> {p.country.name.isPlural ? 'are' : 'is'} not a party to the {treaty.shortTitle || treaty.title}.
         </>
       )
     } else if (p.status === 'ratification') {

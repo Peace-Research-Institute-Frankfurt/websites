@@ -13,9 +13,27 @@ const addArticle = [
   'Central African Republic',
   'Dominican Republic',
   'Republic of Congo',
-  'Democratic Republic of the Congo',
+  'DR Congo',
+  'Republic of the Congo',
   'Marshall Islands',
   'Solomon Islands',
+  'Cook Islands',
+  'Philippines',
+  'Maldives',
+  'Seychelles',
+]
+
+const addPlural = [
+  'Netherlands',
+  'United States',
+  'United Arab Emirates',
+  'Marshall Islands',
+  'Solomon Islands',
+  'Cook Islands',
+  'Saint Vincent and the Grenadines',
+  'Maldives',
+  'Philippines',
+  'Seychelles',
 ]
 
 const raw = JSON.parse(fs.readFileSync(path.join(__dirname, './countries_raw.json')))
@@ -27,12 +45,14 @@ const rawMembers = raw.filter((el) => {
 const out = rawMembers.map((c) => {
   const country = { name: { common: c.name.common }, alpha2: c.cca2, alpha3: c.cca3 }
 
-  if (nameSubs[c.name.common]) {
-    country.name.common = nameSubs[c.name.common]
-  }
-
   if (addArticle.includes(country.name.common)) {
     country.name.article = 'The'
+  }
+  if (addPlural.includes(country.name.common)) {
+    country.name.isPlural = true
+  }
+  if (nameSubs[c.name.common]) {
+    country.name.common = nameSubs[c.name.common]
   }
   return country
 })

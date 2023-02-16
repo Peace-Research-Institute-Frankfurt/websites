@@ -16,6 +16,7 @@ export default function Treaty({ name }) {
           name {
             common
             article
+            isPlural
           }
         }
       }
@@ -33,6 +34,7 @@ export default function Treaty({ name }) {
               alpha2
               alpha3
               name {
+                isPlural
                 common
                 article
               }
