@@ -1,4 +1,4 @@
-name: "[eLearning] Build and deploy"
+name: '[eLearning] Build and Deploy'
 
 on:
   # push:
