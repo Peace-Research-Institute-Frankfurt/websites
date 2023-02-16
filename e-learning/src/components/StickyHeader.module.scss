@@ -1,6 +1,6 @@
 @import 'vars';
 
-.status {
+.container {
   @extend %grid;
   position: sticky;
   margin-right: var(--padding);
@@ -11,7 +11,7 @@
   height: 3em;
   border-bottom: 1px solid transparent;
   background: white;
-  z-index: 1000;
+  z-index: 2000;
   @include bp(m) {
     font-size: 1rem;
   }
@@ -21,7 +21,7 @@
   }
 }
 
-.status-active {
+.container-active {
   border-bottom: 1px solid var(--blue-90);
 }
 
@@ -146,7 +146,7 @@
 }
 
 .bookmarks-header {
-  padding: 0.45rem 0.75rem;
+  padding: 0.4rem 0.75rem;
   @extend %caption;
   display: flex;
   justify-content: space-between;

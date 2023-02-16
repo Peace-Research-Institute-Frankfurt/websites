@@ -23,7 +23,7 @@ export default function StickyHeader({ post, unit, next, prev, bookmarks, setBoo
     scrollProgress = scrollPosition.y / (document.body.scrollHeight - window.innerHeight)
   }
 
-  const showStatusClass = scrollPosition.y > 10 ? styles.statusActive : ''
+  const showStatusClass = scrollPosition.y > 10 ? styles.containerActive : null
   let bookmarkIndex = 0
   if (post) {
     bookmarkIndex = bookmarks.findIndex((el) => {
@@ -46,7 +46,7 @@ export default function StickyHeader({ post, unit, next, prev, bookmarks, setBoo
   }
   return (
     <>
-      <header className={`${styles.status} ${showStatusClass}`}>
+      <header className={`${styles.container} ${showStatusClass}`}>
         <Link className={styles.home} to="/">
           <BookIcon />
           EUNPDC eLearning

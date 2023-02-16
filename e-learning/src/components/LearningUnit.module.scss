@@ -97,14 +97,14 @@
   ol {
     list-style: none;
     border-radius: var(--br);
-    border-left: 2px solid var(--gray-30);
-    border-top: 2px solid var(--gray-30);
+    border-left: $text-border;
+    border-top: $text-border;
     display: grid;
     grid-template-columns: 50% 50%;
   }
   li {
-    border-bottom: 2px solid var(--gray-30);
-    border-right: 2px solid var(--gray-30);
+    border-bottom: $text-border;
+    border-right: $text-border;
   }
   a {
     padding: 1.5em;

@@ -3,11 +3,10 @@
 .credit {
   color: var(--gray-40);
   font-weight: 400;
-  font-size: var(--ms--2);
   padding-left: 0.25rem;
+  white-space: nowrap;
   a {
     text-decoration: underline;
-    white-space: nowrap;
   }
 }
 .captions {

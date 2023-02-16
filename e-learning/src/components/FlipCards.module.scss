@@ -1,3 +1,5 @@
+@import 'vars';
+
 .container {
   grid-column: 2/5;
   perspective: 1000px;
@@ -40,14 +42,18 @@
   cursor: pointer;
   &:hover,
   &:focus-visible {
-    border: 2px solid var(--blue-70);
+    border: 2px solid var(--blue-20);
   }
 }
 
 .front {
   background: var(--gray-10);
-  border: 2px solid var(--gray-20);
+  border: $text-border;
   position: relative;
+  &:hover,
+  &:focus-visible {
+    border: 2px solid var(--gray-40);
+  }
 }
 .back {
   background: var(--yellow-20);
@@ -58,4 +64,8 @@
   width: 100%;
   transform: rotateX(180deg);
   overflow-y: auto;
+  &:hover,
+  &:focus-visible {
+    border: 2px solid rgba(black, 0.25);
+  }
 }

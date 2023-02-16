@@ -134,6 +134,7 @@
   }
 
   table {
+    @extend %caption;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
     display: inline-block;
@@ -142,14 +143,13 @@
   th {
     padding: 0.2em;
     padding-left: 0;
-    padding-right: 3em;
-    border-bottom: 2px solid var(--gray-20);
+    padding-right: 2em;
+    border-bottom: $text-border;
     vertical-align: top;
   }
   th {
-    @extend %h4;
+    font-weight: 600;
     text-align: left;
-    padding-bottom: 0.45em;
   }
   sup {
     font-size: var(--ms--2);
