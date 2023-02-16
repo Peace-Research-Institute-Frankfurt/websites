@@ -54,8 +54,6 @@ export default function BookmarksList({ bookmarks, setBookmarks }) {
     return false
   })
 
-  // console.log(data.units.nodes)
-  // console.log(data.chapters.nodes)
   // Let's join the unit here
   chapters.forEach((c) => {
     const unit = data.units.nodes.find((un) => {
@@ -93,5 +91,5 @@ export default function BookmarksList({ bookmarks, setBookmarks }) {
 
   const emptyState = <p className={styles.empty}>When you add chapters to your bookmarks they'll appear here.</p>
 
-  return <aside>{bookmarksItems.length > 0 ? bookmarksContent : emptyState}</aside>
+  return <>{bookmarksItems.length > 0 ? bookmarksContent : emptyState}</>
 }

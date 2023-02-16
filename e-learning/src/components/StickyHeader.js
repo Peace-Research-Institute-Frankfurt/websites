@@ -9,6 +9,7 @@ import ArrowLeft from '../assets/icons/arrow-left.svg'
 import ArrowRight from '../assets/icons/arrow-right.svg'
 import BookmarkOutline from '../assets/icons/bookmark-add.svg'
 import BookmarkFilled from '../assets/icons/bookmark-added.svg'
+import CloseIcon from '../assets/icons/close.svg'
 
 import * as styles from './StickyHeader.module.scss'
 
@@ -43,58 +44,67 @@ export default function StickyHeader({ post, unit, next, prev, bookmarks, setBoo
     })
   }
   return (
-    <header className={`${styles.status} ${showStatusClass}`}>
-      <Link className={styles.home} to="/">
-        <BookIcon />
-        EUNPDC eLearning
-      </Link>
-      <div className={styles.statusLocation}>
-        {unit && (
-          <Link to={`../`} className={styles.unit}>
-            Unit {unit.childMdx.frontmatter.order}
-          </Link>
-        )}
-        {post && <span className={styles.post}>{post.childMdx.frontmatter.title}</span>}
-      </div>
-      <div className={styles.progress}>
-        <div style={{ width: `${scrollProgress * 100}%` }} className={styles.progressInner}></div>
-      </div>
-      <div className={styles.actions}>
-        <nav className={styles.statusPagination}>
-          {prev && (
-            <Link className={styles.paginationLink} to={`../${prev.childMdx.fields.slug}`}>
-              Previous Chapter
-              <ArrowLeft />
+    <>
+      <header className={`${styles.status} ${showStatusClass}`}>
+        <Link className={styles.home} to="/">
+          <BookIcon />
+          EUNPDC eLearning
+        </Link>
+        <div className={styles.statusLocation}>
+          {unit && (
+            <Link to={`../`} className={styles.unit}>
+              Unit {unit.childMdx.frontmatter.order}
             </Link>
           )}
-          {next && (
-            <Link className={styles.paginationLink} to={`../${next.childMdx.fields.slug}`}>
-              Next Chapter
-              <ArrowRight />
-            </Link>
+          {post && <span className={styles.post}>{post.childMdx.frontmatter.title}</span>}
+        </div>
+        <div className={styles.progress}>
+          <div style={{ width: `${scrollProgress * 100}%` }} className={styles.progressInner}></div>
+        </div>
+        <div className={styles.actions}>
+          <nav className={styles.statusPagination}>
+            {prev && (
+              <Link className={styles.paginationLink} to={`../${prev.childMdx.fields.slug}`}>
+                Previous Chapter
+                <ArrowLeft />
+              </Link>
+            )}
+            {next && (
+              <Link className={styles.paginationLink} to={`../${next.childMdx.fields.slug}`}>
+                Next Chapter
+                <ArrowRight />
+              </Link>
+            )}
+          </nav>
+          {post && (
+            <Button
+              priority="secondary"
+              label={bookmarkIndex === -1 ? 'Add bookmark' : 'Remove bookmark'}
+              hideLabel={true}
+              onClick={toggleBookmark}
+              icon={bookmarkIndex === -1 ? <BookmarkOutline /> : <BookmarkFilled />}
+            ></Button>
           )}
-        </nav>
-        {post && (
           <Button
+            label="Bookmarks"
             priority="secondary"
-            label={bookmarkIndex === -1 ? 'Add bookmark' : 'Remove bookmark'}
-            hideLabel={true}
-            onClick={toggleBookmark}
-            icon={bookmarkIndex === -1 ? <BookmarkOutline /> : <BookmarkFilled />}
-          ></Button>
-        )}
-        <Button
-          label="Bookmarks"
-          priority="secondary"
-          onClick={() => {
-            setBookmarksActive(!bookmarksActive)
-          }}
-          className="toggleBookmarks"
-        />
-      </div>
+            onClick={() => {
+              setBookmarksActive(!bookmarksActive)
+            }}
+            className="toggleBookmarks"
+          />
+        </div>
+      </header>
       <div className={`${styles.bookmarksContainer} ${bookmarksActive ? styles.bookmarksContainerActive : null}`}>
+        <header className={styles.bookmarksHeader}>
+          <span className={styles.bookmarksTitle}>Your bookmarks</span>
+          <Button onClick={() => setBookmarksActive(false)} label="Close" priority="ghost" icon={<CloseIcon />} size="small" hideLabel={true} />
+        </header>
         <BookmarksList bookmarks={bookmarks} setBookmarks={setBookmarks} />
       </div>
-    </header>
+      <button className={`${styles.backdrop} ${bookmarksActive && styles.backdropActive}`} onClick={() => setBookmarksActive(false)}>
+        Close Bookmarks
+      </button>
+    </>
   )
 }

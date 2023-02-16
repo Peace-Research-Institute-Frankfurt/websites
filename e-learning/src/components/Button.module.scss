@@ -2,7 +2,7 @@
   font-weight: 400;
   display: inline-flex;
   padding: 0.35em 0.65em;
-  border-radius: 6px;
+  border-radius: var(--br);
   text-decoration-width: 1px;
   cursor: pointer;
   gap: 0.25em;
@@ -27,9 +27,23 @@
     border: 1px solid var(--blue-90);
   }
 }
-.tertiary {
-  background: var(--gray-20);
+.ghost {
+  background: transparent;
   color: var(--blue-90);
+  border: 1px solid transparent;
+  &:hover,
+  &:focus-visible {
+    border: 1px solid var(--gray-50);
+  }
+}
+
+.small {
+  font-size: var(--ms--1);
+  .icon {
+    svg {
+      height: 0.95em;
+    }
+  }
 }
 
 .has-icon {
@@ -38,6 +52,9 @@
 
 .hide-label {
   padding: 0.3em;
+  &.small {
+    padding: 0.15em;
+  }
   .label {
     position: absolute;
     font-size: 0;

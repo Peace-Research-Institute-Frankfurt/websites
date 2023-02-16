@@ -6,12 +6,12 @@
   margin-right: var(--padding);
   margin-left: var(--padding);
   top: 0;
-  z-index: 5000;
   align-content: stretch;
   transition: var(--fast);
   height: 3em;
   border-bottom: 1px solid transparent;
   background: white;
+  z-index: 1000;
   @include bp(m) {
     font-size: 1rem;
   }
@@ -136,32 +136,50 @@
 }
 
 .bookmarks-container {
-  position: absolute;
+  position: fixed;
   transition: var(--fast);
   top: 100%;
-  right: 0;
+  right: var(--padding);
   opacity: 0;
   border: 1px solid rgba(black, 0.75);
   border-radius: var(--br);
   filter: drop-shadow(0px 2px 2px rgba(black, 0.2));
   width: 25rem;
   background-color: white;
-  top: 4rem;
-  &:before {
-    content: '';
-    position: absolute;
-    width: 0.75rem;
-    height: 0.75rem;
-    border-top: 1px solid rgba(black, 0.75);
-    border-left: 1px solid rgba(black, 0.75);
-    background: white;
-    top: 0;
-    right: 1.2rem;
-    transform: translateY(-50%) rotate(45deg);
-  }
+  top: 2.5rem;
+  z-index: 2000;
 }
 
 .bookmarks-container-active {
   opacity: 1;
   transform: translateY(5px);
+}
+
+.bookmarks-header {
+  padding: 0.45rem 0.75rem;
+  @extend %caption;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--blue-80);
+}
+
+.bookmarks--title {
+  font-weight: 500;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 100;
+  display: none;
+  font-size: 0;
+}
+
+.backdrop-active {
+  display: block;
 }

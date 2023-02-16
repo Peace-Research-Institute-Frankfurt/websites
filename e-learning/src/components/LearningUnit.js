@@ -141,7 +141,7 @@ const LearningUnit = ({ data, context }) => {
           background={frontmatter.hero_background}
           startLink={data.chapters.nodes[0].childMdx.fields.slug}
         />
-        <main className={styles.main}>
+        <main>
           <section className={styles.chapters}>
             <h2 className={styles.sectionTitle}>Chapters</h2>
             <div id="chapters" className={styles.sectionContent}>

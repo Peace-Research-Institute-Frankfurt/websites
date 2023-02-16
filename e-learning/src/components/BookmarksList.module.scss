@@ -23,8 +23,7 @@
 }
 
 .eyebrow {
-  @extend %mono;
-  font-size: var(--ms--2);
+  @extend %caption;
   display: block;
 }
 
