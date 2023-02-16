@@ -2,7 +2,7 @@ import { Link, graphql, useStaticQuery } from 'gatsby'
 import React from 'react'
 import CrossIcon from '../images/cross.svg'
 import EmailShareForm from './EmailShareForm'
-import Button from './Button'
+import Button from './ButtonAdapter'
 import * as styles from './BookmarksList.module.scss'
 
 export default function BookmarksList({ bookmarks, setBookmarks }) {
@@ -54,7 +54,7 @@ export default function BookmarksList({ bookmarks, setBookmarks }) {
     const slug = p.childMdx.fields.slug
     return (
       <li key={`${slug}`} className={styles.item}>
-        <Link to={`/${slug}`}>
+        <Link to={`/${slug}`} className={styles.link}>
           <span className={styles.title}>{p.childMdx.frontmatter.title}</span>
           {p.childMdx.frontmatter.authors && (
             <p className={styles.authors}>
@@ -66,7 +66,16 @@ export default function BookmarksList({ bookmarks, setBookmarks }) {
             </p>
           )}
         </Link>
-        <Button hideLabel={true} icon={<CrossIcon />} className={styles.remove} onClick={() => removeBookmark(slug)} />
+        <div className={styles.remove}>
+          <Button
+            size="small"
+            priority="secondary"
+            label="Favorit löschen"
+            hideLabel={true}
+            icon={<CrossIcon />}
+            onClick={() => removeBookmark(slug)}
+          />
+        </div>
       </li>
     )
   })

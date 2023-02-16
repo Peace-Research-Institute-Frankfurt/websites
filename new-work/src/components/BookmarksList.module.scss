@@ -10,6 +10,9 @@
     padding: rem;
     padding-right: 3.5rem;
   }
+}
+
+.link {
   &:hover,
   &:focus-visible {
     .title {
@@ -28,7 +31,6 @@
 
 .authors {
   @extend %caption;
-  padding-top: 0.2rem;
 }
 
 .remove {

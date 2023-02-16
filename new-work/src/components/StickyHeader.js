@@ -7,7 +7,7 @@ import LeftArrow from '../images/arrow-left.svg'
 import RightArrow from '../images/arrow-right.svg'
 import BookmarkToggle from './BookmarkToggle.js'
 import BookmarksList from './BookmarksList'
-import Button from './Button'
+import Button from './ButtonAdapter'
 import ButtonGroup from './ButtonGroup'
 import * as styles from './StickyHeader.module.scss'
 
@@ -75,7 +75,7 @@ export default function StickyHeader({ title, next, prev, post }) {
                 )}
               </nav>
               <BookmarkToggle post={post} bookmarks={faves} setBookmarks={setBookmarks} />
-              <Button label="Favoriten" onClick={() => setBookmarksActive(!bookmarksActive)} />
+              <Button priority="secondary" label="Favoriten" onClick={() => setBookmarksActive(!bookmarksActive)} />
             </ButtonGroup>
             <div className={`${styles.bookmarksContainer} ${bookmarksActive && styles.bookmarksContainerActive}`}>
               <div className={styles.bookmarksContainerInner}>

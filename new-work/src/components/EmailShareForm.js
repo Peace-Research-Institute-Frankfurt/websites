@@ -1,6 +1,6 @@
 import { Link } from 'gatsby'
 import React, { useEffect, useRef, useState } from 'react'
-import Button from './Button.js'
+import Button from './ButtonAdapter.js'
 import ButtonGroup from './ButtonGroup.js'
 import { Field, Form } from './Form.js'
 import * as styles from './EmailShareForm.module.scss'
@@ -145,7 +145,7 @@ export default function EmailShareForm({ posts }) {
     <>
       {flowState === 'collapsed' && (
         <div className={styles.toggle}>
-          <Button onClick={() => setFlowState('default')} label="Per Email teilen" />
+          <Button priority="secondary" onClick={() => setFlowState('default')} label="Per Email teilen" />
         </div>
       )}
       {flowState === 'default' && <>{defaultView}</>}

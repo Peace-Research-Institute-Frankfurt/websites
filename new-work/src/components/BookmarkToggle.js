@@ -1,7 +1,7 @@
 import React from 'react'
 import HeartFilled from '../images/heart-filled.svg'
 import HeartOutline from '../images/heart-stroke.svg'
-import Button from './Button.js'
+import Button from './ButtonAdapter.js'
 
 export default function BookmarkToggle({ post, bookmarks, setBookmarks }) {
   const bookmarkIndex = bookmarks.findIndex((el) => {
@@ -27,7 +27,7 @@ export default function BookmarkToggle({ post, bookmarks, setBookmarks }) {
     <Button
       label={bookmarkIndex === -1 ? 'Als Favorit speichern' : 'Favorit löschen'}
       type="icon"
-      as="button"
+      priority="secondary"
       hideLabel={true}
       onClick={toggleBookmark}
       icon={bookmarkIndex === -1 ? <HeartOutline /> : <HeartFilled />}
