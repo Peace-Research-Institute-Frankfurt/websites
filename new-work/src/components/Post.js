@@ -76,12 +76,15 @@ const Post = ({ data, children }) => {
     return el.childMdx.frontmatter.order === frontmatter.order
   })
 
-  const heroImage = (
-    <div className={styles.image}>
-      <GatsbyImage loading="eager" image={getImage(frontmatter.hero_image)} alt={frontmatter.hero_alt} />
-      {frontmatter.hero_credit && <p className={styles.credit}>Bild: {frontmatter.hero_credit}</p>}
-    </div>
-  )
+  let heroImage = <></>
+  if (frontmatter.hero_image) {
+    heroImage = (
+      <div className={styles.image}>
+        <GatsbyImage loading="eager" image={getImage(frontmatter.hero_image)} alt={frontmatter.hero_alt} />
+        {frontmatter.hero_credit && <p className={styles.credit}>Bild: {frontmatter.hero_credit}</p>}
+      </div>
+    )
+  }
 
   const next = data.posts.nodes[currentIndex + 1]
   const previous = data.posts.nodes[currentIndex - 1]

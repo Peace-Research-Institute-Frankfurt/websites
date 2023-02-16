@@ -19,10 +19,10 @@ export default function Bylines({ authors }) {
       />
     )
   })
-  const authorNames = authors.map((author) => {
+  const authorNames = authors.map((author, i) => {
     const fm = author.frontmatter
     return (
-      <span className={styles.person} key={fm.name}>
+      <span className={styles.person} key={`${fm.name}-${i}`}>
         <span className={styles.name}>{fm.name}</span>
         {fm.institution && <span> ({fm.institution})</span>}
       </span>
