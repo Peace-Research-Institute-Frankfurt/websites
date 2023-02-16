@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
-import { Term } from '@prif/shared'
+import Term from '@shared/components/Term'
 import TooltipAdapter from './TooltipAdapter'
 
 export default function TermAdapter({ t, ...props }) {

@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
-import { File } from '@prif/shared'
+import File from '@shared/components/File'
 
 export default function FileAdapter({ styles, file, title }) {
   if (!styles) styles = {}

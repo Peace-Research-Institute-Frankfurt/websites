@@ -1,6 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby'
-import { graphql } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 import Meta from '../components/Meta'
 import * as styles from './index.module.scss'
 

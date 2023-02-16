@@ -1,8 +1,8 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import { Expandable } from '@prif/shared'
-import { Chip, ChipGroup } from './Chip'
+import Expandable from '@shared/components/Expandable'
 import Button from './ButtonAdapter'
+import { Chip, ChipGroup } from './Chip'
 import * as styles from './Institution.module.scss'
 
 export default function Institution({ name }) {

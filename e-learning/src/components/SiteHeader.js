@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react'
 import { Link } from 'gatsby'
+
 import Logo from '../assets/logo.png'
 import * as styles from './SiteHeader.module.scss'
 

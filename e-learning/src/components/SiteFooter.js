@@ -1,5 +1,6 @@
-import { graphql, useStaticQuery } from 'gatsby'
 import React from 'react'
+import { graphql, useStaticQuery } from 'gatsby'
+
 import FundingLogo from '../assets/icons/funded-by-eu.svg'
 import * as styles from './SiteFooter.module.scss'
 

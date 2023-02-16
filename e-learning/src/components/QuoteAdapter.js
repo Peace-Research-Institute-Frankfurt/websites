@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
-import { Quote } from '@prif/shared'
+import Quote from '@shared/components/Quote'
 
 export default function QuoteAdapter({ audio, ...props }) {
   const data = useStaticQuery(graphql`

@@ -1,5 +1,5 @@
-import TooltipAdapter from './TooltipAdapter'
 import React, { useRef, useState } from 'react'
+import TooltipAdapter from './TooltipAdapter'
 import * as styles from './TreatyParticipantGraph.module.scss'
 
 export default function TreatyParticipantGraph({ treaty }) {

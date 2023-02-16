@@ -1,10 +1,13 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { Chip, ChipGroup } from './Chip'
+
+import Expandable from '@shared/components/Expandable'
+
+import Button from './ButtonAdapter'
 import CheckIcon from '../assets/icons/check.svg'
 import CrossIcon from '../assets/icons/cross.svg'
-import { Expandable } from '@prif/shared'
-import Button from './ButtonAdapter'
+
 import * as styles from './Resolution.module.scss'
 
 export default function Resolution({ name }) {

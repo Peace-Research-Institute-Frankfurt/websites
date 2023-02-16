@@ -1,5 +1,6 @@
-import { graphql, useStaticQuery } from 'gatsby'
 import React from 'react'
+import { graphql, useStaticQuery } from 'gatsby'
+
 export default function Meta({ title, socialTitle, description, image, url, children }) {
   const defaultData = useStaticQuery(graphql`
     query {

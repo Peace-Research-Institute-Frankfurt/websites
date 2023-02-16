@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
-import { Embed } from '@prif/shared'
+import Embed from '@shared/components/Embed'
 import { EmbedChoicesContext } from '../context/EmbedChoicesContext'
 
 function EmbedAdapter({ provider, ...props }) {

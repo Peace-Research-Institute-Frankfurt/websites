@@ -1,3 +1,4 @@
+const path = require('path')
 const { createFilePath } = require(`gatsby-source-filesystem`)
 const { compileMDXWithCustomOptions } = require(`gatsby-plugin-mdx`)
 const slug = require('slug')
@@ -123,13 +124,18 @@ exports.createSchemaCustomization = async ({ getNode, getNodesByType, pathPrefix
 }
 
 exports.onCreateWebpackConfig = ({ rules, actions, getConfig }) => {
-  // This code does the following:
-  // - Adds the react-svg-loader to our webpack config so we can use inline SVG in React components
-  // - Removes the default URL loader, then re-adds two copies of it (once set to ignore SVGs),
-  //   and once to include SVGs, but only when they're imported in CSS files
-
   const cfg = getConfig()
   const imgsRule = rules.images()
+
+  cfg.resolve.alias = {
+    ...cfg.resolve.alias,
+    '@shared': path.resolve(__dirname, '../shared'),
+  }
+
+  // The following code:
+  // - adds the react-svg-loader to our webpack config so we can use inline SVG in React components
+  // - removes the default URL loader, then re-adds two copies of it (once set to ignore SVGs),
+  //   and once to include SVGs, but only when they're imported in CSS files
 
   cfg.module.rules = [
     ...cfg.module.rules.filter((rule) => {
@@ -146,5 +152,6 @@ exports.onCreateWebpackConfig = ({ rules, actions, getConfig }) => {
     { ...imgsRule, test: new RegExp(imgsRule.test.toString().replace('svg|', '').slice(1, -1)) },
     { ...imgsRule, issuer: /\.(css|scss|sass)$/ },
   ]
+
   actions.replaceWebpackConfig(cfg)
 }

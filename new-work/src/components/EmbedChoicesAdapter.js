@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import { EmbedChoicesContext } from '../context/EmbedChoicesContext'
-import { EmbedChoices } from '@prif/shared'
+import EmbedChoices from '@shared/components/EmbedChoices'
 
 export default function EmbedChoicesAdapter({ ...props }) {
   const data = useStaticQuery(graphql`

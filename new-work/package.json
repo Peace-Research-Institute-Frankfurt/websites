@@ -12,9 +12,9 @@
     "start": "gatsby develop"
   },
   "dependencies": {
-    "@prif/shared": "0.0.1",
     "@hcaptcha/react-hcaptcha": "^1.4.4",
     "@mdx-js/react": "^2.3.0",
+    "@prif/shared": "0.0.1",
     "dotenv": "^16.0.3",
     "gatsby": "^5.6.0",
     "gatsby-plugin-image": "^3.4.0",
@@ -34,16 +34,17 @@
     "react-dom": "^18.2.0",
     "react-markdown-renderer": "^1.4.0",
     "remark-gfm": "^3.0.1",
+    "retext": "^8.1.0",
+    "retext-smartypants": "^5.2.0",
     "sass": "^1.57.1",
     "slug": "^8.2.2",
     "unist-util-visit": "^4.1.1",
-    "validator": "^13.7.0",
-    "retext": "^8.1.0",
-    "retext-smartypants": "^5.2.0"
+    "validator": "^13.7.0"
   },
   "devDependencies": {
     "@sendgrid/mail": "^7.7.0",
     "cheerio": "^1.0.0-rc.12",
+    "eslint-import-resolver-alias": "^1.1.2",
     "form-data": "^4.0.0",
     "handlebars": "^4.7.7",
     "mailgun.js": "^8.0.6",

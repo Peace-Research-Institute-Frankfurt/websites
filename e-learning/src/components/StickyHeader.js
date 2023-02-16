@@ -1,6 +1,6 @@
 import { Link } from 'gatsby'
 import React, { useState } from 'react'
-import useScrollPosition from '../../../shared/hooks/useScrollPosition'
+import useScrollPosition from '@shared/hooks/useScrollPosition'
 
 import Button from './ButtonAdapter'
 import BookmarksList from './BookmarksList'

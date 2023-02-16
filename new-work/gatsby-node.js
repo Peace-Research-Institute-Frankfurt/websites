@@ -1,5 +1,6 @@
 const { createFilePath } = require(`gatsby-source-filesystem`)
 const slug = require('slug')
+const path = require('path')
 slug.extend({ '—': '-', '–': '-' })
 
 exports.createPages = async function ({ actions, graphql }) {
@@ -103,4 +104,13 @@ exports.createSchemaCustomization = async ({ getNode, getNodesByType, pathPrefix
   }
   `
   createTypes(typeDefs)
+}
+
+exports.onCreateWebpackConfig = ({ actions, getConfig }) => {
+  const cfg = getConfig()
+  cfg.resolve.alias = {
+    ...cfg.resolve.alias,
+    '@shared': path.resolve(__dirname, '../shared'),
+  }
+  actions.replaceWebpackConfig(cfg)
 }

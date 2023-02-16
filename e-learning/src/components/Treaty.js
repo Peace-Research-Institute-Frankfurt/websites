@@ -1,6 +1,6 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import { Expandable } from '@prif/shared'
+import Expandable from '@shared/components/Expandable'
 import { Chip, ChipGroup } from './Chip.js'
 import TreatyParticipantGraph from './TreatyParticipantGraph'
 import Button from './ButtonAdapter.js'

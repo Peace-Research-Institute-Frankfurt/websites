@@ -1,12 +1,13 @@
-import { graphql, Link } from 'gatsby'
-import { GatsbyImage, getImage, getSrc } from 'gatsby-plugin-image'
 import React from 'react'
 import MarkdownRenderer from 'react-markdown-renderer'
+import { graphql, Link } from 'gatsby'
+import { GatsbyImage, getImage, getSrc } from 'gatsby-plugin-image'
+import useLocalStorage from '@shared/hooks/useLocalStorage'
+
 import App from './App'
-import LearningUnitHeader from './LearningUnitHeader'
 import Meta from './Meta'
 import StickyHeader from './StickyHeader'
-import useLocalStorage from './useLocalStorage'
+import LearningUnitHeader from './LearningUnitHeader'
 
 import * as styles from './LearningUnit.module.scss'
 

@@ -1,9 +1,11 @@
 import React from 'react'
-import * as styles from './LearningUnitHeader.module.scss'
+import { Link } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
+
 import UnitChip from './UnitChip'
 import ArrowRight from '../assets/icons/arrow-right.svg'
-import { Link } from 'gatsby'
+
+import * as styles from './LearningUnitHeader.module.scss'
 
 export default function LearningUnitHeader({ image, alt, order, title, intro, startLink, background, bylines }) {
   const headerStyles = {

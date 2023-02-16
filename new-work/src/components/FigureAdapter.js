@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
-import { Figure } from '@prif/shared'
+import Figure from '@shared/components/Figure'
 
 export default function FigureAdapter({ styles, caption, credit, size, alt, src, license }) {
   const data = useStaticQuery(graphql`

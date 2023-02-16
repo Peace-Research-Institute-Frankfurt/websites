@@ -1,5 +1,5 @@
 import React from 'react'
-import { Tooltip } from '@prif/shared'
+import Tooltip from '@shared/components/Tooltip'
 import * as styles from './Tooltip.module.scss'
 
 export default function TooltipAdapter({ ...props }) {
