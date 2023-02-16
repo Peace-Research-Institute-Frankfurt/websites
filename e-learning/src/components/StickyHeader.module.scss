@@ -3,8 +3,6 @@
 .container {
   @extend %grid;
   position: sticky;
-  margin-right: var(--padding);
-  margin-left: var(--padding);
   top: 0;
   align-content: stretch;
   transition: var(--fast);
@@ -13,7 +11,10 @@
   z-index: 2000;
   font-size: var(--ms--1);
   height: 3.75em;
+  padding: 0 var(--padding);
   @include bp(m) {
+    padding: 0;
+    margin: 0 var(--padding);
     height: 3em;
     font-size: 1rem;
   }
@@ -116,7 +117,9 @@
   position: relative;
   white-space: nowrap;
   grid-column: 1/4;
+  font-weight: 500;
   @include bp(m) {
+    font-weight: 400;
     grid-column: 1/3;
   }
   &:hover,

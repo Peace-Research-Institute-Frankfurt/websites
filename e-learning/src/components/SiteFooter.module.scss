@@ -2,9 +2,13 @@
 
 .container {
   @extend %caption;
-  padding-top: var(--padding);
-  margin: var(--padding);
-  border-top: 1px solid var(--blue-80);
+  padding: var(--padding) 0;
+  margin: 0 var(--padding);
+  border-top: 1px solid var(--gray-40);
+  @include bp(m) {
+    padding-top: 1.5em;
+    margin-top: 2em;
+  }
   p {
     max-width: 60em;
   }
