@@ -29,6 +29,10 @@
 .eyebrow {
   @extend %caption;
   display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 90%;
+  text-overflow: ellipsis;
   @include bp(m) {
     margin-bottom: 0.1rem;
   }
