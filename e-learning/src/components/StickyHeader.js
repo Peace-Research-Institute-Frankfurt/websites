@@ -49,7 +49,7 @@ export default function StickyHeader({ post, unit, next, prev, bookmarks, setBoo
       <header className={`${styles.container} ${showStatusClass}`}>
         <Link className={styles.home} to="/">
           <BookIcon />
-          EUNPDC eLearning
+          <span className={styles.homeLabel}>EUNPDC eLearning</span>
         </Link>
         <div className={styles.statusLocation}>
           {unit && (

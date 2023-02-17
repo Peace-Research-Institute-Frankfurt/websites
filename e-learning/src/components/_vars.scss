@@ -71,12 +71,9 @@ $text-border: 2px solid var(--gray-30);
 
 %copy-large {
   line-height: 1.25;
-  font-size: var(--ms-0);
   hyphens: auto;
   letter-spacing: -0.015em;
-  @include bp(m) {
-    font-size: var(--ms-1);
-  }
+  font-size: var(--ms-1);
 }
 
 %mono {

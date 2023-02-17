@@ -2,7 +2,7 @@
 
 .container {
   grid-column: 1/ 6;
-  margin-bottom: 1em;
+  margin: 1em 0;
   @include bp(m) {
     grid-column: 3/ 4;
   }

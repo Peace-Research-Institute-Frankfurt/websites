@@ -28,7 +28,7 @@ import TermAdapter from './TermAdapter'
 import Treaty from './Treaty'
 
 import * as CalloutStyles from './Callout.module.scss'
-import * as ChapterStyles from './Chapter.module.scss'
+import * as styles from './Chapter.module.scss'
 import * as DetailsStyles from './Details.module.scss'
 import * as FigureStyles from './Figure.module.scss'
 import * as FlipCardsStyles from './FlipCards.module.scss'
@@ -138,37 +138,40 @@ const Chapter = ({ data, children }) => {
     <App>
       <StickyHeader unit={data.unit} post={data.post} next={next} prev={prev} bookmarks={bookmarks} setBookmarks={setBookmarks} />
       <article>
-        <header className={ChapterStyles.header}>
-          <div className={ChapterStyles.headerCopy}>
-            <h1 className={ChapterStyles.title}>{frontmatter.title}</h1>
-            {frontmatter.intro && <p className={ChapterStyles.intro}>{frontmatter.intro}</p>}
+        <header className={styles.header}>
+          <div className={styles.headerCopy}>
+            <h1 className={styles.title}>{frontmatter.title}</h1>
+            {frontmatter.intro && <p className={styles.intro}>{frontmatter.intro}</p>}
           </div>
         </header>
-        <div className={ChapterStyles.body}>
-          {data.post.childMdx.tableOfContents.items && (
-            <div className={ChapterStyles.tocContainer}>
-              <div className={ChapterStyles.tocContainerInner}>
-                <TableOfContents items={data.post.childMdx.tableOfContents.items} />
-              </div>
+        <div className={styles.body}>
+          {data.post.childMdx.tableOfContents.items?.length > 1 && (
+            <div className={styles.tocContainer}>
+              <details className={styles.tocDetails}>
+                <summary className={styles.tocSummary}>On this page</summary>
+                <div className={styles.tocContainerInner}>
+                  <TableOfContents items={data.post.childMdx.tableOfContents.items} />
+                </div>
+              </details>
             </div>
           )}
 
-          <div className={ChapterStyles.bodyText}>
+          <div className={styles.bodyText}>
             <MDXProvider components={shortCodes}>{children}</MDXProvider>
           </div>
-          <nav className={ChapterStyles.pagination}>
+          <nav className={styles.pagination}>
             {next && next.childMdx.frontmatter.title && (
-              <Link className={ChapterStyles.next} to={`../${next.childMdx.fields.slug}`}>
-                <span className={ChapterStyles.paginationLabel}>Next Chapter</span>
-                <span className={ChapterStyles.paginationTitle}>
+              <Link className={styles.next} to={`../${next.childMdx.fields.slug}`}>
+                <span className={styles.paginationLabel}>Next Chapter</span>
+                <span className={styles.paginationTitle}>
                   {next.childMdx.frontmatter.order}. {next.childMdx.frontmatter.title}
                 </span>
-                {next.childMdx.frontmatter.intro && <p className={ChapterStyles.paginationIntro}>{next.childMdx.frontmatter.intro}</p>}
+                {next.childMdx.frontmatter.intro && <p className={styles.paginationIntro}>{next.childMdx.frontmatter.intro}</p>}
               </Link>
             )}
             {prev && (
               <>
-                <Link className={ChapterStyles.previous} to={`../${prev.childMdx.fields.slug}`}>
+                <Link className={styles.previous} to={`../${prev.childMdx.fields.slug}`}>
                   <span>Previous: {prev.childMdx.frontmatter.title}</span>
                 </Link>
               </>

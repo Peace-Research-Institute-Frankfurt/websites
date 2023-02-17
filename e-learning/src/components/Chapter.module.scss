@@ -8,10 +8,11 @@
   margin-bottom: 0;
   padding-top: 2em;
   padding-bottom: 3em;
+
   @include bp(m) {
-    margin: 0 var(--padding);
     padding-top: 4.75em;
     padding-bottom: 5em;
+    margin: 0 var(--padding);
   }
 }
 
@@ -21,6 +22,9 @@
   flex-flow: column;
   gap: var(--ms--1);
   @include bp(m) {
+    grid-column: 2 / 5;
+  }
+  @include bp(l) {
     grid-column: 3 / 4;
   }
 }
@@ -108,6 +112,9 @@
   table {
     grid-column: 1 / 6;
     @include bp(m) {
+      grid-column: 2 / 5;
+    }
+    @include bp(l) {
       grid-column: 3 / 4;
     }
   }
@@ -212,8 +219,11 @@
 
 .pagination {
   grid-column: 1 / 6;
-  margin-top: 1em;
+  margin-top: 2em;
   @include bp(m) {
+    grid-column: 2 / 5;
+  }
+  @include bp(l) {
     grid-column: 3 / 4;
   }
   a {
@@ -242,25 +252,50 @@
 
 .toc-container {
   grid-column: 1/6;
-  margin-bottom: 1.5rem;
-  max-width: 20rem;
+  margin-bottom: 1em;
+  display: flex;
+  justify-content: flex-end;
   @include bp(m) {
+    grid-column: 2/6;
+  }
+  @include bp(l) {
     grid-column: 3/6;
   }
   @include bp(l) {
-    padding-top: 0.5rem;
     position: sticky;
-    top: 4rem;
+    top: 3.5rem;
     grid-row: 1 / 2;
     grid-column: 4 / 6;
-  }
-  @include bp(xl) {
-    grid-column: 5 / 6;
   }
 }
 
 .toc-container-inner {
+  width: 100%;
+}
+
+.toc-details {
+  @extend %caption;
+  max-width: 22rem;
+  color: var(--gray-60);
+  display: block;
+  border-radius: var(--br);
+  width: 100%;
+  border: $text-border;
   @include bp(l) {
     position: absolute;
+  }
+}
+
+.toc-summary {
+  cursor: pointer;
+  width: 100%;
+  padding: 0.5em 0.75em;
+  padding-bottom: 0.45em;
+  [open] & {
+    border-bottom: $text-border;
+  }
+  &:hover,
+  &:focus-visible {
+    color: var(--blue-90);
   }
 }

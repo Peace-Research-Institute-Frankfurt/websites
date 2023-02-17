@@ -11,6 +11,9 @@
   margin-left: 0.5rem;
   grid-column: 1/6;
   @include bp(m) {
+    grid-column: 2/5;
+  }
+  @include bp(l) {
     grid-column: 3/4;
   }
   ol {
