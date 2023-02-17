@@ -138,7 +138,6 @@ const Chapter = ({ data, children }) => {
 
   useEffect(() => {
     // Attach intersection observers to heading elements
-    console.log(headlines)
     let observer = new IntersectionObserver((entries, observer) => {
       const e = entries[0]
       if (e.isIntersecting) {
@@ -147,10 +146,12 @@ const Chapter = ({ data, children }) => {
         console.log(`Setting current section to ${sectionId}`)
       }
     }, {})
-    headlines.items.forEach((el) => {
-      const targetEl = document.querySelector(el.url)
-      observer.observe(targetEl)
-    })
+    if (headlines.items) {
+      headlines.items.forEach((el) => {
+        const targetEl = document.querySelector(el.url)
+        observer.observe(targetEl)
+      })
+    }
     // console.log(data.post.childMdx.tableOfContents)
   }, [headlines])
 
