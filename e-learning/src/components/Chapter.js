@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { graphql, Link } from 'gatsby'
 import { getSrc } from 'gatsby-plugin-image'
 import { MDXProvider } from '@mdx-js/react'
@@ -126,13 +126,33 @@ export const query = graphql`
 const Chapter = ({ data, children }) => {
   const frontmatter = data.post.childMdx.frontmatter
   const [bookmarks, setBookmarks] = useLocalStorage('elearning-bookmarks', [])
-
+  const [currentSection, setCurrentSection] = useState('')
   const currentIndex = data.chapters.nodes.findIndex((el) => {
     return el.childMdx.frontmatter.order === frontmatter.order
   })
 
   const next = data.chapters.nodes[currentIndex + 1]
   const prev = data.chapters.nodes[currentIndex - 1]
+
+  const headlines = data.post.childMdx.tableOfContents
+
+  useEffect(() => {
+    // Attach intersection observers to heading elements
+    console.log(headlines)
+    let observer = new IntersectionObserver((entries, observer) => {
+      const e = entries[0]
+      if (e.isIntersecting) {
+        const sectionId = e.target.getAttribute('id')
+        setCurrentSection(sectionId)
+        console.log(`Setting current section to ${sectionId}`)
+      }
+    }, {})
+    headlines.items.forEach((el) => {
+      const targetEl = document.querySelector(el.url)
+      observer.observe(targetEl)
+    })
+    // console.log(data.post.childMdx.tableOfContents)
+  }, [headlines])
 
   return (
     <App>
@@ -147,10 +167,10 @@ const Chapter = ({ data, children }) => {
         <div className={styles.body}>
           {data.post.childMdx.tableOfContents.items?.length > 1 && (
             <div className={styles.tocContainer}>
-              <details className={styles.tocDetails}>
+              <details className={styles.tocDetails} open>
                 <summary className={styles.tocSummary}>On this page</summary>
                 <div className={styles.tocContainerInner}>
-                  <TableOfContents items={data.post.childMdx.tableOfContents.items} />
+                  <TableOfContents items={data.post.childMdx.tableOfContents.items} currentItem={currentSection} />
                 </div>
               </details>
             </div>

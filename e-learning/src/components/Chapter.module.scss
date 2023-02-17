@@ -254,11 +254,11 @@
   grid-column: 1/6;
   margin-bottom: 1em;
   display: flex;
-  justify-content: flex-end;
   @include bp(m) {
     grid-column: 2/6;
   }
   @include bp(l) {
+    justify-content: flex-end;
     grid-column: 3/6;
   }
   @include bp(l) {
@@ -271,28 +271,41 @@
 
 .toc-container-inner {
   width: 100%;
+  padding: 0.75em;
+  @include bp(l) {
+    padding: 0;
+  }
 }
 
 .toc-details {
   @extend %caption;
-  max-width: 22rem;
+  max-width: 18rem;
   color: var(--gray-60);
   display: block;
   border-radius: var(--br);
   width: 100%;
   border: $text-border;
   @include bp(l) {
+    border: none;
     position: absolute;
   }
 }
 
 .toc-summary {
+  @extend %caption-bold;
   cursor: pointer;
   width: 100%;
   padding: 0.5em 0.75em;
-  padding-bottom: 0.45em;
+  padding-bottom: 0.55em;
+  @include bp(l) {
+    padding: 0.5em 0;
+    padding-bottom: 0.25em;
+  }
   [open] & {
     border-bottom: $text-border;
+    @include bp(l) {
+      border-bottom: 0;
+    }
   }
   &:hover,
   &:focus-visible {

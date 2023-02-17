@@ -1,6 +1,5 @@
 const path = require('path')
 const { createFilePath } = require(`gatsby-source-filesystem`)
-const { compileMDXWithCustomOptions } = require(`gatsby-plugin-mdx`)
 const slug = require('slug')
 slug.extend({ '—': '-', '–': '-' })
 
@@ -49,7 +48,6 @@ exports.createPages = async function ({ actions, graphql }) {
 
   data.units.nodes.forEach((node) => {
     const id = node.id
-    const slug = node.childMdx.fields.slug
     const lu_id = node.relativeDirectory
     actions.createPage({
       path: lu_id,

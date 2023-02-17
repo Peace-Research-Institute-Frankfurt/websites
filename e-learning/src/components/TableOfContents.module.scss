@@ -1,7 +1,6 @@
 @import 'vars';
 
 ol.list {
-  padding: 0.75em;
   list-style: none;
   margin: 0;
   .list {
@@ -10,16 +9,22 @@ ol.list {
   }
 }
 
-li.item {
-  line-height: 1.2;
-  a {
-    margin-bottom: 0.25em;
-    display: block;
-    text-decoration: none;
-    &:hover,
-    &:focus-visible {
-      text-decoration: underline;
-      color: var(--blue-90);
-    }
+.item {
+  padding: 0.2em 0.25em;
+  display: block;
+  text-decoration: none;
+  border-left: 2px solid transparent;
+  &:hover,
+  &:focus-visible {
+    text-decoration: underline;
+    color: var(--blue-90);
+  }
+}
+
+.current {
+  @include bp(m) {
+    color: var(--blue-90);
+    background: var(--gray-20);
+    border-left: 2px solid currentColor;
   }
 }
