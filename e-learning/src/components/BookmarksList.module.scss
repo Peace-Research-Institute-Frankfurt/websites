@@ -15,7 +15,11 @@
   list-style: none;
   display: block;
   text-decoration: none;
-  padding: 0.75rem;
+  padding: 0.5em;
+  padding-right: 2em;
+  @include bp(m) {
+    padding: 0.75em;
+  }
   &:hover,
   &:focus-visible {
     background: var(--gray-10);
@@ -25,7 +29,9 @@
 .eyebrow {
   @extend %caption;
   display: block;
-  margin-bottom: 0.1rem;
+  @include bp(m) {
+    margin-bottom: 0.1rem;
+  }
 }
 
 .title {

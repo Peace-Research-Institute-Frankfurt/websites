@@ -77,7 +77,9 @@ export default function BookmarksList({ bookmarks, setBookmarks }) {
     return (
       <li key={`${slug}`}>
         <Link className={styles.item} to={`../..${p.unit.childMdx.fields.slug}${slug}`}>
-          <span className={styles.eyebrow}>Unit {p.unit.childMdx.frontmatter.order}</span>
+          <span className={styles.eyebrow}>
+            Unit {p.unit.childMdx.frontmatter.order} &middot; {p.unit.childMdx.frontmatter.title}
+          </span>
           <span className={styles.title}>{p.childMdx.frontmatter.title}</span>
         </Link>
         <div className={styles.remove}>

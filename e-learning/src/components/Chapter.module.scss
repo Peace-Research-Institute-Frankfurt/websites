@@ -4,12 +4,11 @@
   @extend %grid;
   background: var(--blue-10);
   color: var(--blue-90);
-  padding: var(--padding);
+  padding: 3em 2em;
   margin-bottom: 0;
-  padding-top: 2em;
-  padding-bottom: 3em;
-
+  text-align: center;
   @include bp(m) {
+    text-align: left;
     padding-top: 4.75em;
     padding-bottom: 5em;
     margin: 0 var(--padding);
@@ -41,11 +40,10 @@
 
 .title {
   font-size: var(--ms-3);
-  line-height: 1;
-  font-weight: 900;
-  letter-spacing: -0.02em;
+  line-height: 0.95;
+  font-weight: 600;
+  letter-spacing: -0.0125em;
   @include bp(m) {
-    line-height: 0.95;
     font-size: var(--ms-5);
     letter-spacing: -0.025em;
   }
@@ -204,9 +202,6 @@
     padding-bottom: 1.65em;
     max-width: 36em;
   }
-  p {
-    @extend %copy-large;
-  }
 }
 
 .previous {
@@ -240,10 +235,6 @@
   @extend %h2;
   display: block;
   align-items: flex-start;
-  @include bp(m) {
-    line-height: 1;
-    font-size: var(--ms-3);
-  }
 }
 
 .pagination-intro {
@@ -259,13 +250,10 @@
   }
   @include bp(l) {
     justify-content: flex-end;
-    grid-column: 3/6;
-  }
-  @include bp(l) {
+    grid-column: 4/6;
     position: sticky;
     top: 3.5rem;
     grid-row: 1 / 2;
-    grid-column: 4 / 6;
   }
 }
 
