@@ -22,7 +22,7 @@ ol.list {
 }
 
 .current {
-  @include bp(m) {
+  @include bp(l) {
     color: var(--blue-90);
     background: var(--gray-20);
   }
