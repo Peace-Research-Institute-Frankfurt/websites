@@ -3,8 +3,7 @@
 .credit {
   color: var(--gray-60);
   font-weight: 400;
-  padding-left: 0.2em;
-  white-space: nowrap;
+  display: block;
   a {
     text-decoration: underline;
   }

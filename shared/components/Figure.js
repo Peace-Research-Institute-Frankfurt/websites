@@ -24,7 +24,7 @@ export default function Figure({ styles, image, license, caption, credit, size, 
             <>{credit}</>
             {license && (
               <>
-                {','} <a href={license.url}>{license.title}</a>
+                {','} {license.url ? <a href={license.url}>{license.title}</a> : <>{license.title}</>}.
               </>
             )}
           </span>
