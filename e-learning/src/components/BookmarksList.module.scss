@@ -17,9 +17,6 @@
   text-decoration: none;
   padding: 0.5em;
   padding-right: 2em;
-  @include bp(m) {
-    padding: 0.75em;
-  }
   &:hover,
   &:focus-visible {
     background: var(--gray-10);

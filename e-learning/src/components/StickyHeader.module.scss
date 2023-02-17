@@ -177,9 +177,6 @@
   align-items: center;
   border-bottom: 1px solid var(--blue-80);
   padding: 0.4rem 0.5rem;
-  @include bp(m) {
-    padding: 0.4rem 0.75rem;
-  }
 }
 
 .bookmarks--title {
