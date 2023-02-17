@@ -16,7 +16,7 @@
     padding: 0;
     margin: 0 var(--padding);
     height: 3em;
-    font-size: 1rem;
+    font-size: 1.05rem;
   }
   label {
     position: absolute;
@@ -130,7 +130,6 @@
   grid-column: 1/4;
   font-weight: 500;
   @include bp(m) {
-    font-weight: 400;
     grid-column: 1/3;
   }
   &:hover,
