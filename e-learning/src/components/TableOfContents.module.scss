@@ -10,10 +10,10 @@ ol.list {
 }
 
 .item {
-  padding: 0.2em 0.25em;
+  padding: 0.15em 0.35em;
+  border-radius: var(--br);
   display: block;
   text-decoration: none;
-  border-left: 2px solid transparent;
   &:hover,
   &:focus-visible {
     text-decoration: underline;
@@ -25,6 +25,5 @@ ol.list {
   @include bp(m) {
     color: var(--blue-90);
     background: var(--gray-20);
-    border-left: 2px solid currentColor;
   }
 }

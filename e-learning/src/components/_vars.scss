@@ -119,7 +119,7 @@ $text-border: 2px solid var(--gray-30);
 %caption-bold {
   @extend %caption;
   font-weight: 500;
-  letter-spacing: -0.0075em;
+  letter-spacing: 0;
 }
 
 %grid {

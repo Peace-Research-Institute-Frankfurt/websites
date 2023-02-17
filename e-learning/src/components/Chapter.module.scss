@@ -295,6 +295,7 @@
   @extend %caption-bold;
   cursor: pointer;
   width: 100%;
+  color: var(--blue-90);
   padding: 0.5em 0.75em;
   padding-bottom: 0.55em;
   @include bp(l) {
