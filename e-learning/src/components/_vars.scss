@@ -54,7 +54,8 @@ $text-border: 2px solid var(--gray-30);
       margin-top: 0;
     }
     & + h3,
-    & + table {
+    & + table,
+    & + blockquote {
       margin-top: 0.25rem;
     }
   }
@@ -63,7 +64,8 @@ $text-border: 2px solid var(--gray-30);
     margin-top: 0.25em;
     margin-bottom: 0.125em;
     & + h4,
-    & + table {
+    & + table,
+    & + blockquote {
       margin-top: 0.25em;
     }
   }
