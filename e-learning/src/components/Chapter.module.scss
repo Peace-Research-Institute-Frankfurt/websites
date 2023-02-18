@@ -2,15 +2,18 @@
 
 .header {
   @extend %grid;
-  background: var(--blue-10);
   color: var(--blue-90);
+  background: var(--blue-10);
+  // background: linear-gradient(to bottom, var(--blue-10) 10%, transparent 100%);
+  // border-bottom: 1px solid currentColor;
   padding: 3em 2em;
   margin-bottom: 0;
   text-align: center;
+
   @include bp(m) {
     text-align: left;
-    padding-top: 4.75em;
-    padding-bottom: 5em;
+    padding-top: 4em;
+    padding-bottom: 6em;
     margin: 0 var(--padding);
   }
 }
@@ -19,7 +22,6 @@
   grid-column: 1 / 6;
   display: flex;
   flex-flow: column;
-  gap: var(--ms--1);
   @include bp(m) {
     grid-column: 2 / 5;
   }
@@ -39,14 +41,8 @@
 }
 
 .title {
-  font-size: var(--ms-3);
-  line-height: 0.95;
-  font-weight: 600;
-  letter-spacing: -0.0125em;
-  @include bp(m) {
-    font-size: var(--ms-5);
-    letter-spacing: -0.025em;
-  }
+  @extend %h1;
+  margin-bottom: 1rem;
 }
 .intro {
   @extend %copy-large;
@@ -186,7 +182,7 @@
 
 .next {
   background: var(--blue-10);
-  border: 1px solid rgba(black, 0.25);
+  border: 1px solid rgba(black, 0.75);
   padding: 1em;
   max-width: 30em;
   margin-bottom: 1rem;
@@ -205,10 +201,12 @@
 }
 
 .previous {
+  @extend %copy;
+  text-underline-offset: 0.15em;
+  text-decoration-thickness: 1px;
   &:hover,
   &:focus-visible {
     text-decoration: underline;
-    text-decoration-thickness: 1px;
   }
 }
 
@@ -232,13 +230,17 @@
   margin-bottom: 0.5em;
 }
 .pagination-title {
-  @extend %h2;
+  @extend %h1;
   display: block;
   align-items: flex-start;
+  @include bp(m) {
+    font-size: var(--ms-4);
+  }
 }
 
 .pagination-intro {
   padding-top: 0.45em;
+  @extend %copy;
 }
 
 .toc-container {
@@ -252,7 +254,7 @@
     justify-content: flex-end;
     grid-column: 4/6;
     position: sticky;
-    top: 3.5rem;
+    top: 4rem;
     grid-row: 1 / 2;
   }
 }

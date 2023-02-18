@@ -36,7 +36,8 @@
 }
 
 .title {
-  @extend %h3;
+  @extend %h4;
+  display: block;
 }
 
 .remove {

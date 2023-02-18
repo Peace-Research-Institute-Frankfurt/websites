@@ -6,11 +6,11 @@
   top: 0;
   align-content: stretch;
   transition: var(--fast);
-  border-bottom: 1px solid transparent;
   background: white;
   z-index: 2000;
   font-size: var(--ms--1);
   height: 3.75em;
+  border-bottom: 1px solid var(--blue-90);
   padding: 0 var(--padding);
   @include bp(m) {
     padding: 0;
@@ -25,7 +25,6 @@
 }
 
 .container-active {
-  border-bottom: 1px solid var(--blue-90);
 }
 
 .status-location {
@@ -33,6 +32,7 @@
   display: none;
   font-weight: 400;
   white-space: nowrap;
+  padding-bottom: 0.1em;
 
   @include bp(m) {
     display: flex;
@@ -128,7 +128,7 @@
   position: relative;
   white-space: nowrap;
   grid-column: 1/4;
-  font-weight: 500;
+  font-weight: 600;
   @include bp(m) {
     grid-column: 1/3;
   }

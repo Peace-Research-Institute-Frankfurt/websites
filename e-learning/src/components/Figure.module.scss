@@ -1,17 +1,13 @@
 @import 'vars';
 
 .credit {
-  color: var(--gray-60);
-  font-weight: 400;
+  color: var(--gray-50);
   display: block;
-  a {
-    text-decoration: underline;
-  }
+  padding-top: 0.1em;
 }
 .captions {
-  font-size: var(--ms--1);
+  @extend %caption;
   padding-top: 0.75em;
-  line-height: 1.15;
   max-width: 45em;
   margin-bottom: 1rem;
   grid-column: 1 / 6;

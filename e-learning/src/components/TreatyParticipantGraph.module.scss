@@ -59,6 +59,9 @@ $border-color: rgba(black, 0.7);
 .source {
   @extend %caption;
   font-size: var(--ms--2);
+  a {
+    color: inherit !important;
+  }
 }
 
 .signature {

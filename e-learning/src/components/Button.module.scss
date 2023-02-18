@@ -1,7 +1,9 @@
 .container {
-  font-weight: 400;
+  font-weight: 300;
   display: inline-flex;
-  padding: 0.35em 0.65em;
+  padding: 0.4em 0.65em;
+  padding-bottom: 0.45em;
+  line-height: 1;
   border-radius: var(--br);
   text-decoration-width: 1px;
   cursor: pointer;
@@ -19,8 +21,8 @@
   }
 }
 .secondary {
-  background: var(--yellow-20);
-  border: 1px solid var(--yellow-20);
+  background: var(--gray-20);
+  border: 1px solid var(--gray-20);
   color: var(--blue-90);
   &:hover,
   &:focus-visible {

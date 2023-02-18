@@ -2,9 +2,8 @@
 
 .container {
   @extend %caption;
-  border: 1px solid rgba(black, 0.5);
-  border-radius: 100px;
-  padding-bottom: 0.35em;
+  border: 1px solid rgba(black, 0.75);
+  border-radius: 10px;
   display: inline-flex;
   align-items: center;
   line-height: 1;
@@ -13,8 +12,8 @@
   font-feature-settings: 'tnum' 1;
   white-space: nowrap;
   @include bp(m) {
-    padding: 0.25em 0.5em;
-    padding-bottom: 0.23em;
+    padding: 0.25em 0.45em;
+    padding-bottom: 0.4em;
   }
   svg {
     width: 1.15em;

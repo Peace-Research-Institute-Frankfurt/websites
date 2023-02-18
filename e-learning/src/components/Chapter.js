@@ -167,14 +167,13 @@ const Chapter = ({ data, children }) => {
         </header>
         <div className={styles.body}>
           {data.post.childMdx.tableOfContents.items?.length > 1 && (
-            <div className={styles.tocContainer}>
-              <details className={styles.tocDetails}>
-                <summary className={styles.tocSummary}>On this page</summary>
+            <aside className={styles.tocContainer}>
+              <div className={styles.tocDetails}>
                 <div className={styles.tocContainerInner}>
                   <TableOfContents items={data.post.childMdx.tableOfContents.items} currentItem={currentSection} />
                 </div>
-              </details>
-            </div>
+              </div>
+            </aside>
           )}
 
           <div className={styles.bodyText}>

@@ -20,17 +20,10 @@
 }
 
 .header-title {
-  font-size: var(--ms-3);
-  font-weight: 600;
-  letter-spacing: -0.03em;
-  word-spacing: -0.025em;
+  @extend %h1;
   margin-bottom: 0.25em;
-  margin-left: -0.05em;
-  line-height: 1;
   @include bp(m) {
-    font-size: var(--ms-6);
-    line-height: 0.85;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -38,12 +31,6 @@
   font-size: var(--ms--1);
   margin-top: 1em;
   margin-bottom: 1em;
-
-  @include bp(m) {
-    font-size: var(--ms-0);
-    margin-top: 0;
-    margin-bottom: 1.5em;
-  }
 }
 
 .header-copy {
