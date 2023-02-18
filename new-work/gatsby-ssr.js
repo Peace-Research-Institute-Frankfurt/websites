@@ -11,7 +11,7 @@ export const onRenderBody = ({ setHtmlAttributes, setHeadComponents, setPostBody
 
   // We're injecting the Typekit CSS at the bottom of the <body> because
   // the usual pattern (https://web.dev/defer-non-critical-css/) doesn't work.
-  setPostBodyComponents([<link key="typekit" rel="stylesheet" href="https://use.typekit.net/asu6wbi.css" />])
+  setPostBodyComponents([<link key="typekit" rel="stylesheet" href="https://use.typekit.net/brb1src.css" />])
 }
 
 export const wrapRootElement = ({ element }) => {
