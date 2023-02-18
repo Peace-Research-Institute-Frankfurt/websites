@@ -2,8 +2,10 @@
 
 .header {
   margin-bottom: var(--padding);
+  background: var(--blue-80);
   @include bp(m) {
-    padding: 0 var(--padding);
+    padding: var(--padding);
+    padding-top: calc(var(--padding) + 3rem);
   }
 }
 
@@ -12,6 +14,8 @@
   flex-flow: column;
   overflow: hidden;
   position: relative;
+  border: 1px solid rgba(black, 0.2);
+  box-shadow: 0 0px 40px 5px rgba(black, 0.15);
   @include bp(l) {
     border-radius: var(--br);
     flex-flow: row-reverse;
@@ -29,7 +33,6 @@
 
 .header-eyebrow {
   font-size: var(--ms--1);
-  margin-top: 1em;
   margin-bottom: 1em;
 }
 
@@ -38,9 +41,8 @@
   flex-flow: column;
   justify-content: space-between;
   padding: var(--padding);
-  padding-top: 0;
   flex-grow: 0;
-  background: var(--blue-20);
+  background: var(--blue-10);
   position: relative;
   z-index: 1000;
   @include bp(l) {
@@ -100,7 +102,7 @@
   padding: 0.4em 0.6em;
   padding-bottom: 0.45em;
   line-height: 1;
-  border-radius: 8px;
+  border-radius: var(--br);
   letter-spacing: 0.025em;
   gap: 0.25em;
   align-items: flex-end;

@@ -17,24 +17,25 @@
   --gray-60: hsl(2, 2%, 30%);
   --gray-70: hsl(2, 0%, 10%);
   --black: hsl(0, 0%, 5%);
-  --blue-90: hsl(209, 22%, 7%);
-  --blue-80: hsl(209, 45%, 15%);
+  --blue-90: hsl(209, 22%, 4%);
+  --blue-80: hsl(209, 35%, 12%);
   --blue-70: hsl(209, 65%, 30%);
   --blue-60: hsl(209, 55%, 45%);
-  --blue-50: hsl(210, 55%, 55%);
-  --blue-40: hsl(210, 55%, 65%);
+  --blue-50: hsl(209, 55%, 55%);
+  --blue-40: hsl(207, 55%, 65%);
   --blue-30: hsl(210, 45%, 80%);
-  --blue-20: hsl(210, 30%, 90%);
-  --blue-10: hsl(215, 30%, 95%);
+  --blue-20: hsl(215, 30%, 90%);
+  --blue-10: hsl(218, 15%, 95%);
   --yellow-50: rgb(251, 215, 55);
   --yellow-40: hsl(49, 90%, 68%);
   --yellow-30: hsl(48, 60%, 70%);
-  --yellow-20: hsl(49, 95%, 85%);
-  --yellow-10: hsl(49, 90%, 93%);
+  --yellow-20: hsl(49, 50%, 92%);
+  --yellow-10: hsl(49, 60%, 90%);
   --purple-10: hsl(252, 48%, 94%);
   --orange-50: hsl(20, 70%, 65%);
   --sans: 'franklin-gothic-urw', -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --serif: 'jubilat', Georgia, serif;
   --mono: 'MDIO', serif;
   --ratio: 1.25; // Minor 3
   --ms-0: clamp(0.95rem, calc(1.35vw + 0.3rem), 1.4rem);

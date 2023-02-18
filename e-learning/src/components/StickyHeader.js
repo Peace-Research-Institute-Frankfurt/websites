@@ -19,11 +19,12 @@ export default function StickyHeader({ post, unit, next, prev, bookmarks, setBoo
   const [bookmarksActive, setBookmarksActive] = useState(false)
 
   let scrollProgress = 0
+
   if (typeof window !== 'undefined') {
     scrollProgress = scrollPosition.y / (document.body.scrollHeight - window.innerHeight)
   }
 
-  const showStatusClass = scrollPosition.y > 10 ? styles.containerActive : null
+  const isScrolled = scrollPosition.y > 25
   let bookmarkIndex = 0
   if (post) {
     bookmarkIndex = bookmarks.findIndex((el) => {
@@ -46,7 +47,7 @@ export default function StickyHeader({ post, unit, next, prev, bookmarks, setBoo
   }
   return (
     <>
-      <header className={`${styles.container} ${showStatusClass}`}>
+      <header className={`${styles.container} ${isScrolled ? styles.containerActive : ''}`}>
         <Link className={styles.home} to="/">
           <BookIcon />
           <span className={styles.homeLabel}>EUNPDC eLearning</span>
@@ -57,7 +58,14 @@ export default function StickyHeader({ post, unit, next, prev, bookmarks, setBoo
               <UnitChip>Unit {unit.childMdx.frontmatter.order}</UnitChip>
             </Link>
           )}
-          {post && <span className={styles.post}>{post.childMdx.frontmatter.title}</span>}
+          <span className={styles.locationLabel}>
+            {unit && <span className={styles.unitName}>{unit.childMdx.frontmatter.title}</span>}
+            {post && (
+              <span className={styles.post}>
+                {post.childMdx.frontmatter.order}. {post.childMdx.frontmatter.title}
+              </span>
+            )}
+          </span>
         </div>
         <div className={styles.progress}>
           <div style={{ width: `${scrollProgress * 100}%` }} className={styles.progressInner}></div>

@@ -91,10 +91,10 @@ $text-border: 2px solid var(--gray-30);
 }
 
 %h1 {
-  letter-spacing: -0.03em;
-  font-weight: 800;
-  line-height: 0.9;
-  font-size: var(--ms-1);
+  font-family: var(--serif);
+  font-weight: 600;
+  line-height: 0.95;
+  font-size: var(--ms-3);
   @include bp(m) {
     font-size: var(--ms-5);
   }

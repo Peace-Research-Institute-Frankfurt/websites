@@ -29,6 +29,7 @@ blockquote {
 .document {
   .text {
     @extend %mono;
+    font-size: 0.8em;
     position: relative;
     background-color: var(--gray-20);
     padding: 0 1em;

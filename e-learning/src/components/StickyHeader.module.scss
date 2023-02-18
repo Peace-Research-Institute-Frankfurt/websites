@@ -4,17 +4,18 @@
   @extend %grid;
   position: sticky;
   top: 0;
+  left: 0;
+  right: 0;
   align-content: stretch;
   transition: var(--fast);
-  background: white;
+  background: transparent;
   z-index: 2000;
   font-size: var(--ms--1);
   height: 3.75em;
   border-bottom: 1px solid var(--blue-90);
   padding: 0 var(--padding);
+  background: white;
   @include bp(m) {
-    padding: 0;
-    margin: 0 var(--padding);
     height: 3em;
     font-size: 1.05rem;
   }
@@ -22,9 +23,6 @@
     position: absolute;
     font-size: 0;
   }
-}
-
-.container-active {
 }
 
 .status-location {
@@ -52,9 +50,27 @@
   }
 }
 
+.location-label {
+  position: relative;
+  margin-left: 0.5em;
+}
+
+.unit-name {
+  opacity: 1;
+  transition: var(--fast);
+  display: block;
+  transform: translateY(0px);
+  .container-active & {
+    opacity: 0;
+    transform: translateY(-0.5em);
+  }
+}
+
 .post {
-  transform: translateY(5px);
-  padding-left: 0.75em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(0.5em);
   opacity: 0;
   transition: var(--fast);
   overflow: hidden;
@@ -78,6 +94,16 @@
   justify-content: flex-end;
   grid-column: 4 / 6;
   align-items: center;
+  button {
+    // background: white;
+    // border-color: white;
+  }
+}
+.container-active {
+  button {
+    background: var(--gray-20);
+    border: 1px solid var(--gray-20);
+  }
 }
 
 .status-pagination {
@@ -128,7 +154,7 @@
   position: relative;
   white-space: nowrap;
   grid-column: 1/4;
-  font-weight: 600;
+  font-weight: 500;
   @include bp(m) {
     grid-column: 1/3;
   }
