@@ -5,7 +5,6 @@
   background: var(--blue-80);
   @include bp(m) {
     padding: var(--padding);
-    padding-top: calc(var(--padding) + 3rem);
   }
 }
 
