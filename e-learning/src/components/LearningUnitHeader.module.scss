@@ -43,6 +43,7 @@
   flex-grow: 0;
   background: var(--blue-10);
   position: relative;
+  color: var(--blue-80);
   z-index: 1000;
   @include bp(l) {
     flex-basis: 50%;

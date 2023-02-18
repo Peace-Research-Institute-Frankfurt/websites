@@ -2,7 +2,7 @@
 
 .header {
   @extend %grid;
-  color: rgb(28, 27, 6);
+  color: var(--blue-80);
   background: var(--blue-10);
   padding: var(--padding);
   margin-bottom: 0;
@@ -10,8 +10,8 @@
   @include bp(m) {
     text-align: left;
     padding: 0 var(--padding);
-    padding-top: 5em;
-    padding-bottom: 5.5em;
+    padding-top: 4em;
+    padding-bottom: 6em;
   }
 }
 
