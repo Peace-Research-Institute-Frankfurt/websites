@@ -4,8 +4,7 @@
   @extend %grid;
   color: var(--blue-90);
   background: var(--blue-10);
-  // background: linear-gradient(to bottom, var(--blue-10) 10%, transparent 100%);
-  // border-bottom: 1px solid currentColor;
+  border-top: 5px solid var(--gray-60);
   padding: 3em 2em;
   margin-bottom: 0;
   text-align: center;
