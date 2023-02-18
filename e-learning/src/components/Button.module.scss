@@ -42,8 +42,10 @@
 .small {
   font-size: var(--ms--1);
   .icon {
+    position: relative;
+    top: 0.05em;
     svg {
-      height: 0.95em;
+      height: 1em;
     }
   }
 }

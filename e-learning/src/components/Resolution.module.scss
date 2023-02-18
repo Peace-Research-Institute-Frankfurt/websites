@@ -17,9 +17,9 @@
 }
 
 .name {
-  font-family: var(--mono);
-  font-size: calc(var(--ms-0) * 0.95);
+  @extend %mono;
   font-weight: 100;
+  color: var(--blue-80) !important;
   margin-left: 0.65em;
   display: inline-block;
 }

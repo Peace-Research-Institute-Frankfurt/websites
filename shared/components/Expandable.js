@@ -11,6 +11,7 @@ export default function Expandable({ style, expanded, buttonComponent, children 
       <div className={styles.content}>{children}</div>
       <div className={styles.toggle}>
         <Button
+          size="small"
           icon={isExpanded ? <ArrowUpIcon /> : <ArrowDownIcon />}
           label={isExpanded ? 'Collapse' : 'Expand'}
           onClick={() => {
