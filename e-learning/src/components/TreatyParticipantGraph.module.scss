@@ -43,7 +43,7 @@ $border-color: rgba(black, 0.7);
   line-height: 1;
   @include bp(m) {
     letter-spacing: 0.01em;
-    font-size: calc(var(--ms--1) * 0.9);
+    font-size: calc(var(--ms--1) * 0.8);
   }
   &:hover,
   &:focus-visible {

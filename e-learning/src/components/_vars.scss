@@ -100,9 +100,10 @@ $text-border: 2px solid var(--gray-30);
   }
 }
 %h2 {
-  letter-spacing: -0.0175em;
+  letter-spacing: -0.0185em;
+  word-spacing: -0.0075em;
   font-weight: 600;
-  line-height: 1.1;
+  line-height: 1;
   font-size: var(--ms-1);
   @include bp(m) {
     font-size: var(--ms-2);
