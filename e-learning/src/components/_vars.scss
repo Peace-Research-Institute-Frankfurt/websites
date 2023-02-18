@@ -36,7 +36,7 @@ $text-border: 2px solid var(--gray-30);
     text-decoration: underline;
     text-underline-offset: 0.15em;
     color: var(--blue-70);
-    text-decoration-color: var(--blue-60);
+    text-decoration-color: var(--blue-50);
     text-decoration-style: dotted;
     &:hover,
     &:focus-visible {
@@ -93,12 +93,12 @@ $text-border: 2px solid var(--gray-30);
 }
 
 %h1 {
-  font-family: var(--serif);
-  font-weight: 700;
+  font-weight: 600;
   line-height: 0.9;
+  letter-spacing: -0.01em;
   font-size: var(--ms-3);
   @include bp(m) {
-    font-size: var(--ms-5);
+    font-size: var(--ms-4);
   }
 }
 %h2 {
