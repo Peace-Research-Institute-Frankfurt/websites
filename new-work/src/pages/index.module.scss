@@ -286,7 +286,8 @@
   @include bp(m) {
     bottom: 0.5em;
     left: 0.5em;
-    height: 0;
+    height: 2em;
+    width: 2em;
   }
   li {
     border: 0 !important;
