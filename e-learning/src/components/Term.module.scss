@@ -2,10 +2,13 @@
 
 .container {
   background: var(--yellow-20);
+  border-radius: var(--br);
   cursor: pointer;
   text-align: left;
   font-weight: 500;
-  padding: 0 0.2em;
+  padding: 0.1em 0.2em;
+  padding-bottom: 0.2em;
+  line-height: 1;
   transition: var(--fast);
   outline: 1px solid transparent;
   white-space: nowrap;
@@ -51,7 +54,7 @@
   @extend %h4;
   font-style: normal;
   margin: 0;
-  line-height: 1.1;
+  line-height: 1.2;
   display: block;
 }
 

@@ -1,22 +1,18 @@
 @import 'vars';
 
-.header {
-  margin-bottom: var(--padding);
-  background: var(--blue-80);
-  @include bp(m) {
-    padding: var(--padding);
-  }
+.container {
+  grid-column: 1/6;
+  background: var(--blue-20);
+  margin-left: calc(var(--padding) * -1);
+  margin-right: calc(var(--padding) * -1);
 }
 
 .inner {
-  display: flex;
-  flex-flow: column;
+  padding: 0;
+  border: 0;
   overflow: hidden;
   position: relative;
-  border: 1px solid rgba(black, 0.2);
-  box-shadow: 0 0px 40px 5px rgba(black, 0.15);
   @include bp(l) {
-    border-radius: var(--br);
     flex-flow: row-reverse;
     justify-content: flex-end;
   }
@@ -27,44 +23,35 @@
   margin-bottom: 0.25em;
   @include bp(m) {
     margin-bottom: 1.5rem;
+    font-size: var(--ms-5);
   }
 }
 
 .header-eyebrow {
   font-size: var(--ms--1);
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
 }
 
 .header-copy {
-  display: flex;
-  flex-flow: column;
-  justify-content: space-between;
-  padding: var(--padding);
-  flex-grow: 0;
-  background: var(--blue-10);
-  position: relative;
-  color: var(--blue-80);
-  z-index: 1000;
+  @extend %grid;
+  grid-column: 1 / 6;
+  background: var(--blue-80);
+  color: white;
   @include bp(l) {
-    flex-basis: 50%;
-    min-height: 80vh;
-    padding-right: 4em;
+    padding: 0;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    position: relative;
+    z-index: 100;
   }
 }
+
+.header-copy-inner {
+  grid-column: 3/5;
+}
 .header-image {
-  flex-grow: 0;
-  flex-shrink: 1;
-  background: var(--blue-10);
-  @include bp(l) {
-    bottom: 0;
-    right: 0;
-    top: 0;
-    position: absolute !important;
-    left: 40%;
-    img {
-      mix-blend-mode: multiply;
-    }
-  }
+  grid-column: 1/6;
+  max-height: 50vh;
 }
 
 .header-credit {
@@ -89,6 +76,7 @@
 
 .header-intro {
   @extend %copy-large;
+  opacity: 0.75;
   margin-bottom: 1em;
   @include bp(m) {
     margin-bottom: 2rem;
@@ -100,7 +88,7 @@
   color: white;
   display: inline-flex;
   padding: 0.4em 0.6em;
-  padding-bottom: 0.45em;
+  padding-bottom: 0.6em;
   line-height: 1;
   border-radius: var(--br);
   letter-spacing: 0.025em;

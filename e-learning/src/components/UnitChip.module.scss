@@ -9,6 +9,7 @@
   text-decoration: inherit;
   position: relative;
   display: inline-block;
+  color: var(--blue-90);
   &:after {
     content: '';
     background: var(--yellow-50);
@@ -17,10 +18,14 @@
     right: 0;
     top: 0;
     bottom: 0;
-    z-index: -10;
     transform: skewX(-12deg);
   }
   @include bp(m) {
     opacity: 1;
   }
+}
+
+.label {
+  z-index: 10;
+  position: relative;
 }

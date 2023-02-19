@@ -1,17 +1,22 @@
 @import 'vars';
 
 .container {
+  @extend %grid;
   @extend %caption;
-  padding: var(--padding) 0;
-  margin: 0 var(--padding);
-  border-top: 1px solid var(--gray-40);
+  padding: 0;
+  padding-top: var(--padding);
+  padding-bottom: var(--padding);
+  border: 0;
   @include bp(m) {
-    padding-top: 1.5em;
-    margin-top: 2em;
+    margin-top: 2rem;
   }
   p {
     max-width: 60em;
   }
+}
+
+.inner {
+  grid-column: 1 / 6;
 }
 
 .funding {
@@ -26,9 +31,10 @@
 
 .nav {
   margin-bottom: 0.5em;
+  font-weight: 600;
   ul {
     display: flex;
-    gap: 0.5em;
+    gap: 0.75em;
     list-style: none;
   }
 }

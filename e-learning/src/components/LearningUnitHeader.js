@@ -12,20 +12,20 @@ export default function LearningUnitHeader({ image, alt, order, title, intro, st
     '--background': background,
   }
   return (
-    <header className={styles.header}>
+    <header className={styles.container}>
       <div className={styles.inner}>
         <GatsbyImage className={styles.headerImage} image={image} alt={alt} />
         <div className={styles.headerCopy} style={headerStyles}>
-          <div>
+          <div className={styles.headerCopyInner}>
             <p className={styles.headerEyebrow}>
               <UnitChip>Unit {order}</UnitChip>
             </p>
             <h1 className={styles.headerTitle}>{title}</h1>
             <p className={styles.headerIntro}>{intro}</p>
+            <Link className={styles.headerCta} to={startLink}>
+              Start <ArrowRight />
+            </Link>
           </div>
-          <Link className={styles.headerCta} to={startLink}>
-            Start <ArrowRight />
-          </Link>
         </div>
       </div>
     </header>

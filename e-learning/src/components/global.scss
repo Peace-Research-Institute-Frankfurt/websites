@@ -6,39 +6,43 @@
   src: url('../assets/fonts/MDIO0.5-Regular.woff') format('woff'), url('../assets/fonts/MDIO0.5-Regular.woff2') format('woff2');
 }
 
-@import url('https://use.typekit.net/zge6rzm.css');
+@font-face {
+  font-family: 'Publico';
+  font-weight: 600;
+  src: url('../assets/fonts/PublicoText-Bold-Trial.otf') format('opentype');
+}
 
 :root {
   --gray-10: #fafafa;
   --gray-20: #f4f3f1;
   --gray-30: hsl(2, 5%, 90%);
-  --gray-40: hsl(2, 1%, 60%);
-  --gray-50: hsl(2, 2%, 40%);
+  --gray-40: hsl(2, 1%, 70%);
+  --gray-50: hsl(2, 2%, 50%);
   --gray-60: hsl(2, 2%, 30%);
   --gray-70: hsl(2, 0%, 10%);
   --black: hsl(0, 0%, 5%);
   --blue-90: hsl(209, 22%, 4%);
   --blue-80: hsl(209, 35%, 12%);
-  --blue-70: hsl(209, 60%, 15%);
-  --blue-60: hsl(209, 55%, 45%);
+  --blue-70: hsl(209, 60%, 25%);
+  --blue-60: hsl(209, 60%, 35%);
   --blue-50: hsl(209, 55%, 55%);
   --blue-40: hsl(207, 55%, 65%);
   --blue-30: hsl(210, 45%, 80%);
-  --blue-20: hsl(215, 30%, 90%);
-  --blue-10: hsl(218, 15%, 95%);
+  --blue-20: hsl(213, 30%, 90%);
+  --blue-10: hsl(210, 20%, 96%);
   --yellow-50: rgb(251, 215, 55);
   --yellow-40: hsl(49, 90%, 65%);
   --yellow-30: hsl(48, 60%, 70%);
   --yellow-20: hsl(49, 80%, 85%);
   --yellow-10: hsl(49, 75%, 95%);
-  --purple-10: hsl(252, 48%, 94%);
+  --purple-10: hsl(225, 48%, 94%);
   --orange-50: hsl(15, 70%, 65%);
-  --sans: 'franklin-gothic-urw', -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', sans-serif,
+  --sans: 'Atlas Grotesk', -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  --serif: 'jubilat', Georgia, serif;
+  --serif: 'Publico', Georgia, serif;
   --mono: 'MDIO', serif;
-  --ratio: 1.25; // Minor 3
-  --ms-0: clamp(0.95rem, calc(1.35vw + 0.3rem), 1.4rem);
+  --ratio: 1.3; // Minor 3
+  --ms-0: clamp(0.95rem, calc(1.35vw + 0.3rem), 1.25rem);
   --ms--2: calc(var(--ms--1) / var(--ratio));
   --ms--1: calc(var(--ms-0) / var(--ratio));
   --ms-1: calc(var(--ms-0) * var(--ratio));

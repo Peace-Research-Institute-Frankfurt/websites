@@ -26,15 +26,20 @@
 }
 
 .container {
-  section {
-    padding: 0 var(--padding);
-    margin-bottom: var(--padding);
-    display: grid;
-    grid-template-columns: 1fr 3fr;
+  @extend %grid;
+  row-gap: var(--padding);
+  padding-bottom: var(--padding);
+  section,
+  main {
+    display: contents;
   }
 }
+
 .section-title {
   @extend %mono;
+  text-transform: uppercase;
+  color: var(--blue-60);
+  letter-spacing: 0.01em;
   grid-column: 1 / 3;
   margin-bottom: 0.5rem;
   @include bp(m) {
@@ -44,10 +49,10 @@
 }
 
 .section-content {
-  grid-column: 1 / 3;
+  grid-column: 1 / 6;
   scroll-margin-top: 2rem;
   @include bp(m) {
-    grid-column: 2 / 3;
+    grid-column: 3 / 6;
   }
 }
 
@@ -96,48 +101,37 @@
 .chapters {
   ol {
     list-style: none;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    @include bp(m) {
-      border-radius: var(--br);
-      border-left: $text-border;
-      border-top: $text-border;
-    }
+    border: 1px solid var(--blue-70);
+    border-radius: var(--br);
   }
   li {
-    border-bottom: $text-border;
-    grid-column: span 2;
-    @include bp(m) {
-      border-right: $text-border;
-    }
-    @include bp(l) {
-      grid-column: span 1;
+    border-bottom: 1px solid var(--gray-30);
+    &:last-child {
+      border-bottom: 0;
     }
   }
   a {
     display: flex;
-    flex-flow: column;
-    padding: 1em 0;
-    @include bp(m) {
-      padding: 1.5em;
-    }
+    flex-flow: row;
+    padding: 1em;
+    color: var(--blue-80);
+    gap: 2em;
     &:hover,
     &:focus-visible {
-      h3 {
-        text-decoration: underline;
-        text-decoration-thickness: 1px;
-      }
+      background: var(--gray-20);
     }
   }
 }
 
 .chapter-title {
-  display: block;
   @extend %h2;
+  display: block;
   margin-top: 0;
   margin-bottom: 0.2rem;
   text-underline-offset: 0.12em;
   position: relative;
+  flex-basis: 50%;
+  flex-shrink: 0;
   @include bp(m) {
     letter-spacing: -0.025em;
   }
@@ -145,19 +139,18 @@
 
 .chapter-intro {
   @extend %copy;
-  margin-top: 0.25em;
+  margin-top: 0.1em;
   margin-bottom: 0.2em;
-  line-height: 1.3;
 }
 .chapter-meta {
-  @extend %caption;
-  color: var(--blue-70);
+  @extend %mono;
+  display: none;
   margin-top: 0.25em;
 }
 
 .disclosures {
   @extend %caption;
-  columns: 2;
+  max-width: 40em;
   p {
     margin-bottom: 1rem;
   }

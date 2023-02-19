@@ -2,16 +2,14 @@
 
 .header {
   @extend %grid;
-  color: var(--blue-90);
-  background-color: var(--yellow-10);
-  padding: var(--padding);
   margin-bottom: 0;
-
+  background: var(--blue-80);
+  color: var(--blue-10);
+  border-top: 0.5em solid var(--blue-60);
   @include bp(m) {
     text-align: left;
-    padding: 0 var(--padding);
-    padding-top: 3em;
-    padding-bottom: 3.5em;
+    padding-top: 5em;
+    padding-bottom: 6em;
   }
 }
 
@@ -37,58 +35,28 @@
   }
 }
 
+.eyebrow {
+  @extend %mono;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: var(--blue-40);
+  margin-bottom: 0.75em;
+}
+
 .title {
   @extend %h1;
-  margin-bottom: 0.25em;
+  margin-bottom: 0.4em;
 }
 .intro {
   @extend %copy-large;
-}
-
-.actions {
-  grid-column: 1 / 6;
-  padding-top: 1.5em;
-  @include bp(m) {
-    padding-top: 2em;
-    grid-column: 3 / 5;
-  }
-  ul {
-    list-style: none;
-    margin: 0;
-    display: flex;
-    gap: 0.75rem;
-    font-size: var(--ms--1);
-  }
-  li {
-    position: relative;
-  }
-}
-
-.save-button {
-  display: flex;
-  align-items: center;
-  align-items: center;
-  cursor: pointer;
-  &:hover,
-  &:focus-visible {
-    text-decoration: underline;
-  }
-  img {
-    margin-right: 0.1rem;
-    height: 1rem;
-  }
-}
-
-.save-button-active {
-  composes: save-button;
-  font-weight: 700;
+  opacity: 0.75;
 }
 
 .body {
   @extend %grid;
-  padding: var(--padding);
   @include bp(m) {
-    padding-bottom: 2rem;
+    padding-top: var(--padding);
+    padding-bottom: 5rem;
   }
   p,
   ol,
@@ -142,9 +110,9 @@
   }
   td,
   th {
-    padding: 0.2em;
+    padding: 0.25em;
     padding-left: 0;
-    padding-right: 2em;
+    padding-right: 1em;
     border-bottom: $text-border;
     vertical-align: top;
   }
@@ -158,9 +126,7 @@
     display: inline-block;
     position: relative;
     top: -0.3em;
-    left: 0.1em;
-    color: var(--gray-60);
-    font-weight: 600;
+    left: -0.15em;
     font-feature-settings: 'tnum';
     a {
       text-decoration: none;
@@ -178,10 +144,10 @@
 }
 
 .next {
-  background: var(--yellow-10);
-  border: 1px solid rgba(black, 0.05);
+  background: var(--blue-80);
+  color: white;
+  border: 1px solid rgba(black, 0.5);
   padding: 1em;
-  max-width: 30em;
   margin-bottom: 1rem;
   text-decoration: none !important;
   transition: var(--fast);
@@ -191,9 +157,7 @@
     border: 1px solid rgba(black, 0.85);
   }
   @include bp(m) {
-    padding: 1.5em;
-    padding-bottom: 1.65em;
-    max-width: 36em;
+    padding: 2em;
   }
 }
 
@@ -214,7 +178,7 @@
     grid-column: 2 / 5;
   }
   @include bp(l) {
-    grid-column: 3 / 4;
+    grid-column: 3 / 5;
   }
   a {
     display: block;
@@ -222,78 +186,42 @@
 }
 
 .pagination-label {
-  @extend %caption;
+  @extend %mono;
+  text-transform: uppercase;
+  color: var(--blue-40);
+  letter-spacing: 0.01em;
   display: inline-block;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.2em;
 }
 .pagination-title {
   @extend %h1;
+  font-size: var(--ms-3);
   display: block;
-  align-items: flex-start;
 }
 
 .pagination-intro {
+  @extend %copy-large;
   padding-top: 0.45em;
-  @extend %copy;
+  opacity: 0.75;
 }
 
 .toc-container {
-  grid-column: 1/6;
-  margin-bottom: 1em;
-  display: flex;
-  @include bp(m) {
-    grid-column: 2/6;
-  }
-  @include bp(l) {
-    justify-content: flex-end;
-    grid-column: 4/6;
-    position: sticky;
-    top: 4rem;
-    grid-row: 1 / 2;
-  }
-}
-
-.toc-container-inner {
-  width: 100%;
-  padding: 0.75em;
-  @include bp(l) {
-    padding: 0;
-  }
-}
-
-.toc-details {
   @extend %caption;
-  max-width: 18rem;
-  color: var(--gray-60);
-  display: block;
-  border-radius: var(--br);
-  width: 100%;
-  border: $text-border;
+  grid-column: 1/3;
+  grid-row: 1;
+  position: relative;
+  display: none;
   @include bp(l) {
-    border: none;
-    position: absolute;
+    display: block;
   }
 }
 
-.toc-summary {
-  @extend %caption-bold;
-  cursor: pointer;
-  width: 100%;
-  color: var(--blue-90);
-  padding: 0.5em 0.75em;
-  padding-bottom: 0.55em;
-  @include bp(l) {
-    padding: 0.5em 0;
-    padding-bottom: 0.25em;
-  }
-  [open] & {
-    border-bottom: $text-border;
-    @include bp(l) {
-      border-bottom: 0;
-    }
-  }
-  &:hover,
-  &:focus-visible {
-    color: var(--blue-90);
+.toc-inner {
+  position: absolute;
+  h4 {
+    @extend %mono;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    letter-spacing: 0.01em;
   }
 }

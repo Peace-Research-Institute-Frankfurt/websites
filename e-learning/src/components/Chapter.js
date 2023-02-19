@@ -161,6 +161,7 @@ const Chapter = ({ data, children }) => {
       <article>
         <header className={styles.header}>
           <div className={styles.headerCopy}>
+            <span class={styles.eyebrow}>Chapter {frontmatter.order}</span>
             <h1 className={styles.title}>{frontmatter.title}</h1>
             {frontmatter.intro && <p className={styles.intro}>{frontmatter.intro}</p>}
           </div>
@@ -168,14 +169,12 @@ const Chapter = ({ data, children }) => {
         <div className={styles.body}>
           {data.post.childMdx.tableOfContents.items?.length > 1 && (
             <aside className={styles.tocContainer}>
-              <div className={styles.tocDetails}>
-                <div className={styles.tocContainerInner}>
-                  <TableOfContents items={data.post.childMdx.tableOfContents.items} currentItem={currentSection} />
-                </div>
+              <div className={styles.tocInner}>
+                <h4>On this page</h4>
+                <TableOfContents items={data.post.childMdx.tableOfContents.items} currentItem={currentSection} />
               </div>
             </aside>
           )}
-
           <div className={styles.bodyText}>
             <MDXProvider components={shortCodes}>{children}</MDXProvider>
           </div>
