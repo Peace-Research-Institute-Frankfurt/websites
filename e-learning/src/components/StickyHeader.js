@@ -1,6 +1,7 @@
 import { Link } from 'gatsby'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import useScrollPosition from '@shared/hooks/useScrollPosition'
+import useLocalStorage from '@shared/hooks/useLocalStorage'
 
 import Button from './ButtonAdapter'
 import BookmarksList from './BookmarksList'
@@ -14,17 +15,24 @@ import CloseIcon from '../assets/icons/close.svg'
 
 import * as styles from './StickyHeader.module.scss'
 
-export default function StickyHeader({ post, unit, next, prev, bookmarks, setBookmarks }) {
+export default function StickyHeader({ post, unit, next, prev }) {
   const scrollPosition = useScrollPosition()
   const [bookmarksActive, setBookmarksActive] = useState(false)
+  const [bookmarks, setBookmarks] = useLocalStorage('elearning-bookmarks', [])
+  const [faves, setFaves] = useState([])
 
   let scrollProgress = 0
+  let isScrolled = false
 
   if (typeof window !== 'undefined') {
     scrollProgress = scrollPosition.y / (document.body.scrollHeight - window.innerHeight)
+    isScrolled = scrollPosition.y > 25
   }
 
-  const isScrolled = scrollPosition.y > 25
+  useEffect(() => {
+    setFaves(bookmarks)
+  }, [bookmarks])
+
   let bookmarkIndex = 0
   if (post) {
     bookmarkIndex = bookmarks.findIndex((el) => {
@@ -109,7 +117,7 @@ export default function StickyHeader({ post, unit, next, prev, bookmarks, setBoo
           <span className={styles.bookmarksTitle}>Your bookmarks</span>
           <Button onClick={() => setBookmarksActive(false)} label="Close" priority="ghost" icon={<CloseIcon />} size="small" hideLabel={true} />
         </header>
-        <BookmarksList bookmarks={bookmarks} setBookmarks={setBookmarks} />
+        <BookmarksList bookmarks={faves} setBookmarks={setBookmarks} />
       </div>
       <button className={`${styles.backdrop} ${bookmarksActive && styles.backdropActive}`} onClick={() => setBookmarksActive(false)}>
         Close Bookmarks

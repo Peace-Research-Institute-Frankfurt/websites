@@ -7,7 +7,6 @@ import Callout from '@shared/components/Callout'
 import { Details, DetailsGroup } from '@shared/components/Details'
 import { Event, Timeline } from '@shared/components/Timeline'
 import { FlipCards, Card } from '@shared/components/FlipCards'
-import useLocalStorage from '@shared/hooks/useLocalStorage'
 
 import App from './App'
 import Button from './ButtonAdapter'
@@ -125,7 +124,6 @@ export const query = graphql`
 
 const Chapter = ({ data, children }) => {
   const frontmatter = data.post.childMdx.frontmatter
-  const [bookmarks, setBookmarks] = useLocalStorage('elearning-bookmarks', [])
   const [currentSection, setCurrentSection] = useState('')
   const currentIndex = data.chapters.nodes.findIndex((el) => {
     return el.childMdx.frontmatter.order === frontmatter.order
@@ -157,7 +155,7 @@ const Chapter = ({ data, children }) => {
 
   return (
     <App>
-      <StickyHeader unit={data.unit} post={data.post} next={next} prev={prev} bookmarks={bookmarks} setBookmarks={setBookmarks} />
+      <StickyHeader unit={data.unit} post={data.post} next={next} prev={prev} />
       <article>
         <header className={styles.header}>
           <div className={styles.headerCopy}>

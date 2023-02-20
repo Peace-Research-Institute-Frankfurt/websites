@@ -89,9 +89,6 @@ export default function BookmarksList({ bookmarks, setBookmarks }) {
     )
   })
 
-  const bookmarksContent = <ul className={styles.list}>{bookmarksItems}</ul>
-
   const emptyState = <p className={styles.empty}>When you add chapters to your bookmarks they'll appear here.</p>
-
-  return <>{bookmarksItems.length > 0 ? bookmarksContent : emptyState}</>
+  return <>{bookmarksItems.length > 0 ? <ul className={styles.list}>{bookmarksItems}</ul> : emptyState}</>
 }
