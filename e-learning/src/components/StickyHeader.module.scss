@@ -25,10 +25,6 @@
 }
 
 .container-active {
-  button {
-    background: var(--gray-20);
-    border: 1px solid var(--gray-20);
-  }
 }
 
 .status-location {
@@ -36,7 +32,6 @@
   display: none;
   font-weight: 300;
   white-space: nowrap;
-  padding-bottom: 0.1em;
 
   @include bp(m) {
     display: flex;
@@ -50,6 +45,8 @@
 }
 
 .unit {
+  position: relative;
+  top: -0.1em;
   &:hover,
   &:focus-visible {
     text-decoration: underline;
@@ -100,10 +97,6 @@
   justify-content: flex-end;
   grid-column: 4 / 6;
   align-items: center;
-  button {
-    // background: white;
-    // border-color: white;
-  }
 }
 
 .status-pagination {
@@ -181,8 +174,8 @@
   z-index: 2000;
   visibility: hidden;
   top: 3rem;
-  @include bp(m) {
-    top: 3.25rem;
+  @include bp(xl) {
+    right: calc((100vw - 95rem) / 2 + var(--padding));
   }
 }
 

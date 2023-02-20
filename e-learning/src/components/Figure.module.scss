@@ -1,7 +1,7 @@
 @import 'vars';
 
 .credit {
-  color: var(--gray-50);
+  color: var(--gray-60);
   display: block;
   padding-top: 0.1em;
 }
@@ -57,13 +57,19 @@
 }
 
 .large {
-  grid-column: 1 / 6;
-  text-align: center;
+  display: contents;
   .captions {
-    margin: 0 auto;
+    grid-column: 1 / 6;
+    @include bp(m) {
+      grid-column: 2 / 4;
+    }
   }
-  @include bp(m) {
-    grid-column: 2 / 5;
+  .image {
+    margin-top: 0.5em;
+    grid-column: 1 / 6;
+    @include bp(m) {
+      grid-column: 2 / 5;
+    }
   }
 }
 .medium {
