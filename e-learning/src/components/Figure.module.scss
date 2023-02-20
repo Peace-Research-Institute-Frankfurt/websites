@@ -16,14 +16,32 @@
   }
 }
 .image {
-  margin-top: 1rem;
   width: 100%;
+}
+
+.container {
+  margin-top: 0.5em;
+  &:first-child {
+    margin-top: 0;
+  }
 }
 
 .full {
   display: contents;
+  &:first-child {
+    .image {
+      margin-top: 0;
+    }
+  }
   .image {
+    margin-top: 0.5em;
     grid-column: 1 / 6;
+    margin-left: calc(var(--padding) * -1);
+    width: calc(100% + var(--padding) * 2);
+    @include bp(m) {
+      margin-left: 0;
+      width: 100%;
+    }
     @include bp(l) {
       margin-bottom: 1.5rem;
     }

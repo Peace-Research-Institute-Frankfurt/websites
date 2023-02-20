@@ -1,10 +1,10 @@
 @mixin bp($point) {
   @if $point==xl {
-    @media (min-width: 85rem) {
+    @media (min-width: 95rem) {
       @content;
     }
   } @else if $point==l {
-    @media (min-width: 70rem) {
+    @media (min-width: 75rem) {
       @content;
     }
   } @else if $point==m {
@@ -29,7 +29,7 @@ $text-border: 2px solid var(--gray-30);
   letter-spacing: 0.001em;
   hyphens: auto;
   font-size: var(--ms-0);
-  line-height: 1.3;
+  line-height: 1.45;
   @include bp(m) {
     line-height: 1.5;
   }
@@ -151,9 +151,11 @@ $text-border: 2px solid var(--gray-30);
   grid-template-columns: 1fr minmax(auto, 5rem) minmax(auto, 48rem) minmax(auto, 5rem) 1fr;
   column-gap: var(--padding);
   margin: 0 auto;
-  max-width: 100rem;
-  border-left: 1px dotted var(--blue-90);
-  border-right: 1px dotted var(--blue-90);
+  max-width: 95rem;
   border-bottom: 1px solid var(--blue-90);
   padding: 0 var(--padding);
+  @include bp(xl) {
+    border-left: 1px dotted var(--blue-90);
+    border-right: 1px dotted var(--blue-90);
+  }
 }

@@ -2,10 +2,11 @@
 
 .header {
   @extend %grid;
-  margin-bottom: 0;
   background: var(--blue-80);
   color: var(--blue-10);
   border-top: 0.5em solid var(--blue-60);
+  padding-top: 2em;
+  padding-bottom: 2.5em;
   @include bp(m) {
     text-align: left;
     padding-top: 5em;
@@ -54,8 +55,9 @@
 
 .body {
   @extend %grid;
+  padding-top: var(--padding);
+  padding-bottom: var(--padding);
   @include bp(m) {
-    padding-top: var(--padding);
     padding-bottom: 5rem;
   }
   p,
@@ -197,31 +199,46 @@
   @extend %h1;
   font-size: var(--ms-3);
   display: block;
+  margin-bottom: 0.2em;
 }
 
 .pagination-intro {
   @extend %copy-large;
+  font-size: var(--ms-0);
   padding-top: 0.45em;
   opacity: 0.75;
+  @include bp(m) {
+    font-size: var(--ms-1);
+  }
 }
 
 .toc-container {
   @extend %caption;
-  grid-column: 1/3;
-  grid-row: 1;
   position: relative;
-  display: none;
-  @include bp(l) {
+  grid-column: 1 / 6;
+  @include bp(m) {
+    grid-column: 3 / 4;
+  }
+  @include bp(xl) {
+    grid-column: 1/3;
     display: block;
+    grid-row: 1;
   }
 }
 
 .toc-inner {
-  position: absolute;
+  @include bp(xl) {
+    position: absolute;
+  }
   h4 {
     @extend %mono;
+    color: var(--blue-70);
     text-transform: uppercase;
-    font-size: 0.9em;
     letter-spacing: 0.01em;
+    font-size: 0.95em;
+    margin-bottom: 0.2em;
+    @include bp(xl) {
+      font-size: 0.9em;
+    }
   }
 }

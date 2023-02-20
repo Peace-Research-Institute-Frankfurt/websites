@@ -3,12 +3,11 @@
 .container {
   @extend %grid;
   @extend %caption;
-  padding: 0;
   padding-top: var(--padding);
   padding-bottom: var(--padding);
   border: 0;
-  @include bp(m) {
-    margin-top: 2rem;
+  @include bp(xl) {
+    padding-left: 0;
   }
   p {
     max-width: 60em;
