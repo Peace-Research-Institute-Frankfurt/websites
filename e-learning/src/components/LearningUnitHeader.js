@@ -21,16 +21,14 @@ export default function LearningUnitHeader({ image, order, title, intro, startLi
         </figcaption>
       </figure>
       <div className={styles.headerCopy} style={headerStyles}>
-        <div className={styles.headerCopyInner}>
-          <p className={styles.headerEyebrow}>
-            <UnitChip>Unit {order}</UnitChip>
-          </p>
-          <h1 className={styles.headerTitle}>{title}</h1>
-          <p className={styles.headerIntro}>{intro}</p>
-          <Link className={styles.headerCta} to={startLink}>
-            Start <ArrowRight />
-          </Link>
-        </div>
+        <p className={styles.headerEyebrow}>
+          <UnitChip>Unit {order}</UnitChip>
+        </p>
+        <h1 className={styles.headerTitle}>{title}</h1>
+        <p className={styles.headerIntro}>{intro}</p>
+        <Link className={styles.headerCta} to={startLink}>
+          Start <ArrowRight />
+        </Link>
       </div>
     </header>
   )

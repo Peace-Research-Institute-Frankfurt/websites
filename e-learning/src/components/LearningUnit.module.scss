@@ -27,13 +27,24 @@
 
 .container {
   @extend %grid;
-  padding-bottom: var(--padding);
+  border: 0;
+  padding: 0;
   section:last-of-type .section-content {
     margin-bottom: 0;
   }
-  section,
-  main {
+  section {
     display: contents;
+  }
+}
+
+.main {
+  padding-top: var(--padding);
+  padding-bottom: var(--padding);
+  grid-column: 1 / 6;
+  @extend %grid;
+  @include bp(xl) {
+    border-left: 1px dotted var(--blue-90);
+    border-right: 1px dotted var(--blue-90);
   }
 }
 
@@ -128,6 +139,9 @@
     &:hover,
     &:focus-visible {
       background: var(--gray-20);
+      .chapter-title {
+        text-decoration: underline;
+      }
     }
   }
 }
@@ -137,7 +151,7 @@
   display: block;
   margin-top: 0;
   margin-bottom: 0.2rem;
-  text-underline-offset: 0.12em;
+  text-underline-offset: 0.15em;
   position: relative;
   flex-basis: 50%;
   flex-shrink: 0;

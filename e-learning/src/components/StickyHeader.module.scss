@@ -18,13 +18,14 @@
     height: 3.5em;
     font-size: 1rem;
   }
+  @include bp(xl) {
+    border-left: 1px dotted var(--blue-90);
+    border-right: 1px dotted var(--blue-90);
+  }
   label {
     position: absolute;
     font-size: 0;
   }
-}
-
-.container-active {
 }
 
 .status-location {

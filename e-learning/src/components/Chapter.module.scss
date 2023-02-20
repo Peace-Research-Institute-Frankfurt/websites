@@ -48,7 +48,7 @@
 }
 .intro {
   @extend %copy-large;
-  opacity: 0.75;
+  color: var(--blue-30);
 }
 
 .body {
@@ -57,6 +57,10 @@
   padding-bottom: var(--padding);
   @include bp(m) {
     padding-bottom: 5rem;
+  }
+  @include bp(xl) {
+    border-left: 1px dotted var(--blue-90);
+    border-right: 1px dotted var(--blue-90);
   }
   p,
   ol,
@@ -187,9 +191,8 @@
 
 .pagination-intro {
   @extend %copy;
-  font-size: var(--ms-0);
   padding-top: 0.45em;
-  opacity: 0.75;
+  color: var(--blue-30);
 }
 
 .toc-container {

@@ -175,6 +175,7 @@ $text-border: 2px solid var(--gray-30);
   font-weight: 700;
   line-height: 1.1;
   font-size: var(--ms-1);
+  text-underline-offset: 0.15em;
 }
 
 %h3 {
@@ -219,8 +220,4 @@ $text-border: 2px solid var(--gray-30);
   max-width: 95rem;
   border-bottom: 1px solid var(--blue-90);
   padding: 0 var(--padding);
-  @include bp(xl) {
-    border-left: 1px dotted var(--blue-90);
-    border-right: 1px dotted var(--blue-90);
-  }
 }

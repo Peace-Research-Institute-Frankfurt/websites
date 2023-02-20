@@ -4,11 +4,9 @@
   @extend %grid;
   padding: 0;
   grid-column: 1/6;
+  width: 100%;
   background: var(--blue-80);
-  margin-left: calc(var(--padding) * -1);
-  margin-right: calc(var(--padding) * -1);
   padding-bottom: var(--padding);
-  margin-bottom: var(--padding);
   overflow: hidden;
 }
 
@@ -26,7 +24,7 @@
 }
 
 .header-copy {
-  color: white;
+  color: var(--blue-10);
   grid-column: 1 / 6;
   padding: 0 var(--padding);
   @include bp(m) {
@@ -43,7 +41,7 @@
   grid-column: 1/6;
   max-height: 50vh;
   background: var(--blue-20);
-  box-shadow: 0 00px 50px 0 rgba(black, 0.35);
+  box-shadow: 0 0px 50px 0 rgba(black, 0.35);
   img {
     mix-blend-mode: multiply;
   }
@@ -85,19 +83,17 @@
 }
 
 .header-cta {
-  background: var(--blue-90);
+  background: var(--blue-70);
   color: white;
+  border: 1px solid rgba(white, 0.05);
   display: inline-flex;
-  height: 2em;
-  padding: 0 0.6em;
-  padding-top: 0.1em;
+  height: 1.85em;
+  padding: 0 0.5em;
+  padding-top: 0.125em;
   line-height: 1;
   border-radius: var(--br);
-  letter-spacing: 0.01em;
   gap: 0.25em;
   align-items: center;
-  padding-right: 0.5em;
-  transition: var(--fast);
   font-size: var(--ms-1);
   align-self: flex-start;
   font-weight: 300;
