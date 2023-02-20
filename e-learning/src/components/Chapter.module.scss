@@ -134,6 +134,7 @@
   margin-bottom: 1rem;
   text-decoration: none !important;
   transition: var(--fast);
+  outline-offset: 2px;
   border-radius: var(--br);
   &:hover,
   &:focus-visible {

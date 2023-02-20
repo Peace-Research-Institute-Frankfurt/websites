@@ -147,6 +147,7 @@
   white-space: nowrap;
   grid-column: 1/4;
   font-weight: 600;
+  text-underline-offset: 0.15em;
   @include bp(m) {
     grid-column: 1/3;
   }
