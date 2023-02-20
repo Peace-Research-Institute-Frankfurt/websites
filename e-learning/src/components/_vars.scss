@@ -74,6 +74,42 @@ $text-border: 2px solid var(--gray-30);
     margin-top: 1rem;
     margin-bottom: 0.125rem;
   }
+  sup {
+    font-family: var(--mono);
+    font-size: 0.9rem;
+    font-feature-settings: 'tnum';
+    vertical-align: baseline;
+    display: inline-block;
+    position: relative;
+    top: -0.3em;
+    font-weight: 500;
+    left: -0.05em;
+    width: 1em;
+    height: 1em;
+    a {
+      width: 2rem;
+      height: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      text-decoration: none;
+      background: transparent;
+      &:hover,
+      &:focus-visible {
+        color: var(--gray-80);
+        text-decoration: underline;
+      }
+    }
+  }
+
+  strong {
+    font-weight: bold;
+    letter-spacing: 0;
+  }
 }
 
 %copy-large {
