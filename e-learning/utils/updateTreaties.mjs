@@ -137,14 +137,14 @@ for (let i = 0; i < pages.length; i++) {
   treaty.participants = treatyParticipants
   out.push(treaty)
 }
-
 const differences = diff(treaties, out)
 
 if (differences.length === 0) {
   console.log(`Treaty data is already up-to-date.`)
   exit(2)
 } else {
-  console.log(`Treaty data has changed, writing new data ...`)
+  console.log(`Treaty data has changed:\n${JSON.stringify(differences)}`)
   fs.writeFileSync(treatiesFile, `${JSON.stringify(out, null, '  ')}\n`, 'utf-8')
+  console.log(`Wrote new data to ${treatiesFile}`)
   exit(0)
 }
