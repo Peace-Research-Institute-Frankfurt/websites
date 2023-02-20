@@ -1,16 +1,17 @@
 .container {
   font-weight: 300;
   display: inline-flex;
-  padding: 0.4em 0.65em;
+  padding: 0 0.5em;
+  height: 1.9em;
   font-family: var(--sans);
-  padding-bottom: 0.45em;
   line-height: 1;
   border-radius: var(--br);
   text-decoration-width: 1px;
   cursor: pointer;
   gap: 0.25em;
   transition: var(--fast);
-  align-items: middle;
+  justify-content: center;
+  align-items: center;
 }
 
 .primary {
@@ -42,6 +43,7 @@
 
 .small {
   font-size: var(--ms--1);
+  height: 1.75em;
   .icon {
     position: relative;
     top: 0.05em;
@@ -49,10 +51,6 @@
       height: 1em;
     }
   }
-}
-
-.has-icon {
-  padding-right: 0.5em;
 }
 
 .hide-label {
