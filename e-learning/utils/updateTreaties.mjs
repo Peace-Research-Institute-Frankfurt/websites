@@ -140,8 +140,6 @@ for (let i = 0; i < pages.length; i++) {
 
 const differences = diff(treaties, out)
 
-console.log(differences)
-
 if (differences.length === 0) {
   console.log(`Treaty data is already up-to-date.`)
   exit(2)
