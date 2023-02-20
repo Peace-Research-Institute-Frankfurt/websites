@@ -145,7 +145,7 @@
   position: relative;
   white-space: nowrap;
   grid-column: 1/4;
-  font-weight: 500;
+  font-weight: 600;
   @include bp(m) {
     grid-column: 1/3;
   }
