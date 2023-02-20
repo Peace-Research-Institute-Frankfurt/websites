@@ -28,8 +28,11 @@
 }
 
 .header-eyebrow {
-  font-size: var(--ms--1);
+  font-size: var(--ms-0);
   margin-bottom: 1.5em;
+  @include bp(m) {
+    margin-bottom: 3em;
+  }
 }
 
 .header-copy {
@@ -39,7 +42,6 @@
   color: white;
   @include bp(l) {
     padding: 0;
-    padding-top: 3em;
     padding-bottom: 3em;
     position: relative;
     z-index: 100;
@@ -87,22 +89,26 @@
   background: var(--blue-90);
   color: white;
   display: inline-flex;
-  padding: 0.4em 0.6em;
-  padding-bottom: 0.6em;
+  height: 2em;
+  padding: 0 0.6em;
+  padding-top: 0.1em;
   line-height: 1;
   border-radius: var(--br);
   letter-spacing: 0.025em;
   gap: 0.25em;
-  align-items: flex-end;
+  align-items: center;
   padding-right: 0.5em;
   transition: var(--fast);
   font-size: var(--ms-1);
   align-self: flex-start;
+  margin-left: -2px;
+  box-shadow: 0 2px 4px 0 rgba(black, 0.1);
   svg {
     width: 0.9em;
   }
+  border: 1px solid var(--blue-70);
   &:hover,
   &:focus-visible {
-    background-color: var(--blue-80);
+    border: 1px solid var(--blue-60);
   }
 }
