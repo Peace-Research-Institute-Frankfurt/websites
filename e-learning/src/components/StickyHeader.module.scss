@@ -175,7 +175,7 @@
   visibility: hidden;
   top: 3rem;
   @include bp(xl) {
-    right: calc((100vw - 95rem) / 2 + var(--padding));
+    right: calc((100vw - 95rem) / 2 + var(--padding) - 0.4em);
   }
 }
 

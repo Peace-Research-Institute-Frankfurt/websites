@@ -180,18 +180,14 @@ const Chapter = ({ data, children }) => {
             {next && next.childMdx.frontmatter.title && (
               <Link className={styles.next} to={`../${next.childMdx.fields.slug}`}>
                 <span className={styles.paginationLabel}>Next Chapter</span>
-                <span className={styles.paginationTitle}>
-                  {next.childMdx.frontmatter.order}. {next.childMdx.frontmatter.title}
-                </span>
+                <span className={styles.paginationTitle}>{next.childMdx.frontmatter.title}</span>
                 {next.childMdx.frontmatter.intro && <p className={styles.paginationIntro}>{next.childMdx.frontmatter.intro}</p>}
               </Link>
             )}
             {prev && (
-              <>
-                <Link className={styles.previous} to={`../${prev.childMdx.fields.slug}`}>
-                  <span>Previous: {prev.childMdx.frontmatter.title}</span>
-                </Link>
-              </>
+              <p className={styles.previous}>
+                <span>Previous Chapter:</span> <Link to={`../${prev.childMdx.fields.slug}`}>{prev.childMdx.frontmatter.title}</Link>
+              </p>
             )}
           </nav>
         </div>

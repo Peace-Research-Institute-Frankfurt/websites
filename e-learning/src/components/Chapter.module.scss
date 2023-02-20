@@ -148,7 +148,7 @@
 .next {
   background: var(--blue-80);
   color: white;
-  border: 1px solid rgba(black, 0.5);
+  display: block;
   padding: 1em;
   margin-bottom: 1rem;
   text-decoration: none !important;
@@ -156,20 +156,27 @@
   border-radius: var(--br);
   &:hover,
   &:focus-visible {
-    border: 1px solid rgba(black, 0.85);
+    .pagination-label {
+      text-decoration: underline;
+    }
   }
   @include bp(m) {
-    padding: 2em;
+    padding: 2.5em;
   }
 }
 
 .previous {
-  @extend %copy;
-  text-underline-offset: 0.15em;
-  text-decoration-thickness: 1px;
+  @extend %caption;
+  color: var(--blue-70);
+  a {
+    @extend %caption-bold;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+    text-decoration-style: dotted;
+  }
   &:hover,
   &:focus-visible {
-    text-decoration: underline;
+    text-decoration-style: solid;
   }
 }
 
@@ -180,10 +187,7 @@
     grid-column: 2 / 5;
   }
   @include bp(l) {
-    grid-column: 3 / 5;
-  }
-  a {
-    display: block;
+    grid-column: 3 / 4;
   }
 }
 
@@ -194,22 +198,24 @@
   letter-spacing: 0.01em;
   display: inline-block;
   margin-bottom: 0.2em;
+  text-underline-offset: 0.25em;
 }
 .pagination-title {
   @extend %h1;
   font-size: var(--ms-3);
   display: block;
+  letter-spacing: -0.005em;
   margin-bottom: 0.2em;
+  @include bp(m) {
+    margin-bottom: 0.1em;
+  }
 }
 
 .pagination-intro {
-  @extend %copy-large;
+  @extend %copy;
   font-size: var(--ms-0);
   padding-top: 0.45em;
   opacity: 0.75;
-  @include bp(m) {
-    font-size: var(--ms-1);
-  }
 }
 
 .toc-container {

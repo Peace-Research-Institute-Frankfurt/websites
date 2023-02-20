@@ -31,7 +31,7 @@
   font-size: var(--ms-0);
   margin-bottom: 1.5em;
   @include bp(m) {
-    margin-bottom: 3em;
+    margin-bottom: 2em;
   }
 }
 
@@ -54,6 +54,7 @@
 .header-image {
   grid-column: 1/6;
   max-height: 50vh;
+  mix-blend-mode: multiply;
 }
 
 .header-credit {
