@@ -203,6 +203,9 @@
   grid-column: 1 / 6;
   margin-bottom: 2em;
   @include bp(m) {
+    grid-column: 2 / 4;
+  }
+  @include bp(l) {
     grid-column: 3 / 4;
   }
   @include bp(xl) {
