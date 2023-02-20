@@ -47,6 +47,6 @@
     "chalk": "^5.2.0",
     "eslint-import-resolver-alias": "^1.1.2",
     "luxon": "^3.2.1",
-    "puppeteer": "^19.7.0"
+    "puppeteer": "^19.7.2"
   }
 }
