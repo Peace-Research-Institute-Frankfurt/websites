@@ -57,26 +57,26 @@ $border-color: rgba(black, 0.7);
 }
 
 .source {
-  @extend %caption;
+  font-weight: 100;
   font-size: var(--ms--2);
   a {
     color: inherit !important;
   }
 }
 
-.signature {
-  background: var(--yellow-30);
-}
 .ratification {
-  background: var(--blue-40);
-}
-.none {
-  background: var(--orange-50);
+  background: var(--blue-50);
 }
 .accession,
 .succession,
 .acceptance {
   background: var(--blue-30);
+}
+.signature {
+  background: var(--yellow-30);
+}
+.none {
+  background: var(--orange-50);
 }
 
 .tooltip-content {

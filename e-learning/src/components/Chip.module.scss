@@ -3,21 +3,21 @@
 .container {
   @extend %caption;
   border: 1px solid rgba(black, 0.75);
-  border-radius: 10px;
+  border-radius: 100px;
   display: inline-flex;
   align-items: center;
   line-height: 1;
   gap: 0.25em;
-  padding: 0.3em 0.65em;
+  height: 1.8em;
+  padding: 0 0.65em;
+  padding-top: 0.15em;
   font-feature-settings: 'tnum' 1;
   white-space: nowrap;
-  @include bp(m) {
-    padding: 0.25em 0.45em;
-    padding-bottom: 0.3em;
-  }
   svg {
     width: 1.15em;
     height: auto;
+    top: -0.1em;
+    position: relative;
   }
 }
 
