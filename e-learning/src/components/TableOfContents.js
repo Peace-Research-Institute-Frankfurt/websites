@@ -6,7 +6,7 @@ export default function TableOfContents({ items, currentItem }) {
     const listItems = items.map((item, i) => {
       return (
         <li key={`toc-${i}`}>
-          <a href={item.url} className={`${styles.item} ${currentItem === item.url.replace('#', '') ? styles.current : null}`}>
+          <a href={item.url} className={`${styles.item}`}>
             {item.title}
           </a>
           {item.items && <TableOfContents items={item.items} />}

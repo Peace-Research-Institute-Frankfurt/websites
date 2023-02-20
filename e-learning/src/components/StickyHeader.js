@@ -58,7 +58,7 @@ export default function StickyHeader({ post, unit, next, prev }) {
       <header className={`${styles.container} ${isScrolled ? styles.containerActive : ''}`}>
         <Link className={styles.home} to="/">
           <BookIcon />
-          <span className={styles.homeLabel}>EUNPDC eLearning</span>
+          <span>EUNPDC eLearning</span>
         </Link>
         <div className={styles.statusLocation}>
           {unit && (
