@@ -124,6 +124,10 @@ button {
   color: white;
 }
 
+*:focus-visible {
+  outline: 4px solid var(--blue-60);
+}
+
 html {
   scroll-padding-top: 4rem;
 }

@@ -11,11 +11,11 @@
   padding-bottom: 0.05em;
   line-height: 1;
   transition: var(--fast);
-  outline: 1px solid transparent;
+  border: 1px solid transparent;
   white-space: nowrap;
   &:hover,
   &:focus-visible {
-    outline: 1px solid var(--blue-80);
+    border: 1px solid var(--blue-80);
   }
 }
 .header {
