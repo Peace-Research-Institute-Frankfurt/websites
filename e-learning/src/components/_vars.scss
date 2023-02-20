@@ -130,6 +130,25 @@ $text-border: 2px solid var(--gray-30);
   text-underline-offset: 0.15em;
 }
 
+%mono-caps {
+  @extend %mono;
+  letter-spacing: 0.015em;
+  text-transform: uppercase;
+  text-underline-offset: 0.25em;
+}
+
+%mono-caps-caption {
+  @extend %mono;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  word-spacing: -0.175em;
+  font-size: 0.95em;
+  margin-bottom: 0.2em;
+  @include bp(xl) {
+    font-size: 0.9em;
+  }
+}
+
 %h1 {
   line-height: 1;
   letter-spacing: 0.001em;

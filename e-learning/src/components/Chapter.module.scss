@@ -37,9 +37,7 @@
 }
 
 .eyebrow {
-  @extend %mono;
-  letter-spacing: 0.01em;
-  text-transform: uppercase;
+  @extend %mono-caps;
   color: var(--blue-40);
   margin-bottom: 0.75em;
 }
@@ -171,13 +169,10 @@
 }
 
 .pagination-label {
-  @extend %mono;
-  text-transform: uppercase;
+  @extend %mono-caps;
   color: var(--blue-40);
-  letter-spacing: 0.01em;
   display: inline-block;
   margin-bottom: 0.2em;
-  text-underline-offset: 0.25em;
 }
 .pagination-title {
   @extend %h1;
@@ -221,14 +216,7 @@
     position: absolute;
   }
   h4 {
-    @extend %mono;
+    @extend %mono-caps-caption;
     color: var(--blue-70);
-    text-transform: uppercase;
-    letter-spacing: 0.01em;
-    font-size: 0.95em;
-    margin-bottom: 0.2em;
-    @include bp(xl) {
-      font-size: 0.9em;
-    }
   }
 }
