@@ -174,7 +174,7 @@
   background-color: white;
   z-index: 2000;
   visibility: hidden;
-  top: 3rem;
+  top: 2.8rem;
   @include bp(xl) {
     right: calc((100vw - 95rem) / 2 + var(--padding) - 0.4em);
   }
@@ -192,11 +192,17 @@
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid var(--blue-80);
-  padding: 0.4rem 0.5rem;
+  padding: 0.4em 0.75em;
+  padding-bottom: 0.2em;
+  button {
+    position: relative;
+    top: -0.05em;
+  }
 }
 
 .bookmarks--title {
-  font-weight: 500;
+  line-height: 1;
+  font-weight: 400;
 }
 
 .backdrop {

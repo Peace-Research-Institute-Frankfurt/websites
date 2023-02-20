@@ -49,7 +49,6 @@
   padding-top: 0.1em;
   .icon {
     position: relative;
-    top: -0.05em;
     svg {
       height: 1em;
     }
@@ -57,10 +56,7 @@
 }
 
 .hide-label {
-  padding: 0.3em;
-  &.small {
-    padding: 0.25em;
-  }
+  padding: 0 0.3em;
   .label {
     position: absolute;
     font-size: 0;
