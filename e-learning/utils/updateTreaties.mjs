@@ -135,11 +135,12 @@ for (let i = 0; i < pages.length; i++) {
     return { country: country.alpha3, events: events }
   })
   treaty.participants = treatyParticipants
-  treaty.participantsSource = p.url
   out.push(treaty)
 }
 
 const differences = diff(treaties, out)
+
+console.log(differences)
 
 if (differences.length === 0) {
   console.log(`Treaty data is already up-to-date.`)
