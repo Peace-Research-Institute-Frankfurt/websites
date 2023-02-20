@@ -201,10 +201,12 @@
   @extend %caption;
   position: relative;
   grid-column: 1 / 6;
+  margin-bottom: 2em;
   @include bp(m) {
     grid-column: 3 / 4;
   }
   @include bp(xl) {
+    margin-bottom: 0;
     grid-column: 1/3;
     display: block;
     grid-row: 1;
