@@ -10,7 +10,6 @@
   @extend %caption;
   padding-top: 0.75em;
   margin-bottom: 1rem;
-  font-weight: 500;
   grid-column: 1 / 6;
   @include bp(m) {
     grid-column: 3 / 4;

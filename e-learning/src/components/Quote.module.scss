@@ -73,7 +73,7 @@ blockquote {
 }
 
 .actions {
-  @extend %caption;
+  @extend %caption-bold;
   display: flex;
   gap: 0.75rem;
   align-items: center;
