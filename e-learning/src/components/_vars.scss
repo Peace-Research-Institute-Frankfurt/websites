@@ -149,6 +149,14 @@ $text-border: 2px solid var(--gray-30);
   }
 }
 
+%mono-tiny {
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  font-family: var(--mono);
+  font-size: var(--ms--2);
+  word-spacing: -0.2em;
+}
+
 %h1 {
   line-height: 1;
   letter-spacing: 0.001em;

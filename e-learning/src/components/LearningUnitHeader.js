@@ -4,28 +4,32 @@ import { GatsbyImage } from 'gatsby-plugin-image'
 
 import UnitChip from './UnitChip'
 import ArrowRight from '../assets/icons/arrow-right.svg'
-
+import MarkdownRenderer from 'react-markdown-renderer'
 import * as styles from './LearningUnitHeader.module.scss'
 
-export default function LearningUnitHeader({ image, alt, order, title, intro, startLink, background, bylines }) {
+export default function LearningUnitHeader({ image, order, title, intro, startLink, background }) {
   const headerStyles = {
     '--background': background,
   }
   return (
     <header className={styles.container}>
-      <div className={styles.inner}>
-        <GatsbyImage className={styles.headerImage} image={image} alt={alt} />
-        <div className={styles.headerCopy} style={headerStyles}>
-          <div className={styles.headerCopyInner}>
-            <p className={styles.headerEyebrow}>
-              <UnitChip>Unit {order}</UnitChip>
-            </p>
-            <h1 className={styles.headerTitle}>{title}</h1>
-            <p className={styles.headerIntro}>{intro}</p>
-            <Link className={styles.headerCta} to={startLink}>
-              Start <ArrowRight />
-            </Link>
-          </div>
+      <figure className={styles.imageContainer}>
+        <GatsbyImage className={styles.headerImage} image={image.src} alt={image.alt} />
+        <figcaption className={styles.imageCaption}>
+          <MarkdownRenderer markdown={`Above: ${image.caption}`} />
+          <MarkdownRenderer className={styles.imageCredit} markdown={image.credit} />
+        </figcaption>
+      </figure>
+      <div className={styles.headerCopy} style={headerStyles}>
+        <div className={styles.headerCopyInner}>
+          <p className={styles.headerEyebrow}>
+            <UnitChip>Unit {order}</UnitChip>
+          </p>
+          <h1 className={styles.headerTitle}>{title}</h1>
+          <p className={styles.headerIntro}>{intro}</p>
+          <Link className={styles.headerCta} to={startLink}>
+            Start <ArrowRight />
+          </Link>
         </div>
       </div>
     </header>

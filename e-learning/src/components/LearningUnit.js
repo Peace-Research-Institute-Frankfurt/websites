@@ -44,8 +44,8 @@ export const query = graphql`
           order
           hero_alt
           hero_credit
+          hero_caption
           hero_background
-          hero_color
           hero_image {
             childImageSharp {
               gatsbyImageData(layout: FULL_WIDTH)
@@ -138,7 +138,7 @@ const LearningUnit = ({ data, context }) => {
           alt={frontmatter.hero_alt}
           order={frontmatter.order}
           bylines={bylines}
-          image={heroImage}
+          image={{ src: heroImage, alt: frontmatter.hero_alt, caption: frontmatter.hero_caption, credit: frontmatter.hero_credit }}
           background={frontmatter.hero_background}
           startLink={data.chapters.nodes[0].childMdx.fields.slug}
         />
