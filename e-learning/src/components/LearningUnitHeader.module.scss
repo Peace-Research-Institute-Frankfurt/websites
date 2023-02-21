@@ -7,7 +7,10 @@
   width: 100%;
   background: var(--blue-80);
   padding-bottom: var(--padding);
+  padding-left: var(--padding);
+  padding-right: var(--padding);
   overflow: hidden;
+  position: relative;
 }
 
 .header-title {
@@ -17,18 +20,18 @@
 
 .header-eyebrow {
   font-size: var(--ms-0);
-  margin-bottom: 2em;
-  @include bp(xl) {
-    margin-bottom: 3em;
-  }
+  position: absolute;
+  top: 0;
 }
 
 .header-copy {
   color: var(--blue-10);
   grid-column: 1 / 6;
-  padding: 0 var(--padding);
+  padding-top: var(--padding);
   @include bp(m) {
-    padding: 0;
+    grid-column: 1 / 5;
+  }
+  @include bp(l) {
     grid-column: 3 / 5;
   }
 }
@@ -39,6 +42,8 @@
 
 .header-image {
   grid-column: 1/6;
+  margin-left: calc(var(--padding) * -1);
+  margin-right: calc(var(--padding) * -1);
   max-height: 50vh;
   background: var(--blue-20);
   box-shadow: 0 0px 50px 0 rgba(black, 0.35);
@@ -52,19 +57,23 @@
   align-self: flex-end;
   grid-row: 2;
   color: var(--blue-30);
-  padding-top: 1.5em;
-  grid-column: 1 / 5;
+  border-top: 1px solid var(--blue-70);
+  grid-column: 1 / 6;
+  max-width: 28em;
   grid-row: 3;
-  padding-left: var(--padding);
+  padding-top: 1em;
+  margin-top: 2em;
   @include bp(m) {
+    padding-left: 0;
+    grid-column: 1 / 4;
+  }
+  @include bp(l) {
     padding-left: 0;
     grid-column: 3 / 4;
   }
   @include bp(xl) {
     grid-row: 2;
     max-width: 18em;
-    padding-left: var(--padding);
-    padding-top: var(--padding);
     grid-column: 1 / 3;
   }
 }
@@ -89,7 +98,6 @@
   display: inline-flex;
   height: 1.85em;
   padding: 0 0.5em;
-  padding-top: 0.125em;
   line-height: 1;
   border-radius: var(--br);
   gap: 0.25em;
@@ -98,6 +106,10 @@
   align-self: flex-start;
   font-weight: 300;
   box-shadow: 0 2px 4px 0 rgba(black, 0.1);
+  padding-top: 0.175em;
+  @include bp(m) {
+    padding-top: 0.125em;
+  }
   svg {
     width: 0.9em;
   }

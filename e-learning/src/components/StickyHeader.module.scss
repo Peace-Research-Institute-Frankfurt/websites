@@ -10,12 +10,13 @@
   transition: var(--fast);
   background: transparent;
   z-index: 2000;
-  font-size: var(--ms--1);
-  height: 3.75em;
+  height: 3.5em;
   background-color: white;
   border-bottom: 1px solid var(--blue-90);
+  font-size: 0.85rem;
   @include bp(m) {
-    height: 3.5em;
+    font-size: var(--ms--1);
+    height: 3.25em;
     font-size: 1rem;
   }
   @include bp(xl) {
@@ -146,9 +147,11 @@
   position: relative;
   white-space: nowrap;
   grid-column: 1/4;
-  font-weight: 600;
   text-underline-offset: 0.15em;
+  padding-top: 0.2em;
   @include bp(m) {
+    font-weight: 600;
+    font-size: 1.05em;
     grid-column: 1/3;
   }
   &:hover,
@@ -156,9 +159,11 @@
     text-decoration: underline;
   }
   svg {
-    margin-right: 0.5rem;
+    margin-right: 0.35rem;
     height: auto;
     width: 1.8em;
+    position: relative;
+    top: -0.05em;
     flex-shrink: 0;
   }
 }
@@ -176,7 +181,7 @@
   background-color: white;
   z-index: 2000;
   visibility: hidden;
-  top: 2.8rem;
+  top: 2.2rem;
   @include bp(xl) {
     right: calc((100vw - 95rem) / 2 + var(--padding) - 0.4em);
   }

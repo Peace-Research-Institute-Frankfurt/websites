@@ -159,7 +159,7 @@ const Chapter = ({ data, children }) => {
       <article>
         <header className={styles.header}>
           <div className={styles.headerCopy}>
-            <span class={styles.eyebrow}>Chapter {frontmatter.order}</span>
+            <span className={styles.eyebrow}>Chapter {frontmatter.order}</span>
             <h1 className={styles.title}>{frontmatter.title}</h1>
             {frontmatter.intro && <p className={styles.intro}>{frontmatter.intro}</p>}
           </div>
