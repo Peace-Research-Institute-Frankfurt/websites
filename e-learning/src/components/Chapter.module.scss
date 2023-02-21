@@ -209,6 +209,7 @@
   margin-bottom: 1em;
   @include bp(m) {
     grid-column: 2 / 4;
+    margin-bottom: 1.75em;
   }
   @include bp(l) {
     grid-column: 3 / 4;
