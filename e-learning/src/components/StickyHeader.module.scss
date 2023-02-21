@@ -176,12 +176,16 @@
   opacity: 0;
   border: 1px solid rgba(black, 0.75);
   border-radius: var(--br);
-  box-shadow: 0px 2px 2px rgba(black, 0.2);
+  box-shadow: 0px 1px 3px rgba(black, 0.25);
   width: Min(100vw - var(--padding) * 2, 25rem);
   background-color: white;
   z-index: 2000;
   visibility: hidden;
-  top: 2.2rem;
+  transform: translateY(5px);
+  top: 2.5rem;
+  @include bp(m) {
+    top: 2.85rem;
+  }
   @include bp(xl) {
     right: calc((100vw - 95rem) / 2 + var(--padding) - 0.4em);
   }
@@ -190,7 +194,7 @@
 .bookmarks-container-active {
   opacity: 1;
   visibility: visible;
-  transform: translateY(5px);
+  transform: translateY(0px);
 }
 
 .bookmarks-header {
