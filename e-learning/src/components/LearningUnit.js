@@ -130,7 +130,7 @@ const LearningUnit = ({ data, context }) => {
   return (
     <App>
       <StickyHeader bookmarks={bookmarks} setBookmarks={setBookmarks} />
-      <article className={styles.container}>
+      <article className={styles.container} id="content">
         <LearningUnitHeader
           frontmatter={frontmatter}
           title={frontmatter.title}

@@ -1,0 +1,17 @@
+.skip {
+  position: fixed;
+  top: 0;
+  left: var(--padding);
+  z-index: 10000;
+  background: var(--blue-80);
+  color: var(--blue-10);
+  padding: 0.25em 0.5em;
+  border-bottom-left-radius: var(--br);
+  border-bottom-right-radius: var(--br);
+  transform: translateY(-140%);
+  transition: transform var(--fast);
+  outline: 4px solid var(--blue-60);
+  &:focus-visible {
+    transform: translateY(0);
+  }
+}

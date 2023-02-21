@@ -156,7 +156,7 @@ const Chapter = ({ data, children }) => {
   return (
     <App>
       <StickyHeader unit={data.unit} post={data.post} next={next} prev={prev} />
-      <article>
+      <article id="content">
         <header className={styles.header}>
           <div className={styles.headerCopy}>
             <span className={styles.eyebrow}>Chapter {frontmatter.order}</span>
