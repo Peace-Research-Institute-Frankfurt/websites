@@ -1,27 +1,30 @@
 @import 'vars';
 
 blockquote {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-top: 1em;
+  margin-bottom: 1em;
   p:last-child {
     margin-bottom: 0;
   }
 }
 
 .speech {
+  position: relative;
   .text {
-    @extend %copy-large;
     font-family: var(--sans);
-    line-height: 1.35;
-    font-style: italic;
-    letter-spacing: -0.01em;
-
-    p:before {
-      content: '‘';
-    }
-
-    p:after {
-      content: '’';
+    color: var(--gray-60);
+    padding-left: 1.65em;
+  }
+  &:before {
+    content: '“';
+    font-size: 2em;
+    font-weight: 600;
+    position: absolute;
+    color: var(--gray-60);
+    left: 0.2em;
+    top: -0.05em;
+    @include bp(m) {
+      top: 0;
     }
   }
 }
@@ -89,6 +92,6 @@ blockquote {
 cite {
   @extend %caption;
   display: block;
-  padding-top: 0.5rem;
+  padding-top: 0.5em;
   font-style: normal;
 }
