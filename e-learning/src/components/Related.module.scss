@@ -1,0 +1,26 @@
+@import 'vars';
+
+.container {
+  grid-column: 4/6;
+  align-self: flex-start;
+  position: relative;
+}
+
+.inner {
+  @extend %caption;
+  padding: 1em;
+  background: var(--purple-10);
+  position: absolute;
+}
+
+.label {
+  @extend %mono-caps-caption;
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+.title {
+  font-family: var(--serif);
+  font-size: var(--ms-1);
+  margin-bottom: 0.25em;
+}
