@@ -9,18 +9,45 @@
 .inner {
   @extend %caption;
   padding: 1em;
-  background: var(--purple-10);
+  text-decoration: none !important;
+  color: var(--blue-80) !important;
+  background: var(--yellow-10);
   position: absolute;
+  border: 1px solid rgba(black, 0);
+  border-radius: var(--br);
+  outline-offset: 2px;
+  &:hover,
+  &:focus-visible {
+    border: 1px solid var(--blue-80);
+  }
 }
 
 .label {
   @extend %mono-caps-caption;
   display: block;
-  margin-bottom: 0.5em;
+  opacity: 0.8;
+  margin-bottom: 2em;
+}
+
+.unit {
+  display: block;
+  margin-bottom: 0.25em;
+}
+
+.chapter {
+  margin-left: 0.35em;
 }
 
 .title {
   font-family: var(--serif);
+  font-weight: 600;
   font-size: var(--ms-1);
-  margin-bottom: 0.25em;
+  margin-bottom: 0.3em;
+  line-height: 1.15;
+  letter-spacing: -0.0075em;
+  word-spacing: -0.02em;
+}
+
+.intro {
+  margin-bottom: 0 !important;
 }
