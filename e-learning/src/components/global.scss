@@ -142,6 +142,10 @@ body {
   font-family: var(--sans);
   font-size: var(--ms-0);
   color: var(--blue-90);
+  font-weight: 500;
+  @include bp(m) {
+    font-weight: 400;
+  }
 }
 
 .gatsby-image-wrapper [data-main-image] {

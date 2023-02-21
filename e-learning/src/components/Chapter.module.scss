@@ -5,8 +5,8 @@
   background: var(--blue-80);
   color: var(--blue-10);
   border-top: 0.5em solid var(--blue-60);
-  padding-top: 2em;
-  padding-bottom: 2.5em;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
   @include bp(m) {
     text-align: left;
     padding-top: 5em;
@@ -39,7 +39,10 @@
 .eyebrow {
   @extend %mono-caps;
   color: var(--blue-40);
-  margin-bottom: 0.75em;
+  margin-bottom: 0.5em;
+  @include bp(m) {
+    margin-bottom: 0.75em;
+  }
 }
 
 .title {
@@ -130,7 +133,7 @@
   background: var(--blue-80);
   color: white;
   display: block;
-  padding: 1em;
+  padding: 1.5em;
   margin-bottom: 1rem;
   text-decoration: none !important;
   transition: var(--fast);
@@ -177,15 +180,18 @@
   @extend %mono-caps;
   color: var(--blue-40);
   display: inline-block;
-  margin-bottom: 0.2em;
+  margin-bottom: 0.5em;
+  @include bp(m) {
+    margin-bottom: 0.25em;
+  }
 }
 .pagination-title {
   @extend %h1;
-  font-size: var(--ms-3);
   display: block;
-  letter-spacing: -0.005em;
-  margin-bottom: 0.2em;
+  margin-bottom: 0.15em;
+  font-size: var(--ms-2);
   @include bp(m) {
+    font-size: var(--ms-3);
     margin-bottom: 0.1em;
   }
 }
@@ -200,7 +206,7 @@
   @extend %caption;
   position: relative;
   grid-column: 1 / 6;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
   @include bp(m) {
     grid-column: 2 / 4;
   }

@@ -29,9 +29,7 @@ $text-border: 2px solid var(--gray-30);
   hyphens: auto;
   font-size: var(--ms-0);
   line-height: 1.4;
-  font-weight: 500;
   @include bp(m) {
-    font-weight: 400;
     line-height: 1.425;
   }
   a {

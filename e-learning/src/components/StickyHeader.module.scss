@@ -13,13 +13,15 @@
   height: 3.5em;
   background-color: white;
   border-bottom: 1px solid var(--blue-90);
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   @include bp(m) {
-    font-size: var(--ms--1);
     height: 3.25em;
-    font-size: 1rem;
+  }
+  @include bp(l) {
+    font-size: var(--ms--1);
   }
   @include bp(xl) {
+    font-size: 1rem;
     border-left: 1px dotted var(--blue-90);
     border-right: 1px dotted var(--blue-90);
   }
@@ -32,7 +34,6 @@
 .status-location {
   align-items: center;
   display: none;
-  font-weight: 300;
   white-space: nowrap;
 
   @include bp(m) {
@@ -103,7 +104,6 @@
 
 .status-pagination {
   display: none;
-  font-weight: 300;
   @include bp(m) {
     display: flex;
     grid-row: 1 / 2;
@@ -213,7 +213,6 @@
 
 .bookmarks--title {
   line-height: 1;
-  font-weight: 400;
 }
 
 .backdrop {
