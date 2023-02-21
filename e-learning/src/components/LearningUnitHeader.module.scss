@@ -15,7 +15,7 @@
 
 .header-title {
   @extend %h1;
-  margin-bottom: 0.3em;
+  margin-bottom: 0.25em;
 }
 
 .header-eyebrow {
@@ -27,8 +27,9 @@
 .header-copy {
   color: var(--blue-10);
   grid-column: 1 / 6;
-  padding-top: var(--padding);
+  padding-top: 1.25em;
   @include bp(m) {
+    padding-top: var(--padding);
     grid-column: 1 / 5;
   }
   @include bp(l) {
