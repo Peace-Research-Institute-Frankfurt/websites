@@ -1,15 +1,15 @@
 @import 'vars';
 
 .container {
-  @extend %mono;
   font-size: inherit;
   padding: 0.25em 0.6em;
-  padding-top: 0.35em;
+  padding-top: 0.4em;
   line-height: 1;
+  font-weight: 600;
   text-decoration: inherit;
   position: relative;
   display: inline-block;
-  color: var(--blue-90);
+  color: var(--blue-80);
   &:after {
     content: '';
     background: var(--yellow-50);
