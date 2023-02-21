@@ -56,7 +56,7 @@ export default function Related({ unit, chapter }) {
       <Link className={styles.inner} to={`../..${unitNode.childMdx.fields.slug}${chapterNode.childMdx.fields.slug}`}>
         <span className={styles.label}>See also</span>
         <span className={styles.unit}>
-          <UnitChip>Unit {unitNode.childMdx.frontmatter.order}</UnitChip>
+          <span>Unit {unitNode.childMdx.frontmatter.order}, </span>
           <span className={styles.chapter}>Chapter {chapterNode.childMdx.frontmatter.order}</span>
         </span>
         <h4 className={styles.title}>{chapterNode.childMdx.frontmatter.title}</h4>

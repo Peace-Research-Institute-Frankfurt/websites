@@ -30,8 +30,10 @@
 }
 
 .unit {
+  @extend %copy;
+  line-height: 1;
   display: block;
-  margin-bottom: 0.25em;
+  margin-bottom: 0.2em;
 }
 
 .chapter {
@@ -42,14 +44,13 @@
   font-family: var(--serif);
   font-weight: 600;
   font-size: var(--ms-1);
-  margin-bottom: 0.3em;
   line-height: 1.125;
   letter-spacing: -0.01em;
   word-spacing: -0.02em;
   text-underline-offset: 0.125em;
-  font-style: italic;
 }
 
 .intro {
+  padding-top: 0.5em;
   margin-bottom: 0 !important;
 }
