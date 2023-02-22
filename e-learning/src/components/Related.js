@@ -1,10 +1,10 @@
 import React from 'react'
 import { useStaticQuery, graphql, Link } from 'gatsby'
-import UnitChip from './UnitChip'
 import * as styles from './Related.module.scss'
 import { truncate } from './utils'
 
 export default function Related({ unit, chapter }) {
+  if (chapter) chapter = Number(chapter)
   const data = useStaticQuery(graphql`
     query {
       units: allFile(filter: { extension: { eq: "mdx" }, name: { eq: "index" }, sourceInstanceName: { eq: "luContent" } }) {
@@ -22,7 +22,7 @@ export default function Related({ unit, chapter }) {
           }
         }
       }
-      chapters: allFile(filter: { name: { ne: "index" }, ext: { eq: ".mdx" } }) {
+      chapters: allFile(filter: { sourceInstanceName: { eq: "luContent" }, name: { ne: "index" }, ext: { eq: ".mdx" } }) {
         nodes {
           relativeDirectory
           childMdx {
@@ -46,21 +46,27 @@ export default function Related({ unit, chapter }) {
   unitNode = data.units.nodes.find((el) => {
     return el.relativeDirectory === unit
   })
-  if (unit && chapter) {
-    chapterNode = data.chapters.nodes.find((el) => {
-      return el.relativeDirectory === unit && el.childMdx.frontmatter.order === chapter
-    })
+  chapterNode = data.chapters.nodes.find((el) => {
+    console.log(el)
+    return el.relativeDirectory === unitNode.relativeDirectory && el.childMdx.frontmatter.order === chapter
+  })
+
+  let linkTarget = `../..${unitNode.childMdx.fields.slug}`
+  if (chapterNode) {
+    linkTarget += `${chapterNode.childMdx.fields.slug}`
   }
+  const targetNode = chapterNode || unitNode
+
   return (
     <aside className={styles.container}>
-      <Link className={styles.inner} to={`../..${unitNode.childMdx.fields.slug}${chapterNode.childMdx.fields.slug}`}>
+      <Link className={styles.inner} to={linkTarget}>
         <span className={styles.label}>See also</span>
         <span className={styles.unit}>
-          <span>Unit {unitNode.childMdx.frontmatter.order}, </span>
-          <span className={styles.chapter}>Chapter {chapterNode.childMdx.frontmatter.order}</span>
+          <span>Unit {unitNode.childMdx.frontmatter.order}</span>
+          {chapterNode && <span className={styles.chapter}>/ Chapter {chapterNode.childMdx.frontmatter.order}</span>}
         </span>
-        <h4 className={styles.title}>{chapterNode.childMdx.frontmatter.title}</h4>
-        <p className={styles.intro}>{truncate(chapterNode.childMdx.frontmatter.intro, 15)}</p>
+        <h4 className={styles.title}>{targetNode.childMdx.frontmatter.title}</h4>
+        {targetNode.childMdx.frontmatter.intro && <p className={styles.intro}>{truncate(targetNode.childMdx.frontmatter.intro, 15)}</p>}
       </Link>
     </aside>
   )

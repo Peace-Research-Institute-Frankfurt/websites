@@ -61,7 +61,7 @@ $text-border: 2px solid var(--gray-30);
   }
   & > h3 {
     @extend %h3;
-    margin-top: 1em;
+    margin-top: 0.5em;
     margin-bottom: 0.125em;
     & + h4 {
       margin-top: 0;

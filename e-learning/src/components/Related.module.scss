@@ -1,36 +1,43 @@
 @import 'vars';
 
 .container {
-  grid-column: 4/6;
   align-self: flex-start;
   position: relative;
+  display: none;
+  @include bp(xl) {
+    display: block;
+    grid-column: 4/6;
+  }
 }
 
 .inner {
   @extend %caption;
+  display: block;
   padding: 1.5em;
   text-decoration: none !important;
   color: var(--blue-80) !important;
   background: var(--blue-10);
-  position: absolute;
-  border: 1px solid rgba(black, 0);
-  border-radius: var(--br);
+  border-top: 1px solid var(--blue-80);
   outline-offset: 2px;
+  position: absolute;
   &:hover,
   &:focus-visible {
-    border: 1px solid var(--blue-80);
+    .title {
+      text-decoration: underline;
+    }
   }
 }
 
 .label {
   @extend %mono-caps-caption;
   display: block;
-  color: var(--blue-60);
-  margin-bottom: 2em;
+  margin-bottom: 1.5em;
+  color: var(--blue-70);
 }
 
 .unit {
-  @extend %copy;
+  @extend %mono;
+  font-size: var(--ms--2);
   line-height: 1;
   display: block;
   margin-bottom: 0.2em;
@@ -44,8 +51,7 @@
   font-family: var(--serif);
   font-weight: 600;
   font-size: var(--ms-1);
-  line-height: 1.125;
-  letter-spacing: -0.01em;
+  line-height: 1.1;
   word-spacing: -0.02em;
   text-underline-offset: 0.125em;
 }
