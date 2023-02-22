@@ -12,8 +12,11 @@ blockquote {
   position: relative;
   .text {
     font-family: var(--sans);
+    padding-left: calc(var(--ms-0) * 2);
+  }
+  cite {
     color: var(--gray-60);
-    padding-left: 1.65em;
+    padding-left: calc(var(--ms-0) * 2);
   }
   &:before {
     content: '“';
