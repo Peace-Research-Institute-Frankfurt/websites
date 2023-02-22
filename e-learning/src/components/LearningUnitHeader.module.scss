@@ -63,7 +63,7 @@
   grid-column: 1 / 6;
   max-width: 28em;
   grid-row: 3;
-  padding-top: 1em;
+  padding-top: 0.75em;
   margin-top: 2em;
   @include bp(m) {
     padding-left: 0;
@@ -83,8 +83,8 @@
 .image-credit {
   @extend %mono-tiny;
   display: block;
-  padding-top: 0.2em;
-  opacity: 0.75;
+  padding-top: 0.25em;
+  opacity: 0.65;
 }
 
 .header-intro {
@@ -105,10 +105,12 @@
   gap: 0.25em;
   align-items: center;
   font-size: var(--ms-1);
+  transition: var(--fast);
   align-self: flex-start;
   font-weight: 300;
   box-shadow: 0 2px 4px 0 rgba(black, 0.1);
   padding-top: 0.175em;
+  text-underline-offset: 0.15em;
   @include bp(m) {
     padding-top: 0.125em;
   }
@@ -117,6 +119,7 @@
   }
   &:hover,
   &:focus-visible {
-    border: 1px solid var(--blue-60);
+    text-decoration: underline;
+    filter: brightness(1.1);
   }
 }

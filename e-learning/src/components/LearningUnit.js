@@ -159,7 +159,7 @@ const LearningUnit = ({ data, context }) => {
           )}
 
           <section>
-            <h2 className={styles.sectionTitle}>About the {bios.length > 1 ? 'authors' : 'author'}</h2>
+            <h2 className={styles.sectionTitle}>Credits</h2>
             <div className={styles.sectionContent}>
               <ul>{bios}</ul>
             </div>
