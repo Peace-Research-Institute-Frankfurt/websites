@@ -25,6 +25,7 @@ import TableOfContents from './TableOfContents'
 import { Tab, Tabs } from './TabsAdapter'
 import TermAdapter from './TermAdapter'
 import Treaty from './Treaty'
+import Related from './Related'
 
 import * as CalloutStyles from './Callout.module.scss'
 import * as styles from './Chapter.module.scss'
@@ -46,6 +47,7 @@ const shortCodes = {
   Institution,
   Tab,
   Tabs,
+  Related,
   Quote: ({ ...props }) => <QuoteAdapter {...props} styles={QuoteStyles} />,
   Term: ({ ...props }) => <TermAdapter styles={TermStyles} {...props} />,
   Figure: ({ ...props }) => <FigureAdapter styles={FigureStyles} {...props} />,

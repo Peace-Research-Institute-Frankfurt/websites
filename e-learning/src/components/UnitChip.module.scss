@@ -2,23 +2,26 @@
 
 .container {
   font-size: inherit;
-  padding: 0.25em 0.6em;
-  padding-top: 0.4em;
+  padding: 0 0.6em;
+  padding-top: 0.22em;
+  height: 1.5em;
   line-height: 1;
   font-weight: 600;
   text-decoration: inherit;
   position: relative;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   color: var(--blue-80);
   &:after {
     content: '';
+    width: 95%;
     background: var(--yellow-50);
     position: absolute;
-    left: 0;
+    left: 50%;
     right: 0;
     top: 0;
     bottom: 0;
-    transform: skewX(-10deg);
+    transform: translateX(-50%) skewX(-10deg);
   }
   @include bp(m) {
     opacity: 1;
