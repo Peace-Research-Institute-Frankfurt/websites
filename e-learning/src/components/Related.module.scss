@@ -3,9 +3,15 @@
 .container {
   align-self: flex-start;
   position: relative;
-  display: none;
+  display: block;
+  grid-column: 1/6;
+  @include bp(m) {
+    grid-column: 2/5;
+  }
+  @include bp(l) {
+    grid-column: 3/4;
+  }
   @include bp(xl) {
-    display: block;
     grid-column: 4/6;
   }
 }
@@ -13,13 +19,19 @@
 .inner {
   @extend %caption;
   display: block;
-  padding: 1.5em;
   text-decoration: none !important;
   color: var(--blue-80) !important;
   background: var(--blue-10);
-  border-top: 1px solid var(--blue-80);
   outline-offset: 2px;
-  position: absolute;
+  border-top: 1px solid var(--blue-80);
+  padding: 1em;
+  margin: 1em 0;
+  @include bp(xl) {
+    padding: 1.5em;
+    margin-top: 0;
+    border-radius: 0;
+    position: absolute;
+  }
   &:hover,
   &:focus-visible {
     .title {
@@ -30,17 +42,26 @@
 
 .label {
   @extend %mono-caps-caption;
-  display: block;
-  margin-bottom: 1.5em;
   color: var(--blue-70);
+  &:after {
+    content: ': ';
+  }
+
+  @include bp(xl) {
+    display: block;
+    margin-bottom: 1.5em;
+  }
 }
 
 .unit {
-  @extend %mono;
-  font-size: var(--ms--2);
   line-height: 1;
-  display: block;
   margin-bottom: 0.2em;
+  display: inline;
+  @extend %mono-caps-caption;
+
+  @include bp(l) {
+    display: block;
+  }
 }
 
 .chapter {
@@ -48,15 +69,23 @@
 }
 
 .title {
-  font-family: var(--serif);
   font-weight: 600;
-  font-size: var(--ms-1);
   line-height: 1.1;
   word-spacing: -0.02em;
   text-underline-offset: 0.125em;
+  font-size: var(--ms-1);
+  margin-top: 0.1em;
+  font-family: var(--serif);
+  @include bp(l) {
+    font-size: var(--ms-1);
+  }
 }
 
 .intro {
   padding-top: 0.5em;
   margin-bottom: 0 !important;
+  display: none;
+  @include bp(l) {
+    display: block;
+  }
 }
