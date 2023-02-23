@@ -112,7 +112,7 @@
   table {
     @extend %caption;
     margin-top: 0.5em;
-    margin-bottom: 0.5em;
+    margin-bottom: 1.5em;
     display: inline-block;
   }
   td,
@@ -122,6 +122,9 @@
     padding-right: 1em;
     border-bottom: $text-border;
     vertical-align: top;
+    a {
+      color: var(--blue-70);
+    }
   }
   th {
     font-weight: 600;

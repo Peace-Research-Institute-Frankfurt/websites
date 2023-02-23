@@ -138,20 +138,20 @@ const Chapter = ({ data, children }) => {
 
   useEffect(() => {
     // Attach intersection observers to heading elements
-    let observer = new IntersectionObserver((entries, observer) => {
-      const e = entries[0]
-      if (e.isIntersecting) {
-        const sectionId = e.target.getAttribute('id')
-        setCurrentSection(sectionId)
-        console.log(`Setting current section to ${sectionId}`)
-      }
-    }, {})
-    if (headlines.items) {
-      headlines.items.forEach((el) => {
-        const targetEl = document.querySelector(el.url)
-        observer.observe(targetEl)
-      })
-    }
+    // let observer = new IntersectionObserver((entries, observer) => {
+    //   const e = entries[0]
+    //   if (e.isIntersecting) {
+    //     const sectionId = e.target.getAttribute('id')
+    //     setCurrentSection(sectionId)
+    //     console.log(`Setting current section to ${sectionId}`)
+    //   }
+    // }, {})
+    // if (headlines.items) {
+    //   headlines.items.forEach((el) => {
+    //     const targetEl = document.querySelector(el.url)
+    //     observer.observe(targetEl)
+    //   })
+    // }
     // console.log(data.post.childMdx.tableOfContents)
   }, [headlines])
 

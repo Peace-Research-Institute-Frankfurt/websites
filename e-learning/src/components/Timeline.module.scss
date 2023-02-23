@@ -60,9 +60,14 @@
 }
 .event-description {
   grid-column: 2/3;
+  li {
+    list-style: disc;
+  }
 }
 .event-title {
   @extend %h3;
+  margin-top: 0.125em;
+  margin-bottom: 0.2em;
   line-height: 1.1;
 }
 
