@@ -47,7 +47,6 @@ export default function Related({ unit, chapter }) {
     return el.relativeDirectory === unit
   })
   chapterNode = data.chapters.nodes.find((el) => {
-    console.log(el)
     return el.relativeDirectory === unitNode.relativeDirectory && el.childMdx.frontmatter.order === chapter
   })
 
