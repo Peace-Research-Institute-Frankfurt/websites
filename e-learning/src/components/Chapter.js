@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { graphql, Link } from 'gatsby'
 import { getSrc } from 'gatsby-plugin-image'
 import { MDXProvider } from '@mdx-js/react'
@@ -126,7 +126,6 @@ export const query = graphql`
 
 const Chapter = ({ data, children }) => {
   const frontmatter = data.post.childMdx.frontmatter
-  const [currentSection, setCurrentSection] = useState('')
   const currentIndex = data.chapters.nodes.findIndex((el) => {
     return el.childMdx.frontmatter.order === frontmatter.order
   })
@@ -150,7 +149,7 @@ const Chapter = ({ data, children }) => {
             <aside className={styles.tocContainer}>
               <div className={styles.tocInner}>
                 <h4>On this page</h4>
-                <TableOfContents items={data.post.childMdx.tableOfContents.items} currentItem={currentSection} />
+                <TableOfContents items={data.post.childMdx.tableOfContents.items} />
               </div>
             </aside>
           )}
