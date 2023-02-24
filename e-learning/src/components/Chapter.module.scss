@@ -50,8 +50,10 @@
 }
 .intro {
   @extend %copy-large;
-  padding-top: 0.85em;
-
+  padding-top: 0.6em;
+  @include bp(m) {
+    padding-top: 0.85em;
+  }
   color: var(--blue-30);
 }
 
