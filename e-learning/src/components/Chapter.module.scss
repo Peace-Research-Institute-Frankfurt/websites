@@ -47,10 +47,11 @@
 
 .title {
   @extend %h1;
-  margin-bottom: 0.5em;
 }
 .intro {
   @extend %copy-large;
+  padding-top: 0.85em;
+
   color: var(--blue-30);
 }
 
@@ -213,7 +214,7 @@
   @extend %caption;
   position: relative;
   grid-column: 1 / 6;
-  margin-bottom: 1em;
+  margin-bottom: var(--padding);
   @include bp(m) {
     grid-column: 2 / 4;
     margin-bottom: 1.75em;
