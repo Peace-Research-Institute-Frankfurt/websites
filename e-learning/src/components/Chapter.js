@@ -134,27 +134,6 @@ const Chapter = ({ data, children }) => {
   const next = data.chapters.nodes[currentIndex + 1]
   const prev = data.chapters.nodes[currentIndex - 1]
 
-  const headlines = data.post.childMdx.tableOfContents
-
-  useEffect(() => {
-    // Attach intersection observers to heading elements
-    // let observer = new IntersectionObserver((entries, observer) => {
-    //   const e = entries[0]
-    //   if (e.isIntersecting) {
-    //     const sectionId = e.target.getAttribute('id')
-    //     setCurrentSection(sectionId)
-    //     console.log(`Setting current section to ${sectionId}`)
-    //   }
-    // }, {})
-    // if (headlines.items) {
-    //   headlines.items.forEach((el) => {
-    //     const targetEl = document.querySelector(el.url)
-    //     observer.observe(targetEl)
-    //   })
-    // }
-    // console.log(data.post.childMdx.tableOfContents)
-  }, [headlines])
-
   return (
     <App>
       <StickyHeader unit={data.unit} post={data.post} next={next} prev={prev} />
@@ -182,7 +161,9 @@ const Chapter = ({ data, children }) => {
             {next && next.childMdx.frontmatter.title && (
               <Link className={styles.next} to={`../${next.childMdx.fields.slug}`}>
                 <span className={styles.paginationLabel}>Next Chapter</span>
-                <span className={styles.paginationTitle}>{next.childMdx.frontmatter.title}</span>
+                <span className={styles.paginationTitle}>
+                  {next.childMdx.frontmatter.order}. {next.childMdx.frontmatter.title}
+                </span>
                 {next.childMdx.frontmatter.intro && <p className={styles.paginationIntro}>{next.childMdx.frontmatter.intro}</p>}
               </Link>
             )}

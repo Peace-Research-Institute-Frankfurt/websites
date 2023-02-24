@@ -144,8 +144,10 @@
   border-radius: var(--br);
   &:hover,
   &:focus-visible {
-    .pagination-label {
+    .pagination-title {
       text-decoration: underline;
+      text-decoration-color: var(--blue-30);
+      text-decoration-thickness: 1px;
     }
   }
   @include bp(m) {
@@ -155,7 +157,7 @@
 
 .previous {
   @extend %caption;
-  color: var(--blue-70);
+  color: var(--blue-80);
   a {
     @extend %caption-bold;
     text-decoration: underline;

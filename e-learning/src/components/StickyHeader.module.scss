@@ -181,12 +181,12 @@
   background-color: white;
   z-index: 2000;
   visibility: hidden;
-  transform: translateY(5px);
   top: 2.5rem;
   @include bp(m) {
-    top: 2.85rem;
+    top: 2.75rem;
   }
   @include bp(xl) {
+    top: 3rem;
     right: calc((100vw - 95rem) / 2 + var(--padding) - 0.4em);
   }
 }
@@ -194,7 +194,6 @@
 .bookmarks-container-active {
   opacity: 1;
   visibility: visible;
-  transform: translateY(0px);
 }
 
 .bookmarks-header {
