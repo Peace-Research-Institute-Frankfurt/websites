@@ -20,6 +20,9 @@
   &:hover,
   &:focus-visible {
     background: var(--gray-10);
+    .title {
+      text-decoration: underline;
+    }
   }
 }
 

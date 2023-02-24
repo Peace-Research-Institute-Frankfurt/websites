@@ -105,6 +105,7 @@ export default function StickyHeader({ post, unit, next, prev }) {
           <Button
             label="Bookmarks"
             priority="secondary"
+            state={bookmarksActive ? 'active' : 'default'}
             onClick={() => {
               setBookmarksActive(!bookmarksActive)
             }}
