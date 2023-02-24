@@ -11,6 +11,9 @@
   margin-top: 1.5rem;
   margin-bottom: 2rem !important;
   text-align: center;
+  p:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .card {
