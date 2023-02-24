@@ -173,12 +173,12 @@ $text-border: 2px solid var(--gray-30);
   font-family: var(--sans);
   word-spacing: -0.0075em;
   font-weight: 700;
-  line-height: 1.1;
+  line-height: 1.25;
   font-size: var(--ms-1);
   text-underline-offset: 0.1em;
   letter-spacing: -0.015em;
   @include bp(m) {
-    letter-spacing: -0.01em;
+    letter-spacing: -0.005em;
   }
 }
 

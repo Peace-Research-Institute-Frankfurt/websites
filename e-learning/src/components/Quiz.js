@@ -160,7 +160,7 @@ function Quiz(props) {
       <div className="controls">
         <label htmlFor="show-answers" className={styles.showAnswers}>
           <input id="show-answers" onChange={handleSubmit} checked={resultsVisible} type="checkbox" />
-          Show answers
+          <span className={styles.showAnswersLabel}>Show answers</span>
         </label>
       </div>
     </div>

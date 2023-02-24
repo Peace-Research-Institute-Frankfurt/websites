@@ -80,8 +80,8 @@
 }
 
 .show-answers {
-  background: var(--gray-30);
-  border: 1px solid var(--gray-40);
+  background: var(--gray-20);
+  border: 1px solid var(--gray-20);
   color: var(--blue-80);
   display: inline-flex;
   gap: 0.5em;
@@ -92,10 +92,15 @@
   cursor: pointer;
   &:hover,
   &:focus-visible {
-    border: 1px solid var(--gray-50);
+    border: 1px solid var(--gray-60);
   }
   input {
     width: 1.5rem;
     height: 1.5rem;
   }
+}
+
+.showAnswersLabel {
+  position: relative;
+  top: 0.1em;
 }

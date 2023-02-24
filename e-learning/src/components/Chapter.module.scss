@@ -194,6 +194,8 @@
   @extend %h1;
   display: block;
   margin-bottom: 0.15em;
+  line-height: 1.05;
+  letter-spacing: 0;
   font-size: var(--ms-2);
   @include bp(m) {
     font-size: var(--ms-3);
