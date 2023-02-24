@@ -61,12 +61,12 @@ export default function Related({ unit, chapter }) {
     <aside className={styles.container}>
       <Link className={styles.inner} to={linkTarget}>
         <span className={styles.label}>See also</span>
+        <h4 className={styles.title}>{targetNode.childMdx.frontmatter.title}</h4>
+        {targetNode.childMdx.frontmatter.intro && <p className={styles.intro}>{truncate(targetNode.childMdx.frontmatter.intro, 15)}</p>}
         <span className={styles.unit}>
           <span>Unit {unitNode.childMdx.frontmatter.order}</span>
           {chapterNode && <span className={styles.chapter}>/ Chapter {chapterNode.childMdx.frontmatter.order}</span>}
         </span>
-        <h4 className={styles.title}>{targetNode.childMdx.frontmatter.title}</h4>
-        {targetNode.childMdx.frontmatter.intro && <p className={styles.intro}>{truncate(targetNode.childMdx.frontmatter.intro, 15)}</p>}
       </Link>
     </aside>
   )
