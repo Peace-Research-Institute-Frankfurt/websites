@@ -10,13 +10,10 @@
   transition: var(--fast);
   background: transparent;
   z-index: 2000;
-  height: 3.5em;
+  height: 3.25em;
   background-color: white;
-  border-bottom: 1px solid var(--blue-90);
+  border-bottom: 1px solid var(--blue-70);
   font-size: 0.8rem;
-  @include bp(m) {
-    height: 3.25em;
-  }
   @include bp(l) {
     font-size: var(--ms--1);
   }
@@ -31,25 +28,32 @@
   }
 }
 
+.container-active {
+  border-bottom: 1px solid var(--blue-80);
+}
+
 .status-location {
   align-items: center;
-  display: none;
   white-space: nowrap;
+  display: flex;
+  grid-column: 2 / 4;
+  grid-row: 1 / 2;
+  padding-left: 1em;
+  max-width: calc(100% - 5rem);
 
   @include bp(m) {
-    display: flex;
-    justify-content: center;
-    grid-row: 1 / 2;
+    max-width: none;
+    padding-left: 1em;
     grid-column: 3 / 4;
+    grid-row: 1 / 2;
   }
   @include bp(xl) {
-    justify-content: flex-start;
+    padding-left: 0;
   }
 }
 
 .unit {
   position: relative;
-  top: -0.1em;
   &:hover,
   &:focus-visible {
     text-decoration: underline;
@@ -57,14 +61,25 @@
 }
 
 .location-label {
+  flex-grow: 1;
+  margin-left: 0.35em;
+  max-width: 100%;
+  overflow: hidden;
   position: relative;
-  margin-left: 0.5em;
+  display: none;
+  padding-top: 0.25em;
+  @include bp(s) {
+    display: block;
+  }
 }
 
 .unit-name {
   opacity: 1;
   transition: var(--fast);
   display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   transform: translateY(0px);
   .container-active & {
     opacity: 0;
@@ -82,12 +97,7 @@
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  max-width: calc(100% - 15rem);
-  display: none;
-  @include bp(l) {
-    display: block;
-    max-width: none;
-  }
+  max-width: 100%;
   .container-active & {
     opacity: 1;
     transform: translateY(0);
@@ -147,6 +157,7 @@
   position: relative;
   white-space: nowrap;
   grid-column: 1/4;
+  grid-row: 1 / 2;
   text-underline-offset: 0.15em;
   padding-top: 0.2em;
   @include bp(m) {
@@ -161,10 +172,23 @@
   svg {
     margin-right: 0.35rem;
     height: auto;
-    width: 1.8em;
     position: relative;
-    top: -0.05em;
     flex-shrink: 0;
+    width: 1.5em;
+    top: -0.1em;
+    @include bp(m) {
+      top: -0.05em;
+      width: 1.8em;
+    }
+  }
+}
+
+.home-label {
+  visibility: hidden;
+  position: absolute;
+  @include bp(m) {
+    position: static;
+    visibility: visible;
   }
 }
 
