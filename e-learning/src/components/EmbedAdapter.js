@@ -30,7 +30,16 @@ function Embed({ provider, ...props }) {
 
   return (
     <>
-      <SharedEmbed provider={providerData} embedChoices={choices} setEmbedChoices={setChoices} styles={styles} buttonComponent={Button} {...props} />
+      <SharedEmbed
+        provider={providerData}
+        embedChoices={choices}
+        setEmbedChoices={setChoices}
+        styles={styles}
+        buttonComponent={Button}
+        consentButtonProps={{ size: 'small', label: `Allow and continue` }}
+        activeButtonProps={{ size: 'small', label: `Disable content from ${providerData.title}` }}
+        {...props}
+      />
     </>
   )
 }
