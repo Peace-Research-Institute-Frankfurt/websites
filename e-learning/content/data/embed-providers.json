@@ -1,9 +1,9 @@
 [
   {
     "name": "npr",
-    "title": "National Public Radio (NPR)",
+    "title": "NPR",
     "description": "This chapter includes content provided by National Public Radio (NPR). Tap **Allow and continue** to load this content, or view [NPR's privacy policy](https://www.npr.org/about-npr/179878450/privacy-policy) for more information.",
-    "shortDescription": "NPR is an American nonprofit media organisation based in Washington D.C. Details about collected data are available in NPR's [privacy policy](https://www.npr.org/about-npr/179878450/privacy-policy) and [terms of service](https://www.npr.org/about-npr/179876898/terms-of-use)"
+    "shortDescription": "NPR (National Public Radio) is an American nonprofit media organisation based in Washington D.C. Details about collected data are available in NPR's [privacy policy](https://www.npr.org/about-npr/179878450/privacy-policy) and [terms of use](https://www.npr.org/about-npr/179876898/terms-of-use)."
   },
   {
     "name": "nukemap",
@@ -13,6 +13,6 @@
   },
   {
     "name": "default",
-    "description": "Hier finden Sie einen externen Inhalt, der Daten über Sie sammeln und an Dritte übermitteln kann. Tippen Sie auf **Eingebetteten Inhalt laden** um diesen Inhalt anzuzeigen."
+    "description": "This chapter includes content provided by an external website at {src}. Tap **Allow and continue** to load this content."
   }
 ]

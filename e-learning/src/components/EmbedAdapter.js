@@ -29,7 +29,9 @@ function Embed({ provider, ...props }) {
   const { choices, setChoices } = useContext(EmbedChoicesContext)
 
   return (
-    <SharedEmbed provider={providerData} embedChoices={choices} setEmbedChoices={setChoices} styles={styles} buttonComponent={Button} {...props} />
+    <>
+      <SharedEmbed provider={providerData} embedChoices={choices} setEmbedChoices={setChoices} styles={styles} buttonComponent={Button} {...props} />
+    </>
   )
 }
 export { Embed }

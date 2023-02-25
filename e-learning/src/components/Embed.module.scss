@@ -40,7 +40,11 @@
   }
 }
 
-.caption {
-  padding: 0.5rem;
-  font-size: var(--ms--1);
+.captions {
+  @extend %caption;
+  padding-top: 0.5rem;
+}
+
+.actions {
+  color: var(--gray-60);
 }

@@ -41,6 +41,13 @@
   }
 }
 
+.container.text {
+  padding: 0;
+  color: inherit;
+  text-decoration: underline;
+  height: auto;
+}
+
 .small {
   font-size: var(--ms--1);
   height: 1.9em;

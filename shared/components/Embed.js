@@ -1,8 +1,7 @@
 import React from 'react'
 import MarkdownRenderer from 'react-markdown-renderer'
-import Toggle from './Toggle'
 
-export default function Embed({ styles, url, caption, title, provider, width, height, size, embedChoices, setEmbedChoices, buttonComponent }) {
+export default function Embed({ styles, src, caption, title, provider, width, height, size, embedChoices, setEmbedChoices, buttonComponent }) {
   if (!styles) styles = {}
   if (!size) size = 'medium'
   const Button = buttonComponent || <>BUTTON</>
@@ -12,17 +11,23 @@ export default function Embed({ styles, url, caption, title, provider, width, he
     paddingTop: `${(height / width) * 100}%`,
   }
 
-  function handleLoadClick(e) {
-    if (provider !== 'default') {
+  function handleLoadClick() {
+    console.log('hi')
+    if (provider.name && provider.name !== 'default') {
       setEmbedChoices((prev) => {
         let newChoices = { ...prev }
-        newChoices[provider] = !newChoices[provider]
+        newChoices[provider.name] = !newChoices[provider.name]
         return newChoices
       })
     }
   }
 
-  const isActive = embedChoices[provider] || false
+  if (provider.description) {
+    provider.description = provider.description.replace(/{src}/g, `[${src}](${src})`)
+  }
+
+  const isLocal = src.substring(0, 1) === '/'
+  let isActive = embedChoices[provider.name] || isLocal || false
 
   return (
     <figure className={`${styles.container} ${styles[size]}`}>
@@ -39,16 +44,20 @@ export default function Embed({ styles, url, caption, title, provider, width, he
           <div className={styles.iframeContainer} style={embedStyles}>
             <iframe
               title={title}
-              src={url}
+              src={src}
               frameBorder="0"
               allowFullScreen
               loading="lazy"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             />
           </div>
-          <figcaption className={styles.caption}>
-            <div>{caption}</div>
-            <Toggle size="small" checked={isActive} label={`${provider.title}-Inhalte anzeigen`} onChange={handleLoadClick} />
+          <figcaption className={styles.captions}>
+            <div className={styles.caption}>{caption}</div>
+            <div className={styles.actions}>
+              {!isLocal && provider.name !== 'default' && (
+                <Button size="small" priority="text" label={`Disable content from ${provider.title}`} onClick={handleLoadClick} />
+              )}
+            </div>
           </figcaption>
         </>
       )}

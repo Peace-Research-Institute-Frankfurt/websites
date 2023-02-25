@@ -34,7 +34,7 @@ function Vimeo({ styles, url, width, height, caption }) {
   if (matches && matches[1]) {
     src = `https://player.vimeo.com/video/${matches[1]}?h=0e92d36ba9&title=0&byline=0&portrait=0`
   }
-  return <EmbedAdapter styles={styles} provider="vimeo" width={width} height={height} url={src} caption={caption} />
+  return <EmbedAdapter styles={styles} provider="vimeo" width={width} height={height} src={src} caption={caption} />
 }
 
 function Youtube({ styles, url, title, caption, width, height }) {
@@ -45,7 +45,7 @@ function Youtube({ styles, url, title, caption, width, height }) {
       width={width}
       height={height}
       title={title}
-      url={`https://www.youtube-nocookie.com/embed/${matches[1]}`}
+      src={`https://www.youtube-nocookie.com/embed/${matches[1]}`}
       caption={caption}
       provider="youtube"
     />
