@@ -16,8 +16,8 @@ export default function EmbedChoices({ styles, providers, choices, onChange }) {
           }}
         />
         <div className={styles.description}>
-          <h3>{p.title}</h3>
-          <MarkdownRenderer markdown={p.shortDescription} />
+          <h3 className={styles.title}>{p.title}</h3>
+          {p.shortDescription && <MarkdownRenderer className={styles.copy} markdown={p.shortDescription} />}
         </div>
       </li>
     )

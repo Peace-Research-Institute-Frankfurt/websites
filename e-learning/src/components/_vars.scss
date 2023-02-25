@@ -44,6 +44,9 @@ $text-border: 2px solid var(--gray-30);
   }
   p {
     margin-bottom: 0.65em;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
   & > h2 {
     @extend %h2;
@@ -107,6 +110,9 @@ $text-border: 2px solid var(--gray-30);
   strong {
     font-weight: bold;
     letter-spacing: 0;
+  }
+  code {
+    @extend %mono;
   }
 }
 

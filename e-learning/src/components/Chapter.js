@@ -1,66 +1,13 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 import { getSrc } from 'gatsby-plugin-image'
-import { MDXProvider } from '@mdx-js/react'
-
-import Callout from '@shared/components/Callout'
-import { Details, DetailsGroup } from '@shared/components/Details'
-import { Event, Timeline } from '@shared/components/Timeline'
-import { FlipCards, Card } from '@shared/components/FlipCards'
-
 import App from './App'
-import Button from './ButtonAdapter'
-import { Embed } from './Embed'
-import FigureAdapter from './FigureAdapter'
-import Institution from './Institution'
-import LectureVideo from './LectureVideo'
-import Map from './Map'
 import Meta from './Meta'
-import { Choice } from './MultipleChoice'
-import { Question, Quiz, RadioChoice } from './Quiz.js'
-import QuoteAdapter from './QuoteAdapter'
-import Resolution from './Resolution'
+import PostBody from './PostBody'
 import StickyHeader from './StickyHeader'
 import TableOfContents from './TableOfContents'
-import { Tab, Tabs } from './TabsAdapter'
-import TermAdapter from './TermAdapter'
-import Treaty from './Treaty'
-import Related from './Related'
 
-import * as CalloutStyles from './Callout.module.scss'
 import * as styles from './Chapter.module.scss'
-import * as DetailsStyles from './Details.module.scss'
-import * as FigureStyles from './Figure.module.scss'
-import * as FlipCardsStyles from './FlipCards.module.scss'
-import * as QuoteStyles from './Quote.module.scss'
-import * as TermStyles from './Term.module.scss'
-import * as TimelineStyles from './Timeline.module.scss'
-
-const shortCodes = {
-  Embed,
-  Quiz,
-  RadioChoice,
-  Question,
-  Choice,
-  Resolution,
-  Treaty,
-  Institution,
-  Tab,
-  Tabs,
-  Related,
-  Quote: ({ ...props }) => <QuoteAdapter {...props} styles={QuoteStyles} />,
-  Term: ({ ...props }) => <TermAdapter styles={TermStyles} {...props} />,
-  Figure: ({ ...props }) => <FigureAdapter styles={FigureStyles} {...props} />,
-  LectureVideo,
-  Event: ({ ...props }) => <Event styles={TimelineStyles} {...props} />,
-  Timeline: ({ ...props }) => <Timeline styles={TimelineStyles} {...props} />,
-  FlipCards: ({ ...props }) => <FlipCards styles={FlipCardsStyles} {...props} />,
-  Card: ({ ...props }) => <Card styles={FlipCardsStyles} {...props} />,
-  Details: ({ ...props }) => <Details {...props} styles={DetailsStyles} />,
-  DetailsGroup: ({ ...props }) => <DetailsGroup {...props} styles={DetailsStyles} />,
-  Callout: ({ ...props }) => <Callout {...props} buttonComponent={Button} styles={CalloutStyles} />,
-  Map,
-}
 
 export const query = graphql`
   query ($id: String, $lu_id: String) {
@@ -70,9 +17,7 @@ export const query = graphql`
       }
     }
     mdx(id: { eq: $id }) {
-      frontmatter {
-        title
-      }
+      id
     }
     post: file(id: { eq: $id }) {
       id
@@ -154,7 +99,7 @@ const Chapter = ({ data, children }) => {
             </aside>
           )}
           <div className={styles.bodyText}>
-            <MDXProvider components={shortCodes}>{children}</MDXProvider>
+            <PostBody content={children} />
           </div>
           <nav className={styles.pagination}>
             {next && next.childMdx.frontmatter.title && (

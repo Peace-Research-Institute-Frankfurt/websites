@@ -31,6 +31,19 @@ exports.createPages = async function ({ actions, graphql }) {
           }
         }
       }
+      pages: allFile(filter: { sourceInstanceName: { eq: "pages" }, extension: { eq: "mdx" } }) {
+        nodes {
+          id
+          childMdx {
+            fields {
+              slug
+            }
+            internal {
+              contentFilePath
+            }
+          }
+        }
+      }
     }
   `)
 
@@ -53,6 +66,16 @@ exports.createPages = async function ({ actions, graphql }) {
       path: lu_id,
       component: require.resolve(`./src/components/LearningUnit.js`),
       context: { id: id, lu_id: lu_id },
+    })
+  })
+
+  data.pages.nodes.forEach((node) => {
+    const postTemplate = require.resolve(`./src/components/Page.js`)
+    const path = node.childMdx.fields.slug
+    actions.createPage({
+      path: path,
+      component: `${postTemplate}?__contentFilePath=${node.childMdx.internal.contentFilePath}`,
+      context: { id: node.id },
     })
   })
 }

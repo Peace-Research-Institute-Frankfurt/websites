@@ -1,11 +1,11 @@
 @import 'vars';
 
 .container {
-  border: 1px solid var(--black);
-  padding-left: 0 !important;
+  border: $text-border;
+  margin-top: 0.5em;
+  margin-bottom: 1.25em !important;
+  margin-left: 0 !important;
   border-radius: var(--br);
-  margin: 1em 0;
-  margin-bottom: 1.5em !important;
   li {
     margin-bottom: 0 !important;
     &:before {
@@ -22,38 +22,40 @@
 .choice {
   margin-left: 0;
   display: flex;
-  border-bottom: 1px solid var(--black);
+  border-bottom: $text-border;
   justify-content: space-between;
   align-items: flex-start;
-  color: var(--gray-dark);
   gap: 0.75em;
+  color: var(--gray-60);
   padding: 0.75em;
-  @include bp(m) {
-    padding: 1em;
-    gap: 1em;
-  }
+  padding-right: 2em;
+
   &:last-child {
     border-bottom: 0;
   }
 }
 
-.checked {
-  color: var(--black);
-}
 .description {
-  @extend %caption;
   flex-grow: 1;
 }
 
+.title {
+  @extend %h3;
+}
+
+.checked {
+  color: var(--blue-90);
+}
 .checkbox {
   display: block;
   flex-grow: 0;
   flex-shrink: 0;
   position: relative;
   width: 1rem;
-  top: 0.25rem;
-  aspect-ratio: 1/1;
+  height: 1rem;
+  top: 0.05rem;
   @include bp(m) {
     width: 1.5rem;
+    height: 1.5rem;
   }
 }
