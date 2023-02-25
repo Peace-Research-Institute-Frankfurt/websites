@@ -10,7 +10,7 @@ import { FlipCards, Card } from '@shared/components/FlipCards'
 
 import App from './App'
 import Button from './ButtonAdapter'
-import { Embed } from './Embed'
+import { Embed } from './EmbedAdapter'
 import FigureAdapter from './FigureAdapter'
 import Institution from './Institution'
 import LectureVideo from './LectureVideo'

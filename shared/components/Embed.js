@@ -2,9 +2,13 @@ import React from 'react'
 import MarkdownRenderer from 'react-markdown-renderer'
 import Toggle from './Toggle'
 
-export default function Embed({ styles, url, caption, title, provider, width, height, embedChoices, setEmbedChoices }) {
+export default function Embed({ styles, url, caption, title, provider, width, height, size, embedChoices, setEmbedChoices, buttonComponent }) {
   if (!styles) styles = {}
-  const embedStyles = {
+  if (!size) size = 'medium'
+  const Button = buttonComponent || <>BUTTON</>
+
+  let embedStyles = {}
+  embedStyles = {
     paddingTop: `${(height / width) * 100}%`,
   }
 
@@ -21,12 +25,12 @@ export default function Embed({ styles, url, caption, title, provider, width, he
   const isActive = embedChoices[provider] || false
 
   return (
-    <figure className={styles.container}>
+    <figure className={`${styles.container} ${styles[size]}`}>
       {!isActive && (
         <div className={styles.consent}>
           <MarkdownRenderer markdown={provider.description} />
           <div className={styles.controls}>
-            <Toggle className={styles.button} checked={isActive} label={`${provider.title}-Inhalte anzeigen`} onChange={handleLoadClick} />
+            <Button size="small" label="Allow and continue" onClick={handleLoadClick} />
           </div>
         </div>
       )}
