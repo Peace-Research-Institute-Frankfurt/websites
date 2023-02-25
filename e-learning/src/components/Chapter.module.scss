@@ -93,25 +93,6 @@
   @extend %copy;
   display: contents;
 
-  figure {
-    margin-bottom: 1rem;
-    margin-top: 1rem;
-  }
-  ol,
-  ul {
-    margin-left: 1.2em;
-    margin-bottom: 0.5em;
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-  li {
-    margin-bottom: 0.125em;
-    &:last-of-type {
-      margin-bottom: 0;
-    }
-  }
-
   table {
     @extend %caption;
     margin-top: 0.5em;

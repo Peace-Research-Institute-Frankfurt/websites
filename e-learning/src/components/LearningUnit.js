@@ -22,7 +22,6 @@ export const query = graphql`
       childMdx {
         frontmatter {
           title
-          learning_objectives
           authors {
             frontmatter {
               name
@@ -77,7 +76,7 @@ export const query = graphql`
   }
 `
 
-const LearningUnit = ({ data, context }) => {
+const LearningUnit = ({ data, children }) => {
   const frontmatter = data.post.childMdx.frontmatter
   const authors = data.post.childMdx.frontmatter.authors
   const heroImage = getImage(frontmatter.hero_image)
@@ -149,12 +148,10 @@ const LearningUnit = ({ data, context }) => {
               <ol>{chapterLinks}</ol>
             </div>
           </section>
-          {frontmatter.learning_objectives && (
+          {children && (
             <section>
               <h2 className={styles.sectionTitle}>Learning Objectives</h2>
-              <div className={styles.sectionContent}>
-                <MarkdownRenderer className={styles.copy} markdown={frontmatter.learning_objectives} />
-              </div>
+              <div className={`${styles.sectionContent} ${styles.copy}`}>{children}</div>
             </section>
           )}
 

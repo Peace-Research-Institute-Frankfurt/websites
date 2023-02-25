@@ -28,6 +28,9 @@ exports.createPages = async function ({ actions, graphql }) {
             fields {
               slug
             }
+            internal {
+              contentFilePath
+            }
           }
         }
       }
@@ -62,9 +65,10 @@ exports.createPages = async function ({ actions, graphql }) {
   data.units.nodes.forEach((node) => {
     const id = node.id
     const lu_id = node.relativeDirectory
+    const template = require.resolve(`./src/components/LearningUnit.js`)
     actions.createPage({
       path: lu_id,
-      component: require.resolve(`./src/components/LearningUnit.js`),
+      component: `${template}?__contentFilePath=${node.childMdx.internal.contentFilePath}`,
       context: { id: id, lu_id: lu_id },
     })
   })

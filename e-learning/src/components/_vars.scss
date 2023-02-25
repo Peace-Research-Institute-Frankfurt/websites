@@ -32,6 +32,20 @@ $text-border: 2px solid var(--gray-30);
   @include bp(m) {
     line-height: 1.425;
   }
+  ol,
+  ul {
+    margin-left: 1.2em;
+    margin-bottom: 0.5em;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  li {
+    margin-bottom: 0.125em;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
   a {
     text-decoration: underline;
     text-underline-offset: 0.15em;

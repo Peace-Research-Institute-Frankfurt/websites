@@ -16,9 +16,6 @@ export const query = graphql`
         title
       }
     }
-    mdx(id: { eq: $id }) {
-      id
-    }
     post: file(id: { eq: $id }) {
       id
       childMdx {
