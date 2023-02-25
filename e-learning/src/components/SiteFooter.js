@@ -1,6 +1,5 @@
 import React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
-
+import { graphql, useStaticQuery, Link } from 'gatsby'
 import FundingLogo from '../assets/icons/funded-by-eu.svg'
 import * as styles from './SiteFooter.module.scss'
 
@@ -31,6 +30,9 @@ export default function SiteFooter() {
             </li>
             <li>
               <a href="https://nonproliferation-elearning.eu/imprint">Contact</a>
+            </li>
+            <li>
+              <Link to="/embed-choices">Embedded content choices</Link>
             </li>
           </ul>
         </nav>
