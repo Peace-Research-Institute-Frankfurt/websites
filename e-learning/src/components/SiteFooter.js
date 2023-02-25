@@ -32,7 +32,7 @@ export default function SiteFooter() {
               <a href="https://nonproliferation-elearning.eu/imprint">Contact</a>
             </li>
             <li>
-              <Link to="/embed-choices">Embedded content choices</Link>
+              <Link to="/embedded-content-choices">Embedded content choices</Link>
             </li>
           </ul>
         </nav>

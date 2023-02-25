@@ -2,10 +2,10 @@
 
 .container {
   border: $text-border;
-  padding-left: 0 !important;
+  margin-top: 0.5em;
+  margin-bottom: 1.25em !important;
+  margin-left: 0 !important;
   border-radius: var(--br);
-  margin: 1em 0;
-  margin-bottom: 1.5em !important;
   li {
     margin-bottom: 0 !important;
     &:before {
@@ -28,6 +28,8 @@
   gap: 0.75em;
   color: var(--gray-60);
   padding: 0.75em;
+  padding-right: 2em;
+
   &:last-child {
     border-bottom: 0;
   }
