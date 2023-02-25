@@ -19,6 +19,7 @@ function Embed({ provider, ...props }) {
   `)
 
   if (!provider) provider = 'default'
+  const { choices, setChoices } = useContext(EmbedChoicesContext)
 
   let providerData = null
   data.providers.nodes.forEach((p) => {
@@ -26,7 +27,6 @@ function Embed({ provider, ...props }) {
       providerData = p
     }
   })
-  const { choices, setChoices } = useContext(EmbedChoicesContext)
 
   return (
     <>
