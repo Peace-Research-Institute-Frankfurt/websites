@@ -12,7 +12,6 @@ export default function Embed({ styles, src, caption, title, provider, width, he
   }
 
   function handleLoadClick() {
-    console.log('hi')
     if (provider.name && provider.name !== 'default') {
       setEmbedChoices((prev) => {
         let newChoices = { ...prev }

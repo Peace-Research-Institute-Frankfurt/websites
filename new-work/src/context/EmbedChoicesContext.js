@@ -1,5 +1,5 @@
 import React, { createContext } from 'react'
-import useLocalStorage from '../hooks/useLocalStorage'
+import useLocalStorage from '@shared/hooks/useLocalStorage'
 
 export const EmbedChoicesContext = createContext()
 
