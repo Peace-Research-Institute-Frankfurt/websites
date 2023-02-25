@@ -20,7 +20,9 @@ module.exports = {
       alt: 'Stylised text: EU Non-Proliferation and Disarmament Consortium eLearning',
     },
   },
-  flags: {},
+  flags: {
+    DEV_SSR: true,
+  },
   pathPrefix: `/lu`,
   plugins: [
     'gatsby-plugin-sass',
@@ -78,6 +80,13 @@ module.exports = {
       options: {
         name: 'luContent',
         path: `${__dirname}/content/learning-units`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'pages',
+        path: `${__dirname}/content/pages/`,
       },
     },
     // {

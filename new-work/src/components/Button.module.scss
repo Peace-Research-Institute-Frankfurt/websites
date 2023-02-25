@@ -83,6 +83,20 @@
   }
 }
 
+.text {
+  padding: 0;
+  background: transparent;
+  border: 0;
+  height: auto;
+  font-weight: inherit;
+  color: inherit;
+  &:hover,
+  &:focus-visible {
+    border: 0;
+    text-decoration: underline;
+  }
+}
+
 .icon {
   width: 1.1em;
   display: flex;
