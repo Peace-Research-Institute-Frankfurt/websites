@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
-import Embed from '@shared/components/Embed'
+import SharedEmbed from '@shared/components/Embed'
+import Button from './ButtonAdapter'
 import { EmbedChoicesContext } from '../context/EmbedChoicesContext'
 
 function EmbedAdapter({ provider, ...props }) {
@@ -24,8 +25,17 @@ function EmbedAdapter({ provider, ...props }) {
     }
   })
   const { choices, setChoices } = useContext(EmbedChoicesContext)
-
-  return <Embed provider={providerData} embedChoices={choices} setEmbedChoices={setChoices} {...props} />
+  return (
+    <SharedEmbed
+      provider={providerData}
+      embedChoices={choices}
+      setEmbedChoices={setChoices}
+      buttonComponent={Button}
+      {...props}
+      consentButtonProps={{ size: 'small', label: `Inhalte laden` }}
+      activeButtonProps={{ size: 'small', label: `Inhalte von ${providerData.title} deaktivieren` }}
+    />
+  )
 }
 
 function Vimeo({ styles, url, width, height, caption }) {

@@ -1,7 +1,21 @@
 import React from 'react'
 import MarkdownRenderer from 'react-markdown-renderer'
 
-export default function Embed({ styles, src, caption, title, provider, width, height, size, embedChoices, setEmbedChoices, buttonComponent }) {
+export default function Embed({
+  styles,
+  src,
+  caption,
+  title,
+  provider,
+  width,
+  height,
+  size,
+  embedChoices,
+  setEmbedChoices,
+  buttonComponent,
+  consentButtonProps,
+  activeButtonProps,
+}) {
   if (!styles) styles = {}
   if (!size) size = 'medium'
   const Button = buttonComponent || <>BUTTON</>
@@ -33,8 +47,8 @@ export default function Embed({ styles, src, caption, title, provider, width, he
       {!isActive && (
         <div className={styles.consent}>
           <MarkdownRenderer markdown={provider.description} />
-          <div className={styles.controls}>
-            <Button size="small" label="Allow and continue" onClick={handleLoadClick} />
+          <div className={styles.consentControls}>
+            <Button onClick={handleLoadClick} {...consentButtonProps} />
           </div>
         </div>
       )}
@@ -52,9 +66,15 @@ export default function Embed({ styles, src, caption, title, provider, width, he
           </div>
           <figcaption className={styles.captions}>
             <div className={styles.caption}>{caption}</div>
-            <div className={styles.actions}>
+            <div className={styles.activeControls}>
               {!isLocal && provider.name !== 'default' && (
-                <Button size="small" priority="text" label={`Disable content from ${provider.title}`} onClick={handleLoadClick} />
+                <Button
+                  size="small"
+                  priority="text"
+                  label={`Disable content from ${provider.title}`}
+                  onClick={handleLoadClick}
+                  {...activeButtonProps}
+                />
               )}
             </div>
           </figcaption>
