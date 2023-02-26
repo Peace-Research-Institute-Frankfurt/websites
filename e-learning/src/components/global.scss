@@ -103,6 +103,11 @@
   --fast: 100ms;
   --padding: min(5vw, 2.5rem);
   --padding-small: calc(var(--padding) * 0.5);
+
+  // Scale font size on high-res displays
+  @media (min-resolution: 120dpi) and (min-width: 1200px) {
+    font-size: 0.9rem;
+  }
 }
 
 * {
