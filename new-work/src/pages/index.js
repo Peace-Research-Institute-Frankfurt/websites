@@ -1,7 +1,8 @@
+import React from 'react'
 import { Link, graphql } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import React from 'react'
+import Balancer from 'react-wrap-balancer'
 import App from '../components/App'
 import Meta from '../components/Meta'
 import SkipToContent from '../components/SkipToContent'
@@ -61,8 +62,10 @@ const Index = ({ data }) => {
       <li key={`post-${i}`}>
         <Link className={styles.postsItem} to={node.childMdx.fields.slug}>
           <div className={styles.postsHeader}>
-            <h2 className={styles.postsTitle}>{fm.title}</h2>
-            <ul className={styles.postsAuthors}>{byline}</ul>
+            <h2 className={styles.postsTitle}>
+              <Balancer>{fm.title}</Balancer>
+            </h2>
+            {byline.length > 0 && <ul className={styles.postsAuthors}>{byline}</ul>}
           </div>
           <p className={styles.postsIntro}>{fm.intro}</p>
         </Link>

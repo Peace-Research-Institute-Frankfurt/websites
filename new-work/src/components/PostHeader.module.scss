@@ -37,15 +37,15 @@
   line-height: 0.95;
   letter-spacing: -0.045em;
   font-weight: 800;
-  max-width: 20em;
   hyphens: auto;
   margin-top: 1.5em;
   font-size: var(--ms-7);
   margin-bottom: 0.75em;
+  width: 100%;
+  max-width: 15em;
   @include bp(m) {
     font-size: var(--ms-8);
     hyphens: none;
-    max-width: 10em;
   }
   @include bp(l) {
     font-size: var(--ms-9);
