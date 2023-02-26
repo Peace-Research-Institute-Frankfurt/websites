@@ -48,7 +48,7 @@ export const query = graphql`
           hero_background
           hero_image {
             childImageSharp {
-              gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
+              gatsbyImageData(layout: FULL_WIDTH, placeholder: DOMINANT_COLOR)
             }
           }
         }
