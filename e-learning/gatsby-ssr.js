@@ -1,4 +1,5 @@
 import React from 'react'
+import { Provider } from 'react-wrap-balancer'
 import { EmbedChoicesProvider } from './src/context/EmbedChoicesContext'
 
 const HtmlAttributes = {
@@ -10,5 +11,9 @@ export const onRenderBody = ({ setHtmlAttributes }) => {
 }
 
 export const wrapRootElement = ({ element }) => {
-  return <EmbedChoicesProvider>{element}</EmbedChoicesProvider>
+  return (
+    <EmbedChoicesProvider>
+      <Provider>{element}</Provider>
+    </EmbedChoicesProvider>
+  )
 }
