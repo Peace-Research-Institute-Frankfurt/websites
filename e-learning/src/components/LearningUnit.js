@@ -20,6 +20,7 @@ export const query = graphql`
     }
     post: file(id: { eq: $id }) {
       childMdx {
+        body
         frontmatter {
           title
           authors {
@@ -148,7 +149,7 @@ const LearningUnit = ({ data, children }) => {
               <ol>{chapterLinks}</ol>
             </div>
           </section>
-          {children && (
+          {data.post.childMdx.body.length > 0 && (
             <section>
               <h2 className={styles.sectionTitle}>Learning Objectives</h2>
               <div className={`${styles.sectionContent} ${styles.copy}`}>{children}</div>
