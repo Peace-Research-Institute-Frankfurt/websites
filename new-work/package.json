@@ -25,7 +25,7 @@
     "gatsby-plugin-sass": "^6.4.0",
     "gatsby-plugin-sharp": "^5.4.0",
     "gatsby-plugin-sitemap": "^6.7.0",
-    "gatsby-source-filesystem": "^5.4.0",
+    "gatsby-source-filesystem": "^5.7.0",
     "gatsby-transformer-json": "^5.4.0",
     "gatsby-transformer-sharp": "^5.4.0",
     "hcaptcha": "^0.1.1",
