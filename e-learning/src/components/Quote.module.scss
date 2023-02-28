@@ -10,12 +10,9 @@ blockquote {
 
 .speech {
   position: relative;
-  .text {
-    font-family: var(--sans);
-    padding-left: calc(var(--ms-0) * 1.75);
-  }
+  .text,
+  .actions,
   cite {
-    color: var(--gray-60);
     padding-left: calc(var(--ms-0) * 1.75);
   }
   &:before {
@@ -79,6 +76,7 @@ blockquote {
   @extend %caption-bold;
   display: flex;
   gap: 0.75rem;
+  padding-top: 0.15em;
   align-items: center;
 }
 
