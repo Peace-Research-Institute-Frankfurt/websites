@@ -59,12 +59,12 @@
   align-self: flex-end;
   grid-row: 2;
   color: var(--blue-30);
-  border-top: 1px solid var(--blue-70);
+  border-top: 1px solid rgba(white, 0.15);
   grid-column: 1 / 6;
-  max-width: 28em;
+  max-width: 32em;
   grid-row: 3;
   padding-top: 0.75em;
-  margin-top: 2em;
+  margin-top: 1.75em;
   @include bp(m) {
     padding-left: 0;
     grid-column: 1 / 4;
@@ -83,7 +83,7 @@
 .image-credit {
   @extend %mono-tiny;
   display: block;
-  padding-top: 0.25em;
+  padding-top: 0.5em;
   opacity: 0.65;
 }
 
