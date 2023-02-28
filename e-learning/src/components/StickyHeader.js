@@ -53,6 +53,18 @@ export default function StickyHeader({ post, unit, next, prev }) {
       }
     })
   }
+
+  let unitChip = <></>
+  if (unit && post) {
+    unitChip = (
+      <Link to={`../`} className={styles.unit}>
+        <UnitChip>Unit {unit.childMdx.frontmatter.order}</UnitChip>
+      </Link>
+    )
+  } else if (unit) {
+    unitChip = <UnitChip>Unit {unit.childMdx.frontmatter.order}</UnitChip>
+  }
+
   return (
     <>
       <header className={`${styles.container} ${isScrolled ? styles.containerActive : ''} ${post ? styles.hasPost : ''}`}>
@@ -61,13 +73,7 @@ export default function StickyHeader({ post, unit, next, prev }) {
           <span className={styles.homeLabel}>EUNPDC eLearning</span>
         </Link>
         <div className={styles.statusLocation}>
-          {unit && post ? (
-            <Link to={`../`} className={styles.unit}>
-              <UnitChip>Unit {unit.childMdx.frontmatter.order}</UnitChip>
-            </Link>
-          ) : (
-            <UnitChip>Unit {unit.childMdx.frontmatter.order}</UnitChip>
-          )}
+          {unitChip}
           <span className={styles.locationLabel}>
             {unit && <span className={styles.unitName}>{unit.childMdx.frontmatter.title}</span>}
             {post && (
