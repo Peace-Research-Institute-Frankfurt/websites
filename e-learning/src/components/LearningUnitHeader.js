@@ -13,10 +13,10 @@ export default function LearningUnitHeader({ image, order, title, intro, startLi
   return (
     <header className={styles.container}>
       <figure className={styles.imageContainer}>
-        <GatsbyImage className={styles.headerImage} image={image.src} alt={image.alt} />
+        {image.src & <GatsbyImage className={styles.headerImage} image={image.src} alt={image.alt} />}
         <figcaption className={styles.imageCaption}>
           <MarkdownRenderer markdown={`Above: ${image.caption}`} />
-          <MarkdownRenderer className={styles.imageCredit} markdown={image.credit} />
+          {image.credit && <MarkdownRenderer className={styles.imageCredit} markdown={image.credit} />}
         </figcaption>
       </figure>
       <div className={styles.headerCopy} style={headerStyles}>

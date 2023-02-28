@@ -140,8 +140,10 @@
     color: var(--blue-80);
     flex-flow: column;
     padding: 1em 0;
+    padding-bottom: 0.9em;
     @include bp(m) {
       padding: 1em;
+      padding-bottom: 0.75em;
       gap: 2em;
       flex-flow: row;
     }

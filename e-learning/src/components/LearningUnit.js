@@ -83,26 +83,13 @@ const LearningUnit = ({ data, children }) => {
   const heroImage = getImage(frontmatter.hero_image)
   const [bookmarks, setBookmarks] = useLocalStorage('elearning-bookmarks', [])
 
-  const bylines = authors.map((author) => {
-    const fm = author.frontmatter
-    const authorImage = getImage(fm.image)
-    return (
-      <li key={fm.name} className={styles.byline}>
-        <GatsbyImage className={styles.bylineImage} image={authorImage} alt={`${fm.name} profile image`} />
-        <div>
-          <em>{fm.name}</em>
-          <span>{fm.institution}</span>
-        </div>
-      </li>
-    )
-  })
   const bios = authors.map((author) => {
     const fm = author.frontmatter
     const authorImage = getImage(fm.image)
     return (
       <li className={styles.author} key={fm.author_id}>
         <div className={styles.authorHeader}>
-          <GatsbyImage className={styles.authorImage} image={authorImage} alt={`${fm.name} profile image`} />
+          {authorImage && <GatsbyImage className={styles.authorImage} image={authorImage} alt={`${fm.name} profile image`} />}
           <div>
             <h3 className={styles.authorTitle}>{fm.name}</h3>
             <span className={styles.authorInstitution}>{fm.institution}</span>
@@ -136,7 +123,6 @@ const LearningUnit = ({ data, children }) => {
           intro={frontmatter.intro}
           alt={frontmatter.hero_alt}
           order={frontmatter.order}
-          bylines={bylines}
           image={{ src: heroImage, alt: frontmatter.hero_alt, caption: frontmatter.hero_caption, credit: frontmatter.hero_credit }}
           background={frontmatter.hero_background}
           startLink={data.chapters.nodes[0].childMdx.fields.slug}
