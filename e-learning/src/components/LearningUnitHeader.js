@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import Balancer from 'react-wrap-balancer'
-import UnitChip from './UnitChip'
 import ArrowRight from '../assets/icons/arrow-right.svg'
 import MarkdownRenderer from 'react-markdown-renderer'
 import * as styles from './LearningUnitHeader.module.scss'
@@ -21,9 +20,6 @@ export default function LearningUnitHeader({ image, order, title, intro, startLi
         </figcaption>
       </figure>
       <div className={styles.headerCopy} style={headerStyles}>
-        <p className={styles.headerEyebrow}>
-          <UnitChip>Unit {order}</UnitChip>
-        </p>
         <h1 className={styles.headerTitle}>
           <Balancer>{title}</Balancer>
         </h1>

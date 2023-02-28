@@ -55,16 +55,18 @@ export default function StickyHeader({ post, unit, next, prev }) {
   }
   return (
     <>
-      <header className={`${styles.container} ${isScrolled ? styles.containerActive : ''}`}>
+      <header className={`${styles.container} ${isScrolled ? styles.containerActive : ''} ${post ? styles.hasPost : ''}`}>
         <Link className={styles.home} to="/">
           <BookIcon />
           <span className={styles.homeLabel}>EUNPDC eLearning</span>
         </Link>
         <div className={styles.statusLocation}>
-          {unit && (
+          {unit && post ? (
             <Link to={`../`} className={styles.unit}>
               <UnitChip>Unit {unit.childMdx.frontmatter.order}</UnitChip>
             </Link>
+          ) : (
+            <UnitChip>Unit {unit.childMdx.frontmatter.order}</UnitChip>
           )}
           <span className={styles.locationLabel}>
             {unit && <span className={styles.unitName}>{unit.childMdx.frontmatter.title}</span>}

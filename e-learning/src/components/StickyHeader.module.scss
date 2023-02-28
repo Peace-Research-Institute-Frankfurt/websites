@@ -81,7 +81,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   transform: translateY(0px);
-  .container-active & {
+  .container-active.has-post & {
     opacity: 0;
     transform: translateY(-0.5em);
   }
