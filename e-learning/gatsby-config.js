@@ -20,9 +20,6 @@ module.exports = {
       alt: 'Stylised text: EU Non-Proliferation and Disarmament Consortium eLearning',
     },
   },
-  flags: {
-    DEV_SSR: true,
-  },
   pathPrefix: `/lu`,
   plugins: [
     'gatsby-plugin-sass',

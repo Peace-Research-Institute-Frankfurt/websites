@@ -120,8 +120,7 @@ const LearningUnit = ({ data, children }) => {
           <h3 className={styles.chapterTitle}>
             {index + 1}. {frontmatter.title}
           </h3>
-          <p className={styles.chapterIntro}>{frontmatter.intro}</p>
-          {frontmatter.reading_time && <p className={styles.chapterMeta}>{frontmatter.reading_time} min read</p>}
+          {frontmatter.intro && <p className={styles.chapterIntro}>{frontmatter.intro}</p>}
         </Link>
       </li>
     )
