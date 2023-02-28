@@ -186,10 +186,6 @@
 .home-label {
   visibility: hidden;
   position: absolute;
-  @include bp(m) {
-    position: static;
-    visibility: visible;
-  }
 }
 
 .bookmarks-container {
