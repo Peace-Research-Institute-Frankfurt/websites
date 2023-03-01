@@ -23,13 +23,10 @@
   right: 0;
   border-radius: var(--br);
   top: calc(100% + 0.5rem);
-  transition: var(--fast);
-  transform: translateY(-5px);
   opacity: 0;
 }
 
 .choices-active {
-  transform: translateY(0);
   opacity: 1;
 }
 
