@@ -120,22 +120,29 @@
     justify-content: flex-end;
     align-items: center;
     grid-column: 5/6;
-    gap: 0.1rem;
   }
 }
 
 .pagination-link {
   font-size: 0;
-  padding: 0.2rem;
-  border-radius: var(--br);
+  padding: 0.1rem;
   border: 1px solid transparent;
   transition: var(--fast);
   &:hover,
   &:focus-visible {
     border: 1px solid var(--blue-80);
   }
+  &:first-of-type {
+    border-top-left-radius: var(--br);
+    border-bottom-left-radius: var(--br);
+  }
+  &:last-of-type {
+    margin-left: -1px;
+    border-top-right-radius: var(--br);
+    border-bottom-right-radius: var(--br);
+  }
   svg {
-    height: 1.4rem;
+    height: 1.35rem;
   }
 }
 

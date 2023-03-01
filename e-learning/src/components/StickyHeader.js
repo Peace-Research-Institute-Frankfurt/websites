@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react'
 import useScrollPosition from '@shared/hooks/useScrollPosition'
 import useLocalStorage from '@shared/hooks/useLocalStorage'
 
-import Button from './ButtonAdapter'
+import Button, { ButtonGroup } from './ButtonAdapter'
 import BookmarksList from './BookmarksList'
 import UnitChip from './UnitChip'
 import BookIcon from '../assets/icons/favicon.svg'
@@ -101,24 +101,26 @@ export default function StickyHeader({ post, unit, next, prev }) {
               </Link>
             )}
           </nav>
-          {post && (
+          <ButtonGroup>
+            {post && (
+              <Button
+                priority="secondary"
+                label={bookmarkIndex === -1 ? 'Add bookmark' : 'Remove bookmark'}
+                hideLabel={true}
+                onClick={toggleBookmark}
+                icon={bookmarkIndex === -1 ? <BookmarkOutline /> : <BookmarkFilled />}
+              ></Button>
+            )}
             <Button
+              label="Bookmarks"
               priority="secondary"
-              label={bookmarkIndex === -1 ? 'Add bookmark' : 'Remove bookmark'}
-              hideLabel={true}
-              onClick={toggleBookmark}
-              icon={bookmarkIndex === -1 ? <BookmarkOutline /> : <BookmarkFilled />}
-            ></Button>
-          )}
-          <Button
-            label="Bookmarks"
-            priority="secondary"
-            state={bookmarksActive ? 'active' : 'default'}
-            onClick={() => {
-              setBookmarksActive(!bookmarksActive)
-            }}
-            className="toggleBookmarks"
-          />
+              state={bookmarksActive ? 'active' : 'default'}
+              onClick={() => {
+                setBookmarksActive(!bookmarksActive)
+              }}
+              className="toggleBookmarks"
+            />
+          </ButtonGroup>
         </div>
       </header>
       <div className={`${styles.bookmarksContainer} ${bookmarksActive ? styles.bookmarksContainerActive : null}`}>
