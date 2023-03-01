@@ -1,37 +1,46 @@
 import React, { useState } from 'react'
 import { useFlexSearch } from 'react-use-flexsearch'
-import { graphql, useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery, navigate } from 'gatsby'
 import { useCombobox } from 'downshift'
+import * as styles from './SearchForm.module.scss'
 
 function DropdownCombobox({ value, setValue, inputItems }) {
-  const { isOpen, getToggleButtonProps, getLabelProps, getMenuProps, getInputProps, highlightedIndex, getItemProps, selectedItem, selectItem } =
-    useCombobox({
-      items: inputItems,
-      onInputValueChange: ({ inputValue }) => {
-        setValue(inputValue)
-      },
-    })
+  const { isOpen, getLabelProps, getMenuProps, getInputProps, highlightedIndex, getItemProps, selectedItem, selectItem } = useCombobox({
+    items: inputItems,
+    defaultInputValue: value,
+    onInputValueChange: ({ inputValue }) => {
+      setValue(inputValue)
+    },
+    onSelectedItemChange: ({ selectedItem }) => {
+      navigate(`/${selectedItem.unit}/${selectedItem.slug}`)
+    },
+    itemToString: (item) => {
+      if (item) {
+        return item.title
+      }
+      return ''
+    },
+  })
   return (
-    <div>
+    <div className={styles.container}>
       <label {...getLabelProps()}>Search:</label>
       <div>
-        <input {...getInputProps()} data-testid="combobox-input" />
-        <button aria-label="toggle menu" data-testid="combobox-toggle-button" {...getToggleButtonProps()}>
-          {isOpen ? <>&#8593;</> : <>&#8595;</>}
-        </button>
-        <button aria-label="toggle menu" data-testid="clear-button" onClick={() => selectItem(null)}>
-          &#10007;
+        <input
+          {...getInputProps({
+            onKeyDown: (event) => {},
+          })}
+          data-testid="combobox-input"
+        />
+        <button data-testid="clear-button" onClick={() => selectItem(null)}>
+          Clear
         </button>
       </div>
-      <ul {...getMenuProps()}>
-        {isOpen &&
+      <ul className={styles.choices} {...getMenuProps({})}>
+        {true &&
           inputItems.map((item, index) => (
             <li
-              style={{
-                padding: '4px',
-                backgroundColor: highlightedIndex === index ? '#bde4ff' : null,
-              }}
-              key={`${item}${index}`}
+              className={`${styles.choice} ${highlightedIndex === index ? styles.selected : ''}`}
+              key={`${item}.${index}`}
               {...getItemProps({
                 item,
                 index,
@@ -54,21 +63,12 @@ function SearchForm() {
       }
     }
   `)
-  const [query, setQuery] = useState('')
+  const [query, setQuery] = useState('a')
   const index = data.search.index
   const store = data.search.store
   const results = useFlexSearch(query, index, store)
 
-  return (
-    <>
-      <DropdownCombobox value={query} setValue={setQuery} inputItems={results} />
-      <ul>
-        {results.map((result) => (
-          <li>{JSON.stringify(result)}</li>
-        ))}
-      </ul>
-    </>
-  )
+  return <DropdownCombobox value={query} setValue={setQuery} inputItems={results.slice(0, 5)} />
 }
 
 export { SearchForm }

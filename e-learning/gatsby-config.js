@@ -96,7 +96,11 @@ module.exports = {
             allFile(filter: { extension: { eq: "mdx" }, name: { ne: "index" }, sourceInstanceName: { eq: "luContent" } }) {
               nodes {
                 id
+                relativeDirectory
                 childMdx {
+                  fields {
+                    slug
+                  }
                   frontmatter {
                     title
                   }
@@ -107,11 +111,13 @@ module.exports = {
         `,
         ref: 'id',
         index: ['title'],
-        store: ['id', 'title'],
+        store: ['id', 'title', 'slug', 'unit'],
         normalizer: ({ data }) =>
           data.allFile.nodes.map((node) => ({
             id: node.id,
+            slug: node.childMdx.fields.slug,
             title: node.childMdx.frontmatter.title,
+            unit: node.relativeDirectory,
           })),
       },
     },

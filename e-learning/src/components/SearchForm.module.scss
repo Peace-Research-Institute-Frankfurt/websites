@@ -1,0 +1,24 @@
+@import 'vars';
+
+.container {
+  position: relative;
+}
+
+.choices {
+  border: 1px solid red;
+  position: absolute;
+  list-style: none;
+  background: white;
+}
+
+.choice {
+  @extend %caption;
+  padding: 0.5em;
+  border-bottom: 1px solid var(--gray-30);
+}
+
+.selected {
+  background: var(--gray-20);
+  text-decoration: underline;
+  cursor: pointer;
+}
