@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
+import { SearchForm } from '../components/SearchForm'
 import Meta from '../components/Meta'
 import * as styles from './index.module.scss'
 
@@ -44,6 +45,7 @@ const IndexPage = ({ data }) => {
   return (
     <main className={styles.container}>
       <div className={styles.inner}>
+        <SearchForm />
         <h1>EUNPDC E-Learning</h1>
         <p className={styles.note}>
           Hi! This is a temporary index page intended for development purposes only. It will be replaced by{' '}
