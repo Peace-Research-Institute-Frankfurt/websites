@@ -5,6 +5,7 @@ import useLocalStorage from '@shared/hooks/useLocalStorage'
 
 import Button, { ButtonGroup } from './ButtonAdapter'
 import BookmarksList from './BookmarksList'
+import { SearchForm } from './SearchForm'
 import UnitChip from './UnitChip'
 import BookIcon from '../assets/icons/favicon.svg'
 import ArrowLeft from '../assets/icons/arrow-left.svg'
@@ -87,6 +88,7 @@ export default function StickyHeader({ post, unit, next, prev }) {
           <div style={{ width: `${scrollProgress * 100}%` }} className={styles.progressInner}></div>
         </div>
         <div className={styles.actions}>
+          <SearchForm />
           <nav className={styles.statusPagination}>
             {prev && (
               <Link className={styles.paginationLink} to={`../${prev.childMdx.fields.slug}`}>

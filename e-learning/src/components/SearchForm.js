@@ -23,20 +23,19 @@ function DropdownCombobox({ value, setValue, inputItems }) {
   })
   return (
     <div className={styles.container}>
-      <label {...getLabelProps()}>Search:</label>
-      <div>
-        <input
-          {...getInputProps({
-            onKeyDown: (event) => {},
-          })}
-          data-testid="combobox-input"
-        />
-        <button data-testid="clear-button" onClick={() => selectItem(null)}>
-          Clear
-        </button>
-      </div>
-      <ul className={styles.choices} {...getMenuProps({})}>
-        {true &&
+      <label htmlFor="search" {...getLabelProps()}>
+        Search:
+      </label>
+      <input
+        className={styles.input}
+        {...getInputProps({
+          onKeyDown: (event) => {},
+        })}
+        id="search"
+        data-testid="combobox-input"
+      />
+      <ul className={`${styles.choices} ${isOpen && inputItems.length > 0 ? styles.choicesActive : ''}`} {...getMenuProps({})}>
+        {isOpen &&
           inputItems.map((item, index) => (
             <li
               className={`${styles.choice} ${highlightedIndex === index ? styles.selected : ''}`}
@@ -63,7 +62,7 @@ function SearchForm() {
       }
     }
   `)
-  const [query, setQuery] = useState('a')
+  const [query, setQuery] = useState('')
   const index = data.search.index
   const store = data.search.store
   const results = useFlexSearch(query, index, store)
