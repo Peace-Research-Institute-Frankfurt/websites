@@ -37,7 +37,7 @@
     "remark-gfm": "^3.0.1",
     "retext": "^8.1.0",
     "retext-smartypants": "^5.2.0",
-    "sass": "^1.58.3",
+    "sass": "^1.59.2",
     "slug": "^8.2.2",
     "unist-util-visit": "^4.1.1",
     "validator": "^13.7.0"
