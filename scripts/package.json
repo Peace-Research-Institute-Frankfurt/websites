@@ -5,7 +5,7 @@
   "version": "0.0.1",
   "type": "module",
   "dependencies": {
-    "just-diff": "^5.2.0",
+    "just-diff": "^6.0.0",
     "luxon": "^3.3.0",
     "minimist": "^1.2.8",
     "puppeteer": "^19.7.2"
