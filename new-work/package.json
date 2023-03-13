@@ -48,7 +48,7 @@
     "eslint-import-resolver-alias": "^1.1.2",
     "form-data": "^4.0.0",
     "handlebars": "^4.7.7",
-    "mailgun.js": "^8.1.0",
+    "mailgun.js": "^8.2.1",
     "postmark": "^3.0.15",
     "webpack": "^5.75.0"
   }
