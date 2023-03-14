@@ -23,13 +23,13 @@
     "gatsby-plugin-mdx": "^5.7.0",
     "gatsby-plugin-netlify": "^5.1.0",
     "gatsby-plugin-remark-footnotes": "^0.0.1",
-    "gatsby-plugin-sass": "^6.4.0",
-    "gatsby-plugin-sharp": "^5.4.0",
-    "gatsby-remark-autolink-headers": "^6.4.0",
-    "gatsby-remark-smartypants": "^6.4.0",
+    "gatsby-plugin-sass": "^6.7.0",
+    "gatsby-plugin-sharp": "^5.7.0",
+    "gatsby-remark-autolink-headers": "^6.7.0",
+    "gatsby-remark-smartypants": "^6.7.0",
     "gatsby-source-filesystem": "^5.7.0",
-    "gatsby-transformer-json": "^5.4.0",
-    "gatsby-transformer-sharp": "^5.4.0",
+    "gatsby-transformer-json": "^5.7.0",
+    "gatsby-transformer-sharp": "^5.7.0",
     "mapbox-gl": "^2.12.1",
     "mdast-util-to-string": "^3.1.0",
     "react": "18.2.0",
@@ -47,7 +47,7 @@
   "devDependencies": {
     "chalk": "^5.2.0",
     "eslint-import-resolver-alias": "^1.1.2",
-    "luxon": "^3.2.1",
+    "luxon": "^3.3.0",
     "puppeteer": "^19.7.2"
   }
 }
