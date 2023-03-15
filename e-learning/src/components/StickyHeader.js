@@ -12,6 +12,7 @@ import ArrowRight from '../assets/icons/arrow-right.svg'
 import BookmarkOutline from '../assets/icons/bookmark-add.svg'
 import BookmarkFilled from '../assets/icons/bookmark-added.svg'
 import CloseIcon from '../assets/icons/close.svg'
+import TOCIcon from '../assets/icons/toc.svg'
 
 import * as styles from './StickyHeader.module.scss'
 
@@ -123,7 +124,7 @@ export default function StickyHeader({ post, unit, next, prev }) {
           </ButtonGroup>
         </div>
       </header>
-      <div className={`${styles.bookmarksContainer} ${bookmarksActive ? styles.bookmarksContainerActive : null}`}>
+      <div className={`${styles.bookmarksContainer} ${bookmarksActive ? styles.bookmarksContainerActive : ''}`}>
         <header className={styles.bookmarksHeader}>
           <span className={styles.bookmarksTitle}>Your bookmarks</span>
           <Button onClick={() => setBookmarksActive(false)} label="Close" priority="ghost" icon={<CloseIcon />} size="small" hideLabel={true} />

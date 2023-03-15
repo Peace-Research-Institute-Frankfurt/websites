@@ -19,10 +19,7 @@
   padding-right: 2em;
   &:hover,
   &:focus-visible {
-    background: var(--gray-10);
-    .title {
-      text-decoration: underline;
-    }
+    background: var(--gray-20);
   }
 }
 
@@ -45,7 +42,7 @@
 
 .remove {
   position: absolute;
-  top: 0.75rem;
+  top: 0.25rem;
   right: 0.75rem;
 }
 
