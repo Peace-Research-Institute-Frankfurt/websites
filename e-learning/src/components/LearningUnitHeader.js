@@ -6,7 +6,7 @@ import ArrowRight from '../assets/icons/arrow-right.svg'
 import MarkdownRenderer from 'react-markdown-renderer'
 import * as styles from './LearningUnitHeader.module.scss'
 
-export default function LearningUnitHeader({ image, order, title, intro, startLink, background }) {
+export default function LearningUnitHeader({ image, title, intro, startLink, background }) {
   const headerStyles = {
     '--background': background,
   }

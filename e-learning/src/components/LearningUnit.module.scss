@@ -188,3 +188,10 @@
     margin-top: 0;
   }
 }
+
+.cta {
+  border-radius: var(--br);
+  border: 1px solid var(--blue-70);
+  display: inline-flex;
+  padding: 0.5em 1.5em;
+}

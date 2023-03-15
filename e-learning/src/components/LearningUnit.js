@@ -8,6 +8,8 @@ import App from './App'
 import Meta from './Meta'
 import StickyHeader from './StickyHeader'
 import LearningUnitHeader from './LearningUnitHeader'
+import ArrowRight from '../assets/icons/arrow-right.svg'
+import * as ButtonStyles from './Button.module.scss'
 
 import * as styles from './LearningUnit.module.scss'
 
@@ -82,6 +84,7 @@ const LearningUnit = ({ data, children }) => {
   const authors = data.post.childMdx.frontmatter.authors
   const heroImage = getImage(frontmatter.hero_image)
   const [bookmarks, setBookmarks] = useLocalStorage('elearning-bookmarks', [])
+  const startLink = data.chapters.nodes[0].childMdx.fields.slug
 
   const bios = authors.map((author) => {
     const fm = author.frontmatter
@@ -125,7 +128,7 @@ const LearningUnit = ({ data, children }) => {
           order={frontmatter.order}
           image={{ src: heroImage, alt: frontmatter.hero_alt, caption: frontmatter.hero_caption, credit: frontmatter.hero_credit }}
           background={frontmatter.hero_background}
-          startLink={data.chapters.nodes[0].childMdx.fields.slug}
+          startLink={startLink}
         />
         <main className={styles.main}>
           <section className={styles.chapters}>
@@ -164,6 +167,16 @@ const LearningUnit = ({ data, children }) => {
                 statements on linked Internet sites. Therefore, HSFK cannot guarantee for the correctness and accuracy or any other aspect of third
                 party sites.
               </p>
+            </div>
+          </section>
+          <section>
+            <div className={styles.sectionContent}>
+              <Link to={startLink} className={`${ButtonStyles.container} ${ButtonStyles.primary}`}>
+                Start learning unit
+                <div className={ButtonStyles.icon}>
+                  <ArrowRight />
+                </div>
+              </Link>
             </div>
           </section>
         </main>
