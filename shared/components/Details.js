@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
-function DetailsGroup({ styles, children }) {
-  return <div className={styles.detailsGroup}>{children}</div>
+function DetailsGroup({ styles, numbered, children }) {
+  return <div className={`${styles.detailsGroup} ${numbered ? styles.numbered : ''}`}>{children}</div>
 }
 
 function Details({ styles, summary, children, open }) {

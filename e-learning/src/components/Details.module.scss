@@ -1,21 +1,23 @@
 @import 'vars';
 
 .container {
+  @extend %copy;
   border: $text-border;
   border-radius: var(--br);
-  margin-top: 1em;
-  margin-bottom: 1em;
+  margin: 0.5em 0;
   grid-column: 1/6;
   @include bp(m) {
     grid-column: 3/4;
   }
 }
 .summary {
-  @extend %copy;
-  font-weight: 500;
-  padding: 0.75rem;
-  padding-left: 1em;
+  padding: 0.5em;
+  padding-top: 0.6em;
+  padding-left: 0.65em;
   cursor: pointer;
+  [open] & {
+    padding-bottom: 0.1em;
+  }
   &:hover,
   &:focus-visible {
     .summary-text {
@@ -24,10 +26,14 @@
     }
   }
 }
+
+.summary-text {
+  @extend %h3;
+}
 .body {
-  padding: 1em;
+  padding: 0.75em;
   padding-top: 0;
-  :last-child {
+  &:last-child {
     margin-bottom: 0;
   }
 }
@@ -36,8 +42,8 @@
   border: $text-border;
   border-radius: var(--br);
   grid-column: 1/6;
-  margin-top: 1em;
-  margin-bottom: 1em;
+  margin: 0.5em 0;
+  counter-reset: li;
   @include bp(m) {
     grid-column: 3/4;
   }
@@ -49,6 +55,33 @@
     border-bottom: $text-border;
     &:last-of-type {
       border-bottom: 0;
+    }
+  }
+}
+
+.numbered {
+  .body {
+    padding-left: 2.4em;
+  }
+  .summary {
+    counter-increment: li;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    &:before {
+      content: counter(li);
+      color: var(--blue-10);
+      background: var(--blue-80);
+      display: inline-block;
+      font-family: var(--mono);
+      width: 1.6em;
+      height: 1.6em;
+      line-height: 1;
+      font-size: 0.8em;
+      border-radius: 1000px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
     }
   }
 }
