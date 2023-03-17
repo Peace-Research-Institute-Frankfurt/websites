@@ -105,6 +105,8 @@
     &:last-of-type {
       border-top-right-radius: var(--br);
       border-bottom-right-radius: var(--br);
+    }
+    & + .container {
       border-left: 0;
     }
   }
