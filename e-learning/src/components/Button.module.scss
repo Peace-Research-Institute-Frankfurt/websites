@@ -23,11 +23,12 @@
   }
 }
 .secondary {
-  background: var(--gray-20);
-  border: 1px solid var(--gray-20);
+  background: white;
+  border: 1px solid var(--gray-60);
   color: var(--blue-90);
   &:hover,
   &:focus-visible {
+    background: var(--gray-20);
     border: 1px solid var(--blue-90);
   }
 }
@@ -84,13 +85,17 @@
   background: var(--blue-80);
   border: 1px solid var(--blue-80);
   color: white;
+  &:hover,
+  &:focus-visible {
+    background: var(--blue-90);
+  }
 }
 
 .group {
   display: flex;
   overflow: hidden;
   flex-shrink: 0;
-  gap: 2px;
+  gap: 0;
   .container {
     border-radius: 0;
     &:first-of-type {
@@ -100,6 +105,7 @@
     &:last-of-type {
       border-top-right-radius: var(--br);
       border-bottom-right-radius: var(--br);
+      border-left: 0;
     }
   }
 }
