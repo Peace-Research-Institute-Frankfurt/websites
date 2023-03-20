@@ -1522,19 +1522,6 @@
         ]
       },
       {
-        "country": "NLD",
-        "events": [
-          {
-            "type": "signature",
-            "date": "1993-01-14"
-          },
-          {
-            "type": "ratification",
-            "date": "1995-06-30"
-          }
-        ]
-      },
-      {
         "country": "NZL",
         "events": [
           {
@@ -4376,19 +4363,6 @@
           {
             "type": "accession",
             "date": "2001-11-12"
-          }
-        ]
-      },
-      {
-        "country": "NLD",
-        "events": [
-          {
-            "type": "signature",
-            "date": "1981-04-10"
-          },
-          {
-            "type": "acceptance",
-            "date": "1987-06-18"
           }
         ]
       },
