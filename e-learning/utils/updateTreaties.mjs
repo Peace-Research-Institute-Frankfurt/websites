@@ -46,6 +46,7 @@ const nameSubs = {
   'United Republic of Tanzania': 'Tanzania',
   'Venezuela (Bolivarian Republic of)': 'Venezuela',
   'Viet Nam': 'Vietnam',
+  'Netherlands (Kingdom of the)': 'Netherlands',
 }
 
 const eventTypes = {
