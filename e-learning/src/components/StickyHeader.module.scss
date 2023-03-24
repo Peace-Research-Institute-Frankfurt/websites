@@ -39,7 +39,6 @@
   grid-column: 2 / 4;
   grid-row: 1 / 2;
   padding-left: 1em;
-  border: 1px solid red;
   max-width: calc(100% - 5rem);
 
   @include bp(m) {
