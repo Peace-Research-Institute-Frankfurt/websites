@@ -10,6 +10,7 @@
   cursor: pointer;
   gap: 0.25em;
   transition: var(--fast);
+  white-space: nowrap;
   justify-content: center;
   align-items: center;
 }

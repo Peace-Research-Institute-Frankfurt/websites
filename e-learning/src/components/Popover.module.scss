@@ -1,0 +1,53 @@
+@import 'vars';
+
+.container {
+  position: fixed;
+  transition: var(--fast);
+  right: var(--padding);
+  opacity: 0;
+  border: 1px solid rgba(black, 0.75);
+  border-radius: var(--br);
+  box-shadow: 0px 1px 3px rgba(black, 0.25);
+  width: Min(100vw - var(--padding) * 2, 25rem);
+  background-color: white;
+  z-index: 3000;
+  visibility: hidden;
+}
+
+.container-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.header {
+  @extend %caption;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--blue-80);
+  padding: 0.4em 0.75em;
+  padding-bottom: 0.2em;
+  button {
+    position: relative;
+    top: -0.05em;
+  }
+}
+
+.title {
+  line-height: 1;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  display: none;
+  font-size: 0;
+}
+
+.backdrop-active {
+  display: block;
+}

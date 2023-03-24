@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import { Spinner } from './Spinner'
 
-export default function Button({ onClick, label, icon, hideLabel, state, styles, priority, size, htmlType }) {
+const Button = forwardRef(function Button(props, ref) {
+  let { onClick, label, icon, hideLabel, state, styles, priority, size, htmlType } = props
+
   if (!styles) styles = {}
   if (!priority) priority = 'primary'
   if (!size) size = 'medium'
@@ -14,10 +16,13 @@ export default function Button({ onClick, label, icon, hideLabel, state, styles,
       }`}
       disabled={state === 'disabled'}
       onClick={onClick}
+      ref={ref}
     >
       <span className={styles.label}>{label}</span>
       {icon && <div className={styles.icon}>{icon}</div>}
       {state === 'loading' && <Spinner />}
     </button>
   )
-}
+})
+
+export default Button

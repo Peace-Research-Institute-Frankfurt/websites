@@ -1,5 +1,5 @@
 import { Link } from 'gatsby'
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import useScrollPosition from '@shared/hooks/useScrollPosition'
 import useLocalStorage from '@shared/hooks/useLocalStorage'
 
@@ -13,14 +13,19 @@ import BookmarkOutline from '../assets/icons/bookmark-add.svg'
 import BookmarkFilled from '../assets/icons/bookmark-added.svg'
 import CloseIcon from '../assets/icons/close.svg'
 import TOCIcon from '../assets/icons/toc.svg'
+import Popover from './Popover'
 
 import * as styles from './StickyHeader.module.scss'
 
-export default function StickyHeader({ post, unit, next, prev }) {
+export default function StickyHeader({ post, unit, next, chapters, prev }) {
   const scrollPosition = useScrollPosition()
   const [bookmarksActive, setBookmarksActive] = useState(false)
+  const [chaptersActive, setChaptersActive] = useState(false)
   const [bookmarks, setBookmarks] = useLocalStorage('elearning-bookmarks', [])
   const [faves, setFaves] = useState([])
+
+  const bookmarksTriggerRef = useRef(null)
+  const chaptersTriggerRef = useRef(null)
 
   let scrollProgress = 0
   let isScrolled = false
@@ -102,38 +107,63 @@ export default function StickyHeader({ post, unit, next, prev }) {
               </Link>
             )}
           </nav>
+
+          {chapters && (
+            <Button
+              ref={chaptersTriggerRef}
+              state={chaptersActive ? 'active' : 'default'}
+              priority="secondary"
+              label="Chapters"
+              onClick={() => {
+                setChaptersActive(!chaptersActive)
+              }}
+            />
+          )}
+
           <ButtonGroup>
             {post && (
               <Button
                 priority="secondary"
                 label={bookmarkIndex === -1 ? 'Add bookmark' : 'Remove bookmark'}
                 hideLabel={true}
-                onClick={toggleBookmark}
+                onClick={() => {
+                  toggleBookmark()
+                }}
                 icon={bookmarkIndex === -1 ? <BookmarkOutline /> : <BookmarkFilled />}
               ></Button>
             )}
             <Button
               label="Bookmarks"
+              ref={bookmarksTriggerRef}
               priority="secondary"
               state={bookmarksActive ? 'active' : 'default'}
+              className="toggleBookmarks"
               onClick={() => {
                 setBookmarksActive(!bookmarksActive)
               }}
-              className="toggleBookmarks"
             />
           </ButtonGroup>
         </div>
       </header>
-      <div className={`${styles.bookmarksContainer} ${bookmarksActive ? styles.bookmarksContainerActive : ''}`}>
-        <header className={styles.bookmarksHeader}>
-          <span className={styles.bookmarksTitle}>Your bookmarks</span>
-          <Button onClick={() => setBookmarksActive(false)} label="Close" priority="ghost" icon={<CloseIcon />} size="small" hideLabel={true} />
-        </header>
+      <Popover targetEl={bookmarksTriggerRef.current} isActive={bookmarksActive} setIsActive={setBookmarksActive} title="Your bookmarks">
         <BookmarksList bookmarks={faves} setBookmarks={setBookmarks} />
-      </div>
-      <button className={`${styles.backdrop} ${bookmarksActive && styles.backdropActive}`} onClick={() => setBookmarksActive(false)}>
-        Close Bookmarks
-      </button>
+      </Popover>
+
+      {chapters && (
+        <Popover targetEl={chaptersTriggerRef.current} isActive={chaptersActive} setIsActive={setChaptersActive} title="All chapters">
+          <ol className={styles.chapters}>
+            {chapters.map((c) => {
+              return (
+                <li className={styles.chaptersItem}>
+                  <Link className={styles.chaptersLink} to={`../${c.childMdx.fields.slug}`}>
+                    {c.childMdx.frontmatter.order + 1}. {c.childMdx.frontmatter.title}
+                  </Link>
+                </li>
+              )
+            })}
+          </ol>
+        </Popover>
+      )}
     </>
   )
 }
