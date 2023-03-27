@@ -18,7 +18,6 @@ const config = {
   },
   plugins: [
     'gatsby-plugin-image',
-    'gatsby-plugin-sitemap',
     'gatsby-transformer-json',
     'gatsby-transformer-sharp',
     'gatsby-plugin-netlify',
