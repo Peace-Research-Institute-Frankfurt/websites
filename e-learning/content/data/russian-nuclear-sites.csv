@@ -1,4 +1,4 @@
-Name,Lat,Long,ICBM Type or Variant of a Type,Description
+name,lat,long,variant,description
 Dombarovskiy,51°01’27.29”N,59°47’58.11”E,RS-20,ICBM Base for Silo Launchers of ICBMs
 Uzhur,55°16’05.74”N,89°44’50.15”E,RS-20,ICBM Base for Silo Launchers of ICBMs
 Kozel’sk,53°56’37.77”N,35°46’10.36”E,RS-18,ICBM Base for Silo Launchers of ICBMs
