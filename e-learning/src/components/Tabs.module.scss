@@ -8,6 +8,7 @@
 }
 
 .tab-content {
+  @extend %copy;
   padding: 1rem;
   border: $text-border;
   border-bottom-left-radius: var(--br);
