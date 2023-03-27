@@ -12,7 +12,7 @@ export default function FigureAdapter({ styles, caption, credit, size, alt, src,
           url
         }
       }
-      images: allFile(filter: { extension: { nin: ["mdx", "json", "mp3", "svg"] } }) {
+      images: allFile(filter: { extension: { nin: ["mdx", "json", "mp3", "svg", "csv", "md"] } }) {
         nodes {
           relativePath
           base
