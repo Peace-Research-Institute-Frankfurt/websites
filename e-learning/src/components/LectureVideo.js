@@ -6,7 +6,7 @@ export default function LectureVideo({ lu, vl, subtitles, poster, smil, provider
   let src = ''
   if (provider === 'video-stream') {
     src = `https://start.video-stream-hosting.de/player_videojs.html?serverip=62.113.210.7&serverapp=hsfk2-vod&autostart=0&smil=${smil}&bgimage=${poster}${
-      subtitles && `&untertitelDatei=${subtitles}&untertitelLand=en&untertitelAnzeige=English&untertitelAutoaktiv=0`
+      subtitles ? `&untertitelDatei=${subtitles}&untertitelLand=en&untertitelAnzeige=English&untertitelAutoaktiv=0` : ''
     }&nocookie=1`
   } else {
     src = `https://nonproliferation-elearning.eu/learningunits/video.php?lu=${lu}&vl=${vl}&sub`

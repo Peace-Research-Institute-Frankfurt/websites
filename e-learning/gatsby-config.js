@@ -26,6 +26,7 @@ module.exports = {
     'gatsby-plugin-image',
     'gatsby-transformer-sharp',
     'gatsby-transformer-json',
+    `gatsby-transformer-csv`,
     {
       resolve: 'gatsby-plugin-netlify',
       options: {

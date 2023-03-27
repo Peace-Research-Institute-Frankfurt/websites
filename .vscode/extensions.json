@@ -1,3 +1,3 @@
 {
-  "recommendations": ["EditorConfig.EditorConfig", "unifiedjs.vscode-mdx", "esbenp.prettier-vscode"]
+  "recommendations": ["EditorConfig.EditorConfig", "unifiedjs.vscode-mdx", "esbenp.prettier-vscode", "mechatroner.rainbow-csv"]
 }
