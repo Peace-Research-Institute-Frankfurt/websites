@@ -96,19 +96,20 @@
   display: flex;
   flex-shrink: 0;
   gap: 0;
-  button {
+  & > .container,
+  summary .container {
     border-radius: 0;
   }
-  & > * {
-    &:first-of-type {
-      border-top-left-radius: var(--br);
-      border-bottom-left-radius: var(--br);
-    }
-    &:last-of-type,
-    &:last-of-type button {
-      border-left: 0;
-      border-top-right-radius: var(--br);
-      border-bottom-right-radius: var(--br);
-    }
+  & > .container:first-of-type,
+  & > details:first-child summary .container {
+    border-top-left-radius: var(--br);
+    border-bottom-left-radius: var(--br);
+  }
+
+  & > .container:last-child,
+  & > details:last-child summary .container {
+    border-left: 0;
+    border-top-right-radius: var(--br);
+    border-bottom-right-radius: var(--br);
   }
 }
