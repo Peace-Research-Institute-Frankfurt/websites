@@ -108,17 +108,33 @@ export default function StickyHeader({ post, unit, next, chapters, prev }) {
             )}
           </nav>
 
-          {chapters && (
-            <Button
-              ref={chaptersTriggerRef}
-              state={chaptersActive ? 'active' : 'default'}
-              priority="secondary"
-              label="Chapters"
-              onClick={() => {
-                setChaptersActive(!chaptersActive)
-              }}
-            />
-          )}
+          <Popover
+            isActive={chaptersActive}
+            setIsActive={setChaptersActive}
+            title="All chapters"
+            trigger={
+              <Button
+                state={chaptersActive ? 'active' : 'default'}
+                priority="secondary"
+                label="Chapters"
+                onClick={() => {
+                  setChaptersActive(!chaptersActive)
+                }}
+              />
+            }
+          >
+            <ol className={styles.chapters}>
+              {chapters.map((c) => {
+                return (
+                  <li className={styles.chaptersItem}>
+                    <Link className={styles.chaptersLink} to={`../${c.childMdx.fields.slug}`}>
+                      {c.childMdx.frontmatter.order + 1}. {c.childMdx.frontmatter.title}
+                    </Link>
+                  </li>
+                )
+              })}
+            </ol>
+          </Popover>
 
           <ButtonGroup>
             {post && (
@@ -132,38 +148,27 @@ export default function StickyHeader({ post, unit, next, chapters, prev }) {
                 icon={bookmarkIndex === -1 ? <BookmarkOutline /> : <BookmarkFilled />}
               ></Button>
             )}
-            <Button
-              label="Bookmarks"
-              ref={bookmarksTriggerRef}
-              priority="secondary"
-              state={bookmarksActive ? 'active' : 'default'}
-              className="toggleBookmarks"
-              onClick={() => {
-                setBookmarksActive(!bookmarksActive)
-              }}
-            />
+            <Popover
+              isActive={bookmarksActive}
+              setIsActive={setBookmarksActive}
+              title="Your bookmarks"
+              trigger={
+                <Button
+                  label="Bookmarks"
+                  priority="secondary"
+                  state={bookmarksActive ? 'active' : 'default'}
+                  className="toggleBookmarks"
+                  onClick={() => {
+                    setBookmarksActive(!bookmarksActive)
+                  }}
+                />
+              }
+            >
+              <BookmarksList bookmarks={faves} setBookmarks={setBookmarks} />
+            </Popover>
           </ButtonGroup>
         </div>
       </header>
-      <Popover targetEl={bookmarksTriggerRef.current} isActive={bookmarksActive} setIsActive={setBookmarksActive} title="Your bookmarks">
-        <BookmarksList bookmarks={faves} setBookmarks={setBookmarks} />
-      </Popover>
-
-      {chapters && (
-        <Popover targetEl={chaptersTriggerRef.current} isActive={chaptersActive} setIsActive={setChaptersActive} title="All chapters">
-          <ol className={styles.chapters}>
-            {chapters.map((c) => {
-              return (
-                <li className={styles.chaptersItem}>
-                  <Link className={styles.chaptersLink} to={`../${c.childMdx.fields.slug}`}>
-                    {c.childMdx.frontmatter.order + 1}. {c.childMdx.frontmatter.title}
-                  </Link>
-                </li>
-              )
-            })}
-          </ol>
-        </Popover>
-      )}
     </>
   )
 }

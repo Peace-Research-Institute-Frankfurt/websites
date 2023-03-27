@@ -1,22 +1,30 @@
 @import 'vars';
 
 .container {
-  position: fixed;
+  position: relative;
+}
+
+.container-active .summary {
+  z-index: 2500;
+  position: relative;
+}
+
+.summary {
+  appearance: none;
+  display: block;
+}
+.content {
   transition: var(--fast);
   right: var(--padding);
-  opacity: 0;
   border: 1px solid rgba(black, 0.75);
   border-radius: var(--br);
   box-shadow: 0px 1px 3px rgba(black, 0.25);
   width: Min(100vw - var(--padding) * 2, 25rem);
   background-color: white;
   z-index: 3000;
-  visibility: hidden;
-}
-
-.container-active {
-  opacity: 1;
-  visibility: visible;
+  position: absolute;
+  right: 0;
+  top: calc(100% + 5px);
 }
 
 .header {
@@ -46,6 +54,7 @@
   width: 100%;
   display: none;
   font-size: 0;
+  z-index: 2000;
 }
 
 .backdrop-active {
