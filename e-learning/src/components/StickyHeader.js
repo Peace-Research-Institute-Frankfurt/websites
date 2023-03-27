@@ -103,41 +103,43 @@ export default function StickyHeader({ post, unit, next, chapters, prev }) {
             )}
           </nav>
 
-          <Popover
-            isActive={chaptersActive}
-            setIsActive={setChaptersActive}
-            title="All chapters"
-            trigger={
-              <Button
-                state={chaptersActive ? 'active' : 'default'}
-                priority="secondary"
-                label="Chapters"
-                onClick={() => {
-                  setChaptersActive(!chaptersActive)
-                }}
-              />
-            }
-          >
-            <ol className={styles.chapters}>
-              {chapters.map((c, i) => {
-                const bookmarkIndex = bookmarks.findIndex((el) => {
-                  return el.id === c.id
-                })
-                return (
-                  <li className={styles.chaptersItem}>
-                    <Link className={styles.chaptersLink} to={`../${c.childMdx.fields.slug}`}>
-                      {c.childMdx.frontmatter.order + 1}. {c.childMdx.frontmatter.title}
-                      {bookmarkIndex !== -1 && (
-                        <span className={styles.chaptersBookmarked}>
-                          <BookmarkFilled />
-                        </span>
-                      )}
-                    </Link>
-                  </li>
-                )
-              })}
-            </ol>
-          </Popover>
+          {chapters && (
+            <Popover
+              isActive={chaptersActive}
+              setIsActive={setChaptersActive}
+              title="All chapters"
+              trigger={
+                <Button
+                  state={chaptersActive ? 'active' : 'default'}
+                  priority="secondary"
+                  label="Chapters"
+                  onClick={() => {
+                    setChaptersActive(!chaptersActive)
+                  }}
+                />
+              }
+            >
+              <ol className={styles.chapters}>
+                {chapters.map((c, i) => {
+                  const bookmarkIndex = bookmarks.findIndex((el) => {
+                    return el.id === c.id
+                  })
+                  return (
+                    <li className={styles.chaptersItem}>
+                      <Link className={styles.chaptersLink} to={`../${c.childMdx.fields.slug}`}>
+                        {c.childMdx.frontmatter.order + 1}. {c.childMdx.frontmatter.title}
+                        {bookmarkIndex !== -1 && (
+                          <span className={styles.chaptersBookmarked}>
+                            <BookmarkFilled />
+                          </span>
+                        )}
+                      </Link>
+                    </li>
+                  )
+                })}
+              </ol>
+            </Popover>
+          )}
 
           <ButtonGroup>
             {post && (

@@ -100,6 +100,7 @@
   summary .container {
     border-radius: 0;
   }
+
   & > .container:first-of-type,
   & > details:first-child summary .container {
     border-top-left-radius: var(--br);
@@ -111,5 +112,10 @@
     border-left: 0;
     border-top-right-radius: var(--br);
     border-bottom-right-radius: var(--br);
+  }
+
+  & > .container:only-child,
+  & > details:only-child summary .container {
+    border-left: 1px solid var(--blue-80);
   }
 }
