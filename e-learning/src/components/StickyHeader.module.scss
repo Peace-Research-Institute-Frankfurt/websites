@@ -206,10 +206,22 @@
 .chapters-link {
   @extend %h3;
   padding: 0.5em;
-  padding-right: 1em;
+  padding-bottom: 0.4em;
+  padding-right: 1.5em;
   display: block;
+  position: relative;
   &:hover,
   &:focus-visible {
     background: var(--gray-20);
+  }
+}
+
+.chaptersBookmarked {
+  position: absolute;
+  right: 1em;
+  display: block;
+  top: 0.2em;
+  svg {
+    width: 1em;
   }
 }

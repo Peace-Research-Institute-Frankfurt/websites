@@ -1,5 +1,5 @@
 import { Link } from 'gatsby'
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect } from 'react'
 import useScrollPosition from '@shared/hooks/useScrollPosition'
 import useLocalStorage from '@shared/hooks/useLocalStorage'
 
@@ -11,8 +11,6 @@ import ArrowLeft from '../assets/icons/arrow-left.svg'
 import ArrowRight from '../assets/icons/arrow-right.svg'
 import BookmarkOutline from '../assets/icons/bookmark-add.svg'
 import BookmarkFilled from '../assets/icons/bookmark-added.svg'
-import CloseIcon from '../assets/icons/close.svg'
-import TOCIcon from '../assets/icons/toc.svg'
 import Popover from './Popover'
 
 import * as styles from './StickyHeader.module.scss'
@@ -23,9 +21,6 @@ export default function StickyHeader({ post, unit, next, chapters, prev }) {
   const [chaptersActive, setChaptersActive] = useState(false)
   const [bookmarks, setBookmarks] = useLocalStorage('elearning-bookmarks', [])
   const [faves, setFaves] = useState([])
-
-  const bookmarksTriggerRef = useRef(null)
-  const chaptersTriggerRef = useRef(null)
 
   let scrollProgress = 0
   let isScrolled = false
@@ -124,11 +119,19 @@ export default function StickyHeader({ post, unit, next, chapters, prev }) {
             }
           >
             <ol className={styles.chapters}>
-              {chapters.map((c) => {
+              {chapters.map((c, i) => {
+                const bookmarkIndex = bookmarks.findIndex((el) => {
+                  return el.id === c.id
+                })
                 return (
                   <li className={styles.chaptersItem}>
                     <Link className={styles.chaptersLink} to={`../${c.childMdx.fields.slug}`}>
                       {c.childMdx.frontmatter.order + 1}. {c.childMdx.frontmatter.title}
+                      {bookmarkIndex !== -1 && (
+                        <span className={styles.chaptersBookmarked}>
+                          <BookmarkFilled />
+                        </span>
+                      )}
                     </Link>
                   </li>
                 )
