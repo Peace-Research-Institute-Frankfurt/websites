@@ -37,6 +37,7 @@ export const query = graphql`
     ) {
       nodes {
         name
+        id
         childMdx {
           fields {
             slug
@@ -77,7 +78,7 @@ const Chapter = ({ data, children }) => {
 
   return (
     <App>
-      <StickyHeader unit={data.unit} post={data.post} next={next} prev={prev} />
+      <StickyHeader unit={data.unit} post={data.post} next={next} prev={prev} chapters={data.chapters.nodes} />
       <article id="content">
         <header className={styles.header}>
           <div className={styles.headerCopy}>

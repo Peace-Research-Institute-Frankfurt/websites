@@ -11,14 +11,14 @@ import ArrowLeft from '../assets/icons/arrow-left.svg'
 import ArrowRight from '../assets/icons/arrow-right.svg'
 import BookmarkOutline from '../assets/icons/bookmark-add.svg'
 import BookmarkFilled from '../assets/icons/bookmark-added.svg'
-import CloseIcon from '../assets/icons/close.svg'
-import TOCIcon from '../assets/icons/toc.svg'
+import Popover from './Popover'
 
 import * as styles from './StickyHeader.module.scss'
 
-export default function StickyHeader({ post, unit, next, prev }) {
+export default function StickyHeader({ post, unit, next, chapters, prev }) {
   const scrollPosition = useScrollPosition()
   const [bookmarksActive, setBookmarksActive] = useState(false)
+  const [chaptersActive, setChaptersActive] = useState(false)
   const [bookmarks, setBookmarks] = useLocalStorage('elearning-bookmarks', [])
   const [faves, setFaves] = useState([])
 
@@ -102,38 +102,78 @@ export default function StickyHeader({ post, unit, next, prev }) {
               </Link>
             )}
           </nav>
+
+          {chapters && (
+            <Popover
+              isActive={chaptersActive}
+              setIsActive={setChaptersActive}
+              title="All chapters"
+              trigger={
+                <Button
+                  state={chaptersActive ? 'active' : 'default'}
+                  priority="secondary"
+                  label="Chapters"
+                  onClick={() => {
+                    setChaptersActive(!chaptersActive)
+                  }}
+                />
+              }
+            >
+              <ol className={styles.chapters}>
+                {chapters.map((c, i) => {
+                  const bookmarkIndex = bookmarks.findIndex((el) => {
+                    return el.id === c.id
+                  })
+                  return (
+                    <li className={styles.chaptersItem}>
+                      <Link className={styles.chaptersLink} to={`../${c.childMdx.fields.slug}`}>
+                        {c.childMdx.frontmatter.order + 1}. {c.childMdx.frontmatter.title}
+                        {bookmarkIndex !== -1 && (
+                          <span className={styles.chaptersBookmarked}>
+                            <BookmarkFilled />
+                          </span>
+                        )}
+                      </Link>
+                    </li>
+                  )
+                })}
+              </ol>
+            </Popover>
+          )}
+
           <ButtonGroup>
             {post && (
               <Button
                 priority="secondary"
                 label={bookmarkIndex === -1 ? 'Add bookmark' : 'Remove bookmark'}
                 hideLabel={true}
-                onClick={toggleBookmark}
+                onClick={() => {
+                  toggleBookmark()
+                }}
                 icon={bookmarkIndex === -1 ? <BookmarkOutline /> : <BookmarkFilled />}
               ></Button>
             )}
-            <Button
-              label="Bookmarks"
-              priority="secondary"
-              state={bookmarksActive ? 'active' : 'default'}
-              onClick={() => {
-                setBookmarksActive(!bookmarksActive)
-              }}
-              className="toggleBookmarks"
-            />
+            <Popover
+              isActive={bookmarksActive}
+              setIsActive={setBookmarksActive}
+              title="Your bookmarks"
+              trigger={
+                <Button
+                  label="Bookmarks"
+                  priority="secondary"
+                  state={bookmarksActive ? 'active' : 'default'}
+                  className="toggleBookmarks"
+                  onClick={() => {
+                    setBookmarksActive(!bookmarksActive)
+                  }}
+                />
+              }
+            >
+              <BookmarksList bookmarks={faves} setBookmarks={setBookmarks} />
+            </Popover>
           </ButtonGroup>
         </div>
       </header>
-      <div className={`${styles.bookmarksContainer} ${bookmarksActive ? styles.bookmarksContainerActive : ''}`}>
-        <header className={styles.bookmarksHeader}>
-          <span className={styles.bookmarksTitle}>Your bookmarks</span>
-          <Button onClick={() => setBookmarksActive(false)} label="Close" priority="ghost" icon={<CloseIcon />} size="small" hideLabel={true} />
-        </header>
-        <BookmarksList bookmarks={faves} setBookmarks={setBookmarks} />
-      </div>
-      <button className={`${styles.backdrop} ${bookmarksActive && styles.backdropActive}`} onClick={() => setBookmarksActive(false)}>
-        Close Bookmarks
-      </button>
     </>
   )
 }
