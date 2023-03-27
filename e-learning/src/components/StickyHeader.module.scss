@@ -218,10 +218,13 @@
 
 .chaptersBookmarked {
   position: absolute;
-  right: 1em;
+  right: 0.75em;
   display: block;
-  top: 0.2em;
+  top: 0.5em;
   svg {
     width: 1em;
+  }
+  path {
+    fill: var(--blue-70);
   }
 }
