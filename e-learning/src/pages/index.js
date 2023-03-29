@@ -49,7 +49,7 @@ const IndexPage = ({ data }) => {
           Hi! This is a temporary index page intended for development purposes only. It will be replaced by{' '}
           <a href="https://nonproliferation-elearning.eu/">nonproliferation-elearning.eu</a> in production.
         </p>
-        {process.env.NODE_ENV === 'development' && <ol className={styles.list}>{units}</ol>}
+        <ol className={styles.list}>{units}</ol>
       </div>
     </main>
   )
