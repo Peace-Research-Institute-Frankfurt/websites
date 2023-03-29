@@ -113,7 +113,7 @@ export default function StickyHeader({ post, unit, next, chapters, prev }) {
             <Popover
               isActive={chaptersActive}
               setIsActive={setChaptersActive}
-              title="All chapters"
+              title={<Link to="../">All chapters</Link>}
               trigger={
                 <Button
                   state={chaptersActive ? 'active' : 'default'}
