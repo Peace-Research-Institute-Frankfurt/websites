@@ -71,7 +71,7 @@ export const query = graphql`
           frontmatter {
             title
             intro
-            reading_time
+            order
           }
         }
       }
@@ -118,7 +118,7 @@ const LearningUnit = ({ data, children }) => {
 
   return (
     <App>
-      <StickyHeader bookmarks={bookmarks} setBookmarks={setBookmarks} unit={data.post} />
+      <StickyHeader chapters={data.chapters.nodes} bookmarks={bookmarks} setBookmarks={setBookmarks} unit={data.post} />
       <article className={styles.container} id="content">
         <LearningUnitHeader
           frontmatter={frontmatter}
