@@ -18,20 +18,22 @@
 
 .inner {
   @extend %caption;
-  display: block;
   text-decoration: none !important;
   color: var(--blue-80) !important;
   background: var(--blue-10);
   outline-offset: 2px;
   padding: 1em;
   margin: 1em 0;
-  border-top: 1px solid var(--blue-80);
+  border-radius: var(--br);
+  display: inline-block;
   @include bp(l) {
     padding: 1.5em;
   }
   @include bp(xl) {
     margin-top: 0;
+    display: block;
     border-radius: 0;
+    border-top: 1px solid var(--blue-80);
     position: absolute;
   }
   &:hover,
