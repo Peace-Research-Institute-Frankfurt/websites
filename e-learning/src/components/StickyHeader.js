@@ -69,7 +69,7 @@ export default function StickyHeader({ post, unit, next, chapters, prev }) {
   return (
     <>
       <header className={`${styles.container} ${isScrolled ? styles.containerActive : ''} ${post ? styles.hasPost : ''}`}>
-        {process.env.NODE_ENV === 'developmentt' ? (
+        {process.env.NODE_ENV === 'development' ? (
           <Link className={styles.home} to="/">
             <BookIcon />
             <span className={styles.homeLabel}>EUNPDC eLearning</span>
