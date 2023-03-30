@@ -23,6 +23,9 @@ export const query = graphql`
     post: file(id: { eq: $id }) {
       childMdx {
         body
+        fields {
+          slug
+        }
         frontmatter {
           title
           authors {

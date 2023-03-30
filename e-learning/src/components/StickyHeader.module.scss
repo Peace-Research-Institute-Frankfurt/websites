@@ -163,14 +163,13 @@
   align-items: center;
   position: relative;
   white-space: nowrap;
-  grid-column: 1/4;
+  grid-column: 1/3;
   grid-row: 1 / 2;
   text-underline-offset: 0.15em;
   padding-top: 0.2em;
   @include bp(m) {
     font-weight: 600;
     font-size: 1.05em;
-    grid-column: 1/3;
   }
   &:hover,
   &:focus-visible {
