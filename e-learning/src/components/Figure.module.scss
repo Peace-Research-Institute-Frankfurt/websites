@@ -12,8 +12,8 @@
   @extend %caption;
   padding-top: 0.75em;
   grid-column: 1 / 6;
+  margin-bottom: 1rem;
   @include bp(m) {
-    margin-bottom: 1rem;
     grid-column: 3 / 4;
   }
 }
@@ -23,7 +23,6 @@
 
 .container {
   margin-top: 0.5em;
-  margin-bottom: 1em;
   &:first-child {
     margin-top: 0;
   }
