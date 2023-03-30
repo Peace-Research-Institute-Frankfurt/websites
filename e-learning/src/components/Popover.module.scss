@@ -1,7 +1,9 @@
 @import 'vars';
 
 .container {
-  position: relative;
+  @include bp(m) {
+    position: relative;
+  }
 }
 
 .container-active .summary {
@@ -15,7 +17,6 @@
 }
 .content {
   transition: var(--fast);
-  right: var(--padding);
   border: 1px solid rgba(black, 0.75);
   border-radius: var(--br);
   box-shadow: 0px 1px 3px rgba(black, 0.125);
@@ -23,8 +24,13 @@
   background-color: white;
   z-index: 3000;
   position: absolute;
-  right: 0;
   top: calc(100% + 5px);
+  left: var(--padding);
+  right: 0;
+  @include bp(m) {
+    left: 0;
+    left: auto;
+  }
 }
 
 .header {
