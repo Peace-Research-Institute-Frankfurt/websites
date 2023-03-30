@@ -193,6 +193,7 @@
   mix-blend-mode: multiply;
   position: relative;
   grid-template-columns: 1fr 1fr;
+  max-width: 110rem;
   @include bp(m) {
     border: 1px solid var(--black);
   }
@@ -226,7 +227,7 @@
     padding: 1em;
   }
   @include bp(l) {
-    padding: 2em;
+    padding: 1.5em;
   }
   &:hover,
   &:focus-visible {
@@ -248,15 +249,13 @@
 .posts-title {
   font-size: var(--ms-4);
   line-height: 1;
-  display: inline;
   letter-spacing: -0.045em;
   font-weight: 700;
-  hyphens: auto;
+  hyphens: none;
   @include bp(s) {
     font-size: var(--ms-5);
   }
   @include bp(m) {
-    hyphens: none;
     line-height: 0.9;
   }
   @include bp(l) {
@@ -282,16 +281,16 @@
   display: inline-flex;
   position: relative;
   order: 3;
-  height: 2.75em;
   @include bp(m) {
-    bottom: 0.5em;
-    left: 0.5em;
-    height: 2em;
-    width: 2em;
+    right: 1em;
+    top: 0.65em;
+    position: absolute;
+  }
+  @include bp(l) {
+    top: 1em;
   }
   li {
     border: 0 !important;
-    position: absolute;
     @include bp(m) {
       bottom: -1.25em;
     }
@@ -306,6 +305,9 @@
   }
   @include bp(m) {
     width: 3.25rem;
+  }
+  @include bp(l) {
+    width: 4rem;
   }
 }
 
