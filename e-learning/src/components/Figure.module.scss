@@ -11,9 +11,9 @@
 .captions {
   @extend %caption;
   padding-top: 0.75em;
-  margin-bottom: 1rem;
   grid-column: 1 / 6;
   @include bp(m) {
+    margin-bottom: 1rem;
     grid-column: 3 / 4;
   }
 }

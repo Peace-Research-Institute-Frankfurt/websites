@@ -50,7 +50,7 @@
 }
 .intro {
   @extend %copy-large;
-  padding-top: 0.6em;
+  padding-top: 1em;
   @include bp(m) {
     padding-top: 0.85em;
   }
@@ -177,8 +177,8 @@
 .pagination-title {
   @extend %h1;
   display: block;
-  margin-bottom: 0.15em;
   line-height: 1.05;
+  margin-bottom: 0.15em;
   letter-spacing: 0;
   font-size: var(--ms-2);
   @include bp(m) {
