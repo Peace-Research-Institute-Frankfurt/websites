@@ -84,11 +84,11 @@
   a {
     text-decoration: underline;
     text-decoration-thickness: 1px;
-    text-decoration-color: var(--gray-dark);
+    text-decoration-style: dotted;
     text-underline-offset: 0.15em;
     &:hover,
     &:focus-visible {
-      text-decoration-color: var(--black);
+      text-decoration-style: solid;
     }
   }
   li {
@@ -155,11 +155,11 @@
   letter-spacing: 0.005em;
   a {
     text-decoration: underline;
-    text-decoration-color: var(--gray-dark);
+    text-decoration-style: dotted;
     text-underline-offset: 0.15em;
     &:hover,
     &:focus {
-      text-decoration-color: var(--gray-black);
+      text-decoration-style: solid;
     }
   }
 }

@@ -55,4 +55,7 @@
     left: 0;
     margin-right: -0.5rem;
   }
+  @include bp(l) {
+    width: 3.5;
+  }
 }

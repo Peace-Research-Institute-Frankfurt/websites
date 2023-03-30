@@ -195,7 +195,7 @@
   grid-template-columns: 1fr 1fr;
   max-width: 110rem;
   @include bp(m) {
-    border: 1px solid var(--black);
+    border: 2px solid var(--black);
   }
   li {
     display: flex;
@@ -203,9 +203,9 @@
     grid-column: span 2;
     @include bp(m) {
       grid-column: span 1;
-      border-bottom: 1px solid var(--black);
+      border-bottom: 2px solid var(--black);
       &:nth-child(2n-1) {
-        border-right: 1px solid var(--black);
+        border-right: 2px solid var(--black);
       }
     }
     &:last-child {
@@ -232,10 +232,6 @@
   &:hover,
   &:focus-visible {
     background-color: var(--gray-light);
-    .posts-title {
-      text-decoration: underline;
-      text-decoration-thickness: 1px;
-    }
   }
 }
 

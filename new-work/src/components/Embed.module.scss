@@ -6,7 +6,7 @@
 
 .consent {
   @extend %caption;
-  border: 1px solid var(--black);
+  border: 2px solid currentColor;
   border-radius: var(--br);
   padding: 1em;
 }

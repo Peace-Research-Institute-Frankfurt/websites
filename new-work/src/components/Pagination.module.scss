@@ -6,9 +6,10 @@
 
 .next {
   display: block;
-  border: 1px solid var(--next-color);
-  background-image: linear-gradient(to bottom, var(--next-color) 20%, transparent 90%);
+  border: 2px solid var(--next-color);
+  background-image: linear-gradient(to bottom, var(--next-color) 50%, transparent 100%);
   padding: 2em;
+  background-repeat: no-repeat;
   text-align: center;
   border-radius: var(--br);
   text-decoration: none !important;
@@ -17,7 +18,6 @@
     @extend %caption;
     display: inline-block;
     margin-bottom: 0.5em;
-    padding-bottom: 0.1em;
     border-bottom: 1px solid currentColor;
   }
   &:hover,
@@ -30,13 +30,13 @@
 
 .next-title {
   @extend %h2;
+  font-weight: 800;
+  display: block;
   @include bp(m) {
     font-size: var(--ms-6);
     line-height: 1;
     letter-spacing: -0.035em;
   }
-  font-weight: 800;
-  display: block;
 }
 
 .next-intro {
