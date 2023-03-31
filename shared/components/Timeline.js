@@ -25,7 +25,7 @@ function Event({ styles, date, title, collapsed, children }) {
     <li className={styles.event}>
       <div className={styles.eventDescription}>
         <div className={styles.eventHeader}>
-          <div>
+          <div className={styles.eventHeaderCopy}>
             <span className={styles.eventDate}>{date}</span>
             <h3 className={styles.eventTitle}>{title}</h3>
           </div>
@@ -33,7 +33,7 @@ function Event({ styles, date, title, collapsed, children }) {
             {isCollapsed ? 'Expand' : 'Collapse'}
           </button>
         </div>
-        {!isCollapsed && <div>{children}</div>}
+        {!isCollapsed && <div className={styles.eventContent}>{children}</div>}
       </div>
     </li>
   )
