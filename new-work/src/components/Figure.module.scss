@@ -2,10 +2,8 @@
 
 .captions {
   @extend %caption;
-
   align-self: flex-start;
   text-align: left;
-  padding: 0 var(--padding);
   max-width: 36em;
   @include bp(m) {
     max-width: 55em;
@@ -17,6 +15,7 @@
 .credit {
   color: var(--gray-dark);
   display: block;
+  font-size: var(--ms--1);
 }
 
 .image {
@@ -52,19 +51,21 @@
 }
 
 .full {
-  grid-column: 1/4 !important;
-  display: flex;
-  text-align: center;
-  flex-flow: column;
-  align-items: center;
-  max-width: 100%;
+  display: contents;
+  & > div {
+    display: contents;
+  }
   .image {
+    grid-column: 1/4 !important;
     @include bp(m) {
-      margin-bottom: 1rem;
+      margin-top: calc(var(--ms-1) * 1.5);
     }
   }
-  @include bp(m) {
-    margin-top: calc(var(--ms-1) * 1.5);
-    margin-bottom: calc(var(--ms-1) * 1.5);
+  .captions {
+    margin-bottom: 1em;
+    grid-column: 2/3;
+    @include bp(m) {
+      margin-bottom: calc(var(--ms-1) * 1.5);
+    }
   }
 }
