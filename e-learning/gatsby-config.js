@@ -21,6 +21,9 @@ module.exports = {
     },
   },
   pathPrefix: `/lu`,
+  flags: {
+    FAST_DEV: true,
+  },
   plugins: [
     'gatsby-plugin-sass',
     'gatsby-plugin-image',
