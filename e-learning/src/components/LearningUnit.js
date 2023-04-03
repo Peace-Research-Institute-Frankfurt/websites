@@ -180,6 +180,7 @@ const LearningUnit = ({ data, children }) => {
                   <ArrowRight />
                 </div>
               </Link>
+              <Link to="./print">Print</Link>
             </div>
           </section>
         </main>

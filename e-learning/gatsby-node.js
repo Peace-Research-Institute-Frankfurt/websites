@@ -6,7 +6,7 @@ slug.extend({ '—': '-', '–': '-' })
 exports.createPages = async function ({ actions, graphql }) {
   const { data } = await graphql(`
     query {
-      chapters: allFile(filter: { extension: { eq: "mdx" }, name: { ne: "index" }, sourceInstanceName: { eq: "luContent" } }) {
+      chapters: allFile(filter: { extension: { eq: "mdx" }, name: { nin: ["index", "print"] }, sourceInstanceName: { eq: "luContent" } }) {
         nodes {
           id
           relativeDirectory
@@ -28,6 +28,17 @@ exports.createPages = async function ({ actions, graphql }) {
             fields {
               slug
             }
+            internal {
+              contentFilePath
+            }
+          }
+        }
+      }
+      printUnits: allFile(filter: { extension: { eq: "mdx" }, name: { eq: "print" }, sourceInstanceName: { eq: "luContent" } }) {
+        nodes {
+          id
+          relativeDirectory
+          childMdx {
             internal {
               contentFilePath
             }
@@ -68,6 +79,18 @@ exports.createPages = async function ({ actions, graphql }) {
     const template = require.resolve(`./src/components/LearningUnit.js`)
     actions.createPage({
       path: lu_id,
+      component: `${template}?__contentFilePath=${node.childMdx.internal.contentFilePath}`,
+      context: { id: id, lu_id: lu_id },
+    })
+  })
+
+  data.printUnits.nodes.forEach((node) => {
+    const id = node.id
+    const lu_id = node.relativeDirectory
+    const template = require.resolve(`./src/components/LearningUnitPrint.js`)
+    console.log(node)
+    actions.createPage({
+      path: `${lu_id}/print`,
       component: `${template}?__contentFilePath=${node.childMdx.internal.contentFilePath}`,
       context: { id: id, lu_id: lu_id },
     })

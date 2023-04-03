@@ -1,0 +1,11 @@
+@import 'vars';
+
+.chapter {
+  border-bottom: 1px solid red;
+  page-break-after: always;
+}
+
+.chapter-title {
+  font-size: 30pt;
+  font-family: var(--serif);
+}
