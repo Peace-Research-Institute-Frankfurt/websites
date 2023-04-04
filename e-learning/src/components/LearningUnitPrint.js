@@ -1,8 +1,6 @@
-import React, { useEffect, useRef } from 'react'
 import { graphql } from 'gatsby'
+import React from 'react'
 import PostBody from './PrintPostBody'
-import { Previewer } from 'pagedjs'
-import * as styles from './Print.module.scss'
 
 export const query = graphql`
   query ($id: String, $lu_id: String) {
@@ -41,18 +39,10 @@ export const query = graphql`
 `
 
 const LearningUnit = ({ data, children }) => {
-  const contentRef = useRef(null)
-  useEffect(() => {
-    console.log('Running pagedjs')
-    let paged = new Previewer()
-    let flow = paged.preview(contentRef.current || <div></div>, [], document.querySelector('#preview')).then((flow) => {
-      console.log('Rendered', flow.total, 'pages.')
-    })
-  }, [contentRef])
   return (
     <>
       <div id="preview"></div>
-      <article id="content" ref={contentRef}>
+      <article id="content">
         <header>
           <h1>The UN Disarmament Machinery</h1>
         </header>

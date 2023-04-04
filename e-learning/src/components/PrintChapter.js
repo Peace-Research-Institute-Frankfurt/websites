@@ -6,9 +6,9 @@ export default function Chapter({ title, intro, children }) {
     <section className={styles.chapter}>
       <header className={styles.chapterHeader}>
         <h2 className={styles.chapterTitle}>1. {title}</h2>
-        {intro && <p className={styles.chapterIntro}>{intro}</p>}
+        {intro !== 'undefined' && <p className={styles.chapterIntro}>{intro}</p>}
       </header>
-      <div className={styles.chapterContent}>{children}</div>
+      <div className="">{children}</div>
     </section>
   )
 }

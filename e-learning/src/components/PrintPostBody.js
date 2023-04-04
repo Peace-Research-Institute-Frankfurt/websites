@@ -4,7 +4,6 @@ import { MDXProvider } from '@mdx-js/react'
 import Button from './ButtonAdapter'
 import FigureAdapter from './FigureAdapter'
 import Institution from './Institution'
-import Map from './Map'
 import QuoteAdapter from './QuoteAdapter'
 import Resolution from './Resolution'
 import { Tab, Tabs } from './TabsAdapter'
@@ -52,7 +51,6 @@ const shortCodes = {
   ),
   DetailsGroup: ({ children }) => <>{children}</>,
   Callout: ({ ...props }) => <Callout {...props} buttonComponent={Button} styles={CalloutStyles} />,
-  Map,
 }
 
 const PostBody = ({ content }) => {
