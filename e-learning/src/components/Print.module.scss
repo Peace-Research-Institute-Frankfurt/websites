@@ -1,11 +1,46 @@
 @import 'vars';
 
 .chapter {
-  border-bottom: 1px solid red;
+  border-left: 1pt solid currentColor;
   page-break-after: always;
+  padding-left: 0.5em;
+  font-size: 10pt;
+}
+
+.chapter-header {
+  margin-bottom: 12pt;
+  padding-bottom: 10pc;
+  border-top: 1pt solid currentColor;
+  border-bottom: 1pt solid currentColor;
 }
 
 .chapter-title {
-  font-size: 30pt;
+  font-size: 24pt;
+  letter-spacing: -0.01em;
   font-family: var(--serif);
+}
+
+.chapter-intro {
+  // font-family: var(--serif);
+  font-size: 14pt;
+}
+
+.chapter-content {
+  columns: 2;
+  h2 {
+    font-weight: bold;
+  }
+  th,
+  td {
+    padding: 2pt 0;
+    padding-right: 1.5em;
+  }
+  th {
+    font-weight: bold;
+    text-align: left;
+    border-bottom: 2pt solid currentColor;
+  }
+  td {
+    border-bottom: 0.5pt solid currentColor;
+  }
 }

@@ -1,11 +1,14 @@
 import React from 'react'
 import * as styles from './Print.module.scss'
 
-export default function Chapter({ title, children }) {
+export default function Chapter({ title, intro, children }) {
   return (
     <section className={styles.chapter}>
-      <h2 className={styles.chapterTitle}>Chapter: {title}</h2>
-      {children}
+      <header className={styles.chapterHeader}>
+        <h2 className={styles.chapterTitle}>1. {title}</h2>
+        {intro && <p className={styles.chapterIntro}>{intro}</p>}
+      </header>
+      <div className={styles.chapterContent}>{children}</div>
     </section>
   )
 }
