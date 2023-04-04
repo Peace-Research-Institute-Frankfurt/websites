@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "[PRIF] EUNPDC Utilities",
+  "description": "Tools for working on the EUNPDC eLearning Project",
+  "version": "0.0.3",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{9b184054-1927-464e-bcc4-f3a5eae6bf53}"
+    }
+  },
+  "icons": {
+    "64": "icons/icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.nonproliferation-elearning.eu/*"],
+      "js": ["content_script.js"]
+    }
+  ]
+}
