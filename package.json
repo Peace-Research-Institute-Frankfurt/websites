@@ -4,7 +4,8 @@
     "new-work",
     "e-learning",
     "shared",
-    "scripts"
+    "scripts",
+    "e-learning-plugin"
   ],
   "overrides": {
     "json5": "^1.0.2",
