@@ -7,8 +7,8 @@ const fs = require('fs')
 const gm = require('gray-matter')
 const basePath = `../content/learning-units`
 
-// const units = fs.readdirSync(basePath)
-const units = ['lu-18']
+const units = fs.readdirSync(basePath)
+// const units = ['lu-18']
 units.forEach((unit) => {
   const chapters = fs.readdirSync(`${basePath}/${unit}`)
   let unitData = []
@@ -16,9 +16,7 @@ units.forEach((unit) => {
   chapters.forEach((chapter) => {
     if (chapter !== 'index.mdx' && chapter !== 'assets' && chapter !== '__print.mdx') {
       const chapterPath = `${basePath}/${unit}/${chapter}`
-      const content = fs.readFileSync(chapterPath)
-      console.log(`Parsing ${chapter}`)
-      const frontmatter = gm(content)
+      const frontmatter = gm.read(chapterPath)
       if (frontmatter.data.title) {
         unitData.push({
           filename: chapter,
@@ -48,5 +46,7 @@ ${unitData
   `
 
   // Write the output
+  console.log(`Writing print template for ${unit}...`)
   fs.writeFileSync(`${basePath}/${unit}/__print.mdx`, output)
 })
+console.log(`Done.`)

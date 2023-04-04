@@ -34,7 +34,7 @@ exports.createPages = async function ({ actions, graphql }) {
           }
         }
       }
-      printUnits: allFile(filter: { extension: { eq: "mdx" }, name: { eq: "print" }, sourceInstanceName: { eq: "luContent" } }) {
+      printUnits: allFile(filter: { extension: { eq: "mdx" }, name: { eq: "__print" }, sourceInstanceName: { eq: "luContent" } }) {
         nodes {
           id
           relativeDirectory
@@ -88,7 +88,6 @@ exports.createPages = async function ({ actions, graphql }) {
     const id = node.id
     const lu_id = node.relativeDirectory
     const template = require.resolve(`./src/components/LearningUnitPrint.js`)
-    console.log(node)
     actions.createPage({
       path: `${lu_id}/print`,
       component: `${template}?__contentFilePath=${node.childMdx.internal.contentFilePath}`,
