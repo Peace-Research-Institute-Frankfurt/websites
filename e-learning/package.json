@@ -48,6 +48,6 @@
     "eslint-import-resolver-alias": "^1.1.2",
     "just-diff": "^6.0.0",
     "luxon": "^3.3.0",
-    "puppeteer": "^19.8.3"
+    "puppeteer": "^19.8.5"
   }
 }
