@@ -26,6 +26,10 @@
   --ms-0: 10pt;
   --line-height: 12pt;
   --indent: 12pt;
+  --sans: 'Atlas', -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --serif: 'Publico', serif;
+  --mono: 'MDIO', serif;
 }
 
 .running {

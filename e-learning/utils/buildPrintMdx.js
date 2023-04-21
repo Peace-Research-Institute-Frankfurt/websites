@@ -1,7 +1,8 @@
 // This script generates a file called __print.mdx for each
 // unit, which simply imports all chapters and renders them.
-// This is a workaround to be able to transform multiple
-// MDX files into a single HTML page for printing them.
+// This is a workaround to be able to transform multiple MDX
+// files into a single HTML page for printing them.
+// If Gatsby adds support for doing that directly, this is obsolete.
 
 const fs = require('fs')
 const gm = require('gray-matter')

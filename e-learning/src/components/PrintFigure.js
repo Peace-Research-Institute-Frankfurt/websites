@@ -56,7 +56,7 @@ export default function FigureAdapter({ styles, caption, credit, size, alt, src,
 
   return (
     <figure>
-      <img src={image.publicURL} alt={alt} />
+      {image && image.publicURL ? <img src={image.publicURL} alt={alt} /> : <>IMAGE MISSING</>}
       <figcaption>{caption}</figcaption>
     </figure>
   )
