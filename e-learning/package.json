@@ -5,7 +5,7 @@
   "description": "eunpdc-next",
   "author": "Max Kohler",
   "scripts": {
-    "build": "gatsby build",
+    "build": "node ./utils/buildPrintMdx.js && gatsby build",
     "clean": "gatsby clean",
     "serve": "gatsby serve",
     "start": "gatsby develop"
