@@ -8,6 +8,6 @@
     "just-diff": "^6.0.0",
     "luxon": "^3.3.0",
     "minimist": "^1.2.8",
-    "puppeteer": "^19.7.2"
+    "puppeteer": "^19.8.3"
   }
 }
