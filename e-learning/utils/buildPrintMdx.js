@@ -5,7 +5,9 @@
 
 const fs = require('fs')
 const gm = require('gray-matter')
-const basePath = `../content/learning-units`
+const basePath = `./content/learning-units`
+
+console.log('Generating print templates... ')
 
 const units = fs.readdirSync(basePath)
 // const units = ['lu-18']
@@ -37,26 +39,24 @@ units.forEach((unit) => {
 
     // Generate output
     output = `import Chapter from '../../../src/components/PrintChapter.js'
+${unitData
+  .map((chapter, i) => {
+    return `import Chapter${i} from './${chapter.filename}'`
+  })
+  .join('\n')}
 
-  ${unitData
-    .map((chapter, i) => {
-      return `import Chapter${i} from './${chapter.filename}'`
-    })
-    .join('\n')}
-
-    ${unitData
-      .map((chapter, i) => {
-        return `
-        <Chapter title="${chapter.data.title}" intro="${chapter.data.intro}" order="${chapter.data.order}">
-        <Chapter${i} />
-        </Chapter>`
-      })
-      .join('\n')}
-      `
+${unitData
+  .map((chapter, i) => {
+    return `<Chapter title="${chapter.data.title}" intro="${chapter.data.intro}" order="${chapter.data.order}">
+  <Chapter${i} />
+</Chapter>`
+  })
+  .join('\n')}
+`
 
     // Write the output
     fs.writeFileSync(`${basePath}/${unit}/__print.mdx`, output)
-    console.log(`Wrote ${unit} print MDX`)
+    console.log(`Wrote ${unit}`)
   } else {
     console.log(`Skipped ${unit} (no chapters found)`)
   }
