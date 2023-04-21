@@ -1,6 +1,9 @@
 import { graphql } from 'gatsby'
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import PostBody from './PrintPostBody'
+import { Previewer } from 'pagedjs'
+import * as styles from './LearningUnitPrint.module.scss'
+import './paged.scss'
 
 export const query = graphql`
   query ($id: String, $lu_id: String) {
@@ -39,17 +42,26 @@ export const query = graphql`
 `
 
 const LearningUnit = ({ data, children }) => {
+  const containerRef = useRef()
+  const previewRef = useRef()
+  useEffect(() => {
+    let paged = new Previewer()
+    let flow = paged.preview(containerRef.current.innerHTML, ['/print.css'], previewRef.current).then((flow) => {
+      console.log('Rendered', flow.total, 'pages.')
+    })
+  }, [])
+
   return (
     <>
-      <div id="preview"></div>
-      <article id="content">
-        <header>
-          <h1>The UN Disarmament Machinery</h1>
-        </header>
+      <div className={styles.preview} ref={previewRef}></div>
+      <div className={styles.container} ref={containerRef}>
         <PostBody content={children} />
-      </article>
+        <div className="running">
+          <span className="title">EUNPDC eLearning</span>
+          <span className="date">01. January 1999</span>
+        </div>
+      </div>
     </>
   )
 }
-
 export default LearningUnit

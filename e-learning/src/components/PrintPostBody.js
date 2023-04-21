@@ -30,7 +30,12 @@ const shortCodes = {
   Tab,
   Tabs,
   Related,
-  Quote: ({ ...props }) => <QuoteAdapter {...props} styles={QuoteStyles} />,
+  Quote: ({ children, cite }) => (
+    <blockquote>
+      {children}
+      <cite>{cite}</cite>
+    </blockquote>
+  ),
   Term: ({ t, children }) => <em>{t || children}</em>,
   Figure: ({ ...props }) => <FigureAdapter styles={FigureStyles} {...props} />,
   LectureVideo: ({ children }) => <aside>{children}</aside>,
@@ -39,7 +44,7 @@ const shortCodes = {
   FlipCards: ({ children }) => <ul>{children}</ul>,
   Card: ({ front, children }) => (
     <li>
-      <span>{front}</span>
+      <em>{front}</em>
       {children}
     </li>
   ),

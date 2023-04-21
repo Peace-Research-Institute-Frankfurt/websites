@@ -26,6 +26,13 @@ units.forEach((unit) => {
     }
   })
 
+  // Sort files by "order" frontmatter parameter
+  unitData.sort((a, b) => {
+    if (a.data.order > b.data.order) return 1
+    if (a.data.order < b.data.order) return -1
+    return 0
+  })
+
   // Generate output
   output = `import Chapter from '../../../src/components/PrintChapter.js'
 
@@ -38,7 +45,7 @@ ${unitData
 ${unitData
   .map((chapter, i) => {
     return `
-<Chapter title="${chapter.data.title}" intro="${chapter.data.intro}">
+<Chapter title="${chapter.data.title}" intro="${chapter.data.intro}" order="${chapter.data.order}">
   <Chapter${i} />
 </Chapter>`
   })

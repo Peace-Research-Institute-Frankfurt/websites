@@ -1,0 +1,106 @@
+@page {
+  size: A4;
+  margin: 48pt;
+  @top-left {
+    content: 'RUNNING HEADER';
+    font-size: 8pt;
+    align-items: flex-start;
+    padding-top: 27pt;
+  }
+  @bottom-left {
+    content: counter(page);
+    font-size: 8pt;
+  }
+}
+
+.running {
+  position: running(titleRunning);
+  gap: 10rem;
+  font-size: 10pt;
+  display: flex;
+  align-items: center;
+  font-family: var(--helvetica);
+  transform-origin: center;
+  padding: 0.1em 0.5em;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  width: 250mm;
+  text-align: center;
+}
+
+.chapter {
+  font-size: 10pt;
+  line-height: 12pt;
+  break-before: page;
+}
+
+.chapterHeader {
+  padding-bottom: 36pt;
+  border-top: 1pt solid currentColor;
+  border-bottom: 1pt solid currentColor;
+  padding-top: 2pt;
+  margin-bottom: 13pt;
+}
+
+.chapterTitle {
+  font-size: 22pt;
+  line-height: 24pt;
+  letter-spacing: -0.01em;
+  font-family: var(--serif);
+}
+
+.chapterIntro {
+  font-size: 15pt;
+  line-height: 24pt;
+  margin-top: -6pt;
+}
+
+.chapterContent {
+  columns: 2;
+  column-gap: 16pt;
+  column-rule: 1pt solid currentColor;
+  hyphens: auto;
+}
+h2 {
+  font-weight: bold;
+  font-size: 12pt;
+  line-height: 12pt;
+  font-family: sans-serif;
+  margin-top: 12pt;
+  margin-bottom: 13pt;
+}
+h2:first-child {
+  margin-top: 0;
+}
+
+.chapterContent h3 {
+  font-weight: bold;
+  font-size: 10.5pt;
+  margin-top: 12pt;
+}
+.chapterContent p + p {
+  text-indent: 12pt;
+}
+table {
+  font-size: 8pt;
+  border: 1pt solid currentColor;
+  column-span: all;
+  margin: 1em 0;
+}
+td,
+th {
+  padding: 0.5pt 2pt;
+  padding-right: 1.5em;
+  border: 1pt solid currentColor;
+}
+th {
+  font-weight: bold;
+  text-align: left;
+  border-bottom: 2pt solid currentColor;
+}
+td {
+  border-bottom: 0.5pt solid currentColor;
+}
+figcaption {
+  font-size: 7pt;
+}
