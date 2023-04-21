@@ -2,19 +2,14 @@ import React from 'react'
 import { MDXProvider } from '@mdx-js/react'
 
 import Button from './ButtonAdapter'
-import FigureAdapter from './FigureAdapter'
+import PrintFigure from './PrintFigure'
 import Institution from './Institution'
-import QuoteAdapter from './QuoteAdapter'
 import Resolution from './Resolution'
-import { Tab, Tabs } from './TabsAdapter'
 import Treaty from './Treaty'
-import Related from './Related'
 import Callout from '@shared/components/Callout'
 import { Event, Timeline } from '@shared/components/Timeline'
 
 import * as CalloutStyles from './Callout.module.scss'
-import * as FigureStyles from './Figure.module.scss'
-import * as QuoteStyles from './Quote.module.scss'
 import * as TimelineStyles from './Timeline.module.scss'
 
 const shortCodes = {
@@ -27,9 +22,9 @@ const shortCodes = {
   Resolution,
   Treaty,
   Institution,
-  Tab,
-  Tabs,
-  Related,
+  Tab: () => <>TAB</>,
+  Tabs: () => <>TABS</>,
+  Related: () => <></>,
   Quote: ({ children, cite }) => (
     <blockquote>
       {children}
@@ -37,7 +32,7 @@ const shortCodes = {
     </blockquote>
   ),
   Term: ({ t, children }) => <em>{t || children}</em>,
-  Figure: ({ ...props }) => <FigureAdapter styles={FigureStyles} {...props} />,
+  Figure: ({ ...props }) => <PrintFigure {...props} />,
   LectureVideo: ({ children }) => <aside>{children}</aside>,
   Event: ({ ...props }) => <Event styles={TimelineStyles} {...props} />,
   Timeline: ({ ...props }) => <Timeline styles={TimelineStyles} {...props} />,

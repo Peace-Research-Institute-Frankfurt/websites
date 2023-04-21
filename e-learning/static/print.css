@@ -1,16 +1,31 @@
 @page {
   size: A4;
   margin: 48pt;
+  margin-top: 36pt;
   @top-left {
-    content: 'RUNNING HEADER';
+    content: string(runningTitle);
     font-size: 8pt;
     align-items: flex-start;
-    padding-top: 27pt;
+    padding-top: 20pt;
+    font-weight: bold;
+  }
+  @top-right {
+    content: 'EUNPDC eLearning';
+    font-size: 8pt;
+    font-weight: bold;
+    align-items: flex-start;
+    padding-top: 20pt;
   }
   @bottom-left {
     content: counter(page);
     font-size: 8pt;
   }
+}
+
+:root {
+  --ms-0: 10pt;
+  --line-height: 12pt;
+  --indent: 12pt;
 }
 
 .running {
@@ -35,29 +50,29 @@
 }
 
 .chapterHeader {
-  padding-bottom: 36pt;
-  border-top: 1pt solid currentColor;
+  padding-bottom: 24pt;
+  border-top: 2pt solid currentColor;
   border-bottom: 1pt solid currentColor;
-  padding-top: 2pt;
-  margin-bottom: 13pt;
 }
 
 .chapterTitle {
-  font-size: 22pt;
+  font-size: 23pt;
   line-height: 24pt;
   letter-spacing: -0.01em;
   font-family: var(--serif);
+  string-set: runningTitle content(text);
 }
 
 .chapterIntro {
   font-size: 15pt;
-  line-height: 24pt;
+  line-height: calc(var(--line-height) * 1.5);
   margin-top: -6pt;
 }
 
 .chapterContent {
   columns: 2;
   column-gap: 16pt;
+  padding-top: var(--line-height);
   column-rule: 1pt solid currentColor;
   hyphens: auto;
 }
@@ -66,21 +81,69 @@ h2 {
   font-size: 12pt;
   line-height: 12pt;
   font-family: sans-serif;
-  margin-top: 12pt;
+  margin-top: 10.5pt;
   margin-bottom: 13pt;
 }
 h2:first-child {
   margin-top: 0;
 }
 
+img {
+  max-width: 100%;
+  display: block;
+  margin-bottom: 2pt;
+}
+
+figcaption {
+  font-size: 6.5pt;
+}
+
+.unitTitle {
+  font-size: 36pt;
+  font-family: var(--serif);
+}
+.unitIntro {
+  font-size: 18pt;
+}
+
 .chapterContent h3 {
   font-weight: bold;
-  font-size: 10.5pt;
+  font-size: 9pt;
   margin-top: 12pt;
 }
 .chapterContent p + p {
-  text-indent: 12pt;
+  text-indent: var(--indent);
 }
+
+.chapterContent .footnotes {
+  border-top: 0;
+  padding-top: var(--line-height);
+  margin-top: 0;
+  font-size: 6pt;
+  line-height: calc(var(--line-height) * 0.75);
+}
+.chapterContent .footnotes ol {
+  columns: 1;
+}
+
+ul,
+ol {
+  margin-left: var(--indent);
+}
+
+li {
+  margin-bottom: 0;
+  display: block;
+}
+
+sup {
+  position: absolute;
+  font-size: 6pt;
+}
+blockquote {
+  margin: 0;
+}
+
 table {
   font-size: 8pt;
   border: 1pt solid currentColor;
@@ -100,7 +163,4 @@ th {
 }
 td {
   border-bottom: 0.5pt solid currentColor;
-}
-figcaption {
-  font-size: 7pt;
 }

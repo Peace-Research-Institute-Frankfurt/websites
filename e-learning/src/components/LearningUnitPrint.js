@@ -1,5 +1,5 @@
 import { graphql } from 'gatsby'
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef } from 'react'
 import PostBody from './PrintPostBody'
 import { Previewer } from 'pagedjs'
 import * as styles from './LearningUnitPrint.module.scss'
@@ -15,6 +15,14 @@ export const query = graphql`
     post: file(id: { eq: $id }) {
       childMdx {
         body
+        fields {
+          slug
+        }
+        frontmatter {
+          title
+          intro
+          order
+        }
       }
     }
     chapters: allFile(
@@ -44,17 +52,25 @@ export const query = graphql`
 const LearningUnit = ({ data, children }) => {
   const containerRef = useRef()
   const previewRef = useRef()
+  const unit = data.post.childMdx.frontmatter
   useEffect(() => {
     let paged = new Previewer()
-    let flow = paged.preview(containerRef.current.innerHTML, ['/print.css'], previewRef.current).then((flow) => {
+    paged.preview(containerRef.current.innerHTML, ['/print.css'], previewRef.current).then((flow) => {
       console.log('Rendered', flow.total, 'pages.')
     })
   }, [])
 
   return (
     <>
-      <div className={styles.preview} ref={previewRef}></div>
+      <div ref={previewRef}></div>
       <div className={styles.container} ref={containerRef}>
+        <header>
+          <h1 className="unitTitle">Unit Title</h1>
+          <p className="unitIntro">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci voluptatum dignissimos illo ipsam porro? Deserunt libero ducimus illum
+            atque laudantium error nemo. Voluptatum aut nihil, ullam consectetur rerum ut inventore!
+          </p>
+        </header>
         <PostBody content={children} />
         <div className="running">
           <span className="title">EUNPDC eLearning</span>
