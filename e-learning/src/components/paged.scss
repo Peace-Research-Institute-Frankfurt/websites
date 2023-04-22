@@ -4,7 +4,7 @@
   --color-pageSheet: #363636;
   --color-pageBox: violet;
   --color-paper: white;
-  --color-marginBox: transparent;
+  --color-marginBox: rgb(149, 172, 247);
   --pagedjs-crop-color: black;
   --pagedjs-crop-shadow: white;
   --pagedjs-crop-stroke: 1px;
@@ -90,8 +90,8 @@
   /* uncomment this par to see the baseline : -------------------------------------------*/
 
   .pagedjs_pagebox {
-    --pagedjs-baseline: 12pt;
-    --pagedjs-baseline-position: 48pt;
+    --pagedjs-baseline: var(--baseline);
+    --pagedjs-baseline-position: 0;
     --pagedjs-baseline-color: rgb(207, 208, 241);
     background: linear-gradient(
         transparent 0%,

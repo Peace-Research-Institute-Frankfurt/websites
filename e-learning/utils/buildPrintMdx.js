@@ -19,6 +19,10 @@ units.forEach((unit) => {
 
   if (hasChapters) {
     chapters.forEach((chapter) => {
+      if (chapter === 'index.mdx') {
+        const chapterPath = `${basePath}/${unit}/${chapter}`
+        const frontmatter = gm.read(chapterPath)
+      }
       if (chapter !== 'index.mdx' && chapter !== 'assets' && chapter !== '__print.mdx') {
         const chapterPath = `${basePath}/${unit}/${chapter}`
         const frontmatter = gm.read(chapterPath)

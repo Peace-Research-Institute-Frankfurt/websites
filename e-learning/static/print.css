@@ -6,7 +6,7 @@
     content: string(runningTitle);
     font-size: 8pt;
     align-items: flex-start;
-    padding-top: 20pt;
+    padding-top: var(--baseline);
     font-weight: 500;
   }
   @top-right {
@@ -14,22 +14,35 @@
     font-size: 8pt;
     font-weight: 500;
     align-items: flex-start;
-    padding-top: 20pt;
+    padding-top: var(--baseline);
   }
   @bottom-left {
+    align-items: flex-start;
+    padding-top: var(--baseline);
     content: counter(page);
     font-size: 8pt;
   }
 }
 
+@page :first {
+  @bottom-left {
+    display: none;
+  }
+  @top-left {
+    display: none;
+  }
+  @top-right {
+    display: none;
+  }
+}
+
 :root {
-  --ms-0: 9.5pt;
+  --ms--1: 6.5pt;
+  --ms-0: 9pt;
   --line-height: 12pt;
+  --baseline: 12pt;
   --indent: 12pt;
-  --sans: 'Atlas', -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', sans-serif, 'Apple Color Emoji',
-    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  --serif: 'Publico', serif;
-  --mono: 'MDIO', serif;
+  --border-width: 0.5px;
 }
 
 .running {
@@ -47,50 +60,131 @@
   text-align: center;
 }
 
+.cover {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.coverEyebrow {
+  display: block;
+  line-height: var(--baseline);
+  margin-bottom: var(--baseline);
+}
+
+.unitTitle {
+  font-size: 36pt;
+  font-family: var(--serif);
+  line-height: calc(var(--baseline) * 3);
+  margin-bottom: var(--baseline);
+  letter-spacing: -0.01em;
+  word-spacing: -0.01em;
+}
+.unitIntro {
+  font-size: 18pt;
+}
+
+ul.unitAuthors {
+  margin: 0;
+  display: flex;
+}
+
+.coverAuthor {
+  display: block;
+  flex-basis: 50%;
+}
+.coverAbout {
+  margin-top: var(--baseline);
+  max-width: 45em;
+}
+.coverFunding {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: var(--baseline);
+  padding-bottom: 2pt;
+}
+
+.fundingLogo {
+  height: calc(var(--baseline) * 2);
+  width: auto;
+  display: block;
+}
+
+.authorBio {
+  font-size: var(--ms--1);
+  padding-top: 1em;
+  line-height: calc(var(--baseline) * 0.75);
+}
+.authorBio p + p {
+  text-indent: var(--indent);
+}
+
+.authorName {
+  display: block;
+  font-weight: 700;
+}
+
 .chapter {
   font-size: var(--ms-0);
-  line-height: 12pt;
+  line-height: var(--baseline);
+  letter-spacing: 0.001em;
   break-before: page;
 }
 
 .chapterHeader {
-  padding-bottom: 22pt;
-  border-top: 1pt solid currentColor;
-  border-bottom: 0.25pt solid currentColor;
-  padding-top: 2.5pt;
-  margin-top: -2pt;
-  margin-bottom: 2.5pt;
+  padding-bottom: calc(var(--baseline) * 1);
+  padding-top: calc(var(--baseline) * 1);
+  border-top: var(--border-width) solid currentColor;
+  border-bottom: var(--border-width) solid currentColor;
+  margin-bottom: calc(var(--baseline) * 0.6);
 }
 
 .chapterTitle {
-  font-size: 23pt;
-  line-height: 24pt;
+  font-size: 24pt;
+  line-height: calc(var(--baseline) * 2);
   letter-spacing: -0.01em;
+  margin-bottom: calc(var(--baseline) * 0.5);
   font-family: var(--serif);
   string-set: runningTitle content(text);
-  margin-bottom: 12pt;
 }
 
 .chapterIntro {
-  font-size: 15pt;
-  line-height: calc(var(--line-height) * 1.5);
-  margin-top: -6pt;
+  font-size: 18pt;
+  line-height: calc(var(--baseline) * 2);
 }
 
 .chapterContent {
   columns: 2;
-  column-gap: 16pt;
-  padding-top: var(--line-height);
-  column-rule: 0.25pt solid currentColor;
+  column-gap: 18pt;
+  column-rule: var(--border-width) solid currentColor;
   hyphens: auto;
+  margin-top: 4pt;
 }
-h2 {
+.chapterContent h2 {
   font-weight: 900;
-  font-size: 9.5pt;
-  line-height: 12pt;
-  font-family: sans-serif;
-  margin-top: 10.5pt;
+  font-size: var(--ms-0);
+  line-height: var(--baseline);
+  margin-top: var(--baseline);
+  break-after: avoid;
 }
+
+.chapterContent h3 {
+  font-weight: 500;
+  font-size: var(--ms-0);
+  text-transform: uppercase;
+  font-size: 7pt;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  margin-top: var(--baseline);
+  break-after: avoid;
+  break-inside: avoid;
+}
+
+.chapterContent p + p {
+  text-indent: var(--indent);
+}
+
 h2:first-child {
   margin-top: 0;
 }
@@ -110,23 +204,6 @@ figcaption {
   font-size: 6.5pt;
   padding-top: 2pt;
   line-height: 8pt;
-}
-
-.unitTitle {
-  font-size: 36pt;
-  font-family: var(--serif);
-}
-.unitIntro {
-  font-size: 18pt;
-}
-
-.chapterContent h3 {
-  font-weight: bold;
-  font-size: 9pt;
-  margin-top: 12pt;
-}
-.chapterContent p + p {
-  text-indent: var(--indent);
 }
 
 .chapterContent .footnotes {
@@ -164,7 +241,7 @@ blockquote {
 a {
   text-decoration: none !important;
   font-family: var(--mono);
-  text-decoration-thickness: 0.25pt !important;
+  text-decoration-thickness: var(--border-width) !important;
   text-decoration-style: solid !important;
 }
 
@@ -177,7 +254,7 @@ td,
 th {
   padding: 0.1pt 0;
   padding-right: 1em;
-  border-bottom: 0.25pt solid currentColor;
+  border-bottom: var(--border-width) solid currentColor;
 }
 th {
   font-weight: bold;

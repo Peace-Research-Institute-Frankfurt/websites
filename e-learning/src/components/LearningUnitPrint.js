@@ -2,31 +2,58 @@ import { graphql } from 'gatsby'
 import React, { useEffect, useRef } from 'react'
 import PostBody from './PrintPostBody'
 import { Previewer } from 'pagedjs'
+import MarkdownRenderer from 'react-markdown-renderer'
+import FundingLogo from '../assets/icons/funded-by-eu.svg'
 import * as styles from './LearningUnitPrint.module.scss'
 import './paged.scss'
 
 export const query = graphql`
-  query ($id: String, $lu_id: String) {
+  query ($lu_id: String) {
     site: site {
       siteMetadata {
         title
       }
     }
-    post: file(id: { eq: $id }) {
-      childMdx {
-        body
-        fields {
-          slug
-        }
-        frontmatter {
-          title
-          intro
-          order
+    post: allFile(filter: { name: { eq: "index" }, sourceInstanceName: { eq: "luContent" }, relativeDirectory: { eq: $lu_id } }) {
+      nodes {
+        childMdx {
+          body
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            intro
+            order
+            authors {
+              id
+              frontmatter {
+                name
+                author_id
+                institution
+                image {
+                  childImageSharp {
+                    gatsbyImageData(width: 250, placeholder: BLURRED)
+                  }
+                }
+              }
+              parent {
+                ... on Mdx {
+                  body
+                }
+              }
+            }
+          }
         }
       }
     }
     chapters: allFile(
-      filter: { extension: { eq: "mdx" }, name: { ne: "index" }, sourceInstanceName: { eq: "luContent" }, relativeDirectory: { eq: $lu_id } }
+      filter: {
+        extension: { eq: "mdx" }
+        name: { nin: ["index", "__print"] }
+        sourceInstanceName: { eq: "luContent" }
+        relativeDirectory: { eq: $lu_id }
+      }
       sort: { childMdx: { frontmatter: { order: ASC } } }
     ) {
       nodes {
@@ -52,7 +79,7 @@ export const query = graphql`
 const LearningUnit = ({ data, children }) => {
   const containerRef = useRef()
   const previewRef = useRef()
-  const unit = data.post.childMdx.frontmatter
+  const unit = data.post.nodes[0].childMdx.frontmatter
   useEffect(() => {
     let paged = new Previewer()
     paged.preview(containerRef.current.innerHTML, ['/print.css'], previewRef.current).then((flow) => {
@@ -64,12 +91,35 @@ const LearningUnit = ({ data, children }) => {
     <>
       <div ref={previewRef}></div>
       <div className={styles.container} ref={containerRef}>
-        <header>
-          <h1 className="unitTitle">Unit Title</h1>
-          <p className="unitIntro">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci voluptatum dignissimos illo ipsam porro? Deserunt libero ducimus illum
-            atque laudantium error nemo. Voluptatum aut nihil, ullam consectetur rerum ut inventore!
-          </p>
+        <header className="cover">
+          <section className="coverTitle">
+            <span className="coverEyebrow">{data.site.siteMetadata.title}</span>
+            <h1 className="unitTitle">{unit.title}</h1>
+            <p className="unitIntro">{unit.intro}</p>
+          </section>
+          <section className="coverMeta">
+            <ul className="unitAuthors">
+              {unit.authors.map((el, i) => {
+                return (
+                  <li key={`author-${el.id}`} className="coverAuthor">
+                    <span className="authorName">{el.frontmatter.name}</span>
+                    <span className="authorInstitution">{el.frontmatter.institution}</span>
+                    {/* <MarkdownRenderer className="authorBio" markdown={el.parent.body} /> */}
+                  </li>
+                )
+              })}
+            </ul>
+            <div className="coverAbout">
+              <p>
+                The EU Non-Proliferation and Disarmament eLearning Course aims to cover all aspects of the EU non-proliferation and disarmament
+                agenda. It's produced by PRIF with financial assistance of the European Union. The contents of individual learning units are the sole
+                responsibility of the respective authors and don't necessariy reflect the position of the European Union.
+              </p>
+            </div>
+            <div className="coverFunding">
+              <FundingLogo className="fundingLogo" />
+            </div>
+          </section>
         </header>
         <PostBody content={children} />
         <div className="running">

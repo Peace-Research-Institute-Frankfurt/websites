@@ -42,7 +42,6 @@ export default function SiteFooter() {
           the respective authors and don't necessariy reflect the position of the European Union.
         </p>
         <FundingLogo className={styles.funding} />
-
         <p className={styles.meta}>Built {data.meta.buildTime}</p>
       </div>
     </footer>
