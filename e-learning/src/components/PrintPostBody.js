@@ -31,7 +31,7 @@ const shortCodes = {
   ),
   Term: ({ t, children }) => <em>{t || children}</em>,
   Figure: ({ ...props }) => <PrintFigure {...props} />,
-  LectureVideo: ({ children }) => <aside>{children}</aside>,
+  LectureVideo: ({ children }) => <>{children}</>,
   Event: ({ date, title, children }) => (
     <li className="timelineEvent">
       <h4>

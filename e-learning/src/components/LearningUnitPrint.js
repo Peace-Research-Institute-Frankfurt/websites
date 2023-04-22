@@ -1,5 +1,5 @@
 import { graphql } from 'gatsby'
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import PostBody from './PrintPostBody'
 import { Previewer } from 'pagedjs'
 import FundingLogo from '../assets/icons/funded-by-eu.svg'
@@ -77,19 +77,26 @@ export const query = graphql`
 
 const LearningUnit = ({ data, children }) => {
   const containerRef = useRef()
+  const [timestamp, setTimestamp] = useState('test')
   const previewRef = useRef()
   const unit = data.post.nodes[0].childMdx.frontmatter
   useEffect(() => {
-    let paged = new Previewer()
-    paged.preview(containerRef.current.innerHTML, ['/print.css'], previewRef.current).then((flow) => {
-      console.log('Rendered', flow.total, 'pages.')
-    })
+    setTimestamp(new Date().toUTCString())
+    window.setTimeout(() => {
+      let paged = new Previewer()
+      paged.preview(containerRef.current.innerHTML, ['/print.css'], previewRef.current).then((flow) => {
+        console.log('Rendered', flow.total, 'pages.')
+      })
+    }, 500)
   }, [])
 
   return (
     <>
       <div ref={previewRef}></div>
       <div className={styles.container} ref={containerRef}>
+        <div className="runningFooter">
+          <span className="retrieved">Generated {timestamp}</span>
+        </div>
         <header className="cover">
           <section className="coverTitle">
             <span className="coverEyebrow">
@@ -122,10 +129,6 @@ const LearningUnit = ({ data, children }) => {
           </section>
         </header>
         <PostBody content={children} />
-        <div className="running">
-          <span className="title">EUNPDC eLearning</span>
-          <span className="date">01. January 1999</span>
-        </div>
       </div>
     </>
   )

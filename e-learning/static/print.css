@@ -1,27 +1,32 @@
 @page {
   size: A4;
   margin: 48pt;
-  margin-top: 36pt;
   @top-left {
     content: string(runningTitle);
     font-size: 8pt;
-    align-items: flex-start;
-    padding-top: var(--baseline);
+    align-items: flex-end;
+    padding-bottom: var(--baseline);
     font-weight: 500;
   }
   @top-right {
     content: 'EUNPDC eLearning';
     font-size: 8pt;
     font-weight: 500;
-    align-items: flex-start;
-    padding-top: var(--baseline);
+    align-items: flex-end;
+    padding-bottom: var(--baseline);
   }
   @bottom-left {
     align-items: flex-start;
     padding-top: var(--baseline);
     content: counter(page);
-    font-size: 8pt;
+    font-size: 7pt;
     font-family: var(--mono);
+  }
+  @bottom-right {
+    font-size: 7pt;
+    align-items: flex-start;
+    padding-top: var(--baseline);
+    content: element(runningFooter);
   }
 }
 
@@ -35,6 +40,9 @@
   @top-right {
     display: none;
   }
+  @bottom-right {
+    display: none;
+  }
 }
 
 :root {
@@ -46,19 +54,13 @@
   --border-width: 0.5px;
 }
 
-.running {
-  position: running(titleRunning);
-  gap: 10rem;
-  font-size: 10pt;
-  display: flex;
-  align-items: center;
-  font-family: var(--helvetica);
-  transform-origin: center;
-  padding: 0.1em 0.5em;
-  letter-spacing: -0.02em;
-  line-height: 1;
-  width: 250mm;
-  text-align: center;
+.runningFooter {
+  position: running(runningFooter);
+  font-family: var(--mono);
+  opacity: 0.5;
+}
+
+.retrieved {
 }
 
 .cover {
@@ -72,6 +74,7 @@
   display: block;
   line-height: var(--baseline);
   margin-bottom: var(--baseline);
+  font-family: var(--mono);
 }
 
 .unitTitle {
@@ -89,27 +92,30 @@
 ul.unitAuthors {
   margin: 0;
   display: flex;
+  gap: 24pt;
 }
 
 .coverAuthor {
   display: block;
-  flex-basis: 50%;
 }
 .coverAbout {
   margin-top: var(--baseline);
+  line-height: var(--baseline);
   max-width: 45em;
 }
 .coverFunding {
   display: flex;
   justify-content: flex-start;
   margin-top: var(--baseline);
-  padding-bottom: 2pt;
+  gap: 24pt;
 }
 
 .fundingLogo {
   height: calc(var(--baseline) * 2);
   width: auto;
   display: block;
+  position: relative;
+  top: -2pt;
 }
 
 .authorBio {
@@ -134,11 +140,11 @@ ul.unitAuthors {
 }
 
 .chapterHeader {
-  padding-bottom: calc(var(--baseline) * 0.5);
+  padding-bottom: calc(var(--baseline) * 1);
   padding-top: calc(var(--baseline) * 1);
   border-top: var(--border-width) solid currentColor;
   border-bottom: var(--border-width) solid currentColor;
-  margin-bottom: calc(var(--baseline) * 1);
+  margin-bottom: calc(var(--baseline) * 1.5);
 }
 
 .chapterTitle {
@@ -276,5 +282,5 @@ th {
 th {
   font-weight: bold;
   text-align: left;
-  border-bottom: 1pt solid currentColor;
+  border-bottom: var(--border-width) solid currentColor;
 }
