@@ -15,6 +15,7 @@ const express = require('express')
 
 const app = express()
 const port = 3000
+console.log(`\nGenerating Unit PDFS...`)
 
 // Find our which units we need to make PDFs for
 const basePath = `./content/learning-units`
@@ -30,7 +31,9 @@ units.forEach((unit) => {
   }
 })
 
-console.log(`Skipping ${skippedUnits.join(', ')} (no print template found)`)
+if (skippedUnits.length > 0) {
+  console.log(`Skipping ${skippedUnits.join(', ')} (no print template found)`)
+}
 
 app.use(express.static('public'))
 
@@ -40,7 +43,7 @@ var server = app.listen(port, function (err) {
 })
 
 ;(async () => {
-  const browser = await puppeteer.launch({ args: ['--no-sandbox'] })
+  const browser = await puppeteer.launch({ args: ['--no-sandbox', '--export-tagged-pdf'] })
   const page = await browser.newPage()
   for (let i = 0; i < printUnits.length; i++) {
     const unit = printUnits[i]
