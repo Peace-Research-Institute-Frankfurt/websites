@@ -178,14 +178,19 @@ const LearningUnit = ({ data, children }) => {
             </div>
           </section>
           <section>
-            <div className={styles.sectionContent}>
+            <div className={`${styles.sectionContent} ${styles.unitActions}`}>
               <Link to={startLink} className={`${ButtonStyles.container} ${ButtonStyles.primary}`}>
                 Start learning unit
                 <div className={ButtonStyles.icon}>
                   <ArrowRight />
                 </div>
               </Link>
-              <a href={`/static/eunpdc-${data.post.childMdx.fields.slug.replace(/\//g, '')}.pdf`}>Print</a>
+              <a
+                className={`${ButtonStyles.container} ${ButtonStyles.secondary}`}
+                href={`/static/eunpdc-${data.post.childMdx.fields.slug.replace(/\//g, '')}.pdf`}
+              >
+                Download PDF
+              </a>
             </div>
           </section>
         </main>

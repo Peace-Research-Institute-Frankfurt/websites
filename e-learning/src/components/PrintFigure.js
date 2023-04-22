@@ -1,6 +1,5 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
-import Figure from '@shared/components/Figure'
 
 export default function FigureAdapter({ styles, caption, credit, size, alt, src, license }) {
   const data = useStaticQuery(graphql`
@@ -57,7 +56,10 @@ export default function FigureAdapter({ styles, caption, credit, size, alt, src,
   return (
     <figure>
       {image && image.publicURL ? <img src={image.publicURL} alt={alt} /> : <>IMAGE MISSING</>}
-      <figcaption>{caption}</figcaption>
+      <figcaption>
+        {caption}
+        {licenseNode && <>{licenseNode.title}</>}
+      </figcaption>
     </figure>
   )
 }
