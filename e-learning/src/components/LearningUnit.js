@@ -60,7 +60,12 @@ export const query = graphql`
       }
     }
     chapters: allFile(
-      filter: { extension: { eq: "mdx" }, name: { ne: "index" }, sourceInstanceName: { eq: "luContent" }, relativeDirectory: { eq: $lu_id } }
+      filter: {
+        extension: { eq: "mdx" }
+        name: { nin: ["index", "__print"] }
+        sourceInstanceName: { eq: "luContent" }
+        relativeDirectory: { eq: $lu_id }
+      }
       sort: { childMdx: { frontmatter: { order: ASC } } }
     ) {
       nodes {
