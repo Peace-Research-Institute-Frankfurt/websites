@@ -7,10 +7,8 @@ import Institution from './Institution'
 import Resolution from './Resolution'
 import Treaty from './Treaty'
 import Callout from '@shared/components/Callout'
-import { Event, Timeline } from '@shared/components/Timeline'
 
 import * as CalloutStyles from './Callout.module.scss'
-import * as TimelineStyles from './Timeline.module.scss'
 
 const shortCodes = {
   Embed: () => <>EMBED HERE</>,
@@ -34,8 +32,15 @@ const shortCodes = {
   Term: ({ t, children }) => <em>{t || children}</em>,
   Figure: ({ ...props }) => <PrintFigure {...props} />,
   LectureVideo: ({ children }) => <aside>{children}</aside>,
-  Event: ({ ...props }) => <Event styles={TimelineStyles} {...props} />,
-  Timeline: ({ ...props }) => <Timeline styles={TimelineStyles} {...props} />,
+  Event: ({ date, title, children }) => (
+    <li className="timelineEvent">
+      <h4>
+        {date} {title}
+      </h4>
+      {children}
+    </li>
+  ),
+  Timeline: ({ ...props }) => <ol className="timeline" {...props} />,
   FlipCards: ({ children }) => <ul>{children}</ul>,
   Card: ({ front, children }) => (
     <li>

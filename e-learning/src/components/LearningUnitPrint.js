@@ -2,7 +2,6 @@ import { graphql } from 'gatsby'
 import React, { useEffect, useRef } from 'react'
 import PostBody from './PrintPostBody'
 import { Previewer } from 'pagedjs'
-import MarkdownRenderer from 'react-markdown-renderer'
 import FundingLogo from '../assets/icons/funded-by-eu.svg'
 import * as styles from './LearningUnitPrint.module.scss'
 import './paged.scss'
@@ -93,7 +92,9 @@ const LearningUnit = ({ data, children }) => {
       <div className={styles.container} ref={containerRef}>
         <header className="cover">
           <section className="coverTitle">
-            <span className="coverEyebrow">{data.site.siteMetadata.title}</span>
+            <span className="coverEyebrow">
+              {data.site.siteMetadata.title} / Unit {unit.order}
+            </span>
             <h1 className="unitTitle">{unit.title}</h1>
             <p className="unitIntro">{unit.intro}</p>
           </section>
@@ -104,7 +105,6 @@ const LearningUnit = ({ data, children }) => {
                   <li key={`author-${el.id}`} className="coverAuthor">
                     <span className="authorName">{el.frontmatter.name}</span>
                     <span className="authorInstitution">{el.frontmatter.institution}</span>
-                    {/* <MarkdownRenderer className="authorBio" markdown={el.parent.body} /> */}
                   </li>
                 )
               })}
