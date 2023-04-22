@@ -221,6 +221,7 @@ figcaption {
 
 .timeline li {
   margin-bottom: var(--baseline);
+  break-inside: avoid;
 }
 
 .chapterContent .footnotes {
