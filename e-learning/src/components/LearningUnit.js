@@ -180,7 +180,7 @@ const LearningUnit = ({ data, children }) => {
                   <ArrowRight />
                 </div>
               </Link>
-              <Link to="./print">Print</Link>
+              <a href={`/static/eunpdc-${data.post.childMdx.fields.slug.replace(/\//g, '')}.pdf`}>Print</a>
             </div>
           </section>
         </main>
