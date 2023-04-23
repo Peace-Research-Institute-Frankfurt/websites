@@ -35,7 +35,7 @@ const shortCodes = {
   Event: ({ date, title, children }) => (
     <li className="timelineEvent">
       <h4>
-        {date} {title}
+        {date} · {title}
       </h4>
       {children}
     </li>
@@ -44,7 +44,7 @@ const shortCodes = {
   FlipCards: ({ children }) => <ul>{children}</ul>,
   Card: ({ front, children }) => (
     <li>
-      <em>{front}</em>
+      <strong>{front}</strong>
       {children}
     </li>
   ),

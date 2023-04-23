@@ -250,20 +250,35 @@ figcaption {
   columns: 1;
 }
 
+.chapterContent > ul,
+.chapterContent > ol {
+  margin-top: var(--line-height);
+  margin-bottom: var(--line-height);
+}
+
+.chapterContent > ul:first-child,
+.chapterContent > ol:first-child {
+  margin-top: 0;
+}
+
 ul,
 ol {
-  margin: var(--line-height) 0;
-  margin-left: var(--indent);
+  margin-left: 1em;
 }
 
 li {
-  margin-bottom: 0;
+  margin-bottom: -1pt;
 }
 
 sup {
   position: absolute;
   font-size: 6pt;
 }
+
+strong {
+  font-weight: 600;
+}
+
 blockquote {
   margin: 0;
   padding-left: var(--indent);
