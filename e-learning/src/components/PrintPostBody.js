@@ -50,7 +50,7 @@ const shortCodes = {
     </li>
   ),
   Details: ({ summary, children }) => (
-    <aside>
+    <aside className="details">
       <h3>{summary}</h3>
       {children}
     </aside>

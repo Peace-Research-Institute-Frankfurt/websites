@@ -186,10 +186,15 @@ ul.unitAuthors {
   break-inside: avoid;
   font-weight: 800;
 }
+
+.chapterContent h3:first-child {
+  margin-top: 0;
+}
+
 .chapterContent h4 {
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  font-size: var(--ms--1);
+  font-size: 8pt;
   font-weight: 400;
 }
 
@@ -200,8 +205,12 @@ ul.unitAuthors {
 h2:first-child {
   margin-top: 0;
 }
-h3 + h4 {
-  margin-top: 0;
+h4 {
+  margin-top: var(--baseline);
+}
+h4 + ul,
+h4 + ol {
+  margin-top: 0 !important;
 }
 
 figure {
@@ -219,6 +228,10 @@ figcaption {
   font-size: var(--ms--1);
   line-height: 9pt;
   padding-top: 2pt;
+}
+
+.details {
+  margin-bottom: var(--baseline);
 }
 
 .caption {
@@ -243,7 +256,7 @@ figcaption {
   border-top: 0;
   padding-top: var(--line-height);
   margin-top: 0;
-  font-size: 6pt;
+  font-size: var(--ms--1);
   line-height: calc(var(--line-height) * 0.75);
 }
 .chapterContent .footnotes ol {
@@ -269,10 +282,14 @@ ol {
 li {
   margin-bottom: -1pt;
 }
+li:last-child {
+  margin-bottom: 0;
+}
 
 sup {
   position: absolute;
-  font-size: 6pt;
+  font-size: 6.5pt;
+  text-indent: 0;
 }
 
 strong {
@@ -303,6 +320,9 @@ a:after {
 
 a:after {
   content: ' [' attr(href) ']';
+}
+a[data-footnote-ref]:after {
+  content: '';
 }
 
 .callout {
