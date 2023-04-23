@@ -2,7 +2,7 @@
 // unit, which simply imports all chapters and renders them.
 // This is a workaround to be able to transform multiple MDX
 // files into a single HTML page for printing them.
-// If Gatsby adds support for doing that directly, this is obsolete.
+// See https://github.com/gatsbyjs/gatsby/discussions/37301
 
 const fs = require('fs')
 const gm = require('gray-matter')

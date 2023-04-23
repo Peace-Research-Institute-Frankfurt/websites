@@ -53,6 +53,7 @@
   --indent: 12pt;
   --border-width: 0.25px;
   --br: 2pt;
+  --padding: calc(var(--indent) * 0.5);
 }
 
 .runningFooter {
@@ -194,8 +195,8 @@ ul.unitAuthors {
 .chapterContent h4 {
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  font-size: 8pt;
-  font-weight: 400;
+  font-size: 7.5pt;
+  font-weight: 500;
 }
 
 .chapterContent p + p {
@@ -234,6 +235,9 @@ figcaption {
   margin-bottom: var(--baseline);
 }
 
+.eyebrow {
+  font-size: var(--ms--1);
+}
 .caption {
   font-weight: 600;
 }
@@ -302,6 +306,12 @@ blockquote {
   margin-top: var(--line-height);
   margin-bottom: var(--line-height);
 }
+
+blockquote strong {
+  background: var(--blue-30);
+  font-weight: normal;
+}
+
 a {
   text-decoration: none !important;
 }
@@ -327,7 +337,7 @@ a[data-footnote-ref]:after {
 
 .callout {
   border: var(--border-width) solid black;
-  padding: calc(var(--indent) * 0.5);
+  padding: var(--padding);
   border-radius: var(--br);
   margin-bottom: var(--line-height);
   margin-top: var(--line-height);
@@ -341,6 +351,34 @@ a[data-footnote-ref]:after {
   display: block;
   font-weight: normal;
   font-size: var(--ms--1);
+}
+
+.resolution {
+  break-inside: avoid;
+  border: var(--border-width) solid black;
+  border-top: 1.5pt solid black;
+  margin-top: -1.5pt;
+  padding: var(--padding);
+}
+
+.chipGroup {
+  display: flex;
+  font-size: var(--ms--1);
+  list-style: none;
+  margin-left: 0 !important;
+  margin-top: 6pt;
+}
+
+.chipGroup li {
+  display: inline-flex;
+  height: 10pt;
+  margin-right: 6pt;
+  align-items: center;
+}
+
+.resolution h2 {
+  margin-top: 0;
+  margin-bottom: var(--baseline);
 }
 
 table {

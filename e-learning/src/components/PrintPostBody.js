@@ -1,9 +1,10 @@
 import React from 'react'
 import { MDXProvider } from '@mdx-js/react'
 
+import Button from './ButtonAdapter'
 import PrintFigure from './PrintFigure'
 import Institution from './Institution'
-import Resolution from './Resolution'
+import Resolution from './PrintResolution'
 import Treaty from './Treaty'
 
 const shortCodes = {
