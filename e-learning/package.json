@@ -29,7 +29,7 @@
     "gatsby-transformer-csv": "^5.8.0",
     "gatsby-transformer-json": "^5.8.0",
     "gatsby-transformer-sharp": "^5.8.0",
-    "mapbox-gl": "^2.12.1",
+    "mapbox-gl": "^2.14.1",
     "mdast-util-to-string": "^3.2.0",
     "pagedjs": "^0.4.1",
     "react": "18.2.0",
@@ -52,6 +52,6 @@
     "just-diff": "^6.0.0",
     "luxon": "^3.3.0",
     "pdf-lib": "^1.17.1",
-    "puppeteer": "^19.8.3"
+    "puppeteer": "^19.9.1"
   }
 }
