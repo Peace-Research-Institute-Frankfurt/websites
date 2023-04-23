@@ -51,7 +51,8 @@
   --line-height: 12pt;
   --baseline: 12pt;
   --indent: 12pt;
-  --border-width: 0.5px;
+  --border-width: 0.25px;
+  --br: 2pt;
 }
 
 .runningFooter {
@@ -266,6 +267,18 @@ a {
   font-family: var(--mono);
   text-decoration-thickness: var(--border-width) !important;
   text-decoration-style: solid !important;
+}
+
+.callout {
+  border: var(--border-width) solid black;
+  padding: calc(var(--indent) * 0.5);
+  border-radius: var(--br);
+  margin-bottom: var(--line-height);
+  margin-top: var(--line-height);
+}
+
+.callout:first-child {
+  margin-top: 0;
 }
 
 table {

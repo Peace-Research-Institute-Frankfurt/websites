@@ -57,8 +57,11 @@ export default function FigureAdapter({ styles, caption, credit, size, alt, src,
     <figure>
       {image && image.publicURL ? <img src={image.publicURL} alt={alt} /> : <>IMAGE MISSING</>}
       <figcaption>
-        {caption}
-        {licenseNode && <>{licenseNode.title}</>}
+        <span className="caption">{caption}</span>
+        <span className="credit">
+          {caption && <>caption</>}
+          {licenseNode && <> ({licenseNode.title})</>}
+        </span>
       </figcaption>
     </figure>
   )

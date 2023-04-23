@@ -50,12 +50,12 @@ const shortCodes = {
   ),
   Details: ({ summary, children }) => (
     <aside>
-      <h3>{summary} </h3>
+      <h3>{summary}</h3>
       {children}
     </aside>
   ),
   DetailsGroup: ({ children }) => <>{children}</>,
-  Callout: ({ ...props }) => <Callout {...props} buttonComponent={Button} styles={CalloutStyles} />,
+  Callout: ({ ...props }) => <aside className="callout" {...props} />,
 }
 
 const PostBody = ({ content }) => {
