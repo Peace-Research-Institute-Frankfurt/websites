@@ -296,6 +296,8 @@ a:after {
   word-break: break-word;
   hyphens: auto;
   font-size: 0.9em;
+  line-height: calc(var(--baseline) * 0.9);
+  break-inside: avoid;
 }
 
 .callout {

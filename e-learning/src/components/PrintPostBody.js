@@ -26,7 +26,7 @@ const shortCodes = {
   Quote: ({ children, cite }) => (
     <blockquote>
       {children}
-      <cite>{cite}</cite>
+      {cite && <cite>{cite}</cite>}
     </blockquote>
   ),
   Term: ({ t, children }) => <em>{t || children}</em>,
@@ -35,7 +35,7 @@ const shortCodes = {
   Event: ({ date, title, children }) => (
     <li className="timelineEvent">
       <h4>
-        {date} · {title}
+        <strong>{date}</strong> · {title}
       </h4>
       {children}
     </li>
