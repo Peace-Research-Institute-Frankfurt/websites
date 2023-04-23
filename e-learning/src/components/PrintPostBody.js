@@ -1,17 +1,18 @@
 import React from 'react'
 import { MDXProvider } from '@mdx-js/react'
 
-import Button from './ButtonAdapter'
 import PrintFigure from './PrintFigure'
 import Institution from './Institution'
 import Resolution from './Resolution'
 import Treaty from './Treaty'
-import Callout from '@shared/components/Callout'
-
-import * as CalloutStyles from './Callout.module.scss'
 
 const shortCodes = {
-  Embed: () => <>EMBED HERE</>,
+  Embed: ({ src, caption }) => (
+    <aside className="callout">
+      View interactive component at <span className="url">{src}</span>
+      {caption && <span className="embedCaption">{caption}</span>}
+    </aside>
+  ),
   EmbedChoices: () => <></>,
   Quiz: () => <>QUIZ HERE</>,
   RadioChoice: () => <></>,

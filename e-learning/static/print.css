@@ -288,8 +288,9 @@ blockquote {
 a {
   text-decoration: none !important;
 }
+
+.url,
 a:after {
-  content: ' [' attr(href) ']';
   font-family: var(--mono);
   overflow-wrap: break-word;
   word-wrap: break-word;
@@ -298,6 +299,10 @@ a:after {
   font-size: 0.9em;
   line-height: calc(var(--baseline) * 0.9);
   break-inside: avoid;
+}
+
+a:after {
+  content: ' [' attr(href) ']';
 }
 
 .callout {
@@ -310,6 +315,12 @@ a:after {
 
 .callout:first-child {
   margin-top: 0;
+}
+
+.embedCaption {
+  display: block;
+  font-weight: normal;
+  font-size: var(--ms--1);
 }
 
 table {
