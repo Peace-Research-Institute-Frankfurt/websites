@@ -3,17 +3,15 @@
   margin: 60pt;
   @top-left {
     content: string(runningTitle);
-    font-size: 8pt;
+    font-size: 7pt;
     align-items: flex-end;
     padding-bottom: var(--baseline);
     font-weight: 500;
   }
   @top-right {
-    content: 'EUNPDC eLearning';
-    font-size: 8pt;
-    font-weight: 500;
-    align-items: flex-end;
+    content: element(runningHeaderRight);
     padding-bottom: var(--baseline);
+    align-items: flex-end;
   }
   @bottom-left {
     align-items: flex-start;
@@ -60,6 +58,11 @@
   position: running(runningFooter);
   font-family: var(--mono);
   opacity: 0.5;
+}
+.runningHeaderRight {
+  position: running(runningHeaderRight);
+  font-size: 7pt;
+  font-weight: 500;
 }
 
 .retrieved {
@@ -143,7 +146,7 @@ ul.unitAuthors {
 
 .chapterHeader {
   padding-bottom: calc(var(--baseline) * 1);
-  padding-top: calc(var(--baseline) * 1);
+  padding-top: calc(var(--baseline) * 1.1);
   border-top: var(--border-width) solid currentColor;
   border-bottom: var(--border-width) solid currentColor;
   margin-bottom: calc(var(--baseline) * 1.5);
@@ -161,7 +164,7 @@ ul.unitAuthors {
 
 .chapterIntro {
   font-size: 14pt;
-  letter-spacing: -0.005em;
+  letter-spacing: -0.0075em;
   line-height: calc(var(--baseline) * 1.5);
 }
 
@@ -195,7 +198,7 @@ ul.unitAuthors {
 .chapterContent h4 {
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  font-size: 7.5pt;
+  font-size: 7pt;
   font-weight: 500;
 }
 
@@ -378,6 +381,15 @@ a[data-footnote-ref]:after {
 
 .resolution h2 {
   margin-top: 0;
+  margin-bottom: var(--baseline);
+}
+
+ul.tabs {
+  margin-left: 0;
+}
+
+.tabs li {
+  display: block;
   margin-bottom: var(--baseline);
 }
 

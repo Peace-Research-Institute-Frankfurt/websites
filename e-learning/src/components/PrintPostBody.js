@@ -22,8 +22,13 @@ const shortCodes = {
   Resolution,
   Treaty,
   Institution,
-  Tab: () => <>TAB</>,
-  Tabs: () => <>TABS</>,
+  Tab: ({ title, children }) => (
+    <li>
+      <h3>{title}</h3>
+      {children}
+    </li>
+  ),
+  Tabs: ({ children }) => <ul className="tabs">{children}</ul>,
   Related: () => <></>,
   Quote: ({ children, cite }) => (
     <blockquote>

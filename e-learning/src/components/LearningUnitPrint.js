@@ -77,7 +77,7 @@ export const query = graphql`
 
 const LearningUnit = ({ data, children }) => {
   const containerRef = useRef()
-  const [timestamp, setTimestamp] = useState('test')
+  const [timestamp, setTimestamp] = useState('')
   const previewRef = useRef()
   const unit = data.post.nodes[0].childMdx.frontmatter
   useEffect(() => {
@@ -94,6 +94,9 @@ const LearningUnit = ({ data, children }) => {
     <>
       <div ref={previewRef}></div>
       <div className={styles.container} ref={containerRef}>
+        <div className="runningHeaderRight">
+          <span>EUNPDC eLearning / {unit.title}</span>
+        </div>
         <div className="runningFooter">
           <span className="retrieved">Generated {timestamp}</span>
         </div>
