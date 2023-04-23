@@ -1,6 +1,6 @@
 @page {
   size: A4;
-  margin: 48pt;
+  margin: 60pt;
   @top-left {
     content: string(runningTitle);
     font-size: 8pt;
@@ -217,8 +217,16 @@ img {
 
 figcaption {
   font-size: var(--ms--1);
-  padding-top: 2pt;
   line-height: 9pt;
+  padding-top: 2pt;
+}
+
+.caption {
+  font-weight: 600;
+}
+
+.credit {
+  display: block;
 }
 
 .timeline {
@@ -264,9 +272,15 @@ blockquote {
 }
 a {
   text-decoration: none !important;
+}
+a:after {
+  content: ' [' attr(href) ']';
   font-family: var(--mono);
-  text-decoration-thickness: var(--border-width) !important;
-  text-decoration-style: solid !important;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+  font-size: 0.9em;
 }
 
 .callout {
@@ -282,16 +296,26 @@ a {
 }
 
 table {
-  font-size: 7pt;
-  column-span: all;
-  margin: 1em 0;
+  font-size: 8pt;
+  margin: var(--baseline) 0;
 }
+
+table:first-child {
+  margin-top: 0;
+}
+
 td,
 th {
   padding: 0.1pt 0;
   padding-right: 1em;
+  vertical-align: top;
   border-bottom: var(--border-width) solid currentColor;
 }
+td:last-child,
+th:last-child {
+  padding-right: 0;
+}
+
 th {
   font-weight: bold;
   text-align: left;

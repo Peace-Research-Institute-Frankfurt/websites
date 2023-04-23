@@ -59,7 +59,7 @@ export default function FigureAdapter({ styles, caption, credit, size, alt, src,
       <figcaption>
         <span className="caption">{caption}</span>
         <span className="credit">
-          {caption && <>caption</>}
+          {credit && <>{credit}</>}
           {licenseNode && <> ({licenseNode.title})</>}
         </span>
       </figcaption>
