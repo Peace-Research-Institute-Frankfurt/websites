@@ -1,9 +1,9 @@
 import { graphql } from 'gatsby'
 import React, { useEffect, useRef, useState } from 'react'
 import PostBody from './PrintPostBody'
-import { Previewer } from 'pagedjs'
 import FundingLogo from '../assets/icons/funded-by-eu.svg'
 import * as styles from './LearningUnitPrint.module.scss'
+import { Previewer } from 'pagedjs'
 import './paged.scss'
 
 export const query = graphql`
@@ -11,6 +11,7 @@ export const query = graphql`
     site: site {
       siteMetadata {
         title
+        siteUrl
       }
     }
     post: allFile(filter: { name: { eq: "index" }, sourceInstanceName: { eq: "luContent" }, relativeDirectory: { eq: $lu_id } }) {
@@ -131,7 +132,7 @@ const LearningUnit = ({ data, children }) => {
             </div>
           </section>
         </header>
-        <PostBody content={children} />
+        <PostBody unit={data.post.nodes[0]} site={data.site} content={children} />
       </div>
     </>
   )
