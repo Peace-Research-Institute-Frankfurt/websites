@@ -80,7 +80,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'luContent',
-        path: `${__dirname}/content/learning-units`,
+        path: `${__dirname}/content/learning-units/`,
       },
     },
     {
