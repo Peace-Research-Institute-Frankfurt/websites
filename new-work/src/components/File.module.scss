@@ -2,15 +2,14 @@
 a.container {
   display: flex;
   justify-content: space-between;
-  background: var(--gray-light);
-  padding: 1rem;
+  padding: 1em;
   border-radius: var(--br);
   text-decoration: none !important;
-  border: 1px solid var(--gray-light);
   color: var(--black);
+  border: 2px solid var(--black);
   &:hover,
   &:focus-visible {
-    border: 1px solid var(--black);
+    background: var(--gray-light);
   }
   svg {
     width: 2.5rem;

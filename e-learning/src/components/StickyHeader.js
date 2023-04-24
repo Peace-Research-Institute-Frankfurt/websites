@@ -127,7 +127,7 @@ export default function StickyHeader({ post, unit, next, chapters, prev }) {
             >
               <ol>
                 {chapters.map((c, i) => {
-                  const bookmarkIndex = bookmarks.findIndex((el) => {
+                  const bookmarkIndex = faves.findIndex((el) => {
                     return el.id === c.id
                   })
                   return (
