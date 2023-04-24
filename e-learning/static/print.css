@@ -174,7 +174,8 @@ ul.unitAuthors {
   hyphens: auto;
   margin-top: 4pt;
 }
-.chapterContent h2 {
+.chapterContent h2,
+.termsContainer h2 {
   font-weight: 900;
   font-size: 10pt;
   line-height: calc(var(--baseline) * 1);
@@ -391,6 +392,25 @@ ul.tabs {
 .tabs li {
   display: block;
   margin-bottom: var(--baseline);
+}
+
+.termsContainer {
+  margin-top: calc(var(--baseline) * 2);
+  justify-self: flex-end;
+}
+
+dl {
+  columns: 2;
+  column-gap: 24pt;
+  margin-top: var(--baseline);
+}
+
+dt {
+  font-weight: 600;
+  margin-top: var(--baseline);
+}
+dt:first-child {
+  margin-top: 0;
 }
 
 table {

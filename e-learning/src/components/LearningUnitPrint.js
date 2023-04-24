@@ -77,7 +77,8 @@ export const query = graphql`
 `
 
 const LearningUnit = ({ data, children }) => {
-  const containerRef = useRef()
+  const containerRef = useRef(null)
+
   const [timestamp, setTimestamp] = useState('')
   const previewRef = useRef()
   const unit = data.post.nodes[0].childMdx.frontmatter

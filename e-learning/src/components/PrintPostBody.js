@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { MDXProvider } from '@mdx-js/react'
 
 import Button from './ButtonAdapter'
@@ -6,10 +6,17 @@ import PrintFigure from './PrintFigure'
 import Institution from './Institution'
 import Resolution from './PrintResolution'
 import Treaty from './Treaty'
+import PrintTerm from './PrintTerm'
 
 const PostBody = ({ content, unit, site }) => {
+  const termsRef = useRef(null)
+  const [termsEl, setTermsEl] = useState(null)
+  useEffect(() => {
+    setTermsEl(termsRef.current)
+  }, [])
+
   const shortCodes = {
-    Embed: ({ src, caption }) => (
+    Embed: () => (
       <aside className="callout">
         View interactive component at{' '}
         <span className="url">
@@ -48,7 +55,11 @@ const PostBody = ({ content, unit, site }) => {
         {cite && <cite>{cite}</cite>}
       </blockquote>
     ),
-    Term: ({ t, children }) => <em>{t || children}</em>,
+    Term: ({ t, children }) => (
+      <PrintTerm t={t} termsContainer={termsEl}>
+        {children}
+      </PrintTerm>
+    ),
     Figure: ({ ...props }) => <PrintFigure {...props} />,
     LectureVideo: ({ children }) => <>{children}</>,
     Event: ({ date, title, children }) => (
@@ -77,7 +88,17 @@ const PostBody = ({ content, unit, site }) => {
     Callout: ({ ...props }) => <aside className="callout" {...props} />,
   }
 
-  return <MDXProvider components={shortCodes}>{content}</MDXProvider>
+  return (
+    <>
+      <MDXProvider components={shortCodes}>
+        {content}
+        <section className="termsContainer">
+          <h2>Terms</h2>
+          <dl className="terms" ref={termsRef}></dl>
+        </section>
+      </MDXProvider>
+    </>
+  )
 }
 
 export default PostBody
