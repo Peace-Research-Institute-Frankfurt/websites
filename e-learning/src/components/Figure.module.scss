@@ -92,9 +92,17 @@
   }
 }
 
+.small {
+  display: contents;
+  .inner {
+    grid-column: 3 / 4;
+    width: 14rem;
+  }
+}
 .tiny {
-  .image {
-    grid-column: 2 / 5;
+  display: contents;
+  .inner {
+    grid-column: 3 / 4;
     width: 8rem;
   }
 }
