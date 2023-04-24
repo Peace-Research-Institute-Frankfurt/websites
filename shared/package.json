@@ -6,10 +6,9 @@
   "author": "Max Kohler",
   "scripts": {},
   "dependencies": {
+    "gatsby-plugin-image": "^3.7.0",
     "react": "18.2.0",
     "react-dom": "^18.2.0",
-    "react-markdown-renderer": "^1.4.0",
-    "gatsby-plugin-image": "^3.7.0"
-  },
-  "devDependencies": {}
+    "react-markdown-renderer": "^1.4.0"
+  }
 }

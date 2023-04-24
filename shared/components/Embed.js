@@ -65,7 +65,9 @@ export default function Embed({
             />
           </div>
           <figcaption className={styles.captions}>
-            <div className={styles.caption}>{caption}</div>
+            <div className={styles.caption}>
+              <MarkdownRenderer markdown={caption} />
+            </div>
             <div className={styles.activeControls}>
               {!isLocal && provider.name !== 'default' && (
                 <Button
