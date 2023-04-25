@@ -312,8 +312,8 @@ blockquote {
 }
 
 blockquote strong {
-  background: var(--blue-30);
-  font-weight: normal;
+  background: var(--blue-20);
+  font-weight: inherit;
 }
 
 a {
@@ -345,6 +345,8 @@ a[data-footnote-ref]:after {
   border-radius: var(--br);
   margin-bottom: var(--line-height);
   margin-top: var(--line-height);
+  display: inline-block;
+  width: 100%;
 }
 
 .callout:first-child {
