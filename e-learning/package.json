@@ -14,20 +14,20 @@
     "@mdx-js/mdx": "^2.3.0",
     "@mdx-js/react": "^2.3.0",
     "@prif/shared": "0.0.1",
-    "gatsby": "^5.8.1",
-    "gatsby-plugin-image": "^3.7.0",
+    "gatsby": "^5.9.0",
+    "gatsby-plugin-image": "^3.9.0",
     "gatsby-plugin-local-search": "^2.0.1",
-    "gatsby-plugin-manifest": "^5.7.0",
+    "gatsby-plugin-manifest": "^5.9.0",
     "gatsby-plugin-mdx": "^5.7.0",
     "gatsby-plugin-netlify": "^5.1.0",
     "gatsby-plugin-remark-footnotes": "^0.0.1",
-    "gatsby-plugin-sass": "^6.8.0",
+    "gatsby-plugin-sass": "^6.9.0",
     "gatsby-plugin-sharp": "^5.8.1",
     "gatsby-remark-autolink-headers": "^6.8.0",
     "gatsby-remark-smartypants": "^6.8.0",
     "gatsby-source-filesystem": "^5.7.0",
     "gatsby-transformer-csv": "^5.8.0",
-    "gatsby-transformer-json": "^5.8.0",
+    "gatsby-transformer-json": "^5.9.0",
     "gatsby-transformer-sharp": "^5.8.0",
     "mapbox-gl": "^2.14.1",
     "mdast-util-to-string": "^3.2.0",
@@ -52,6 +52,6 @@
     "just-diff": "^6.0.0",
     "luxon": "^3.3.0",
     "pdf-lib": "^1.17.1",
-    "puppeteer": "^19.9.1"
+    "puppeteer": "^19.11.0"
   }
 }
