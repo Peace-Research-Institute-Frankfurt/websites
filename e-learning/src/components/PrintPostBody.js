@@ -92,19 +92,21 @@ const PostBody = ({ content, unit, site }) => {
     <>
       <MDXProvider components={shortCodes}>
         {content}
-        <section className="termsContainer">
-          <h2>Terms</h2>
-          <dl className="terms">
-            {terms.map((t) => {
-              return (
-                <div className="term">
-                  <dt>{t.title}</dt>
-                  <dd>{t.description}</dd>
-                </div>
-              )
-            })}
-          </dl>
-        </section>
+        {terms.length > 0 && (
+          <section className="termsContainer">
+            <h2>Terms</h2>
+            <dl className="terms">
+              {terms.map((t) => {
+                return (
+                  <div className="term">
+                    <dt>{t.title}</dt>
+                    <dd>{t.description}</dd>
+                  </div>
+                )
+              })}
+            </dl>
+          </section>
+        )}
       </MDXProvider>
     </>
   )
