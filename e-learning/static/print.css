@@ -360,25 +360,28 @@ a[data-footnote-ref]:after {
   margin-top: 0;
 }
 
-.embedCaption {
+.embedCaption,
+.caption {
   display: block;
   font-weight: normal;
   font-size: var(--ms--1);
+  line-height: calc(var(--baseline) * 0.5);
 }
 
+.treaty,
 .resolution,
 .institution {
   break-inside: avoid;
   border: var(--border-width) solid black;
   border-top: 1.5pt solid black;
-  margin-top: -1.5pt;
+  margin-top: calc(var(--baseline) - 1.5pt);
   padding: var(--padding);
 }
 
+.treaty h2,
 .resolution h2,
 .institution h2 {
-  margin-top: calc(var(--baseline) * 0.4);
-  margin-bottom: var(--baseline);
+  margin-top: calc(var(--baseline) * 0.55);
 }
 
 .chipGroup {
@@ -386,7 +389,9 @@ a[data-footnote-ref]:after {
   font-size: var(--ms--1);
   list-style: none;
   margin-left: 0 !important;
-  margin-top: 6pt;
+  margin-bottom: var(--baseline);
+  position: relative;
+  top: 6pt;
 }
 
 .chipGroup li {

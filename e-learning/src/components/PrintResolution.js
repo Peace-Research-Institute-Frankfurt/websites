@@ -32,11 +32,11 @@ export default function Resolution({ name }) {
         {res.title}
         {res.text ? <span>{res.name}</span> : <span>{res.name}</span>}
       </h2>
-      <p>{res.description}</p>
       <ul className="chipGroup">
         {res.status === 'adopted' ? <li>Adopted {res.date}</li> : <li>{res.status}</li>}
         <li>{res.meeting}</li>
       </ul>
+      <p>{res.description}</p>
     </aside>
   )
 }

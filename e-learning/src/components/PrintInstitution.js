@@ -33,11 +33,11 @@ export default function PrintInstitution({ name }) {
     <aside className="institution">
       <span className="eyebrow">Institution</span>
       <h2>{institution.title}</h2>
-      <p>{institution.description}</p>
       <ul className="chipGroup">
         <li>Established {institution.established}</li>
         <li>{institution.members.length} Members</li>
       </ul>
+      <p>{institution.description}</p>
     </aside>
   )
 }

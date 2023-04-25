@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
 import { MDXProvider } from '@mdx-js/react'
 
-import Button from './ButtonAdapter'
-import PrintFigure from './PrintFigure'
+import Figure from './PrintFigure'
 import Institution from './PrintInstitution'
 import Resolution from './PrintResolution'
-import Treaty from './Treaty'
+import Treaty from './PrintTreaty'
 import PrintTerm from './PrintTerm'
 
 const PostBody = ({ content, unit, site }) => {
@@ -60,7 +59,7 @@ const PostBody = ({ content, unit, site }) => {
         {children}
       </PrintTerm>
     ),
-    Figure: ({ ...props }) => <PrintFigure {...props} />,
+    Figure,
     LectureVideo: ({ children }) => <>{children}</>,
     Event: ({ date, title, children }) => (
       <li className="timelineEvent">

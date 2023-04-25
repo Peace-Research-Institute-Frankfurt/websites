@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react'
 import TooltipAdapter from './TooltipAdapter'
 import * as styles from './TreatyParticipantGraph.module.scss'
 
-export default function TreatyParticipantGraph({ treaty }) {
+const TreatyParticipantGraph = function ({ treaty }) {
   const [tooltipActive, setTooltipActive] = useState(false)
   const [tooltipTarget, setTooltipTarget] = useState(null)
   const [tooltipText, setTooltipText] = useState('')
@@ -103,3 +103,39 @@ export default function TreatyParticipantGraph({ treaty }) {
     </div>
   )
 }
+
+const PrintTreatyParticipantGraph = function ({ treaty }) {
+  const sortOrder = ['ratification', 'accession', 'acceptance', 'succession', 'signature', 'none']
+  treaty.participants.sort((a, b) => {
+    const dateA = sortOrder.indexOf(a.status)
+    const dateB = sortOrder.indexOf(b.status)
+    if (dateA > dateB) {
+      return 1
+    }
+    if (dateA < dateB) {
+      return -1
+    }
+    return 0
+  })
+
+  const countryEls = treaty.participants.map((p) => {
+    const status = p.events[p.events.length - 1]?.type || 'none'
+    return (
+      <li key={p.country.alpha3} data-status={status} className={`${styles.printItem} ${styles[status]}`}>
+        {p.country.alpha3}
+      </li>
+    )
+  })
+  return (
+    <div className={styles.printContainer}>
+      <ul className={styles.printItems}>{countryEls}</ul>
+      {treaty.scrapeURL && (
+        <p className="caption">
+          Data: <a href={treaty.scrapeURL}>United Nations Treaty Collection</a>
+        </p>
+      )}
+    </div>
+  )
+}
+
+export { TreatyParticipantGraph, PrintTreatyParticipantGraph }

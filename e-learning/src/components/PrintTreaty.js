@@ -1,12 +1,9 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import Expandable from '@shared/components/Expandable'
-import { Chip, ChipGroup } from './Chip.js'
-import { TreatyParticipantGraph } from './TreatyParticipantGraph'
-import Button from './ButtonAdapter.js'
+import { PrintTreatyParticipantGraph } from './TreatyParticipantGraph.js'
 import * as styles from './Treaty.module.scss'
 
-export default function Treaty({ name }) {
+export default function PrintTreaty({ name }) {
   const data = useStaticQuery(graphql`
     query treatyQuery {
       countries: allCountriesJson {
@@ -82,19 +79,17 @@ export default function Treaty({ name }) {
   }, 0)
 
   return (
-    <section className={styles.container}>
-      <Expandable buttonComponent={Button}>
-        <span className={styles.eyebrow}>Treaty</span>
-        <h2 className={styles.title}>{treaty.shortTitle || treaty.title}</h2>
-        <ChipGroup>
-          {treaty.date && <Chip>Effective {treaty.date}</Chip>}
-          {treaty.legalStatus && <Chip>{treaty.legalStatus}</Chip>}
-          <Chip>{memberCount} Member States</Chip>
-        </ChipGroup>
-        <p className={styles.description}>{treaty.description}</p>
-        <h3 className={styles.subtitle}>Current Adoption</h3>
-        <TreatyParticipantGraph treaty={treaty} candidates={data.countries.nodes} />
-      </Expandable>
-    </section>
+    <aside className="treaty">
+      <span className="eyebrow">Treaty</span>
+      <h2 className={styles.title}>{treaty.shortTitle || treaty.title}</h2>
+      <ul className="chipGroup">
+        {treaty.date && <li>Effective {treaty.date}</li>}
+        {treaty.legalStatus && <li>{treaty.legalStatus}</li>}
+        <li>{memberCount} Member States</li>
+      </ul>
+      <p className={styles.description}>{treaty.description}</p>
+      <h3 className={styles.subtitle}>Current Adoption</h3>
+      <PrintTreatyParticipantGraph treaty={treaty} candidates={data.countries.nodes} />
+    </aside>
   )
 }
