@@ -3,7 +3,7 @@ import { MDXProvider } from '@mdx-js/react'
 
 import Button from './ButtonAdapter'
 import PrintFigure from './PrintFigure'
-import Institution from './Institution'
+import Institution from './PrintInstitution'
 import Resolution from './PrintResolution'
 import Treaty from './Treaty'
 import PrintTerm from './PrintTerm'

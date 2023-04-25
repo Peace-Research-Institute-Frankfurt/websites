@@ -241,6 +241,9 @@ figcaption {
 
 .eyebrow {
   font-size: var(--ms--1);
+  font-family: var(--mono);
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
 }
 .caption {
   font-weight: 600;
@@ -280,6 +283,10 @@ figcaption {
 .chapterContent > ul:first-child,
 .chapterContent > ol:first-child {
   margin-top: 0;
+}
+.chapterContent > ul:last-child,
+.chapterContent > ol:last-child {
+  margin-bottom: 0;
 }
 
 ul,
@@ -359,12 +366,19 @@ a[data-footnote-ref]:after {
   font-size: var(--ms--1);
 }
 
-.resolution {
+.resolution,
+.institution {
   break-inside: avoid;
   border: var(--border-width) solid black;
   border-top: 1.5pt solid black;
   margin-top: -1.5pt;
   padding: var(--padding);
+}
+
+.resolution h2,
+.institution h2 {
+  margin-top: calc(var(--baseline) * 0.4);
+  margin-bottom: var(--baseline);
 }
 
 .chipGroup {
@@ -382,11 +396,6 @@ a[data-footnote-ref]:after {
   align-items: center;
 }
 
-.resolution h2 {
-  margin-top: 0;
-  margin-bottom: var(--baseline);
-}
-
 ul.tabs {
   margin-left: 0;
 }
@@ -398,7 +407,7 @@ ul.tabs {
 
 .termsContainer {
   margin-top: calc(var(--baseline) * 2);
-  justify-self: flex-end;
+  line-height: var(--baseline);
 }
 
 dl {
@@ -411,12 +420,12 @@ dt {
   font-weight: 600;
 }
 
-.term:first-child {
-  margin-top: 0;
+.term:last-child {
+  margin-bottom: 0;
 }
 
 .term {
-  margin-top: var(--baseline);
+  margin-bottom: var(--baseline);
   display: inline-block;
   width: 100%;
 }
