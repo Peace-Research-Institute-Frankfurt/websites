@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useState } from 'react'
 import { MDXProvider } from '@mdx-js/react'
 
 import Button from './ButtonAdapter'
@@ -9,11 +9,11 @@ import Treaty from './Treaty'
 import PrintTerm from './PrintTerm'
 
 const PostBody = ({ content, unit, site }) => {
-  const termsRef = useRef(null)
-  const [termsEl, setTermsEl] = useState(null)
-  useEffect(() => {
-    setTermsEl(termsRef.current)
-  }, [])
+  const [terms, setTerms] = useState([])
+
+  const addTerm = function (newTerm) {
+    if (terms.findIndex((el) => el.term_id === newTerm.term_id) === -1) setTerms([...terms, newTerm])
+  }
 
   const shortCodes = {
     Embed: () => (
@@ -56,7 +56,7 @@ const PostBody = ({ content, unit, site }) => {
       </blockquote>
     ),
     Term: ({ t, children }) => (
-      <PrintTerm t={t} termsContainer={termsEl}>
+      <PrintTerm t={t} addTerm={addTerm}>
         {children}
       </PrintTerm>
     ),
@@ -94,7 +94,16 @@ const PostBody = ({ content, unit, site }) => {
         {content}
         <section className="termsContainer">
           <h2>Terms</h2>
-          <dl className="terms" ref={termsRef}></dl>
+          <dl className="terms">
+            {terms.map((t) => {
+              return (
+                <div className="term">
+                  <dt>{t.title}</dt>
+                  <dd>{t.description}</dd>
+                </div>
+              )
+            })}
+          </dl>
         </section>
       </MDXProvider>
     </>

@@ -407,10 +407,16 @@ dl {
 
 dt {
   font-weight: 600;
-  margin-top: var(--baseline);
 }
-dt:first-child {
+
+.term:first-child {
   margin-top: 0;
+}
+
+.term {
+  margin-top: var(--baseline);
+  display: inline-block;
+  width: 100%;
 }
 
 table {

@@ -1,8 +1,7 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
-import { createPortal } from 'react-dom'
 
-export default function PrintTerm({ t, children, termsContainer }) {
+export default function PrintTerm({ t, children, termsContainer, addTerm }) {
   const data = useStaticQuery(graphql`
     query TermQuery {
       terms: allTermsJson {
@@ -22,17 +21,13 @@ export default function PrintTerm({ t, children, termsContainer }) {
     }
   })
 
+  useEffect(() => {
+    addTerm(termNode)
+  }, [addTerm, termNode])
+
   return (
     <>
       <span>{children || t}</span>
-      {termsContainer &&
-        createPortal(
-          <>
-            <dt>{termNode.title}</dt>
-            <dd>{termNode.description}</dd>
-          </>,
-          termsContainer
-        )}
     </>
   )
 }
