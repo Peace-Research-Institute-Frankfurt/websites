@@ -43,12 +43,11 @@ units.forEach((unit) => {
     })
 
     // Generate output
-    output = `import Chapter from '../../../src/components/PrintChapter.js'
-${unitData
-  .map((chapter, i) => {
-    return `import Chapter${i} from './${chapter.filename}'`
-  })
-  .join('\n')}
+    output = `${unitData
+      .map((chapter, i) => {
+        return `import Chapter${i} from './${chapter.filename}'`
+      })
+      .join('\n')}
 
 ${unitData
   .map((chapter, i) => {

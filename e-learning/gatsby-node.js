@@ -6,7 +6,7 @@ slug.extend({ '—': '-', '–': '-' })
 exports.createPages = async function ({ actions, graphql }) {
   const { data } = await graphql(`
     query {
-      chapters: allFile(filter: { extension: { eq: "mdx" }, name: { nin: ["index", "print"] }, sourceInstanceName: { eq: "luContent" } }) {
+      chapters: allFile(filter: { extension: { eq: "mdx" }, name: { nin: ["index", "__print"] }, sourceInstanceName: { eq: "luContent" } }) {
         nodes {
           id
           relativeDirectory

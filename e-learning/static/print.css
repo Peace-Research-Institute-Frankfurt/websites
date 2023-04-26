@@ -94,6 +94,28 @@
   font-size: 18pt;
 }
 
+.toc {
+  list-style: none;
+  margin-left: 0;
+  margin-top: var(--baseline);
+  font-size: var(--ms-0);
+}
+
+.tocItem {
+  display: block;
+  line-height: var(--baseine);
+  margin-bottom: 2pt;
+}
+
+.tocItem:before {
+  content: target-counter(attr(href url), page);
+  width: 2ch;
+  display: inline-block;
+  text-align: right;
+  margin-right: 6pt;
+  font-family: var(--mono);
+}
+
 ul.unitAuthors {
   margin: 0;
   display: flex;
@@ -327,8 +349,7 @@ a {
   text-decoration: none !important;
 }
 
-.url,
-a:after {
+.url {
   font-family: var(--mono);
   overflow-wrap: break-word;
   word-wrap: break-word;
@@ -337,13 +358,6 @@ a:after {
   font-size: 0.9em;
   line-height: calc(var(--baseline) * 0.9);
   break-inside: avoid;
-}
-
-a:after {
-  content: ' [' attr(href) ']';
-}
-a[data-footnote-ref]:after {
-  content: '';
 }
 
 .callout {

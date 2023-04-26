@@ -7,17 +7,21 @@ import { Previewer } from 'pagedjs'
 import './paged.scss'
 
 export const query = graphql`
-  query ($lu_id: String) {
+  query ($lu_id: String, $id: String) {
     site: site {
       siteMetadata {
         title
         siteUrl
       }
     }
-    post: allFile(filter: { name: { eq: "index" }, sourceInstanceName: { eq: "luContent" }, relativeDirectory: { eq: $lu_id } }) {
+    post: file(id: { eq: $id }) {
+      id
+    }
+    posts: allFile(filter: { name: { eq: "index" }, sourceInstanceName: { eq: "luContent" }, relativeDirectory: { eq: $lu_id } }) {
       nodes {
         childMdx {
           body
+          tableOfContents
           fields {
             slug
           }
@@ -47,32 +51,6 @@ export const query = graphql`
         }
       }
     }
-    chapters: allFile(
-      filter: {
-        extension: { eq: "mdx" }
-        name: { nin: ["index", "__print"] }
-        sourceInstanceName: { eq: "luContent" }
-        relativeDirectory: { eq: $lu_id }
-      }
-      sort: { childMdx: { frontmatter: { order: ASC } } }
-    ) {
-      nodes {
-        id
-        name
-        relativeDirectory
-        childMdx {
-          body
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-            intro
-            order
-          }
-        }
-      }
-    }
   }
 `
 
@@ -80,8 +58,9 @@ const LearningUnit = ({ data, children }) => {
   const containerRef = useRef(null)
 
   const [timestamp, setTimestamp] = useState('')
+  const [chapterList, setChapterList] = useState([])
   const previewRef = useRef()
-  const unit = data.post.nodes[0].childMdx.frontmatter
+  const unit = data.posts.nodes[0].childMdx.frontmatter
   useEffect(() => {
     setTimestamp(new Date().toUTCString())
     window.setTimeout(() => {
@@ -109,6 +88,17 @@ const LearningUnit = ({ data, children }) => {
             </span>
             <h1 className="unitTitle">{unit.title}</h1>
             <p className="unitIntro">{unit.intro}</p>
+            <ol className="toc">
+              {chapterList.map((el, i) => {
+                return (
+                  <li key={`toc.${i}`}>
+                    <a className="tocItem" href={`#chapter-${el.order}`}>
+                      {el.title}
+                    </a>
+                  </li>
+                )
+              })}
+            </ol>
           </section>
           <section className="coverMeta">
             <ul className="unitAuthors">
@@ -133,7 +123,7 @@ const LearningUnit = ({ data, children }) => {
             </div>
           </section>
         </header>
-        <PostBody unit={data.post.nodes[0]} site={data.site} content={children} />
+        <PostBody unit={data.posts.nodes[0]} site={data.site} content={children} setChapterList={setChapterList} />
       </div>
     </>
   )

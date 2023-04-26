@@ -6,8 +6,9 @@ import Institution from './PrintInstitution'
 import Resolution from './PrintResolution'
 import Treaty from './PrintTreaty'
 import PrintTerm from './PrintTerm'
+import PrintChapter from './PrintChapter'
 
-const PostBody = ({ content, unit, site }) => {
+const PostBody = ({ content, unit, site, setChapterList }) => {
   const [terms, setTerms] = useState([])
 
   const addTerm = function (newTerm) {
@@ -85,6 +86,7 @@ const PostBody = ({ content, unit, site }) => {
     ),
     DetailsGroup: ({ children }) => <>{children}</>,
     Callout: ({ ...props }) => <aside className="callout" {...props} />,
+    Chapter: ({ ...props }) => <PrintChapter setChapterList={setChapterList} {...props} />,
   }
 
   return (

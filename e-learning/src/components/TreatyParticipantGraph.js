@@ -127,7 +127,7 @@ const PrintTreatyParticipantGraph = function ({ treaty }) {
     )
   })
   return (
-    <div className={styles.printContainer}>
+    <div>
       <ul className={styles.printItems}>{countryEls}</ul>
       {treaty.scrapeURL && (
         <p className="caption">
