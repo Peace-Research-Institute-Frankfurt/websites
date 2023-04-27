@@ -1,4 +1,4 @@
-import React, { useEffect, useId } from 'react'
+import React, { useEffect } from 'react'
 
 export default function Chapter({ title, intro, order, children, setChapterList }) {
   useEffect(() => {

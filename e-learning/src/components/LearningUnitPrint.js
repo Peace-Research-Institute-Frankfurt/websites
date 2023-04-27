@@ -64,9 +64,26 @@ const LearningUnit = ({ data, children }) => {
   useEffect(() => {
     setTimestamp(new Date().toUTCString())
     window.setTimeout(() => {
-      let paged = new Previewer()
-      paged.preview(containerRef.current.innerHTML, ['/print.css'], previewRef.current).then((flow) => {
+      let previewer = new Previewer()
+      previewer.preview(containerRef.current.innerHTML, ['/print.css'], previewRef.current).then((flow) => {
         console.log('Rendered', flow.total, 'pages.')
+
+        // Set TOC numbers
+        const tocElements = previewRef.current.querySelectorAll('.toc li a')
+        tocElements.forEach((el) => {
+          const targetId = el.getAttribute('href').substring(1)
+          for (let i = 0; i < flow.pages.length; i++) {
+            const page = flow.pages[i]
+            const target = page.element.querySelector(`#${targetId}`)
+            if (target) {
+              const numberEl = document.createElement('span')
+              numberEl.classList.add('tocPage')
+              numberEl.innerText = i + 1
+              el.insertAdjacentElement('afterbegin', numberEl)
+            }
+          }
+        })
+        console.log('rendered toc')
       })
     }, 500)
   }, [])

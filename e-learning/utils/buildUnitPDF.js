@@ -56,19 +56,7 @@ const createOutlineItem = (pdfDoc, title, parent, nextOrPrev, page, isLast = fal
   return PDFDict.fromMapWithContext(map, pdfDoc.context)
 }
 
-const createOutline = function (doc) {
-  // const outlines = []
-
-  // https://github.com/Hopding/pdf-lib/blob/b8a44bd24b74f4f32456e9809dc4d2d9dc9bf176/src/core/objects/PDFRef.ts
-  // https://github.com/Hopding/pdf-lib/blob/b8a44bd24b74f4f32456e9809dc4d2d9dc9bf176/src/core/PDFContext.ts
-
-  // pdf-lib can't parse the PDF, so we have to determine the outline,
-  // when we render the page in puppeteer and write it to some temp file,
-  // then parse that file here. Our HTML is already chunked so this
-  // shuoldddd work?
-
-  const rootRef = doc.context.nextRef()
-  const next = doc.context.nextRef()
+const setOutline = function (doc, outline) {
   const pageRefs = []
 
   // Traverse our doc's page tree
@@ -83,7 +71,7 @@ const createOutline = function (doc) {
   // const structTreeRoot = pdfDoc.catalog.lookup(PDFName.of('StructTreeRoot'));
 
   // 2. Make an outline object and add that to the document
-  const outline = [{ title: 'test1' }, { title: 'test2' }, { title: 'test3' }]
+  // const outline = [{ title: 'test1' }, { title: 'test2' }, { title: 'test3' }]
   const outlinesDictRef = doc.context.nextRef()
   const outlineItems = []
 
@@ -94,8 +82,13 @@ const createOutline = function (doc) {
 
   outline.forEach((el, i) => {
     const isLast = i === outline.length - 1
-    const nextPrev = !isLast ? outline[i + 1].ref : outline[i - 1].ref
-    const outlineItem = createOutlineItem(doc, el.title, outlinesDictRef, nextPrev, pageRefs[i], isLast)
+    let nextPrev = null
+    if (outline.length === 1) {
+      nextPrev = outline[0].ref
+    } else {
+      nextPrev = !isLast ? outline[i + 1].ref : outline[i - 1].ref
+    }
+    const outlineItem = createOutlineItem(doc, el.title, outlinesDictRef, nextPrev, pageRefs[el.page - 1], isLast)
     outlineItems.push(outlineItem)
   })
 
@@ -117,7 +110,7 @@ const createOutline = function (doc) {
   })
 }
 
-async function setMetaData(unit, outputPath) {
+async function setMetaData(unit, outline, outputPath) {
   console.log(`Writing metadata for ${outputPath}...`)
 
   // Parse the original Markdown for the unit metadata
@@ -136,8 +129,7 @@ async function setMetaData(unit, outputPath) {
   pdfDoc.setAuthor('Peace Research Institute Frankfurt')
   pdfDoc.setLanguage('en-EN')
 
-  // TODO: Set document outline
-  // createOutline(pdfDoc)
+  setOutline(pdfDoc, outline)
 
   const bytes = await pdfDoc.save()
   fs.writeFileSync(outputPath, bytes)
@@ -146,13 +138,32 @@ async function setMetaData(unit, outputPath) {
 ;(async () => {
   const browser = await puppeteer.launch({ args: ['--no-sandbox', '--export-tagged-pdf'] })
   const page = await browser.newPage()
+
+  page.on('console', (msg) => console.log('PAGE LOG:', msg.text()))
+
   for (let i = 0; i < printUnits.length; i++) {
     const unit = printUnits[i]
     const outputPath = `./public/static/eunpdc-${unit}.pdf`
     // const outputPath = `./eunpdc-${unit}.pdf`
 
     console.log(`Generating PDF for ${unit}...`)
+
     await page.goto(`http://localhost:3000/${unit}/print`, { waitUntil: 'networkidle0' })
+    await page.waitForSelector('.tocPage')
+
+    const tocContainer = await page.$('.toc')
+    const tocEls = await tocContainer.$$('.toc li a')
+
+    const outline = []
+    for (let i = 0; i < tocEls.length; i++) {
+      const text = await page.evaluate((el) => el.innerText, tocEls[i])
+      const pageEl = await tocEls[i].$('.tocPage')
+      const pageNumber = await page.evaluate((el) => el.innerText, pageEl)
+      outline.push({ title: text, page: parseInt(pageNumber) })
+    }
+
+    console.log(outline)
+
     await page.pdf({
       path: outputPath,
       format: 'A4',
@@ -160,8 +171,7 @@ async function setMetaData(unit, outputPath) {
       scale: 1,
       printBackground: true,
     })
-
-    setMetaData(unit, outputPath)
+    setMetaData(unit, outline, outputPath)
   }
   await browser.close()
   await server.close(function () {

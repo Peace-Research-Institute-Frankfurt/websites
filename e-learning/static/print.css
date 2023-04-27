@@ -107,8 +107,7 @@
   margin-bottom: 2pt;
 }
 
-.tocItem:before {
-  content: target-counter(attr(href url), page);
+.tocPage {
   width: 2ch;
   display: inline-block;
   text-align: right;
