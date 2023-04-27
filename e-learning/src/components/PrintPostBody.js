@@ -64,9 +64,9 @@ const PostBody = ({ content, unit, site, setChapterList }) => {
     LectureVideo: ({ children }) => <>{children}</>,
     Event: ({ date, title, children }) => (
       <li className="timelineEvent">
-        <h4>
+        <h3>
           <strong>{date}</strong> · {title}
-        </h4>
+        </h3>
         {children}
       </li>
     ),
