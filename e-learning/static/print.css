@@ -49,9 +49,13 @@
   --line-height: 12pt;
   --baseline: 12pt;
   --indent: 12pt;
-  --border-width: 0.25px;
+  --border-width: 0.25pt;
   --br: 2pt;
   --padding: calc(var(--indent) * 0.5);
+}
+
+body {
+  font-weight: 300;
 }
 
 .runningFooter {
@@ -62,7 +66,7 @@
 .runningHeaderRight {
   position: running(runningHeaderRight);
   font-size: 7pt;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .retrieved {
@@ -92,19 +96,20 @@
 }
 .unitIntro {
   font-size: 18pt;
+  margin-bottom: var(--baseline);
 }
 
 .toc {
   list-style: none;
   margin-left: 0;
-  margin-top: var(--baseline);
   font-size: var(--ms-0);
+  margin-top: -2pt;
 }
 
 .tocItem {
   display: block;
   line-height: var(--baseine);
-  margin-bottom: 2pt;
+  margin-bottom: 1.6pt;
 }
 
 .tocPage {
@@ -197,7 +202,7 @@ ul.unitAuthors {
 }
 .chapterContent h2,
 .termsContainer h2 {
-  font-weight: 900;
+  font-weight: 700;
   font-size: 10pt;
   line-height: calc(var(--baseline) * 1);
   margin-top: var(--baseline);
@@ -210,7 +215,7 @@ ul.unitAuthors {
   margin-top: var(--baseline);
   break-after: avoid;
   break-inside: avoid;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .chapterContent h3:first-child {
@@ -252,7 +257,6 @@ img {
 
 figcaption {
   font-size: var(--ms--1);
-  line-height: 9pt;
   padding-top: 2pt;
 }
 
@@ -266,12 +270,10 @@ figcaption {
   text-transform: uppercase;
   letter-spacing: 0.01em;
 }
-.caption {
-  font-weight: 600;
-}
 
 .credit {
   display: block;
+  font-size: 6pt;
 }
 
 .timeline {
@@ -339,11 +341,6 @@ blockquote {
   margin-bottom: var(--line-height);
 }
 
-blockquote strong {
-  background: var(--blue-20);
-  font-weight: inherit;
-}
-
 a {
   text-decoration: none !important;
 }
@@ -378,7 +375,7 @@ a {
   display: block;
   font-weight: normal;
   font-size: var(--ms--1);
-  line-height: calc(var(--baseline) * 0.5);
+  line-height: calc(var(--baseline) * 0.75);
 }
 
 .treaty,
@@ -388,6 +385,7 @@ a {
   border: var(--border-width) solid black;
   border-top: 1.5pt solid black;
   margin-top: calc(var(--baseline) - 1.5pt);
+  margin-bottom: calc(var(--baseline) - 1.5pt);
   padding: var(--padding);
 }
 
@@ -449,8 +447,11 @@ dt {
 }
 
 table {
-  font-size: 8pt;
+  font-size: 7pt;
   margin: var(--baseline) 0;
+  display: inline-block;
+  width: 100%;
+  line-height: 10pt;
 }
 
 table:first-child {
@@ -459,10 +460,9 @@ table:first-child {
 
 td,
 th {
-  padding: 0.1pt 0;
-  padding-right: 1em;
+  padding: 0.5pt 2pt;
   vertical-align: top;
-  border-bottom: var(--border-width) solid currentColor;
+  border: var(--border-width) solid currentColor;
 }
 td:last-child,
 th:last-child {
@@ -470,7 +470,7 @@ th:last-child {
 }
 
 th {
-  font-weight: bold;
+  font-weight: 600;
   text-align: left;
   border-bottom: var(--border-width) solid currentColor;
 }
