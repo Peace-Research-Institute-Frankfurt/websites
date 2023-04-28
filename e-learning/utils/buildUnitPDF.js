@@ -66,7 +66,10 @@ async function setMetaData(unit, outline, outputPath) {
 }
 
 ;(async () => {
-  const browser = await puppeteer.launch({ args: ['--no-sandbox', '--export-tagged-pdf'] })
+  const browser = await puppeteer.launch({
+    headless: 'new',
+    args: ['--no-sandbox', '--export-tagged-pdf'],
+  })
   const page = await browser.newPage()
 
   page.on('console', (msg) => console.log('PAGE:', msg.text()))
