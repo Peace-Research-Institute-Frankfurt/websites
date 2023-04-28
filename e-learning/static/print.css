@@ -233,12 +233,11 @@ ul.unitAuthors {
   text-indent: var(--indent);
 }
 
-.columnBreak {
-  display: block;
-}
-
-.columnBreak + * {
-  margin-top: 0 !important;
+@media screen, pagedjs-ignore {
+  .columnBreak {
+    display: block;
+    break-after: column;
+  }
 }
 
 h2:first-child {
@@ -334,6 +333,11 @@ sup {
   position: absolute;
   font-size: 6.5pt;
   text-indent: 0;
+}
+
+sup .url,
+.footnotes a[href^='#'] {
+  display: none;
 }
 
 strong {

@@ -17,6 +17,13 @@ const PostBody = ({ content, unit, site, setChapterList }) => {
   }
 
   const shortCodes = {
+    a: ({ href, children }) => {
+      return (
+        <a href={href}>
+          {children !== href && <>{children}</>} <span className="url">[{href}]</span>
+        </a>
+      )
+    },
     Embed: () => (
       <aside className="callout">
         View interactive component at{' '}
