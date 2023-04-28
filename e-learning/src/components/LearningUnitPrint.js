@@ -79,11 +79,11 @@ const LearningUnit = ({ data, children }) => {
               const numberEl = document.createElement('span')
               numberEl.classList.add('tocPage')
               numberEl.innerText = i + 1
+              el.setAttribute('data-page', i + 1)
               el.insertAdjacentElement('afterbegin', numberEl)
             }
           }
         })
-        console.log('rendered toc')
       })
     }, 500)
   }, [])
@@ -109,7 +109,7 @@ const LearningUnit = ({ data, children }) => {
               {chapterList.map((el, i) => {
                 return (
                   <li key={`toc.${i}`}>
-                    <a className="tocItem" href={`#chapter-${el.order}`}>
+                    <a data-label={`${el.order}. ${el.title}`} className="tocItem" href={`#chapter-${el.order}`}>
                       {el.title}
                     </a>
                   </li>
