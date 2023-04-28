@@ -233,6 +233,14 @@ ul.unitAuthors {
   text-indent: var(--indent);
 }
 
+.columnBreak {
+  display: block;
+}
+
+.columnBreak + * {
+  margin-top: 0 !important;
+}
+
 h2:first-child {
   margin-top: 0;
 }

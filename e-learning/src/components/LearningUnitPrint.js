@@ -68,6 +68,13 @@ const LearningUnit = ({ data, children }) => {
       previewer.preview(containerRef.current.innerHTML, ['/print.css'], previewRef.current).then((flow) => {
         console.log('Rendered', flow.total, 'pages.')
 
+        // Set column breaks
+        const breakElements = previewRef.current.querySelectorAll('.columnBreak')
+        breakElements.forEach((el) => {
+          console.log(el)
+          el.style['break-after'] = 'column'
+        })
+
         // Set TOC numbers
         const tocElements = previewRef.current.querySelectorAll('.toc li a')
         tocElements.forEach((el) => {

@@ -7,6 +7,7 @@ import Resolution from './PrintResolution'
 import Treaty from './PrintTreaty'
 import PrintTerm from './PrintTerm'
 import PrintChapter from './PrintChapter'
+import ColumnBreak from './ColumnBreak'
 
 const PostBody = ({ content, unit, site, setChapterList }) => {
   const [terms, setTerms] = useState([])
@@ -84,6 +85,7 @@ const PostBody = ({ content, unit, site, setChapterList }) => {
         {children}
       </aside>
     ),
+    ColumnBreak,
     DetailsGroup: ({ children }) => <>{children}</>,
     Callout: ({ ...props }) => <aside className="callout" {...props} />,
     Chapter: ({ ...props }) => <PrintChapter setChapterList={setChapterList} {...props} />,
@@ -97,9 +99,9 @@ const PostBody = ({ content, unit, site, setChapterList }) => {
           <section className="termsContainer">
             <h2>Terms</h2>
             <dl className="terms">
-              {terms.map((t) => {
+              {terms.map((t, i) => {
                 return (
-                  <div className="term">
+                  <div className="term" key={`term.${i}`}>
                     <dt>{t.title}</dt>
                     <dd>{t.description}</dd>
                   </div>
