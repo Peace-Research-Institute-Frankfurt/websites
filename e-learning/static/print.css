@@ -45,7 +45,8 @@
 
 :root {
   --ms--1: 6.5pt;
-  --ms-0: 9pt;
+  --ms-0: 8.75pt;
+  --ms-1: 10pt;
   --line-height: 12pt;
   --baseline: 12pt;
   --indent: 12pt;
@@ -108,8 +109,7 @@ body {
 
 .tocItem {
   display: block;
-  line-height: var(--baseine);
-  margin-bottom: 1.6pt;
+  line-height: var(--baseline);
 }
 
 .tocPage {
@@ -202,9 +202,9 @@ ul.unitAuthors {
 }
 .chapterContent h2,
 .termsContainer h2 {
-  font-weight: 700;
-  font-size: 10pt;
-  line-height: calc(var(--baseline) * 1);
+  font-weight: 600;
+  font-size: var(--ms-1);
+  line-height: var(--baseline);
   margin-top: var(--baseline);
   break-after: avoid;
   break-inside: avoid;
@@ -215,7 +215,7 @@ ul.unitAuthors {
   margin-top: var(--baseline);
   break-after: avoid;
   break-inside: avoid;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .chapterContent h3:first-child {
@@ -239,6 +239,10 @@ h2:first-child {
 h4 {
   margin-top: var(--baseline);
 }
+h2 + ul,
+h2 + ol,
+h3 + ul,
+h3 + ol,
 h4 + ul,
 h4 + ol {
   margin-top: 0 !important;
@@ -273,7 +277,7 @@ figcaption {
 
 .credit {
   display: block;
-  font-size: 6pt;
+  font-size: 5.5pt;
 }
 
 .timeline {
@@ -315,13 +319,7 @@ figcaption {
 ul,
 ol {
   margin-left: 1em;
-}
-
-li {
-  margin-bottom: -1pt;
-}
-li:last-child {
-  margin-bottom: 0;
+  line-height: var(--baseline);
 }
 
 sup {
@@ -383,7 +381,6 @@ a {
 .institution {
   break-inside: avoid;
   border: var(--border-width) solid black;
-  border-top: 1.5pt solid black;
   margin-top: calc(var(--baseline) - 1.5pt);
   margin-bottom: calc(var(--baseline) - 1.5pt);
   padding: var(--padding);
@@ -447,7 +444,8 @@ dt {
 }
 
 table {
-  font-size: 7pt;
+  font-size: var(--ms--1);
+  line-height: calc(var(--baseline) * 0.5);
   margin: var(--baseline) 0;
   display: inline-block;
   width: 100%;
