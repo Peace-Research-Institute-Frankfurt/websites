@@ -11,7 +11,6 @@ const basePath = `./content/learning-units`
 console.log('Generating print templates... ')
 
 const units = fs.readdirSync(basePath)
-// const units = ['lu-18']
 units.forEach((unit) => {
   const chapters = fs.readdirSync(`${basePath}/${unit}`)
   const hasChapters = chapters.length > 0
@@ -66,4 +65,4 @@ ${unitData
   }
 })
 
-console.log(`Done.`)
+console.log(`Done\n`)
