@@ -77,9 +77,6 @@ body {
   opacity: 0.5;
 }
 
-.retrieved {
-}
-
 .cover {
   display: flex;
   flex-flow: column;
@@ -309,10 +306,10 @@ figcaption {
   padding-top: var(--line-height);
   margin-top: 0;
   font-size: var(--ms--1);
-  line-height: calc(var(--line-height) * 0.75);
 }
 .chapterContent .footnotes ol {
   columns: 1;
+  line-height: calc(var(--line-height) * 0.65);
 }
 
 .chapterContent > ul,
@@ -369,7 +366,6 @@ a {
   word-break: break-word;
   hyphens: auto;
   font-size: 0.9em;
-  line-height: calc(var(--baseline) * 0.9);
   break-inside: avoid;
 }
 
@@ -464,11 +460,14 @@ dt {
 
 table {
   font-size: var(--ms--1);
-  line-height: calc(var(--baseline) * 0.5);
   margin: var(--baseline) 0;
   display: inline-block;
   width: 100%;
-  line-height: 10pt;
+  line-height: calc(var(--baseline) * 0.6);
+}
+
+table + h3 {
+  margin-top: 0 !important;
 }
 
 table:first-child {
@@ -477,7 +476,7 @@ table:first-child {
 
 td,
 th {
-  padding: 0.5pt 2pt;
+  padding: 2pt;
   vertical-align: top;
   border: var(--border-width) solid currentColor;
 }
