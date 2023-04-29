@@ -175,11 +175,17 @@ ul.unitAuthors {
 }
 
 .chapterHeader {
-  padding-bottom: calc(var(--baseline) * 1);
-  padding-top: calc(var(--baseline) * 1.1);
-  border-top: var(--border-width) solid currentColor;
-  border-bottom: var(--border-width) solid currentColor;
   margin-bottom: calc(var(--baseline) * 1.5);
+}
+
+.chapterHeader svg {
+  height: 2px;
+  width: 100%;
+  display: block;
+}
+.chapterHeader line {
+  stroke-width: 1;
+  stroke: black;
 }
 
 .chapterTitle {
@@ -189,13 +195,14 @@ ul.unitAuthors {
   font-weight: 800;
   margin-bottom: calc(var(--baseline) * 0.5);
   font-family: var(--serif);
-  string-set: runningTitle content(text);
+  margin-top: var(--baseline);
 }
 
 .chapterIntro {
   font-size: 14pt;
   letter-spacing: -0.0075em;
   line-height: calc(var(--baseline) * 1.5);
+  margin-bottom: var(--baseline);
 }
 
 .chapterContent {
