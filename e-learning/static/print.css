@@ -2,7 +2,7 @@
   size: A4;
   margin: 60pt;
   @top-left {
-    content: string(runningTitle);
+    content: element(runningHeaderLeft);
     font-size: 7pt;
     align-items: flex-end;
     padding-bottom: var(--baseline);
@@ -14,17 +14,14 @@
     align-items: flex-end;
   }
   @bottom-left {
+    content: element(runningFooterLeft);
     align-items: flex-start;
     padding-top: var(--baseline);
-    content: counter(page);
-    font-size: 7pt;
-    font-family: var(--mono);
   }
   @bottom-right {
-    font-size: 7pt;
+    content: element(runningFooterRight);
     align-items: flex-start;
     padding-top: var(--baseline);
-    content: element(runningFooter);
   }
 }
 
@@ -59,15 +56,25 @@ body {
   font-weight: 300;
 }
 
-.runningFooter {
-  position: running(runningFooter);
-  font-family: var(--mono);
-  opacity: 0.5;
+.runningHeaderLeft {
+  position: running(runningHeaderLeft);
+  font-size: 7pt;
+  font-weight: 400;
+  white-space: nowrap;
 }
 .runningHeaderRight {
   position: running(runningHeaderRight);
   font-size: 7pt;
   font-weight: 400;
+}
+.runningFooterLeft {
+  position: running(runningFooterLeft);
+  font-size: var(--ms--1);
+}
+.runningFooterRight {
+  position: running(runningFooterRight);
+  font-size: var(--ms--1);
+  opacity: 0.5;
 }
 
 .retrieved {

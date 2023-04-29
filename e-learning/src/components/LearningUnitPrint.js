@@ -68,6 +68,30 @@ const LearningUnit = ({ data, children }) => {
       previewer.preview(containerRef.current.innerHTML, ['/print.css'], previewRef.current).then((flow) => {
         console.log('Rendered', flow.total, 'pages.')
 
+        // Setting page numbers and running headers with pseudo-elements
+        // produces an inaccessible PDF, so we set the with Javascript instead.
+
+        // Set page numbers
+        const pageNumberElements = previewRef.current.querySelectorAll('.pageNumber')
+        pageNumberElements.forEach((el, i) => {
+          el.innerText = `${i}`
+        })
+
+        // Set running headers
+        const pageElements = previewRef.current.querySelectorAll('.pagedjs_page')
+        const chapterTitles = []
+        pageElements.forEach((el) => {
+          const chapterTitle = el.querySelector('.chapterTitle')
+          const runningTitleElement = el.querySelector('.runningTitle')
+          if (chapterTitle) {
+            const titleText = chapterTitle.innerText
+            runningTitleElement.innerText = titleText
+            chapterTitles.push(titleText)
+          } else {
+            runningTitleElement.innerText = chapterTitles[chapterTitles.length - 1]
+          }
+        })
+
         // Set TOC numbers
         const tocElements = previewRef.current.querySelectorAll('.toc li a')
         tocElements.forEach((el) => {
@@ -92,11 +116,17 @@ const LearningUnit = ({ data, children }) => {
     <>
       <div ref={previewRef}></div>
       <div className={styles.container} ref={containerRef}>
+        <div className="runningHeaderLeft">
+          <span className="runningTitle">Chapter Title</span>
+        </div>
         <div className="runningHeaderRight">
           <span>EUNPDC eLearning / {unit.title}</span>
         </div>
-        <div className="runningFooter">
+        <div className="runningFooterRight">
           <span className="retrieved">Generated {timestamp}</span>
+        </div>
+        <div className="runningFooterLeft">
+          <span className="pageNumber">Page 2</span>
         </div>
         <header className="cover">
           <section className="coverTitle">
