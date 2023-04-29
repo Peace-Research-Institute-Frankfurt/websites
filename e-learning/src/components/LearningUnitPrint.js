@@ -120,7 +120,7 @@ const LearningUnit = ({ data, children }) => {
           <span className="runningTitle">Chapter Title</span>
         </div>
         <div className="runningHeaderRight">
-          <span>EUNPDC eLearning / {unit.title}</span>
+          <span>EUNPDC eLearning / Unit {unit.order}</span>
         </div>
         <div className="runningFooterRight">
           <span className="retrieved">Generated {timestamp}</span>
