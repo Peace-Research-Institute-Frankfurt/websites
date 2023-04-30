@@ -308,6 +308,18 @@ figcaption {
   break-inside: avoid;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+dt,
+.unitIntro,
+.chapterIntro {
+  text-wrap: balance;
+}
+
 .chapterContent .footnotes {
   border-top: 0;
   padding-top: var(--line-height);
