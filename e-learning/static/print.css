@@ -357,9 +357,15 @@ ol {
 }
 
 sup {
-  position: absolute;
-  font-size: 6.5pt;
+  font-size: var(--ms--1);
   text-indent: 0;
+  vertical-align: middle;
+}
+sup:before {
+  content: '[';
+}
+sup:after {
+  content: ']';
 }
 
 sup .url,

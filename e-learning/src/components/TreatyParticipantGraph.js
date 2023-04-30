@@ -127,8 +127,26 @@ const PrintTreatyParticipantGraph = function ({ treaty }) {
     )
   })
   return (
-    <div>
+    <div className={styles.printContainer}>
       <ul className={styles.printItems}>{countryEls}</ul>
+      <ul className={styles.legend}>
+        <li>
+          <span className={`${styles.legendItem} ${styles.ratification}`}></span>
+          Adopted by ratification
+        </li>
+        <li>
+          <span className={`${styles.legendItem} ${styles.accession}`}></span>
+          Adopted by accession
+        </li>
+        <li>
+          <span className={`${styles.legendItem} ${styles.signature}`}></span>
+          Signed, but not adopted
+        </li>
+        <li>
+          <span className={`${styles.legendItem} ${styles.none}`}></span>
+          Not adopted
+        </li>
+      </ul>
       {treaty.scrapeURL && (
         <p className="caption">
           Data: <a href={treaty.scrapeURL}>United Nations Treaty Collection</a>

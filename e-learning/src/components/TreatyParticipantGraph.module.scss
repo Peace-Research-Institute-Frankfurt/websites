@@ -34,22 +34,6 @@ $border-color: rgba(black, 0.7);
   border-top: 1px solid $border-color;
   border-left: 1px solid $border-color;
   margin-bottom: 6pt;
-  .ratification {
-    background: white;
-  }
-  .accession,
-  .succession,
-  .acceptance {
-    background: lightgray;
-  }
-  .signature {
-    background: rgb(58, 58, 58);
-    color: white;
-  }
-  .none {
-    background: black;
-    color: white;
-  }
 }
 
 .item {
@@ -137,5 +121,42 @@ $border-color: rgba(black, 0.7);
     letter-spacing: 0.01em;
     padding: 0.05em 0.25em;
     white-space: nowrap;
+  }
+}
+
+.legend {
+  font-size: var(--ms--1);
+  line-height: 1.2;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin-left: 0 !important;
+  margin-bottom: 0.5em;
+}
+
+.legend-item {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  margin-right: 0.2em;
+  border: 0.25pt solid black;
+}
+
+.printContainer {
+  .ratification {
+    background: white;
+  }
+  .accession,
+  .succession,
+  .acceptance {
+    background: rgb(190, 190, 190);
+  }
+  .signature {
+    background: rgb(58, 58, 58);
+    color: white;
+  }
+  .none {
+    background: black;
+    color: white;
   }
 }
