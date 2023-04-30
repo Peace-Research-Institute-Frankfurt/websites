@@ -26,6 +26,9 @@ const PostBody = ({ content, unit, site, setChapterList }) => {
     },
     Embed: () => (
       <aside className="callout">
+        <svg preserveAspectRatio="none" className="asideBackdrop" width={100} height={100} viewBox="0 0 100 100">
+          <rect x={0} y={0} width={100} height={100} />
+        </svg>
         View interactive component at{' '}
         <span className="url">
           {site.siteMetadata.siteUrl}
@@ -36,6 +39,9 @@ const PostBody = ({ content, unit, site, setChapterList }) => {
     EmbedChoices: () => <></>,
     Quiz: () => (
       <aside className="callout">
+        <svg preserveAspectRatio="none" className="asideBackdrop" width={100} height={100} viewBox="0 0 100 100">
+          <rect x={0} y={0} width={100} height={100} />
+        </svg>
         View quiz at {` `}
         <span className="url">
           {site.siteMetadata.siteUrl}

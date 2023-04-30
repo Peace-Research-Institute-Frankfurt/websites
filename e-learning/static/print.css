@@ -184,7 +184,7 @@ ul.unitAuthors {
   display: block;
 }
 .chapterHeader line {
-  stroke-width: 1;
+  stroke-width: 0.5;
   stroke: black;
 }
 
@@ -399,13 +399,13 @@ a {
 }
 
 .callout {
-  border: var(--border-width) solid black;
   padding: var(--padding);
   border-radius: var(--br);
   margin-bottom: var(--line-height);
   margin-top: var(--line-height);
   display: inline-block;
   width: 100%;
+  position: relative;
 }
 
 .callout:first-child {
@@ -424,10 +424,27 @@ a {
 .resolution,
 .institution {
   break-inside: avoid;
-  border: var(--border-width) solid black;
   margin-top: calc(var(--baseline) - 1.5pt);
   margin-bottom: calc(var(--baseline) - 1.5pt);
   padding: var(--padding);
+  position: relative;
+}
+
+.asideBackdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.asideBackdrop rect {
+  stroke: black;
+  stroke-width: 0.5;
+  fill: none;
+  vector-effect: non-scaling-stroke;
 }
 
 .treaty h2,

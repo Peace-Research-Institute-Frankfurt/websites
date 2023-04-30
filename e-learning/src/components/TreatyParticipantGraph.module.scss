@@ -137,7 +137,8 @@ $border-color: rgba(black, 0.7);
 .legend-item {
   width: 1em;
   height: 1em;
-  display: inline-block;
+  display: inline-flex;
+  align-items: flex-start;
   margin-right: 0.2em;
   border: 0.25pt solid black;
 }

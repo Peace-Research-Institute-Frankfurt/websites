@@ -27,6 +27,9 @@ export default function Resolution({ name }) {
 
   return (
     <aside className="resolution">
+      <svg preserveAspectRatio="none" className="asideBackdrop" width={100} height={100} viewBox="0 0 100 100">
+        <rect x={0} y={0} width={100} height={100} />
+      </svg>
       <span className="eyebrow">Resolution</span>
       <h2>
         {res.title}
