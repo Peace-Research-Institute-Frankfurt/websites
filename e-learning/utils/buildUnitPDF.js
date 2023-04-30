@@ -12,8 +12,8 @@ console.log(`\nGenerating Unit PDFs...`)
 // Find our which units we need to make PDFs for
 const basePath = `./content/learning-units`
 
-// const units = fs.readdirSync(basePath)
-const units = ['lu-18']
+const units = fs.readdirSync(basePath)
+// const units = ['lu-18']
 
 let printUnits = []
 let skippedUnits = []
@@ -67,7 +67,7 @@ async function setMetaData(unit, outline, outputPath) {
 ;(async () => {
   const browser = await puppeteer.launch({
     headless: 'old', // --export-tagged-pdf doesn't work in new headless
-    args: ['--no-sandbox', '--export-tagged-pdf'],
+    args: ['--no-sandbox', '--export-tagged-pdf', '--disable-gpu'],
   })
   const page = await browser.newPage()
 
@@ -75,8 +75,8 @@ async function setMetaData(unit, outline, outputPath) {
 
   for (let i = 0; i < printUnits.length; i++) {
     const unit = printUnits[i]
-    // const outputPath = `./public/static/eunpdc-${unit}.pdf`
-    const outputPath = `./eunpdc-${unit}.pdf`
+    const outputPath = `./public/static/eunpdc-${unit}.pdf`
+    // const outputPath = `./eunpdc-${unit}.pdf`
 
     console.log(`\nBuilding "${unit}"...`)
 
