@@ -48,6 +48,7 @@
   --baseline: 12pt;
   --indent: 12pt;
   --border-width: 0.25pt;
+  --stroke-width: 0.5;
   --br: 2pt;
   --padding: calc(var(--indent) * 0.5);
 }
@@ -184,7 +185,7 @@ ul.unitAuthors {
   display: block;
 }
 .chapterHeader line {
-  stroke-width: 0.5;
+  stroke-width: var(--stroke-width);
   stroke: black;
 }
 
@@ -454,7 +455,7 @@ a {
 }
 .asideBackdrop rect {
   stroke: black;
-  stroke-width: 0.5;
+  stroke-width: var(--stroke-width);
   fill: none;
   vector-effect: non-scaling-stroke;
 }
@@ -535,8 +536,8 @@ dt {
 .tableStrokes line,
 .tableStrokes rect {
   vector-effect: non-scaling-stroke;
-  stroke: blue;
-  stroke-width: 0.5;
+  stroke: black;
+  stroke-width: var(--stroke-width);
 }
 
 table {
