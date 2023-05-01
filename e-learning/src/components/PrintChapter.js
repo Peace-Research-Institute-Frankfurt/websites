@@ -12,16 +12,14 @@ export default function Chapter({ title, intro, order, children, setChapterList 
   return (
     <section className="chapter">
       <header className="chapterHeader">
-        <svg>
-          <line x1={0} x2={1000} y1={0} y2={0}></line>
+        <svg viewBox="0 0 100 100" className="chapterHeaderLines" preserveAspectRatio="none">
+          <line x1={0} x2={100} y1={0} y2={0}></line>
+          <line x1={0} x2={100} y1={100} y2={100}></line>
         </svg>
         <h2 className="chapterTitle" id={`chapter-${order}`}>
           {order}. {title}
         </h2>
-        {intro !== 'undefined' && <p className={'chapterIntro'}>{intro}</p>}
-        <svg>
-          <line x1={0} x2={1000} y1={0} y2={0}></line>
-        </svg>
+        {intro !== 'null' && intro !== 'undefined' && <p className={'chapterIntro'}>{intro}</p>}
       </header>
       <div className="chapterContent">{children}</div>
     </section>

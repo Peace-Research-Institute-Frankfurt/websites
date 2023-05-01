@@ -48,7 +48,7 @@
   --baseline: 12pt;
   --indent: 12pt;
   --border-width: 0.25pt;
-  --stroke-width: 1;
+  --stroke-width: 0.75;
   --br: 2pt;
   --padding: calc(var(--indent) * 0.5);
 }
@@ -177,16 +177,24 @@ ul.unitAuthors {
 
 .chapterHeader {
   margin-bottom: calc(var(--baseline) * 1.5);
+  position: relative;
+  padding: var(--baseline) 0;
 }
 
-.chapterHeader svg {
-  height: 2px;
-  width: 100%;
+.chapterHeaderLines {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
   display: block;
+  height: 100%;
+  width: 100%;
 }
-.chapterHeader line {
-  stroke-width: var(--stroke-width);
+.chapterHeaderLines line {
+  stroke-width: 1;
   stroke: black;
+  vector-effect: non-scaling-stroke;
 }
 
 .chapterTitle {
@@ -194,16 +202,15 @@ ul.unitAuthors {
   line-height: calc(var(--baseline) * 2);
   letter-spacing: -0.02em;
   font-weight: 800;
-  margin-bottom: calc(var(--baseline) * 0.5);
   font-family: var(--serif);
-  margin-top: var(--baseline);
+  margin-top: 0;
 }
 
 .chapterIntro {
   font-size: 14pt;
   letter-spacing: -0.0075em;
   line-height: calc(var(--baseline) * 1.5);
-  margin-bottom: var(--baseline);
+  margin-top: calc(var(--baseline) * 0.5);
 }
 
 .chapterContent {
@@ -524,6 +531,7 @@ dt {
   position: relative;
   display: flex;
   margin: var(--baseline) 0;
+  overflow: visible;
 }
 
 .tableContainer:first-child {
@@ -549,21 +557,25 @@ dt {
 .tableStrokes rect {
   vector-effect: non-scaling-stroke;
   stroke: black;
-  stroke-width: var(--stroke-width);
+  stroke-width: 0.5;
   fill: none;
+}
+
+.tableStrokes rect {
+  stroke-width: 1; /* Adjust for clipping */
 }
 
 table {
   font-size: var(--ms--1);
   margin: 0;
-  display: inline-block;
   width: 100%;
   line-height: calc(var(--baseline) * 0.6);
 }
 
 td,
 th {
-  padding: 2pt;
+  padding: 3pt 2pt;
+  padding-bottom: 2pt;
   vertical-align: top;
   border: 0;
 }
