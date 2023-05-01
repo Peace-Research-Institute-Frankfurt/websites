@@ -108,6 +108,61 @@ const LearningUnit = ({ data, children }) => {
             }
           }
         })
+
+        // Draw table strokes and outlines
+        // (We do this in SVG to get crisp hairlines in the PDF)
+        const tableElements = previewRef.current.querySelectorAll('table')
+        tableElements.forEach((tableEl) => {
+          // Wrap the table so we can absolutely position the SVG later
+          const wrapperEl = document.createElement('div')
+          wrapperEl.classList.add('tableContainer')
+          tableEl.parentNode.insertBefore(wrapperEl, tableEl)
+          wrapperEl.appendChild(tableEl)
+
+          const containerRect = tableEl.getBoundingClientRect()
+          const rows = tableEl.querySelectorAll('tr')
+          const cells = rows[0].querySelectorAll('td, th')
+          const lines = []
+
+          // Draw column strokes
+          for (let i = 0; i < cells.length - 1; i++) {
+            const { right } = cells[i].getBoundingClientRect()
+            const x = ((right - containerRect.x) / containerRect.width) * 100
+            lines.push({ x1: x, x2: x, y1: 0, y2: 100 })
+          }
+          for (let i = 0; i < rows.length - 1; i++) {
+            const { bottom } = rows[i].getBoundingClientRect()
+            const y = ((bottom - containerRect.y) / containerRect.height) * 100
+            lines.push({ x1: 0, x2: 100, y1: y, y2: y })
+          }
+          console.log(lines)
+          // Generate SVG
+          const svgEl = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+          svgEl.setAttribute('viewBox', '0 0 100 100')
+          svgEl.setAttribute('preserveAspectRatio', 'none')
+          svgEl.classList.add('tableStrokes')
+          lines.forEach((line) => {
+            const lineEl = document.createElementNS('http://www.w3.org/2000/svg', 'line')
+            lineEl.setAttribute('x1', line.x1)
+            lineEl.setAttribute('x2', line.x2)
+            lineEl.setAttribute('y1', line.y1)
+            lineEl.setAttribute('y2', line.y2)
+            lineEl.setAttribute('stroke', 'red')
+            svgEl.insertAdjacentElement('beforeend', lineEl)
+          })
+
+          // Draw outline
+          const outlineEl = document.createElementNS('http://www.w3.org/2000/svg', 'rect')
+          outlineEl.setAttribute('x', 0)
+          outlineEl.setAttribute('y', 0)
+          outlineEl.setAttribute('width', 100)
+          outlineEl.setAttribute('height', 100)
+          outlineEl.setAttribute('stroke', 'red')
+          outlineEl.setAttribute('fill', 'none')
+          svgEl.insertAdjacentElement('beforeend', outlineEl)
+
+          tableEl.insertAdjacentElement('afterend', svgEl)
+        })
       })
     }, 500)
   }, [])
