@@ -48,7 +48,7 @@
   --baseline: 12pt;
   --indent: 12pt;
   --border-width: 0.25pt;
-  --stroke-width: 0.5;
+  --stroke-width: 1;
   --br: 2pt;
   --padding: calc(var(--indent) * 0.5);
 }
@@ -260,10 +260,13 @@ h4 {
 }
 h2 + ul,
 h2 + ol,
+h2 + .tableContainer,
 h3 + ul,
 h3 + ol,
+h3 + .tableContainer,
 h4 + ul,
-h4 + ol {
+h4 + ol,
+h4 + .tableContainer {
   margin-top: 0 !important;
 }
 
@@ -520,6 +523,15 @@ dt {
 .tableContainer {
   position: relative;
   display: flex;
+  margin: var(--baseline) 0;
+}
+
+.tableContainer:first-child {
+  margin-top: 0;
+}
+
+.tableContainer + h3 {
+  margin-top: 0 !important;
 }
 
 .tableStrokes {
@@ -538,6 +550,7 @@ dt {
   vector-effect: non-scaling-stroke;
   stroke: black;
   stroke-width: var(--stroke-width);
+  fill: none;
 }
 
 table {

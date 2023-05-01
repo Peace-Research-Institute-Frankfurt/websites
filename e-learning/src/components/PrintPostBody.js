@@ -55,6 +55,13 @@ const PostBody = ({ content, unit, site, setChapterList }) => {
     Resolution,
     Treaty,
     Institution,
+    table: ({ children }) => {
+      return (
+        <div className="tableContainer">
+          <table>{children}</table>
+        </div>
+      )
+    },
     Tab: ({ title, children }) => (
       <li>
         <h3>{title}</h3>
