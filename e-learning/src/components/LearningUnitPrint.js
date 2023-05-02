@@ -109,6 +109,10 @@ const LearningUnit = ({ data, children }) => {
           }
         })
 
+        // Remove Gatsby elements
+        const removeElements = document.querySelectorAll('gatsby-qod,div#query-on-demand-indicator-element,div#gatsby-announcer')
+        removeElements.forEach((el) => el.remove())
+
         // Draw table strokes and outlines
         // (We do this in SVG to get crisp hairlines in the PDF)
         const tableElements = previewRef.current.querySelectorAll('table')
