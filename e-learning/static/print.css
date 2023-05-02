@@ -298,10 +298,11 @@ figcaption {
 }
 
 .eyebrow {
-  font-size: var(--ms--1);
+  font-size: var(--ms--2);
   font-family: var(--mono);
   text-transform: uppercase;
   letter-spacing: 0.01em;
+  font-weight: 200;
 }
 
 .credit {
@@ -473,7 +474,7 @@ a {
 .treaty h2,
 .resolution h2,
 .institution h2 {
-  margin-top: calc(var(--baseline) * 0.55);
+  margin-top: calc(var(--baseline) * 0.25);
 }
 
 .chipGroup {

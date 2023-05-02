@@ -1,6 +1,6 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import { PrintTreatyParticipantGraph } from './TreatyParticipantGraph.js'
+import PrintTreatyParticipantGraph from './PrintTreatyParticipantGraph.js'
 import * as styles from './Treaty.module.scss'
 
 export default function PrintTreaty({ name }) {
@@ -79,7 +79,7 @@ export default function PrintTreaty({ name }) {
   }, 0)
 
   return (
-    <aside className="treaty">
+    <aside className="treaty" style={{ gridColumn: '3/4' }}>
       <svg preserveAspectRatio="none" className="asideBackdrop" width={100} height={100} viewBox="0 0 100 100">
         <rect x={0} y={0} width={100} height={100} />
       </svg>

@@ -56,7 +56,11 @@ export default function Treaty({ name }) {
     }
   })
   if (!treaty) {
-    return <p>Treaty not found</p>
+    return (
+      <p>
+        Treaty <code>{name}</code> not found
+      </p>
+    )
   }
 
   data.countries.nodes.forEach((node) => {
