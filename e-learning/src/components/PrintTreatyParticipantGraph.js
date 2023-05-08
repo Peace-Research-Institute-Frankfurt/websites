@@ -70,7 +70,7 @@ const PrintTreatyParticipantGraph = function ({ treaty }) {
   })
 
   return (
-    <div className={styles.printContainer}>
+    <div>
       <svg height={height} style={{ overflow: 'visible' }}>
         <g>{countryEls}</g>
       </svg>
