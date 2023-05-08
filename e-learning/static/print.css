@@ -139,6 +139,11 @@ ul.unitAuthors {
   line-height: var(--baseline);
   max-width: 45em;
 }
+.coverCitation {
+  max-width: 45em;
+  line-height: var(--baseline);
+  margin-top: var(--baseline);
+}
 .coverFunding {
   display: flex;
   justify-content: flex-start;

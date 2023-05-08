@@ -12,12 +12,15 @@ import ArrowRight from '../assets/icons/arrow-right.svg'
 import * as ButtonStyles from './Button.module.scss'
 
 import * as styles from './LearningUnit.module.scss'
+import authorsToString from './authorsToString'
 
 export const query = graphql`
   query ($id: String, $lu_id: String) {
     site: site {
+      buildTime(formatString: "D MMMM Y")
       siteMetadata {
         title
+        siteUrl
       }
     }
     post: file(id: { eq: $id }) {
@@ -159,22 +162,20 @@ const LearningUnit = ({ data, children }) => {
             </div>
           </section>
           <section>
-            <h2 className={styles.sectionTitle}>Disclosures</h2>
-            <div className={`${styles.disclosures} ${styles.sectionContent}`}>
-              <h3>Funding</h3>
-              <p>
-                This Learning Unit was produced with financial assistance from the European Union. The contents of this Learning Unit are however the
-                sole responsibility of the author(s) and should under no circumstances be regarded as reflecting the position of the European Union.
-              </p>
-              <h3>Content Warning</h3>
-              <p>This learning unit may contain audio-visual material or texts, which may not be suitable for all audiences. </p>
-              <h3>External Links</h3>
-              <p>
-                The site may contain hyperlink text references (’Links’) to other sites that are offered by third parties. These Links are made
-                available solely for the purpose of information and as an additional service for users. Only the respective operator is responsible
-                for all content and statements on linked Internet sites. Therefore, HSFK cannot guarantee the correctness and accuracy or any other
-                aspect of third party sites.
-              </p>
+            <h2 className={styles.sectionTitle}>Citation</h2>
+            <div className={styles.sectionContent}>
+              <input
+                className={styles.citation}
+                readOnly
+                onClick={(e) => {
+                  e.target.select()
+                }}
+                value={`${authorsToString(authors)}, "${
+                  frontmatter.title
+                }" in EUNPDC eLearning, ed. Niklas Schörnig, Peace Research Institute Frankfurt. Available at ${data.site.siteMetadata.siteUrl}${
+                  data.post.childMdx.fields.slug
+                }, last modified ${data.site.buildTime}`}
+              />
             </div>
           </section>
           <section>
@@ -191,6 +192,24 @@ const LearningUnit = ({ data, children }) => {
               >
                 Download PDF
               </a>
+            </div>
+          </section>
+          <section>
+            <div className={`${styles.disclosures} ${styles.sectionContent}`}>
+              <h3>Funding</h3>
+              <p>
+                This Learning Unit was produced with financial assistance from the European Union. The contents of this Learning Unit are however the
+                sole responsibility of the author(s) and should under no circumstances be regarded as reflecting the position of the European Union.
+              </p>
+              <h3>Content Warning</h3>
+              <p>This learning unit may contain audio-visual material or texts, which may not be suitable for all audiences. </p>
+              <h3>External Links</h3>
+              <p>
+                The site may contain hyperlink text references (’Links’) to other sites that are offered by third parties. These Links are made
+                available solely for the purpose of information and as an additional service for users. Only the respective operator is responsible
+                for all content and statements on linked Internet sites. Therefore, HSFK cannot guarantee the correctness and accuracy or any other
+                aspect of third party sites.
+              </p>
             </div>
           </section>
         </main>

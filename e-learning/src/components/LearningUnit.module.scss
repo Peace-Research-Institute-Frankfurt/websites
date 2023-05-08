@@ -84,6 +84,18 @@
   @extend %copy;
 }
 
+.citation {
+  @extend %caption;
+  padding: 0.65em;
+  padding-bottom: 0.5em;
+  font-family: inherit;
+  width: 100%;
+  resize: none;
+  border-radius: var(--br);
+  border: 1px solid var(--blue-80);
+  max-width: 40em;
+}
+
 .author {
   @extend %copy;
   list-style: none;
@@ -184,12 +196,13 @@
 
 .disclosures {
   @extend %caption;
-  max-width: 40em;
+  font-size: var(--ms--2);
+  columns: 2;
+  max-width: 70em;
   p {
     margin-bottom: 1rem;
   }
   h3 {
-    @extend %h4;
     margin-top: 0;
   }
 }

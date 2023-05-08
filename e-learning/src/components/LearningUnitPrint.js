@@ -5,10 +5,12 @@ import FundingLogo from '../assets/icons/funded-by-eu.svg'
 import * as styles from './LearningUnitPrint.module.scss'
 import { Previewer } from 'pagedjs'
 import './paged.scss'
+import authorsToString from './authorsToString'
 
 export const query = graphql`
   query ($lu_id: String, $id: String) {
     site: site {
+      buildTime(formatString: "D MMMM Y")
       siteMetadata {
         title
         siteUrl
@@ -208,6 +210,13 @@ const LearningUnit = ({ data, children }) => {
                 )
               })}
             </ul>
+            <div className="coverCitation">
+              <p>
+                Cite as: {authorsToString(unit.authors)}, "{unit.title}" in EUNPDC eLearning, ed. Niklas Schoernig, Peace Research Institute
+                Frankfurt. Available at {data.site.siteMetadata.siteUrl}
+                {data.posts.nodes[0].childMdx.fields.slug}, last modified {data.site.buildTime}
+              </p>
+            </div>
             <div className="coverAbout">
               <p>
                 The EU Non-Proliferation and Disarmament eLearning Course aims to cover all aspects of the EU non-proliferation and disarmament
