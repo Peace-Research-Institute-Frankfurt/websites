@@ -1,0 +1,70 @@
+@import 'vars';
+
+.rect {
+  stroke: black;
+}
+
+.label {
+  font-size: 6.5pt;
+  font-family: var(--mono);
+}
+
+.legend {
+  font-size: var(--ms--1);
+  line-height: 1.2;
+  list-style: none;
+  margin-left: 0 !important;
+  margin-bottom: 0.5em;
+  display: flex;
+  flex-flow: column;
+  gap: 2pt;
+}
+
+.legend-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 3pt;
+  svg {
+    position: relative;
+    width: 6pt;
+    height: 6pt;
+    top: 0.5pt;
+  }
+  span {
+    display: block;
+  }
+  rect {
+    vector-effect: non-scaling-stroke;
+    stroke: black;
+    stroke-width: 0.5;
+  }
+}
+
+.ratification {
+  rect {
+    fill: white;
+  }
+}
+.accession,
+.succession,
+.acceptance {
+  rect {
+    fill: rgb(190, 190, 190);
+  }
+}
+.signature {
+  rect {
+    fill: rgb(80, 80, 80);
+  }
+  text {
+    fill: white;
+  }
+}
+.none {
+  rect {
+    fill: black;
+  }
+  text {
+    fill: white;
+  }
+}

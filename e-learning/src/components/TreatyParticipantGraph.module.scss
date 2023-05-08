@@ -23,6 +23,19 @@ $border-color: rgba(black, 0.7);
     display: contents;
   }
 }
+
+.printItems {
+  --col-count: 12;
+  display: grid;
+  grid-template-columns: repeat(var(--col-count), 1fr);
+  list-style: none;
+  margin-left: 0 !important;
+  overflow: visible;
+  border-top: 1px solid $border-color;
+  border-left: 1px solid $border-color;
+  margin-bottom: 6pt;
+}
+
 .item {
   font-size: var(--ms--1);
   background: white;
@@ -54,6 +67,19 @@ $border-color: rgba(black, 0.7);
   &:last-of-type {
     border-right: 1px solid $border-color;
   }
+}
+
+.printItem {
+  font-family: var(--mono);
+  font-size: var(--ms--1);
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 2pt 0;
+  line-height: 1;
+  text-align: center;
+  margin-bottom: 0 !important;
+  display: block;
+  letter-spacing: 0.01em;
 }
 
 .source {

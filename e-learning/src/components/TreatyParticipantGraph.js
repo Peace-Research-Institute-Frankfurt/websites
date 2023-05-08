@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react'
 import TooltipAdapter from './TooltipAdapter'
 import * as styles from './TreatyParticipantGraph.module.scss'
 
-export default function TreatyParticipantGraph({ treaty }) {
+const TreatyParticipantGraph = function ({ treaty }) {
   const [tooltipActive, setTooltipActive] = useState(false)
   const [tooltipTarget, setTooltipTarget] = useState(null)
   const [tooltipText, setTooltipText] = useState('')
@@ -103,3 +103,5 @@ export default function TreatyParticipantGraph({ treaty }) {
     </div>
   )
 }
+
+export { TreatyParticipantGraph }

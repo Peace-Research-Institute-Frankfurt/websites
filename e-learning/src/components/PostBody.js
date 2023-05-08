@@ -54,6 +54,7 @@ const shortCodes = {
   DetailsGroup: ({ ...props }) => <DetailsGroup {...props} styles={DetailsStyles} />,
   Callout: ({ ...props }) => <Callout {...props} buttonComponent={Button} styles={CalloutStyles} />,
   Map,
+  ColumnBreak: () => <></>,
 }
 
 const PostBody = ({ content }) => {

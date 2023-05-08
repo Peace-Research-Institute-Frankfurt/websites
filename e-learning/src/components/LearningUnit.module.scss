@@ -75,6 +75,11 @@
   }
 }
 
+.unit-actions {
+  display: flex;
+  gap: 0.5em;
+}
+
 .copy {
   @extend %copy;
 }
