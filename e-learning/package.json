@@ -42,8 +42,7 @@
     "remark-smartypants": "^2.0.0",
     "slug": "^8.2.2",
     "svg-react-loader": "^0.4.6",
-    "unist-util-visit": "^4.1.1",
-    "puppeteer": "^19.11.0"
+    "unist-util-visit": "^4.1.1"
   },
   "devDependencies": {
     "chalk": "^5.2.0",
@@ -52,6 +51,7 @@
     "gray-matter": "^4.0.3",
     "just-diff": "^6.0.0",
     "luxon": "^3.3.0",
-    "pdf-lib": "^1.17.1"
+    "pdf-lib": "^1.17.1",
+    "puppeteer": "^19.11.0"
   }
 }
