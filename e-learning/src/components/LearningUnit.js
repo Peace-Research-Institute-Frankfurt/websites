@@ -164,18 +164,11 @@ const LearningUnit = ({ data, children }) => {
           <section>
             <h2 className={styles.sectionTitle}>Citation</h2>
             <div className={styles.sectionContent}>
-              <input
-                className={styles.citation}
-                readOnly
-                onClick={(e) => {
-                  e.target.select()
-                }}
-                value={`${authorsToString(authors)}, "${
-                  frontmatter.title
-                }" in EUNPDC eLearning, ed. Niklas Schörnig, Peace Research Institute Frankfurt. Available at ${data.site.siteMetadata.siteUrl}${
-                  data.post.childMdx.fields.slug
-                }, last modified ${data.site.buildTime}`}
-              />
+              <p className={styles.citation}>
+                {authorsToString(authors)}, "{frontmatter.title}" in EUNPDC eLearning, ed. Niklas Schörnig, Peace Research Institute Frankfurt.
+                Available at {data.site.siteMetadata.siteUrl}
+                {data.post.childMdx.fields.slug}, last modified {data.site.buildTime}
+              </p>
             </div>
           </section>
           <section>
