@@ -1,5 +1,6 @@
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import React from 'react'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import MarkdownRenderer from 'react-markdown-renderer'
 
 export default function Figure({ styles, image, license, caption, credit, size, alt, src }) {
   if (!styles) styles = {}
@@ -20,7 +21,7 @@ export default function Figure({ styles, image, license, caption, credit, size, 
         {imageEl}
         {(credit || caption) && (
           <figcaption className={styles.captions}>
-            <span className={styles.caption}>{caption && <>{caption}</>}</span>
+            <span className={styles.caption}>{caption && <MarkdownRenderer markdown={caption} />}</span>
             {credit && (
               <span className={styles.credit}>
                 <>{credit}</>

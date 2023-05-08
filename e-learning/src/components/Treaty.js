@@ -2,7 +2,7 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Expandable from '@shared/components/Expandable'
 import { Chip, ChipGroup } from './Chip.js'
-import TreatyParticipantGraph from './TreatyParticipantGraph'
+import { TreatyParticipantGraph } from './TreatyParticipantGraph'
 import Button from './ButtonAdapter.js'
 import * as styles from './Treaty.module.scss'
 
@@ -56,7 +56,11 @@ export default function Treaty({ name }) {
     }
   })
   if (!treaty) {
-    return <p>Treaty not found</p>
+    return (
+      <p>
+        Treaty <code>{name}</code> not found
+      </p>
+    )
   }
 
   data.countries.nodes.forEach((node) => {
@@ -92,7 +96,7 @@ export default function Treaty({ name }) {
           <Chip>{memberCount} Member States</Chip>
         </ChipGroup>
         <p className={styles.description}>{treaty.description}</p>
-        <h3 className={styles.subtitle}>Current Participants</h3>
+        <h3 className={styles.subtitle}>Current Adoption</h3>
         <TreatyParticipantGraph treaty={treaty} candidates={data.countries.nodes} />
       </Expandable>
     </section>

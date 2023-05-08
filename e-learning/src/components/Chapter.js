@@ -19,6 +19,7 @@ export const query = graphql`
     post: file(id: { eq: $id }) {
       id
       childMdx {
+        tableOfContents
         fields {
           slug
         }
@@ -28,7 +29,6 @@ export const query = graphql`
           order
           reading_time
         }
-        tableOfContents
       }
     }
     chapters: allFile(

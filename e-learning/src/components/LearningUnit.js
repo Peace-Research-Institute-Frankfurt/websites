@@ -60,7 +60,12 @@ export const query = graphql`
       }
     }
     chapters: allFile(
-      filter: { extension: { eq: "mdx" }, name: { ne: "index" }, sourceInstanceName: { eq: "luContent" }, relativeDirectory: { eq: $lu_id } }
+      filter: {
+        extension: { eq: "mdx" }
+        name: { nin: ["index", "__print"] }
+        sourceInstanceName: { eq: "luContent" }
+        relativeDirectory: { eq: $lu_id }
+      }
       sort: { childMdx: { frontmatter: { order: ASC } } }
     ) {
       nodes {
@@ -173,13 +178,19 @@ const LearningUnit = ({ data, children }) => {
             </div>
           </section>
           <section>
-            <div className={styles.sectionContent}>
+            <div className={`${styles.sectionContent} ${styles.unitActions}`}>
               <Link to={startLink} className={`${ButtonStyles.container} ${ButtonStyles.primary}`}>
                 Start learning unit
                 <div className={ButtonStyles.icon}>
                   <ArrowRight />
                 </div>
               </Link>
+              <a
+                className={`${ButtonStyles.container} ${ButtonStyles.secondary}`}
+                href={`/static/eunpdc-${data.post.childMdx.fields.slug.replace(/\//g, '')}.pdf`}
+              >
+                Download PDF
+              </a>
             </div>
           </section>
         </main>
