@@ -72,14 +72,6 @@ const config = {
         mdxOptions: {
           remarkPlugins: [remarkGfm],
         },
-        gatsbyRemarkPlugins: [
-          {
-            resolve: 'prif-gatsby-remark-smartypants',
-            options: {
-              dashes: 'oldschool',
-            },
-          },
-        ],
       },
     },
     {
@@ -100,7 +92,7 @@ const config = {
         defaultLanguage: `de`,
         i18nextOptions: {
           interpolation: {
-            escapeValue: false, // not needed for react as it escapes by default
+            escapeValue: false,
           },
           keySeparator: false,
           nsSeparator: false,

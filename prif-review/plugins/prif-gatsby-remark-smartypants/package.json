@@ -1,9 +1,0 @@
-{
-  "name": "prif-gatsby-remark-smartypants",
-  "description": "Use retext-smartypants to auto-enhance typography of markdown",
-  "version": "0.0.1",
-  "author": "Max Kohler",
-  "type": "module",
-  "license": "MIT",
-  "main": "index.js"
-}
