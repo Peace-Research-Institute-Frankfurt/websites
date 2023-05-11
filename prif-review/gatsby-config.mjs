@@ -85,6 +85,36 @@ const config = {
     {
       resolve: 'gatsby-plugin-react-svg',
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/locales`,
+        name: `locale`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-react-i18next`,
+      options: {
+        localeJsonSourceName: `locale`,
+        languages: [`en`, `de`],
+        defaultLanguage: `de`,
+        i18nextOptions: {
+          interpolation: {
+            escapeValue: false, // not needed for react as it escapes by default
+          },
+          keySeparator: false,
+          nsSeparator: false,
+        },
+        redirect: false,
+        pages: [
+          {
+            matchPath: '/:lang?/:slug',
+            getLanguageFromPath: true,
+            exludeLanguages: ['en', 'de'],
+          },
+        ],
+      },
+    },
   ],
 }
 

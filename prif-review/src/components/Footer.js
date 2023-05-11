@@ -1,6 +1,6 @@
-import { graphql, useStaticQuery, Link } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
+import { Link, useTranslation } from 'gatsby-plugin-react-i18next'
 import React from 'react'
-
 export default function Footer() {
   const data = useStaticQuery(graphql`
     query {
@@ -23,6 +23,7 @@ export default function Footer() {
       }
     }
   `)
+  const { t } = useTranslation()
   return (
     <footer>
       <nav>
@@ -39,7 +40,9 @@ export default function Footer() {
           })}
         </ul>
       </nav>
-      <p>© HSFK und die Autor*innen {new Date().getFullYear()}</p>
+      <p>
+        {t('PRIF and the authors')} {new Date().getFullYear()}
+      </p>
     </footer>
   )
 }

@@ -1,6 +1,7 @@
 const { createFilePath } = require(`gatsby-source-filesystem`)
 const slug = require('slug')
 const path = require('path')
+const defaultLocale = 'de'
 slug.extend({ '—': '-', '–': '-' })
 
 exports.createPages = async function ({ actions, graphql }) {
@@ -12,6 +13,7 @@ exports.createPages = async function ({ actions, graphql }) {
           childMdx {
             fields {
               slug
+              locale
             }
             frontmatter {
               title
@@ -28,6 +30,7 @@ exports.createPages = async function ({ actions, graphql }) {
           childMdx {
             fields {
               slug
+              locale
             }
             frontmatter {
               title
@@ -43,7 +46,9 @@ exports.createPages = async function ({ actions, graphql }) {
 
   data.posts.nodes.forEach((node) => {
     const postTemplate = require.resolve(`./src/components/Post.js`)
-    const path = node.childMdx.fields.slug
+    const locale = node.childMdx.fields.locale
+    let path = `${locale && locale !== defaultLocale ? locale : ''}/${node.childMdx.fields.slug}`
+    console.log(`Creating post at ${path}`)
     actions.createPage({
       path: path,
       component: `${postTemplate}?__contentFilePath=${node.childMdx.internal.contentFilePath}`,
@@ -76,11 +81,25 @@ exports.onCreateNode = ({ node, actions, createNodeId, getNode }) => {
     })
   }
   if (node.internal.type === 'Mdx') {
-    let path = createFilePath({ node, getNode })
+    const locales = ['en', 'de']
+    let nodeLocale = ''
+    locales.forEach((locale) => {
+      if (node.internal.contentFilePath.indexOf(`.${locale}.mdx`) !== -1) {
+        console.log(`Writing locale: ${locale}`)
+        nodeLocale = locale
+      }
+    })
 
+    let path = createFilePath({ node, getNode })
     if (node.frontmatter.title) {
       path = slug(node.frontmatter.title)
     }
+
+    actions.createNodeField({
+      node,
+      name: 'locale',
+      value: nodeLocale,
+    })
 
     actions.createNodeField({
       node,
