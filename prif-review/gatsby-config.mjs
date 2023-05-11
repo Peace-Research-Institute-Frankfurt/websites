@@ -110,7 +110,6 @@ const config = {
           {
             matchPath: '/:lang?/:slug',
             getLanguageFromPath: true,
-            exludeLanguages: ['en', 'de'],
           },
         ],
       },
