@@ -1,6 +1,6 @@
 {
   "name": "prif-review",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "private": true,
   "description": "Gatsby source for PRIF Review",
   "author": "Max Kohler",
