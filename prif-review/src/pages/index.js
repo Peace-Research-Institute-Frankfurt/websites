@@ -29,10 +29,10 @@ const Index = ({ data }) => {
     <App>
       <SkipToContent />
       <main id="content">
-          <h1>PRIF Review</h1>
-          {data.posts.nodes.map(p => {
-            return(<Link to={p.childMdx.fields.slug}>{p.childMdx.frontmatter.title}</Link>)
-          })}
+        <h1>PRIF Review</h1>
+        {data.posts.nodes.map((p) => {
+          return <Link to={p.childMdx.fields.slug}>{p.childMdx.frontmatter.title}</Link>
+        })}
       </main>
     </App>
   )

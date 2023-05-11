@@ -32,6 +32,7 @@ const Page = ({ data, children }) => {
       <SkipToContent />
       <article id="content">
         <main>
+          <h1>{frontmatter.title}</h1>
           <PostBody>{children}</PostBody>
         </main>
       </article>

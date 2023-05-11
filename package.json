@@ -3,6 +3,7 @@
   "workspaces": [
     "new-work",
     "e-learning",
+    "prif-review",
     "shared",
     "scripts",
     "e-learning-plugin"

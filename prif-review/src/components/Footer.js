@@ -1,4 +1,4 @@
-import { Link, graphql, useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery, Link } from 'gatsby'
 import React from 'react'
 
 export default function Footer() {
@@ -24,7 +24,21 @@ export default function Footer() {
     }
   `)
   return (
-    <footer >
+    <footer>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/">Startseite</Link>
+          </li>
+          {data.pages.nodes.map((p) => {
+            return (
+              <li key={`navitem-${p.id}`}>
+                <Link to={`../${p.childMdx.fields.slug}`}>{p.childMdx.frontmatter.title}</Link>
+              </li>
+            )
+          })}
+        </ul>
+      </nav>
       <p>© HSFK und die Autor*innen {new Date().getFullYear()}</p>
     </footer>
   )

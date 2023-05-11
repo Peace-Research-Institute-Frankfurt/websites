@@ -50,6 +50,7 @@ exports.createPages = async function ({ actions, graphql }) {
       context: { id: node.id },
     })
   })
+
   data.pages.nodes.forEach((node) => {
     const postTemplate = require.resolve(`./src/components/Page.js`)
     const path = node.childMdx.fields.slug
@@ -76,9 +77,11 @@ exports.onCreateNode = ({ node, actions, createNodeId, getNode }) => {
   }
   if (node.internal.type === 'Mdx') {
     let path = createFilePath({ node, getNode })
+
     if (node.frontmatter.title) {
       path = slug(node.frontmatter.title)
     }
+
     actions.createNodeField({
       node,
       name: 'slug',
@@ -93,14 +96,13 @@ exports.createSchemaCustomization = async ({ getNode, getNodesByType, pathPrefix
   const typeDefs = `
   type Author implements Node {
     author_id: String
-    image: File @fileByRelativePath
   }
-  type FrontMatter {
-    hero_image: File @fileByRelativePath
+  type PostFrontmatter {
     authors: [Author] @link(by: "author_id")
+    intro: String
   }
   type Mdx {
-    frontmatter: FrontMatter
+    frontmatter: PostFrontmatter
   }
   `
   createTypes(typeDefs)
