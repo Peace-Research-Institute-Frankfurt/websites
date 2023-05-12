@@ -133,7 +133,7 @@ export default function StickyHeader({ post, unit, next, chapters, prev }) {
                   return (
                     <li className={styles.chaptersItem} key={`chapters-${i}`}>
                       <Link className={styles.chaptersLink} to={`${unit.childMdx.fields.slug}${c.childMdx.fields.slug}`}>
-                        {c.childMdx.frontmatter.order + 1}. {c.childMdx.frontmatter.title}
+                        {c.childMdx.frontmatter.order}. {c.childMdx.frontmatter.title}
                         {bookmarkIndex !== -1 && (
                           <span className={styles.chaptersBookmarked}>
                             <BookmarkFilled />
