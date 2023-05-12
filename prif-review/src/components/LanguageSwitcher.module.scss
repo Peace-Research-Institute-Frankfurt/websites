@@ -1,0 +1,22 @@
+@import 'vars';
+
+.container {
+  display: flex;
+  border: 1px solid var(--black);
+  li {
+    display: contents;
+    &:first-child .link {
+      border-left: 0;
+    }
+  }
+}
+
+.link {
+  padding: 0.2em 0.5em;
+  display: block;
+  border-left: 1px solid var(--black);
+}
+.link-current {
+  background: var(--black);
+  color: white;
+}

@@ -1,0 +1,20 @@
+@import 'vars';
+
+.container {
+  display: inline-block;
+  position: absolute;
+  top: var(--padding);
+  left: var(--padding);
+  padding: 0.6em 0.8em;
+  z-index: 10000;
+  font-weight: 600;
+  background: var(--white);
+  border-radius: var(--br);
+  opacity: 0;
+  transition: var(--fast);
+  pointer-events: none;
+  &:focus-visible {
+    pointer-events: all;
+    opacity: 1;
+  }
+}

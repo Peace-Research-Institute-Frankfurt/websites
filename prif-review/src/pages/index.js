@@ -52,13 +52,13 @@ export const query = graphql`
   }
 `
 
-const Index = ({ data }) => {
+const Index = ({ data, pageContext }) => {
   const { t } = useTranslation()
   return (
-    <App pages={data.pages.nodes}>
+    <App pages={data.pages.nodes} language={pageContext.language}>
       <SkipToContent />
       <main id="content">
-        <h1>{t('Home')}</h1>
+        <h1>{t('Annual Report 2023')}</h1>
         {data.posts.nodes.map((p) => {
           return <Link to={`/${p.childMdx.fields.slug}`}>{p.childMdx.frontmatter.title}</Link>
         })}

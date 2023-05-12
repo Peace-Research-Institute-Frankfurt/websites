@@ -1,7 +1,8 @@
 import React from 'react'
 import { Link, useI18next } from 'gatsby-plugin-react-i18next'
+import * as styles from './LanguageSwitcher.module.scss'
 
-export default function LanguageSwitcher({ translations }) {
+export default function LanguageSwitcher({ translations, language }) {
   const { languages, originalPath } = useI18next()
   if (!translations) translations = []
 
@@ -16,8 +17,8 @@ export default function LanguageSwitcher({ translations }) {
 
     return (
       <li key={l}>
-        <Link to={path} language={l}>
-          {l} (/{translation && translation.childMdx.frontmatter.title})
+        <Link to={path} language={l} className={`${styles.link} ${l === language && styles.linkCurrent}`}>
+          {l}
         </Link>
       </li>
     )
@@ -25,7 +26,7 @@ export default function LanguageSwitcher({ translations }) {
 
   return (
     <>
-      <ul className="languages">{languageLinks}</ul>
+      <ul className={styles.container}>{languageLinks}</ul>
     </>
   )
 }

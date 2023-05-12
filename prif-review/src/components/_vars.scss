@@ -21,3 +21,16 @@
     }
   }
 }
+
+%h1 {
+  font-family: var(--sans);
+  font-size: var(--ms-2);
+  font-weight: 600;
+}
+%copy {
+  font-family: var(--serif);
+}
+%copy-large {
+  @extend %copy;
+  font-size: var(--ms-2);
+}

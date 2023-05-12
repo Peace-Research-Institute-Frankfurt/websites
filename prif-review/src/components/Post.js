@@ -2,8 +2,8 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import App from './App'
 import PostBody from './PostBody'
-import SkipToContent from './SkipToContent'
 import Meta from './Meta'
+import * as styles from './Post.module.scss'
 
 export const query = graphql`
   query ($id: String!, $language: String!, $translations: [String!]) {
@@ -62,19 +62,17 @@ export const query = graphql`
     }
   }
 `
-const Post = ({ data, children }) => {
+const Post = ({ data, pageContext, children }) => {
   const frontmatter = data.post.childMdx.frontmatter
 
   return (
-    <App translations={data.translations.nodes} pages={data.pages.nodes}>
-      <SkipToContent />
-      <article id="content">
-        <main>
-          <h1>{frontmatter.title}</h1>
-          <p>Translations: {data.translations.nodes.map((node) => node.childMdx.frontmatter.title).join(', ')}</p>
-          {frontmatter.intro}
-          <PostBody>{children}</PostBody>
-        </main>
+    <App translations={data.translations.nodes} pages={data.pages.nodes} language={pageContext.language}>
+      <article id="content" className={styles.postContainer}>
+        <header className={styles.header}>
+          <h1 className={styles.title}>{frontmatter.title}</h1>
+          <p className={styles.intro}>{frontmatter.intro}</p>
+        </header>
+        <PostBody>{children}</PostBody>
       </article>
     </App>
   )

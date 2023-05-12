@@ -1,0 +1,18 @@
+@import 'vars';
+
+.post-container {
+  @extend %copy;
+  padding: 5%;
+}
+
+.header {
+  margin-bottom: 0.5em;
+}
+
+.title {
+  @extend %h1;
+}
+
+.intro {
+  @extend %copy-large;
+}
