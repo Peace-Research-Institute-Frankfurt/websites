@@ -90,6 +90,8 @@ const config = {
         localeJsonSourceName: `locale`,
         languages: [`en`, `de`],
         defaultLanguage: `de`,
+        fallbackLanguage: `de`,
+        redirect: false,
         i18nextOptions: {
           interpolation: {
             escapeValue: false,
@@ -97,7 +99,6 @@ const config = {
           keySeparator: false,
           nsSeparator: false,
         },
-        redirect: false,
         pages: [
           {
             matchPath: '/:lang?/:slug',

@@ -1,8 +1,10 @@
 const { createFilePath } = require(`gatsby-source-filesystem`)
 const slug = require('slug')
-const path = require('path')
-const defaultLocale = 'de'
 slug.extend({ '—': '-', '–': '-' })
+const path = require('path')
+
+const locales = ['en', 'de']
+const defaultLocale = 'de'
 
 exports.createPages = async function ({ actions, graphql }) {
   const { data } = await graphql(`
@@ -10,6 +12,7 @@ exports.createPages = async function ({ actions, graphql }) {
       posts: allFile(filter: { sourceInstanceName: { eq: "posts" }, extension: { eq: "mdx" } }) {
         nodes {
           id
+          base
           childMdx {
             fields {
               slug
@@ -27,6 +30,7 @@ exports.createPages = async function ({ actions, graphql }) {
       pages: allFile(filter: { sourceInstanceName: { eq: "pages" }, extension: { eq: "mdx" } }) {
         nodes {
           id
+          base
           childMdx {
             fields {
               slug
@@ -47,12 +51,30 @@ exports.createPages = async function ({ actions, graphql }) {
   data.posts.nodes.forEach((node) => {
     const postTemplate = require.resolve(`./src/components/Post.js`)
     const locale = node.childMdx.fields.locale
+    const translationCandidates = locales.filter((el) => el !== locale)
     let path = `${locale && locale !== defaultLocale ? locale : ''}/${node.childMdx.fields.slug}`
+
     console.log(`Creating post at ${path}`)
+    console.log(`Translation candidates: ${translationCandidates.join(', ')}`)
+
+    const rootFileName = node.base.replace(`.${locale}.mdx`, '')
+    console.log(`Root filename: ${rootFileName}`)
+
+    const translations = data.posts.nodes.filter((el) => {
+      const foundIndex = translationCandidates.findIndex((t) => {
+        const candidateFileName = el.base.replace(`.${t}.mdx`, '')
+        return candidateFileName === rootFileName
+      })
+      return foundIndex !== -1
+    })
+
+    const translationIds = translations.map((t) => t.id)
+
+    console.log(`Translations found: ${translations.map((t) => t.childMdx.frontmatter.title).join(', ')}`)
     actions.createPage({
       path: path,
       component: `${postTemplate}?__contentFilePath=${node.childMdx.internal.contentFilePath}`,
-      context: { id: node.id },
+      context: { id: node.id, translations: translationIds },
     })
   })
 
@@ -81,7 +103,6 @@ exports.onCreateNode = ({ node, actions, createNodeId, getNode }) => {
     })
   }
   if (node.internal.type === 'Mdx') {
-    const locales = ['en', 'de']
     let nodeLocale = ''
     locales.forEach((locale) => {
       if (node.internal.contentFilePath.indexOf(`.${locale}.mdx`) !== -1) {

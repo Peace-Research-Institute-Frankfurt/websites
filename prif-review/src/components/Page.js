@@ -5,7 +5,7 @@ import PostBody from './PostBody'
 import SkipToContent from './SkipToContent'
 
 export const query = graphql`
-  query ($id: String!) {
+  query ($id: String!, $language: String!) {
     site: site {
       siteMetadata {
         title
@@ -23,12 +23,26 @@ export const query = graphql`
         }
       }
     }
+    pages: allFile(filter: { extension: { eq: "mdx" }, sourceInstanceName: { eq: "pages" }, childMdx: { fields: { locale: { eq: $language } } } }) {
+      nodes {
+        id
+        childMdx {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            order
+          }
+        }
+      }
+    }
   }
 `
 const Page = ({ data, children }) => {
   const frontmatter = data.post.childMdx.frontmatter
   return (
-    <App>
+    <App pages={data.pages.nodes}>
       <SkipToContent />
       <article id="content">
         <main>

@@ -1,40 +1,27 @@
 import { graphql, useStaticQuery } from 'gatsby'
 import { Link, useTranslation } from 'gatsby-plugin-react-i18next'
 import React from 'react'
-export default function Footer() {
+export default function Footer({ pages }) {
   const data = useStaticQuery(graphql`
     query {
       meta: site {
         buildTime(formatString: "D MMMM Y, HH:mm", locale: "de")
       }
-      pages: allFile(filter: { extension: { eq: "mdx" }, sourceInstanceName: { eq: "pages" } }, sort: { childMdx: { frontmatter: { order: ASC } } }) {
-        nodes {
-          id
-          childMdx {
-            fields {
-              slug
-            }
-            frontmatter {
-              title
-              order
-            }
-          }
-        }
-      }
     }
   `)
   const { t } = useTranslation()
+  if (!pages) pages = []
   return (
     <footer>
       <nav>
         <ul>
           <li>
-            <Link to="/">Startseite</Link>
+            <Link to="/">{t('Home')}</Link>
           </li>
-          {data.pages.nodes.map((p) => {
+          {pages.map((p) => {
             return (
               <li key={`navitem-${p.id}`}>
-                <Link to={`../${p.childMdx.fields.slug}`}>{p.childMdx.frontmatter.title}</Link>
+                <Link to={`/${p.childMdx.fields.slug}`}>{p.childMdx.frontmatter.title}</Link>
               </li>
             )
           })}

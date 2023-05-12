@@ -16,6 +16,20 @@ export const query = graphql`
         }
       }
     }
+    pages: allFile(filter: { extension: { eq: "mdx" }, sourceInstanceName: { eq: "pages" }, childMdx: { fields: { locale: { eq: $language } } } }) {
+      nodes {
+        id
+        childMdx {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            order
+          }
+        }
+      }
+    }
     posts: allFile(
       filter: { extension: { eq: "mdx" }, sourceInstanceName: { eq: "posts" }, childMdx: { fields: { locale: { eq: $language } } } }
       sort: { childMdx: { frontmatter: { order: ASC } } }
@@ -41,7 +55,7 @@ export const query = graphql`
 const Index = ({ data }) => {
   const { t } = useTranslation()
   return (
-    <App>
+    <App pages={data.pages.nodes}>
       <SkipToContent />
       <main id="content">
         <h1>{t('Home')}</h1>
