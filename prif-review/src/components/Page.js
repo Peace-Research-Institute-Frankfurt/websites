@@ -5,10 +5,19 @@ import PostBody from './PostBody'
 import SkipToContent from './SkipToContent'
 
 export const query = graphql`
-  query ($id: String!, $language: String!) {
+  query ($id: String!, $language: String!, $translations: [String!]) {
     site: site {
       siteMetadata {
         title
+      }
+    }
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
       }
     }
     post: file(id: { eq: $id }) {
@@ -16,10 +25,24 @@ export const query = graphql`
       childMdx {
         fields {
           slug
+          locale
         }
         frontmatter {
           title
           intro
+        }
+      }
+    }
+    translations: allFile(filter: { id: { in: $translations } }) {
+      nodes {
+        childMdx {
+          fields {
+            locale
+            slug
+          }
+          frontmatter {
+            title
+          }
         }
       }
     }
@@ -42,7 +65,7 @@ export const query = graphql`
 const Page = ({ data, children }) => {
   const frontmatter = data.post.childMdx.frontmatter
   return (
-    <App pages={data.pages.nodes}>
+    <App pages={data.pages.nodes} translations={data.translations.nodes}>
       <SkipToContent />
       <article id="content">
         <main>
