@@ -1,4 +1,4 @@
-name: '[New Work] Check Markdown Links'
+name: '[PRIF Review] Check Markdown Links'
 
 on:
   workflow_dispatch:
