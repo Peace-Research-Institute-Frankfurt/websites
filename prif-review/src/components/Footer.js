@@ -1,18 +1,20 @@
 import { graphql, useStaticQuery } from 'gatsby'
 import { Link, useTranslation } from 'gatsby-plugin-react-i18next'
 import React from 'react'
+import * as styles from './Footer.module.scss'
+
 export default function Footer({ pages }) {
   const data = useStaticQuery(graphql`
     query {
       meta: site {
-        buildTime(formatString: "D MMMM Y, HH:mm", locale: "de")
+        buildTime(formatString: "D MMMM Y, HH:mm", locale: "en")
       }
     }
   `)
   const { t } = useTranslation()
   if (!pages) pages = []
   return (
-    <footer>
+    <footer className={styles.container}>
       <nav>
         <ul>
           <li>
@@ -30,6 +32,7 @@ export default function Footer({ pages }) {
       <p>
         {t('PRIF and the authors')} {new Date().getFullYear()}
       </p>
+      <p>Built {data.meta.buildTime}</p>
     </footer>
   )
 }

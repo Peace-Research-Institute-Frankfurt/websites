@@ -1,5 +1,6 @@
-@import '../components/vars';
+@import 'vars';
 
 .container {
   padding: 0 var(--padding);
+  margin-top: 1rem;
 }

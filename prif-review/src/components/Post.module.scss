@@ -2,7 +2,7 @@
 
 .post-container {
   @extend %copy;
-  padding: 5%;
+  padding: 0 var(--padding);
 }
 
 .header {

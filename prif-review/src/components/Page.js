@@ -2,6 +2,7 @@ import { graphql } from 'gatsby'
 import React from 'react'
 import App from './App'
 import PostBody from './PostBody'
+import * as styles from './Page.module.scss'
 
 export const query = graphql`
   query ($id: String!, $language: String!, $translations: [String!]) {
@@ -65,9 +66,9 @@ const Page = ({ data, children, pageContext }) => {
   const frontmatter = data.post.childMdx.frontmatter
   return (
     <App pages={data.pages.nodes} translations={data.translations.nodes} language={pageContext.language}>
-      <article id="content">
+      <article id="content" className={styles.container}>
         <main>
-          <h1>{frontmatter.title}</h1>
+          <h1 className={styles.title}>{frontmatter.title}</h1>
           <PostBody>{children}</PostBody>
         </main>
       </article>

@@ -4,6 +4,7 @@ import App from '../components/App'
 import Meta from '../components/Meta'
 import SkipToContent from '../components/SkipToContent'
 import { Link, useTranslation } from 'gatsby-plugin-react-i18next'
+import * as styles from './index.module.scss'
 
 export const query = graphql`
   query ($language: String!) {
@@ -57,7 +58,7 @@ const Index = ({ data, pageContext }) => {
   return (
     <App pages={data.pages.nodes} language={pageContext.language}>
       <SkipToContent />
-      <main id="content">
+      <main className={styles.container}>
         <h1>{t('Annual Report 2023')}</h1>
         {data.posts.nodes.map((p) => {
           return <Link to={`/${p.childMdx.fields.slug}`}>{p.childMdx.frontmatter.title}</Link>
