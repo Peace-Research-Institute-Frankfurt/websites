@@ -1,6 +1,7 @@
 @import 'vars';
 
 .container {
+  @extend %copy;
   padding: 0 var(--padding);
   margin-top: 1rem;
 }
