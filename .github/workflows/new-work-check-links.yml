@@ -21,4 +21,4 @@ jobs:
         with:
           title: Fix broken links
           content-filepath: ./lychee/out.md
-          labels: 'New Work'
+          labels: 'new work'
