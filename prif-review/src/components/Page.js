@@ -3,6 +3,7 @@ import React from 'react'
 import App from './App'
 import PostBody from './PostBody'
 import * as styles from './Page.module.scss'
+import Meta from './Meta'
 
 export const query = graphql`
   query ($id: String!, $language: String!, $translations: [String!]) {
@@ -78,12 +79,7 @@ const Page = ({ data, children, pageContext }) => {
 
 export function Head({ data }) {
   const frontmatter = data.post.childMdx.frontmatter
-  return (
-    <>
-      <title>{`${frontmatter.title} – New Work (Eine Anleitung)`}</title>
-      <meta name="description" content={`${frontmatter.intro}`} />
-    </>
-  )
+  return <Meta title={`${frontmatter.title} – ${data.site.siteMetadata.title}`} description={frontmatter.intro} />
 }
 
 export default Page
