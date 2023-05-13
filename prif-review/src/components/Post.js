@@ -119,9 +119,15 @@ const Post = ({ data, pageContext, children }) => {
   )
 }
 
-export function Head({ data }) {
+export function Head({ data, pageContext }) {
   const frontmatter = data.post.childMdx.frontmatter
-  return <Meta title={`${frontmatter.title} – ${data.site.siteMetadata.title}`} description={frontmatter.intro} />
+
+  return (
+    <>
+      <html lang={pageContext.language} />
+      <Meta title={`${frontmatter.title} – ${data.site.siteMetadata.title}`} description={frontmatter.intro} />
+    </>
+  )
 }
 
 export default Post
