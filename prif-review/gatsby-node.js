@@ -145,6 +145,7 @@ exports.createSchemaCustomization = async ({ getNode, getNodesByType, pathPrefix
   const typeDefs = `
   type Author implements Node {
     author_id: String
+    name: String
   }
   type PostFrontmatter {
     authors: [Author] @link(by: "author_id")

@@ -30,6 +30,25 @@ export const query = graphql`
           title
           intro
           order
+          authors {
+            frontmatter {
+              author_id
+            }
+          }
+        }
+      }
+    }
+    authors: allFile(
+      filter: { extension: { eq: "mdx" }, sourceInstanceName: { eq: "authors" }, childMdx: { fields: { locale: { eq: $language } } } }
+    ) {
+      nodes {
+        id
+        childMdx {
+          frontmatter {
+            name
+            author_id
+          }
+          body
         }
       }
     }
@@ -64,6 +83,23 @@ export const query = graphql`
 `
 const Post = ({ data, pageContext, children }) => {
   const frontmatter = data.post.childMdx.frontmatter
+  const authorIds = frontmatter.authors.map((el) => el.frontmatter.author_id)
+
+  const authors = data.authors.nodes.filter((el) => {
+    return authorIds.indexOf(el.childMdx.frontmatter.author_id) !== -1
+  })
+
+  const byline = authors.map((a) => a.childMdx.frontmatter.name).join(', ')
+
+  const bios = authors.map((a) => {
+    const fm = a.childMdx.frontmatter
+    return (
+      <li>
+        <em>{fm.name}</em>
+        {a.childMdx.body}
+      </li>
+    )
+  })
 
   return (
     <App translations={data.translations.nodes} pages={data.pages.nodes} language={pageContext.language}>
@@ -71,8 +107,13 @@ const Post = ({ data, pageContext, children }) => {
         <header className={styles.header}>
           <h1 className={styles.title}>{frontmatter.title}</h1>
           <p className={styles.intro}>{frontmatter.intro}</p>
+          <p className={styles.byline}>{byline}</p>
         </header>
         <PostBody>{children}</PostBody>
+        <aside>
+          <h2>Authors</h2>
+          <ul>{bios}</ul>
+        </aside>
       </article>
     </App>
   )

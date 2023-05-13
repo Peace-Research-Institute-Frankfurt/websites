@@ -7,7 +7,7 @@ export default function Footer({ pages }) {
   const data = useStaticQuery(graphql`
     query {
       meta: site {
-        buildTime(formatString: "D MMMM Y, HH:mm")
+        buildTime
       }
     }
   `)
