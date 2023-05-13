@@ -16,3 +16,8 @@
 .intro {
   @extend %copy-large;
 }
+
+.byline {
+  @extend %copy;
+  margin-top: 0.5em;
+}
