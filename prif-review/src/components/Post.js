@@ -94,7 +94,7 @@ const Post = ({ data, pageContext, children }) => {
   const bios = authors.map((a) => {
     const fm = a.childMdx.frontmatter
     return (
-      <li>
+      <li key={a.id}>
         <em>{fm.name}</em>
         {a.childMdx.body}
       </li>
