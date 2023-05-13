@@ -3,7 +3,7 @@ import { Link, useTranslation } from 'gatsby-plugin-react-i18next'
 import React from 'react'
 import * as styles from './Footer.module.scss'
 
-export default function Footer({ pages }) {
+export default function Footer({ pages, language }) {
   const data = useStaticQuery(graphql`
     query {
       meta: site {
@@ -12,6 +12,10 @@ export default function Footer({ pages }) {
     }
   `)
   const { t } = useTranslation()
+  const buildDate = new Date(data.meta.buildTime)
+  if (language === 'en') language = 'en-UK'
+  const buildDateString = new Intl.DateTimeFormat(language, { dateStyle: 'short', timeStyle: 'short', timeZone: 'Europe/Berlin' }).format(buildDate)
+
   if (!pages) pages = []
   return (
     <footer className={styles.container}>
@@ -32,7 +36,7 @@ export default function Footer({ pages }) {
       <p>
         {t('PRIF and the authors')} {new Date().getFullYear()}
       </p>
-      <p>Built {data.meta.buildTime}</p>
+      <p>Built {buildDateString}</p>
     </footer>
   )
 }

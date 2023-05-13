@@ -13,7 +13,7 @@ function App({ translations, language, pages, children }) {
         <LanguageSwitcher translations={translations} language={language} />
       </SiteHeader>
       {children}
-      <Footer pages={pages} />
+      <Footer pages={pages} language={language} />
     </>
   )
 }
