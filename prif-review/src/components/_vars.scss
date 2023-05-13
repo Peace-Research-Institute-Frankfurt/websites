@@ -49,3 +49,8 @@
   line-height: calc(var(--baseline) * 1.5);
   font-size: var(--ms-2);
 }
+%caption {
+  @extend %copy;
+  line-height: calc(var(--baseline) * 0.66);
+  font-size: var(--ms--1);
+}
