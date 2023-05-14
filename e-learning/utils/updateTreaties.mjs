@@ -5,9 +5,6 @@
 // It's additive, which means we can still edit treaties.json
 // manually and this script won't overwrite our changes.
 
-// @TODO: This should just read treaty URLs from treaties.json,
-// and not create whole new entries, and also not delete entries.
-
 import { DateTime } from 'luxon'
 import puppeteer from 'puppeteer'
 import fs from 'fs'
@@ -64,9 +61,9 @@ for (let i = 0; i < pages.length; i++) {
   const p = pages[i]
   let treaty = { ...p }
 
-  console.log(`Updating ${treaty.name}`)
+  console.log(`Updating ${treaty.name}...`)
 
-  const browser = await puppeteer.launch()
+  const browser = await puppeteer.launch({headless: new})
   const page = await browser.newPage()
 
   page.on('console', async (msg) => {
@@ -119,7 +116,7 @@ for (let i = 0; i < pages.length; i++) {
   await browser.close()
   //   const participants = JSON.parse(fs.readFileSync(path.join(__dirname, './tmp.json')))
   // fs.writeFileSync(path.join(__dirname, './tmp.json'), JSON.stringify(participants, null, '  '))
-  console.log(`Found ${participants.length} treaty participants`)
+  // console.log(`Found ${participants.length} treaty participants`)
 
   const treatyParticipants = participants.flatMap((p) => {
     // Find the corresponding country in countries.json
@@ -141,10 +138,10 @@ for (let i = 0; i < pages.length; i++) {
 const differences = diff(treaties, out)
 
 if (differences.length === 0) {
-  console.log(`Treaty data is already up-to-date.`)
+  console.log(`${treaty.name} is already up-to-date.`)
   exit(2)
 } else {
-  console.log(`Treaty data has changed:\n${JSON.stringify(differences)}`)
+  console.log(`Changes found in ${treaty.name}:\n${JSON.stringify(differences)}`)
   fs.writeFileSync(treatiesFile, `${JSON.stringify(out, null, '  ')}\n`, 'utf-8')
   console.log(`Wrote new data to ${treatiesFile}`)
   exit(0)
