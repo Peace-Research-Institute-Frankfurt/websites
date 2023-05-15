@@ -31,12 +31,18 @@ export const query = graphql`
         }
       }
     }
-    posts: allFile(
-      filter: { extension: { eq: "mdx" }, sourceInstanceName: { eq: "posts" }, childMdx: { fields: { locale: { eq: $language } } } }
+    reports: allFile(
+      filter: {
+        extension: { eq: "mdx" }
+        sourceInstanceName: { eq: "reports" }
+        name: { glob: "index.*" }
+        childMdx: { fields: { locale: { eq: $language } } }
+      }
       sort: { childMdx: { frontmatter: { order: ASC } } }
     ) {
       nodes {
         id
+        relativeDirectory
         childMdx {
           fields {
             slug
@@ -44,8 +50,6 @@ export const query = graphql`
           }
           frontmatter {
             title
-            order
-            intro
           }
         }
       }
@@ -59,12 +63,12 @@ const Index = ({ data, pageContext }) => {
     <App pages={data.pages.nodes} language={pageContext.language}>
       <SkipToContent />
       <main className={styles.container}>
-        <h1>{t('Annual Report 2023')}</h1>
-        {data.posts.nodes.map((p) => {
+        <h1>{t('PRIF Reports')}</h1>
+        {data.reports.nodes.map((report) => {
           return (
-            <Link key={p.id} to={`/${p.childMdx.fields.slug}`}>
-              {p.childMdx.frontmatter.title}
-            </Link>
+            <li>
+              <Link to={`/${report.relativeDirectory}`}>{report.childMdx.frontmatter.title}</Link>
+            </li>
           )
         })}
       </main>

@@ -8,16 +8,17 @@ const defaultLocale = 'de'
 
 function findTranslationNodes(n, nodes) {
   const locale = n.childMdx.fields.locale
-  const translationCandidates = locales.filter((el) => el !== locale)
+  const translationTargets = locales.filter((el) => el !== locale)
+  const translationCandidates = nodes.filter((el) => el.relativeDirectory === n.relativeDirectory)
+  // TODO this should only look for translations in the same directory as the original
 
-  console.log(`Searching translations for ${n.childMdx.fields.slug}, candidates: ${translationCandidates.join(', ')}`)
+  console.log(`Searching translations for ${n.childMdx.fields.slug}, targets: ${translationTargets.join(', ')}`)
 
   const rootFileName = n.base.replace(`.${locale}.mdx`, '')
 
-  const translations = nodes.filter((el) => {
-    const foundIndex = translationCandidates.findIndex((t) => {
+  const translations = translationCandidates.filter((el) => {
+    const foundIndex = translationTargets.findIndex((t) => {
       const candidateFileName = el.base.replace(`.${t}.mdx`, '')
-      console.log(`${rootFileName} VS ${candidateFileName}`)
       return rootFileName === candidateFileName
     })
     return foundIndex !== -1
@@ -31,10 +32,29 @@ function findTranslationNodes(n, nodes) {
 exports.createPages = async function ({ actions, graphql }) {
   const { data } = await graphql(`
     query {
-      posts: allFile(filter: { sourceInstanceName: { eq: "posts" }, extension: { eq: "mdx" } }) {
+      reports: allFile(filter: { name: { glob: "index.*" }, sourceInstanceName: { eq: "reports" }, extension: { eq: "mdx" } }) {
         nodes {
           id
           base
+          relativeDirectory
+          childMdx {
+            fields {
+              locale
+            }
+            frontmatter {
+              title
+            }
+            internal {
+              contentFilePath
+            }
+          }
+        }
+      }
+      posts: allFile(filter: { relativePath: { glob: "*/posts/*" }, sourceInstanceName: { eq: "reports" }, extension: { eq: "mdx" } }) {
+        nodes {
+          id
+          base
+          relativeDirectory
           childMdx {
             fields {
               slug
@@ -70,12 +90,33 @@ exports.createPages = async function ({ actions, graphql }) {
     }
   `)
 
+  // const posts = data.reports.nodes.filter((el) => {
+  //   return el.relativeDirectory.includes('/posts')
+  // })
+
+  // Create report pages
+  data.reports.nodes.forEach((node) => {
+    const locale = node.childMdx.fields.locale
+    const postTemplate = require.resolve(`./src/components/Report.js`)
+    const translations = findTranslationNodes(node, data.reports.nodes)
+    const translationIds = translations.map((t) => t.id)
+    let path = `${locale && locale !== defaultLocale ? locale : ''}/${node.relativeDirectory}`
+
+    actions.createPage({
+      path: path,
+      component: `${postTemplate}?__contentFilePath=${node.childMdx.internal.contentFilePath}`,
+      context: { id: node.id, postsDirectory: `${node.relativeDirectory}/posts`, translations: translationIds },
+    })
+  })
+
+  // Create post pages
   data.posts.nodes.forEach((node) => {
     const locale = node.childMdx.fields.locale
     const postTemplate = require.resolve(`./src/components/Post.js`)
     const translations = findTranslationNodes(node, data.posts.nodes)
     const translationIds = translations.map((t) => t.id)
-    let path = `${locale && locale !== defaultLocale ? locale : ''}/${node.childMdx.fields.slug}`
+    const year = node.relativeDirectory.replace('/posts', '')
+    let path = `${locale && locale !== defaultLocale ? locale : ''}/${year}/${node.childMdx.fields.slug}`
 
     actions.createPage({
       path: path,

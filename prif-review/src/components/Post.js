@@ -83,7 +83,11 @@ export const query = graphql`
 `
 const Post = ({ data, pageContext, children }) => {
   const frontmatter = data.post.childMdx.frontmatter
-  const authorIds = frontmatter.authors.map((el) => el.frontmatter.author_id)
+
+  let authorIds = []
+  if (frontmatter.authors) {
+    authorIds = frontmatter.authors.map((el) => el.frontmatter.author_id)
+  }
 
   const authors = data.authors.nodes.filter((el) => {
     return authorIds.indexOf(el.childMdx.frontmatter.author_id) !== -1
@@ -107,13 +111,15 @@ const Post = ({ data, pageContext, children }) => {
         <header className={styles.header}>
           <h1 className={styles.title}>{frontmatter.title}</h1>
           <p className={styles.intro}>{frontmatter.intro}</p>
-          <p className={styles.byline}>{byline}</p>
+          {authorIds.length > 0 && <p className={styles.byline}>{byline}</p>}
         </header>
         <PostBody>{children}</PostBody>
-        <aside>
-          <h2>Authors</h2>
-          <ul>{bios}</ul>
-        </aside>
+        {authorIds.length > 0 && (
+          <aside>
+            <h2>Authors</h2>
+            <ul>{bios}</ul>
+          </aside>
+        )}
       </article>
     </App>
   )

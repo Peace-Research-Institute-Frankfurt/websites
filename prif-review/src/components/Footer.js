@@ -34,7 +34,7 @@ export default function Footer({ pages, language }) {
         </ul>
       </nav>
       <p>
-        {t('PRIF and the authors')} {new Date().getFullYear()}
+        {t('© PRIF and the authors')} {new Date().getFullYear()}
       </p>
       <p>Built {buildDateString}</p>
     </footer>

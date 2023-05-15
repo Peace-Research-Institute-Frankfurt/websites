@@ -21,6 +21,8 @@ const config = {
     'gatsby-transformer-json',
     'gatsby-transformer-sharp',
     'gatsby-plugin-netlify',
+    'gatsby-plugin-sass',
+    'gatsby-plugin-react-svg',
     {
       resolve: 'gatsby-plugin-sharp',
       options: {
@@ -28,9 +30,6 @@ const config = {
           formats: ['auto', 'webp', 'avif'],
         },
       },
-    },
-    {
-      resolve: 'gatsby-plugin-sass',
     },
     {
       resolve: 'gatsby-plugin-manifest',
@@ -41,22 +40,8 @@ const config = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'authors',
-        path: `${__dirname}/content/authors/`,
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'data',
-        path: `${__dirname}/content/data/`,
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'posts',
-        path: `${__dirname}/content/posts/`,
+        name: 'reports',
+        path: `${__dirname}/content/reports/`,
       },
     },
     {
@@ -73,9 +58,6 @@ const config = {
           remarkPlugins: [remarkGfm],
         },
       },
-    },
-    {
-      resolve: 'gatsby-plugin-react-svg',
     },
     {
       resolve: `gatsby-source-filesystem`,

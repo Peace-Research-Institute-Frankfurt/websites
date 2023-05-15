@@ -40,6 +40,9 @@
   font-family: var(--sans);
   line-height: var(--baseline);
   font-variation-settings: 'wght' 450, 'wdth' 105;
+  h1 {
+    @extend %h1;
+  }
   h2 {
     @extend %h2;
   }
