@@ -1,6 +1,5 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Balancer from 'react-wrap-balancer'
 import App from './App'
 import Meta from './Meta'
 import PostBody from './PostBody'
@@ -45,9 +44,7 @@ const Page = ({ data, children }) => {
       <article id="content">
         <header className={styles.header}>
           <div className={styles.headerCopy}>
-            <h1 className={styles.title}>
-              <Balancer>{frontmatter.title}</Balancer>
-            </h1>
+            <h1 className={styles.title}>{frontmatter.title}</h1>
             {frontmatter.intro && <p className={styles.intro}>{frontmatter.intro}</p>}
           </div>
         </header>

@@ -1,6 +1,5 @@
 import React from 'react'
 import { EmbedChoicesProvider } from './src/context/EmbedChoicesContext'
-import { Provider } from 'react-wrap-balancer'
 
 const HtmlAttributes = {
   lang: 'de-DE',
@@ -16,9 +15,5 @@ export const onRenderBody = ({ setHtmlAttributes, setHeadComponents, setPostBody
 }
 
 export const wrapRootElement = ({ element }) => {
-  return (
-    <EmbedChoicesProvider>
-      <Provider>{element}</Provider>
-    </EmbedChoicesProvider>
-  )
+  return <EmbedChoicesProvider>{element}</EmbedChoicesProvider>
 }
