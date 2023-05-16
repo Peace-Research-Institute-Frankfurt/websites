@@ -68,6 +68,7 @@ export const query = graphql`
     }
     translations: allFile(filter: { id: { in: $translations } }) {
       nodes {
+        id
         childMdx {
           fields {
             locale
@@ -83,7 +84,7 @@ export const query = graphql`
 `
 const Post = ({ data, pageContext, children }) => {
   const frontmatter = data.post.childMdx.frontmatter
-
+  console.log(pageContext)
   let authorIds = []
   if (frontmatter.authors) {
     authorIds = frontmatter.authors.map((el) => el.frontmatter.author_id)
@@ -106,7 +107,10 @@ const Post = ({ data, pageContext, children }) => {
   })
 
   return (
-    <App translations={data.translations.nodes} pages={data.pages.nodes} language={pageContext.language}>
+    <App
+      translationData={{ translations: data.translations.nodes, currentLanguage: pageContext.language, currentSlug: data.post.childMdx.fields.slug }}
+      pages={data.pages.nodes}
+    >
       <article id="content" className={styles.postContainer}>
         <header className={styles.header}>
           <h1 className={styles.title}>{frontmatter.title}</h1>

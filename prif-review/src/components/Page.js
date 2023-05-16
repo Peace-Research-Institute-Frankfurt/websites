@@ -66,7 +66,10 @@ export const query = graphql`
 const Page = ({ data, children, pageContext }) => {
   const frontmatter = data.post.childMdx.frontmatter
   return (
-    <App pages={data.pages.nodes} translations={data.translations.nodes} language={pageContext.language}>
+    <App
+      pages={data.pages.nodes}
+      translationData={{ translations: data.translations.nodes, currentLanguage: pageContext.language, currentSlug: data.post.childMdx.fields.slug }}
+    >
       <article id="content" className={styles.container}>
         <main>
           <h1 className={styles.title}>{frontmatter.title}</h1>

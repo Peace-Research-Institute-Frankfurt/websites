@@ -83,7 +83,7 @@ const config = {
         },
         pages: [
           {
-            matchPath: '/:lang?/:slug',
+            matchPath: '/:lang?/:slug+', // Match all paths except the top-level index
             getLanguageFromPath: true,
           },
         ],

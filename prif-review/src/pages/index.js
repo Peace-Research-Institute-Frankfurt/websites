@@ -60,7 +60,7 @@ export const query = graphql`
 const Index = ({ data, pageContext }) => {
   const { t } = useTranslation()
   return (
-    <App pages={data.pages.nodes} language={pageContext.language}>
+    <App pages={data.pages.nodes} translationData={{ currentLanguage: pageContext.language }}>
       <SkipToContent />
       <main className={styles.container}>
         <h1>{t('PRIF Reports')}</h1>

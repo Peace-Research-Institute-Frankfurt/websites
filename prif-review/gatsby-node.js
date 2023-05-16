@@ -10,7 +10,6 @@ function findTranslationNodes(n, nodes) {
   const locale = n.childMdx.fields.locale
   const translationTargets = locales.filter((el) => el !== locale)
   const translationCandidates = nodes.filter((el) => el.relativeDirectory === n.relativeDirectory)
-  // TODO this should only look for translations in the same directory as the original
 
   console.log(`Searching translations for ${n.childMdx.fields.slug}, targets: ${translationTargets.join(', ')}`)
 
@@ -32,25 +31,7 @@ function findTranslationNodes(n, nodes) {
 exports.createPages = async function ({ actions, graphql }) {
   const { data } = await graphql(`
     query {
-      reports: allFile(filter: { name: { glob: "index.*" }, sourceInstanceName: { eq: "reports" }, extension: { eq: "mdx" } }) {
-        nodes {
-          id
-          base
-          relativeDirectory
-          childMdx {
-            fields {
-              locale
-            }
-            frontmatter {
-              title
-            }
-            internal {
-              contentFilePath
-            }
-          }
-        }
-      }
-      posts: allFile(filter: { relativePath: { glob: "*/posts/*" }, sourceInstanceName: { eq: "reports" }, extension: { eq: "mdx" } }) {
+      posts: allFile(filter: { sourceInstanceName: { eq: "reports" }, extension: { eq: "mdx" } }) {
         nodes {
           id
           base
@@ -90,15 +71,21 @@ exports.createPages = async function ({ actions, graphql }) {
     }
   `)
 
-  // const posts = data.reports.nodes.filter((el) => {
-  //   return el.relativeDirectory.includes('/posts')
-  // })
+  const posts = data.posts.nodes.filter((el) => {
+    return el.relativeDirectory.includes('/posts')
+  })
+  const reports = data.posts.nodes.filter((el) => {
+    return el.base.includes('index.')
+  })
+
+  console.log(`${reports.length} reports found`)
+  console.log(`${posts.length} posts found`)
 
   // Create report pages
-  data.reports.nodes.forEach((node) => {
+  reports.forEach((node) => {
     const locale = node.childMdx.fields.locale
     const postTemplate = require.resolve(`./src/components/Report.js`)
-    const translations = findTranslationNodes(node, data.reports.nodes)
+    const translations = findTranslationNodes(node, reports)
     const translationIds = translations.map((t) => t.id)
     let path = `${locale && locale !== defaultLocale ? locale : ''}/${node.relativeDirectory}`
 
@@ -110,10 +97,10 @@ exports.createPages = async function ({ actions, graphql }) {
   })
 
   // Create post pages
-  data.posts.nodes.forEach((node) => {
+  posts.forEach((node) => {
     const locale = node.childMdx.fields.locale
     const postTemplate = require.resolve(`./src/components/Post.js`)
-    const translations = findTranslationNodes(node, data.posts.nodes)
+    const translations = findTranslationNodes(node, posts)
     const translationIds = translations.map((t) => t.id)
     const year = node.relativeDirectory.replace('/posts', '')
     let path = `${locale && locale !== defaultLocale ? locale : ''}/${year}/${node.childMdx.fields.slug}`
@@ -140,6 +127,7 @@ exports.createPages = async function ({ actions, graphql }) {
 }
 
 exports.onCreateNode = ({ node, actions, createNodeId, getNode }) => {
+  // Create auuthor nodes
   if (node.internal.type === 'Mdx' && node.internal.contentFilePath.indexOf('authors') !== -1) {
     actions.createNode({
       id: createNodeId(`author-${node.id}`),
@@ -156,27 +144,14 @@ exports.onCreateNode = ({ node, actions, createNodeId, getNode }) => {
     let nodeLocale = ''
     locales.forEach((locale) => {
       if (node.internal.contentFilePath.indexOf(`.${locale}.mdx`) !== -1) {
-        console.log(`Writing locale: ${locale}`)
         nodeLocale = locale
       }
     })
+    actions.createNodeField({ node, name: 'locale', value: nodeLocale })
 
     let path = createFilePath({ node, getNode })
-    if (node.frontmatter.title) {
-      path = slug(node.frontmatter.title)
-    }
-
-    actions.createNodeField({
-      node,
-      name: 'locale',
-      value: nodeLocale,
-    })
-
-    actions.createNodeField({
-      node,
-      name: 'slug',
-      value: path,
-    })
+    if (node.frontmatter.title) path = slug(node.frontmatter.title)
+    actions.createNodeField({ node, name: 'slug', value: path })
   }
 }
 

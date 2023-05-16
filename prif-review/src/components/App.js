@@ -5,12 +5,12 @@ import SkipToContent from './SkipToContent'
 import SiteHeader from './SiteHeader'
 import './global.scss'
 
-function App({ translations, language, pages, children }) {
+function App({ translationData, language, pages, children }) {
   return (
     <>
       <SkipToContent />
       <SiteHeader>
-        <LanguageSwitcher translations={translations} language={language} />
+        <LanguageSwitcher translationData={translationData} />
       </SiteHeader>
       {children}
       <Footer pages={pages} language={language} />

@@ -90,7 +90,7 @@ const Index = ({ data, pageContext, children }) => {
     )
   })
   return (
-    <App pages={data.pages.nodes} language={pageContext.language}>
+    <App pages={data.pages.nodes} translationData={{ currentLanguage: pageContext.language }}>
       <SkipToContent />
       <main className={styles.container}>
         <h1>{data.post.childMdx.frontmatter.title}</h1>
