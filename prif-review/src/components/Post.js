@@ -39,7 +39,13 @@ export const query = graphql`
       }
     }
     authors: allFile(
-      filter: { extension: { eq: "mdx" }, sourceInstanceName: { eq: "authors" }, childMdx: { fields: { locale: { eq: $language } } } }
+      # TODO: Only load authors from this year's report
+      filter: {
+        relativeDirectory: { glob: "*/authors" }
+        extension: { eq: "mdx" }
+        sourceInstanceName: { eq: "reports" }
+        childMdx: { fields: { locale: { eq: $language } } }
+      }
     ) {
       nodes {
         id
