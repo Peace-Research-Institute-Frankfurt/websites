@@ -3,13 +3,16 @@ import { graphql } from 'gatsby'
 import App from './App'
 import PostBody from './PostBody'
 import Meta from './Meta'
+import { useI18next } from 'gatsby-plugin-react-i18next'
+
 import * as styles from './Post.module.scss'
 
 export const query = graphql`
   query ($id: String!, $language: String!, $translations: [String!]) {
-    site: site {
+    site {
       siteMetadata {
         title
+        siteUrl
       }
     }
     locales: allLocale(filter: { language: { eq: $language } }) {
@@ -75,6 +78,7 @@ export const query = graphql`
     translations: allFile(filter: { id: { in: $translations } }) {
       nodes {
         id
+        relativeDirectory
         childMdx {
           fields {
             locale
@@ -137,13 +141,9 @@ const Post = ({ data, pageContext, children }) => {
 
 export function Head({ data, pageContext }) {
   const frontmatter = data.post.childMdx.frontmatter
+  const translationData = { currentLanguage: pageContext.language }
 
-  return (
-    <>
-      <html lang={pageContext.language} />
-      <Meta title={`${frontmatter.title} – ${data.site.siteMetadata.title}`} description={frontmatter.intro} />
-    </>
-  )
+  return <Meta translationData={translationData} title={`${frontmatter.title} – ${data.site.siteMetadata.title}`} description={frontmatter.intro} />
 }
 
 export default Post

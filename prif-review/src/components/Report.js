@@ -18,6 +18,13 @@ export const query = graphql`
       }
     }
 
+    site {
+      siteMetadata {
+        title
+        siteUrl
+      }
+    }
+
     post: file(id: { eq: $id }) {
       relativeDirectory
       childMdx {
@@ -102,9 +109,8 @@ const Index = ({ data, pageContext, children }) => {
 }
 
 export default Index
-export const Head = ({ data, pageContext }) => (
-  <>
-    <html lang={pageContext.language} />
-    <Meta />
-  </>
-)
+export const Head = ({ data, pageContext }) => {
+  const frontmatter = data.post.childMdx.frontmatter
+  const translationData = { currentLanguage: pageContext.language }
+  return <Meta title={`${frontmatter.title} – ${data.site.siteMetadata.title}`} translationData={translationData} />
+}

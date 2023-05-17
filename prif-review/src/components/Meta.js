@@ -1,6 +1,7 @@
 import { graphql, useStaticQuery } from 'gatsby'
 import React from 'react'
-export default function Meta({ title, description, image, url, children }) {
+
+export default function Meta({ title, description, image, url, translationData, children }) {
   const defaultData = useStaticQuery(graphql`
     query {
       site {
@@ -32,6 +33,8 @@ export default function Meta({ title, description, image, url, children }) {
   }
   return (
     <>
+      {translationData && <html lang={translationData.currentLanguage} />}
+
       <title>{data.title}</title>
       <meta name="description" content={data.description} />
 

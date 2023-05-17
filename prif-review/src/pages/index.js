@@ -77,9 +77,7 @@ const Index = ({ data, pageContext }) => {
 }
 
 export default Index
-export const Head = ({ data, pageContext }) => (
-  <>
-    <html lang={pageContext.language} />
-    <Meta />
-  </>
-)
+export const Head = ({ data, pageContext }) => {
+  const translationData = { currentLanguage: pageContext.language }
+  return <Meta translationData={translationData} />
+}
