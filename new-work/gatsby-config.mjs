@@ -21,6 +21,7 @@ const config = {
     'gatsby-transformer-json',
     'gatsby-transformer-sharp',
     'gatsby-plugin-netlify',
+    'gatsby-plugin-react-svg',
     {
       resolve: 'gatsby-plugin-sharp',
       options: {
@@ -81,7 +82,7 @@ const config = {
         },
         gatsbyRemarkPlugins: [
           {
-            resolve: 'prif-gatsby-remark-smartypants',
+            resolve: '../prif-gatsby-remark-smartypants',
             options: {
               openingQuotes: { single: '‚', double: '„' },
               closingQuotes: { single: '’', double: '“' },
@@ -90,9 +91,6 @@ const config = {
           },
         ],
       },
-    },
-    {
-      resolve: 'gatsby-plugin-react-svg',
     },
   ],
 }
