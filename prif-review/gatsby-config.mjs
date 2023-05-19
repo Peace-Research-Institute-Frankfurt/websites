@@ -3,6 +3,8 @@ import { fileURLToPath } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 import remarkGfm from 'remark-gfm'
+import smarty from '../prif-gatsby-remark-smartypants/index.js'
+console.log(smarty.meta)
 
 const config = {
   siteMetadata: {
@@ -55,8 +57,19 @@ const config = {
       resolve: 'gatsby-plugin-mdx',
       options: {
         mdxOptions: {
-          remarkPlugins: [remarkGfm],
+          remarkPlugins: [
+            remarkGfm,
+            {
+              resolve: '../prif-gatsby-remark-smartypants',
+              options: {
+                openingQuotes: { single: '‚', double: '„' },
+                closingQuotes: { single: '’', double: '“' },
+                dashes: 'oldschool',
+              },
+            },
+          ],
         },
+        gatsbyRemarkPlugins: [],
       },
     },
     {
