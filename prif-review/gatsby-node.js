@@ -8,22 +8,25 @@ const defaultLocale = 'de'
 
 function findTranslationNodes(n, nodes) {
   const locale = n.childMdx.fields.locale
+  const nodeDir = n.relativeDirectory.replace(`${locale}/`, "")
   const translationTargets = locales.filter((el) => el !== locale)
-  const translationCandidates = nodes.filter((el) => el.relativeDirectory === n.relativeDirectory)
-
-  console.log(`Searching translations for ${n.childMdx.fields.slug}, targets: ${translationTargets.join(', ')}`)
-
-  const rootFileName = n.base.replace(`.${locale}.mdx`, '')
+  
+  // console.log(`Searching translations for ${n.childMdx.fields.slug}, targets: ${translationTargets.join(', ')}`)
+  
+  const translationCandidates = nodes.filter((el) => {
+    const dir = el.relativeDirectory.replace(`${el.childMdx.fields.locale}/`, "")
+    return dir === nodeDir
+  })
+  const rootFileName = n.base
 
   const translations = translationCandidates.filter((el) => {
     const foundIndex = translationTargets.findIndex((t) => {
-      const candidateFileName = el.base.replace(`.${t}.mdx`, '')
-      return rootFileName === candidateFileName
+      return (rootFileName === el.base && el.childMdx.fields.locale !== locale)  
     })
     return foundIndex !== -1
   })
 
-  console.log(`Translations found: ${translations.map((t) => `${t.childMdx.fields.slug} (${t.childMdx.fields.locale})`).join(', ')}`)
+  // console.log(`Translations found: ${translations.map((t) => `${t.childMdx.fields.slug} (${t.childMdx.fields.locale})`).join(', ')}`)
 
   return translations
 }
@@ -31,7 +34,7 @@ function findTranslationNodes(n, nodes) {
 exports.createPages = async function ({ actions, graphql }) {
   const { data } = await graphql(`
     query {
-      posts: allFile(filter: { sourceInstanceName: { eq: "reports" }, extension: { eq: "mdx" } }) {
+      posts: allFile(filter: { sourceInstanceName: { eq: "content" }, extension: { eq: "mdx" } }) {
         nodes {
           id
           base
@@ -50,36 +53,23 @@ exports.createPages = async function ({ actions, graphql }) {
           }
         }
       }
-      pages: allFile(filter: { sourceInstanceName: { eq: "pages" }, extension: { eq: "mdx" } }) {
-        nodes {
-          id
-          base
-          childMdx {
-            fields {
-              slug
-              locale
-            }
-            frontmatter {
-              title
-            }
-            internal {
-              contentFilePath
-            }
-          }
-        }
-      }
     }
   `)
-
+  
   const posts = data.posts.nodes.filter((el) => {
     return el.relativeDirectory.includes('/posts')
   })
-  const reports = data.posts.nodes.filter((el) => {
-    return el.base.includes('index.')
+  const pages = data.posts.nodes.filter((el) => {
+    return el.relativeDirectory.includes('/pages')
   })
+  const reports = data.posts.nodes.filter((el) => {
+    return el.base === 'index.mdx'
+  })
+
 
   console.log(`${reports.length} reports found`)
   console.log(`${posts.length} posts found`)
+  console.log(`${pages.length} pages found`)
 
   // Create report pages
   reports.forEach((node) => {
@@ -87,8 +77,8 @@ exports.createPages = async function ({ actions, graphql }) {
     const postTemplate = require.resolve(`./src/components/Report.js`)
     const translations = findTranslationNodes(node, reports)
     const translationIds = translations.map((t) => t.id)
-    let path = `${locale && locale !== defaultLocale ? locale : ''}/${node.relativeDirectory}`
-
+    const year = node.relativeDirectory.replace(/(.{2})\/(reports)\//g, "")
+    let path = `${locale && locale !== defaultLocale ? locale : ''}/${year}/`
     actions.createPage({
       path: path,
       component: `${postTemplate}?__contentFilePath=${node.childMdx.internal.contentFilePath}`,
@@ -96,13 +86,15 @@ exports.createPages = async function ({ actions, graphql }) {
     })
   })
 
-  // Create post pages
+//  Create post pages
   posts.forEach((node) => {
     const locale = node.childMdx.fields.locale
     const postTemplate = require.resolve(`./src/components/Post.js`)
     const translations = findTranslationNodes(node, posts)
     const translationIds = translations.map((t) => t.id)
-    const year = node.relativeDirectory.replace('/posts', '')
+    console.log(node.relativeDirectory)
+    const year = node.relativeDirectory.replace(/(.{2})\/(reports)\//g, '').replace("/posts", "")
+    console.log(`YEAR: ${year}`)
     let path = `${locale && locale !== defaultLocale ? locale : ''}/${year}/${node.childMdx.fields.slug}`
 
     actions.createPage({
@@ -112,10 +104,10 @@ exports.createPages = async function ({ actions, graphql }) {
     })
   })
 
-  data.pages.nodes.forEach((node) => {
+  pages.forEach((node) => {
     const locale = node.childMdx.fields.locale
     const postTemplate = require.resolve(`./src/components/Page.js`)
-    const translations = findTranslationNodes(node, data.pages.nodes)
+    const translations = findTranslationNodes(node, pages)
     const translationIds = translations.map((t) => t.id)
     let path = `${locale && locale !== defaultLocale ? locale : ''}/${node.childMdx.fields.slug}`
     actions.createPage({
@@ -143,10 +135,11 @@ exports.onCreateNode = ({ node, actions, createNodeId, getNode }) => {
   if (node.internal.type === 'Mdx') {
     let nodeLocale = ''
     locales.forEach((locale) => {
-      if (node.internal.contentFilePath.indexOf(`.${locale}.mdx`) !== -1) {
+      if (node.internal.contentFilePath.indexOf(`/${locale}/`) !== -1) {
         nodeLocale = locale
       }
     })
+    console.log(`Setting locale: ${nodeLocale}`)
     actions.createNodeField({ node, name: 'locale', value: nodeLocale })
 
     let path = createFilePath({ node, getNode })

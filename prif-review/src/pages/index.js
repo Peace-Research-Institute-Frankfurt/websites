@@ -17,7 +17,7 @@ export const query = graphql`
         }
       }
     }
-    pages: allFile(filter: { extension: { eq: "mdx" }, sourceInstanceName: { eq: "pages" }, childMdx: { fields: { locale: { eq: $language } } } }) {
+    pages: allFile(filter: { relativeDirectory: {glob: "**/pages/**"}, extension: { eq: "mdx" }, sourceInstanceName: { eq: "content" }, childMdx: { fields: { locale: { eq: $language } } } }) {
       nodes {
         id
         childMdx {
@@ -34,8 +34,8 @@ export const query = graphql`
     reports: allFile(
       filter: {
         extension: { eq: "mdx" }
-        sourceInstanceName: { eq: "reports" }
-        name: { glob: "index.*" }
+        sourceInstanceName: { eq: "content" }
+        name: { eq: "index" }
         childMdx: { fields: { locale: { eq: $language } } }
       }
       sort: { childMdx: { frontmatter: { order: ASC } } }
@@ -65,9 +65,10 @@ const Index = ({ data, pageContext }) => {
       <main className={styles.container}>
         <h1>{t('PRIF Reports')}</h1>
         {data.reports.nodes.map((report) => {
+          const year = report.relativeDirectory.replace(/(.{2})\/(reports)\//g, "")
           return (
             <li>
-              <Link to={`/${report.relativeDirectory}`}>{report.childMdx.frontmatter.title}</Link>
+              <Link to={`/${year}`}>{report.childMdx.frontmatter.title}</Link>
             </li>
           )
         })}

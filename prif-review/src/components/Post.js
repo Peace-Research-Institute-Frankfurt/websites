@@ -61,7 +61,7 @@ export const query = graphql`
         }
       }
     }
-    pages: allFile(filter: { extension: { eq: "mdx" }, sourceInstanceName: { eq: "pages" }, childMdx: { fields: { locale: { eq: $language } } } }) {
+    pages: allFile(filter: {relativeDirectory: {glob: "**/pages/**"},  extension: { eq: "mdx" }, sourceInstanceName: { eq: "content" }, childMdx: { fields: { locale: { eq: $language } } } }) {
       nodes {
         id
         childMdx {
@@ -94,7 +94,6 @@ export const query = graphql`
 `
 const Post = ({ data, pageContext, children }) => {
   const frontmatter = data.post.childMdx.frontmatter
-  console.log(pageContext)
   let authorIds = []
   if (frontmatter.authors) {
     authorIds = frontmatter.authors.map((el) => el.frontmatter.author_id)

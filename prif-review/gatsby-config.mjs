@@ -3,8 +3,6 @@ import { fileURLToPath } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 import remarkGfm from 'remark-gfm'
-import smarty from '../prif-gatsby-remark-smartypants/index.js'
-console.log(smarty.meta)
 
 const config = {
   siteMetadata: {
@@ -42,40 +40,44 @@ const config = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'reports',
-        path: `${__dirname}/content/reports/`,
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'pages',
-        path: `${__dirname}/content/pages/`,
+        name: 'content',
+        path: `${__dirname}/content/`,
       },
     },
     {
       resolve: 'gatsby-plugin-mdx',
       options: {
         mdxOptions: {
-          remarkPlugins: [
-            remarkGfm,
+          remarkPlugins: [remarkGfm],
+        },
+        gatsbyRemarkPlugins: [
             {
               resolve: '../prif-gatsby-remark-smartypants',
               options: {
-                openingQuotes: { single: '‚', double: '„' },
-                closingQuotes: { single: '’', double: '“' },
-                dashes: 'oldschool',
+                locales: [
+                  {
+                    openingQuotes: { single: '‚', double: '„' },
+                    closingQuotes: { single: '’', double: '“' },
+                    dashes: 'oldschool',
+                    locale: "de"                  
+                  },
+                  {
+                    openingQuotes: { single: '‘', double: '“' },
+                    closingQuotes: { single: '’', double: '”' },
+                    dashes: 'oldschool',
+                    locale: "en"                  
+                  },
+                ]
+
               },
-            },
-          ],
-        },
-        gatsbyRemarkPlugins: [],
+            }          
+        ],
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/locales`,
+        path: `${__dirname}/locales`,
         name: `locale`,
       },
     },

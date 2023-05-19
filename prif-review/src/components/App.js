@@ -15,7 +15,6 @@ function App({ translationData, pages, children }) {
       <SiteHeader>
         <LanguageSwitcher translationData={translationData} />
       </SiteHeader>
-      <p>Default language: {JSON.stringify(defaultLanguage)}</p>
       {children}
       <Footer pages={pages} language={translationData.currentLanguage} />
     </>
