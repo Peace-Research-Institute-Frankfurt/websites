@@ -44,9 +44,9 @@ export const query = graphql`
     authors: allFile(
       # TODO: Only load authors from this year's report
       filter: {
-        relativeDirectory: { glob: "*/authors" }
+        relativeDirectory: { glob: "**/authors" }
         extension: { eq: "mdx" }
-        sourceInstanceName: { eq: "reports" }
+        sourceInstanceName: { eq: "content" }
         childMdx: { fields: { locale: { eq: $language } } }
       }
     ) {
