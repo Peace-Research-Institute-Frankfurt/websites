@@ -75,6 +75,7 @@ export const query = graphql`
         }
       }
     }
+    
     translations: allFile(filter: { id: { in: $translations } }) {
       nodes {
         id

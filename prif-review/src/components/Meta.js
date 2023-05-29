@@ -31,6 +31,14 @@ export default function Meta({ title, description, image, url, translationData, 
     },
     siteTwitter: fallback.siteTwitter,
   }
+  
+  if (!translationData.translations) translationData.translations = []
+  
+  const alternateLinks = translationData.translations.map((t, i) => {
+    const path = `${defaultData.site.siteMetadata.siteUrl}/${t.childMdx.fields.slug}`
+    return <link key={`alternate-${i}`} rel="alternate" hrefLang={t.childMdx.fields.locale} href={path}/>
+  })
+  
   return (
     <>
       {translationData && <html lang={translationData.currentLanguage} />}
@@ -54,7 +62,9 @@ export default function Meta({ title, description, image, url, translationData, 
       <meta property="og:image" content={data.image.src} />
       <meta property="og:image:alt" content={data.image.alt} />
       <meta name="author" content={data.siteTitle} />
-
+      
+      {alternateLinks}
+  
       {children}
     </>
   )

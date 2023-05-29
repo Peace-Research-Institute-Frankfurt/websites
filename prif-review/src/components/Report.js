@@ -86,7 +86,7 @@ export const query = graphql`
   }
 `
 
-const Index = ({ data, pageContext, children }) => {
+const Index = ({ data, pageContext, children, location }) => {
   const { t } = useTranslation()
   const year = data.post.relativeDirectory.replace(/(.{2})\/(reports)\//g, "")
   const posts = data.posts.nodes.map((p) => {
@@ -97,7 +97,7 @@ const Index = ({ data, pageContext, children }) => {
     )
   })
   return (
-    <App pages={data.pages.nodes} translationData={{ currentLanguage: pageContext.language }}>
+    <App pages={data.pages.nodes} translationData={{ currentLanguage: pageContext.language, currentSlug: location.pathname }}>
       <SkipToContent />
       <main className={styles.container}>
         <h1>{data.post.childMdx.frontmatter.title}</h1>
@@ -111,6 +111,6 @@ const Index = ({ data, pageContext, children }) => {
 export default Index
 export const Head = ({ data, pageContext }) => {
   const frontmatter = data.post.childMdx.frontmatter
-  const translationData = { currentLanguage: pageContext.language }
+  const translationData = { currentLanguage: pageContext.language, currentSlug: pageContext.path }
   return <Meta title={`${frontmatter.title} – ${data.site.siteMetadata.title}`} translationData={translationData} />
 }

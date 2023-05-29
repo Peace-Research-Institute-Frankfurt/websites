@@ -1,35 +1,39 @@
 import React from 'react'
-import { Link, useI18next } from 'gatsby-plugin-react-i18next'
+import {Link} from "gatsby"
+import { useI18next } from 'gatsby-plugin-react-i18next'
 import * as styles from './LanguageSwitcher.module.scss'
 
-export default function LanguageSwitcher({ translationData }) {
+export default function LanguageSwitcher({ translationData, translations }) {
   const { languages, path } = useI18next()
-  const translations = translationData.translations || []
   const currentLanguage = translationData.currentLanguage
   const currentSlug = translationData.currentSlug
 
-  const languageLinks = languages.map((l) => {
-    const translation = translations.find((t) => {
-      return l === t.childMdx.fields.locale
-    })
-    const originalPath = path.replace(`en/`, '').replace(/^\//, '')
-    let targetPath = originalPath
-    if (translation) {
-      // Swap out the slug
-      targetPath = originalPath.replace(currentSlug, translation.childMdx.fields.slug)
+  // TODO: Move this to <Meta/>
+  let alternateLinks = <>No explicit translations</>;
+  if (translations){
+    alternateLinks = translations.map((t, i) => {
+      const language = "TODO"
+     const path = `[siteUrl]${t.path}`
+     return <span key={`alternate-${i}`} rel="alternate" hrefLang={t.language} href={path}>{path}</span>
+   })
+  }
+  
+  const languageLinks = languages.map((l, i) => {
+    const t = translations.find(el => el.language === l)
+    let inner = <>{l}</>
+    if (t){
+      inner = <Link to={t.path}>{l}</Link>      
     }
-
     return (
-      <li key={l}>
-        <Link to={`/${targetPath}`} language={l} className={`${styles.link} ${l === currentLanguage && styles.linkCurrent}`}>
-          {l}
-        </Link>
+      <li key={`language-link-${i}`} className={`${styles.link} ${l === currentLanguage && styles.linkCurrent}`}>
+        {inner}
       </li>
     )
   })
 
   return (
     <>
+      {alternateLinks}
       <ul className={styles.container}>{languageLinks}</ul>
     </>
   )

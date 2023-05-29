@@ -65,7 +65,7 @@ export const query = graphql`
     }
   }
 `
-const Page = ({ data, children, pageContext }) => {
+const Page = ({ data, children, pageContext, location }) => {
   const frontmatter = data.post.childMdx.frontmatter
 
   return (
@@ -83,11 +83,9 @@ const Page = ({ data, children, pageContext }) => {
   )
 }
 
-export function Head({ data, pageContext }) {
+export function Head({ data, pageContext, location}) {
   const frontmatter = data.post.childMdx.frontmatter
-
-  const translationData = { currentLanguage: pageContext.language }
-
+  const translationData = { currentPath: location, currentSlug: data.post.childMdx.fields.slug, currentLanguage: pageContext.pageLocale, translations: data.translations.nodes }
   return <Meta translationData={translationData} title={`${frontmatter.title} – ${data.site.siteMetadata.title}`} description={frontmatter.intro} />
 }
 

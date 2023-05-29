@@ -57,17 +57,17 @@ export const query = graphql`
   }
 `
 
-const Index = ({ data, pageContext }) => {
+const Index = ({ data, pageContext, location}) => {
   const { t } = useTranslation()
   return (
-    <App pages={data.pages.nodes} translationData={{ currentLanguage: pageContext.language }}>
+    <App pages={data.pages.nodes} translationData={{ currentLanguage: pageContext.language, currentSlug: location.pathname}}>
       <SkipToContent />
       <main className={styles.container}>
         <h1>{t('PRIF Reports')}</h1>
-        {data.reports.nodes.map((report) => {
+        {data.reports.nodes.map((report, i) => {
           const year = report.relativeDirectory.replace(/(.{2})\/(reports)\//g, "")
           return (
-            <li>
+            <li key={`report-${i}`}>
               <Link to={`/${year}`}>{report.childMdx.frontmatter.title}</Link>
             </li>
           )
