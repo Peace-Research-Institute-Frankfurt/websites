@@ -51,6 +51,6 @@
     "just-diff": "^6.0.0",
     "luxon": "^3.3.0",
     "pdf-lib": "^1.17.1",
-    "puppeteer": "^20.3.0"
+    "puppeteer": "^20.4.0"
   }
 }
