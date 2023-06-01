@@ -63,7 +63,7 @@ for (let i = 0; i < pages.length; i++) {
 
   console.log(`Updating ${treaty.name}...`)
 
-  const browser = await puppeteer.launch({headless: new})
+  const browser = await puppeteer.launch({ headless: 'new' })
   const page = await browser.newPage()
 
   page.on('console', async (msg) => {
