@@ -38,6 +38,7 @@ export const query = graphql`
     translations: allFile(filter: { id: { in: $translations } }) {
       nodes {
         relativeDirectory
+        id
         childMdx {
           fields {
             locale
@@ -49,7 +50,14 @@ export const query = graphql`
         }
       }
     }
-    pages: allFile(filter: { relativeDirectory: {glob: "**/pages/**"}, extension: { eq: "mdx" }, sourceInstanceName: { eq: "content" }, childMdx: { fields: { locale: { eq: $language } } } }) {
+    pages: allFile(
+      filter: {
+        relativeDirectory: { glob: "**/pages/**" }
+        extension: { eq: "mdx" }
+        sourceInstanceName: { eq: "content" }
+        childMdx: { fields: { locale: { eq: $language } } }
+      }
+    ) {
       nodes {
         id
         childMdx {
@@ -65,7 +73,7 @@ export const query = graphql`
     }
   }
 `
-const Page = ({ data, children, pageContext, location }) => {
+const Page = ({ data, children, pageContext }) => {
   const frontmatter = data.post.childMdx.frontmatter
 
   return (
@@ -83,9 +91,14 @@ const Page = ({ data, children, pageContext, location }) => {
   )
 }
 
-export function Head({ data, pageContext, location}) {
+export function Head({ data, pageContext, location }) {
   const frontmatter = data.post.childMdx.frontmatter
-  const translationData = { currentPath: location, currentSlug: data.post.childMdx.fields.slug, currentLanguage: pageContext.pageLocale, translations: data.translations.nodes }
+  const translationData = {
+    currentPath: location,
+    currentSlug: data.post.childMdx.fields.slug,
+    currentLanguage: pageContext.pageLocale,
+    translations: data.translations.nodes,
+  }
   return <Meta translationData={translationData} title={`${frontmatter.title} – ${data.site.siteMetadata.title}`} description={frontmatter.intro} />
 }
 

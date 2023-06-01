@@ -8,23 +8,23 @@ const defaultLocale = 'de'
 
 function findTranslationNodes(n, nodes) {
   const locale = n.childMdx.fields.locale
-  const nodeDir = n.relativeDirectory.replace(`${locale}/`, "")
+  const nodeDir = n.relativeDirectory.replace(`${locale}/`, '')
   const translationTargets = locales.filter((el) => el !== locale)
-   
+
   const translationCandidates = nodes.filter((el) => {
-    const dir = el.relativeDirectory.replace(`${el.childMdx.fields.locale}/`, "")
+    const dir = el.relativeDirectory.replace(`${el.childMdx.fields.locale}/`, '')
     return dir === nodeDir
   })
-  
+
   const rootFileName = n.base
 
   const translations = translationCandidates.filter((el) => {
     const foundIndex = translationTargets.findIndex((t) => {
-      return (rootFileName === el.base && el.childMdx.fields.locale !== locale)  
+      return rootFileName === el.base && el.childMdx.fields.locale !== locale
     })
     return foundIndex !== -1
   })
-  
+
   return translations
 }
 
@@ -52,7 +52,7 @@ exports.createPages = async function ({ actions, graphql }) {
       }
     }
   `)
-  
+
   const posts = data.posts.nodes.filter((el) => {
     return el.relativeDirectory.includes('/posts')
   })
@@ -73,9 +73,9 @@ exports.createPages = async function ({ actions, graphql }) {
     const postTemplate = require.resolve(`./src/components/Report.js`)
     const translations = findTranslationNodes(node, reports)
     const translationIds = translations.map((t) => t.id)
-    const year = node.relativeDirectory.replace(/(.{2})\/(reports)\//g, "")
+    const year = node.relativeDirectory.replace(/(.{2})\/(reports)\//g, '')
     let path = `${locale && locale !== defaultLocale ? locale : ''}/${year}/`
-    
+
     actions.createPage({
       path: path,
       component: `${postTemplate}?__contentFilePath=${node.childMdx.internal.contentFilePath}`,
@@ -89,7 +89,7 @@ exports.createPages = async function ({ actions, graphql }) {
     const postTemplate = require.resolve(`./src/components/Post.js`)
     const translations = findTranslationNodes(node, posts)
     const translationIds = translations.map((t) => t.id)
-    const year = node.relativeDirectory.replace(/(.{2})\/(reports)\//g, '').replace("/posts", "")
+    const year = node.relativeDirectory.replace(/(.{2})\/(reports)\//g, '').replace('/posts', '')
     let path = `${locale && locale !== defaultLocale ? locale : ''}/${year}/${node.childMdx.fields.slug}`
 
     actions.createPage({
@@ -108,7 +108,7 @@ exports.createPages = async function ({ actions, graphql }) {
     actions.createPage({
       path: path,
       component: `${postTemplate}?__contentFilePath=${node.childMdx.internal.contentFilePath}`,
-      context: { id: node.id, translations: translationIds, pageLocale: locale },
+      context: { id: node.id, translations: translationIds },
     })
   })
 }
