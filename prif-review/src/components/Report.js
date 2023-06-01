@@ -69,7 +69,14 @@ export const query = graphql`
       }
     }
 
-    pages: allFile(filter: { relativeDirectory: {glob: "**/pages/**"}, extension: { eq: "mdx" }, sourceInstanceName: { eq: "content" }, childMdx: { fields: { locale: { eq: $language } } } }) {
+    pages: allFile(
+      filter: {
+        relativeDirectory: { glob: "**/pages/**" }
+        extension: { eq: "mdx" }
+        sourceInstanceName: { eq: "content" }
+        childMdx: { fields: { locale: { eq: $language } } }
+      }
+    ) {
       nodes {
         id
         childMdx {
@@ -88,7 +95,7 @@ export const query = graphql`
 
 const Index = ({ data, pageContext, children, location }) => {
   const { t } = useTranslation()
-  const year = data.post.relativeDirectory.replace(/(.{2})\/(reports)\//g, "")
+  const year = data.post.relativeDirectory.replace(/(.{2})\/(reports)\//g, '')
   const posts = data.posts.nodes.map((p) => {
     return (
       <li key={p.id}>
@@ -109,8 +116,8 @@ const Index = ({ data, pageContext, children, location }) => {
 }
 
 export default Index
-export const Head = ({ data, pageContext }) => {
+export const Head = ({ data, pageContext, location }) => {
   const frontmatter = data.post.childMdx.frontmatter
-  const translationData = { currentLanguage: pageContext.language, currentSlug: pageContext.path }
+  const translationData = { currentLanguage: pageContext.language, currentSlug: location.pathname }
   return <Meta title={`${frontmatter.title} – ${data.site.siteMetadata.title}`} translationData={translationData} />
 }

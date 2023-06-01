@@ -1,5 +1,6 @@
 import { graphql, useStaticQuery } from 'gatsby'
 import React from 'react'
+import useTranslations from '../hooks/useTranslations'
 
 export default function Meta({ title, description, image, url, translationData, children }) {
   const defaultData = useStaticQuery(graphql`
@@ -17,6 +18,12 @@ export default function Meta({ title, description, image, url, translationData, 
           }
         }
       }
+      allSitePage {
+        nodes {
+          path
+          pageContext
+        }
+      }
     }
   `)
   const fallback = defaultData.site.siteMetadata
@@ -31,14 +38,14 @@ export default function Meta({ title, description, image, url, translationData, 
     },
     siteTwitter: fallback.siteTwitter,
   }
-  
-  if (!translationData.translations) translationData.translations = []
-  
-  const alternateLinks = translationData.translations.map((t, i) => {
-    const path = `${defaultData.site.siteMetadata.siteUrl}/${t.childMdx.fields.slug}`
-    return <link key={`alternate-${i}`} rel="alternate" hrefLang={t.childMdx.fields.locale} href={path}/>
+
+  let translations = useTranslations(translationData, defaultData.allSitePage.nodes)
+
+  const alternateLinks = translations.map((t, i) => {
+    const path = `${defaultData.site.siteMetadata.siteUrl}/${t.path}`
+    return <link key={`alternate-${i}`} rel="alternate" hrefLang={t.language} href={path} />
   })
-  
+
   return (
     <>
       {translationData && <html lang={translationData.currentLanguage} />}
@@ -61,10 +68,9 @@ export default function Meta({ title, description, image, url, translationData, 
       <meta property="og:description" content={data.description} />
       <meta property="og:image" content={data.image.src} />
       <meta property="og:image:alt" content={data.image.alt} />
-      <meta name="author" content={data.siteTitle} />
-      
+
       {alternateLinks}
-  
+
       {children}
     </>
   )

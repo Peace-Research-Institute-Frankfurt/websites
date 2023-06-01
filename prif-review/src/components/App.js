@@ -5,11 +5,7 @@ import Footer from './Footer'
 import SkipToContent from './SkipToContent'
 import SiteHeader from './SiteHeader'
 import './global.scss'
-
-function removeLanguagePrefix(s) {
-  // Hard-coding this for English for now
-  return s.replace('/en', '')
-}
+import useTranslations from '../hooks/useTranslations'
 
 function App({ translationData, pages, children }) {
   const data = useStaticQuery(graphql`
@@ -23,35 +19,12 @@ function App({ translationData, pages, children }) {
     }
   `)
 
-  // This array will hold data about translations of the current page,
-  // including accurate paths, and excluding the current language.
-
-  let translations = []
-  const languages = ['de', 'en']
-  const targetLanguages = languages.filter((el) => el !== translationData.currentLanguage)
-  const basePath = removeLanguagePrefix(translationData.currentSlug)
-
-  if (translationData.translations) {
-    translations = translationData.translations.map((t) => {
-      const translationPage = data.allSitePage.nodes.find((el) => el.pageContext.id === t.id)
-      return { path: translationPage.path, language: translationPage.pageContext.language }
-    })
-  } else {
-    translations = targetLanguages.map((l) => {
-      const translationPage = data.allSitePage.nodes.find((el) => {
-        const p = removeLanguagePrefix(el.path)
-        return el.pageContext.language === l && p === basePath
-      })
-      return { path: translationPage.path, language: l }
-    })
-  }
+  let translations = useTranslations(translationData, data.allSitePage.nodes)
 
   return (
     <>
       <SkipToContent />
       <SiteHeader>
-        <p>Current path: {translationData.currentSlug}</p>
-        <p>Current path w/o language prefix: {basePath}</p>
         <LanguageSwitcher translations={translations} translationData={translationData} />
       </SiteHeader>
       {children}

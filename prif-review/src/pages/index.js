@@ -17,7 +17,14 @@ export const query = graphql`
         }
       }
     }
-    pages: allFile(filter: { relativeDirectory: {glob: "**/pages/**"}, extension: { eq: "mdx" }, sourceInstanceName: { eq: "content" }, childMdx: { fields: { locale: { eq: $language } } } }) {
+    pages: allFile(
+      filter: {
+        relativeDirectory: { glob: "**/pages/**" }
+        extension: { eq: "mdx" }
+        sourceInstanceName: { eq: "content" }
+        childMdx: { fields: { locale: { eq: $language } } }
+      }
+    ) {
       nodes {
         id
         childMdx {
@@ -57,15 +64,15 @@ export const query = graphql`
   }
 `
 
-const Index = ({ data, pageContext, location}) => {
+const Index = ({ data, pageContext, location }) => {
   const { t } = useTranslation()
   return (
-    <App pages={data.pages.nodes} translationData={{ currentLanguage: pageContext.language, currentSlug: location.pathname}}>
+    <App pages={data.pages.nodes} translationData={{ currentLanguage: pageContext.language, currentSlug: location.pathname }}>
       <SkipToContent />
       <main className={styles.container}>
         <h1>{t('PRIF Reports')}</h1>
         {data.reports.nodes.map((report, i) => {
-          const year = report.relativeDirectory.replace(/(.{2})\/(reports)\//g, "")
+          const year = report.relativeDirectory.replace(/(.{2})\/(reports)\//g, '')
           return (
             <li key={`report-${i}`}>
               <Link to={`/${year}`}>{report.childMdx.frontmatter.title}</Link>
@@ -78,7 +85,7 @@ const Index = ({ data, pageContext, location}) => {
 }
 
 export default Index
-export const Head = ({ data, pageContext }) => {
-  const translationData = { currentLanguage: pageContext.language }
+export const Head = ({ pageContext, location }) => {
+  const translationData = { currentLanguage: pageContext.language, currentSlug: location.pathname }
   return <Meta translationData={translationData} />
 }

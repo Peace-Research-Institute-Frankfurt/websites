@@ -3,7 +3,6 @@ import React from 'react'
 import App from './App'
 import PostBody from './PostBody'
 import Meta from './Meta'
-import { useI18next } from 'gatsby-plugin-react-i18next'
 import * as styles from './Page.module.scss'
 
 export const query = graphql`
