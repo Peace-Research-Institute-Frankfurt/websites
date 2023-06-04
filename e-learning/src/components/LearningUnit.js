@@ -162,16 +162,6 @@ const LearningUnit = ({ data, children }) => {
             </div>
           </section>
           <section>
-            <h2 className={styles.sectionTitle}>Citation</h2>
-            <div className={styles.sectionContent}>
-              <p className={styles.citation}>
-                {authorsToString(authors)}, "{frontmatter.title}" in EUNPDC eLearning, ed. Niklas Schörnig, Peace Research Institute Frankfurt.
-                Available at {data.site.siteMetadata.siteUrl}
-                {data.post.childMdx.fields.slug}, last modified {data.site.buildTime}
-              </p>
-            </div>
-          </section>
-          <section>
             <div className={`${styles.sectionContent} ${styles.unitActions}`}>
               <Link to={startLink} className={`${ButtonStyles.container} ${ButtonStyles.primary}`}>
                 Start learning unit
@@ -202,6 +192,12 @@ const LearningUnit = ({ data, children }) => {
                 available solely for the purpose of information and as an additional service for users. Only the respective operator is responsible
                 for all content and statements on linked Internet sites. Therefore, HSFK cannot guarantee the correctness and accuracy or any other
                 aspect of third party sites.
+              </p>
+              <h3>Citation</h3>
+              <p>
+                {authorsToString(authors)}, "{frontmatter.title}" in EUNPDC eLearning, ed. Niklas Schörnig, Peace Research Institute Frankfurt.
+                Available at {data.site.siteMetadata.siteUrl}
+                {data.post.childMdx.fields.slug}, last modified {data.site.buildTime}
               </p>
             </div>
           </section>

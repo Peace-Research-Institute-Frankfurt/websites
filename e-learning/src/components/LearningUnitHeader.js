@@ -22,7 +22,7 @@ export default function LearningUnitHeader({ image, title, intro, startLink, bac
         <h1 className={styles.headerTitle}>{title}</h1>
         <p className={styles.headerIntro}>{intro}</p>
         <Link className={styles.headerCta} to={startLink}>
-          Start <ArrowRight />
+          Start learning unit <ArrowRight />
         </Link>
       </div>
     </header>

@@ -41,9 +41,3 @@
     list-style: none;
   }
 }
-
-.meta {
-  @extend %mono-tiny;
-  padding-top: 0.5rem;
-  color: var(--gray-60);
-}

@@ -11,6 +11,10 @@
     @media (min-width: 55rem) {
       @content;
     }
+  } @else if $point==sm {
+    @media (min-width: 40rem) {
+      @content;
+    }
   } @else if $point==s {
     @media (min-width: 30rem) {
       @content;
@@ -244,6 +248,8 @@ $text-border: 2px solid var(--gray-40);
   column-gap: var(--padding);
   margin: 0 auto;
   max-width: 95rem;
-  border-bottom: 1px solid var(--blue-90);
   padding: 0 var(--padding);
+  @include bp(m) {
+    border-bottom: 1px solid var(--blue-80);
+  }
 }

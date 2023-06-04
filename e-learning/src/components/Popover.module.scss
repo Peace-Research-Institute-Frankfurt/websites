@@ -1,7 +1,7 @@
 @import 'vars';
 
 .container {
-  @include bp(m) {
+  @include bp(sm) {
     position: relative;
   }
 }
@@ -24,11 +24,11 @@
   background-color: white;
   z-index: 3000;
   position: absolute;
-  top: calc(100% + 5px);
   left: var(--padding);
   right: 0;
-  @include bp(m) {
-    left: 0;
+  top: calc(100% - 2px);
+  @include bp(sm) {
+    top: calc(100% + 4px);
     left: auto;
   }
 }

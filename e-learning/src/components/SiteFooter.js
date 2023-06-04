@@ -1,16 +1,9 @@
 import React from 'react'
-import { graphql, useStaticQuery, Link } from 'gatsby'
+import { Link } from 'gatsby'
 import FundingLogo from '../assets/icons/funded-by-eu.svg'
 import * as styles from './SiteFooter.module.scss'
 
 export default function SiteFooter() {
-  const data = useStaticQuery(graphql`
-    query {
-      meta: site {
-        buildTime(formatString: "D MMMM Y, HH:mm")
-      }
-    }
-  `)
   return (
     <footer className={styles.container}>
       <div className={styles.inner}>
@@ -42,7 +35,6 @@ export default function SiteFooter() {
           the respective authors and don't necessariy reflect the position of the European Union.
         </p>
         <FundingLogo className={styles.funding} />
-        <p className={styles.meta}>Built {data.meta.buildTime}</p>
       </div>
     </footer>
   )
