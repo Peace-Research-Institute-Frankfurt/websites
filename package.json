@@ -1,12 +1,13 @@
 {
   "private": true,
   "workspaces": [
-    "new-work",
     "e-learning",
+    "e-learning-plugin",
+    "new-work",
+    "prif-gatsby-remark-smartypants",
     "prif-review",
-    "shared",
     "scripts",
-    "e-learning-plugin"
+    "shared"
   ],
   "overrides": {
     "json5": "^1.0.2",

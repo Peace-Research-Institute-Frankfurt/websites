@@ -2,7 +2,6 @@ import path from 'path'
 import { fileURLToPath } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
-import remarkGfm from 'remark-gfm'
 
 const config = {
   siteMetadata: {
@@ -47,30 +46,27 @@ const config = {
     {
       resolve: 'gatsby-plugin-mdx',
       options: {
-        mdxOptions: {
-          remarkPlugins: [remarkGfm],
-        },
+        mdxOptions: {},
         gatsbyRemarkPlugins: [
-            {
-              resolve: '../prif-gatsby-remark-smartypants',
-              options: {
-                locales: [
-                  {
-                    openingQuotes: { single: '‚', double: '„' },
-                    closingQuotes: { single: '’', double: '“' },
-                    dashes: 'oldschool',
-                    locale: "de"                  
-                  },
-                  {
-                    openingQuotes: { single: '‘', double: '“' },
-                    closingQuotes: { single: '’', double: '”' },
-                    dashes: 'oldschool',
-                    locale: "en"                  
-                  },
-                ]
-
-              },
-            }          
+          {
+            resolve: '../prif-gatsby-remark-smartypants',
+            options: {
+              locales: [
+                {
+                  openingQuotes: { single: '‚', double: '„' },
+                  closingQuotes: { single: '’', double: '“' },
+                  dashes: 'oldschool',
+                  locale: 'de',
+                },
+                {
+                  openingQuotes: { single: '‘', double: '“' },
+                  closingQuotes: { single: '’', double: '”' },
+                  dashes: 'oldschool',
+                  locale: 'en',
+                },
+              ],
+            },
+          },
         ],
       },
     },
