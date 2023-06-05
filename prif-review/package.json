@@ -14,7 +14,7 @@
   "dependencies": {
     "@mdx-js/react": "^2.3.0",
     "@prif/shared": "0.0.1",
-    "dotenv": "^16.0.3",
+    "dotenv": "^16.1.4",
     "gatsby": "^5.9.0",
     "gatsby-plugin-image": "^3.9.0",
     "gatsby-plugin-manifest": "^5.9.0",
