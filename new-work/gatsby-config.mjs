@@ -2,6 +2,7 @@ import path from 'path'
 import { fileURLToPath } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
+import remarkGfm from 'remark-gfm'
 
 const config = {
   siteMetadata: {
@@ -76,7 +77,9 @@ const config = {
     {
       resolve: 'gatsby-plugin-mdx',
       options: {
-        mdxOptions: {},
+        mdxOptions: {
+          remarkPlugins: [remarkGfm],
+        },
         gatsbyRemarkPlugins: [
           {
             resolve: '../prif-gatsby-remark-smartypants',
