@@ -136,7 +136,7 @@
     flex-flow: row;
     color: var(--blue-80);
     flex-flow: column;
-    padding: 1em 0;
+    padding: 0.5em 0;
     padding-bottom: 0.9em;
     @include bp(m) {
       padding: 1em;
@@ -170,9 +170,13 @@
 
 .chapter-intro {
   @extend %copy;
+  font-size: var(--ms--1);
   margin-top: 0.1em;
   margin-bottom: 0.2em;
   flex-basis: 50%;
+  @include bp(m) {
+    font-size: var(--ms-0);
+  }
 }
 
 .disclosures {

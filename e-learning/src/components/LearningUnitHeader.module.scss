@@ -104,7 +104,6 @@
   border-radius: var(--br);
   gap: 0.25em;
   align-items: center;
-  font-size: var(--ms-1);
   transition: var(--fast);
   align-self: flex-start;
   font-weight: 300;
@@ -112,6 +111,7 @@
   padding-top: 0.175em;
   text-underline-offset: 0.15em;
   @include bp(m) {
+    font-size: var(--ms-1);
     padding-top: 0.125em;
   }
   svg {
@@ -119,7 +119,6 @@
   }
   &:hover,
   &:focus-visible {
-    text-decoration: underline;
     filter: brightness(1.1);
   }
 }
