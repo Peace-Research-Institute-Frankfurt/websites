@@ -21,7 +21,7 @@
     "gatsby-plugin-mdx": "^5.7.0",
     "gatsby-plugin-netlify": "^5.1.0",
     "gatsby-plugin-remark-footnotes": "^0.0.1",
-    "gatsby-plugin-sass": "^6.9.0",
+    "gatsby-plugin-sass": "^6.11.0",
     "gatsby-plugin-sharp": "^5.8.1",
     "gatsby-remark-autolink-headers": "^6.9.0",
     "gatsby-remark-smartypants": "^6.8.0",
