@@ -18,7 +18,7 @@
     "gatsby-plugin-image": "^3.9.0",
     "gatsby-plugin-local-search": "^2.0.1",
     "gatsby-plugin-manifest": "^5.9.0",
-    "gatsby-plugin-mdx": "^5.7.0",
+    "gatsby-plugin-mdx": "^5.11.0",
     "gatsby-plugin-netlify": "^5.1.0",
     "gatsby-plugin-remark-footnotes": "^0.0.1",
     "gatsby-plugin-sass": "^6.11.0",
