@@ -41,7 +41,7 @@
     "remark-smartypants": "^2.0.0",
     "slug": "^8.2.2",
     "svg-react-loader": "^0.4.6",
-    "unist-util-visit": "^4.1.1",
+    "unist-util-visit": "^5.0.0",
     "puppeteer": "^20.7.4"
   },
   "devDependencies": {

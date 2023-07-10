@@ -8,7 +8,7 @@
   "main": "index.js",
   "dependencies": {
     "retext-smartypants": "^5.2.0",
-    "unist-util-visit": "^4.1.1",
+    "unist-util-visit": "^5.0.0",
     "retext": "^8.1.0"
   }
 }
