@@ -30,7 +30,7 @@
     "gatsby-transformer-json": "^5.11.0",
     "gatsby-transformer-sharp": "^5.11.0",
     "mapbox-gl": "^2.15.0",
-    "mdast-util-to-string": "^3.2.0",
+    "mdast-util-to-string": "^4.0.0",
     "pagedjs": "^0.4.3",
     "react": "18.2.0",
     "react-dom": "^18.2.0",
