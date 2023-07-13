@@ -47,6 +47,13 @@
     @extend %h2;
   }
 }
+
+%copy-bold {
+  @extend %copy;
+  font-variation-settings: 'wght' 700;
+  letter-spacing: 0;
+}
+
 %copy-large {
   @extend %copy;
   line-height: calc(var(--baseline) * 1.5);

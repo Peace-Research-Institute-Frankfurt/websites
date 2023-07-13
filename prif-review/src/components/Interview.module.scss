@@ -1,0 +1,22 @@
+@import 'vars';
+
+.container {
+  background: rgb(225, 235, 170);
+  padding: 1em;
+  margin-bottom: 1em;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.question {
+  list-style: none;
+  margin-bottom: 1em;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.prompt {
+  @extend %copy-bold;
+}
