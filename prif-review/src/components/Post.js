@@ -3,7 +3,6 @@ import { graphql } from 'gatsby'
 import App from './App'
 import PostBody from './PostBody'
 import Meta from './Meta'
-import { useI18next } from 'gatsby-plugin-react-i18next'
 
 import * as styles from './Post.module.scss'
 
@@ -104,7 +103,7 @@ const Post = ({ data, pageContext, children }) => {
   const frontmatter = data.post.childMdx.frontmatter
   let authorIds = []
   if (frontmatter.authors) {
-    authorIds = frontmatter.authors.map((el) => el.frontmatter.author_id)
+    authorIds = frontmatter.authors.map((el) => el?.frontmatter.author_id)
   }
 
   const authors = data.authors.nodes.filter((el) => {
