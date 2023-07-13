@@ -38,7 +38,7 @@ export const query = graphql`
               institution
               image {
                 childImageSharp {
-                  gatsbyImageData(width: 250, placeholder: BLURRED)
+                  gatsbyImageData(width: 250, placeholder: DOMINANT_COLOR)
                 }
               }
             }
