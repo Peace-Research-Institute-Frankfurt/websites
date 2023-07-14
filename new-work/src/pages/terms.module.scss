@@ -1,0 +1,105 @@
+@import '../components/vars';
+
+.container {
+  background: var(--black);
+  border-top: 1px solid var(--gray);
+}
+.header {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  background: var(--black);
+  border-bottom: 1px solid var(--gray);
+}
+
+.header-copy {
+  @extend %copy-large;
+  grid-column: 1 / 2;
+  grid-row: 1;
+  border-right: 1px solid var(--gray);
+  padding: var(--padding-small) var(--padding);
+  padding-right: calc(var(--padding) * 0.5);
+}
+
+.header-title {
+  @extend %h1-long;
+  grid-column: 2 / 3;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  padding-left: calc(var(--padding) * 0.5);
+}
+
+.content {
+}
+.initials {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--padding-small);
+  padding: var(--padding-small) var(--padding);
+  border-bottom: 1px solid var(--gray);
+}
+.initial {
+  @extend %copy-large;
+  --r: 1.5em;
+  border: 1px solid var(--gray);
+  color: var(--white);
+  width: var(--r);
+  height: var(--r);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0.15em;
+  border-radius: 1000px;
+  cursor: pointer;
+  &:hover,
+  &:focus-visible,
+  &.active {
+    border-color: var(--white);
+    background: var(--white);
+    color: var(--black);
+  }
+}
+
+.terms {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  margin-bottom: -1px;
+  li {
+    display: contents;
+  }
+}
+
+.term {
+  border-bottom: 1px solid var(--gray);
+  border-right: 1px solid var(--gray);
+  &[open] {
+    grid-column: span 2;
+    .term-title {
+      border-bottom: 1px solid var(--gray);
+    }
+  }
+}
+
+.term-title {
+  @extend %h3;
+  appearance: none;
+  list-style: none;
+  padding: var(--padding-small) var(--padding);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  &:hover,
+  &:focus-visible {
+    background: var(--white);
+    color: var(--black);
+    cursor: pointer;
+  }
+}
+
+.term-description {
+  padding: var(--padding-small) var(--padding);
+  @extend %copy;
+}

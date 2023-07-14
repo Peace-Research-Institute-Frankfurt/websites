@@ -30,7 +30,7 @@
 .eyebrow {
   display: block;
   font-family: var(--circa);
-  margin-bottom: -0.75em;
+  margin-left: 0.1em;
   font-size: var(--ms-1);
 }
 
@@ -41,7 +41,7 @@
   margin-bottom: -0.125em;
 }
 .is-long {
-  font-size: Max(8vw, var(--ms-5));
+  @extend %h1-long;
 }
 
 .credit {

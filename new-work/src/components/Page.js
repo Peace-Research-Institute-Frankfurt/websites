@@ -33,7 +33,6 @@ const Page = ({ data, children }) => {
   return (
     <App>
       <SkipToContent />
-      <StickyHeader title={frontmatter.title} post={data.post} />
       <article id="content">
         <PostHeader title={frontmatter.title} />
         <main className={styles.body}>

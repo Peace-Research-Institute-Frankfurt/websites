@@ -4,7 +4,6 @@ import { StaticImage } from 'gatsby-plugin-image'
 import App from '../components/App'
 import Meta from '../components/Meta'
 import SkipToContent from '../components/SkipToContent'
-import { gri } from '../components/util'
 import * as styles from './index.module.scss'
 import PostHeader from '../components/PostHeader'
 

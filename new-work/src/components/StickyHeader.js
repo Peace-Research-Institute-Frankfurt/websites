@@ -26,13 +26,12 @@ export default function StickyHeader({}) {
   return (
     <>
       <header style={containerStyles} className={`${styles.container} ${isScrolled && styles.stuck}`}>
-        <div className={styles.copy}>
-          <div className={styles.left}>
-            <Link className={styles.logo} to="/">
-              NW
-            </Link>
-          </div>
-        </div>
+        <Link className={styles.logo} to="/">
+          NW
+        </Link>
+        <nav>
+          <Link to="/terms">Glossar</Link>
+        </nav>
       </header>
     </>
   )

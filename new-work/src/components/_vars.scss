@@ -31,6 +31,10 @@
   font-weight: 600;
   text-transform: uppercase;
 }
+%h1-long {
+  @extend %h1;
+  font-size: Max(8vw, var(--ms-5));
+}
 
 %h2 {
   font-size: var(--ms-3);
@@ -39,10 +43,11 @@
 }
 
 %h3 {
-  font-family: var(--circa);
-  font-variation-settings: 'wght' 900;
+  font-family: var(--edge);
   font-size: var(--ms-1);
+  line-height: 1.1;
 }
+
 %h4 {
 }
 

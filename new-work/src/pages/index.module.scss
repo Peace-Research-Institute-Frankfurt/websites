@@ -59,11 +59,15 @@
 }
 
 .post {
+  @extend %copy;
   background: var(--yellow);
-  padding: 0 0.4em;
+  padding: 0.1em 0.4em;
+  line-height: 1;
+  padding-bottom: 0;
   font-size: var(--ms-4);
   border-radius: 1000px;
   color: var(--black);
+  display: inline-block;
   border: 1px solid var(--yellow);
   &:hover,
   &:focus-visible {

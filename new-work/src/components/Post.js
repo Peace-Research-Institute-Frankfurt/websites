@@ -87,7 +87,6 @@ const Post = ({ data, children }) => {
   return (
     <App>
       <SkipToContent />
-      <StickyHeader title={frontmatter.title} chapterIndex={frontmatter.order} next={next} prev={previous} post={data.post} />
       <article id="content" className={styles.container}>
         <PostHeader
           title={frontmatter.title}
