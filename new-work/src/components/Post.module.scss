@@ -9,13 +9,15 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(to bottom, transparent 0%, var(--blue) 30vh);
-    z-index: -10;
+    background: linear-gradient(to bottom, transparent 0%, var(--color) 30vh);
+    z-index: 10;
   }
 }
 
 .body {
   @extend %copy;
+  z-index: 100;
+  position: relative;
   background: var(--black);
   margin: 0 var(--padding);
   padding: var(--baseline) var(--padding);

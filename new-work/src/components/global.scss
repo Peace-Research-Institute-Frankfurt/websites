@@ -19,7 +19,7 @@
   --blue: #4d5b8d;
   --green: #568d72;
   --yellow: #eabc47;
-  --black: rgba(0, 0, 0, 1);
+  --black: rgb(7, 8, 8);
   --focus-color: rgb(37, 93, 216);
   --edge: 'NewEdge666Rounded', sans-serif;
   --edge-rounded: 'NewEdge666Rounded', sans-serif;
@@ -44,6 +44,7 @@
   --padding-small: max(1vw, 0.5rem);
   --baseline: calc(var(--ms-0) * 1.35);
   --header-height: 56px;
+  --color: black;
 }
 
 * {
@@ -55,8 +56,8 @@
 }
 
 body {
-  background: var(--blue);
   color: var(--white);
+  min-height: 100%;
 }
 
 table {
@@ -103,4 +104,14 @@ img {
   align-items: center;
   font-family: monospace;
   word-wrap: break-word;
+}
+
+.raum {
+  --color: var(--blue);
+}
+.mensch {
+  --color: var(--green);
+}
+.tool {
+  --color: var(--yellow);
 }

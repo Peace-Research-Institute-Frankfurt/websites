@@ -2,29 +2,23 @@
 
 .container {
   display: inline-flex;
-  font-family: var(--haas-text);
-  letter-spacing: -0.01em;
-  line-height: 1;
+  font-family: var(--edge);
   cursor: pointer;
   align-items: center;
   font-size: var(--ms-1);
   border-radius: var(--br);
-  background: var(--gray-light);
-  border: 1px solid var(--gray-light);
-  gap: 0.35rem;
-  font-weight: 600;
-  padding: 0 0.75em;
-  padding-bottom: 0.15em;
+  color: var(--white);
+  border: 1px solid var(--gray);
   height: 1.85em;
   position: relative;
+  padding: 0 0.75em;
+  padding-top: 0.15em;
   @include bp(m) {
     height: 1.85em;
-    padding: 0 0.5em;
-    padding-bottom: 0.15em;
   }
   &:hover,
   &:focus-visible {
-    border-color: var(--black);
+    border-color: var(--white);
   }
 
   &.has-icon {
@@ -56,16 +50,6 @@
   }
 }
 
-.primary {
-  background: var(--black);
-  border: 1px solid var(--black);
-  color: white;
-  &.loading {
-    background: var(--gray);
-    border: 1px solid var(--gray);
-    cursor: progress;
-  }
-}
 .secondary {
   background: var(--gray-light);
   border: 1px solid var(--gray-light);

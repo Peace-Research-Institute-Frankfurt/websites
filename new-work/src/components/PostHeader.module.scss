@@ -5,7 +5,7 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: -1000;
+  z-index: 0;
   height: 90vh;
 }
 .container {
@@ -15,6 +15,7 @@
   border-top-left-radius: var(--br);
   border-top-right-radius: var(--br);
   margin-top: calc(var(--header-height) + var(--padding));
+  z-index: 100;
 }
 
 .has-image {
@@ -30,8 +31,9 @@
 .eyebrow {
   display: block;
   font-family: var(--circa);
-  margin-left: 0.1em;
+  margin-left: 0.35em;
   font-size: var(--ms-1);
+  text-transform: capitalize;
 }
 
 .title {

@@ -137,19 +137,16 @@
   font-family: var(--circa);
   font-size: var(--ms-2);
   letter-spacing: -0.001em;
-  line-height: calc(var(--baseline) * 1.5);
+  line-height: calc(var(--baseline) * 1.3333);
   font-weight: 400;
   hyphens: auto;
-  @include bp(s) {
-    font-size: var(--ms-3);
-  }
 }
 
 %caption {
-  line-height: 1.2;
+  line-height: 1.25;
   font-family: var(--edge);
-  font-size: var(--ms--1);
-  letter-spacing: 0.005em;
+  font-size: var(--ms--2);
+  letter-spacing: 0.05em;
 }
 %caption-bold {
   @extend %caption;

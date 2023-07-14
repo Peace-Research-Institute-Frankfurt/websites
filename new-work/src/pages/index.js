@@ -18,19 +18,7 @@ export const query = graphql`
           }
           frontmatter {
             title
-            order
-            intro
-            authors {
-              frontmatter {
-                name
-                author_id
-                image {
-                  childImageSharp {
-                    gatsbyImageData(placeholder: NONE, width: 70, layout: CONSTRAINED)
-                  }
-                }
-              }
-            }
+            category
           }
         }
       }
@@ -39,13 +27,20 @@ export const query = graphql`
 `
 
 const Index = ({ data }) => {
-  const categories = ['Raum', 'Mensch', 'Tool']
+  const categories = []
+
+  data.posts.nodes.forEach((node) => {
+    const category = node.childMdx.frontmatter.category
+    if (category && !categories.includes(category)) {
+      categories.push(category)
+    }
+  })
 
   const posts = data.posts.nodes.map((node, i) => {
     const fm = node.childMdx.frontmatter
     return (
       <li key={`post-${i}`}>
-        <Link className={styles.post} to={node.childMdx.fields.slug}>
+        <Link className={`${styles.post} ${fm.category ? fm.category : ''}`} to={node.childMdx.fields.slug}>
           {fm.title}
         </Link>
       </li>
@@ -67,7 +62,7 @@ const Index = ({ data }) => {
             {categories.map((el) => {
               return (
                 <li>
-                  <button className={styles.filter}>{el}</button>
+                  <button className={`${styles.filter} ${el}`}>{el}</button>
                 </li>
               )
             })}

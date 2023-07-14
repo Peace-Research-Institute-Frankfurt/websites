@@ -1,14 +1,12 @@
 @import 'vars';
 .container {
-  margin-top: 1em;
-  margin-bottom: 1em;
+  margin: calc(var(--baseline) / 2) 0;
 }
 
 .consent {
   @extend %caption;
-  border: 1px solid currentColor;
-  border-radius: var(--br-small);
-  padding: 1em;
+  border-top: 1px solid var(--gray);
+  padding: calc(var(--baseline) / 2) 0;
 }
 
 .iframe-container {

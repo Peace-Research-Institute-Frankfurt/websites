@@ -9,14 +9,16 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(to bottom, transparent 0%, var(--blue) 30vh);
-    z-index: -10;
+    background: linear-gradient(to bottom, transparent 0%, black 30vh);
+    z-index: 50;
   }
 }
 
 .content {
   margin: 0 var(--padding);
   background: var(--black);
+  z-index: 100;
+  position: relative;
 }
 
 .section-title {
@@ -38,7 +40,7 @@
 }
 
 .filter {
-  background: var(--blue);
+  background: var(--color);
   font-family: var(--edge-rounded);
   font-size: 8.55vw;
   line-height: 0.85;
@@ -60,7 +62,6 @@
 
 .post {
   @extend %copy;
-  background: var(--yellow);
   padding: 0.1em 0.4em;
   line-height: 1;
   padding-bottom: 0;
@@ -68,10 +69,11 @@
   border-radius: 1000px;
   color: var(--black);
   display: inline-block;
-  border: 1px solid var(--yellow);
+  background: var(--color);
+  border: 1px solid var(--color);
   &:hover,
   &:focus-visible {
     background: transparent;
-    color: var(--yellow);
+    color: var(--color);
   }
 }

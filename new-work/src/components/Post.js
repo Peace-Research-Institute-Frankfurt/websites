@@ -28,6 +28,7 @@ export const query = graphql`
           order
           eyebrow
           reading_time
+          category
           hero_alt
           hero_credit
           hero_image {
@@ -85,12 +86,12 @@ const Post = ({ data, children }) => {
   const previous = data.posts.nodes[currentIndex - 1]
 
   return (
-    <App>
+    <App className={`${frontmatter.category}`}>
       <SkipToContent />
-      <article id="content" className={styles.container}>
+      <article id="content" className={`${styles.container}`}>
         <PostHeader
           title={frontmatter.title}
-          eyebrow={frontmatter.eyebrow}
+          eyebrow={frontmatter.eyebrow || frontmatter.category}
           image={heroImage}
           credit={frontmatter.hero_credit}
           intro={frontmatter.intro}
