@@ -33,9 +33,15 @@
 }
 
 %h2 {
+  font-size: var(--ms-3);
+  line-height: calc(var(--baseline) * 1.5);
+  letter-spacing: -0.01em;
 }
 
 %h3 {
+  font-family: var(--circa);
+  font-variation-settings: 'wght' 900;
+  font-size: var(--ms-1);
 }
 %h4 {
 }
@@ -104,17 +110,11 @@
   }
   h2 {
     @extend %h2;
-    margin-top: calc(var(--ms-1) * 1);
-    margin-bottom: calc(var(--ms-1) * 0.5);
+    margin-top: calc(var(--baseline) * 0.5);
+    margin-bottom: calc(var(--baseline) * 0.25);
 
     &:first-child {
       margin-top: 0;
-    }
-    @include bp(m) {
-      margin-top: calc(var(--ms-1) * 0.5);
-    }
-    @include bp(l) {
-      margin-top: calc(var(--ms-1) * 1.5);
     }
   }
   h3 {

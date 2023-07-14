@@ -22,7 +22,14 @@
   display: grid;
   grid-template-columns: 1fr minmax(min-content, 46rem) 1fr;
   column-gap: var(--padding);
-  p {
+  p,
+  ol,
+  ul,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     grid-column: 2 / 3;
   }
 }

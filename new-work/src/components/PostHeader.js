@@ -6,8 +6,8 @@ import * as styles from './PostHeader.module.scss'
 export default function PostHeader({ title, intro, eyebrow, image, credit }) {
   return (
     <>
-      <div className={styles.image}>{image}</div>
-      <header className={`${styles.container}`}>
+      {image && <div className={styles.image}>{image}</div>}
+      <header className={`${styles.container} ${image ? styles.hasImage : ''}`}>
         <div className={styles.titleContainer}>
           {eyebrow && <span className={styles.eyebrow}>{eyebrow}</span>}
           <h1 className={`${styles.title} ${title.length > 30 ? styles.isLong : ''}`}>{title}</h1>
@@ -18,7 +18,7 @@ export default function PostHeader({ title, intro, eyebrow, image, credit }) {
             </aside>
           )}
         </div>
-        <div className={styles.intro}>{intro}</div>
+        {intro && <div className={styles.intro}>{intro}</div>}
       </header>
     </>
   )
