@@ -26,22 +26,20 @@ export default function Footer() {
   `)
   return (
     <footer className={styles.container}>
-      <div>
-        <nav className={styles.nav}>
-          <ul>
-            <li>
-              <Link to="/">Startseite</Link>
-            </li>
-            {data.pages.nodes.map((p) => {
-              return (
-                <li key={`navitem-${p.id}`}>
-                  <Link to={`../${p.childMdx.fields.slug}`}>{p.childMdx.frontmatter.title}</Link>
-                </li>
-              )
-            })}
-          </ul>
-        </nav>
-      </div>
+      <nav className={styles.nav}>
+        <ul>
+          <li>
+            <Link to="/">Startseite</Link>
+          </li>
+          {data.pages.nodes.map((p) => {
+            return (
+              <li key={`navitem-${p.id}`}>
+                <Link to={`../${p.childMdx.fields.slug}`}>{p.childMdx.frontmatter.title}</Link>
+              </li>
+            )
+          })}
+        </ul>
+      </nav>
       <p className={styles.meta}>© HSFK und die Autor*innen {new Date().getFullYear()}</p>
     </footer>
   )

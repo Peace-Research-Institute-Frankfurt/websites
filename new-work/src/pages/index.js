@@ -1,13 +1,12 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import App from '../components/App'
 import Meta from '../components/Meta'
 import SkipToContent from '../components/SkipToContent'
 import { gri } from '../components/util'
-import LeibnizLogo from '../images/logo-black.svg'
 import * as styles from './index.module.scss'
+import PostHeader from '../components/PostHeader'
 
 export const query = graphql`
   query {
@@ -41,30 +40,14 @@ export const query = graphql`
 `
 
 const Index = ({ data }) => {
+  const categories = ['Raum', 'Mensch', 'Tool']
+
   const posts = data.posts.nodes.map((node, i) => {
     const fm = node.childMdx.frontmatter
-    let byline = ''
-    if (fm.authors) {
-      byline = fm.authors.map((a, j) => {
-        const authorImage = getImage(a.frontmatter.image)
-        const imageStyles = {
-          transform: `translateX(${100 * j}%) rotate(${gri(-20, 20)}deg)`,
-        }
-        return (
-          <li style={imageStyles} key={`authors-${i}-${a.frontmatter.author_id}-${j}`}>
-            <GatsbyImage objectFit="contain" className={styles.bylineImage} image={authorImage} alt={`${a.frontmatter.name} profile image`} />
-          </li>
-        )
-      })
-    }
     return (
       <li key={`post-${i}`}>
-        <Link className={styles.postsItem} to={node.childMdx.fields.slug}>
-          <div className={styles.postsHeader}>
-            <h2 className={styles.postsTitle}>{fm.title}</h2>
-            {byline.length > 0 && <ul className={styles.postsAuthors}>{byline}</ul>}
-          </div>
-          <p className={styles.postsIntro}>{fm.intro}</p>
+        <Link className={styles.post} to={node.childMdx.fields.slug}>
+          {fm.title}
         </Link>
       </li>
     )
@@ -73,42 +56,22 @@ const Index = ({ data }) => {
     <App>
       <SkipToContent />
       <main id="content">
-        <header role="banner" className={styles.hero}>
-          <h1 className={styles.title}>
-            <div>
-              <span className={styles.titleMain}>
-                <span className={styles.w}>W</span>
-                <span className={styles.o}>o</span>
-                <span>r</span>
-                <span>k</span>
-                <span> </span>
-                <span>N</span>
-                <span className={styles.e}>e</span>
-                <span className={styles.w}>w</span>
-              </span>
-            </div>
-            <div className={styles.tagline}>
-              <p>Wie wir Räume, Kulturen und Netzwerke für die Zukunft gestalten</p>
-            </div>
-            <span className={styles.titleSecondary}>
-              <span className={styles.at}>@</span>Leibniz
-            </span>
-          </h1>
-          <StaticImage
-            imgStyle={{ objectFit: 'contain' }}
-            placeholder="none"
-            layout="constrained"
-            className={styles.face}
-            loading="eager"
-            src="../images/leibniz-head.png"
-            alt=""
-            width={1000}
-          />
-          <a href="https://www.leibniz-gemeinschaft.de/" className={styles.sticker}>
-            <LeibnizLogo />
-          </a>
-        </header>
+        <PostHeader
+          image={<StaticImage src="../images/monolith-spot.png" alt="" layout="fullWidth" />}
+          title="Neue Arbeitsformen für Wissenschaft und Forschung"
+          intro="New Work bricht Regeln auf, hinterfragt Machtverhältnisse und rückt den Menschen seinen Stärken, Bedürfnissen und Emotiononen in den Fokus."
+        />
         <section className={styles.content}>
+          <h2 className={styles.sectionTitle}>Inhalte</h2>
+          <ol className={styles.filters}>
+            {categories.map((el) => {
+              return (
+                <li>
+                  <button className={styles.filter}>{el}</button>
+                </li>
+              )
+            })}
+          </ol>
           <ol className={styles.posts}>{posts}</ol>
         </section>
       </main>

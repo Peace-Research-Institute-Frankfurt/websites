@@ -1,23 +1,15 @@
 import React from 'react'
-import Bylines from './Bylines'
 import * as styles from './PostHeader.module.scss'
 
-export default function PostHeader({ intro, title, color, image, authors, fullHeight }) {
-  const headerStyles = {
-    '--color': color,
-  }
+export default function PostHeader({ title, intro, eyebrow, image, credit }) {
   return (
-    <header className={`${styles.container} ${fullHeight && styles.isFullHeight}`} style={headerStyles}>
-      <div className={styles.headerCopy}>
-        <div className={styles.headerCopyInner}>
-          <h1 className={styles.title}>{title}</h1>
-          {intro && <p className={styles.intro}>{intro}</p>}
-        </div>
-        <div className={styles.meta}>
-          <Bylines authors={authors} />
-        </div>
-      </div>
-      {image}
-    </header>
+    <>
+      <div className={styles.image}>{image}</div>
+      <header className={`${styles.container}`}>
+        {eyebrow && <span className={styles.eyebrow}>{eyebrow}</span>}
+        <h1 className={styles.title}>{title}</h1>
+        <div className={styles.intro}>{intro}</div>
+      </header>
+    </>
   )
 }

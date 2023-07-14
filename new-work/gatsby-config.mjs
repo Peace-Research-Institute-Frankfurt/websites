@@ -8,7 +8,7 @@ const config = {
   siteMetadata: {
     siteUrl: `https://leibniz-nw.netlify.app`,
     title: 'Work New @Leibniz',
-    description: 'Wie wir Räume, Kulturen und Netzwerke für die Zukunft gestalten.',
+    description: 'Neue Arbeitformen für Wissenschaft und Forschung',
     siteTwitter: '@HSFK_PRIF',
     authorTwitter: '@HSFK_PRIF',
     image: {

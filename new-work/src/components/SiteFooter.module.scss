@@ -1,35 +1,16 @@
-@import 'vars';
-
 .container {
-  @extend %caption;
+  margin: 0 var(--padding);
   display: flex;
   justify-content: space-between;
-  margin: 0 var(--padding);
-  padding-bottom: 1rem;
-  flex-flow: column;
-  align-items: center;
-  @include bp(s) {
-    flex-flow: row;
-  }
+  background: var(--black);
+  border-top: 1px solid var(--gray);
+  padding: var(--padding-small) var(--padding);
 }
-
 .nav {
+  justify-content: space-between;
   ul {
-    margin-bottom: 0.25em;
-    gap: 0.65em;
     display: flex;
-    justify-content: center;
-    line-height: 1;
+    gap: var(--padding-small);
     list-style: none;
-    flex-wrap: wrap;
   }
-  margin-bottom: 1em;
-  @include bp(m) {
-    margin-bottom: 0;
-  }
-}
-
-.meta {
-  padding-top: 0.25rem;
-  font-size: var(--ms--1);
 }

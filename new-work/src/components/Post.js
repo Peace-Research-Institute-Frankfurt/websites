@@ -3,12 +3,11 @@ import { graphql } from 'gatsby'
 import { GatsbyImage, getImage, getSrc } from 'gatsby-plugin-image'
 import App from './App'
 import PostBody from './PostBody'
-import PostHeader from './PostHeader'
-import Pagination from './PostPagination'
 import SkipToContent from './SkipToContent'
 import StickyHeader from './StickyHeader'
 import * as styles from './Post.module.scss'
 import Meta from './Meta'
+import PostHeader from './PostHeader'
 
 export const query = graphql`
   query ($id: String!) {
@@ -94,18 +93,9 @@ const Post = ({ data, children }) => {
       <SkipToContent />
       <StickyHeader title={frontmatter.title} chapterIndex={frontmatter.order} next={next} prev={previous} post={data.post} />
       <article id="content">
-        <PostHeader
-          authors={frontmatter.authors}
-          readingTime={frontmatter.reading_time}
-          intro={frontmatter.intro}
-          image={heroImage}
-          title={frontmatter.title}
-          fullHeight={true}
-          color={frontmatter.color}
-        />
-        <main className={styles.body}>
+        <PostHeader title={frontmatter.title} />
+        <main className={styles.container}>
           <PostBody>{children}</PostBody>
-          <Pagination next={next} previous={previous} />
         </main>
       </article>
     </App>
