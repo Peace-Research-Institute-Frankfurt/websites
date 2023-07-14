@@ -1,4 +1,7 @@
+@import 'vars';
+
 .container {
+  @extend %caption;
   margin: 0 var(--padding);
   display: flex;
   justify-content: space-between;

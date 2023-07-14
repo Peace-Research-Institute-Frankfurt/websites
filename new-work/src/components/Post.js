@@ -26,12 +26,13 @@ export const query = graphql`
           intro
           color
           order
+          eyebrow
           reading_time
           hero_alt
           hero_credit
           hero_image {
             childImageSharp {
-              gatsbyImageData(width: 1000, placeholder: BLURRED)
+              gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
             }
           }
           authors {
@@ -77,12 +78,7 @@ const Post = ({ data, children }) => {
 
   let heroImage = <></>
   if (frontmatter.hero_image) {
-    heroImage = (
-      <div className={styles.image}>
-        <GatsbyImage loading="eager" image={getImage(frontmatter.hero_image)} alt={frontmatter.hero_alt} />
-        {frontmatter.hero_credit && <p className={styles.credit}>Bild: {frontmatter.hero_credit}</p>}
-      </div>
-    )
+    heroImage = <GatsbyImage loading="eager" image={getImage(frontmatter.hero_image)} alt={frontmatter.hero_alt} />
   }
 
   const next = data.posts.nodes[currentIndex + 1]
@@ -92,9 +88,15 @@ const Post = ({ data, children }) => {
     <App>
       <SkipToContent />
       <StickyHeader title={frontmatter.title} chapterIndex={frontmatter.order} next={next} prev={previous} post={data.post} />
-      <article id="content">
-        <PostHeader title={frontmatter.title} />
-        <main className={styles.container}>
+      <article id="content" className={styles.container}>
+        <PostHeader
+          title={frontmatter.title}
+          eyebrow={frontmatter.eyebrow}
+          image={heroImage}
+          credit={frontmatter.hero_credit}
+          intro={frontmatter.intro}
+        />
+        <main className={styles.body}>
           <PostBody>{children}</PostBody>
         </main>
       </article>

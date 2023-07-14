@@ -1,31 +1,31 @@
 @import '../components/vars';
 
-.sticker {
-  display: none;
-}
-
-.content {
-  margin: 0 var(--padding);
-  background: var(--black);
+.container {
   position: relative;
   &:after {
     content: '';
     position: absolute;
     top: 0;
+    left: 0;
+    right: 0;
     bottom: 0;
-    left: calc(var(--padding) * -1);
-    right: calc(var(--padding) * -1);
-    background: var(--blue);
+    background: linear-gradient(to bottom, transparent 0%, var(--blue) 30vh);
     z-index: -10;
   }
 }
 
+.content {
+  margin: 0 var(--padding);
+  background: var(--black);
+}
+
 .section-title {
-  @extend %h2;
-  border-top: 1px solid var(--gray);
+  font-family: var(--edge-rounded);
+  font-size: var(--ms-1);
+  text-transform: uppercase;
   border-bottom: 1px solid var(--gray);
   padding: var(--padding-small) var(--padding);
-  padding-bottom: 0.15em;
+  padding-bottom: 0.3em;
 }
 
 .filters {
@@ -40,7 +40,7 @@
 .filter {
   background: var(--blue);
   font-family: var(--edge-rounded);
-  font-size: var(--ms-8);
+  font-size: 8.55vw;
   line-height: 0.85;
   border-radius: 1000px;
   padding: 0 0.25em;

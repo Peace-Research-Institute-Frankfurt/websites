@@ -6,8 +6,8 @@
 
 .consent {
   @extend %caption;
-  border: 2px solid currentColor;
-  border-radius: var(--br);
+  border: 1px solid currentColor;
+  border-radius: var(--br-small);
   padding: 1em;
 }
 

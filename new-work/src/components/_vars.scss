@@ -23,7 +23,7 @@
 }
 
 %h1 {
-  font-size: var(--ms-8);
+  font-size: Max(12vw, var(--ms-5));
   font-family: var(--edge-rounded);
   line-height: 0.825;
   letter-spacing: -0.03em;
@@ -33,44 +33,17 @@
 }
 
 %h2 {
-  font-family: var(--edge-rounded);
-  text-transform: uppercase;
-  line-height: 1.1;
-  hyphens: none;
-  font-weight: 600;
-  font-size: var(--ms-3);
-  letter-spacing: -0.02em;
-  & + h3 {
-    margin-top: 0;
-  }
 }
 
 %h3 {
-  line-height: 1.1;
-  font-weight: 600;
-  font-family: var(--haas-text);
-  margin-top: calc(var(--ms-1) * 0.5);
-  margin-bottom: calc(var(--ms-1) * 0.25);
-  font-size: var(--ms-2);
-  & + h4 {
-    margin-top: 0.1em;
-  }
 }
 %h4 {
-  line-height: 1.1;
-  // font-weight: 600;
-  font-family: var(--haas-text);
-  margin-bottom: calc(var(--ms-1) * 0.25);
-  font-size: 0.9em;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-top: calc(var(--ms-1) * 1);
 }
 
 %copy {
-  font-family: var(--suisse);
-  font-size: var(--ms-1);
-  line-height: 1.45;
+  font-family: var(--circa);
+  font-size: var(--ms-0);
+  line-height: var(--baseline);
   letter-spacing: 0.005em;
   word-spacing: 0.005em;
   hyphens: auto;
@@ -78,10 +51,7 @@
   p,
   ul,
   ol {
-    margin-bottom: 0.65em;
-    @include bp(m) {
-      margin-bottom: 0.85em;
-    }
+    margin-bottom: calc(var(--baseline) * 0.5);
     &:last-child {
       margin-bottom: 0;
     }
@@ -158,21 +128,23 @@
   }
 }
 
-%caption {
-  font-family: var(--haas-text);
-  font-feature-settings: 'ss03' 1, 'tnum' 1;
-  font-size: var(--ms-0);
-  line-height: 1.2;
-  letter-spacing: 0.005em;
-  a {
-    text-decoration: underline;
-    text-decoration-style: dotted;
-    text-underline-offset: 0.15em;
-    &:hover,
-    &:focus {
-      text-decoration-style: solid;
-    }
+%copy-large {
+  font-family: var(--circa);
+  font-size: var(--ms-2);
+  letter-spacing: -0.001em;
+  line-height: calc(var(--baseline) * 1.5);
+  font-weight: 400;
+  hyphens: auto;
+  @include bp(s) {
+    font-size: var(--ms-3);
   }
+}
+
+%caption {
+  line-height: 1.2;
+  font-family: var(--edge);
+  font-size: var(--ms--1);
+  letter-spacing: 0.005em;
 }
 %caption-bold {
   @extend %caption;
@@ -184,17 +156,4 @@
   @extend %caption;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-}
-
-%copy-large {
-  font-family: var(--suisse);
-  font-size: var(--ms-2);
-  letter-spacing: -0.025em;
-  line-height: 1.4;
-  font-weight: 400;
-  hyphens: auto;
-  @include bp(s) {
-    font-size: var(--ms-3);
-    line-height: 1.15;
-  }
 }

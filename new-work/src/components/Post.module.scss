@@ -1,5 +1,35 @@
+@import 'vars';
+
 .container {
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent 0%, var(--blue) 30vh);
+    z-index: -10;
+  }
+}
+
+.body {
+  @extend %copy;
   background: var(--black);
   margin: 0 var(--padding);
-  padding: var(--padding);
+  padding: var(--baseline) var(--padding);
+  display: grid;
+  grid-template-columns: 1fr minmax(min-content, 46rem) 1fr;
+  column-gap: var(--padding);
+  p {
+    grid-column: 2 / 3;
+  }
+}
+
+p.intro {
+  @extend %copy-large;
+  grid-column: 1 / 2;
+  grid-row: 1 / 4;
+  margin-top: -0.3em;
 }

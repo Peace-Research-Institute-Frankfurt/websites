@@ -7,19 +7,25 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: 'Circa';
+  src: url('/PPCirka-Variable.subset.woff2') format('woff2');
+  font-display: swap;
+}
 
 :root {
   --white: rgb(254, 251, 251);
   --gray: rgba(254, 251, 251, 0.4);
-  --blue: #2067ff;
-  --green: rgb(81, 175, 37);
-  --yellow: rgb(223, 205, 47);
+  --blue: #4d5b8d;
+  --green: #568d72;
+  --yellow: #eabc47;
   --black: rgba(0, 0, 0, 1);
   --focus-color: rgb(37, 93, 216);
-  --edge-rounded: 'NewEdge666Rounded', serif;
-  --circa: 'acumin-pro', sans-serif;
+  --edge: 'NewEdge666Rounded', sans-serif;
+  --edge-rounded: 'NewEdge666Rounded', sans-serif;
+  --circa: 'Circa', Georgia, serif;
   --ratio: 1.3; // Minor 3
-  --ms-0: clamp(0.75rem, calc(1.4vw + 0.1rem), 1.05rem);
+  --ms-0: clamp(0.95rem, calc(1.6vw + 0.2rem), 1.5rem);
   --ms--2: calc(var(--ms--1) / var(--ratio));
   --ms--1: calc(var(--ms-0) / var(--ratio));
   --ms-1: calc(var(--ms-0) * var(--ratio));
@@ -32,9 +38,11 @@
   --ms-8: calc(var(--ms-7) * var(--ratio));
   --ms-9: calc(var(--ms-8) * var(--ratio));
   --br: 40px;
+  --br-small: 4px;
   --fast: 100ms;
-  --padding: max(2vw, 0.5rem);
+  --padding: max(1.5vw, 0.5rem);
   --padding-small: max(1vw, 0.5rem);
+  --baseline: calc(var(--ms-0) * 1.35);
 }
 
 * {
@@ -76,8 +84,8 @@ textarea:focus-visible {
 }
 
 ::selection {
-  background-color: black;
-  color: white;
+  background-color: var(--white);
+  color: var(--black);
 }
 
 .gatsby-image-wrapper {

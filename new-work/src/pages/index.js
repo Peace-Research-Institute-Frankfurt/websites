@@ -55,11 +55,12 @@ const Index = ({ data }) => {
   return (
     <App>
       <SkipToContent />
-      <main id="content">
+      <main id="content" className={styles.container}>
         <PostHeader
           image={<StaticImage src="../images/monolith-spot.png" alt="" layout="fullWidth" />}
           title="Neue Arbeitsformen für Wissenschaft und Forschung"
           intro="New Work bricht Regeln auf, hinterfragt Machtverhältnisse und rückt den Menschen seinen Stärken, Bedürfnissen und Emotiononen in den Fokus."
+          credit="Illustration von Max Köhler"
         />
         <section className={styles.content}>
           <h2 className={styles.sectionTitle}>Inhalte</h2>
