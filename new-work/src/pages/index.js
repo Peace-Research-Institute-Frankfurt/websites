@@ -51,7 +51,7 @@ const Index = ({ data }) => {
       <SkipToContent />
       <main id="content" className={styles.container}>
         <PostHeader
-          image={<StaticImage src="../images/monolith-spot.png" alt="" layout="fullWidth" />}
+          image={<StaticImage src="../images/cubes.png" alt="" layout="fullWidth" />}
           title="Neue Arbeitsformen für Wissenschaft und Forschung"
           intro="New Work bricht Regeln auf, hinterfragt Machtverhältnisse und rückt den Menschen seinen Stärken, Bedürfnissen und Emotiononen in den Fokus."
           credit="Illustration von Max Köhler"

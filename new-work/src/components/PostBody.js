@@ -6,11 +6,13 @@ import FileAdapter from './FileAdapter'
 import FigureAdapter from './FigureAdapter'
 import { EmbedAdapter, Youtube, Vimeo } from './EmbedAdapter'
 import Quote from '@shared/components/Quote'
+import TermAdapter from './TermAdapter'
 import * as QuoteStyles from './Quote.module.scss'
 import * as FileStyles from './File.module.scss'
 import * as FigureStyles from './Figure.module.scss'
 import * as EmbedStyles from './Embed.module.scss'
 import * as EmbedChoicesStyles from './EmbedChoices.module.scss'
+import * as TermStyles from './Term.module.scss'
 
 const shortCodes = {
   Figure: ({ ...props }) => <FigureAdapter {...props} styles={FigureStyles} />,
@@ -20,6 +22,7 @@ const shortCodes = {
   Vimeo: ({ ...props }) => <Vimeo styles={EmbedStyles} {...props} />,
   EmbedChoices: ({ ...props }) => <EmbedChoicesAdapter styles={EmbedChoicesStyles} />,
   Embed: ({ ...props }) => <EmbedAdapter styles={EmbedStyles} {...props} />,
+  Term: ({ ...props }) => <TermAdapter styles={TermStyles} {...props} />,
   Leadin,
 }
 

@@ -70,9 +70,10 @@
   color: var(--black);
   display: inline-block;
   background: var(--color);
-  border: 1px solid var(--color);
+  border: 1px solid black;
   &:hover,
   &:focus-visible {
+    border: 1px solid var(--color);
     background: transparent;
     color: var(--color);
   }
