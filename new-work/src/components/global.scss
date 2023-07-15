@@ -24,7 +24,7 @@
   --edge: 'NewEdge666Rounded', sans-serif;
   --edge-rounded: 'NewEdge666Rounded', sans-serif;
   --circa: 'Circa', Georgia, serif;
-  --mono: monospace;
+  --mono: 'Courier New', 'Lucida Console', serif, monospace;
   --ratio: 1.3; // Minor 3
   --ms-0: clamp(0.95rem, calc(1.6vw + 0.2rem), 1.5rem);
   --ms--2: calc(var(--ms--1) / var(--ratio));
@@ -115,4 +115,17 @@ img {
 }
 .tool {
   --color: var(--yellow);
+}
+
+.footnotes {
+  @extend %caption;
+  grid-column: 2 / 3;
+  @include bp(l) {
+    grid-column: 3 / 4;
+    align-self: last baseline;
+    justify-self: flex-end;
+  }
+  h2 {
+    display: none;
+  }
 }

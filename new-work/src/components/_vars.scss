@@ -63,7 +63,7 @@
   ul,
   ol {
     margin-bottom: calc(var(--baseline) * 0.5);
-    &:last-child {
+    &:last-of-type {
       margin-bottom: 0;
     }
   }
