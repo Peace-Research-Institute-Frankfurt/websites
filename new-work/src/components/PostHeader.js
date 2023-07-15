@@ -3,7 +3,7 @@ import Arrow from '../images/arrow-right.svg'
 import MarkdownRenderer from 'react-markdown-renderer'
 import * as styles from './PostHeader.module.scss'
 
-export default function PostHeader({ title, intro, eyebrow, image, credit }) {
+export default function PostHeader({ title, intro, eyebrow, image, credit, portrait }) {
   return (
     <>
       {image && <div className={styles.image}>{image}</div>}
@@ -18,7 +18,12 @@ export default function PostHeader({ title, intro, eyebrow, image, credit }) {
             </aside>
           )}
         </div>
-        {intro && <div className={styles.intro}>{intro}</div>}
+        {intro && (
+          <div className={styles.intro}>
+            {portrait && portrait}
+            <div className={styles.introCopy}>{intro}</div>
+          </div>
+        )}
       </header>
     </>
   )

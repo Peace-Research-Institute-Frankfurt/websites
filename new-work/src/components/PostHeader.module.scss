@@ -64,4 +64,12 @@
   @extend %copy-large;
   padding: var(--padding-small) var(--padding);
   border-bottom: 1px solid var(--gray);
+  display: grid;
+  grid-template-columns: 4.2em 1fr;
+  gap: var(--padding);
+}
+
+.intro-copy {
+  flex-grow: 1;
+  flex-basis: 80%;
 }

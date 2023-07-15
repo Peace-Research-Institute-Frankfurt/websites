@@ -6,6 +6,7 @@ import FileAdapter from './FileAdapter'
 import FigureAdapter from './FigureAdapter'
 import { EmbedAdapter, Youtube, Vimeo } from './EmbedAdapter'
 import TermAdapter from './TermAdapter'
+import { Interview, InterviewQuestion } from '@shared/components/Interview'
 import Quote from '@shared/components/Quote'
 
 import * as TermStyles from './Term.module.scss'
@@ -14,6 +15,7 @@ import * as FileStyles from './File.module.scss'
 import * as FigureStyles from './Figure.module.scss'
 import * as EmbedStyles from './Embed.module.scss'
 import * as EmbedChoicesStyles from './EmbedChoices.module.scss'
+import * as InterviewStyles from './Interview.module.scss'
 
 const shortCodes = {
   Figure: ({ ...props }) => <FigureAdapter {...props} styles={FigureStyles} />,
@@ -24,6 +26,8 @@ const shortCodes = {
   EmbedChoices: ({ ...props }) => <EmbedChoicesAdapter styles={EmbedChoicesStyles} />,
   Embed: ({ ...props }) => <EmbedAdapter styles={EmbedStyles} {...props} />,
   Term: ({ ...props }) => <TermAdapter styles={TermStyles} {...props} />,
+  Interview: ({ ...props }) => <Interview styles={InterviewStyles} {...props} />,
+  InterviewQuestion: ({ ...props }) => <InterviewQuestion styles={InterviewStyles} {...props} />,
   Leadin,
 }
 

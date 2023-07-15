@@ -29,10 +29,16 @@ export const query = graphql`
           reading_time
           category
           hero_alt
+          hero_portrait_alt
           hero_credit
           hero_image {
             childImageSharp {
               gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
+            }
+          }
+          hero_portrait {
+            childImageSharp {
+              gatsbyImageData(layout: CONSTRAINED, placeholder: NONE, width: 500)
             }
           }
           authors {
@@ -80,6 +86,12 @@ const Post = ({ data, children }) => {
   if (frontmatter.hero_image) {
     heroImage = <GatsbyImage loading="eager" image={getImage(frontmatter.hero_image)} alt={frontmatter.hero_alt} />
   }
+  let portraitImage = <></>
+  if (frontmatter.hero_portrait) {
+    portraitImage = (
+      <GatsbyImage className={styles.heroPortrait} loading="eager" image={getImage(frontmatter.hero_portrait)} alt={frontmatter.hero_portrait_alt} />
+    )
+  }
 
   const next = data.posts.nodes[currentIndex + 1]
   const previous = data.posts.nodes[currentIndex - 1]
@@ -92,6 +104,7 @@ const Post = ({ data, children }) => {
           title={frontmatter.title}
           eyebrow={frontmatter.eyebrow || frontmatter.category}
           image={heroImage}
+          portrait={portraitImage}
           credit={frontmatter.hero_credit}
           intro={frontmatter.intro}
         />
