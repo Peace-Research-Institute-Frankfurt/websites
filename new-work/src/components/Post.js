@@ -2,12 +2,11 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { GatsbyImage, getImage, getSrc } from 'gatsby-plugin-image'
 import App from './App'
-import PostBody from './PostBody'
-import SkipToContent from './SkipToContent'
-import StickyHeader from './StickyHeader'
-import * as styles from './Post.module.scss'
 import Meta from './Meta'
+import SkipToContent from './SkipToContent'
+import PostBody from './PostBody'
 import PostHeader from './PostHeader'
+import * as styles from './Post.module.scss'
 
 export const query = graphql`
   query ($id: String!) {

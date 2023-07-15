@@ -1,10 +1,9 @@
 import { graphql } from 'gatsby'
 import React from 'react'
 import App from './App'
+import SkipToContent from './SkipToContent'
 import PostBody from './PostBody'
 import PostHeader from './PostHeader'
-import SkipToContent from './SkipToContent'
-import StickyHeader from './StickyHeader'
 import * as styles from './Post.module.scss'
 
 export const query = graphql`

@@ -19,3 +19,14 @@
     list-style: none;
   }
 }
+
+.meta {
+  display: flex;
+  gap: 1em;
+  align-items: baseline;
+}
+
+.build {
+  font-family: var(--mono);
+  opacity: 0.65;
+}

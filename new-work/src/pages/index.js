@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link, graphql } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 import App from '../components/App'
 import Meta from '../components/Meta'
 import SkipToContent from '../components/SkipToContent'
-import * as styles from './index.module.scss'
 import PostHeader from '../components/PostHeader'
+import * as styles from './index.module.scss'
 
 export const query = graphql`
   query {
@@ -35,17 +35,22 @@ const Index = ({ data }) => {
       categories.push(category)
     }
   })
+  const [activeFilters, setActiveFilters] = useState(categories)
 
-  const posts = data.posts.nodes.map((node, i) => {
-    const fm = node.childMdx.frontmatter
-    return (
-      <li key={`post-${i}`}>
-        <Link className={`${styles.post} ${fm.category ? fm.category : ''}`} to={node.childMdx.fields.slug}>
-          {fm.title}
-        </Link>
-      </li>
-    )
-  })
+  const posts = data.posts.nodes
+    .filter((node) => {
+      return activeFilters.includes(node.childMdx.frontmatter.category)
+    })
+    .map((node, i) => {
+      const fm = node.childMdx.frontmatter
+      return (
+        <li key={`post-${i}`}>
+          <Link className={`${styles.post} ${fm.category ? fm.category : ''}`} to={node.childMdx.fields.slug}>
+            {fm.title}
+          </Link>
+        </li>
+      )
+    })
   return (
     <App>
       <SkipToContent />
@@ -59,10 +64,25 @@ const Index = ({ data }) => {
         <section className={styles.content}>
           <h2 className={styles.sectionTitle}>Inhalte</h2>
           <ol className={styles.filters}>
-            {categories.map((el) => {
+            {categories.map((category) => {
               return (
                 <li>
-                  <button className={`${styles.filter} ${el}`}>{el}</button>
+                  <button
+                    onClick={() => {
+                      if (activeFilters.includes(category)) {
+                        setActiveFilters((prev) => {
+                          return prev.filter((el) => el !== category)
+                        })
+                      } else {
+                        setActiveFilters((prev) => {
+                          return [...prev, category]
+                        })
+                      }
+                    }}
+                    className={`${styles.filter} ${category} ${activeFilters.includes(category) && styles.activeFilter}`}
+                  >
+                    {category}
+                  </button>
                 </li>
               )
             })}

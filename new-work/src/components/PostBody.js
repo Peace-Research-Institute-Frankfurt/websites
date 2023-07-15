@@ -5,14 +5,15 @@ import Leadin from './Leadin'
 import FileAdapter from './FileAdapter'
 import FigureAdapter from './FigureAdapter'
 import { EmbedAdapter, Youtube, Vimeo } from './EmbedAdapter'
-import Quote from '@shared/components/Quote'
 import TermAdapter from './TermAdapter'
+import Quote from '@shared/components/Quote'
+
+import * as TermStyles from './Term.module.scss'
 import * as QuoteStyles from './Quote.module.scss'
 import * as FileStyles from './File.module.scss'
 import * as FigureStyles from './Figure.module.scss'
 import * as EmbedStyles from './Embed.module.scss'
 import * as EmbedChoicesStyles from './EmbedChoices.module.scss'
-import * as TermStyles from './Term.module.scss'
 
 const shortCodes = {
   Figure: ({ ...props }) => <FigureAdapter {...props} styles={FigureStyles} />,

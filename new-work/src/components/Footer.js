@@ -40,7 +40,10 @@ export default function Footer() {
           })}
         </ul>
       </nav>
-      <p className={styles.meta}>© HSFK und die Autor*innen {new Date().getFullYear()}</p>
+      <p className={styles.meta}>
+        <span className={styles.build}>{data.meta.buildTime}</span>
+        <span>© {new Date().getFullYear()}</span>
+      </p>
     </footer>
   )
 }
