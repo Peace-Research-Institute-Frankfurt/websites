@@ -82,11 +82,11 @@ const Post = ({ data, children }) => {
     return el.childMdx.frontmatter.order === frontmatter.order
   })
 
-  let heroImage = <></>
+  let heroImage = null
   if (frontmatter.hero_image) {
     heroImage = <GatsbyImage loading="eager" image={getImage(frontmatter.hero_image)} alt={frontmatter.hero_alt} />
   }
-  let portraitImage = <></>
+  let portraitImage = null
   if (frontmatter.hero_portrait) {
     portraitImage = (
       <GatsbyImage className={styles.heroPortrait} loading="eager" image={getImage(frontmatter.hero_portrait)} alt={frontmatter.hero_portrait_alt} />
