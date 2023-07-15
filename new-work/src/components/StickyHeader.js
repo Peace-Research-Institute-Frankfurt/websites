@@ -29,8 +29,10 @@ export default function StickyHeader({}) {
         <Link className={styles.logo} to="/">
           {data.site.siteMetadata.title}
         </Link>
-        <nav>
-          <Link to="/terms">Glossar</Link>
+        <nav className={styles.nav}>
+          <Link className={styles.navItem} to="/terms">
+            Glossar
+          </Link>
         </nav>
       </header>
     </>
