@@ -4,7 +4,7 @@
   background: var(--black);
   border-top: 1px solid var(--gray);
   border-bottom: 1px solid var(--gray);
-  margin-top: calc(var(--header-height) - 2px);
+  margin-top: calc(var(--header-height) - 1px);
   padding-bottom: 0;
 }
 .has-intro {
@@ -21,7 +21,6 @@
   justify-self: center;
   padding-left: calc(var(--padding) * 0.5);
   padding-top: var(--padding); // optical correction
-  padding-bottom: var(--padding-small);
 }
 
 .intro {

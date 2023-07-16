@@ -60,6 +60,7 @@
 body {
   color: var(--white);
   min-height: 100%;
+  background: black;
 }
 
 table {
@@ -90,10 +91,6 @@ textarea:focus-visible {
 ::selection {
   background-color: var(--white);
   color: var(--black);
-}
-
-.gatsby-image-wrapper {
-  height: 100%;
 }
 
 .gatsby-image-wrapper [data-main-image] {

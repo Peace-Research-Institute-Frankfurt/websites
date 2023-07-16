@@ -10,6 +10,7 @@
   bottom: 0;
   margin: 0 var(--padding);
   z-index: 2000;
+  position: relative;
 }
 .nav {
   justify-content: space-between;
@@ -24,9 +25,4 @@
   display: flex;
   gap: 1em;
   align-items: baseline;
-}
-
-.build {
-  font-family: var(--mono);
-  opacity: 0.65;
 }

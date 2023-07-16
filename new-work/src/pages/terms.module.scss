@@ -6,6 +6,7 @@
   border-top: 1px solid var(--gray);
   border-left: 1px solid var(--gray);
   border-right: 1px solid var(--gray);
+  margin-top: -1px;
 }
 
 .initials {
@@ -57,6 +58,9 @@
     grid-column: span 2;
     .term-title {
       border-bottom: 1px solid var(--gray);
+      &:after {
+        transform: rotate(45deg);
+      }
     }
   }
 }
@@ -69,11 +73,19 @@
   padding-bottom: 0.25em;
   white-space: nowrap;
   overflow: hidden;
+  position: relative;
   text-overflow: ellipsis;
+  &:after {
+    content: '+';
+    position: absolute;
+    transition: var(--fast);
+    transform-origin: center;
+    right: var(--padding-small);
+    top: 0.4em;
+  }
   &:hover,
   &:focus-visible {
-    background: var(--white);
-    color: var(--black);
+    background: rgba(white, 0.04);
     cursor: pointer;
   }
 }

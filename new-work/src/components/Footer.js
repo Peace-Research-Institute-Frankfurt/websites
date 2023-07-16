@@ -5,9 +5,6 @@ import * as styles from './SiteFooter.module.scss'
 export default function Footer() {
   const data = useStaticQuery(graphql`
     query {
-      meta: site {
-        buildTime(formatString: "D MMMM Y, HH:mm", locale: "de")
-      }
       pages: allFile(filter: { extension: { eq: "mdx" }, sourceInstanceName: { eq: "pages" } }, sort: { childMdx: { frontmatter: { order: ASC } } }) {
         nodes {
           id
@@ -41,7 +38,6 @@ export default function Footer() {
         </ul>
       </nav>
       <p className={styles.meta}>
-        <span className={styles.build}>{data.meta.buildTime}</span>
         <span>© {new Date().getFullYear()}</span>
       </p>
     </footer>
