@@ -1,13 +1,14 @@
 .container {
   position: fixed;
-  top: var(--padding);
+  top: 0;
   left: var(--padding);
   font-family: var(--edge-rounded);
   z-index: 1000;
   display: flex;
   justify-content: space-between;
-  border-radius: var(--br);
-  height: 3rem;
+  border-bottom-left-radius: calc(0.75 * var(--br));
+  border-bottom-right-radius: calc(0.75 * var(--br));
+  height: var(--header-height);
   background-color: var(--black);
   border: 1px solid var(--gray);
 }
