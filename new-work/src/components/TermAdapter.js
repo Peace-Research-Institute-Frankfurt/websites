@@ -1,7 +1,9 @@
 import React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery, Link } from 'gatsby'
 import Term from '@shared/components/Term'
 import TooltipAdapter from './TooltipAdapter'
+import slug from 'slug'
+import * as styles from './Term.module.scss'
 
 export default function TermAdapter({ t, ...props }) {
   const data = useStaticQuery(graphql`
@@ -16,13 +18,31 @@ export default function TermAdapter({ t, ...props }) {
     }
   `)
 
-  // Let's find our term
-  let termNode = null
-  data.terms.nodes.forEach((node) => {
-    if (node.term_id === t) {
-      termNode = node
-    }
+  const maxWordCount = 20
+
+  const termNode = data.terms.nodes.find((node) => {
+    return node.term_id === t
   })
 
-  return <Term term={termNode} TooltipAdapter={TooltipAdapter} {...props} />
+  let copy = termNode.description
+  let isTruncated = false
+  if (termNode.description.split(' ').length > maxWordCount) {
+    copy = termNode.description.split(' ').slice(0, maxWordCount).join(' ') + '...'
+    isTruncated = true
+  }
+
+  const termData = {
+    ...termNode,
+    description: (
+      <>
+        <span>{copy}</span>
+        {isTruncated && (
+          <Link className={styles.more} to={`/terms#${slug(termNode.term_id)}`}>
+            Mehr lesen
+          </Link>
+        )}
+      </>
+    ),
+  }
+  return <Term term={termData} TooltipAdapter={TooltipAdapter} styles={styles} {...props} />
 }

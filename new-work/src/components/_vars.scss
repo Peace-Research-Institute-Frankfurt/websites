@@ -37,7 +37,8 @@
 }
 
 %h2 {
-  font-size: var(--ms-3);
+  font-size: var(--ms-2);
+  text-wrap: balance;
   line-height: calc(var(--baseline) * 1.5);
   letter-spacing: -0.01em;
 }
@@ -90,16 +91,15 @@
     }
   }
   ul {
-    padding-left: 1.5em;
+    padding-left: 1em;
   }
   ul li {
     list-style: none;
     position: relative;
     &:before {
       position: absolute;
-      left: -1.4em;
-      top: -0.05em;
-      content: '→';
+      left: -1em;
+      content: '—';
       font-weight: 400;
     }
   }

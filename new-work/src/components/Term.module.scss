@@ -71,3 +71,8 @@
   hyphens: auto;
   max-width: Min(100vw - 4 * var(--padding), 28rem);
 }
+
+.more {
+  display: inline-block;
+  margin-left: 0.35em;
+}

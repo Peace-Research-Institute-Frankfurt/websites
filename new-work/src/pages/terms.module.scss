@@ -2,7 +2,10 @@
 
 .container {
   background: var(--black);
+  margin: 0 var(--padding);
   border-top: 1px solid var(--gray);
+  border-left: 1px solid var(--gray);
+  border-right: 1px solid var(--gray);
 }
 
 .initials {
@@ -16,7 +19,8 @@
 }
 .initial {
   @extend %copy-large;
-  --r: 1.65em;
+  --r: 1.6em;
+  font-size: var(--ms-4);
   border: 1px solid var(--gray);
   color: var(--white);
   width: var(--r);
@@ -39,8 +43,8 @@
 
 .terms {
   list-style: none;
-  display: grid;
-  grid-template-columns: repeat(4, 25%);
+  // display: grid;
+  // grid-template-columns: repeat(4, 25%);
   margin-bottom: -1px;
   li {
     display: contents;
@@ -49,7 +53,6 @@
 
 .term {
   border-bottom: 1px solid var(--gray);
-  border-right: 1px solid var(--gray);
   &[open] {
     grid-column: span 2;
     .term-title {
@@ -62,7 +65,8 @@
   @extend %h3;
   appearance: none;
   list-style: none;
-  padding: var(--padding-small) var(--padding);
+  padding: var(--padding-small);
+  padding-bottom: 0.25em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -75,6 +79,6 @@
 }
 
 .term-description {
-  padding: var(--padding-small) var(--padding);
+  padding: var(--padding-small);
   @extend %copy;
 }

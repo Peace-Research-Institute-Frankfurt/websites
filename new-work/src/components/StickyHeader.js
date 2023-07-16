@@ -3,7 +3,7 @@ import React from 'react'
 import useScrollPosition from '@shared/hooks/useScrollPosition'
 import * as styles from './StickyHeader.module.scss'
 
-export default function StickyHeader({}) {
+export default function StickyHeader() {
   const data = useStaticQuery(graphql`
     query {
       site {

@@ -10,7 +10,6 @@ import { Interview, InterviewQuestion } from '@shared/components/Interview'
 import Quote from '@shared/components/Quote'
 import { Tab, Tabs } from './TabsAdapter'
 
-import * as TermStyles from './Term.module.scss'
 import * as QuoteStyles from './Quote.module.scss'
 import * as FileStyles from './File.module.scss'
 import * as FigureStyles from './Figure.module.scss'
@@ -26,7 +25,7 @@ const shortCodes = {
   Vimeo: ({ ...props }) => <Vimeo styles={EmbedStyles} {...props} />,
   EmbedChoices: ({ ...props }) => <EmbedChoicesAdapter styles={EmbedChoicesStyles} />,
   Embed: ({ ...props }) => <EmbedAdapter styles={EmbedStyles} {...props} />,
-  Term: ({ ...props }) => <TermAdapter styles={TermStyles} {...props} />,
+  Term: ({ ...props }) => <TermAdapter {...props} />,
   Interview: ({ ...props }) => <Interview styles={InterviewStyles} {...props} />,
   InterviewQuestion: ({ ...props }) => <InterviewQuestion styles={InterviewStyles} {...props} />,
   Tab,
