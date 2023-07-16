@@ -3,7 +3,7 @@ import React from 'react'
 import App from './App'
 import SkipToContent from './SkipToContent'
 import PostBody from './PostBody'
-import PostHeader from './PostHeader'
+import PageHeader from './PageHeader'
 import * as styles from './Post.module.scss'
 
 export const query = graphql`
@@ -33,7 +33,7 @@ const Page = ({ data, children }) => {
     <App>
       <SkipToContent />
       <article id="content">
-        <PostHeader title={frontmatter.title} />
+        <PageHeader title={frontmatter.title} />
         <main className={styles.body}>
           <PostBody>{children}</PostBody>
         </main>

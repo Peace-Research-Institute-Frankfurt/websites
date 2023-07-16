@@ -3,6 +3,7 @@ import { Link, graphql } from 'gatsby'
 import App from '../components/App'
 import Meta from '../components/Meta'
 import SkipToContent from '../components/SkipToContent'
+import PageHeader from '../components/PageHeader'
 import * as styles from './terms.module.scss'
 
 export const query = graphql`
@@ -78,15 +79,10 @@ const Index = ({ data }) => {
     <App>
       <SkipToContent />
       <main id="content" className={styles.container}>
-        <header className={styles.header}>
-          <h1 className={styles.headerTitle}>Glossar</h1>
-          <div className={styles.headerCopy}>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat minus earum laudantium, blanditiis commodi voluptatum et eius velit
-              error, unde pariatur doloremque quas? Vitae perferendis, alias perspiciatis recusandae consequatur ipsum?
-            </p>
-          </div>
-        </header>
+        <PageHeader
+          title="Glossar"
+          intro="Our existing learning units include a series of interactive graphics produced by an external agency. These can be embedded in new learning units and should behave as expected."
+        />
         <section className={styles.content}>
           <ol className={styles.initials}>{initialEls}</ol>
           <ol className={styles.terms}>{terms}</ol>

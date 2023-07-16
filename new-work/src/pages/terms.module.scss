@@ -4,34 +4,7 @@
   background: var(--black);
   border-top: 1px solid var(--gray);
 }
-.header {
-  display: grid;
-  grid-template-columns: repeat(2, 50%);
-  background: var(--black);
-  border-bottom: 1px solid var(--gray);
-}
 
-.header-copy {
-  @extend %copy-large;
-  grid-column: 1 / 2;
-  grid-row: 1;
-  border-right: 1px solid var(--gray);
-  padding: var(--padding-small) var(--padding);
-  padding-right: calc(var(--padding) * 0.5);
-}
-
-.header-title {
-  @extend %h1-long;
-  grid-column: 2 / 3;
-  display: flex;
-  align-items: center;
-  justify-self: center;
-  padding-left: calc(var(--padding) * 0.5);
-  padding-top: 0.15em; // optical correction
-}
-
-.content {
-}
 .initials {
   display: flex;
   list-style: none;
