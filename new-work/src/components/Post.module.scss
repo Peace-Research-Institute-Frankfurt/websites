@@ -35,7 +35,10 @@
   margin: 0 var(--padding);
   padding: var(--baseline) var(--padding);
   display: grid;
-  grid-template-columns: 1fr minmax(min-content, 55rem) 1fr;
+  grid-template-columns: 1fr minmax(min-content, 40rem) 1fr;
+  @include bp(l) {
+    grid-template-columns: 1fr minmax(min-content, 55rem) 1fr;
+  }
   column-gap: var(--padding);
   p,
   ol,

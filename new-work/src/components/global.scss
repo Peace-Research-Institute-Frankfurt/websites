@@ -16,6 +16,7 @@
 :root {
   --white: rgb(254, 251, 251);
   --gray: rgb(100, 100, 100);
+  --gray-hover: rgb(170, 170, 170);
   --blue: #4d5b8d;
   --green: #568d72;
   --yellow: #eabc47;
@@ -119,8 +120,8 @@ img {
 
 .footnotes {
   @extend %caption;
-  grid-column: 2 / 3;
-  @include bp(l) {
+  grid-column: 1/4;
+  @include bp(m) {
     grid-column: 3 / 4;
     align-self: last baseline;
     justify-self: flex-end;

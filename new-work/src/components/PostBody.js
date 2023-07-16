@@ -8,6 +8,7 @@ import { EmbedAdapter, Youtube, Vimeo } from './EmbedAdapter'
 import TermAdapter from './TermAdapter'
 import { Interview, InterviewQuestion } from '@shared/components/Interview'
 import Quote from '@shared/components/Quote'
+import { Tab, Tabs } from './TabsAdapter'
 
 import * as TermStyles from './Term.module.scss'
 import * as QuoteStyles from './Quote.module.scss'
@@ -28,6 +29,8 @@ const shortCodes = {
   Term: ({ ...props }) => <TermAdapter styles={TermStyles} {...props} />,
   Interview: ({ ...props }) => <Interview styles={InterviewStyles} {...props} />,
   InterviewQuestion: ({ ...props }) => <InterviewQuestion styles={InterviewStyles} {...props} />,
+  Tab,
+  Tabs,
   Leadin,
 }
 
