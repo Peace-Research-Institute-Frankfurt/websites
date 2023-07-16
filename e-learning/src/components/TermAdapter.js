@@ -16,12 +16,8 @@ export default function TermAdapter({ t, ...props }) {
     }
   `)
 
-  // Let's find our term
-  let termNode = null
-  data.terms.nodes.forEach((node) => {
-    if (node.term_id === t) {
-      termNode = node
-    }
+  const termNode = data.terms.nodes.find((node) => {
+    return node.term_id === t
   })
 
   return <Term term={termNode} TooltipAdapter={TooltipAdapter} {...props} />
