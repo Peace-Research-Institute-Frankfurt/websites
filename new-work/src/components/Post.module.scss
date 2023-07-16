@@ -47,13 +47,37 @@
   h3,
   h4,
   h5,
-  h6 {
+  h6,
+  table {
     grid-column: 1 / 4;
     @include bp(m) {
       grid-column: 1 / 3;
     }
     @include bp(l) {
       grid-column: 2 / 3;
+    }
+  }
+  table {
+    margin-bottom: calc(var(--baseline) / 2);
+    border: 1px solid var(--gray);
+  }
+  td,
+  th {
+    text-align: left;
+    vertical-align: baseline;
+    padding: 0.25em 0.5em;
+    padding-bottom: 0.05em;
+    border-right: 1px solid var(--gray);
+    hyphens: none;
+  }
+  th {
+    white-space: nowrap;
+    @extend %caption;
+  }
+  tr {
+    border-bottom: 1px solid var(--gray);
+    &:last-child {
+      border-bottom: 0;
     }
   }
 }
