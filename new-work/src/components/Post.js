@@ -6,6 +6,9 @@ import Meta from './Meta'
 import SkipToContent from './SkipToContent'
 import PostBody from './PostBody'
 import PostHeader from './PostHeader'
+import Bylines from './Bylines'
+import MarkdownRenderer from 'react-markdown-renderer'
+
 import * as styles from './Post.module.scss'
 
 export const query = graphql`
@@ -109,6 +112,14 @@ const Post = ({ data, children }) => {
           intro={frontmatter.intro}
         />
         <main className={styles.body}>
+          <aside className="credits">
+            <Bylines authors={frontmatter.authors}></Bylines>
+            {frontmatter.hero_credit && (
+              <aside className={styles.credit}>
+                <MarkdownRenderer markdown={frontmatter.hero_credit} />
+              </aside>
+            )}
+          </aside>
           <PostBody>{children}</PostBody>
         </main>
       </article>

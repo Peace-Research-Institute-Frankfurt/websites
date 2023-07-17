@@ -39,7 +39,6 @@
   --ms-7: calc(var(--ms-6) * var(--ratio));
   --ms-8: calc(var(--ms-7) * var(--ratio));
   --ms-9: calc(var(--ms-8) * var(--ratio));
-  --br: 40px;
   --br-small: 4px;
   --fast: 100ms;
   --padding: max(1.5vw, 0.5rem);
@@ -47,6 +46,10 @@
   --baseline: calc(var(--ms-0) * 1.35);
   --header-height: 3.35rem;
   --color: black;
+  --br: 20px;
+  @include bp(m) {
+    --br: 40px;
+  }
 }
 
 * {

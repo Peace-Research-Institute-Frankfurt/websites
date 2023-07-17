@@ -27,6 +27,11 @@
   }
 }
 
+.credit {
+  @extend %caption;
+  margin-top: 1em;
+}
+
 .body {
   @extend %copy;
   z-index: 100;

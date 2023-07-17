@@ -6,7 +6,10 @@
   left: 0;
   right: 0;
   z-index: 0;
-  height: 90vh;
+  height: 70vh;
+  & > div {
+    height: 100% !important;
+  }
 }
 .container {
   background: var(--black);
@@ -43,20 +46,6 @@
 }
 .is-long {
   @extend %h1-long;
-}
-
-.credit {
-  @extend %caption;
-  position: absolute;
-  right: var(--padding);
-  bottom: var(--padding);
-  display: flex;
-  align-items: flex-start;
-  gap: 0.25em;
-  svg {
-    height: 1em;
-    transform: translateY(-0.1em) rotate(-90deg);
-  }
 }
 
 .intro {
