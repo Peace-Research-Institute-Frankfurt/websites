@@ -16,7 +16,6 @@
   }
 
   @include bp(m) {
-    margin-bottom: 0;
     grid-column: 3 / 4;
   }
   @include bp(l) {

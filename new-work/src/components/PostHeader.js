@@ -13,7 +13,7 @@ export default function PostHeader({ title, intro, eyebrow, image, credit, portr
         {intro && (
           <div className={`${styles.intro} ${portrait ? styles.hasPortrait : ''}`}>
             {portrait && portrait}
-            <div className={styles.introCopy}>{intro}</div>
+            <p className={styles.introCopy}>{intro}</p>
           </div>
         )}
       </header>

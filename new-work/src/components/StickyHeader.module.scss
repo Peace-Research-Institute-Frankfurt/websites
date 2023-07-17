@@ -6,11 +6,12 @@
   z-index: 1000;
   display: flex;
   justify-content: space-between;
-  border-bottom-left-radius: calc(0.75 * var(--br));
-  border-bottom-right-radius: calc(0.75 * var(--br));
+  border-bottom-left-radius: calc(0.5 * var(--br));
+  border-bottom-right-radius: calc(0.5 * var(--br));
   height: var(--header-height);
   background-color: var(--black);
   border: 1px solid var(--gray);
+  border-top: 0;
 }
 
 .logo {
