@@ -18,7 +18,7 @@ function InterviewQuestion({ styles, q, children }) {
   if (!styles) styles = {}
   return (
     <li className={styles.question}>
-      <strong class={styles.prompt}>{q}</strong>
+      <strong className={styles.prompt}>{q}</strong>
       <div className={styles.answer}>{children}</div>
     </li>
   )

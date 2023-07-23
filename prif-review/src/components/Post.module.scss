@@ -2,22 +2,62 @@
 
 .post-container {
   @extend %copy;
-  padding: 0 var(--padding);
 }
 
 .header {
   margin-bottom: 0.5em;
+  background-color: var(--fc-background);
+  // background-image: linear-gradient(to bottom, var(--fc-background) 70%, white 100%);
+  padding: var(--padding);
+  border-top: 1px solid var(--fc-text);
+  margin-bottom: var(--baseline);
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
 }
 
 .title {
   @extend %h1;
+  color: var(--fc-text);
 }
 
 .intro {
-  @extend %copy-large;
+  max-width: 55em;
+  font-size: var(--ms-0);
+  font-variation-settings: 'wdth' 400, 'wght' 400;
+  color: var(--fc-text);
+  margin-top: var(--baseline);
+}
+
+.body {
+  @extend %copy;
+  max-width: 40em;
+  margin: 0 auto;
+  a {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-decoration-style: dotted;
+    text-underline-offset: 0.15em;
+    &:hover,
+    &:focus-visible {
+      text-decoration-style: solid;
+    }
+  }
+}
+
+.eyebrow {
+  color: var(--fc-text);
+  text-transform: uppercase;
+  font-variation-settings: 'wdth' 400, 'wght' 400;
+  letter-spacing: 0.1em;
+  font-size: var(--ms--1);
+  display: block;
+  margin-bottom: -0.15em;
 }
 
 .byline {
   @extend %copy;
+  display: none;
   margin-top: 0.5em;
 }

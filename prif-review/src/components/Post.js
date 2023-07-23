@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import Color from 'colorjs.io'
 import App from './App'
 import PostBody from './PostBody'
 import Meta from './Meta'
@@ -32,6 +33,8 @@ export const query = graphql`
           title
           intro
           order
+          color
+          eyebrow
           authors {
             frontmatter {
               author_id
@@ -122,24 +125,34 @@ const Post = ({ data, pageContext, children }) => {
     )
   })
 
+  let appStyles = {}
+  if (frontmatter.color) {
+    const color = new Color(frontmatter.color)
+    appStyles['--fc-text'] = color.toString()
+    appStyles['--fc-background'] = color.set({ 'lch.l': 98, 'lch.c': 2 }).toString()
+  }
+
   return (
     <App
       translationData={{ translations: data.translations.nodes, currentLanguage: pageContext.language, currentSlug: data.post.childMdx.fields.slug }}
       pages={data.pages.nodes}
+      styles={appStyles}
     >
       <article id="content" className={styles.postContainer}>
         <header className={styles.header}>
+          {frontmatter.eyebrow && <span className={styles.eyebrow}>{frontmatter.eyebrow}</span>}
           <h1 className={styles.title}>{frontmatter.title}</h1>
           <p className={styles.intro}>{frontmatter.intro}</p>
           {authorIds.length > 0 && <p className={styles.byline}>{byline}</p>}
         </header>
-        <PostBody>{children}</PostBody>
-        {authorIds.length > 0 && (
-          <aside>
-            <h2>Authors</h2>
-            <ul>{bios}</ul>
-          </aside>
-        )}
+        <section className={styles.body}>
+          <PostBody>{children}</PostBody>
+          {authorIds.length > 0 && (
+            <aside>
+              <ul>{bios}</ul>
+            </aside>
+          )}
+        </section>
       </article>
     </App>
   )
@@ -150,7 +163,7 @@ export function Head({ data, pageContext, location }) {
   const translationData = {
     currentPath: location,
     currentSlug: data.post.childMdx.fields.slug,
-    currentLanguage: pageContext.pageLocale,
+    currentLanguage: pageContext.language,
     translations: data.translations.nodes,
   }
   return <Meta translationData={translationData} title={`${frontmatter.title} – ${data.site.siteMetadata.title}`} description={frontmatter.intro} />

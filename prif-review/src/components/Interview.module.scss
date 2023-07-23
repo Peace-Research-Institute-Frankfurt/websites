@@ -1,7 +1,7 @@
 @import 'vars';
 
 .container {
-  background: rgb(225, 235, 170);
+  background: var(--fc-background);
   padding: 1em;
   margin-bottom: 1em;
   &:last-child {

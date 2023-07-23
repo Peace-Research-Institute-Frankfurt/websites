@@ -52,6 +52,7 @@ export default function Meta({ title, description, image, url, translationData, 
 
       <title>{data.title}</title>
       <meta name="description" content={data.description} />
+      <meta name="test" content={JSON.stringify(translationData)} />
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:url" content={data.url} />

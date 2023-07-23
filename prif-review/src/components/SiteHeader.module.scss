@@ -1,5 +1,20 @@
+@import 'vars';
+
 .container {
+  @extend %copy;
   display: flex;
   padding: 1rem 5%;
   justify-content: space-between;
+}
+
+.title {
+  @extend %copy-bold;
+}
+
+.menu {
+  ul {
+    display: flex;
+    list-style: none;
+    gap: 1em;
+  }
 }

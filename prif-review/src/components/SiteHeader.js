@@ -15,10 +15,19 @@ export default function SiteHeader({ children }) {
   `)
   return (
     <header className={styles.container}>
-      <Link to="/" className="title">
-        {data.site.siteMetadata.title}
-      </Link>
-      <div className="controls">{children}</div>
+      <nav className={styles.menu}>
+        <ul>
+          <li>
+            <Link to="/" className={styles.title}>
+              {data.site.siteMetadata.title}
+            </Link>
+          </li>
+          <li>
+            <Link to="/">Section Title</Link>
+          </li>
+        </ul>
+      </nav>
+      <div className="controls">Bookmarks</div>
     </header>
   )
 }

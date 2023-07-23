@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import App from '../components/App'
 import Meta from '../components/Meta'
 import SkipToContent from '../components/SkipToContent'
-import { Link, useTranslation } from 'gatsby-plugin-react-i18next'
+import { Link } from 'gatsby-plugin-react-i18next'
 import * as styles from './Report.module.scss'
 
 export const query = graphql`
@@ -94,7 +94,6 @@ export const query = graphql`
 `
 
 const Index = ({ data, pageContext, children, location }) => {
-  const { t } = useTranslation()
   const year = data.post.relativeDirectory.replace(/(.{2})\/(reports)\//g, '')
   const posts = data.posts.nodes.map((p) => {
     return (
