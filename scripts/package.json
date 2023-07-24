@@ -4,6 +4,7 @@
   "authors": "Max Kohler",
   "version": "0.0.1",
   "type": "module",
+  "license": "UNLICENSED",
   "dependencies": {
     "just-diff": "^6.0.0",
     "luxon": "^3.3.0",

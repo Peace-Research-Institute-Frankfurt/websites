@@ -4,6 +4,7 @@
   "private": true,
   "description": "prif-review",
   "author": "Max Kohler",
+  "license": "UNLICENSED",
   "scripts": {
     "build": "gatsby build",
     "clean": "gatsby clean",

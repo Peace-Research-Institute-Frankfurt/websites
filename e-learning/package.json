@@ -4,6 +4,7 @@
   "private": true,
   "description": "eunpdc-next",
   "author": "Max Kohler",
+  "license": "UNLICENSED",
   "scripts": {
     "build": "node ./utils/buildPrintMdx.js && gatsby build && node ./utils/buildUnitPDF.js",
     "clean": "gatsby clean",
