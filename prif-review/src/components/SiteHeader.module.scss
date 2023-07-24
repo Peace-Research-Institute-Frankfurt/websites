@@ -5,6 +5,8 @@
   display: flex;
   padding: 1rem 5%;
   justify-content: space-between;
+  // background: var(--fc-text);
+  // color: white;
 }
 
 .title {
@@ -15,6 +17,15 @@
   ul {
     display: flex;
     list-style: none;
-    gap: 1em;
+    gap: 0.1em;
+  }
+}
+
+.link {
+  padding: 0.15em 0.4em;
+  border-radius: var(--br);
+  &:hover,
+  &:focus-visible {
+    background: rgba(black, 0.035);
   }
 }

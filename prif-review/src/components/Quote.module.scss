@@ -2,21 +2,18 @@
 
 .container {
   color: var(--fc-text);
-  // padding: 0.5em 1em;
-  // background: var(--fc-background);
-  // margin-top: calc(var(--baseline) * 1);
-  // margin-bottom: calc(var(--baseline) * 1);
   margin-right: calc(var(--baseline) * 1);
   float: left;
-  width: 100%;
-  margin-left: -50%;
+  @include bp(xl) {
+    width: 80%;
+    margin-left: -40%;
+  }
 }
 
 .text {
   @extend %copy-large;
   font-variation-settings: 'wdth' 70, 'wght' 250, 'slnt' -10;
   letter-spacing: 0;
-  // color: white;
   font-size: var(--ms-4);
   line-height: calc(var(--baseline) * 2);
   margin-bottom: calc(var(--baseline) * 0.5);
@@ -29,8 +26,6 @@
     text-decoration-skip-ink: none;
     text-underline-offset: -0.05em;
   }
-  // background: rgb(220, 227, 230);
-  // position: relative;
 }
 
 .cite {

@@ -9,7 +9,10 @@
   background-color: var(--fc-background);
   // background-image: linear-gradient(to bottom, var(--fc-background) 70%, white 100%);
   padding: var(--padding);
-  border-top: 1px solid var(--fc-text);
+  // border-top: 1em solid var(--fc-text);
+  border-left: 0.65em solid var(--fc-text);
+  border-right: 0.65em solid var(--fc-text);
+  // border-bottom: 1em solid var(--fc-text);
   margin-bottom: var(--baseline);
   text-align: center;
   display: flex;
@@ -23,17 +26,28 @@
 }
 
 .intro {
+  @extend %copy-wide;
   max-width: 55em;
-  font-size: var(--ms-0);
-  font-variation-settings: 'wdth' 400, 'wght' 400;
   color: var(--fc-text);
   margin-top: var(--baseline);
+  em {
+    background: rgb(249, 225, 255);
+    mix-blend-mode: darken;
+    border-radius: 2px;
+    padding: 0 0.2em;
+    margin-left: -0.2em;
+    margin-right: -0.2em;
+  }
 }
 
 .body {
   @extend %copy;
   max-width: 40em;
   margin: 0 auto;
+  p {
+    margin-bottom: calc(var(--baseline) * 0.5);
+  }
+
   a {
     text-decoration: underline;
     text-decoration-thickness: 1px;
@@ -53,7 +67,7 @@
   letter-spacing: 0.1em;
   font-size: var(--ms--1);
   display: block;
-  margin-bottom: -0.15em;
+  margin-bottom: 0.85em;
 }
 
 .byline {

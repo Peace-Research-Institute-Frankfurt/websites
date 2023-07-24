@@ -1,9 +1,8 @@
 import React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
-import { Link } from 'gatsby-plugin-react-i18next'
+import { graphql, useStaticQuery, Link } from 'gatsby'
 import * as styles from './SiteHeader.module.scss'
 
-export default function SiteHeader({ children }) {
+export default function SiteHeader({ report, translationData, children }) {
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -13,21 +12,28 @@ export default function SiteHeader({ children }) {
       }
     }
   `)
+
+  const homePath = translationData.currentLanguage !== 'de' ? `/${translationData.currentLanguage}` : '/'
+
   return (
     <header className={styles.container}>
       <nav className={styles.menu}>
         <ul>
           <li>
-            <Link to="/" className={styles.title}>
+            <Link to={homePath} className={`${styles.title} ${styles.link}`}>
               {data.site.siteMetadata.title}
             </Link>
           </li>
-          <li>
-            <Link to="/">Section Title</Link>
-          </li>
+          {report && (
+            <li>
+              <Link className={styles.link} to={`../`}>
+                {report.childMdx.frontmatter.title}
+              </Link>
+            </li>
+          )}
         </ul>
       </nav>
-      <div className="controls">Bookmarks</div>
+      <div className="controls">{children}</div>
     </header>
   )
 }

@@ -9,12 +9,16 @@ export default function LanguageSwitcher({ translationData, translations }) {
 
   const languageLinks = languages.map((l, i) => {
     const t = translations.find((el) => el.language === l)
-    let inner = <>{l}</>
+    let inner = <span className={styles.inner}>{l}</span>
     if (t) {
-      inner = <Link to={t.path}>{l}</Link>
+      inner = (
+        <Link className={styles.inner} to={t.path}>
+          {l}
+        </Link>
+      )
     }
     return (
-      <li key={`language-link-${i}`} className={`${styles.link} ${l === currentLanguage && styles.linkCurrent}`}>
+      <li key={`language-link-${i}`} className={`${styles.item} ${l === currentLanguage && styles.itemCurrent}`}>
         {inner}
       </li>
     )

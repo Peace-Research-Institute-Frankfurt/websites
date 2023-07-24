@@ -4,11 +4,11 @@ import Color from 'colorjs.io'
 import App from './App'
 import PostBody from './PostBody'
 import Meta from './Meta'
-
+import MarkdownRenderer from 'react-markdown-renderer'
 import * as styles from './Post.module.scss'
 
 export const query = graphql`
-  query ($id: String!, $language: String!, $translations: [String!]) {
+  query ($id: String!, $language: String!, $translations: [String!], $reportId: String!) {
     site {
       siteMetadata {
         title
@@ -24,7 +24,21 @@ export const query = graphql`
         }
       }
     }
+
+    report: file(id: { eq: $reportId }) {
+      relativeDirectory
+      childMdx {
+        fields {
+          locale
+        }
+        frontmatter {
+          title
+        }
+      }
+    }
+
     post: file(id: { eq: $id }) {
+      relativeDirectory
       childMdx {
         fields {
           slug
@@ -44,7 +58,6 @@ export const query = graphql`
       }
     }
     authors: allFile(
-      # TODO: Only load authors from this year's report
       filter: {
         relativeDirectory: { glob: "**/authors" }
         extension: { eq: "mdx" }
@@ -104,11 +117,12 @@ export const query = graphql`
 `
 const Post = ({ data, pageContext, children }) => {
   const frontmatter = data.post.childMdx.frontmatter
+
   let authorIds = []
   if (frontmatter.authors) {
     authorIds = frontmatter.authors.map((el) => el?.frontmatter.author_id)
   }
-
+  // TODO: Only load authors from this year's report
   const authors = data.authors.nodes.filter((el) => {
     return authorIds.indexOf(el.childMdx.frontmatter.author_id) !== -1
   })
@@ -137,12 +151,17 @@ const Post = ({ data, pageContext, children }) => {
       translationData={{ translations: data.translations.nodes, currentLanguage: pageContext.language, currentSlug: data.post.childMdx.fields.slug }}
       pages={data.pages.nodes}
       styles={appStyles}
+      report={data.report}
     >
       <article id="content" className={styles.postContainer}>
         <header className={styles.header}>
           {frontmatter.eyebrow && <span className={styles.eyebrow}>{frontmatter.eyebrow}</span>}
           <h1 className={styles.title}>{frontmatter.title}</h1>
-          <p className={styles.intro}>{frontmatter.intro}</p>
+          {frontmatter.intro && (
+            <div className={styles.intro}>
+              <MarkdownRenderer markdown={frontmatter.intro} />
+            </div>
+          )}
           {authorIds.length > 0 && <p className={styles.byline}>{byline}</p>}
         </header>
         <section className={styles.body}>

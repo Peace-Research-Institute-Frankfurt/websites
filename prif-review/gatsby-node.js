@@ -37,6 +37,9 @@ exports.createPages = async function ({ actions, graphql }) {
           base
           relativeDirectory
           childMdx {
+            frontmatter {
+              title
+            }
             fields {
               slug
               locale
@@ -84,18 +87,26 @@ exports.createPages = async function ({ actions, graphql }) {
   })
 
   //  Create post pages
-  posts.forEach((node) => {
-    const locale = node.childMdx.fields.locale
+  posts.forEach((post) => {
+    const locale = post.childMdx.fields.locale
     const postTemplate = require.resolve(`./src/components/Post.js`)
-    const translations = findTranslationNodes(node, posts)
+    const translations = findTranslationNodes(post, posts)
     const translationIds = translations.map((t) => t.id)
-    const year = node.relativeDirectory.replace(/(.{2})\/(reports)\//g, '').replace('/posts', '')
-    let path = `${locale && locale !== defaultLocale ? locale : ''}/${year}/${node.childMdx.fields.slug}`
+    const year = post.relativeDirectory.replace(/(.{2})\/(reports)\//g, '').replace('/posts', '')
+    let path = `${locale && locale !== defaultLocale ? locale : ''}/${year}/${post.childMdx.fields.slug}`
+
+    const report = reports.find((report) => {
+      return report.relativeDirectory === post.relativeDirectory.replace('/posts', '')
+    })
+
+    if (report) {
+      console.log(`Creating ${post.childMdx.frontmatter.title} (${report.childMdx.frontmatter.title})`)
+    }
 
     actions.createPage({
       path: path,
-      component: `${postTemplate}?__contentFilePath=${node.childMdx.internal.contentFilePath}`,
-      context: { id: node.id, translations: translationIds },
+      component: `${postTemplate}?__contentFilePath=${post.childMdx.internal.contentFilePath}`,
+      context: { id: post.id, translations: translationIds, reportId: report.id },
     })
   })
 

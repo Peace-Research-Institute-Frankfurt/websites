@@ -21,7 +21,7 @@ export default function Figure({ styles, image, license, caption, credit, size, 
         {imageEl}
         {(credit || caption) && (
           <figcaption className={styles.captions}>
-            <span className={styles.caption}>{caption && <MarkdownRenderer markdown={caption} />}</span>
+            {caption && <MarkdownRenderer className={styles.caption} markdown={caption} />}
             {credit && (
               <span className={styles.credit}>
                 <>{credit}</>
