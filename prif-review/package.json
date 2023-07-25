@@ -4,6 +4,7 @@
   "private": true,
   "description": "prif-review",
   "author": "Max Kohler",
+  "license": "UNLICENSED",
   "scripts": {
     "build": "gatsby build",
     "clean": "gatsby clean",
@@ -14,6 +15,7 @@
   "dependencies": {
     "@mdx-js/react": "^2.3.0",
     "@prif/shared": "0.0.1",
+    "colorjs.io": "^0.4.5",
     "dotenv": "^16.3.1",
     "gatsby": "^5.11.0",
     "gatsby-plugin-image": "^3.11.0",
@@ -37,8 +39,8 @@
     "react-i18next": "^12.3.1",
     "react-markdown-renderer": "^1.4.0",
     "remark-gfm": "^3.0.1",
-    "sass": "^1.63.6",
-    "slug": "^8.2.2",
+    "sass": "^1.64.1",
+    "slug": "^8.2.3",
     "unist-util-visit": "^5.0.0"
   },
   "devDependencies": {

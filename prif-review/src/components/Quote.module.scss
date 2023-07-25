@@ -1,0 +1,35 @@
+@import 'vars';
+
+.container {
+  color: var(--fc-text);
+  margin-right: calc(var(--baseline) * 1);
+  float: left;
+  @include bp(xl) {
+    width: 80%;
+    margin-left: -40%;
+  }
+}
+
+.text {
+  @extend %copy-large;
+  font-variation-settings: 'wdth' 70, 'wght' 250, 'slnt' -10;
+  letter-spacing: 0;
+  font-size: var(--ms-4);
+  line-height: calc(var(--baseline) * 2);
+  margin-bottom: calc(var(--baseline) * 0.5);
+  word-wrap: balance;
+  hyphens: none;
+  p {
+    text-decoration: underline;
+    text-decoration-color: var(--fc-background);
+    text-decoration-thickness: 15px;
+    text-decoration-skip-ink: none;
+    text-underline-offset: -0.05em;
+  }
+}
+
+.cite {
+  @extend %caption;
+  display: block;
+  font-style: normal;
+}

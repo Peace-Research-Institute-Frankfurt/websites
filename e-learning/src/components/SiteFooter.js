@@ -13,7 +13,7 @@ export default function SiteFooter() {
               <a href="https://www.nonproliferation.eu/">EUNPDC</a>
             </li>
             <li>
-              <a href="https://www.hsfk.de/en/">PRIF</a>
+              <a href="https://www.prif.org">PRIF</a>
             </li>
             <li>
               <a href="https://nonproliferation-elearning.eu/termsofuse">Terms</a>

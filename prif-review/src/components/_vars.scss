@@ -24,9 +24,15 @@
 
 %h1 {
   font-family: var(--sans);
-  font-size: var(--ms-2);
-  font-variation-settings: 'wght' 700, 'wdth' 100;
-  line-height: calc(var(--baseline) * 1.5);
+  font-variation-settings: 'wght' 500, 'wdth' 90, 'opsz' 144;
+  font-size: var(--ms-6);
+  line-height: calc(var(--baseline) * 3.5);
+  hyphens: none;
+  text-wrap: balance;
+  @include bp(l) {
+    line-height: calc(var(--baseline) * 4);
+    font-size: var(--ms-7);
+  }
 }
 %h2 {
   font-family: var(--sans);
@@ -39,12 +45,18 @@
   font-size: var(--ms-0);
   font-family: var(--sans);
   line-height: var(--baseline);
-  font-variation-settings: 'wght' 450, 'wdth' 105;
+  font-variation-settings: 'wght' 400, 'wdth' 112, 'opsz' 25;
+  letter-spacing: 0.005em;
+  hyphens: auto;
   h1 {
     @extend %h1;
   }
   h2 {
     @extend %h2;
+  }
+  em {
+    font-style: normal;
+    font-variation-settings: 'wght' 400, 'wdth' 112, 'opsz' 25;
   }
 }
 
@@ -54,13 +66,29 @@
   letter-spacing: 0;
 }
 
+%copy-wide {
+  @extend %copy;
+  font-size: var(--ms-0);
+
+  font-variation-settings: 'wdth' 400, 'wght' 400;
+  letter-spacing: 0.01em;
+  em {
+    letter-spacing: 0;
+    font-variation-settings: 'wdth' 300, 'wght' 400, 'slnt' -8;
+  }
+}
+
 %copy-large {
   @extend %copy;
-  line-height: calc(var(--baseline) * 1.5);
-  font-size: var(--ms-2);
+  font-variation-settings: 'wght' 250, 'wdth' 105;
+  letter-spacing: 0.01em;
+  line-height: calc(var(--baseline) * 1.3333);
+  font-size: var(--ms-1);
 }
+
 %caption {
   @extend %copy;
-  line-height: calc(var(--baseline) * 0.66);
   font-size: var(--ms--1);
+  font-variation-settings: 'wght' 400, 'wdth' 100, 'opsz' 10;
+  line-height: calc(var(--baseline) * 0.66);
 }

@@ -4,10 +4,11 @@
   "authors": "Max Kohler",
   "version": "0.0.1",
   "type": "module",
+  "license": "UNLICENSED",
   "dependencies": {
     "just-diff": "^6.0.0",
     "luxon": "^3.3.0",
     "minimist": "^1.2.8",
-    "puppeteer": "^20.8.0"
+    "puppeteer": "^20.9.0"
   }
 }

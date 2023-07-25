@@ -4,6 +4,7 @@
   "private": true,
   "description": "eunpdc-next",
   "author": "Max Kohler",
+  "license": "UNLICENSED",
   "scripts": {
     "build": "node ./utils/buildPrintMdx.js && gatsby build && node ./utils/buildUnitPDF.js",
     "clean": "gatsby clean",
@@ -39,10 +40,10 @@
     "rehype-slug": "^5.1.0",
     "remark-gfm": "^1.0.0",
     "remark-smartypants": "^2.0.0",
-    "slug": "^8.2.2",
+    "slug": "^8.2.3",
     "svg-react-loader": "^0.4.6",
     "unist-util-visit": "^5.0.0",
-    "puppeteer": "^20.8.0"
+    "puppeteer": "^20.9.0"
   },
   "devDependencies": {
     "chalk": "^5.3.0",

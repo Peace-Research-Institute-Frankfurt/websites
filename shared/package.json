@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "description": "",
+  "license": "UNLICENSED",
   "author": "Max Kohler",
   "scripts": {},
   "dependencies": {

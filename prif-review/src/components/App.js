@@ -7,7 +7,7 @@ import SiteHeader from './SiteHeader'
 import './global.scss'
 import useTranslations from '../hooks/useTranslations'
 
-function App({ translationData, pages, children }) {
+function App({ translationData, pages, styles, report, children }) {
   const data = useStaticQuery(graphql`
     query {
       allSitePage {
@@ -22,14 +22,14 @@ function App({ translationData, pages, children }) {
   let translations = useTranslations(translationData, data.allSitePage.nodes)
 
   return (
-    <>
+    <div style={styles ? styles : {}}>
       <SkipToContent />
-      <SiteHeader>
-        <LanguageSwitcher translations={translations} translationData={translationData} />
+      <SiteHeader report={report} translationData={translationData}>
+        {translations.length > 0 && <LanguageSwitcher translations={translations} translationData={translationData} />}
       </SiteHeader>
       {children}
       <Footer pages={pages} language={translationData.currentLanguage} />
-    </>
+    </div>
   )
 }
 

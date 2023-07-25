@@ -3,11 +3,15 @@
 .captions {
   @extend %caption;
 }
+.caption {
+  p {
+    margin-bottom: 0 !important;
+  }
+}
 
 .credit {
   color: var(--gray-dark);
   display: block;
-  font-size: var(--ms--1);
 }
 
 .image {
