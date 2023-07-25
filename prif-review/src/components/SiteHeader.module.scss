@@ -3,29 +3,47 @@
 .container {
   @extend %copy;
   display: flex;
-  padding: 1rem 5%;
+  padding: 0.75rem 5%;
   justify-content: space-between;
-  // background: var(--fc-text);
-  // color: white;
+  align-items: center;
 }
 
 .title {
-  @extend %copy-bold;
+  font-size: 0;
+  display: block;
+  height: 2.5rem;
+  svg {
+    display: block;
+    width: auto;
+    height: 100%;
+  }
+}
+
+.label {
+  position: absolute;
 }
 
 .menu {
   ul {
     display: flex;
+    align-items: center;
     list-style: none;
-    gap: 0.1em;
+    gap: 0.65em;
   }
 }
 
 .link {
   padding: 0.15em 0.4em;
   border-radius: var(--br);
+  font-size: var(--ms-0);
   &:hover,
   &:focus-visible {
     background: rgba(black, 0.035);
   }
+}
+
+.controls {
+  display: flex;
+  gap: 0.5em;
+  align-items: baseline;
 }

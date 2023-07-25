@@ -81,3 +81,8 @@ img {
   font-family: monospace;
   word-wrap: break-word;
 }
+
+#b path,
+#b polygon {
+  fill: var(--fc-text, #0083b5);
+}

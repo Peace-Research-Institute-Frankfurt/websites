@@ -165,6 +165,7 @@ exports.createSchemaCustomization = async ({ getNode, getNodesByType, pathPrefix
   type PostFrontmatter {
     authors: [Author] @link(by: "author_id")
     intro: String
+    hero_image: File @link(by: "relativePath")
   }
   type Mdx {
     frontmatter: PostFrontmatter

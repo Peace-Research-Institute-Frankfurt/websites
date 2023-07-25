@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql, useStaticQuery, Link } from 'gatsby'
+import Logo from '../images/logo.svg'
 import * as styles from './SiteHeader.module.scss'
 
 export default function SiteHeader({ report, translationData, children }) {
@@ -20,8 +21,9 @@ export default function SiteHeader({ report, translationData, children }) {
       <nav className={styles.menu}>
         <ul>
           <li>
-            <Link to={homePath} className={`${styles.title} ${styles.link}`}>
-              {data.site.siteMetadata.title}
+            <Link to={homePath} className={`${styles.title}`}>
+              <span className={styles.label}>{data.site.siteMetadata.title}</span>
+              <Logo />
             </Link>
           </li>
           {report && (
@@ -33,7 +35,7 @@ export default function SiteHeader({ report, translationData, children }) {
           )}
         </ul>
       </nav>
-      <div className="controls">{children}</div>
+      <div className={styles.controls}>{children}</div>
     </header>
   )
 }

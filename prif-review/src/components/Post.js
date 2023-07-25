@@ -1,5 +1,6 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { Link, graphql } from 'gatsby'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import Color from 'colorjs.io'
 import App from './App'
 import PostBody from './PostBody'
@@ -49,10 +50,40 @@ export const query = graphql`
           order
           color
           eyebrow
+          hero_alt
+          hero_credit
+          hero_image {
+            childImageSharp {
+              gatsbyImageData(width: 1000, placeholder: NONE)
+            }
+          }
           authors {
             frontmatter {
               author_id
             }
+          }
+        }
+      }
+    }
+    posts: allFile(
+      filter: {
+        relativeDirectory: { glob: "**/posts/**" }
+        extension: { eq: "mdx" }
+        sourceInstanceName: { eq: "content" }
+        childMdx: { fields: { locale: { eq: $language } } }
+      }
+      sort: { childMdx: { frontmatter: { order: ASC } } }
+    ) {
+      nodes {
+        id
+        relativeDirectory
+        childMdx {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            order
           }
         }
       }
@@ -117,6 +148,14 @@ export const query = graphql`
 `
 const Post = ({ data, pageContext, children }) => {
   const frontmatter = data.post.childMdx.frontmatter
+  const posts = data.posts.nodes.filter((node) => {
+    return node.relativeDirectory.includes(data.report.relativeDirectory)
+  })
+  const currentIndex = posts.findIndex((el) => {
+    return el.childMdx.frontmatter.title === frontmatter.title
+  })
+  const next = posts[currentIndex + 1] || null
+  const previous = posts[currentIndex - 1] || null
 
   let authorIds = []
   if (frontmatter.authors) {
@@ -146,16 +185,42 @@ const Post = ({ data, pageContext, children }) => {
     appStyles['--fc-background'] = color.set({ 'lch.l': 98, 'lch.c': 2 }).toString()
   }
 
+  let heroImage = null
+  if (frontmatter.hero_image) {
+    heroImage = (
+      <div className={styles.heroImage}>
+        <GatsbyImage loading="eager" image={getImage(frontmatter.hero_image)} alt={frontmatter.hero_alt} />
+      </div>
+    )
+  }
+
+  const pagination = (
+    <nav className={styles.pagination}>
+      {previous && (
+        <Link className={styles.paginationLink} rel="prev" to={`../${previous.childMdx.fields.slug}`}>
+          Prev
+        </Link>
+      )}
+      {next && (
+        <Link className={styles.paginationLink} rel="next" to={`../${next.childMdx.fields.slug}`}>
+          Next
+        </Link>
+      )}
+    </nav>
+  )
+
   return (
     <App
       translationData={{ translations: data.translations.nodes, currentLanguage: pageContext.language, currentSlug: data.post.childMdx.fields.slug }}
       pages={data.pages.nodes}
+      pagination={pagination}
       styles={appStyles}
       report={data.report}
     >
       <article id="content" className={styles.postContainer}>
         <header className={styles.header}>
           {frontmatter.eyebrow && <span className={styles.eyebrow}>{frontmatter.eyebrow}</span>}
+          {heroImage && heroImage}
           <h1 className={styles.title}>{frontmatter.title}</h1>
           {frontmatter.intro && (
             <div className={styles.intro}>

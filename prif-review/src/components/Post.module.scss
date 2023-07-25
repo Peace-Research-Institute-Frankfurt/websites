@@ -7,17 +7,17 @@
 .header {
   margin-bottom: 0.5em;
   background-color: var(--fc-background);
-  // background-image: linear-gradient(to bottom, var(--fc-background) 70%, white 100%);
-  padding: var(--padding);
-  // border-top: 1em solid var(--fc-text);
-  border-left: 0.65em solid var(--fc-text);
-  border-right: 0.65em solid var(--fc-text);
-  // border-bottom: 1em solid var(--fc-text);
+  padding: calc(var(--baseline) * 2.5) var(--padding);
+  border-top: 0.35em solid var(--fc-text);
   margin-bottom: var(--baseline);
   text-align: center;
   display: flex;
   flex-flow: column;
   align-items: center;
+}
+
+.hero-image {
+  margin-bottom: calc(var(--baseline) * 1.5);
 }
 
 .title {
@@ -36,6 +36,20 @@
     margin-left: -0.2em;
     margin-right: -0.2em;
   }
+}
+
+.pagination {
+  border: 1px solid var(--black);
+  border-radius: var(--br);
+  height: 1.85em;
+  font-size: var(--ms--1);
+}
+
+.pagination-link {
+  display: block;
+  padding: 0 0.5em;
+  display: flex;
+  align-items: center;
 }
 
 .body {

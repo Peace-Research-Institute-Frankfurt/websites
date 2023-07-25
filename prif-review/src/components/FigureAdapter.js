@@ -31,7 +31,7 @@ export default function FigureAdapter({ caption, credit, size, alt, src, license
   // Let's find our image
   let image = null
   data.images.nodes.forEach((img) => {
-    if (img.base.toLowerCase() === src.toLowerCase()) {
+    if (img.relativePath.toLowerCase() === src.toLowerCase()) {
       image = img
     }
   })
