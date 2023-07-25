@@ -78,6 +78,7 @@
 
 .post {
   @extend %copy;
+  font-family: var(--edge);
   padding: 0.15em 0.4em;
   line-height: 0.9;
   padding-bottom: 0;

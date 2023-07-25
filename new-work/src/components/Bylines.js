@@ -6,7 +6,6 @@ export default function Bylines({ authors }) {
   if (!authors) return <></>
   const authorEls = authors.map((author, i) => {
     const fm = author.frontmatter
-    const authorImage = getImage(fm.image)
     return (
       <li className={styles.person} key={`${fm.name}-${i}`}>
         <p>
