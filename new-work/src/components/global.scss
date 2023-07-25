@@ -17,7 +17,7 @@
   --white: rgb(248, 247, 247);
   --gray: rgb(100, 100, 100);
   --gray-hover: rgb(170, 170, 170);
-  --blue: #4d5b8d;
+  --blue: #6b7bb3;
   --green: #568d72;
   --yellow: #eabc47;
   --black: rgb(1, 2, 2);
@@ -45,7 +45,7 @@
   --padding-small: max(1vw, 0.5rem);
   --baseline: calc(var(--ms-0) * 1.35);
   --header-height: 3rem;
-  --color: black;
+  --color: rgb(3, 3, 3);
   --br: 20px;
   @include bp(m) {
     --br: 40px;
