@@ -9,7 +9,6 @@ export default function Bylines({ authors }) {
     const authorImage = getImage(fm.image)
     return (
       <li className={styles.person} key={`${fm.name}-${i}`}>
-        <GatsbyImage objectFit="contain" className={styles.image} image={authorImage} alt={`${fm.name} profile image`} key={`authorImage-${i}`} />
         <p>
           <span className={styles.name}>{fm.name}</span>
           {fm.institution && <span> ({fm.institution})</span>}

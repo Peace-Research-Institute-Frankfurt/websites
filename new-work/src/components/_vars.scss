@@ -30,6 +30,7 @@
   hyphens: none;
   font-weight: 100;
   text-transform: uppercase;
+  text-shadow: 0 0 8px black;
 }
 %h1-long {
   @extend %h1;

@@ -7,7 +7,6 @@ export default function PostHeader({ title, intro, eyebrow, image, credit, portr
       {image && <div className={styles.image}>{image}</div>}
       <header className={`${styles.container} ${image ? styles.hasImage : ''}`}>
         <div className={styles.titleContainer}>
-          {eyebrow && <span className={styles.eyebrow}>{eyebrow}</span>}
           <h1 className={`${styles.title} ${title.length > 30 ? styles.isLong : ''}`}>{title}</h1>
         </div>
         {intro && (
