@@ -1,0 +1,21 @@
+@import 'vars';
+
+.container {
+  @extend %caption;
+  border-top: 10px solid var(--fc-background);
+  margin-top: calc(var(--baseline) * 2);
+  padding-top: calc(var(--baseline));
+  li {
+    display: inline-block;
+  }
+  h2 {
+    font-size: var(--ms-0) !important;
+    color: var(--fc-text);
+    font-variation-settings: 'wght' 600 !important;
+  }
+  ul {
+    columns: 2;
+    column-gap: var(--padding);
+    list-style-type: none;
+  }
+}

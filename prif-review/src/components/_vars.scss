@@ -69,8 +69,7 @@
 %copy-wide {
   @extend %copy;
   font-size: var(--ms-0);
-
-  font-variation-settings: 'wdth' 400, 'wght' 400;
+  font-variation-settings: 'wdth' 350, 'wght' 400;
   letter-spacing: 0.01em;
   em {
     letter-spacing: 0;
