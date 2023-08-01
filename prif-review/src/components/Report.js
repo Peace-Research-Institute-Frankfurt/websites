@@ -45,6 +45,7 @@ export const query = graphql`
     }
 
     posts: allFile(
+      sort: { childMdx: { frontmatter: { order: ASC } } }
       filter: {
         extension: { eq: "mdx" }
         relativeDirectory: { eq: $postsDirectory }

@@ -6,9 +6,12 @@
 
 .header {
   margin-bottom: 0.5em;
+  border-radius: 10px;
+  margin: 0 1rem;
   background-color: var(--fc-background);
+  // border-left: 0.65rem solid var(--fc-text);
+  // border-right: 0.65rem solid var(--fc-text);
   padding: calc(var(--baseline) * 2.5) var(--padding);
-  border-top: 0.35em solid var(--fc-text);
   margin-bottom: var(--baseline);
   text-align: center;
   display: flex;

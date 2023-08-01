@@ -182,7 +182,7 @@ const Post = ({ data, pageContext, children }) => {
   if (frontmatter.color) {
     const color = new Color(frontmatter.color)
     appStyles['--fc-text'] = color.toString()
-    appStyles['--fc-background'] = color.set({ 'lch.l': 98, 'lch.c': 2 }).toString()
+    appStyles['--fc-background'] = color.set({ 'lch.l': 97, 'lch.c': 2 }).toString()
   }
 
   let heroImage = null
