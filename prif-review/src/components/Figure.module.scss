@@ -1,5 +1,11 @@
 @import 'vars';
 
+.container {
+  margin-top: calc(var(--baseline) * 0.75);
+  margin-bottom: calc(var(--baseline) * 0.5);
+  grid-column: 1 / 2;
+}
+
 .captions {
   @extend %caption;
 }
@@ -16,9 +22,4 @@
 
 .image {
   margin-bottom: 0.75rem;
-}
-
-.container {
-  margin-top: calc(var(--baseline) * 0.75);
-  margin-bottom: calc(var(--baseline) * 0.5);
 }

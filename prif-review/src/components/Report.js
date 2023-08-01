@@ -4,6 +4,7 @@ import App from '../components/App'
 import Meta from '../components/Meta'
 import SkipToContent from '../components/SkipToContent'
 import { Link } from 'gatsby-plugin-react-i18next'
+import Color from 'colorjs.io'
 import * as styles from './Report.module.scss'
 
 export const query = graphql`
@@ -65,6 +66,8 @@ export const query = graphql`
           frontmatter {
             title
             order
+            intro
+            color
           }
         }
       }
@@ -97,9 +100,20 @@ export const query = graphql`
 const Index = ({ data, pageContext, children, location }) => {
   const year = data.post.relativeDirectory.replace(/(.{2})\/(reports)\//g, '')
   const posts = data.posts.nodes.map((p) => {
+    let postStyles = {}
+    const frontmatter = p.childMdx.frontmatter
+    if (frontmatter.color) {
+      const color = new Color(frontmatter.color)
+      postStyles['--fc-text'] = color.toString()
+      postStyles['--fc-background'] = color.set({ 'lch.l': 97, 'lch.c': 2, 'lch.h': (h) => h + 10 }).toString()
+    }
+
     return (
       <li key={p.id}>
-        <Link to={`/${year}/${p.childMdx.fields.slug}`}>{p.childMdx.frontmatter.title}</Link>
+        <Link style={postStyles} className={styles.post} to={`/${year}/${p.childMdx.fields.slug}`}>
+          <h3 className={styles.postTitle}>{frontmatter.title}</h3>
+          <p className={styles.postIntro}>{frontmatter.intro}</p>
+        </Link>
       </li>
     )
   })
@@ -107,9 +121,15 @@ const Index = ({ data, pageContext, children, location }) => {
     <App pages={data.pages.nodes} translationData={{ currentLanguage: pageContext.language, currentSlug: location.pathname }}>
       <SkipToContent />
       <main className={styles.container}>
-        <h1>{data.post.childMdx.frontmatter.title}</h1>
-        {children}
-        <ol>{posts}</ol>
+        <header className={styles.header}>
+          <div className={styles.headerInner}>
+            <h1 className={styles.title}>{data.post.childMdx.frontmatter.title}</h1>
+            <div className={styles.intro}>{children}</div>
+          </div>
+        </header>
+        <section>
+          <ol className={styles.posts}>{posts}</ol>
+        </section>
       </main>
     </App>
   )

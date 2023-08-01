@@ -157,32 +157,11 @@ const Post = ({ data, pageContext, children }) => {
   const next = posts[currentIndex + 1] || null
   const previous = posts[currentIndex - 1] || null
 
-  let authorIds = []
-  if (frontmatter.authors) {
-    authorIds = frontmatter.authors.map((el) => el?.frontmatter.author_id)
-  }
-  // TODO: Only load authors from this year's report
-  const authors = data.authors.nodes.filter((el) => {
-    return authorIds.indexOf(el.childMdx.frontmatter.author_id) !== -1
-  })
-
-  const byline = authors.map((a) => a.childMdx.frontmatter.name).join(', ')
-
-  const bios = authors.map((a) => {
-    const fm = a.childMdx.frontmatter
-    return (
-      <li key={a.id}>
-        <em>{fm.name}</em>
-        {a.childMdx.body}
-      </li>
-    )
-  })
-
   let appStyles = {}
   if (frontmatter.color) {
     const color = new Color(frontmatter.color)
     appStyles['--fc-text'] = color.toString()
-    appStyles['--fc-background'] = color.set({ 'lch.l': 97, 'lch.c': 2 }).toString()
+    appStyles['--fc-background'] = color.set({ 'lch.l': 97, 'lch.c': 2, 'lch.h': (h) => h + 10 }).toString()
   }
 
   let heroImage = null
@@ -219,23 +198,19 @@ const Post = ({ data, pageContext, children }) => {
     >
       <article id="content" className={styles.postContainer}>
         <header className={styles.header}>
-          {frontmatter.eyebrow && <span className={styles.eyebrow}>{frontmatter.eyebrow}</span>}
-          {heroImage && heroImage}
-          <h1 className={styles.title}>{frontmatter.title}</h1>
-          {frontmatter.intro && (
-            <div className={styles.intro}>
-              <MarkdownRenderer markdown={frontmatter.intro} />
-            </div>
-          )}
-          {authorIds.length > 0 && <p className={styles.byline}>{byline}</p>}
+          <div className={styles.headerInner}>
+            {frontmatter.eyebrow && <span className={styles.eyebrow}>{frontmatter.eyebrow}</span>}
+            <h1 className={styles.title}>{frontmatter.title}</h1>
+            {heroImage && heroImage}
+            {frontmatter.intro && (
+              <div className={styles.intro}>
+                <MarkdownRenderer markdown={frontmatter.intro} />
+              </div>
+            )}
+          </div>
         </header>
         <section className={styles.body}>
           <PostBody>{children}</PostBody>
-          {authorIds.length > 0 && (
-            <aside>
-              <ul>{bios}</ul>
-            </aside>
-          )}
         </section>
       </article>
     </App>

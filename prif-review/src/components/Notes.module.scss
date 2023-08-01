@@ -2,11 +2,16 @@
 
 .container {
   @extend %caption;
-  border-top: 10px solid var(--fc-background);
-  margin-top: calc(var(--baseline) * 2);
   padding-top: calc(var(--baseline));
+  align-self: flex-end;
+  float: left;
   li {
     display: inline-block;
+    hyphens: none;
+    margin-bottom: 1em;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
   h2 {
     font-size: var(--ms-0) !important;
@@ -14,8 +19,7 @@
     font-variation-settings: 'wght' 600 !important;
   }
   ul {
-    columns: 2;
-    column-gap: var(--padding);
     list-style-type: none;
+    column-gap: 2em;
   }
 }

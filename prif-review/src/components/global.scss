@@ -21,9 +21,10 @@
   --ms-6: calc(var(--ms-5) * var(--ratio));
   --ms-7: calc(var(--ms-6) * var(--ratio));
   --focus-color: rgb(37, 93, 216);
+  --blue: #0083b5;
   --black: rgb(0, 0, 0);
   --gray-dark: rgb(78, 78, 78);
-  --padding: 5%;
+  --padding: 5vw;
   --baseline: calc(var(--ms-0) * 1.45);
   --br: 4px;
 }
@@ -84,5 +85,5 @@ img {
 
 #b path,
 #b polygon {
-  fill: var(--fc-text, #0083b5);
+  fill: var(--fc-text, --blue);
 }

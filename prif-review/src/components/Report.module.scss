@@ -2,5 +2,54 @@
 
 .container {
   @extend %copy;
+}
+
+.header {
   padding: 0 var(--padding);
+  padding-top: calc(var(--baseline) * 8);
+  padding-bottom: calc(var(--baseline) * 6);
+  margin-bottom: calc(var(--baseline) * 2);
+}
+.title {
+  @extend %h1;
+  margin-bottom: calc(var(--baseline) * 1);
+}
+
+.intro {
+  @extend %copy-large;
+}
+
+.header-inner {
+  margin: 0 auto;
+  max-width: 65rem;
+}
+
+.body {
+  @extend %copy-large;
+}
+
+.posts {
+  list-style: none;
+  display: flex;
+  flex-flow: column;
+  align-items: stretch;
+  max-width: 65rem;
+  margin: 0 auto;
+}
+
+.post {
+  display: block;
+  border-bottom: 1px solid rgba(black, 0.1);
+  padding: var(--baseline) 0;
+}
+
+.post-title {
+  @extend %h2;
+  font-size: var(--ms-3);
+  line-height: calc(var(--baseline) * 1.5);
+  margin-bottom: calc(var(--baseline) * 0.25);
+}
+
+.post-intro {
+  @extend %copy;
 }

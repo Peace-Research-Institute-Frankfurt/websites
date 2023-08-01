@@ -2,18 +2,23 @@ import { MDXProvider } from '@mdx-js/react'
 import React from 'react'
 import Figure from './FigureAdapter'
 import Quote from '@shared/components/Quote'
-import { Interview, InterviewQuestion } from '@shared/components/Interview'
+import Button from './ButtonAdapter'
+import { InterviewAdapter, InterviewQuestionAdapter, InterviewParticipantAdapter } from './InterviewAdapter'
 import Notes from './Notes'
-import * as InterviewStyles from './Interview.module.scss'
+import Callout from '@shared/components/Callout'
+import Leadin from './Leadin'
 import * as QuoteStyles from './Quote.module.scss'
+import * as CalloutStyles from './Callout.module.scss'
 
 const shortCodes = {
   Figure,
   Notes,
-  Callout: ({ ...props }) => <div {...props}></div>,
+  Leadin,
+  Callout: ({ ...props }) => <Callout {...props} buttonComponent={Button} styles={CalloutStyles} />,
   Quote: ({ ...props }) => <Quote {...props} styles={QuoteStyles} />,
-  Interview: ({ ...props }) => <Interview styles={InterviewStyles} {...props} />,
-  InterviewQuestion: ({ ...props }) => <InterviewQuestion styles={InterviewStyles} {...props} />,
+  Interview: ({ ...props }) => <InterviewAdapter {...props} />,
+  InterviewQuestion: ({ ...props }) => <InterviewQuestionAdapter {...props} />,
+  InterviewParticipant: ({ ...props }) => <InterviewParticipantAdapter {...props} />,
 }
 
 export default function PostBody({ children }) {
