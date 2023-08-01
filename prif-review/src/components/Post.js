@@ -6,6 +6,7 @@ import App from './App'
 import PostBody from './PostBody'
 import Meta from './Meta'
 import MarkdownRenderer from 'react-markdown-renderer'
+import { useTranslation } from 'gatsby-plugin-react-i18next'
 import * as styles from './Post.module.scss'
 
 export const query = graphql`
@@ -147,6 +148,8 @@ export const query = graphql`
   }
 `
 const Post = ({ data, pageContext, children }) => {
+  const { t } = useTranslation()
+
   const frontmatter = data.post.childMdx.frontmatter
   const posts = data.posts.nodes.filter((node) => {
     return node.relativeDirectory.includes(data.report.relativeDirectory)
@@ -177,12 +180,12 @@ const Post = ({ data, pageContext, children }) => {
     <nav className={styles.pagination}>
       {previous && (
         <Link className={styles.paginationLink} rel="prev" to={`../${previous.childMdx.fields.slug}`}>
-          Prev
+          {t('Prev')}
         </Link>
       )}
       {next && (
         <Link className={styles.paginationLink} rel="next" to={`../${next.childMdx.fields.slug}`}>
-          Next
+          {t('Next')}
         </Link>
       )}
     </nav>

@@ -15,7 +15,6 @@ export default function SiteHeader({ report, translationData, children }) {
   `)
 
   const homePath = translationData.currentLanguage !== 'de' ? `/${translationData.currentLanguage}` : '/'
-
   return (
     <header className={styles.container}>
       <nav className={styles.menu}>

@@ -6,12 +6,13 @@
   padding: 0.75rem 5%;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid rgba(black, 0.15);
 }
 
 .title {
   font-size: 0;
   display: block;
-  height: 2rem;
+  height: 1.25rem;
   svg {
     display: block;
     width: auto;
@@ -33,6 +34,7 @@
 }
 
 .link {
+  @extend %h3;
   padding: 0.15em 0.4em;
   border-radius: var(--br);
   font-size: var(--ms-0);

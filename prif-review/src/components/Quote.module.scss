@@ -3,6 +3,8 @@
 .container {
   color: var(--fc-text);
   position: relative;
+  text-align: center;
+  margin: calc(var(--baseline) * 1.5) 0;
   &:before {
     content: '„';
     font-family: Arial, Helvetica, sans-serif;
@@ -20,11 +22,12 @@
 }
 
 .text {
-  @extend %copy-large;
-  font-variation-settings: 'wdth' 70, 'wght' 300, 'slnt' -10;
-  letter-spacing: 0;
-  font-size: var(--ms-2);
-  line-height: calc(var(--baseline) * 1.5);
+  font-variation-settings: 'wdth' 130, 'wght' 450, 'slnt' -0;
+  letter-spacing: -0.01em;
+  font-size: var(--ms-3);
+  width: 140%;
+  margin-left: -20%;
+  line-height: calc(var(--baseline) * 1.6666);
   margin-bottom: calc(var(--baseline) * 0.5);
   word-wrap: balance;
   hyphens: none;
@@ -39,6 +42,7 @@
 
 .cite {
   @extend %caption;
+  color: var(--black);
   display: block;
   font-style: normal;
 }

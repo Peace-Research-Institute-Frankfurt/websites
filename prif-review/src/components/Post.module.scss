@@ -70,10 +70,15 @@
     margin-bottom: calc(var(--baseline) * 0.5);
   }
 
+  & > ul,
+  & > ol {
+    margin-left: 1.1em;
+  }
+
   a {
     text-decoration: underline;
+    text-decoration-color: var(--fc-text);
     text-decoration-thickness: 1px;
-    text-decoration-style: dotted;
     text-underline-offset: 0.15em;
     &:hover,
     &:focus-visible {
@@ -83,9 +88,7 @@
 }
 
 .eyebrow {
-  text-transform: uppercase;
-  font-variation-settings: 'wdth' 400, 'wght' 700;
-  font-size: var(--ms--1);
+  @extend %h4;
   display: block;
   margin-bottom: calc(var(--baseline) * 1);
 }

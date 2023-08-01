@@ -1,0 +1,48 @@
+@import 'vars';
+
+.container {
+  background: var(--fc-text);
+  border-top: 0.2em solid var(--fc-text);
+  float: right;
+  width: 18rem;
+  margin-right: -22rem;
+}
+
+.list {
+  display: flex;
+  flex-flow: column;
+  float: right;
+  gap: var(--baseline);
+  margin-right: -22rem;
+  .container {
+    margin: 0;
+  }
+}
+
+.list-title {
+  @extend %h4;
+  margin-bottom: -1em;
+}
+
+.name {
+  @extend %h3;
+}
+
+.image {
+  background: var(--fc-text);
+  opacity: 0.9;
+  img {
+    mix-blend-mode: screen;
+    filter: grayscale(1) contrast(1.65);
+  }
+}
+
+.bio {
+  @extend %caption;
+  padding: 1em;
+  background: var(--fc-background);
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}

@@ -14,12 +14,12 @@
     }
   }
   h2 {
-    font-size: var(--ms-0) !important;
-    color: var(--fc-text);
-    font-variation-settings: 'wght' 600 !important;
+    @extend %h3;
+    margin-bottom: calc(var(--baseline) * 0.5);
   }
   ul {
     list-style-type: none;
+    columns: 2;
     column-gap: 2em;
   }
 }

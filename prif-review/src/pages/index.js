@@ -45,7 +45,7 @@ export const query = graphql`
         name: { eq: "index" }
         childMdx: { fields: { locale: { eq: $language } } }
       }
-      sort: { childMdx: { frontmatter: { order: ASC } } }
+      sort: { childMdx: { frontmatter: { order: DESC } } }
     ) {
       nodes {
         id
@@ -71,14 +71,18 @@ const Index = ({ data, pageContext, location }) => {
       <SkipToContent />
       <main className={styles.container}>
         <h1>{t('PRIF Reports')}</h1>
-        {data.reports.nodes.map((report, i) => {
-          const year = report.relativeDirectory.replace(/(.{2})\/(reports)\//g, '')
-          return (
-            <li key={`report-${i}`}>
-              <Link to={`/${year}`}>{report.childMdx.frontmatter.title}</Link>
-            </li>
-          )
-        })}
+        <ol className={styles.reports}>
+          {data.reports.nodes.map((report, i) => {
+            const year = report.relativeDirectory.replace(/(.{2})\/(reports)\//g, '')
+            return (
+              <li key={`report-${i}`}>
+                <Link className={styles.report} to={`/${year}`}>
+                  {report.childMdx.frontmatter.title}
+                </Link>
+              </li>
+            )
+          })}
+        </ol>
       </main>
     </App>
   )

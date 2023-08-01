@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import MarkdownRenderer from 'react-markdown-renderer'
 import App from '../components/App'
 import Meta from '../components/Meta'
 import SkipToContent from '../components/SkipToContent'
@@ -108,11 +109,19 @@ const Index = ({ data, pageContext, children, location }) => {
       postStyles['--fc-background'] = color.set({ 'lch.l': 97, 'lch.c': 2, 'lch.h': (h) => h + 10 }).toString()
     }
 
+    const maxWords = 45
+    const intro =
+      frontmatter.intro && frontmatter.intro.split(' ').length > maxWords
+        ? frontmatter.intro.split(' ').slice(0, maxWords).join(' ') + '...'
+        : frontmatter.intro
+
     return (
       <li key={p.id}>
         <Link style={postStyles} className={styles.post} to={`/${year}/${p.childMdx.fields.slug}`}>
           <h3 className={styles.postTitle}>{frontmatter.title}</h3>
-          <p className={styles.postIntro}>{frontmatter.intro}</p>
+          <div className={styles.postIntro}>
+            <MarkdownRenderer markdown={intro} />
+          </div>
         </Link>
       </li>
     )

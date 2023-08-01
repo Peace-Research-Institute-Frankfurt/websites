@@ -1,15 +1,19 @@
 @import 'vars';
 
 .container {
-  padding: var(--baseline);
+  padding: calc(var(--baseline) * 1);
   float: left;
   width: 70%;
   margin-right: var(--baseline);
   margin-left: -35%;
   background: var(--fc-background);
-  border-top: 0.1em solid var(--fc-text);
+  border-top: 0.2em solid var(--fc-text);
+  p:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .title {
-  @extend %h3;
+  @extend %h2;
+  margin-bottom: calc(var(--baseline) * 0.5);
 }

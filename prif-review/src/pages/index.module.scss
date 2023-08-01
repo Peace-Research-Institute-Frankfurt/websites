@@ -1,5 +1,13 @@
 @import '../components/vars';
 
+.reports {
+  list-style: none;
+}
+
+.report {
+  @extend %h1;
+}
+
 .container {
   @extend %copy;
   padding: 0 var(--padding);
