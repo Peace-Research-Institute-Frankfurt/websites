@@ -39,13 +39,19 @@
 }
 
 .title {
-  grid-column: 3 / 4;
   @extend %h1;
+  grid-column: 2 / 5;
+  @include bp(m) {
+    grid-column: 3 / 4;
+  }
 }
 
 .intro {
-  grid-column: 3 / 4;
   @extend %copy;
+  grid-column: 2 / 5;
+  @include bp(m) {
+    grid-column: 3 / 4;
+  }
   max-width: 55em;
   margin-top: calc(var(--baseline) * 1);
 }

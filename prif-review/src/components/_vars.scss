@@ -47,7 +47,8 @@
 %h3 {
   font-family: var(--sans);
   font-size: var(--ms-0);
-  font-variation-settings: 'wght' 550, 'wdth' 90;
+  letter-spacing: -0.005em;
+  font-variation-settings: 'wght' 575, 'wdth' 90;
   line-height: calc(var(--baseline) * 0.75);
 }
 %h4 {
@@ -106,7 +107,7 @@
   font-variation-settings: 'wght' 300, 'wdth' 90, 'opsz' 10;
   line-height: calc(var(--baseline) * 0.66);
   em {
-    font-variation-settings: 'slnt' -10, 'wght' 400, 'wdth' 90, 'opsz' 10 !important;
+    font-variation-settings: 'slnt' -10, 'wght' 300, 'wdth' 90, 'opsz' 10 !important;
   }
 }
 %caption-bold {

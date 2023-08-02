@@ -48,8 +48,10 @@ function InterviewParticipant({ styles, name, image, children }) {
   return (
     <div className={styles.participant}>
       {image}
-      <em className={styles.participantName}>{name}</em>
-      <div className={styles.participantBio}>{children}</div>
+      <div className={styles.participantCopy}>
+        <em className={styles.participantName}>{name}</em>
+        <div className={styles.participantBio}>{children}</div>
+      </div>
     </div>
   )
 }
