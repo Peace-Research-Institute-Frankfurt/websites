@@ -48,7 +48,7 @@
   font-family: var(--sans);
   font-size: var(--ms-0);
   font-variation-settings: 'wght' 550, 'wdth' 90;
-  line-height: calc(var(--baseline) * 1);
+  line-height: calc(var(--baseline) * 0.75);
 }
 %h4 {
   text-transform: uppercase;
@@ -112,7 +112,7 @@
 %caption-bold {
   @extend %caption;
   letter-spacing: 0;
-  font-variation-settings: 'wght' 600, 'wdth' 90, 'opsz' 10;
+  font-variation-settings: 'wght' 550, 'wdth' 90, 'opsz' 10;
 }
 
 %grid {
