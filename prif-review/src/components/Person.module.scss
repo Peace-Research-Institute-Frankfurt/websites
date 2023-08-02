@@ -2,26 +2,46 @@
 
 .container {
   background: var(--fc-text);
-  border-top: 0.2em solid var(--fc-text);
-  float: right;
-  width: 18rem;
-  margin-right: -22rem;
+  width: 12rem;
+  @include bp(l) {
+    width: 16rem;
+  }
 }
 
 .list {
   display: flex;
   flex-flow: column;
-  float: right;
-  gap: var(--baseline);
-  margin-right: -22rem;
+  margin-top: var(--baseline);
+  margin-bottom: var(--baseline);
+  align-items: flex-start;
+  @include bp(m) {
+    grid-column: 4 / 5;
+    grid-row: span 4;
+    margin-top: 0;
+  }
+  @include bp(l) {
+    margin-right: -8rem;
+  }
+  @include bp(xl) {
+    margin-right: -20rem;
+  }
   .container {
     margin: 0;
   }
 }
 
+.list-inner {
+  display: flex;
+  gap: var(--baseline);
+  align-items: flex-start;
+  @include bp(l) {
+    flex-flow: column;
+  }
+}
+
 .list-title {
   @extend %h4;
-  margin-bottom: -1em;
+  margin-bottom: 1em;
 }
 
 .name {
@@ -31,6 +51,7 @@
 .image {
   background: var(--fc-text);
   opacity: 0.9;
+  aspect-ratio: 1 / 1;
   img {
     mix-blend-mode: screen;
     filter: grayscale(1) contrast(1.65);

@@ -50,7 +50,7 @@ const PersonList = function ({ title, children }) {
   return (
     <section className={styles.list}>
       <h3 className={styles.listTitle}>{title}</h3>
-      {children}
+      <div className={styles.listInner}>{children}</div>
     </section>
   )
 }

@@ -7,36 +7,47 @@
 .header {
   margin-bottom: 0.5em;
   background-color: var(--fc-background);
-  // color: var(--fc-text);
-  // border-left: 0.65rem solid var(--fc-text);
-  // border-bottom: 1px solid var(--fc-text);
-  border-left: var(--padding) solid var(--fc-text);
   padding: calc(var(--baseline) * 2.5) var(--padding);
-  padding-left: 0;
   margin-bottom: var(--baseline);
   display: flex;
   flex-flow: column;
   align-items: center;
-  // text-align: center;
+  text-align: center;
+  transition: 200ms;
+  @include bp(m) {
+    box-shadow: calc(var(--padding) * 0.5) 0 var(--fc-text) inset;
+    text-align: left;
+  }
+  @include bp(l) {
+    box-shadow: var(--padding) 0 0 var(--fc-text) inset;
+  }
 }
 
 .header-inner {
-  max-width: 50rem;
+  @extend %grid;
 }
 
 .hero-image {
   margin-bottom: calc(var(--baseline) * 1.5);
 }
 
+.eyebrow {
+  @extend %h4;
+  display: block;
+  grid-column: 3 / 4;
+  margin-bottom: calc(var(--baseline) * 1);
+}
+
 .title {
+  grid-column: 3 / 4;
   @extend %h1;
 }
 
 .intro {
+  grid-column: 3 / 4;
   @extend %copy;
   max-width: 55em;
-  text-align: left;
-  margin-top: calc(var(--baseline) * 1.5);
+  margin-top: calc(var(--baseline) * 1);
 }
 
 .pagination {
@@ -59,11 +70,28 @@
 }
 
 .body {
-  margin: 0 auto;
-  max-width: 50rem;
-  p {
+  @extend %grid;
+  & > p,
+  & > ul,
+  & > ol,
+  & > h2,
+  & > h3,
+  & > h4,
+  & > h5 {
+    grid-column: 1 / 6;
+    @include bp(m) {
+      grid-column: 2 / 5;
+    }
+
+    @include bp(l) {
+      grid-column: 3 / 4;
+    }
+  }
+
+  & > p {
     margin-bottom: calc(var(--baseline) * 0.5);
   }
+
   & > h2 {
     @extend %h2;
     margin-top: calc(var(--baseline) * 1.5);
@@ -85,10 +113,31 @@
       text-decoration-style: solid;
     }
   }
-}
-
-.eyebrow {
-  @extend %h4;
-  display: block;
-  margin-bottom: calc(var(--baseline) * 1);
+  table {
+    @extend %caption;
+    grid-column: 2 / 4;
+    margin-top: 0.5em;
+    margin-bottom: 1.5em;
+    display: inline-block;
+    width: 150%;
+    hyphens: none;
+    margin-left: -25%;
+  }
+  td,
+  th {
+    padding: 0.25em;
+    padding-left: 0;
+    padding-right: 1em;
+    border-bottom: 1px solid rgba(black, 0.2);
+    vertical-align: top;
+    a {
+      color: var(--blue-70);
+    }
+  }
+  th {
+    @extend %caption-bold;
+    border-bottom: 2px solid rgba(black, 0.9);
+    padding-bottom: 0.2em;
+    text-align: left;
+  }
 }

@@ -5,6 +5,7 @@
   position: relative;
   text-align: center;
   margin: calc(var(--baseline) * 1.5) 0;
+  grid-column: 2 / 5;
   &:before {
     content: '„';
     font-family: Arial, Helvetica, sans-serif;
@@ -25,8 +26,6 @@
   font-variation-settings: 'wdth' 130, 'wght' 450, 'slnt' -0;
   letter-spacing: -0.01em;
   font-size: var(--ms-3);
-  width: 140%;
-  margin-left: -20%;
   line-height: calc(var(--baseline) * 1.6666);
   margin-bottom: calc(var(--baseline) * 0.5);
   word-wrap: balance;

@@ -2,9 +2,12 @@
 
 .container {
   @extend %caption;
+  grid-column: 2 / 5;
+  @include bp(l) {
+    grid-column: 3 / 4;
+  }
   padding-top: calc(var(--baseline));
   align-self: flex-end;
-  float: left;
   li {
     display: inline-block;
     hyphens: none;

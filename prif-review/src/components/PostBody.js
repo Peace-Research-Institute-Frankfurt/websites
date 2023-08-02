@@ -7,6 +7,7 @@ import { InterviewAdapter, InterviewQuestionAdapter, InterviewParticipantAdapter
 import Notes from './Notes'
 import Callout from '@shared/components/Callout'
 import Leadin from './Leadin'
+import { Flowchart, FlowchartNode } from './Flowchart'
 import { Person, PersonList } from './Person'
 import * as QuoteStyles from './Quote.module.scss'
 import * as CalloutStyles from './Callout.module.scss'
@@ -15,6 +16,8 @@ const shortCodes = {
   Figure,
   Notes,
   Leadin,
+  Flowchart,
+  FlowchartNode,
   Person,
   PersonList,
   Callout: ({ ...props }) => <Callout {...props} buttonComponent={Button} styles={CalloutStyles} />,

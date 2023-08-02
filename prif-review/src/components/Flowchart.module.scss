@@ -1,0 +1,21 @@
+@import 'vars';
+
+.container {
+  @extend %caption;
+  grid-column: 2 / 5;
+}
+
+.department {
+  border: 1px solid black;
+  padding: 0.5em;
+}
+
+.department-title {
+  @extend %h3;
+}
+
+.department-description {
+  ul {
+    margin-left: 1em;
+  }
+}
