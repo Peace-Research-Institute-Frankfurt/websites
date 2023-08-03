@@ -6,11 +6,11 @@ function Callout({ styles, buttonComponent, title, eyebrow, expandable, children
   if (typeof expandable === 'undefined') expandable = true
 
   const inner = (
-    <>
+    <div className={styles.inner}>
       {eyebrow && <span className={styles.eyebrow}>{eyebrow}</span>}
       <h3 className={styles.title}>{title}</h3>
       {children}
-    </>
+    </div>
   )
   return (
     <section className={styles.container}>

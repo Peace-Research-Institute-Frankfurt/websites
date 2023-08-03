@@ -4,8 +4,8 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import Color from 'colorjs.io'
 import App from './App'
 import PostBody from './PostBody'
+import PostHeader from './PostHeader'
 import Meta from './Meta'
-import MarkdownRenderer from 'react-markdown-renderer'
 import { useTranslation } from 'gatsby-plugin-react-i18next'
 import * as styles from './Post.module.scss'
 
@@ -200,18 +200,7 @@ const Post = ({ data, pageContext, children }) => {
       report={data.report}
     >
       <article id="content" className={styles.postContainer}>
-        <header className={styles.header}>
-          <div className={styles.headerInner}>
-            {frontmatter.eyebrow && <span className={styles.eyebrow}>{frontmatter.eyebrow}</span>}
-            <h1 className={styles.title}>{frontmatter.title}</h1>
-            {heroImage && heroImage}
-            {frontmatter.intro && (
-              <div className={styles.intro}>
-                <MarkdownRenderer markdown={frontmatter.intro} />
-              </div>
-            )}
-          </div>
-        </header>
+        <PostHeader title={frontmatter.title} intro={frontmatter.intro} eyebrow={frontmatter.eyebrow} heroImage={heroImage} />
         <section className={styles.body}>
           <PostBody>{children}</PostBody>
         </section>

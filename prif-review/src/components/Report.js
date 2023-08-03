@@ -4,6 +4,7 @@ import MarkdownRenderer from 'react-markdown-renderer'
 import App from '../components/App'
 import Meta from '../components/Meta'
 import SkipToContent from '../components/SkipToContent'
+import PostHeader from './PostHeader'
 import { Link } from 'gatsby-plugin-react-i18next'
 import Color from 'colorjs.io'
 import * as styles from './Report.module.scss'
@@ -130,13 +131,8 @@ const Index = ({ data, pageContext, children, location }) => {
     <App pages={data.pages.nodes} translationData={{ currentLanguage: pageContext.language, currentSlug: location.pathname }}>
       <SkipToContent />
       <main className={styles.container}>
-        <header className={styles.header}>
-          <div className={styles.headerInner}>
-            <h1 className={styles.title}>{data.post.childMdx.frontmatter.title}</h1>
-            <div className={styles.intro}>{children}</div>
-          </div>
-        </header>
-        <section>
+        <PostHeader title={data.post.childMdx.frontmatter.title} intro={data.post.childMdx.frontmatter.intro} />
+        <section className={styles.body}>
           <ol className={styles.posts}>{posts}</ol>
         </section>
       </main>

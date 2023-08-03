@@ -2,7 +2,6 @@
 
 .container {
   @extend %caption;
-  padding: 0 var(--padding);
   padding-top: calc(var(--baseline));
   align-self: flex-end;
   grid-column: 1 / 6;

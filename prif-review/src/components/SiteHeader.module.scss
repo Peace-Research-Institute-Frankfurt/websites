@@ -2,7 +2,10 @@
 
 .container {
   @extend %copy;
+  position: fixed;
   display: flex;
+  left: 0;
+  right: 0;
   padding: 0.75rem 5%;
   justify-content: space-between;
   align-items: center;

@@ -1,0 +1,52 @@
+@import 'vars';
+
+.container {
+  margin-bottom: 0.5em;
+  background-color: var(--fc-background);
+  padding: calc(var(--baseline) * 2.5) 0;
+  padding-top: calc(var(--baseline) * 4);
+  margin-bottom: var(--baseline);
+  @include bp(m) {
+    box-shadow: calc(var(--padding) * 0.5) 0 var(--fc-text) inset;
+    text-align: left;
+  }
+  @include bp(l) {
+    box-shadow: var(--padding) 0 0 var(--fc-text) inset;
+  }
+}
+
+.inner {
+  @extend %grid;
+}
+
+.hero-image {
+  margin-bottom: calc(var(--baseline) * 1.5);
+}
+
+.eyebrow {
+  @extend %h4;
+  display: block;
+  grid-column: 3 / 4;
+  margin-bottom: calc(var(--baseline) * 1);
+}
+
+.title {
+  @extend %h1;
+  grid-column: 2 / 5;
+  @include bp(m) {
+    grid-column: 3 / 4;
+  }
+}
+
+.intro {
+  @extend %copy;
+  grid-column: 2 / 5;
+  @include bp(m) {
+    grid-column: 3 / 4;
+  }
+  p + p {
+    margin-top: calc(var(--baseline) * 0.5);
+  }
+  max-width: 55em;
+  margin-top: calc(var(--baseline) * 1);
+}

@@ -51,7 +51,6 @@
 .image {
   background: var(--fc-text);
   opacity: 0.9;
-  aspect-ratio: 1 / 1;
   img {
     mix-blend-mode: screen;
     filter: grayscale(1) contrast(1.65);

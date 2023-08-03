@@ -9,6 +9,7 @@ import Callout from '@shared/components/Callout'
 import Leadin from './Leadin'
 import { Flowchart, FlowchartNode } from './Flowchart'
 import { Person, PersonList } from './Person'
+import { Number, NumberList } from './Number'
 import * as QuoteStyles from './Quote.module.scss'
 import * as CalloutStyles from './Callout.module.scss'
 
@@ -20,6 +21,8 @@ const shortCodes = {
   FlowchartNode,
   Person,
   PersonList,
+  Number,
+  NumberList,
   Callout: ({ ...props }) => <Callout {...props} buttonComponent={Button} styles={CalloutStyles} />,
   Quote: ({ ...props }) => <Quote {...props} styles={QuoteStyles} />,
   Interview: ({ ...props }) => <InterviewAdapter {...props} />,

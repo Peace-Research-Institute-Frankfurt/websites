@@ -7,9 +7,9 @@
   border-top: 0.5em solid var(--fc-text);
   padding: var(--baseline);
   grid-column: 1 / 6;
-  margin: var(--baseline) var(--padding);
+  margin: var(--baseline) 0;
   @include bp(m) {
-    grid-column: 1 / 4;
+    grid-column: 1 / 5;
   }
 
   &:last-child {

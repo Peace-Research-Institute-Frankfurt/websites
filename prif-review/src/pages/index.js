@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import App from '../components/App'
 import Meta from '../components/Meta'
 import SkipToContent from '../components/SkipToContent'
+import PostHeader from '../components/PostHeader'
 import { Link, useTranslation } from 'gatsby-plugin-react-i18next'
 import * as styles from './index.module.scss'
 
@@ -70,7 +71,7 @@ const Index = ({ data, pageContext, location }) => {
     <App pages={data.pages.nodes} translationData={{ currentLanguage: pageContext.language, currentSlug: location.pathname }}>
       <SkipToContent />
       <main className={styles.container}>
-        <h1>{t('PRIF Reports')}</h1>
+        <PostHeader title={t('PRIF Reports')} />
         <ol className={styles.reports}>
           {data.reports.nodes.map((report, i) => {
             const year = report.relativeDirectory.replace(/(.{2})\/(reports)\//g, '')
