@@ -6,7 +6,6 @@
     grid-column: 3 / 4;
   }
   display: flex;
-  gap: var(--baseline);
 }
 
 .container {
@@ -25,5 +24,5 @@
 
 .label {
   @extend %caption;
-  hyphens: none;
+  max-width: 14em;
 }

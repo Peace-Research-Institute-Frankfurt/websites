@@ -34,7 +34,14 @@
   @extend %h2;
   font-size: var(--ms-3);
   line-height: calc(var(--baseline) * 1.5);
+  margin-bottom: calc(var(--baseline) * 0.5);
+}
+
+.post-eyebrow {
+  @extend %h4;
+  display: block;
   margin-bottom: calc(var(--baseline) * 0.25);
+  opacity: 0.9;
 }
 
 .post-intro {

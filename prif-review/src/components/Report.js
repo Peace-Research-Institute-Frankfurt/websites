@@ -70,6 +70,7 @@ export const query = graphql`
             order
             intro
             color
+            eyebrow
           }
         }
       }
@@ -119,6 +120,7 @@ const Index = ({ data, pageContext, children, location }) => {
     return (
       <li key={p.id}>
         <Link style={postStyles} className={styles.post} to={`/${year}/${p.childMdx.fields.slug}`}>
+          <span className={styles.postEyebrow}>{frontmatter.eyebrow}</span>
           <h3 className={styles.postTitle}>{frontmatter.title}</h3>
           <div className={styles.postIntro}>
             <MarkdownRenderer markdown={intro} />
