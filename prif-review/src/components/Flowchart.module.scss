@@ -11,7 +11,7 @@
 .nodes {
   display: grid;
   grid-template-columns: repeat(20, 1fr);
-  gap: var(--baseline);
+  gap: 1em;
 }
 
 .title {

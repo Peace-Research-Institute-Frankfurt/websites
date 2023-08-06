@@ -30,9 +30,9 @@
 }
 
 .list {
-  grid-column: 2 / 5;
+  grid-column: 3 / 5;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(5, 20%);
   gap: 1em;
   .container {
     grid-column: span 1;
@@ -44,5 +44,8 @@
     gap: 1em;
     justify-content: space-between;
     width: 100%;
+  }
+  .double {
+    grid-column: span 2;
   }
 }

@@ -7,6 +7,7 @@ import PostBody from './PostBody'
 import PostHeader from './PostHeader'
 import Meta from './Meta'
 import { useTranslation } from 'gatsby-plugin-react-i18next'
+import Lines from '../images/trace-line.svg'
 import * as styles from './Post.module.scss'
 
 export const query = graphql`
@@ -51,6 +52,7 @@ export const query = graphql`
           order
           color
           eyebrow
+          trace_lines
           hero_alt
           hero_credit
           hero_image {
@@ -170,8 +172,15 @@ const Post = ({ data, pageContext, children }) => {
   let heroImage = null
   if (frontmatter.hero_image) {
     heroImage = (
-      <div className={styles.heroImage}>
+      <div>
         <GatsbyImage loading="eager" image={getImage(frontmatter.hero_image)} alt={frontmatter.hero_alt} />
+      </div>
+    )
+  }
+  if (frontmatter.trace_lines) {
+    heroImage = (
+      <div className={styles.traceLines}>
+        <Lines />
       </div>
     )
   }

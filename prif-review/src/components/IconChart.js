@@ -9,7 +9,7 @@ const path = (
 )
 
 const IconChart = ({ n, label }) => {
-  const cols = 12
+  const cols = n > 80 ? 24 : 12
   const rows = Math.ceil(n / cols)
   const iconWidth = 8
   const iconHeight = 20
@@ -21,11 +21,15 @@ const IconChart = ({ n, label }) => {
   const icons = new Array(n).fill(null).map((_, i) => {
     const x = (i % cols) * (width / cols)
     const y = Math.floor(i / cols) * (iconHeight + padding)
-    return <g transform={`translate(${x} ${y})`}>{path}</g>
+    return (
+      <g key={`icon-${i}`} transform={`translate(${x} ${y})`}>
+        {path}
+      </g>
+    )
   })
 
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} ${n > 80 && styles.double}`}>
       <svg className={styles.chart} viewBox={`0 0 ${width} ${height}`} xmlns="<http://www.w3.org/2000/svg>">
         {icons}
       </svg>

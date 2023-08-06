@@ -1,0 +1,37 @@
+@import 'vars';
+
+.container {
+  border-radius: 2px;
+  grid-column: 1 / 6;
+  // border: 1px solid red;
+}
+
+.map {
+  background: rgb(243, 245, 248);
+  width: 100%;
+  // border: 1px solid blue;
+}
+.label {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-weight: 400;
+  font-family: 'Atlas Grotesk';
+  font-size: 0.75rem;
+  color: rgb(82, 79, 79);
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.548);
+}
+
+.marker {
+}
+
+.country {
+  fill: rgb(255, 255, 255);
+  stroke: rgb(46, 46, 46);
+  stroke-width: 0.5;
+}
+
+.caption {
+  @extend %caption;
+}

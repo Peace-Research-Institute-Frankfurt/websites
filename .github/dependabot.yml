@@ -2,13 +2,19 @@
 
 version: 2
 updates:
-  - package-ecosystem: "npm"
-    directory: "/"
+  - package-ecosystem: 'npm'
+    directory: '/'
     labels:
       - dependencies
     schedule:
-      interval: "weekly"
+      interval: 'weekly'
     groups:
       gatsby:
         patterns:
-          - "gatsby*"
+          - 'gatsby*'
+      visx:
+        patterns:
+          - '@visx*'
+      react:
+        patterns:
+          - 'react*'

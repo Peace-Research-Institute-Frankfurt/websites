@@ -7,6 +7,7 @@ import { InterviewAdapter, InterviewQuestionAdapter, InterviewParticipantAdapter
 import Notes from './Notes'
 import Callout from '@shared/components/Callout'
 import Leadin from './Leadin'
+import { Map, PRIFNetworkLayer } from './Map'
 import { Flowchart, FlowchartNode } from './Flowchart'
 import { Person, PersonList } from './Person'
 import { Number, NumberList } from './Number'
@@ -26,6 +27,8 @@ const shortCodes = {
   NumberList,
   IconChart,
   IconChartGroup,
+  Map,
+  PRIFNetworkLayer,
   Callout: ({ ...props }) => <Callout {...props} buttonComponent={Button} styles={CalloutStyles} />,
   Quote: ({ ...props }) => <Quote {...props} styles={QuoteStyles} />,
   Interview: ({ ...props }) => <InterviewAdapter {...props} />,

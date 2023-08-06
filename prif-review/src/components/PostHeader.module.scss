@@ -6,12 +6,11 @@
   padding: calc(var(--baseline) * 2.5) 0;
   padding-top: calc(var(--baseline) * 4);
   margin-bottom: var(--baseline);
+  position: relative;
+  overflow: hidden;
   @include bp(m) {
     box-shadow: calc(var(--padding) * 0.5) 0 var(--fc-text) inset;
     text-align: left;
-  }
-  @include bp(l) {
-    box-shadow: var(--padding) 0 0 var(--fc-text) inset;
   }
 }
 

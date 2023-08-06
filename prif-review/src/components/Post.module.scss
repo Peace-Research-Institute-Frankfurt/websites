@@ -77,7 +77,7 @@
   }
   table {
     @extend %caption;
-    grid-column: 1 / 4;
+    grid-column: 3 / 6;
     margin-top: var(--baseline);
     margin-bottom: var(--baseline);
     display: inline-block;
@@ -99,5 +99,22 @@
     border-bottom: 2px solid rgba(black, 0.9);
     padding-bottom: 0.2em;
     text-align: left;
+  }
+}
+
+.trace-lines {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  mix-blend-mode: multiply;
+  opacity: 0.5;
+  transform: translateY(40%);
+  pointer-events: none;
+  path {
+    stroke: var(--fc-text);
+    stroke-width: 0.1em;
+    stroke-dasharray: 0.3em 0.15em;
   }
 }

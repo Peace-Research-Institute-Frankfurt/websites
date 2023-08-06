@@ -22,6 +22,7 @@ const config = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-netlify',
     'gatsby-plugin-sass',
+    `gatsby-transformer-csv`,
     'gatsby-plugin-react-svg',
     {
       resolve: 'gatsby-plugin-sharp',
