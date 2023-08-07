@@ -210,9 +210,7 @@ const Post = ({ data, pageContext, children }) => {
     >
       <article id="content" className={styles.postContainer}>
         <PostHeader title={frontmatter.title} intro={frontmatter.intro} eyebrow={frontmatter.eyebrow} heroImage={heroImage} />
-        <section className={styles.body}>
-          <PostBody>{children}</PostBody>
-        </section>
+        <PostBody>{children}</PostBody>
       </article>
     </App>
   )

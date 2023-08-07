@@ -3,6 +3,7 @@ import React from 'react'
 import App from './App'
 import PostBody from './PostBody'
 import Meta from './Meta'
+import PostHeader from './PostHeader'
 import * as styles from './Page.module.scss'
 
 export const query = graphql`
@@ -81,10 +82,10 @@ const Page = ({ data, children, pageContext }) => {
       translationData={{ translations: data.translations.nodes, currentLanguage: pageContext.language, currentSlug: data.post.childMdx.fields.slug }}
     >
       <article id="content" className={styles.container}>
-        <main>
-          <h1 className={styles.title}>{frontmatter.title}</h1>
+        <PostHeader title={frontmatter.title} />
+        <section className={styles.body}>
           <PostBody>{children}</PostBody>
-        </main>
+        </section>
       </article>
     </App>
   )

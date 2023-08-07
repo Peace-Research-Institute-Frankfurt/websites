@@ -14,6 +14,7 @@ import { Number, NumberList } from './Number'
 import { IconChart, IconChartGroup } from './IconChart'
 import * as QuoteStyles from './Quote.module.scss'
 import * as CalloutStyles from './Callout.module.scss'
+import * as styles from './PostBody.module.scss'
 
 const shortCodes = {
   Figure,
@@ -37,5 +38,9 @@ const shortCodes = {
 }
 
 export default function PostBody({ children }) {
-  return <MDXProvider components={shortCodes}>{children}</MDXProvider>
+  return (
+    <section className={styles.container}>
+      <MDXProvider components={shortCodes}>{children}</MDXProvider>
+    </section>
+  )
 }

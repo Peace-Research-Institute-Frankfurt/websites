@@ -5,6 +5,7 @@ import App from '../components/App'
 import Meta from '../components/Meta'
 import SkipToContent from '../components/SkipToContent'
 import PostHeader from './PostHeader'
+import { useTranslation } from 'gatsby-plugin-react-i18next'
 import { Link } from 'gatsby-plugin-react-i18next'
 import Color from 'colorjs.io'
 import * as styles from './Report.module.scss'
@@ -37,6 +38,7 @@ export const query = graphql`
         frontmatter {
           title
           intro
+          year
           order
           authors {
             frontmatter {
@@ -102,6 +104,7 @@ export const query = graphql`
 
 const Index = ({ data, pageContext, children, location }) => {
   const year = data.post.relativeDirectory.replace(/(.{2})\/(reports)\//g, '')
+  const { t } = useTranslation()
   const posts = data.posts.nodes.map((p) => {
     let postStyles = {}
     const frontmatter = p.childMdx.frontmatter
@@ -133,9 +136,19 @@ const Index = ({ data, pageContext, children, location }) => {
     <App pages={data.pages.nodes} translationData={{ currentLanguage: pageContext.language, currentSlug: location.pathname }}>
       <SkipToContent />
       <main className={styles.container}>
-        <PostHeader title={data.post.childMdx.frontmatter.title} intro={data.post.childMdx.frontmatter.intro} />
-        <section className={styles.body}>
-          <ol className={styles.posts}>{posts}</ol>
+        <header className={styles.header}>
+          <h1 className={styles.title}>
+            {data.post.childMdx.frontmatter.title}
+            <span>{data.post.childMdx.frontmatter.year}</span>
+          </h1>
+        </header>
+        <section className={styles.intro}>
+          <h2 className={styles.sectionTitle}>{t('Editorial')}</h2>
+          <div className={styles.introInner}>{children}</div>
+        </section>
+        <section className={styles.posts}>
+          <h2 className={styles.sectionTitle}>{t('Contents')}</h2>
+          <ol className={styles.postsList}>{posts}</ol>
         </section>
       </main>
     </App>

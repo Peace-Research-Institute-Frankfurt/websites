@@ -31,9 +31,9 @@
   hyphens: none;
   text-wrap: balance;
   @include bp(xl) {
-    font-variation-settings: 'wght' 500, 'wdth' 90, 'opsz' 144;
-    line-height: calc(var(--baseline) * 3);
-    font-size: var(--ms-6);
+    font-variation-settings: 'wght' 470, 'wdth' 90, 'opsz' 144;
+    line-height: calc(var(--baseline) * 3.66666);
+    font-size: var(--ms-7);
   }
 }
 %h2 {
@@ -94,7 +94,7 @@
   @extend %copy;
   font-variation-settings: 'wght' 300, 'wdth' 110;
   letter-spacing: 0.01em;
-  line-height: calc(var(--baseline) * 1.3333);
+  line-height: calc(var(--baseline) * 1.25);
   font-size: var(--ms-1);
   em {
     font-variation-settings: 'wght' 300, 'wdth' 110, 'slnt' -10;
