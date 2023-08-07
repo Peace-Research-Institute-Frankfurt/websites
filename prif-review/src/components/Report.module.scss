@@ -6,7 +6,7 @@
 .intro {
   @extend %grid;
   @extend %copy-large;
-  letter-spacing: -0.01em;
+  --fc-text: var(--blue);
   grid-column: 2 / 6;
   line-height: 1.45;
   padding-top: var(--baseline);
@@ -15,19 +15,29 @@
     text-indent: 2em;
   }
   strong {
-    font-variation-settings: 'wght' 700;
+    font-variation-settings: 'wght' 600;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    letter-spacing: 0.01em;
   }
 }
 
 .intro-inner {
   grid-column: 2 / 6;
   columns: 2;
+  grid-row: 1 / 3;
+  column-gap: var(--baseline);
 }
 
+.intro-author {
+  grid-column: 1 / 2;
+  align-self: flex-end;
+  margin-bottom: 0.5em;
+}
 .posts {
   @extend %grid;
   padding-top: var(--baseline);
-  border-top: 2rem solid var(--blue);
+  border-top: 1px dotted var(--blue);
 }
 
 .section-title {
@@ -109,25 +119,29 @@
 }
 
 .header {
-  @extend %grid;
   min-height: 65vh;
   padding-top: 5em;
-  border-bottom: 2rem solid var(--blue);
+  background-color: rgb(241, 243, 247);
+  border-left: 3rem solid var(--blue);
   // align-items: center;
+}
+.header-inner {
+  @extend %grid;
 }
 
 .post-title {
   @extend %h2;
   font-size: var(--ms-3);
   line-height: calc(var(--baseline) * 1.5);
-  margin-bottom: calc(var(--baseline) * 0.5);
 }
 
 .post-eyebrow {
   @extend %h4;
   display: block;
+  margin-bottom: calc(var(--baseline) * 0.125);
 }
 
 .post-intro {
+  margin-top: calc(var(--baseline) * 0.25);
   @extend %copy;
 }

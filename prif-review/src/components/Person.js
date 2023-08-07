@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import * as styles from './Person.module.scss'
 
-const Person = function ({ name, image, children }) {
+const Person = function ({ name, image, children, className }) {
   const data = useStaticQuery(graphql`
     query PersonQuery {
       images: allFile(filter: { extension: { in: ["png", "jpg", "jpeg"] } }) {
@@ -36,7 +36,7 @@ const Person = function ({ name, image, children }) {
     imageEl = <GatsbyImage className={styles.image} loading="lazy" image={getImage(img)} alt={''} />
   }
   return (
-    <aside className={styles.container}>
+    <aside className={`${styles.container} ${className}`}>
       {img && imageEl}
       <div className={styles.bio}>
         <h2 className={styles.name}>{name}</h2>

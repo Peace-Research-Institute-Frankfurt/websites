@@ -4,7 +4,7 @@ import MarkdownRenderer from 'react-markdown-renderer'
 import App from '../components/App'
 import Meta from '../components/Meta'
 import SkipToContent from '../components/SkipToContent'
-import PostHeader from './PostHeader'
+import { Person } from './Person'
 import { useTranslation } from 'gatsby-plugin-react-i18next'
 import { Link } from 'gatsby-plugin-react-i18next'
 import Color from 'colorjs.io'
@@ -123,11 +123,13 @@ const Index = ({ data, pageContext, children, location }) => {
     return (
       <li key={p.id}>
         <Link style={postStyles} className={styles.post} to={`/${year}/${p.childMdx.fields.slug}`}>
-          <span className={styles.postEyebrow}>{frontmatter.eyebrow}</span>
+          {frontmatter.eyebrow && <span className={styles.postEyebrow}>{frontmatter.eyebrow}</span>}
           <h3 className={styles.postTitle}>{frontmatter.title}</h3>
-          <div className={styles.postIntro}>
-            <MarkdownRenderer markdown={intro} />
-          </div>
+          {frontmatter.intro && (
+            <div className={styles.postIntro}>
+              <MarkdownRenderer markdown={intro} />
+            </div>
+          )}
         </Link>
       </li>
     )
@@ -135,15 +137,21 @@ const Index = ({ data, pageContext, children, location }) => {
   return (
     <App pages={data.pages.nodes} translationData={{ currentLanguage: pageContext.language, currentSlug: location.pathname }}>
       <SkipToContent />
-      <main className={styles.container}>
+      <main>
         <header className={styles.header}>
-          <h1 className={styles.title}>
-            {data.post.childMdx.frontmatter.title}
-            <span>{data.post.childMdx.frontmatter.year}</span>
-          </h1>
+          <div className={styles.headerInner}>
+            <h1 className={styles.title}>
+              {data.post.childMdx.frontmatter.title}
+              <span>{data.post.childMdx.frontmatter.year}</span>
+            </h1>
+          </div>
         </header>
         <section className={styles.intro}>
           <h2 className={styles.sectionTitle}>{t('Editorial')}</h2>
+          <Person name="Dr. Nicole Deitelhoff" image="assets/junk.jpg" className={styles.introAuthor}>
+            Dr. Antonia Witt ist Senior Researcher am Programmbereich „Glokale Verflechtungen“ und leitet die Forschungsgruppe „African Intervention
+            Politics.
+          </Person>
           <div className={styles.introInner}>{children}</div>
         </section>
         <section className={styles.posts}>

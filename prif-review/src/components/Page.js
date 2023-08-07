@@ -83,7 +83,7 @@ const Page = ({ data, children, pageContext }) => {
     >
       <article id="content" className={styles.container}>
         <PostHeader title={frontmatter.title} />
-        <section className={styles.body}>
+        <section>
           <PostBody>{children}</PostBody>
         </section>
       </article>
