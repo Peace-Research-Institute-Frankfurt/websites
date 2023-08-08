@@ -51,6 +51,7 @@ export const query = graphql`
           intro
           order
           color
+          color_secondary
           eyebrow
           trace_lines
           hero_alt
@@ -166,7 +167,13 @@ const Post = ({ data, pageContext, children }) => {
   if (frontmatter.color) {
     const color = new Color(frontmatter.color)
     appStyles['--fc-text'] = color.toString()
-    appStyles['--fc-background'] = color.set({ 'lch.l': 97, 'lch.c': 2, 'lch.h': (h) => h + 10 }).toString()
+    let secondaryColor = ''
+    if (frontmatter.color_secondary) {
+      secondaryColor = new Color(frontmatter.color_secondary)
+    } else {
+      secondaryColor = color.set({ 'lch.l': 97, 'lch.c': 2, 'lch.h': (h) => h + 10 })
+    }
+    appStyles['--fc-background'] = secondaryColor.toString()
   }
 
   let heroImage = null
