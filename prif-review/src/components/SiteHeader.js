@@ -21,14 +21,14 @@ export default function SiteHeader({ report, translationData, children }) {
         <ul>
           <li>
             <Link to={homePath} className={`${styles.title}`}>
-              <span className={styles.label}>{data.site.siteMetadata.title}</span>
+              <span className={styles.label}>{data.site.siteMetadata.title} </span>
               <Logo />
             </Link>
           </li>
           {report && (
             <li>
               <Link className={styles.link} to={`../`}>
-                {report.childMdx.frontmatter.title}
+                {report.relativeDirectory}
               </Link>
             </li>
           )}

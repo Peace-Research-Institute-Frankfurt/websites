@@ -3,13 +3,11 @@
 .container {
   border-radius: 2px;
   grid-column: 1 / 6;
-  // border: 1px solid red;
 }
 
 .map {
   background: rgb(243, 245, 248);
   width: 100%;
-  // border: 1px solid blue;
 }
 .label {
   display: block;
@@ -21,9 +19,6 @@
   font-size: 0.75rem;
   color: rgb(82, 79, 79);
   text-shadow: 0 0 2px rgba(255, 255, 255, 0.548);
-}
-
-.marker {
 }
 
 .country {
