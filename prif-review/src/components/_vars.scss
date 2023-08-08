@@ -32,8 +32,8 @@
   text-wrap: balance;
   @include bp(xl) {
     font-variation-settings: 'wght' 470, 'wdth' 90, 'opsz' 144;
-    line-height: calc(var(--baseline) * 3.66666);
-    font-size: var(--ms-7);
+    line-height: calc(var(--baseline) * 3);
+    font-size: var(--ms-6);
   }
 }
 %h2 {
@@ -122,4 +122,17 @@
   column-gap: var(--padding-small);
   margin: 0 auto;
   max-width: 110rem;
+}
+
+%text-link {
+  text-decoration: underline;
+  background: var(--fc-background);
+  text-decoration-color: var(--fc-text);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.15em;
+
+  &:hover,
+  &:focus-visible {
+    text-decoration-style: solid;
+  }
 }

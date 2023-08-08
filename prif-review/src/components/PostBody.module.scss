@@ -42,16 +42,7 @@
   }
 
   a {
-    text-decoration: underline;
-    background: var(--fc-background);
-    text-decoration-color: var(--fc-text);
-    text-decoration-thickness: 1px;
-    text-underline-offset: 0.15em;
-
-    &:hover,
-    &:focus-visible {
-      text-decoration-style: solid;
-    }
+    @extend %text-link;
   }
   table {
     @extend %caption;

@@ -1,11 +1,48 @@
 @import '../components/vars';
 
+.body {
+  @extend %grid;
+  p {
+    grid-column: 3 /4;
+  }
+}
+
 .reports {
+  @extend %h2;
   list-style: none;
+  grid-column: 3 / 4;
+  margin-top: var(--baseline);
+  margin-bottom: var(--baseline);
+}
+
+.report-labels {
+  @extend %h4;
+}
+
+.report,
+.report-labels {
+  display: flex;
+  border-bottom: 1px dotted var(--blue);
+  gap: var(--baseline);
 }
 
 .report {
-  @extend %h1;
+  padding: 0.1em 0;
+  &:hover,
+  &:focus-visible {
+    background: var(--gray-light);
+  }
+}
+
+.report-year {
+  flex-basis: 8rem;
+}
+
+.notes {
+  grid-column: 3 / 4;
+  a {
+    @extend %text-link;
+  }
 }
 
 .container {
