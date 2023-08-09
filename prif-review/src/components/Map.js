@@ -2,15 +2,18 @@ import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import { Graticule, NaturalEarth } from '@visx/geo'
 import admin0 from '../data/ne_countries.json'
+import MarkdownRenderer from 'react-markdown-renderer'
 import * as styles from './Map.module.scss'
 
-const Map = ({ caption, children }) => {
+// https://github.com/airbnb/visx/issues/880
+
+const Map = ({ caption, credit, children }) => {
   const width = 1500
-  const ratio = 1.55
+  const ratio = 1.9
   const height = width / ratio
 
   const centerX = width / 2 - 35
-  const centerY = height / 2 + 35
+  const centerY = height / 2 + 65
   const scale = (width + height) * 0.165
 
   return (
@@ -23,7 +26,7 @@ const Map = ({ caption, children }) => {
               <g data-layer="admin0">
                 {projection.features.map(({ feature, path }, i) => {
                   return (
-                    <g key={i} data-admin={feature.properties.ADMIN}>
+                    <g key={i}>
                       <path className={styles.country} key={`map-feature-${i}`} d={path || ''} />
                     </g>
                   )
@@ -36,12 +39,20 @@ const Map = ({ caption, children }) => {
           )
         }}
       </NaturalEarth>
-      <figcaption className={styles.caption}>{caption}</figcaption>
+      {caption && (
+        <figcaption className={styles.caption}>
+          <MarkdownRenderer markdown={caption} />
+        </figcaption>
+      )}
+      {credit && (
+        <figcaption className={styles.credit}>
+          <MarkdownRenderer markdown={credit} />
+        </figcaption>
+      )}
     </figure>
   )
 }
 
-const CountriesLayer = () => {}
 const PointsLayer = () => {}
 
 export { Map }

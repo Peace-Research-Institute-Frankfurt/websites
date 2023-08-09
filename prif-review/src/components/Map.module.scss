@@ -2,11 +2,11 @@
 
 .container {
   border-radius: 2px;
-  grid-column: 1 / 6;
+  grid-column: 1 / 4;
 }
 
 .map {
-  background: rgb(243, 245, 248);
+  background: rgb(101, 167, 243);
   width: 100%;
 }
 .label {
@@ -23,10 +23,14 @@
 
 .country {
   fill: rgb(255, 255, 255);
-  stroke: rgb(46, 46, 46);
+  stroke: rgb(94, 100, 117);
   stroke-width: 0.5;
 }
 
 .caption {
+  @extend %caption-bold;
+}
+.credit {
   @extend %caption;
+  opacity: 0.75;
 }

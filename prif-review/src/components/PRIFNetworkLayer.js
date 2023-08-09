@@ -70,32 +70,20 @@ const PRIFNetworkLayer = ({ projection }) => {
     }
 
     const position = projection.projection([geo.properties.LABEL_X, geo.properties.LABEL_Y])
+    const prifPosition = projection.projection([8.682222, 50.110556])
     const cols = 10
     const d = 15
     const padding = 1
     let currentY = 0
     const statsElements = []
-    stats.forEach((stat, i) => {
-      currentY += d + padding
-
-      const icons = new Array(country[stat]).fill(null).map((_, i) => {
-        const x = (i % cols) * (d + padding)
-        const y = Math.floor(i / cols) * (d + padding)
-        return <circle key={`icon-${i}`} cx={x} cy={y} r={d / 2} />
-      })
-
-      statsElements.push(
-        <g key={`country.${country.a3}.${stat}`} transform={`translate(0 ${currentY})`} className={styles[stat]}>
-          {icons}
-        </g>
-      )
-    })
-
-    return (
-      <g key={`collaboration-${i}`} transform={`translate(${position[0]} ${position[1]})`}>
-        {statsElements}
-      </g>
+    const lineElement = (
+      <>
+        <line x1={prifPosition[0]} y1={prifPosition[1]} x2={position[0]} y2={position[1]} stroke="black" />
+        <circle cx={position[0]} cy={position[1]} r={6} fill="black" />
+      </>
     )
+
+    return <>{lineElement}</>
   })
 
   return <g>{countryElements}</g>

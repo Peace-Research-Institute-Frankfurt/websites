@@ -5,22 +5,14 @@ title: Das war 2022
 color: rgb(50, 50, 47)
 ---
 
-## Personal
+## Weltweit vernetzt
 
-<IconChartGroup>
-  <IconChart n={34} label="Assoziierte" />
-  <IconChart n={31} label="Studentische Hilfskräfte" />
-  <IconChart n={28} label="Postdocs, Programm- und Projektleiter:innen" />
-  <IconChart n={23} label="Docs" />
-  <IconChart n={12} label="Kommunikation" />
-  <IconChart n={12} label="Mitarbeiter:innen in Verwaltung und Empfang" />
-  <IconChart n={10} label="Gastforscher:innen" />
-  <IconChart n={9} label="Non-Doc WiMis" />
-  <IconChart n={5} label="Mitarbeiter:innen im Sekretariat und Vorstandsbüro" />
-  <IconChart n={2} label="Wissenschaftliche Hilfskräfte" />
-  <IconChart n={2} label="IT" />
-  <IconChart n={1} label="Stipendiat:innen" />
-</IconChartGroup>
+<Map
+  caption="Weltweit vernetzt: Internationale Kollaborationen, Gastforscher:innen, und Forschungsaufenthalte des PRIF im Jahr 2022."
+  credit="Kartendaten von [Natural Earth](https://www.naturalearthdata.com/), Stadt-Positionen von [OpenStreetMap](https://wiki.osmfoundation.org/wiki/Main_Page). Max Kohler/PRIF"
+>
+  <PRIFNetworkLayer data="collaborations.csv" />
+</Map>
 
 ## PRIF in den Medien
 
@@ -46,10 +38,6 @@ color: rgb(50, 50, 47)
   <IconChart n={4} label="Feministische Außenpolitik" />
   <IconChart n={100} label="Sonstige" />
 </IconChartGroup>
-
-<Map caption="Base map: Natural Earth/Public Domain">
-  <PRIFNetworkLayer data="collaborations.csv" />
-</Map>
 
 ## Publikationen
 
@@ -103,6 +91,23 @@ Der Sammelband, herausgegeben von Daniel Mullis und Judith Miggelbrink, betracht
 - Schlegel, Linda: “At least I tried, God damnit” and “Even a drop in the ocean is still more than nothing”: In their own words, what motivates people to work in P/CVE?, in: Critical Studies on Terrorism, 15(4), 2022 , S. 945-962. DOI: 10.1080/17539153.2022.2089399.
 
 ## Governance
+
+## Personal
+
+<IconChartGroup>
+  <IconChart n={34} label="Assoziierte" />
+  <IconChart n={31} label="Studentische Hilfskräfte" />
+  <IconChart n={28} label="Postdocs, Programm- und Projektleiter:innen" />
+  <IconChart n={23} label="Docs" />
+  <IconChart n={12} label="Kommunikation" />
+  <IconChart n={12} label="Mitarbeiter:innen in Verwaltung und Empfang" />
+  <IconChart n={10} label="Gastforscher:innen" />
+  <IconChart n={9} label="Non-Doc WiMis" />
+  <IconChart n={5} label="Mitarbeiter:innen im Sekretariat und Vorstandsbüro" />
+  <IconChart n={2} label="Wissenschaftliche Hilfskräfte" />
+  <IconChart n={2} label="IT" />
+  <IconChart n={1} label="Stipendiat:innen" />
+</IconChartGroup>
 
 <Flowchart title="Governance-Struktur der PRIF">
 
