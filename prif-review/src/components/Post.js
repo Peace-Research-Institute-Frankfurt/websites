@@ -164,6 +164,7 @@ const Post = ({ data, pageContext, children }) => {
   const previous = posts[currentIndex - 1] || null
 
   let appStyles = {}
+
   if (frontmatter.color) {
     const color = new Color(frontmatter.color)
     appStyles['--fc-text'] = color.toString()

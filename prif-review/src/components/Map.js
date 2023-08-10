@@ -25,7 +25,7 @@ const Map = ({ caption, credit, children }) => {
               <g data-layer="admin0">
                 {projection.features.map(({ feature, path }, i) => {
                   return (
-                    <g key={i}>
+                    <g key={`feature.${i}`}>
                       <path className={styles.country} key={`map-feature-${i}`} d={path || ''} />
                     </g>
                   )

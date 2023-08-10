@@ -61,15 +61,15 @@ const PRIFNetworkLayer = ({ projection }) => {
       const position = projection.projection([connection.long, connection.lat])
       const prifPosition = projection.projection([8.682222, 50.110556])
       const lineElement = (
-        <g className={styles.connection}>
+        <g className={styles.connection} key={`connection.${i}`}>
           <line x1={prifPosition[0]} y1={prifPosition[1]} x2={position[0]} y2={position[1]} />
           <circle cx={position[0]} cy={position[1]} r={4} />
         </g>
       )
 
-      return <>{lineElement}</>
+      return lineElement
     })
 
-  return <g>{connectionElements}</g>
+  return <>{connectionElements}</>
 }
 export { PRIFNetworkLayer }
