@@ -179,7 +179,7 @@ const Post = ({ data, pageContext, children }) => {
   let heroImage = null
   if (frontmatter.hero_image) {
     heroImage = (
-      <div>
+      <div className={styles.heroImage}>
         <GatsbyImage loading="eager" image={getImage(frontmatter.hero_image)} alt={frontmatter.hero_alt} />
       </div>
     )

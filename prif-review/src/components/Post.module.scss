@@ -12,6 +12,11 @@
   display: flex;
 }
 
+.hero-image {
+  margin-top: calc(var(--baseline) * 1.5);
+  grid-column: 3 / 5;
+}
+
 .pagination-link {
   display: block;
   padding: 0 0.5em;

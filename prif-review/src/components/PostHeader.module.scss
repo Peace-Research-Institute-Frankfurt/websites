@@ -18,10 +18,6 @@
   @extend %grid;
 }
 
-.hero-image {
-  margin-bottom: calc(var(--baseline) * 1.5);
-}
-
 .eyebrow {
   @extend %h4;
   display: block;
