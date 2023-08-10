@@ -71,6 +71,7 @@ export const query = graphql`
             title
             order
             intro
+            teaser
             color
             eyebrow
           }
@@ -115,10 +116,15 @@ const Index = ({ data, pageContext, children, location }) => {
     }
 
     const maxWords = 45
-    const intro =
-      frontmatter.intro && frontmatter.intro.split(' ').length > maxWords
-        ? frontmatter.intro.split(' ').slice(0, maxWords).join(' ') + '...'
-        : frontmatter.intro
+    let intro = ''
+    if (frontmatter.teaser) {
+      intro = frontmatter.teaser
+    } else {
+      intro =
+        frontmatter.intro && frontmatter.intro.split(' ').length > maxWords
+          ? frontmatter.intro.split(' ').slice(0, maxWords).join(' ') + '...'
+          : frontmatter.intro
+    }
 
     return (
       <li key={p.id}>
