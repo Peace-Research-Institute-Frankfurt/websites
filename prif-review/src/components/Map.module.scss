@@ -3,6 +3,8 @@
 .container {
   border-radius: 2px;
   grid-column: 1 / 4;
+  margin-top: var(--baseline);
+  margin-bottom: var(--baseline);
 }
 
 .map {
