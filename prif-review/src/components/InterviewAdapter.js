@@ -11,7 +11,7 @@ const InterviewQuestionAdapter = function ({ ...props }) {
   return <InterviewQuestion styles={styles} {...props} />
 }
 
-const InterviewParticipantAdapter = function ({ image, ...props }) {
+const InterviewParticipantAdapter = function ({ image, image_alt, ...props }) {
   const data = useStaticQuery(graphql`
     query InterviewParticipantQuery {
       images: allFile(filter: { extension: { in: ["png", "jpg", "jpeg"] } }) {
@@ -41,7 +41,7 @@ const InterviewParticipantAdapter = function ({ image, ...props }) {
 
   let imageEl = <></>
   if (img) {
-    imageEl = <GatsbyImage className={styles.participantImage} loading="lazy" image={getImage(img)} alt={''} />
+    imageEl = <GatsbyImage className={styles.participantImage} loading="lazy" image={getImage(img)} alt={image_alt || ''} />
   }
 
   return <InterviewParticipant styles={styles} image={imageEl} {...props} />
