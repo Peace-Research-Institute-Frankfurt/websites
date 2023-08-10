@@ -1,5 +1,4 @@
 import React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
 import { Graticule, NaturalEarth } from '@visx/geo'
 import admin0 from '../data/ne_countries.json'
 import MarkdownRenderer from 'react-markdown-renderer'
@@ -13,8 +12,8 @@ const Map = ({ caption, credit, children }) => {
   const height = width / ratio
 
   const centerX = width / 2 - 35
-  const centerY = height / 2 + 65
-  const scale = (width + height) * 0.165
+  const centerY = height / 2 + 15
+  const scale = (width + height) * 0.15
 
   return (
     <figure className={styles.container}>
@@ -22,7 +21,7 @@ const Map = ({ caption, credit, children }) => {
         {(projection) => {
           return (
             <svg width={width} height={height} viewBox={`0 0 ${width} ${height}`} className={styles.map}>
-              <Graticule outline={(path) => projection.path(path)} graticule={(g) => projection.path(g)} stroke="rgba(53, 53, 53, .1)" fill="none" />
+              <Graticule outline={(path) => projection.path(path)} graticule={(g) => projection.path(g)} stroke="rgba(0, 0, 0, .1)" fill="none" />
               <g data-layer="admin0">
                 {projection.features.map(({ feature, path }, i) => {
                   return (
@@ -55,4 +54,4 @@ const Map = ({ caption, credit, children }) => {
 
 const PointsLayer = () => {}
 
-export { Map }
+export { Map, PointsLayer }

@@ -1,28 +1,27 @@
-name,description,country,country_a3,start_date,end_date
-Sophia Birchinger,Forschungsaufenthalt in Banjul,Spain,ESP,10.02.2022,21.04.2022
-Sophia Birchinger,Forschungsaufenthalt in Banjul,Gambia,GMB,10.02.2022,21.04.2022
-Clara-Auguste Süß,Forschungsaufenthalt in Tunis,Tunesien,TTO,08.01.2022,09.04.2022
-Clara-Auguste Süß,"Forschungsaufenthalt bei Scuola Normale Superiore, Centre on Social Movement Studies in Florenz",Italy,ITA,01.10.2022,30.11.2022
-Simone Schnabel,Forschungsaufenthalt in Niamey,Niger,NER,23.02.2022,01.03.2022
-Simone Schnabel,Forschungsaufenthalt in Bamako,Mali,MLI,09.03.2022,17.03.2022
-Jana Baldus,Forschungsaufenthalt bei United Nations in Wien,Austria,AUT,21.06.2022,23.06.2022
-Núrel Bahí Reitz,Forschungsaufenthalt bei African Studies Centre Leiden in Leiden (Niederlande),Niederlande,NIC,17.05.2022,18.05.2022
-Núrel Bahi Reitz,Forschungsaufenthalt bei Namibia Conference in Freiburg im Breisgau,Germany,DEU,29.09.2022,30.09.2022
-Núrel Bahi Reitz,"Forschungsaufenthalt bei Georg-August-Universität Göttingen in Göttingen, ",Germany,DEU,27.10.2022,27.10.2022
-Sabine Mannitz,"Forschungsaufenthalt in Vancouver und Umland, Victoria, Nanaimo, Kamloops und Kelowna (Kanada)",Kanada,JOR,28.07.2022,01.09.2022
-Jonas Wolff,Forschungsaufenthalt bei Universidad Andina Simón Bolívar in Quito (Ecuador),Ecuador,ECU,09.09.2022,20.09.2022
-Ben Christian,Forschungsaufenthalt in Rom (Italien),Italy,ITA,20.07.2022,29.07.2022
-Ben Christian,Forschungsaufenthalt in Genf (Schweiz),Switzerland,CHE,01.09.2022,09.09.2022
-Diane Schumann,"Forschungsaufenthalt bei Review Conference of the Nuclear Non-Proliferation Treaty (NPT), UN Headquarters in New York",Indonesia,IDN,04.10.2022,08.10.2022
-Sascha Hach,"Forschungsaufenthalt bei Review Conference of the Nuclear Non-Proliferation Treaty (NPT), UN Headquarters in New York City",United States,USA,01.08.2022,26.08.2022
-Sascha Hach,"United Nations, First Meeting of States Parties to the Treaty on the Prohibition of Nuclear Weapons in Wien",Austria,AUT,21.06.2022,23.06.2022
-Sascha Hach,"Forschungsaufenthalt bei Austrian Federal Ministry for Europe, Integration and Foreign Affairs in Wien",Austria,AUT,20.06.2022,20.06.2022
-Sascha Hach,Forschungsaufenthalt bei Aula der Wissenschaften in Wien,Austria,AUT,17.06.2022,19.06.2022
-Rebecca Wagner,Forschungsaufenthalt bei OSCE / ODIHR,United States,USA,02.10.2022,17.11.2022
-Matthias Schwarz,Forschungsaufenthalt in Genf,Switzerland,CHE,22.08.2022,26.08.2022
-Matthias Schwarz,Forschungsaufenthalt in Abuja,Nigeria,NGA,09.11.2022,03.12.2022
-Matthias Schwarz,"Forschungsaufenthalt bei International Peace Support Training Centre (IPSTC) in Nairobi, Mombasa, Nyeri",Kenia,KAZ,04.03.2022,21.05.2022
-Anna-Katharina Ferl,Forschungsaufenthalt bei Convention on Certain Conventional Weapons/United Nations in Genf,Switzerland,CHE,07.03.2022,11.03.2022
-Anna-Katharina Ferl,Forschungsaufenthalt bei Convention on Certain Conventional Weapons/United Nations in Genf,Switzerland,CHE,25.07.2022,30.07.2022
-Mustafa Karahamad,Forschungsaufenthalt in Amman,Jordan,JOR,18.06.2022,09.07.2022
-Melanie Coni-Zimmer,Washington DC,United States,USA,,
+name,description,city,start_date,end_date
+Sophia Birchinger,Forschungsaufenthalt in Banjul,Banjul,10.02.2022,21.04.2022
+Clara-Auguste Süß,Forschungsaufenthalt in Tunis,Tunis,08.01.2022,09.04.2022
+Clara-Auguste Süß,"Forschungsaufenthalt bei Scuola Normale Superiore, Centre on Social Movement Studies in Florenz",Florence,01.10.2022,30.11.2022
+Simone Schnabel,Forschungsaufenthalt in Niamey,"Niamey, Niger",23.02.2022,01.03.2022
+Simone Schnabel,Forschungsaufenthalt in Bamako,Bamako,09.03.2022,17.03.2022
+Jana Baldus,Forschungsaufenthalt bei United Nations in Wien,"Vienna, Austria",21.06.2022,23.06.2022
+Núrel Bahí Reitz,Forschungsaufenthalt bei African Studies Centre Leiden in Leiden (Niederlande),Leiden,17.05.2022,18.05.2022
+Núrel Bahi Reitz,Forschungsaufenthalt bei Namibia Conference in Freiburg im Breisgau,Freiburg im Breisgau,29.09.2022,30.09.2022
+Núrel Bahi Reitz,"Forschungsaufenthalt bei Georg-August-Universität Göttingen in Göttingen, ",Göttingen,27.10.2022,27.10.2022
+Sabine Mannitz,"Forschungsaufenthalt in Vancouver und Umland, Victoria, Nanaimo, Kamloops und Kelowna (Kanada)","Vancouver, Canada",28.07.2022,01.09.2022
+Jonas Wolff,Forschungsaufenthalt bei Universidad Andina Simón Bolívar in Quito (Ecuador),"Quito, Ecuador",09.09.2022,20.09.2022
+Ben Christian,Forschungsaufenthalt in Rom (Italien),"Rome, Italy",20.07.2022,29.07.2022
+Ben Christian,Forschungsaufenthalt in Genf (Schweiz),Geneva,01.09.2022,09.09.2022
+Diane Schumann,"Forschungsaufenthalt bei Review Conference of the Nuclear Non-Proliferation Treaty (NPT), UN Headquarters in New York",New York City,04.10.2022,08.10.2022
+Sascha Hach,"Forschungsaufenthalt bei Review Conference of the Nuclear Non-Proliferation Treaty (NPT), UN Headquarters in New York City",New York City,01.08.2022,26.08.2022
+Sascha Hach,"United Nations, First Meeting of States Parties to the Treaty on the Prohibition of Nuclear Weapons in Wien","Vienna, Austria",21.06.2022,23.06.2022
+Sascha Hach,"Forschungsaufenthalt bei Austrian Federal Ministry for Europe, Integration and Foreign Affairs in Wien","Vienna, Austria",20.06.2022,20.06.2022
+Sascha Hach,Forschungsaufenthalt bei Aula der Wissenschaften in Wien,"Vienna, Austria",17.06.2022,19.06.2022
+Rebecca Wagner,Forschungsaufenthalt bei OSCE / ODIHR,New York City,02.10.2022,17.11.2022
+Matthias Schwarz,Forschungsaufenthalt in Genf,Geneva,22.08.2022,26.08.2022
+Matthias Schwarz,Forschungsaufenthalt in Abuja,"Abuja, Nigeria",09.11.2022,03.12.2022
+Matthias Schwarz,"Forschungsaufenthalt bei International Peace Support Training Centre (IPSTC) in Nairobi, Mombasa, Nyeri",Nairobi,04.03.2022,21.05.2022
+Anna-Katharina Ferl,Forschungsaufenthalt bei Convention on Certain Conventional Weapons/United Nations in Genf,Geneva,07.03.2022,11.03.2022
+Anna-Katharina Ferl,Forschungsaufenthalt bei Convention on Certain Conventional Weapons/United Nations in Genf,Geneva,25.07.2022,30.07.2022
+Mustafa Karahamad,Forschungsaufenthalt in Amman,Amman,18.06.2022,09.07.2022
+Melanie Coni-Zimmer,Washington DC,Washington DC,,

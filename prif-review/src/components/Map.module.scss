@@ -6,7 +6,7 @@
 }
 
 .map {
-  background: rgb(101, 167, 243);
+  background: var(--blue-light);
   width: 100%;
 }
 .label {
@@ -23,7 +23,7 @@
 
 .country {
   fill: rgb(255, 255, 255);
-  stroke: rgb(94, 100, 117);
+  stroke: rgb(167, 170, 179);
   stroke-width: 0.5;
 }
 

@@ -13,8 +13,12 @@
     fill: rgb(24, 64, 197);
   }
 }
-circle {
-  fill: black;
-  stroke: white;
-  stroke-width: 1;
+
+.connection {
+  line {
+    stroke: rgba(black, 0.5);
+  }
+  circle {
+    fill: black;
+  }
 }

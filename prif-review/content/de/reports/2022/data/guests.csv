@@ -1,11 +1,11 @@
-name,institution,city,country,country_a3
-Manuel Herrera,"U Rey Juan Carlos, Madrid",Madrid,Spain,ESP
-Celine la Cour,University of Copenhagen,Copenhagen,Denmark,CIV
-Lucy Maycox,Oxford University,,United Kingdom,GBR
-Steven Silva,"Universidad del Externado, Bogotá, Kolumbien",,Columbia,COL
-Shimaa El Sharkawy,"AFA, Ägypten, Doktorandin im VW-Projekt des PB IV, Kairo",,Egypt,EGY
-Cecilia Ducci,Universität Bologna,,Italy,ITA
-Luciana Jáuregui,"Autonomous National University, Mexico City",,Mexico,MEX
-Xie Peixuan,UNDP/Peking University,,China,CHN
-Brian Rathbun,University of Southern California Dornsife/Los Angeles,,United States,USA
-Nadine Sika,American University in Cairo,,Egypt,EGY
+name,institution,city,country
+Manuel Herrera,"U Rey Juan Carlos, Madrid",Madrid,Spain
+Celine la Cour,University of Copenhagen,Copenhagen,Denmark
+Lucy Maycox,Oxford University,"Oxford, UK",United Kingdom
+Steven Silva,"Universidad del Externado, Bogotá, Kolumbien","Bogotá, Columbia",Columbia
+Shimaa El Sharkawy,"AFA, Ägypten, Doktorandin im VW-Projekt des PB IV, Kairo",Cairo,Egypt
+Cecilia Ducci,Universität Bologna,Bologna,Italy
+Luciana Jáuregui,"Autonomous National University, Mexico City",Mexico City,Mexico
+Xie Peixuan,UNDP/Peking University,Beijing,China
+Brian Rathbun,University of Southern California Dornsife/Los Angeles,"Los Angeles, CA",United States
+Nadine Sika,American University in Cairo,Cairo,Egypt

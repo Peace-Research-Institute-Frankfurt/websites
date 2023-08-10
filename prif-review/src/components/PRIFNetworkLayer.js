@@ -1,91 +1,75 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
-import admin0 from '../data/ne_countries.json'
 import * as styles from './PRIFNetworkLayer.module.scss'
 
 const PRIFNetworkLayer = ({ projection }) => {
   const data = useStaticQuery(graphql`
     query PRIFNetworkLayerQuery {
-      collaborations: allCollaborationsCsv {
+      cooperations: allCooperationsCsv {
         nodes {
-          countries_a3
-          is_new
+          cities
         }
       }
       guests: allGuestsCsv {
         nodes {
           name
-          country_a3
+          city
         }
       }
       residencies: allResidenciesCsv {
         nodes {
-          country_a3
+          city
+        }
+      }
+      cities: allCitiesCsv {
+        nodes {
+          name
+          lat
+          long
+          country
         }
       }
     }
   `)
-  const coordinates = [-73.9362, 40.73]
-  const position = projection.projection([coordinates[0], coordinates[1]])
 
-  let countries = []
+  let connections = []
   console.log(data)
-  const stats = ['guests', 'residencies', 'collaborations']
+  const stats = ['guests', 'residencies', 'cooperations']
 
   stats.forEach((stat) => {
     data[stat].nodes.forEach((node) => {
-      let countryCodes = []
-      if (node.countries_a3) {
-        countryCodes = node.countries_a3.split(',')
+      let cities = []
+      if (node.cities) {
+        cities = node.cities.split(';')
       } else {
-        countryCodes = [node.country_a3]
+        cities = [node.city]
       }
-      countryCodes.forEach((code) => {
-        const countryIndex = countries.findIndex((el) => {
-          return el.a3 === code
+      cities.forEach((city) => {
+        const ci = data.cities.nodes.findIndex((el) => {
+          return el.name === city
         })
-        if (countryIndex === -1) {
-          countries.push({ a3: code, [stat]: 1 })
-        } else {
-          if (countries[countryIndex][stat]) {
-            countries[countryIndex][stat] += 1
-          } else {
-            countries[countryIndex][stat] = 1
-          }
+        if (ci !== -1) {
+          connections.push({ lat: data.cities.nodes[ci].lat, long: data.cities.nodes[ci].long, country: data.cities.nodes[ci].country })
         }
       })
     })
   })
 
-  console.log(countries)
+  const connectionElements = connections
+    .filter((el) => el.country !== 'de')
+    .map((connection, i) => {
+      const position = projection.projection([connection.long, connection.lat])
+      const prifPosition = projection.projection([8.682222, 50.110556])
+      const lineElement = (
+        <g className={styles.connection}>
+          <line x1={prifPosition[0]} y1={prifPosition[1]} x2={position[0]} y2={position[1]} />
+          <circle cx={position[0]} cy={position[1]} r={4} />
+        </g>
+      )
 
-  const countryElements = countries.map((country, i) => {
-    const geo = admin0.features.find((feature) => {
-      return feature.properties.ISO_A3_EH === country.a3
+      return <>{lineElement}</>
     })
 
-    if (!geo) {
-      console.log(`could not find geometry for country "${country.a3}"`)
-      return null
-    }
-
-    const position = projection.projection([geo.properties.LABEL_X, geo.properties.LABEL_Y])
-    const prifPosition = projection.projection([8.682222, 50.110556])
-    const cols = 10
-    const d = 15
-    const padding = 1
-    let currentY = 0
-    const statsElements = []
-    const lineElement = (
-      <>
-        <line x1={prifPosition[0]} y1={prifPosition[1]} x2={position[0]} y2={position[1]} stroke="black" />
-        <circle cx={position[0]} cy={position[1]} r={6} fill="black" />
-      </>
-    )
-
-    return <>{lineElement}</>
-  })
-
-  return <g>{countryElements}</g>
+  return <g>{connectionElements}</g>
 }
 export { PRIFNetworkLayer }

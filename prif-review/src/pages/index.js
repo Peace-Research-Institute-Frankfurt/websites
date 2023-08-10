@@ -5,7 +5,6 @@ import Meta from '../components/Meta'
 import SkipToContent from '../components/SkipToContent'
 import PostHeader from '../components/PostHeader'
 import MarkdownRenderer from 'react-markdown-renderer'
-import PostBody from '../components/PostBody'
 import { Link, useTranslation } from 'gatsby-plugin-react-i18next'
 import * as styles from './index.module.scss'
 
@@ -87,7 +86,7 @@ const Index = ({ data, pageContext, location }) => {
           <ol className={styles.reports}>
             <li className={styles.reportLabels}>
               <span className={styles.reportYear}>{t('Year')}</span>
-              <span className={styles.reportPublicationDate}>{t('Published on')}</span>
+              <span>{t('Published on')}</span>
             </li>
             {data.reports.nodes.map((report, i) => {
               const year = report.relativeDirectory.replace(/(.{2})\/(reports)\//g, '')
@@ -95,7 +94,7 @@ const Index = ({ data, pageContext, location }) => {
                 <li key={`report-${i}`}>
                   <Link className={styles.report} to={`/${year}`}>
                     <span className={styles.reportYear}>{year}</span>
-                    <span className={styles.reportPublicationDate}>23 Juni, 2023</span>
+                    <span>23 Juni, 2023</span>
                   </Link>
                 </li>
               )

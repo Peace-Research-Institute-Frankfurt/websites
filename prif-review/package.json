@@ -54,6 +54,7 @@
   "devDependencies": {
     "eslint-import-resolver-alias": "^1.1.2",
     "mapshaper": "^0.6.41",
-    "qs": "^6.11.2"
+    "qs": "^6.11.2",
+    "csv-parse": "^5.4.0"
   }
 }
