@@ -30,6 +30,9 @@
   }
   & > h3 {
     @extend %h3;
+    & + table {
+      margin-top: calc(var(--baseline) * 0.25);
+    }
   }
   & > h4 {
     @extend %h4;
@@ -56,9 +59,12 @@
   th {
     padding: 0.25em;
     padding-left: 0;
-    padding-right: 1em;
+    padding-right: 3em;
     border-bottom: 1px solid rgba(black, 0.2);
     vertical-align: top;
+    &:last-child {
+      padding-right: 0;
+    }
     a {
       color: var(--blue-70);
     }
