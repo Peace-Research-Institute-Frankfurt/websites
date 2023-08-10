@@ -15,20 +15,21 @@ export default function SiteHeader({ report, translationData, children }) {
   `)
 
   const homePath = translationData.currentLanguage !== 'de' ? `/${translationData.currentLanguage}` : '/'
+
   return (
     <header className={styles.container}>
       <nav className={styles.menu}>
         <ul>
           <li>
             <Link to={homePath} className={`${styles.title}`}>
-              <span className={styles.label}>{data.site.siteMetadata.title} </span>
               <Logo />
+              <span className={styles.label}>Review</span>
             </Link>
           </li>
           {report && (
             <li>
               <Link className={styles.link} to={`../`}>
-                {report.relativeDirectory}
+                {report.relativeDirectory.replace(/(.{2})\/(reports)\//g, '')}
               </Link>
             </li>
           )}

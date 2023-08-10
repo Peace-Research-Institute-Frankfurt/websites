@@ -10,13 +10,6 @@
   p {
     margin-bottom: 0.6em;
   }
-  @include bp(xl) {
-    font-size: var(--ms--1);
-    line-height: calc(var(--baseline) * 0.6666);
-    margin-top: calc(var(--baseline) * -1);
-    grid-column: 1 / 3;
-    grid-row: span 3;
-  }
 }
 
 .inner {

@@ -148,7 +148,7 @@ const Index = ({ data, pageContext, children, location }) => {
         </header>
         <section className={styles.intro}>
           <h2 className={styles.sectionTitle}>{t('Editorial')}</h2>
-          <Person name="Dr. Nicole Deitelhoff" image="assets/junk.jpg" className={styles.introAuthor}>
+          <Person name="Dr. Nicole Deitelhoff" image="assets/deitelhoff.jpg" className={styles.introAuthor}>
             Dr. Antonia Witt ist Senior Researcher am Programmbereich „Glokale Verflechtungen“ und leitet die Forschungsgruppe „African Intervention
             Politics.
           </Person>
