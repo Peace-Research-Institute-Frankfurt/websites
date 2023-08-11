@@ -174,26 +174,24 @@ const Post = ({ data, pageContext, children }) => {
     appStyles['--fc-background'] = secondaryColor.toString()
   }
 
-  let heroImage = null
-
-  if (frontmatter.hero_image) {
-    heroImage = (
-      <FigureAdapter
-        className={styles.heroImage}
-        src={frontmatter.hero_image}
-        alt={frontmatter.hero_alt}
-        license={frontmatter.hero_license}
-        credit={frontmatter.hero_credit}
-      ></FigureAdapter>
-    )
-  }
-  if (frontmatter.trace_lines) {
-    heroImage = (
-      <div className={styles.traceLines}>
-        <Lines />
-      </div>
-    )
-  }
+  const heroImage = (
+    <>
+      {frontmatter.hero_image && (
+        <FigureAdapter
+          className={styles.heroImage}
+          src={frontmatter.hero_image}
+          alt={frontmatter.hero_alt}
+          license={frontmatter.hero_license}
+          credit={frontmatter.hero_credit}
+        ></FigureAdapter>
+      )}
+      {frontmatter.trace_lines && (
+        <div className={styles.traceLines}>
+          <Lines />
+        </div>
+      )}
+    </>
+  )
 
   const pagination = (
     <nav className={styles.pagination}>

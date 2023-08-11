@@ -173,6 +173,7 @@ exports.createSchemaCustomization = async ({ getNode, getNodesByType, pathPrefix
     title: String
     color: String
     color_secondary: String
+    trace_lines: Boolean
   }
   type Mdx {
     frontmatter: PostFrontmatter
