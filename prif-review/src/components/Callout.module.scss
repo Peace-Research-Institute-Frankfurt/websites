@@ -2,8 +2,11 @@
 
 .container {
   margin: var(--baseline) 0;
-  grid-column: 3 / 4;
   position: relative;
+  grid-column: 1 / 6;
+  @include bp(m) {
+    grid-column: 3 / 4;
+  }
   p:last-child {
     margin-bottom: 0;
   }

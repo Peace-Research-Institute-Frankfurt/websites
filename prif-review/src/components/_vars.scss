@@ -25,11 +25,15 @@
 %h1 {
   font-variation-settings: 'wght' 520, 'wdth' 90, 'opsz' 144;
   font-family: var(--sans);
-  font-size: var(--ms-5);
   letter-spacing: -0.005em;
-  line-height: calc(var(--baseline) * 2.5);
   hyphens: none;
   text-wrap: balance;
+  font-size: var(--ms-4);
+  line-height: calc(var(--baseline) * 2);
+  @include bp(m) {
+    line-height: calc(var(--baseline) * 2.5);
+    font-size: var(--ms-5);
+  }
   @include bp(xl) {
     font-variation-settings: 'wght' 470, 'wdth' 90, 'opsz' 144;
     line-height: calc(var(--baseline) * 3);
@@ -38,10 +42,13 @@
 }
 %h2 {
   font-family: var(--sans);
-  font-size: var(--ms-2);
-  font-variation-settings: 'wght' 520, 'wdth' 90;
-  line-height: calc(var(--baseline) * 1.33333);
+  font-variation-settings: 'wght' 560, 'wdth' 90;
   hyphens: none;
+  font-size: var(--ms-2);
+  line-height: calc(var(--baseline) * 1.33333);
+  @include bp(m) {
+    font-variation-settings: 'wght' 520, 'wdth' 90;
+  }
 }
 
 %h3 {

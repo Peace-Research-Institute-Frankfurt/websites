@@ -3,6 +3,7 @@
 .container {
   @extend %caption;
   padding-top: calc(var(--baseline));
+  padding-bottom: calc(var(--baseline));
   align-self: flex-end;
   grid-column: 1 / 6;
   @include bp(m) {

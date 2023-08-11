@@ -3,12 +3,14 @@
 .container {
   margin-bottom: 0.5em;
   background-color: var(--fc-background);
-  padding: calc(var(--baseline) * 2.5) 0;
-  padding-top: calc(var(--baseline) * 6);
   margin-bottom: var(--baseline);
   position: relative;
   overflow: hidden;
+  padding: calc(var(--baseline) * 1) 0;
+  padding-top: calc(var(--baseline) * 4);
   @include bp(m) {
+    padding: calc(var(--baseline) * 2.5) 0;
+    padding-top: calc(var(--baseline) * 6);
     box-shadow: calc(var(--padding) * 0.5) 0 var(--fc-text) inset;
     text-align: left;
   }
@@ -21,13 +23,17 @@
 .eyebrow {
   @extend %h4;
   display: block;
-  grid-column: 3 / 4;
-  margin-bottom: calc(var(--baseline) * 1);
+  grid-column: 1 / 4;
+  margin-bottom: calc(var(--baseline) * 0.5);
+  @include bp(l) {
+    margin-bottom: calc(var(--baseline) * 1);
+    grid-column: 3 / 4;
+  }
 }
 
 .title {
   @extend %h1;
-  grid-column: 2 / 5;
+  grid-column: 1 / 5;
   @include bp(m) {
     grid-column: 3 / 4;
   }
@@ -35,7 +41,7 @@
 
 .intro {
   @extend %copy;
-  grid-column: 2 / 5;
+  grid-column: 1 / 5;
   @include bp(m) {
     grid-column: 3 / 4;
   }
