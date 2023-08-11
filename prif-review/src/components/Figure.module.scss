@@ -18,6 +18,9 @@
 .credit {
   color: var(--gray-dark);
   display: block;
+  a {
+    text-decoration: underline;
+  }
 }
 
 .image {

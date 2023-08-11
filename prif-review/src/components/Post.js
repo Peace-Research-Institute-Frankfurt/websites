@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import Color from 'colorjs.io'
 import App from './App'
 import PostBody from './PostBody'
@@ -9,6 +8,7 @@ import Meta from './Meta'
 import { useTranslation } from 'gatsby-plugin-react-i18next'
 import Lines from '../images/trace-line.svg'
 import * as styles from './Post.module.scss'
+import FigureAdapter from './FigureAdapter'
 
 export const query = graphql`
   query ($id: String!, $language: String!, $translations: [String!], $reportId: String!) {
@@ -56,11 +56,8 @@ export const query = graphql`
           trace_lines
           hero_alt
           hero_credit
-          hero_image {
-            childImageSharp {
-              gatsbyImageData(width: 1000, placeholder: NONE)
-            }
-          }
+          hero_license
+          hero_image
           authors {
             frontmatter {
               author_id
@@ -178,11 +175,16 @@ const Post = ({ data, pageContext, children }) => {
   }
 
   let heroImage = null
+
   if (frontmatter.hero_image) {
     heroImage = (
-      <div className={styles.heroImage}>
-        <GatsbyImage loading="eager" image={getImage(frontmatter.hero_image)} alt={frontmatter.hero_alt} />
-      </div>
+      <FigureAdapter
+        className={styles.heroImage}
+        src={frontmatter.hero_image}
+        alt={frontmatter.hero_alt}
+        license={frontmatter.hero_license}
+        credit={frontmatter.hero_credit}
+      ></FigureAdapter>
     )
   }
   if (frontmatter.trace_lines) {
