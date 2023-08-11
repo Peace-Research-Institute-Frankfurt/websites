@@ -14,6 +14,7 @@ import { Flowchart, FlowchartNode } from './Flowchart'
 import { Person, PersonList } from './Person'
 import { Number, NumberList } from './Number'
 import { IconChart, IconChartGroup } from './IconChart'
+import { CallToAction } from './CallToAction'
 import * as QuoteStyles from './Quote.module.scss'
 import * as CalloutStyles from './Callout.module.scss'
 import * as styles from './PostBody.module.scss'
@@ -33,6 +34,7 @@ const shortCodes = {
   Map,
   CountriesLayer,
   PRIFNetworkLayer,
+  CallToAction,
   Callout: ({ ...props }) => <Callout {...props} buttonComponent={Button} styles={CalloutStyles} />,
   Quote: ({ ...props }) => <Quote {...props} styles={QuoteStyles} />,
   Interview: ({ ...props }) => <InterviewAdapter {...props} />,

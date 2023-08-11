@@ -1,0 +1,39 @@
+@import 'vars';
+
+.container {
+  grid-column: 2 / 4;
+  margin-top: calc(var(--baseline) * 2);
+
+  p {
+    a {
+      background: transparent;
+    }
+  }
+  @include bp(l) {
+    grid-column: 3 / 4;
+  }
+}
+
+.button {
+  @extend %copy;
+  font-variation-settings: 'wght' 500;
+  background: var(--fc-text) !important;
+  padding: 0.65em 1em;
+  padding-bottom: 0.6em;
+  border-radius: var(--br);
+  transition: var(--fast);
+  display: inline-flex;
+  align-items: center;
+  outline-offset: 2px;
+  gap: 0.5em;
+  &:hover,
+  &:focus-visible {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+  }
+
+  svg {
+    width: 0.85em;
+    transform: rotate(-45deg);
+  }
+}
