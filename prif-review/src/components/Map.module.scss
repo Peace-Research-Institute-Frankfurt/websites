@@ -2,13 +2,13 @@
 
 .container {
   border-radius: 2px;
-  grid-column: 1 / 4;
   margin-top: var(--baseline);
   margin-bottom: var(--baseline);
+  grid-column: 1 / 6;
 }
 
 .map {
-  background: var(--blue-light);
+  background: rgb(236, 242, 250);
   width: 100%;
 }
 .label {
@@ -25,12 +25,32 @@
 
 .country {
   fill: rgb(255, 255, 255);
-  stroke: rgb(167, 170, 179);
+  stroke: rgb(113, 115, 122);
   stroke-width: 0.5;
 }
 
 .caption {
   @extend %caption-bold;
+  span {
+    display: inline-block;
+    &:before {
+      content: '';
+      width: 0.75em;
+      height: 0.75em;
+      margin-right: 0.2em;
+      border-radius: 1000px;
+      display: inline-block;
+    }
+  }
+  :global .collaborations:before {
+    background-color: var(--map-a);
+  }
+  :global .residencies:before {
+    background-color: var(--map-b);
+  }
+  :global .guests:before {
+    background-color: var(--map-c);
+  }
 }
 .credit {
   @extend %caption;

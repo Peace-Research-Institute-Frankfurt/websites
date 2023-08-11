@@ -8,19 +8,19 @@ import * as styles from './Map.module.scss'
 
 const Map = ({ caption, credit, children }) => {
   const width = 1500
-  const ratio = 1.9
+  const ratio = 1.5
   const height = width / ratio
 
-  const centerX = width / 2 - 35
-  const centerY = height / 2 + 15
-  const scale = (width + height) * 0.15
+  const centerX = width / 2 - 85
+  const centerY = height / 2 + 25
+  const scale = (width + height) * 0.145
 
   return (
     <figure className={styles.container}>
       <NaturalEarth data={admin0.features} scale={scale} translate={[centerX, centerY]}>
         {(projection) => {
           return (
-            <svg width={width} height={height} viewBox={`0 0 ${width} ${height}`} className={styles.map}>
+            <svg viewBox={`0 0 ${width} ${height}`} className={styles.map}>
               <Graticule outline={(path) => projection.path(path)} graticule={(g) => projection.path(g)} stroke="rgba(0, 0, 0, .1)" fill="none" />
               <g data-layer="admin0">
                 {projection.features.map(({ feature, path }, i) => {
@@ -40,7 +40,7 @@ const Map = ({ caption, credit, children }) => {
       </NaturalEarth>
       {caption && (
         <figcaption className={styles.caption}>
-          <MarkdownRenderer markdown={caption} />
+          <MarkdownRenderer options={{ html: true }} markdown={caption} />
         </figcaption>
       )}
       {credit && (

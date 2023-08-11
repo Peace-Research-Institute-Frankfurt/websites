@@ -1,24 +1,21 @@
-.residencies {
+.cooperations {
   circle {
-    fill: rgb(83, 115, 219);
+    fill: var(--map-a);
   }
 }
 .guests {
   circle {
-    fill: rgb(199, 146, 0);
+    fill: var(--map-b);
   }
 }
-.collaborations {
+.residencies {
   circle {
-    fill: rgb(24, 64, 197);
+    fill: var(--map-c);
   }
 }
 
 .connection {
   line {
-    stroke: rgba(black, 0.5);
-  }
-  circle {
-    fill: black;
+    stroke: rgba(black, 0.35);
   }
 }
