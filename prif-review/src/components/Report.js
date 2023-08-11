@@ -154,11 +154,11 @@ const Index = ({ data, pageContext, children, location }) => {
         </header>
         <section className={styles.intro}>
           <h2 className={styles.sectionTitle}>{t('Editorial')}</h2>
+          <div className={styles.introInner}>{children}</div>
           <Person name="Dr. Nicole Deitelhoff" image="assets/deitelhoff.jpg" className={styles.introAuthor}>
             Dr. Antonia Witt ist Senior Researcher am Programmbereich „Glokale Verflechtungen“ und leitet die Forschungsgruppe „African Intervention
             Politics.
           </Person>
-          <div className={styles.introInner}>{children}</div>
         </section>
         <section className={styles.posts}>
           <h2 className={styles.sectionTitle}>{t('Contents')}</h2>

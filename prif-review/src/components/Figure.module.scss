@@ -3,7 +3,10 @@
 .container {
   margin-top: calc(var(--baseline) * 0.75);
   margin-bottom: calc(var(--baseline) * 0.5);
-  grid-column: 3 / 4;
+  grid-column: 1 / 6;
+  @include bp(m) {
+    grid-column: 3 / 4;
+  }
 }
 
 .captions {

@@ -25,8 +25,11 @@
 
   & > h2 {
     @extend %h2;
-    margin-top: calc(var(--baseline) * 1.5);
+    margin-top: calc(var(--baseline) * 1);
     margin-bottom: calc(var(--baseline) * 0.5);
+    @include bp(m) {
+      margin-top: calc(var(--baseline) * 1.5);
+    }
   }
   & > h3 {
     @extend %h3;

@@ -1,14 +1,21 @@
 @import 'vars';
 
 .container {
-  width: 12rem;
+  grid-column: 1 / 6;
+  margin-bottom: var(--baseline);
+  @include bp(m) {
+    width: 12rem;
+  }
   @include bp(l) {
     width: 16rem;
   }
 }
 
 .inner {
-  background: var(--fc-text);
+  display: flex;
+  @include bp(m) {
+    flex-flow: column;
+  }
 }
 
 .list {
@@ -17,6 +24,7 @@
   margin-top: var(--baseline);
   margin-bottom: var(--baseline);
   align-items: flex-start;
+  grid-column: 1 / 6;
   @include bp(m) {
     grid-column: 4 / 5;
     grid-row: span 4;
@@ -37,9 +45,7 @@
   display: flex;
   gap: var(--baseline);
   align-items: flex-start;
-  @include bp(l) {
-    flex-flow: column;
-  }
+  flex-flow: column;
 }
 
 .list-title {
@@ -53,13 +59,14 @@
 }
 
 .image {
-  background: var(--fc-text);
-  opacity: 0.95;
+  flex-basis: 25%;
+  flex-grow: 1;
 }
 
 .bio {
   @extend %caption;
   padding: 1em;
+  flex-basis: 75%;
   background: var(--fc-background);
 
   p:last-child {

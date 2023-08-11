@@ -3,16 +3,22 @@
 .body {
   @extend %grid;
   p {
-    grid-column: 3 /4;
+    grid-column: 1 / 5;
+    @include bp(l) {
+      grid-column: 3 /4;
+    }
   }
 }
 
 .reports {
   @extend %h2;
   list-style: none;
-  grid-column: 3 / 4;
   margin-top: var(--baseline);
   margin-bottom: var(--baseline);
+  grid-column: 1 / 6;
+  @include bp(l) {
+    grid-column: 3 / 4;
+  }
 }
 
 .report-labels {
@@ -39,7 +45,10 @@
 }
 
 .notes {
-  grid-column: 3 / 4;
+  grid-column: 1 / 5;
+  @include bp(l) {
+    grid-column: 3 / 4;
+  }
   a {
     @extend %text-link;
   }
@@ -47,5 +56,4 @@
 
 .container {
   @extend %copy;
-  padding: 0 var(--padding);
 }

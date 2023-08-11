@@ -1,13 +1,17 @@
 @import 'vars';
 
 .container {
-  grid-column: 2 / 4;
-  margin-top: calc(var(--baseline) * 2);
+  margin-top: calc(var(--baseline) * 0.5);
+  margin-bottom: calc(var(--baseline) * 1);
 
   p {
     a {
       background: transparent;
     }
+  }
+  grid-column: 1/ 6;
+  @include bp(m) {
+    grid-column: 2 / 4;
   }
   @include bp(l) {
     grid-column: 3 / 4;

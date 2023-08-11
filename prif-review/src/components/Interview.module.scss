@@ -20,7 +20,7 @@
 .title {
   @extend %h2;
   margin-bottom: var(--baseline);
-  grid-column: 1 / 4;
+  grid-column: 1 / 6;
   @include bp(m) {
     grid-column: 2 / 4;
   }
