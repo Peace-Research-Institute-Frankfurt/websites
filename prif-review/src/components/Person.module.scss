@@ -1,11 +1,14 @@
 @import 'vars';
 
 .container {
-  background: var(--fc-text);
   width: 12rem;
   @include bp(l) {
     width: 16rem;
   }
+}
+
+.inner {
+  background: var(--fc-text);
 }
 
 .list {
@@ -51,11 +54,7 @@
 
 .image {
   background: var(--fc-text);
-  opacity: 0.9;
-  img {
-    mix-blend-mode: screen;
-    filter: grayscale(1) contrast(1.65);
-  }
+  opacity: 0.95;
 }
 
 .bio {

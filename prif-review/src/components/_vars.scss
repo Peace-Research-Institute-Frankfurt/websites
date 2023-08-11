@@ -109,6 +109,10 @@
   em {
     font-variation-settings: 'slnt' -10, 'wght' 300, 'wdth' 90, 'opsz' 15 !important;
   }
+  a {
+    text-decoration: underline;
+    text-underline-offset: 0.1em;
+  }
 }
 %caption-bold {
   @extend %caption;

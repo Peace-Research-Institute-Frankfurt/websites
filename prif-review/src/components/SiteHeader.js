@@ -1,19 +1,9 @@
 import React from 'react'
-import { graphql, useStaticQuery, Link } from 'gatsby'
+import { Link } from 'gatsby'
 import Logo from '../images/logo.svg'
 import * as styles from './SiteHeader.module.scss'
 
 export default function SiteHeader({ report, translationData, children }) {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
   const homePath = translationData.currentLanguage !== 'de' ? `/${translationData.currentLanguage}` : '/'
 
   return (
@@ -23,7 +13,7 @@ export default function SiteHeader({ report, translationData, children }) {
           <li>
             <Link to={homePath} className={`${styles.title}`}>
               <Logo />
-              <span className={styles.label}>Review</span>
+              <span>Review</span>
             </Link>
           </li>
           {report && (

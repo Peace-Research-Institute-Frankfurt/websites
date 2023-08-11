@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 import Figure from '@shared/components/Figure'
 import * as styles from './Figure.module.scss'
 
-export default function FigureAdapter({ caption, credit, size, alt, src, license }) {
+export default function FigureAdapter({ caption, credit, size, alt, src, license, className }) {
   const data = useStaticQuery(graphql`
     query ImageQuery {
       licenses: allLicensesJson {
@@ -42,5 +42,17 @@ export default function FigureAdapter({ caption, credit, size, alt, src, license
       licenseNode = l
     }
   })
-  return <Figure styles={styles} image={image} src={src} caption={caption} license={licenseNode} credit={credit} alt={alt} size={size} />
+  return (
+    <Figure
+      styles={styles}
+      image={image}
+      src={src}
+      caption={caption}
+      license={licenseNode}
+      credit={credit}
+      alt={alt}
+      size={size}
+      className={className}
+    />
+  )
 }

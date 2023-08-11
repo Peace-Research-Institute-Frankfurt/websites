@@ -166,7 +166,7 @@ exports.createSchemaCustomization = async ({ getNode, getNodesByType, pathPrefix
     authors: [Author] @link(by: "author_id")
     intro: String
     teaser: String
-    hero_image: File @link(by: "relativePath")
+    hero_image: String
     hero_alt: String
     hero_credit: String
     eyebrow: String

@@ -37,10 +37,12 @@ const Person = function ({ name, image, children, className }) {
   }
   return (
     <aside className={`${styles.container} ${className}`}>
-      {img && imageEl}
-      <div className={styles.bio}>
-        <h2 className={styles.name}>{name}</h2>
-        {children}
+      <div className={styles.inner}>
+        {img && imageEl}
+        <div className={styles.bio}>
+          <h2 className={styles.name}>{name}</h2>
+          {children}
+        </div>
       </div>
     </aside>
   )
