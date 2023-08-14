@@ -114,5 +114,5 @@ const Index = ({ data, pageContext, location }) => {
 export default Index
 export const Head = ({ pageContext, location }) => {
   const translationData = { currentLanguage: pageContext.language, currentSlug: location.pathname }
-  return <Meta translationData={translationData} />
+  return <Meta title="PRIF Review" translationData={translationData} />
 }

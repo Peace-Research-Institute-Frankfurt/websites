@@ -172,6 +172,7 @@ const Index = ({ data, pageContext, children, location }) => {
 export default Index
 export const Head = ({ data, pageContext, location }) => {
   const frontmatter = data.post.childMdx.frontmatter
+  const year = data.post.relativeDirectory.replace(/(.{2})\/(reports)\//g, '')
   const translationData = { currentLanguage: pageContext.language, currentSlug: location.pathname }
-  return <Meta title={`${frontmatter.title} – ${data.site.siteMetadata.title}`} translationData={translationData} />
+  return <Meta title={`${year} – ${data.site.siteMetadata.title}`} translationData={translationData} />
 }
