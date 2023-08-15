@@ -158,15 +158,13 @@ const Post = ({ data, pageContext, children }) => {
   })
   const next = posts[currentIndex + 1] || null
   const previous = posts[currentIndex - 1] || null
-  let color = null;
   let appStyles = {}
-  let knockoutColor = new Color("black")
   if (frontmatter.color) {
-    color = new Color(frontmatter.color)
+    const color = new Color(frontmatter.color)
     appStyles['--fc-text'] = color.toString()
-    if (color.contrast(knockoutColor, "WCAG21") < 7.5){
-      knockoutColor = new Color("white")
-    }
+    const onWhite = Math.abs(color.contrast("white", "APCA"))
+    const onBlack = Math.abs(color.contrast("black", "APCA"))
+    const knockoutColor = onWhite > onBlack ? "white" : "black"
     
     let secondaryColor = ''
     if (frontmatter.color_secondary) {
