@@ -10,7 +10,7 @@
   --serif: 'Georgia';
   --sans: Roboto, sans-serif;
   --ratio: 1.3; // Minor 3
-  --ms-0: clamp(0.75rem, calc(1.4vw + 0.1rem), 1.25rem);
+  --ms-0: clamp(0.85rem, calc(1.4vw + 0.1rem), 1.25rem);
   --ms--2: calc(var(--ms--1) / var(--ratio));
   --ms--1: calc(var(--ms-0) / var(--ratio));
   --ms-1: calc(var(--ms-0) * var(--ratio));
@@ -36,6 +36,11 @@
   --map-b: rgb(218, 88, 13);
   --map-c: rgb(204, 148, 26);
   --chart-background: #2345850e;
+  
+  // Scale type size on high-res displays
+  @media (min-resolution: 120dpi) and (min-width: 1200px) {
+    font-size: 0.85rem;
+  }
 }
 
 * {

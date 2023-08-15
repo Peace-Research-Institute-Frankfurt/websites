@@ -64,7 +64,7 @@
   font-size: var(--ms--1);
   letter-spacing: 0.03em;
   font-variation-settings: 'wght' 400, 'wdth' 200 !important;
-  line-height: calc(var(--baseline) * 1);
+  line-height: calc(var(--baseline) * .66666);
 }
 
 %copy {

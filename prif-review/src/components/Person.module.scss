@@ -4,10 +4,12 @@
   grid-column: 1 / 6;
   margin-bottom: var(--baseline);
   @include bp(m) {
-    width: 12rem;
+    grid-column: 1 / 3;
+    grid-row: span 6;
+    max-width: 16rem;
   }
-  @include bp(l) {
-    width: 16rem;
+  @include bp(xl) {
+    grid-column: 1 / 2;
   }
 }
 
@@ -26,15 +28,12 @@
   align-items: flex-start;
   grid-column: 1 / 6;
   @include bp(m) {
-    grid-column: 4 / 5;
-    grid-row: span 4;
+    grid-column: 1 / 3;
+    grid-row: span 6;
     margin-top: 0;
   }
-  @include bp(l) {
-    margin-right: -8rem;
-  }
   @include bp(xl) {
-    margin-right: -20rem;
+    grid-column: 1 / 2;
   }
   .container {
     margin: 0;
