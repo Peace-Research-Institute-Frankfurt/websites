@@ -23,6 +23,7 @@
   font-variation-settings: 'wght' 500;
   background: var(--fc-text) !important;
   padding: 0.65em 1em;
+  color: var(--fc-knockout);
   padding-bottom: 0.6em;
   border-radius: var(--br);
   transition: var(--fast);
@@ -39,5 +40,9 @@
   svg {
     width: 0.85em;
     transform: rotate(-45deg);
+    path {
+      stroke: none;
+      fill: var(--fc-knockout)
+    }
   }
 }

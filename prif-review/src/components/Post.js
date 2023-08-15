@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import Color from 'colorjs.io'
 import App from './App'
 import PostBody from './PostBody'
@@ -8,7 +9,6 @@ import Meta from './Meta'
 import { useTranslation } from 'gatsby-plugin-react-i18next'
 import Lines from '../images/trace-line.svg'
 import * as styles from './Post.module.scss'
-import FigureAdapter from './FigureAdapter'
 
 export const query = graphql`
   query ($id: String!, $language: String!, $translations: [String!], $reportId: String!) {
@@ -56,7 +56,6 @@ export const query = graphql`
           trace_lines
           hero_alt
           hero_credit
-          hero_license
           hero_image
           authors {
             frontmatter {
@@ -159,12 +158,16 @@ const Post = ({ data, pageContext, children }) => {
   })
   const next = posts[currentIndex + 1] || null
   const previous = posts[currentIndex - 1] || null
-
+  let color = null;
   let appStyles = {}
-
+  let knockoutColor = new Color("black")
   if (frontmatter.color) {
-    const color = new Color(frontmatter.color)
+    color = new Color(frontmatter.color)
     appStyles['--fc-text'] = color.toString()
+    if (color.contrast(knockoutColor, "WCAG21") < 7.5){
+      knockoutColor = new Color("white")
+    }
+    
     let secondaryColor = ''
     if (frontmatter.color_secondary) {
       secondaryColor = new Color(frontmatter.color_secondary)
@@ -172,26 +175,24 @@ const Post = ({ data, pageContext, children }) => {
       secondaryColor = color.set({ 'lch.l': 97, 'lch.c': 2, 'lch.h': (h) => h + 10 })
     }
     appStyles['--fc-background'] = secondaryColor.toString()
+    appStyles['--fc-knockout'] = knockoutColor.toString()
   }
 
-  const heroImage = (
-    <>
-      {frontmatter.hero_image && (
-        <FigureAdapter
-          className={styles.heroImage}
-          src={frontmatter.hero_image}
-          alt={frontmatter.hero_alt}
-          license={frontmatter.hero_license}
-          credit={frontmatter.hero_credit}
-        ></FigureAdapter>
-      )}
-      {frontmatter.trace_lines && (
-        <div className={styles.traceLines}>
-          <Lines />
-        </div>
-      )}
-    </>
-  )
+  let heroImage = null
+  if (frontmatter.hero_image) {
+    heroImage = (
+      <div className={styles.heroImage}>
+        <GatsbyImage loading="eager" image={getImage(frontmatter.hero_image)} alt={frontmatter.hero_alt} />
+      </div>
+    )
+  }
+  if (frontmatter.trace_lines) {
+    heroImage = (
+      <div className={styles.traceLines}>
+        <Lines />
+      </div>
+    )
+  }
 
   const pagination = (
     <nav className={styles.pagination}>
@@ -226,20 +227,13 @@ const Post = ({ data, pageContext, children }) => {
 
 export function Head({ data, pageContext, location }) {
   const frontmatter = data.post.childMdx.frontmatter
-  const year = data.post.relativeDirectory.replace(/(.{2})\/(reports)\//g, '').replace('/posts', '')
   const translationData = {
     currentPath: location,
     currentSlug: data.post.childMdx.fields.slug,
     currentLanguage: pageContext.language,
     translations: data.translations.nodes,
   }
-  return (
-    <Meta
-      translationData={translationData}
-      title={`${frontmatter.title} – ${data.site.siteMetadata.title} ${year}`}
-      description={frontmatter.intro}
-    />
-  )
+  return <Meta translationData={translationData} title={`${frontmatter.title} – ${data.site.siteMetadata.title}`} description={frontmatter.intro} />
 }
 
 export default Post
