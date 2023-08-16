@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import Color from 'colorjs.io'
 import App from './App'
 import PostBody from './PostBody'
@@ -8,6 +7,7 @@ import PostHeader from './PostHeader'
 import Meta from './Meta'
 import { useTranslation } from 'gatsby-plugin-react-i18next'
 import Lines from '../images/trace-line.svg'
+import FigureAdapter from "./FigureAdapter"
 import * as styles from './Post.module.scss'
 
 export const query = graphql`
@@ -57,6 +57,7 @@ export const query = graphql`
           hero_alt
           hero_credit
           hero_image
+          hero_license
           authors {
             frontmatter {
               author_id
@@ -176,21 +177,24 @@ const Post = ({ data, pageContext, children }) => {
     appStyles['--fc-knockout'] = knockoutColor.toString()
   }
 
-  let heroImage = null
-  if (frontmatter.hero_image) {
-    heroImage = (
-      <div className={styles.heroImage}>
-        <GatsbyImage loading="eager" image={getImage(frontmatter.hero_image)} alt={frontmatter.hero_alt} />
-      </div>
-    )
-  }
-  if (frontmatter.trace_lines) {
-    heroImage = (
-      <div className={styles.traceLines}>
-        <Lines />
-      </div>
-    )
-  }
+const heroImage = (
+    <>
+      {frontmatter.hero_image && (
+        <FigureAdapter
+          className={styles.heroImage}
+          src={frontmatter.hero_image}
+          alt={frontmatter.hero_alt}
+          license={frontmatter.hero_license}
+          credit={frontmatter.hero_credit}
+        ></FigureAdapter>
+      )}
+      {frontmatter.trace_lines && (
+        <div className={styles.traceLines}>
+          <Lines />
+        </div>
+      )}
+    </>
+  )
 
   const pagination = (
     <nav className={styles.pagination}>
@@ -225,13 +229,14 @@ const Post = ({ data, pageContext, children }) => {
 
 export function Head({ data, pageContext, location }) {
   const frontmatter = data.post.childMdx.frontmatter
+  const year = data.post.relativeDirectory.replace(/(.{2})\/(reports)\//g, '').replace('/posts', '')
   const translationData = {
     currentPath: location,
     currentSlug: data.post.childMdx.fields.slug,
     currentLanguage: pageContext.language,
     translations: data.translations.nodes,
   }
-  return <Meta translationData={translationData} title={`${frontmatter.title} – ${data.site.siteMetadata.title}`} description={frontmatter.intro} />
+  return <Meta translationData={translationData} title={`${frontmatter.title} – ${data.site.siteMetadata.title} ${year}`} description={frontmatter.intro} />
 }
 
 export default Post
