@@ -47,7 +47,8 @@
   font-size: var(--ms-2);
   line-height: calc(var(--baseline) * 1.33333);
   @include bp(m) {
-    font-variation-settings: 'wght' 520, 'wdth' 90;
+    font-size: var(--ms-3);
+    font-variation-settings: 'wght' 480, 'wdth' 90;
   }
 }
 

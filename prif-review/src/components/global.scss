@@ -36,6 +36,8 @@
   --map-b: rgb(218, 88, 13);
   --map-c: rgb(204, 148, 26);
   --chart-background: rgb(245,245,245);
+  --prif-blue-light: #0083B5;
+  --prif-blue-dark: #224663;
   
   // Scale type size on high-res displays
   @media (min-resolution: 120dpi) and (min-width: 1200px) {
@@ -97,7 +99,12 @@ img {
   word-wrap: break-word;
 }
 
+#a path,
+#a polygon {
+  fill: var(--logo-primary, var(--prif-blue-dark));
+}
+
 #b path,
 #b polygon {
-  fill: var(--fc-text, --blue);
+  fill: var(--logo-secondary, var(--fc-text, var(--prif-blue-light)));
 }

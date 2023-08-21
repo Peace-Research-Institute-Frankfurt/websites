@@ -132,10 +132,10 @@
   grid-column: 1 / 5;
   letter-spacing: -0.015em;
   line-height: 0.85;
-  font-variation-settings: 'wght' 450;
+  font-variation-settings: 'wght' 500, "wdth" 90;
   font-size: Min(5rem, 12vw);
   @include bp(m) {
-    font-size: 8vw;
+    font-size: 6vw;
     grid-column: 2 / 6;
   }
   span {
@@ -164,7 +164,6 @@
   @extend %h2;
   @include bp(l) {
     line-height: calc(var(--baseline) * 1.5);
-    font-size: var(--ms-3);
   }
 }
 

@@ -173,7 +173,7 @@ exports.createSchemaCustomization = async ({ getNode, getNodesByType, pathPrefix
     hero_credit: String
     eyebrow: String
     title: String
-    color: String!
+    color: String
     color_secondary: String
     trace_lines: Boolean
   }

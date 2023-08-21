@@ -40,7 +40,6 @@ export const query = graphql`
         frontmatter {
           title
           intro
-          year
           color
           order
           authors {
@@ -122,11 +121,14 @@ const Index = ({ data, pageContext, children, location }) => {
   const appStyles = {
     '--fc-text': text.toString(),
     '--fc-background': background.toString(),
-    '--fc-knockout': knockout.toString()
+    '--fc-knockout': knockout.toString(),
+    '--logo-primary': "var(--prif-blue-dark)",
+    '--logo-secondary': "var(--prif-blue-light)"
   }
   
   const posts = data.posts.nodes.map((p) => {
     let postStyles = {}
+    const year = data.post.relativeDirectory.replace(/(.{2})\/(reports)\//g, '')  
     const frontmatter = p.childMdx.frontmatter
     const maxWords = 45
     let intro = ''
@@ -161,7 +163,7 @@ const Index = ({ data, pageContext, children, location }) => {
           <div className={styles.headerInner}>
             <h1 className={styles.title}>
               {data.post.childMdx.frontmatter.title}
-              <span>{data.post.childMdx.frontmatter.year}</span>
+              <span>{year}</span>
             </h1>
           </div>
         </header>

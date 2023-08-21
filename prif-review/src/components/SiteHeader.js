@@ -8,6 +8,7 @@ export default function SiteHeader({ report, translationData, children }) {
 
   return (
     <header className={styles.container}>
+      <div className={styles.inner}>
       <nav className={styles.menu}>
         <ul>
           <li>
@@ -26,6 +27,7 @@ export default function SiteHeader({ report, translationData, children }) {
         </ul>
       </nav>
       <div className={styles.controls}>{children}</div>
+      </div>
     </header>
   )
 }
