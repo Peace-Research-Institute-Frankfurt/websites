@@ -32,8 +32,9 @@
     }
   }
   & > h3 {
-    @extend %h3;
-    & + table {
+    @extend %h3;  
+    margin-top: calc(var(--baseline) * 0.5);
+    & + table, & + div, & + figure {
       margin-top: calc(var(--baseline) * 0.25);
     }
   }

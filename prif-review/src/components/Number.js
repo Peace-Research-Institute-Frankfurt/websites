@@ -1,10 +1,10 @@
 import React from 'react'
 import * as styles from './Number.module.scss'
 
-const Number = ({ n, label }) => {
+const Number = ({ n, unit, label }) => {
   return (
     <div className={styles.container}>
-      <span className={styles.number}>{n}</span>
+      <span className={styles.number}>{unit && <span className={styles.unit}>{unit}</span>}{n}</span>
       <span className={styles.label}>{label}</span>
     </div>
   )

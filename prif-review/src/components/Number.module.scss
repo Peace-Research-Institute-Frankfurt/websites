@@ -6,6 +6,9 @@
     grid-column: 3 / 4;
   }
   display: flex;
+  gap: var(--baseline);
+  flex-wrap: wrap;
+  margin-bottom: var(--baseline)
 }
 
 .container {
@@ -20,6 +23,12 @@
   font-size: var(--ms-6);
   display: block;
   line-height: 1;
+}
+
+.unit {
+  font-size: var(--ms-5);
+  color: var(--fc-text);
+  margin-right: .1em;
 }
 
 .label {
