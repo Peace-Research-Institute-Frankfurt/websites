@@ -5,6 +5,9 @@
   position: relative;
   grid-column: 1 / 6;
   @include bp(m) {
+    grid-column: 2 / 4;
+  }
+  @include bp(l) {
     grid-column: 3 / 4;
   }
   p:last-child {

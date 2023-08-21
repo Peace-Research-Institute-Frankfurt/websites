@@ -4,8 +4,14 @@
   color: var(--fc-text);
   position: relative;
   text-align: center;
-  margin: calc(var(--baseline) * 1.5) 0;
+  margin: calc(var(--baseline) * 1) 0;
   grid-column: 2 / 5;
+  @include bp(m){
+    text-align: left;
+  }
+  @include bp(l){
+    grid-column: 3 / 5;
+  }
   &:before {
     content: '„';
     font-family: Arial, Helvetica, sans-serif;

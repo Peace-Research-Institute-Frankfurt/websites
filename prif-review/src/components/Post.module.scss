@@ -16,6 +16,8 @@
   margin-top: calc(var(--baseline) * 1.5);
   margin-bottom: 0;
   grid-column: 1 / 6;
+  position: relative;
+  z-index: 100;
   @include bp(m) {
     grid-column: 2 / 4;
   }
@@ -34,17 +36,18 @@
 
 .trace-lines {
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
   right: 0;
   width: 100%;
   mix-blend-mode: multiply;
-  opacity: 0.5;
-  transform: translateY(40%);
+  opacity: 0.3;
+  transform: translateY(-20%);
   pointer-events: none;
+  z-index: 0;
   path {
     stroke: var(--fc-text);
-    stroke-width: 0.5;
+    stroke-width: 1;
     stroke-dasharray: 2px 1px;
   }
 }

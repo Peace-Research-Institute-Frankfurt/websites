@@ -4,8 +4,37 @@
   margin-top: calc(var(--baseline) * 0.75);
   margin-bottom: calc(var(--baseline) * 0.5);
   grid-column: 1 / 6;
+  & + h3 {
+    margin-top: 0;
+  }
   @include bp(m) {
     grid-column: 3 / 4;
+  }
+}
+
+.left-margin {
+  position: relative;
+  .image {
+    max-width: 6em;
+  }
+  @include bp(m){
+    grid-column: 1 / 2;
+    position: relative;
+    .image {
+      max-width: 5em;
+    }
+    .inner {
+      display: flex;
+      flex-flow: column;
+      text-align: right;
+      align-items: flex-end;
+      right: 0;
+      top: 0;
+      position: absolute;
+    }
+  }
+  @include bp(l){
+    grid-column: 1 / 3;
   }
 }
 

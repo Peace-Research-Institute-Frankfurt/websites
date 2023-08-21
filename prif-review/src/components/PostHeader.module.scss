@@ -25,6 +25,9 @@
   display: block;
   grid-column: 1 / 4;
   margin-bottom: calc(var(--baseline) * 0.5);
+  @include bp(m) {
+    grid-column: 2 / 4;
+  }
   @include bp(l) {
     margin-bottom: calc(var(--baseline) * 1);
     grid-column: 3 / 4;
@@ -35,6 +38,9 @@
   @extend %h1;
   grid-column: 1 / 5;
   @include bp(m) {
+    grid-column: 2 / 4;
+  }
+  @include bp(l) {
     grid-column: 3 / 4;
   }
 }
@@ -43,6 +49,9 @@
   @extend %copy;
   grid-column: 1 / 5;
   @include bp(m) {
+    grid-column: 2 / 4;
+  }
+  @include bp(l) {
     grid-column: 3 / 4;
   }
   p + p {

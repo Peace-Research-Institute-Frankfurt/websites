@@ -53,11 +53,17 @@
   }
   table {
     @extend %caption;
-    grid-column: 3 / 6;
     margin-top: var(--baseline);
     margin-bottom: var(--baseline);
     display: inline-block;
     hyphens: none;
+    grid-column: 1 / 6;
+    @include bp(m){
+      grid-column: 2 / 6;
+    }
+    @include bp(l){
+      grid-column: 3 / 6;
+    }
   }
   td,
   th {

@@ -30,7 +30,13 @@
 }
 
 .list {
-  grid-column: 3 / 5;
+  grid-column: 1 / 6;
+  @include bp(m){
+    grid-column: 2 / 5;
+  }
+  @include bp(l){
+    grid-column: 3 / 5;
+  }
   display: grid;
   grid-template-columns: repeat(5, 20%);
   margin-top: var(--baseline);
