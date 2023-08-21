@@ -8,6 +8,9 @@
     grid-row: span 6;
     max-width: 12rem;
   }
+  @include bp(l) {
+    max-width: 14rem;
+  }
   @include bp(xl) {
     grid-column: 1 / 2;
   }

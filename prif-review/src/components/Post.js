@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-import Color from 'colorjs.io'
 import App from './App'
 import PostBody from './PostBody'
 import PostHeader from './PostHeader'
@@ -8,6 +7,7 @@ import Meta from './Meta'
 import { useTranslation } from 'gatsby-plugin-react-i18next'
 import Lines from '../images/trace-line.svg'
 import FigureAdapter from "./FigureAdapter"
+import useColors from "../hooks/useColors.js"
 import * as styles from './Post.module.scss'
 
 export const query = graphql`
@@ -159,22 +159,13 @@ const Post = ({ data, pageContext, children }) => {
   })
   const next = posts[currentIndex + 1] || null
   const previous = posts[currentIndex - 1] || null
-  let appStyles = {}
-  if (frontmatter.color) {
-    const color = new Color(frontmatter.color)
-    appStyles['--fc-text'] = color.toString()
-    const onWhite = Math.abs(color.contrast("white", "APCA"))
-    const onBlack = Math.abs(color.contrast("black", "APCA"))
-    const knockoutColor = onWhite > onBlack ? "white" : "black"
-    
-    let secondaryColor = ''
-    if (frontmatter.color_secondary) {
-      secondaryColor = new Color(frontmatter.color_secondary)
-    } else {
-      secondaryColor = color.set({ 'lch.l': 97, 'lch.c': 2, 'lch.h': (h) => h + 10 })
-    }
-    appStyles['--fc-background'] = secondaryColor.toString()
-    appStyles['--fc-knockout'] = knockoutColor.toString()
+  
+  const {text, background, knockout} = useColors(frontmatter.color)
+      
+  const appStyles = {
+    '--fc-text': text.toString(),
+    '--fc-background': frontmatter.color_secondary ? frontmatter.color_secondary : background.toString(),
+    '--fc-knockout': knockout.toString()
   }
 
 const heroImage = (

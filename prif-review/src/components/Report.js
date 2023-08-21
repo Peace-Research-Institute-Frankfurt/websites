@@ -8,7 +8,7 @@ import SkipToContent from '../components/SkipToContent'
 import Leadin from "./Leadin"
 import { useTranslation } from 'gatsby-plugin-react-i18next'
 import { Link } from 'gatsby-plugin-react-i18next'
-import Color from 'colorjs.io'
+import useColors from "../hooks/useColors.js"
 import { Person, PersonList } from './Person'
 import * as styles from './Report.module.scss'
 
@@ -41,6 +41,7 @@ export const query = graphql`
           title
           intro
           year
+          color
           order
           authors {
             name
@@ -115,6 +116,15 @@ const Index = ({ data, pageContext, children, location }) => {
     Person,
     PersonList
   }
+  
+  const {text, background, knockout} = useColors(data.post.childMdx.frontmatter.color || "black")
+
+  const appStyles = {
+    '--fc-text': text.toString(),
+    '--fc-background': background.toString(),
+    '--fc-knockout': knockout.toString()
+  }
+  
   const posts = data.posts.nodes.map((p) => {
     let postStyles = {}
     const frontmatter = p.childMdx.frontmatter
@@ -144,7 +154,7 @@ const Index = ({ data, pageContext, children, location }) => {
     )
   })
   return (
-    <App pages={data.pages.nodes} translationData={{ currentLanguage: pageContext.language, currentSlug: location.pathname }}>
+    <App styles={appStyles} pages={data.pages.nodes} translationData={{ currentLanguage: pageContext.language, currentSlug: location.pathname }}>
       <SkipToContent />
       <main>
         <header className={styles.header}>
@@ -158,14 +168,14 @@ const Index = ({ data, pageContext, children, location }) => {
         <section className={styles.intro}>
           <h2 className={styles.sectionTitle}>{t('Editorial')}</h2>
           <div className={styles.introInner}>
-                <MDXProvider components={shortCodes}>{children}</MDXProvider>
+            <MDXProvider components={shortCodes}>{children}</MDXProvider>
           </div>
           {data.post.childMdx.frontmatter.authors &&
             <div className={styles.introAuthors}>
             <PersonList>
-             {data.post.childMdx.frontmatter.authors.map(person => {
+             {data.post.childMdx.frontmatter.authors.map((person, i) => {
                return(
-                 <Person name={person.name} image={person.image}>
+                 <Person key={`person.${i}`} name={person.name} image={person.image}>
                    {person.bio}
                  </Person>)
              })}
