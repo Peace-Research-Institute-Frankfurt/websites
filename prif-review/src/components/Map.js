@@ -8,11 +8,11 @@ import * as styles from './Map.module.scss'
 
 const Map = ({ caption, credit, children }) => {
   const width = 1500
-  const ratio = 1.5
+  const ratio = 1.85
   const height = width / ratio
 
   const centerX = width / 2 - 85
-  const centerY = height / 2 + 25
+  const centerY = height / 2 + 45
   const scale = (width + height) * 0.145
 
   return (
@@ -21,7 +21,7 @@ const Map = ({ caption, credit, children }) => {
         {(projection) => {
           return (
             <svg viewBox={`0 0 ${width} ${height}`} className={styles.map}>
-              <Graticule outline={(path) => projection.path(path)} graticule={(g) => projection.path(g)} stroke="rgba(0, 0, 0, .1)" fill="none" />
+              <Graticule outline={(path) => projection.path(path)} graticule={(g) => projection.path(g)} stroke="rgba(0, 0, 0, .05)" fill="none" />
               <g data-layer="admin0">
                 {projection.features.map(({ feature, path }, i) => {
                   return (

@@ -32,16 +32,16 @@
   --baseline: calc(var(--ms-0) * 1.45);
   --br: 4px;
   --fast: 200ms;
-  --map-a: #1f52b3;
-  --map-b: rgb(218, 88, 13);
-  --map-c: rgb(204, 148, 26);
-  --chart-background: rgb(245,245,245);
-  --prif-blue-light: #0083B5;
+  --map-a: rgb(103, 210, 91);
+  --map-b: rgb(243, 218, 78);
+  --map-c: rgb(255, 113, 74);
+  --chart-background: rgb(245, 245, 245);
+  --prif-blue-light: #0083b5;
   --prif-blue-dark: #224663;
-  
+
   // Scale type size on high-res displays
   @media (min-resolution: 120dpi) and (min-width: 1200px) {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
   }
 }
 

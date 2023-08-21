@@ -35,6 +35,7 @@
     display: inline-block;
     &:before {
       content: '';
+      border: 1px solid var(--black);
       width: 0.75em;
       height: 0.75em;
       margin-right: 0.2em;

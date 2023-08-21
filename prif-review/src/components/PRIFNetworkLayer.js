@@ -33,7 +33,6 @@ const PRIFNetworkLayer = ({ projection }) => {
   `)
 
   let connections = []
-  console.log(data)
   const stats = ['cooperations', 'guests', 'residencies']
 
   stats.forEach((stat) => {
@@ -55,21 +54,26 @@ const PRIFNetworkLayer = ({ projection }) => {
     })
   })
 
+  const prifPosition = projection.projection([8.682222, 50.110556])
   const connectionElements = connections
     .filter((el) => el.country !== 'de')
     .map((connection, i) => {
       const position = projection.projection([connection.long, connection.lat])
-      const prifPosition = projection.projection([8.682222, 50.110556])
       const lineElement = (
         <g className={`${styles.connection} ${styles[connection.type]}`} key={`connection.${i}`}>
           <line x1={prifPosition[0]} y1={prifPosition[1]} x2={position[0]} y2={position[1]} />
-          <circle cx={position[0]} cy={position[1]} r={9} />
+          <circle cx={position[0]} cy={position[1]} r={8} />
         </g>
       )
 
       return lineElement
     })
 
-  return <>{connectionElements}</>
+  return (
+    <>
+      {connectionElements}
+      <circle className={styles.prif} cx={prifPosition[0]} cy={prifPosition[1]} r={8} />
+    </>
+  )
 }
 export { PRIFNetworkLayer }

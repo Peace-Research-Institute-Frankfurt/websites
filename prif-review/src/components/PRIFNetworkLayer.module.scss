@@ -3,19 +3,27 @@
     fill: var(--map-a);
   }
 }
-.guests {
+.residencies {
   circle {
     fill: var(--map-b);
   }
 }
-.residencies {
+.guests {
   circle {
     fill: var(--map-c);
   }
 }
 
 .connection {
-  line {
-    stroke: rgba(black, 0.35);
+  circle {
+    stroke: var(--black);
   }
+  line {
+    stroke: rgba(black, 0.25);
+  }
+}
+
+.prif {
+  stroke: var(--black);
+  fill: white;
 }

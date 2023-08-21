@@ -5,11 +5,26 @@
 }
 
 .pagination {
-  border: 1px solid var(--black);
-  border-radius: var(--br);
-  height: 1.85em;
   font-size: var(--ms--1);
   display: flex;
+  border-left: 1px solid var(--black);
+  transform: skewX(-10deg);
+}
+
+.pagination-link {
+  height: 100%;
+  display: block;
+  padding: .75em;
+  display: flex;
+  align-items: center;
+  border-left: 1px solid var(--black);
+  span {
+    display: block;
+    transform: skewX(10deg);
+  }
+  &:first-child {
+    border-left: 0;
+  }
 }
 
 .hero-image {
@@ -20,17 +35,6 @@
   z-index: 100;
   @include bp(m) {
     grid-column: 2 / 4;
-  }
-}
-
-.pagination-link {
-  display: block;
-  padding: 0 0.5em;
-  display: flex;
-  align-items: center;
-  border-left: 1px solid var(--black);
-  &:first-child {
-    border-left: 0;
   }
 }
 

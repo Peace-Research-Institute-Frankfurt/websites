@@ -191,12 +191,12 @@ const heroImage = (
     <nav className={styles.pagination}>
       {previous && (
         <Link className={styles.paginationLink} rel="prev" to={`../${previous.childMdx.fields.slug}`}>
-          {t('Prev')}
+          <span>{t('Prev')}</span>
         </Link>
       )}
       {next && (
         <Link className={styles.paginationLink} rel="next" to={`../${next.childMdx.fields.slug}`}>
-          {t('Next')}
+          <span>{t('Next')}</span>
         </Link>
       )}
     </nav>

@@ -40,7 +40,6 @@
 .link {
   @extend %h3;
   padding: 0.15em 0.4em;
-  border-radius: var(--br);
   font-size: var(--ms-0);
   &:hover,
   &:focus-visible {
@@ -52,6 +51,5 @@
   grid-column: 4 / 6;
   justify-content: flex-end;
   display: flex;
-  gap: 0.5em;
-  align-items: baseline;
+  align-items: stretch;
 }
