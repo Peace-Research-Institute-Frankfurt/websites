@@ -25,6 +25,11 @@
     "url": "https://creativecommons.org/licenses/by-sa/4.0/"
   },
   {
+    "license_id": "unsplash",
+    "title": "Unsplash License",
+    "url": "https://unsplash.com/license"
+  },
+  {
     "license_id": "pd",
     "title": "Public domain",
     "url": ""
