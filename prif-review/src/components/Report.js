@@ -1,13 +1,15 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import { MDXProvider } from '@mdx-js/react'
 import MarkdownRenderer from 'react-markdown-renderer'
 import App from '../components/App'
 import Meta from '../components/Meta'
 import SkipToContent from '../components/SkipToContent'
-import { Person } from './Person'
+import Leadin from "./Leadin"
 import { useTranslation } from 'gatsby-plugin-react-i18next'
 import { Link } from 'gatsby-plugin-react-i18next'
 import Color from 'colorjs.io'
+import { Person, PersonList } from './Person'
 import * as styles from './Report.module.scss'
 
 export const query = graphql`
@@ -41,9 +43,10 @@ export const query = graphql`
           year
           order
           authors {
-            frontmatter {
-              author_id
-            }
+            name
+            image
+            image_alt
+            bio
           }
         }
       }
@@ -106,15 +109,15 @@ export const query = graphql`
 const Index = ({ data, pageContext, children, location }) => {
   const year = data.post.relativeDirectory.replace(/(.{2})\/(reports)\//g, '')
   const { t } = useTranslation()
+  
+  const shortCodes = {
+    Leadin,
+    Person,
+    PersonList
+  }
   const posts = data.posts.nodes.map((p) => {
     let postStyles = {}
     const frontmatter = p.childMdx.frontmatter
-    if (frontmatter.color) {
-      const color = new Color(frontmatter.color)
-      postStyles['--fc-text'] = color.toString()
-      postStyles['--fc-background'] = color.set({ 'lch.l': 97, 'lch.c': 2, 'lch.h': (h) => h + 10 }).toString()
-    }
-
     const maxWords = 45
     let intro = ''
     if (frontmatter.teaser) {
@@ -154,11 +157,21 @@ const Index = ({ data, pageContext, children, location }) => {
         </header>
         <section className={styles.intro}>
           <h2 className={styles.sectionTitle}>{t('Editorial')}</h2>
-          <div className={styles.introInner}>{children}</div>
-          <Person name="Dr. Nicole Deitelhoff" image="assets/deitelhoff.jpg" className={styles.introAuthor}>
-            Dr. Antonia Witt ist Senior Researcher am Programmbereich „Glokale Verflechtungen“ und leitet die Forschungsgruppe „African Intervention
-            Politics.
-          </Person>
+          <div className={styles.introInner}>
+                <MDXProvider components={shortCodes}>{children}</MDXProvider>
+          </div>
+          {data.post.childMdx.frontmatter.authors &&
+            <div className={styles.introAuthors}>
+            <PersonList>
+             {data.post.childMdx.frontmatter.authors.map(person => {
+               return(
+                 <Person name={person.name} image={person.image}>
+                   {person.bio}
+                 </Person>)
+             })}
+            </PersonList>
+            </div>
+          }
         </section>
         <section className={styles.posts}>
           <h2 className={styles.sectionTitle}>{t('Contents')}</h2>
@@ -170,8 +183,8 @@ const Index = ({ data, pageContext, children, location }) => {
 }
 
 export default Index
+
 export const Head = ({ data, pageContext, location }) => {
-  const frontmatter = data.post.childMdx.frontmatter
   const year = data.post.relativeDirectory.replace(/(.{2})\/(reports)\//g, '')
   const translationData = { currentLanguage: pageContext.language, currentSlug: location.pathname }
   return <Meta title={`${year} – ${data.site.siteMetadata.title}`} translationData={translationData} />

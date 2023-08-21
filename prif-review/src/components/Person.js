@@ -51,7 +51,7 @@ const Person = function ({ name, image, children, className }) {
 const PersonList = function ({ title, children }) {
   return (
     <section className={styles.list}>
-      <h3 className={styles.listTitle}>{title}</h3>
+      {title && <h3 className={styles.listTitle}>{title}</h3>}
       <div className={styles.listInner}>{children}</div>
     </section>
   )

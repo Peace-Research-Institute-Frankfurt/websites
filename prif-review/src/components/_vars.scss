@@ -129,7 +129,7 @@
 
 %grid {
   display: grid;
-  grid-template-columns: 1fr minmax(auto, 5rem) minmax(auto, 48rem) minmax(auto, 5rem) 1fr;
+  grid-template-columns: 1fr minmax(auto, 5rem) minmax(auto, 40rem) minmax(auto, 5rem) 1fr;
   column-gap: var(--padding-small);
   margin: 0 auto;
   padding: 0 var(--padding);
