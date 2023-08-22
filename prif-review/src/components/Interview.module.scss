@@ -49,9 +49,6 @@
   }
 }
 
-.participant-copy {
-}
-
 .participant-name {
   @extend %h4;
   font-style: normal;
@@ -95,7 +92,6 @@
 
 .question {
   list-style: none;
-  margin-bottom: calc(var(--baseline) * 1.5);
   p {
     margin-bottom: calc(var(--baseline) * 0.5);
   }
