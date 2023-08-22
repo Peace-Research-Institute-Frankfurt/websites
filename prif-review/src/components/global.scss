@@ -36,8 +36,8 @@
   --map-b: rgb(243, 218, 78);
   --map-c: rgb(255, 113, 74);
   --chart-background: rgb(245, 245, 245);
-  --prif-blue-light: #0083b5;
-  --prif-blue-dark: #224663;
+  --prif-blue-light: hsl(197, 100%, 35%);
+  --prif-blue-dark: hsl(207, 49%, 26%);
 
   // Scale type size on high-res displays
   @media (min-resolution: 120dpi) and (min-width: 1200px) {

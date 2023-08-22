@@ -44,7 +44,8 @@
 
 .link {
   @extend %h3;
-  padding: 0.15em 0.4em;
+  height: 100%;
+  padding: 0 0.4em;
   font-size: var(--ms-0);
   &:hover,
   &:focus-visible {

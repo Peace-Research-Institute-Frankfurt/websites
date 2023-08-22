@@ -10,9 +10,9 @@
   display: block;
 }
 
-.person {
+.icon {
   stroke: none;
-  fill: var(--fc-text);
+  fill: var(--color);
 }
 
 .caption {
@@ -39,7 +39,7 @@
   }
   display: grid;
   grid-template-columns: repeat(5, 20%);
-  margin-top: var(--baseline);
+  margin: var(--baseline) 0;
   gap: 3px;
   .container {
     grid-column: span 1;
