@@ -62,6 +62,24 @@
       grid-column: 2 / 3;
     }
   }
+  h2 {
+    @extend %h2;
+    margin-top: calc(var(--baseline) * 0.5);
+    margin-bottom: calc(var(--baseline) * 0.25);
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  h3 {
+    @extend %h3;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  h4 {
+    @extend %h4;
+  }
   table {
     margin-bottom: calc(var(--baseline) / 2);
     border: 1px solid var(--gray);

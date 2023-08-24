@@ -38,9 +38,11 @@
 }
 
 %h2 {
-  font-size: var(--ms-2);
+  font-size: var(--ms-1);
   text-wrap: balance;
-  line-height: calc(var(--baseline) * 1.5);
+  hyphens: none;
+  font-weight: bold;
+  font-family: var(--edge);
   letter-spacing: -0.01em;
 }
 
@@ -113,24 +115,6 @@
     a {
       text-decoration: none !important;
     }
-  }
-  h2 {
-    @extend %h2;
-    margin-top: calc(var(--baseline) * 0.5);
-    margin-bottom: calc(var(--baseline) * 0.25);
-
-    &:first-child {
-      margin-top: 0;
-    }
-  }
-  h3 {
-    @extend %h3;
-    &:first-child {
-      margin-top: 0;
-    }
-  }
-  h4 {
-    @extend %h4;
   }
 }
 
