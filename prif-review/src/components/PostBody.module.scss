@@ -1,0 +1,86 @@
+@import 'vars';
+
+.container {
+  @extend %grid;
+  & > p,
+  & > ul,
+  & > ol,
+  & > h2,
+  & > h3,
+  & > h4,
+  & > h5 {
+    grid-column: 1 / 6;
+    @include bp(m) {
+      grid-column: 2 / 5;
+    }
+
+    @include bp(l) {
+      grid-column: 3 / 4;
+    }
+  }
+
+  & > p {
+    margin-bottom: calc(var(--baseline) * 0.5);
+  }
+
+  & > h2 {
+    @extend %h2;
+    margin-top: calc(var(--baseline) * 1);
+    margin-bottom: calc(var(--baseline) * 0.5);
+  }
+  & > h3 {
+    @extend %h3;  
+    margin-top: calc(var(--baseline) * 0.5);
+    margin-bottom: calc(var(--baseline) * 0.5);
+    & + table, & + div, & + figure {
+      margin-top: calc(var(--baseline) * 0.25);
+    }
+  }
+  & > h4 {
+    @extend %h4;
+  }
+
+  & > ul,
+  & > ol {
+    margin-left: 1.1em;
+    margin-bottom: calc(var(--baseline) * 0.5);
+  }
+
+  a {
+    @extend %text-link;
+  }
+  table {
+    @extend %caption;
+    margin-top: var(--baseline);
+    margin-bottom: var(--baseline);
+    display: inline-block;
+    hyphens: none;
+    grid-column: 1 / 6;
+    @include bp(m){
+      grid-column: 2 / 6;
+    }
+    @include bp(l){
+      grid-column: 3 / 6;
+    }
+  }
+  td,
+  th {
+    padding: 0.25em;
+    padding-left: 0;
+    padding-right: 3em;
+    border-bottom: 1px solid rgba(black, 0.2);
+    vertical-align: top;
+    &:last-child {
+      padding-right: 0;
+    }
+    a {
+      color: var(--blue-70);
+    }
+  }
+  th {
+    @extend %caption-bold;
+    border-bottom: 2px solid rgba(black, 0.9);
+    padding-bottom: 0.2em;
+    text-align: left;
+  }
+}

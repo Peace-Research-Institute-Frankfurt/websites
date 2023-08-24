@@ -1,0 +1,48 @@
+@import 'vars';
+
+.container {
+  margin-top: calc(var(--baseline) * 0.5);
+  margin-bottom: calc(var(--baseline) * 1);
+
+  p {
+    a {
+      background: transparent;
+    }
+  }
+  grid-column: 1/ 6;
+  @include bp(m) {
+    grid-column: 2 / 4;
+  }
+  @include bp(l) {
+    grid-column: 3 / 4;
+  }
+}
+
+.button {
+  @extend %copy;
+  font-variation-settings: 'wght' 500;
+  background: var(--fc-text) !important;
+  padding: 0.65em 1em;
+  color: var(--fc-knockout);
+  padding-bottom: 0.6em;
+  border-radius: var(--br);
+  transition: var(--fast);
+  display: inline-flex;
+  align-items: center;
+  outline-offset: 2px;
+  gap: 0.5em;
+  &:hover,
+  &:focus-visible {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+  }
+
+  svg {
+    width: 0.85em;
+    transform: rotate(-45deg);
+    path {
+      stroke: none;
+      fill: var(--fc-knockout)
+    }
+  }
+}

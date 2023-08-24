@@ -1,0 +1,29 @@
+.cooperations {
+  circle {
+    fill: var(--map-a);
+  }
+}
+.residencies {
+  circle {
+    fill: var(--map-b);
+  }
+}
+.guests {
+  circle {
+    fill: var(--map-c);
+  }
+}
+
+.connection {
+  circle {
+    stroke: var(--black);
+  }
+  line {
+    stroke: rgba(black, 0.25);
+  }
+}
+
+.prif {
+  stroke: var(--black);
+  fill: white;
+}

@@ -1,9 +1,15 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import { MDXProvider } from '@mdx-js/react'
+import MarkdownRenderer from 'react-markdown-renderer'
 import App from '../components/App'
 import Meta from '../components/Meta'
 import SkipToContent from '../components/SkipToContent'
+import Leadin from "./Leadin"
+import { useTranslation } from 'gatsby-plugin-react-i18next'
 import { Link } from 'gatsby-plugin-react-i18next'
+import useColors from "../hooks/useColors.js"
+import { Person, PersonList } from './Person'
 import * as styles from './Report.module.scss'
 
 export const query = graphql`
@@ -34,17 +40,20 @@ export const query = graphql`
         frontmatter {
           title
           intro
+          color
           order
           authors {
-            frontmatter {
-              author_id
-            }
+            name
+            image
+            image_alt
+            bio
           }
         }
       }
     }
 
     posts: allFile(
+      sort: { childMdx: { frontmatter: { order: ASC } } }
       filter: {
         extension: { eq: "mdx" }
         relativeDirectory: { eq: $postsDirectory }
@@ -64,6 +73,10 @@ export const query = graphql`
           frontmatter {
             title
             order
+            intro
+            teaser
+            color
+            eyebrow
           }
         }
       }
@@ -95,28 +108,96 @@ export const query = graphql`
 
 const Index = ({ data, pageContext, children, location }) => {
   const year = data.post.relativeDirectory.replace(/(.{2})\/(reports)\//g, '')
+  const { t } = useTranslation()
+  
+  const shortCodes = {
+    Leadin,
+    Person,
+    PersonList
+  }
+  
+  const {text, background, knockout} = useColors(data.post.childMdx.frontmatter.color || "black")
+
+  const appStyles = {
+    '--fc-text': text.toString(),
+    '--fc-background': background.toString(),
+    '--fc-knockout': knockout.toString(),
+    '--logo-primary': "var(--prif-blue-dark)",
+    '--logo-secondary': "var(--prif-blue-light)"
+  }
+  
   const posts = data.posts.nodes.map((p) => {
+    let postStyles = {}
+    const year = data.post.relativeDirectory.replace(/(.{2})\/(reports)\//g, '')  
+    const frontmatter = p.childMdx.frontmatter
+    const maxWords = 45
+    let intro = ''
+    if (frontmatter.teaser) {
+      intro = frontmatter.teaser
+    } else {
+      intro =
+        frontmatter.intro && frontmatter.intro.split(' ').length > maxWords
+          ? frontmatter.intro.split(' ').slice(0, maxWords).join(' ') + '...'
+          : frontmatter.intro
+    }
+
     return (
       <li key={p.id}>
-        <Link to={`/${year}/${p.childMdx.fields.slug}`}>{p.childMdx.frontmatter.title}</Link>
+        <Link style={postStyles} className={styles.post} to={`/${year}/${p.childMdx.fields.slug}`}>
+          {frontmatter.eyebrow && <span className={styles.postEyebrow}>{frontmatter.eyebrow}</span>}
+          <h3 className={styles.postTitle}>{frontmatter.title}</h3>
+          {frontmatter.intro && (
+            <div className={styles.postIntro}>
+              <MarkdownRenderer markdown={intro} />
+            </div>
+          )}
+        </Link>
       </li>
     )
   })
   return (
-    <App pages={data.pages.nodes} translationData={{ currentLanguage: pageContext.language, currentSlug: location.pathname }}>
+    <App styles={appStyles} pages={data.pages.nodes} translationData={{ currentLanguage: pageContext.language, currentSlug: location.pathname }}>
       <SkipToContent />
-      <main className={styles.container}>
-        <h1>{data.post.childMdx.frontmatter.title}</h1>
-        {children}
-        <ol>{posts}</ol>
+      <main>
+        <header className={styles.header}>
+          <div className={styles.headerInner}>
+            <h1 className={styles.title}>
+              {data.post.childMdx.frontmatter.title}
+              <span>{year}</span>
+            </h1>
+          </div>
+        </header>
+        <section className={styles.intro}>
+          <h2 className={styles.sectionTitle}>{t('Editorial')}</h2>
+          <div className={styles.introInner}>
+            <MDXProvider components={shortCodes}>{children}</MDXProvider>
+          </div>
+          {data.post.childMdx.frontmatter.authors &&
+            <div className={styles.introAuthors}>
+            <PersonList>
+             {data.post.childMdx.frontmatter.authors.map((person, i) => {
+               return(
+                 <Person key={`person.${i}`} name={person.name} image={person.image}>
+                   {person.bio}
+                 </Person>)
+             })}
+            </PersonList>
+            </div>
+          }
+        </section>
+        <section className={styles.posts}>
+          <h2 className={styles.sectionTitle}>{t('Contents')}</h2>
+          <ol className={styles.postsList}>{posts}</ol>
+        </section>
       </main>
     </App>
   )
 }
 
 export default Index
+
 export const Head = ({ data, pageContext, location }) => {
-  const frontmatter = data.post.childMdx.frontmatter
+  const year = data.post.relativeDirectory.replace(/(.{2})\/(reports)\//g, '')
   const translationData = { currentLanguage: pageContext.language, currentSlug: location.pathname }
-  return <Meta title={`${frontmatter.title} – ${data.site.siteMetadata.title}`} translationData={translationData} />
+  return <Meta title={`${year} – ${data.site.siteMetadata.title}`} translationData={translationData} />
 }

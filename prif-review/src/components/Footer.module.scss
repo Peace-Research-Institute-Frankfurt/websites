@@ -1,15 +1,19 @@
 @import 'vars';
 
 .container {
-  padding: calc(var(--baseline) * 2) 0;
-  margin-top: 1rem;
+  @extend %caption;
+  padding: calc(var(--baseline) * 1);
   display: flex;
   flex-flow: column;
+  clear: both;
   align-items: center;
+  @include bp(m) {
+    padding-top: calc(var(--baseline) * 4);
+    align-items: flex-start;
+  }
 }
 
 .menu {
-  margin-bottom: 0.5em;
   ul {
     display: flex;
     list-style: none;

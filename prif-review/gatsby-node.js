@@ -159,12 +159,23 @@ exports.createSchemaCustomization = async ({ getNode, getNodesByType, pathPrefix
 
   const typeDefs = `
   type Author implements Node {
-    author_id: String
     name: String
+    image: String
+    image_alt: String
+    bio: String
   }
   type PostFrontmatter {
-    authors: [Author] @link(by: "author_id")
+    authors: [Author]
     intro: String
+    teaser: String
+    hero_image: String
+    hero_alt: String
+    hero_credit: String
+    eyebrow: String
+    title: String
+    color: String
+    color_secondary: String
+    trace_lines: Boolean
   }
   type Mdx {
     frontmatter: PostFrontmatter

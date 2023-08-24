@@ -3,16 +3,20 @@
 .container {
   display: inline-block;
   position: absolute;
-  top: var(--padding);
+  top: 0.5rem;
   left: var(--padding);
-  padding: 0.6em 0.8em;
+  padding: 0.5em 0.8em;
   z-index: 10000;
   font-weight: 600;
   background: var(--white);
   border-radius: var(--br);
+  background: var(--black);
+  color: white;
+  transform: translateX(-0.1em);
   opacity: 0;
   transition: var(--fast);
   pointer-events: none;
+  outline-offset: 2px;
   &:focus-visible {
     pointer-events: all;
     opacity: 1;

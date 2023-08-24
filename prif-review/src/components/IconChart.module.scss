@@ -1,0 +1,57 @@
+@import 'vars';
+
+.container {
+  grid-column: 2 / 4;
+}
+
+.chart {
+  background: var(--fc-background, --gray-dark);
+  width: 100%;
+  display: block;
+}
+
+.icon {
+  stroke: none;
+  fill: var(--color);
+}
+
+.caption {
+  @extend %caption;
+  padding-top: 0.2em;
+}
+
+.label {
+  hyphens: none;
+}
+
+.number {
+  @extend %caption-bold;
+  display: block;
+}
+
+.list {
+  grid-column: 1 / 6;
+  @include bp(m){
+    grid-column: 2 / 5;
+  }
+  @include bp(l){
+    grid-column: 3 / 5;
+  }
+  display: grid;
+  grid-template-columns: repeat(5, 20%);
+  margin: var(--baseline) 0;
+  gap: 3px;
+  .container {
+    grid-column: span 1;
+    background: var(--fc-background, var(--chart-background));
+    padding: 0.5em;
+    display: flex;
+    flex-flow: column;
+    gap: 1em;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .double {
+    grid-column: span 2;
+  }
+}

@@ -1,10 +1,13 @@
 import React from 'react'
-import { graphql } from 'gatsby'
-import Color from 'colorjs.io'
+import { Link, graphql } from 'gatsby'
 import App from './App'
 import PostBody from './PostBody'
+import PostHeader from './PostHeader'
 import Meta from './Meta'
-import MarkdownRenderer from 'react-markdown-renderer'
+import { useTranslation } from 'gatsby-plugin-react-i18next'
+import Lines from '../images/trace-line.svg'
+import FigureAdapter from "./FigureAdapter"
+import useColors from "../hooks/useColors.js"
 import * as styles from './Post.module.scss'
 
 export const query = graphql`
@@ -48,11 +51,40 @@ export const query = graphql`
           intro
           order
           color
+          color_secondary
           eyebrow
+          trace_lines
+          hero_alt
+          hero_credit
+          hero_image
+          hero_license
           authors {
             frontmatter {
               author_id
             }
+          }
+        }
+      }
+    }
+    posts: allFile(
+      filter: {
+        relativeDirectory: { glob: "**/posts/**" }
+        extension: { eq: "mdx" }
+        sourceInstanceName: { eq: "content" }
+        childMdx: { fields: { locale: { eq: $language } } }
+      }
+      sort: { childMdx: { frontmatter: { order: ASC } } }
+    ) {
+      nodes {
+        id
+        relativeDirectory
+        childMdx {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            order
           }
         }
       }
@@ -116,62 +148,71 @@ export const query = graphql`
   }
 `
 const Post = ({ data, pageContext, children }) => {
+  const { t } = useTranslation()
+
   const frontmatter = data.post.childMdx.frontmatter
-
-  let authorIds = []
-  if (frontmatter.authors) {
-    authorIds = frontmatter.authors.map((el) => el?.frontmatter.author_id)
-  }
-  // TODO: Only load authors from this year's report
-  const authors = data.authors.nodes.filter((el) => {
-    return authorIds.indexOf(el.childMdx.frontmatter.author_id) !== -1
+  const posts = data.posts.nodes.filter((node) => {
+    return node.relativeDirectory.includes(data.report.relativeDirectory)
   })
-
-  const byline = authors.map((a) => a.childMdx.frontmatter.name).join(', ')
-
-  const bios = authors.map((a) => {
-    const fm = a.childMdx.frontmatter
-    return (
-      <li key={a.id}>
-        <em>{fm.name}</em>
-        {a.childMdx.body}
-      </li>
-    )
+  const currentIndex = posts.findIndex((el) => {
+    return el.childMdx.frontmatter.title === frontmatter.title
   })
-
-  let appStyles = {}
-  if (frontmatter.color) {
-    const color = new Color(frontmatter.color)
-    appStyles['--fc-text'] = color.toString()
-    appStyles['--fc-background'] = color.set({ 'lch.l': 98, 'lch.c': 2 }).toString()
+  const next = posts[currentIndex + 1] || null
+  const previous = posts[currentIndex - 1] || null
+  
+  const {text, background, knockout} = useColors(frontmatter.color)
+      
+  const appStyles = {
+    '--fc-text': text.toString(),
+    '--fc-background': frontmatter.color_secondary ? frontmatter.color_secondary : background.toString(),
+    '--fc-knockout': knockout.toString()
   }
+
+const heroImage = (
+    <>
+      {frontmatter.hero_image && (
+        <FigureAdapter
+          className={styles.heroImage}
+          src={frontmatter.hero_image}
+          alt={frontmatter.hero_alt}
+          license={frontmatter.hero_license}
+          credit={frontmatter.hero_credit}
+        ></FigureAdapter>
+      )}
+      {frontmatter.trace_lines && (
+        <div className={styles.traceLines}>
+          <Lines />
+        </div>
+      )}
+    </>
+  )
+
+  const pagination = (
+    <nav className={styles.pagination}>
+      {previous && (
+        <Link className={styles.paginationLink} rel="prev" to={`../${previous.childMdx.fields.slug}`}>
+          <span>{t('Prev')}</span>
+        </Link>
+      )}
+      {next && (
+        <Link className={styles.paginationLink} rel="next" to={`../${next.childMdx.fields.slug}`}>
+          <span>{t('Next')}</span>
+        </Link>
+      )}
+    </nav>
+  )
 
   return (
     <App
       translationData={{ translations: data.translations.nodes, currentLanguage: pageContext.language, currentSlug: data.post.childMdx.fields.slug }}
       pages={data.pages.nodes}
+      pagination={pagination}
       styles={appStyles}
       report={data.report}
     >
       <article id="content" className={styles.postContainer}>
-        <header className={styles.header}>
-          {frontmatter.eyebrow && <span className={styles.eyebrow}>{frontmatter.eyebrow}</span>}
-          <h1 className={styles.title}>{frontmatter.title}</h1>
-          {frontmatter.intro && (
-            <div className={styles.intro}>
-              <MarkdownRenderer markdown={frontmatter.intro} />
-            </div>
-          )}
-          {authorIds.length > 0 && <p className={styles.byline}>{byline}</p>}
-        </header>
-        <section className={styles.body}>
-          <PostBody>{children}</PostBody>
-          {authorIds.length > 0 && (
-            <aside>
-              <ul>{bios}</ul>
-            </aside>
-          )}
-        </section>
+        <PostHeader title={frontmatter.title} intro={frontmatter.intro} eyebrow={frontmatter.eyebrow} heroImage={heroImage} />
+        <PostBody>{children}</PostBody>
       </article>
     </App>
   )
@@ -179,13 +220,14 @@ const Post = ({ data, pageContext, children }) => {
 
 export function Head({ data, pageContext, location }) {
   const frontmatter = data.post.childMdx.frontmatter
+  const year = data.post.relativeDirectory.replace(/(.{2})\/(reports)\//g, '').replace('/posts', '')
   const translationData = {
     currentPath: location,
     currentSlug: data.post.childMdx.fields.slug,
     currentLanguage: pageContext.language,
     translations: data.translations.nodes,
   }
-  return <Meta translationData={translationData} title={`${frontmatter.title} – ${data.site.siteMetadata.title}`} description={frontmatter.intro} />
+  return <Meta translationData={translationData} title={`${frontmatter.title} – ${data.site.siteMetadata.title} ${year}`} description={frontmatter.intro} />
 }
 
 export default Post

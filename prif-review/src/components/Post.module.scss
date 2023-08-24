@@ -4,74 +4,54 @@
   @extend %copy;
 }
 
-.header {
-  margin-bottom: 0.5em;
-  background-color: var(--fc-background);
-  // background-image: linear-gradient(to bottom, var(--fc-background) 70%, white 100%);
-  padding: var(--padding);
-  // border-top: 1em solid var(--fc-text);
-  border-left: 0.65em solid var(--fc-text);
-  border-right: 0.65em solid var(--fc-text);
-  // border-bottom: 1em solid var(--fc-text);
-  margin-bottom: var(--baseline);
-  text-align: center;
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-}
-
-.title {
-  @extend %h1;
-  color: var(--fc-text);
-}
-
-.intro {
-  @extend %copy-wide;
-  max-width: 55em;
-  color: var(--fc-text);
-  margin-top: var(--baseline);
-  em {
-    background: rgb(249, 225, 255);
-    mix-blend-mode: darken;
-    border-radius: 2px;
-    padding: 0 0.2em;
-    margin-left: -0.2em;
-    margin-right: -0.2em;
-  }
-}
-
-.body {
-  @extend %copy;
-  max-width: 40em;
-  margin: 0 auto;
-  p {
-    margin-bottom: calc(var(--baseline) * 0.5);
-  }
-
-  a {
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    text-decoration-style: dotted;
-    text-underline-offset: 0.15em;
-    &:hover,
-    &:focus-visible {
-      text-decoration-style: solid;
-    }
-  }
-}
-
-.eyebrow {
-  color: var(--fc-text);
-  text-transform: uppercase;
-  font-variation-settings: 'wdth' 400, 'wght' 400;
-  letter-spacing: 0.1em;
+.pagination {
   font-size: var(--ms--1);
-  display: block;
-  margin-bottom: 0.85em;
+  display: flex;
+  border-left: 1px solid var(--black);
+  transform: skewX(-10deg);
 }
 
-.byline {
-  @extend %copy;
-  display: none;
-  margin-top: 0.5em;
+.pagination-link {
+  height: 100%;
+  display: block;
+  padding: 0 .75em;
+  display: flex;
+  align-items: center;
+  border-left: 1px solid var(--black);
+  span {
+    display: block;
+    transform: skewX(10deg);
+  }
+  &:first-child {
+    border-left: 0;
+  }
+}
+
+.hero-image {
+  margin-top: calc(var(--baseline) * 1.5);
+  margin-bottom: 0;
+  grid-column: 1 / 6;
+  position: relative;
+  z-index: 100;
+  @include bp(m) {
+    grid-column: 2 / 4;
+  }
+}
+
+.trace-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  mix-blend-mode: multiply;
+  opacity: 0.3;
+  transform: translateY(-20%);
+  pointer-events: none;
+  z-index: 0;
+  path {
+    stroke: var(--fc-text);
+    stroke-width: 1;
+    stroke-dasharray: 2px 1px;
+  }
 }

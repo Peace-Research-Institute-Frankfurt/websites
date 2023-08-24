@@ -2,14 +2,19 @@
 
 .container {
   display: flex;
-  border: 1px solid var(--black);
   font-size: var(--ms--1);
-  border-radius: var(--br);
+  transform: skewX(-10deg);
 }
 
 .item {
   display: block;
   list-style: none;
+  &:first-child {
+    border-left: 1px solid var(--black);
+  }
+  &:last-child {
+    border-right: 1px solid var(--black);
+  }
 }
 
 .item-current {
@@ -23,11 +28,15 @@
 }
 
 .inner {
-  display: block;
+  display: flex;
   text-transform: uppercase;
-  padding: 0em 0.5em;
-  padding-top: 0.05em;
+  padding: 0 .5em;
+  height: 100%;
+  align-items: center;
   letter-spacing: 0.05em;
+  font-size: var(--ms-0);
+  transform: skewX(10deg);  
+  font-variation-settings: "wdth" 20, "wght" 300;
   &:hover,
   &:focus-visible {
     background: rgba(black, 0.05);

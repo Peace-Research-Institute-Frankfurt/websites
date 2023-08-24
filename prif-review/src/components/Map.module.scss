@@ -1,0 +1,59 @@
+@import 'vars';
+
+.container {
+  border-radius: 2px;
+  margin-top: var(--baseline);
+  margin-bottom: var(--baseline);
+  grid-column: 1 / 6;
+}
+
+.map {
+  background: var(--chart-background);
+  width: 100%;
+}
+.label {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-weight: 400;
+  font-family: 'Atlas Grotesk';
+  font-size: 0.75rem;
+  color: rgb(82, 79, 79);
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.548);
+}
+
+.country {
+  fill: rgb(255, 255, 255);
+  stroke: rgb(113, 115, 122);
+  stroke-width: 0.5;
+}
+
+.caption {
+  @extend %caption-bold;
+  span {
+    display: inline-block;
+    &:before {
+      content: '';
+      border: 1px solid var(--black);
+      width: 0.75em;
+      height: 0.75em;
+      margin-right: 0.2em;
+      border-radius: 1000px;
+      display: inline-block;
+    }
+  }
+  :global .collaborations:before {
+    background-color: var(--map-a);
+  }
+  :global .residencies:before {
+    background-color: var(--map-b);
+  }
+  :global .guests:before {
+    background-color: var(--map-c);
+  }
+}
+.credit {
+  @extend %caption;
+  opacity: 0.75;
+}

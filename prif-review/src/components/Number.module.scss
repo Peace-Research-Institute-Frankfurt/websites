@@ -1,0 +1,37 @@
+@import 'vars';
+
+.list {
+  grid-column: 2 / 4;
+  @include bp(l) {
+    grid-column: 3 / 4;
+  }
+  display: flex;
+  gap: var(--baseline);
+  flex-wrap: wrap;
+  margin-bottom: var(--baseline)
+}
+
+.container {
+  display: flex;
+  flex-flow: column;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+.number {
+  font-variation-settings: 'wght' 300, 'wdth' 90, 'opsz' 144;
+  font-size: var(--ms-6);
+  display: block;
+  line-height: 1;
+}
+
+.unit {
+  font-size: var(--ms-5);
+  color: var(--fc-text);
+  margin-right: .1em;
+}
+
+.label {
+  @extend %caption;
+  max-width: 14em;
+}

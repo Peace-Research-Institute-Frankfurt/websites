@@ -1,14 +1,20 @@
 import React from 'react'
 import Expandable from './Expandable'
 
-function Callout({ styles, buttonComponent, title, children }) {
+function Callout({ styles, buttonComponent, title, eyebrow, expandable, children }) {
   if (!styles) styles = {}
+  if (typeof expandable === 'undefined') expandable = true
+
+  const inner = (
+    <div className={styles.inner}>
+      {eyebrow && <span className={styles.eyebrow}>{eyebrow}</span>}
+      <h3 className={styles.title}>{title}</h3>
+      {children}
+    </div>
+  )
   return (
     <section className={styles.container}>
-      <Expandable buttonComponent={buttonComponent}>
-        <h3 className={styles.title}>{title}</h3>
-        {children}
-      </Expandable>
+      {expandable === true ? <Expandable buttonComponent={buttonComponent}>{inner}</Expandable> : <>{inner}</>}
     </section>
   )
 }

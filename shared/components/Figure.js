@@ -2,7 +2,7 @@ import React from 'react'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import MarkdownRenderer from 'react-markdown-renderer'
 
-export default function Figure({ styles, image, license, caption, credit, size, alt, src }) {
+export default function Figure({ styles, image, license, caption, credit, size, alt, src, className }) {
   if (!styles) styles = {}
 
   let imageEl = <>Image not found ({src})</>
@@ -16,7 +16,7 @@ export default function Figure({ styles, image, license, caption, credit, size, 
   }
 
   return (
-    <figure className={`${styles.container} ${styles[size]}`}>
+    <figure className={`${styles.container} ${styles[size]} ${className ? className : ''}`}>
       <div className={styles.inner}>
         {imageEl}
         {(credit || caption) && (

@@ -2,30 +2,64 @@
 
 .container {
   @extend %copy;
-  display: flex;
-  padding: 1rem 5%;
-  justify-content: space-between;
-  // background: var(--fc-text);
-  // color: white;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  border-bottom: 1px solid var(--black);
+  z-index: 1000;
+  background: white;
+}
+
+.inner {
+  @extend %grid;
+  width: 100%;
+  align-items: stretch;
+  height: 3em;
+  padding: 0 var(--padding);
 }
 
 .title {
-  @extend %copy-bold;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  height: 100%;
+  grid-column: 1 / 3;
+  svg {
+    height: 1.5rem;
+    display: block;
+    width: auto;
+  }
 }
 
 .menu {
+  display: contents;
+  li {
+    display: contents;
+  }
   ul {
     display: flex;
+    align-items: stretch;
     list-style: none;
-    gap: 0.1em;
+    gap: 0.65em;
   }
 }
 
 .link {
-  padding: 0.15em 0.4em;
-  border-radius: var(--br);
+  @extend %h3;
+  padding: 0 0.4em;
+  font-size: var(--ms-0);
+  display: flex;
+  align-items: center;
   &:hover,
   &:focus-visible {
     background: rgba(black, 0.035);
   }
+}
+
+.controls {
+  grid-column: 4 / 6;
+  justify-content: flex-end;
+  display: flex;
+  align-items: stretch;
 }

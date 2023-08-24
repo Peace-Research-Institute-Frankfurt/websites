@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 import Figure from '@shared/components/Figure'
 import * as styles from './Figure.module.scss'
 
-export default function FigureAdapter({ caption, credit, size, alt, src, license }) {
+export default function FigureAdapter({ caption, credit, size, alt, src, license, className }) {
   const data = useStaticQuery(graphql`
     query ImageQuery {
       licenses: allLicensesJson {
@@ -13,7 +13,7 @@ export default function FigureAdapter({ caption, credit, size, alt, src, license
           url
         }
       }
-      images: allFile(filter: { extension: { nin: ["mdx", "json", "mp3"] } }) {
+      images: allFile(filter: { extension: { nin: ["mdx", "json", "mp3", "csv"] } }) {
         nodes {
           relativePath
           base
@@ -31,7 +31,7 @@ export default function FigureAdapter({ caption, credit, size, alt, src, license
   // Let's find our image
   let image = null
   data.images.nodes.forEach((img) => {
-    if (img.base.toLowerCase() === src.toLowerCase()) {
+    if (img.relativePath.toLowerCase() === src.toLowerCase()) {
       image = img
     }
   })
@@ -42,5 +42,17 @@ export default function FigureAdapter({ caption, credit, size, alt, src, license
       licenseNode = l
     }
   })
-  return <Figure styles={styles} image={image} src={src} caption={caption} license={licenseNode} credit={credit} alt={alt} size={size} />
+  return (
+    <Figure
+      styles={styles}
+      image={image}
+      src={src}
+      caption={caption}
+      license={licenseNode}
+      credit={credit}
+      alt={alt}
+      size={size}
+      className={className}
+    />
+  )
 }

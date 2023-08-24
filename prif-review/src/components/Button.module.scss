@@ -1,0 +1,121 @@
+.container {
+  display: inline-flex;
+  padding: 0 0.65em;
+  height: 2em;
+  padding-top: 0.05em;
+  font-family: var(--sans);
+  line-height: 1;
+  border-radius: var(--br);
+  text-decoration-width: 1px;
+  cursor: pointer;
+  gap: 0.25em;
+  transition: var(--fast);
+  white-space: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.primary {
+  background: var(--blue-90);
+  color: white;
+  &:hover,
+  &:focus-visible {
+    background: var(--blue-80);
+  }
+}
+.secondary {
+  background: white;
+  border: 1px solid var(--gray-60);
+  color: var(--blue-90);
+  &:hover,
+  &:focus-visible {
+    background: var(--gray-20);
+    border: 1px solid var(--blue-90);
+  }
+}
+.ghost {
+  background: transparent;
+  color: var(--blue-90);
+  border: 1px solid transparent;
+  &:hover,
+  &:focus-visible {
+    border: 1px solid var(--gray-50);
+  }
+}
+
+.container.text {
+  padding: 0;
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+  height: auto;
+}
+
+.small {
+  font-size: var(--ms--1);
+  height: 1.9em;
+  padding: 0 0.55em;
+  padding-top: 0.1em;
+  .icon {
+    position: relative;
+    svg {
+      height: 1em;
+    }
+  }
+}
+
+.hide-label {
+  padding: 0 0.3em;
+  .label {
+    position: absolute;
+    font-size: 0;
+    pointer-events: none;
+  }
+}
+
+.icon {
+  position: relative;
+  svg {
+    height: 1.3em;
+    width: auto;
+    display: block;
+  }
+}
+
+.active {
+  background: var(--blue-80);
+  border: 1px solid var(--blue-80);
+  color: white;
+  &:hover,
+  &:focus-visible {
+    background: var(--blue-90);
+  }
+}
+
+.group {
+  display: flex;
+  flex-shrink: 0;
+  gap: 0;
+  & > .container,
+  summary .container {
+    border-radius: 0;
+  }
+
+  & > .container:first-of-type,
+  & > details:first-child summary .container {
+    border-top-left-radius: var(--br);
+    border-bottom-left-radius: var(--br);
+  }
+
+  & > .container:last-child,
+  & > details:last-child summary .container {
+    border-left: 0;
+    border-top-right-radius: var(--br);
+    border-bottom-right-radius: var(--br);
+  }
+
+  & > .container:only-child,
+  & > details:only-child summary .container {
+    border-left: 1px solid var(--blue-80);
+  }
+}

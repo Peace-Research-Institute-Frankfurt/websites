@@ -1,0 +1,38 @@
+@import 'vars';
+
+.container {
+  margin: var(--baseline) 0;
+  position: relative;
+  grid-column: 1 / 6;
+  @include bp(m) {
+    grid-column: 2 / 4;
+  }
+  @include bp(l) {
+    grid-column: 3 / 4;
+  }
+  p:last-child {
+    margin-bottom: 0;
+  }
+  p {
+    margin-bottom: 0.6em;
+  }
+}
+
+.inner {
+  padding: calc(var(--baseline) * 1);
+  background: var(--fc-background);
+  border-top: 0.25em solid var(--fc-text);
+}
+
+.title {
+  @extend %h3;
+  font-size: var(--ms-1);
+  line-height: calc(var(--baseline) * 1);
+  margin-bottom: calc(var(--baseline) * 0.25);
+}
+
+.eyebrow {
+  @extend %h4;
+  display: block;
+  margin-bottom: calc(var(--baseline) * 0.25);
+}
