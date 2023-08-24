@@ -121,10 +121,10 @@ img {
 .footnotes {
   @extend %caption;
   grid-column: 1/4;
+  margin-top: var(--baseline);
+  margin-left: 1em;
   @include bp(m) {
-    grid-column: 3 / 4;
-    align-self: last baseline;
-    justify-self: flex-end;
+    grid-column: 2 / 4;
   }
   h2 {
     display: none;
