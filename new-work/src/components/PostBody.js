@@ -11,6 +11,7 @@ import Quote from '@shared/components/Quote'
 import { Tab, Tabs } from './TabsAdapter'
 import Callout from '@shared/components/Callout'
 import Button from './ButtonAdapter'
+import { Listicle, ListicleItem } from './Listicle'
 
 import * as QuoteStyles from './Quote.module.scss'
 import * as CalloutStyles from './Callout.module.scss'
@@ -35,6 +36,8 @@ const shortCodes = {
   Tabs,
   Leadin,
   FileList,
+  Listicle,
+  ListicleItem,
 }
 
 export default function PostBody({ children }) {

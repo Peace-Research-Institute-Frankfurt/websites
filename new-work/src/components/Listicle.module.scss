@@ -1,0 +1,28 @@
+.container {
+  grid-column: 2 / 3;
+  border: 1px solid var(--gray);
+  margin-bottom: var(--baseline);
+  margin-top: calc(var(--baseline) * 0.5);
+  counter-reset: items;
+  border-radius: var(--br);
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.item {
+  counter-increment: items;
+  padding: 1em;
+  list-style: none;
+  border-bottom: 1px solid var(--gray);
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.title {
+  &:before {
+    content: counter(items) '.';
+    margin-right: 0.2em;
+  }
+}

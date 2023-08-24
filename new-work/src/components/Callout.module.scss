@@ -3,7 +3,9 @@
 .container {
   border: 1px solid var(--gray);
   margin-bottom: var(--baseline);
-  padding: var(--baseline);
+  margin-top: calc(var(--baseline) * 0.5);
+  border-radius: var(--br);
+  padding: 1em;
   grid-column: 1 / 3;
   @include bp(l) {
     grid-column: 1 / 4;
