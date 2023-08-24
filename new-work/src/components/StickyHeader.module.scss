@@ -2,34 +2,45 @@
   position: fixed;
   top: 0;
   left: var(--padding);
+  right: var(--padding);
   font-family: var(--edge-rounded);
   z-index: 1000;
   display: flex;
+  align-items: flex-start;
   justify-content: space-between;
-  border-bottom-left-radius: calc(0.5 * var(--br));
-  border-bottom-right-radius: calc(0.5 * var(--br));
   height: var(--header-height);
-  background-color: var(--black);
-  border: 1px solid var(--gray);
   border-top: 0;
 }
 
 .logo {
-  font-size: var(--ms-0);
+  background-color: var(--black);
+  border-bottom-left-radius: calc(0.5 * var(--br));
+  border-bottom-right-radius: calc(0.5 * var(--br));
+  border: 1px solid var(--gray);
+  font-size: 0;
   display: flex;
+  padding: 0 0.5rem;
   align-items: center;
-  padding: 0 var(--padding);
-  padding-top: 0.1em;
+  height: var(--header-height);
+  svg {
+    height: calc(var(--header-height) * 0.9);
+  }
+  path,
+  rect {
+    fill: white;
+  }
 }
 
 .nav {
-  padding-top: 0.1em;
-  border-left: 1px solid var(--gray);
+  border: 1px solid var(--gray);
   display: flex;
+  background: var(--black);
+  border-bottom-left-radius: calc(0.5 * var(--br));
+  border-bottom-right-radius: calc(0.5 * var(--br));
 }
 .nav-item {
   display: flex;
   align-items: center;
   font-size: var(--ms-0);
-  padding: 0 var(--padding);
+  padding: 0.5em var(--padding);
 }

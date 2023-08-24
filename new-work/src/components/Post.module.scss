@@ -2,6 +2,7 @@
 
 .container {
   position: relative;
+  overflow: visible;
   &:after {
     content: '';
     position: absolute;

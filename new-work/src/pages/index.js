@@ -61,7 +61,6 @@ const Index = ({ data }) => {
           credit="Illustration von Max Köhler"
         />
         <section className={styles.content}>
-          <h2 className={styles.sectionTitle}>Inhalte</h2>
           <ol className={styles.filters}>
             {categories.map((category) => {
               return (

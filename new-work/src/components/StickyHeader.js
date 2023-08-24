@@ -1,6 +1,7 @@
 import { Link, graphql, useStaticQuery } from 'gatsby'
 import React from 'react'
 import useScrollPosition from '@shared/hooks/useScrollPosition'
+import Logo from '../images/logo.svg'
 import * as styles from './StickyHeader.module.scss'
 
 export default function StickyHeader() {
@@ -28,6 +29,7 @@ export default function StickyHeader() {
       <header style={containerStyles} className={`${styles.container} ${isScrolled && styles.stuck}`}>
         <Link className={styles.logo} to="/">
           {data.site.siteMetadata.title}
+          <Logo />
         </Link>
         <nav className={styles.nav}>
           <Link className={styles.navItem} to="/terms">
