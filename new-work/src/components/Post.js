@@ -7,6 +7,7 @@ import SkipToContent from './SkipToContent'
 import PostBody from './PostBody'
 import PostHeader from './PostHeader'
 import Bylines from './Bylines'
+import { PostList, PostListItem } from './PostList'
 import MarkdownRenderer from 'react-markdown-renderer'
 
 import * as styles from './Post.module.scss'
@@ -19,6 +20,7 @@ export const query = graphql`
       }
     }
     post: file(id: { eq: $id }) {
+      id
       childMdx {
         fields {
           slug
@@ -73,6 +75,7 @@ export const query = graphql`
             order
             intro
             color
+            category
           }
         }
       }
@@ -95,6 +98,15 @@ const Post = ({ data, children }) => {
       <GatsbyImage className={styles.heroPortrait} loading="eager" image={getImage(frontmatter.hero_portrait)} alt={frontmatter.hero_portrait_alt} />
     )
   }
+
+  const posts = data.posts.nodes.map((node) => {
+    const fm = node.childMdx.frontmatter
+    return (
+      <li key={`post-${node.id}`}>
+        <PostListItem isCurrent={node.id === data.post.id} title={fm.title} category={fm.category} slug={node.childMdx.fields.slug} />
+      </li>
+    )
+  })
 
   const next = data.posts.nodes[currentIndex + 1]
   const previous = data.posts.nodes[currentIndex - 1]
@@ -121,6 +133,9 @@ const Post = ({ data, children }) => {
             )}
           </aside>
           <PostBody>{children}</PostBody>
+          <nav class={styles.postsNav}>
+            <PostList>{posts}</PostList>
+          </nav>
         </main>
       </article>
     </App>

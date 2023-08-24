@@ -1,6 +1,7 @@
 @import 'vars';
 .container {
   margin: calc(var(--baseline) / 2) 0;
+  grid-column: 2 / 3;
 }
 
 .consent {

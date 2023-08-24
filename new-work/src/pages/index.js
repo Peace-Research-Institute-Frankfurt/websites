@@ -6,6 +6,7 @@ import Meta from '../components/Meta'
 import SkipToContent from '../components/SkipToContent'
 import PostHeader from '../components/PostHeader'
 import * as styles from './index.module.scss'
+import { PostList, PostListItem } from '../components/PostList'
 
 export const query = graphql`
   query {
@@ -41,13 +42,11 @@ const Index = ({ data }) => {
     .filter((node) => {
       return activeFilters.includes(node.childMdx.frontmatter.category)
     })
-    .map((node, i) => {
+    .map((node) => {
       const fm = node.childMdx.frontmatter
       return (
-        <li key={`post-${i}`}>
-          <Link className={`${styles.post} ${fm.category ? fm.category : ''}`} to={node.childMdx.fields.slug}>
-            {fm.title}
-          </Link>
+        <li key={`post-${node.id}`}>
+          <PostListItem title={fm.title} category={fm.category} slug={node.childMdx.fields.slug} />
         </li>
       )
     })
@@ -87,7 +86,7 @@ const Index = ({ data }) => {
               )
             })}
           </ol>
-          <ol className={styles.posts}>{posts}</ol>
+          <PostList>{posts}</PostList>
         </section>
       </main>
     </App>

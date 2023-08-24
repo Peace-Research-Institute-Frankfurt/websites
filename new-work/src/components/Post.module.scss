@@ -87,6 +87,11 @@
   }
 }
 
+.posts-nav {
+  grid-column: 1 / 4;
+  padding: calc(var(--baseline) * 2) 0;
+}
+
 p.intro {
   @extend %copy-large;
   grid-column: 1 / 2;
