@@ -9,9 +9,11 @@ import TermAdapter from './TermAdapter'
 import { Interview, InterviewQuestion } from '@shared/components/Interview'
 import Quote from '@shared/components/Quote'
 import { Tab, Tabs } from './TabsAdapter'
+import Callout from '@shared/components/Callout'
+import Button from './ButtonAdapter'
 
 import * as QuoteStyles from './Quote.module.scss'
-
+import * as CalloutStyles from './Callout.module.scss'
 import * as FigureStyles from './Figure.module.scss'
 import * as EmbedStyles from './Embed.module.scss'
 import * as EmbedChoicesStyles from './EmbedChoices.module.scss'
@@ -28,6 +30,7 @@ const shortCodes = {
   Term: ({ ...props }) => <TermAdapter {...props} />,
   Interview: ({ ...props }) => <Interview styles={InterviewStyles} {...props} />,
   InterviewQuestion: ({ ...props }) => <InterviewQuestion styles={InterviewStyles} {...props} />,
+  Callout: ({ ...props }) => <Callout expandable={false} buttonComponent={Button} styles={CalloutStyles} {...props} />,
   Tab,
   Tabs,
   Leadin,
