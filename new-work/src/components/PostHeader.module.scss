@@ -7,6 +7,7 @@
   right: 0;
   z-index: 0;
   height: 100vh;
+  overflow: hidden;
   & > div {
     height: 100% !important;
   }
@@ -14,11 +15,11 @@
 .container {
   background: var(--black);
   margin: 0 var(--padding);
-  position: relative;
   border-top-left-radius: var(--br);
   border-top-right-radius: var(--br);
   z-index: 100;
   margin-top: var(--header-height);
+  position: relative;
 }
 
 .has-image {
