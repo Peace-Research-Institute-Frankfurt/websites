@@ -5,7 +5,9 @@
   display: flex;
   justify-content: space-between;
   text-decoration: none !important;
-  padding: 0.25rem 0.5rem;
+  padding: 0.35em 0.5em;
+  border: 1px solid var(--gray);
+  margin-top: var(--baseline);
   @include bp(m) {
     grid-column: 1 / 3;
   }
