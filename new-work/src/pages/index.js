@@ -56,7 +56,13 @@ const Index = ({ data }) => {
       <main id="content" className={styles.container}>
         <PostHeader
           image={<StaticImage src="../images/cubes.png" alt="" layout="fullWidth" />}
-          title="Neue Arbeitsformen für Wissenschaft und Forschung"
+          title={
+            <>
+              <span className={styles.titleLine}>Neue Arbeitsformen</span>
+              <span className={styles.titleLine}>für Wissenschaft</span>
+              <span className={styles.titleLine}>und Forschung</span>
+            </>
+          }
           intro={
             <>
               New Work bricht Regeln auf, hinterfragt Machtverhältnisse und rückt den Menschen seinen Stärken, Bedürfnissen und Emotiononen in den
