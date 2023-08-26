@@ -17,9 +17,18 @@
   }
 }
 
+.credits {
+  grid-column: 1/ 2;
+  grid-row: span 3;
+}
+
 .credit {
   @extend %caption;
   margin-top: 1em;
+}
+
+.copy {
+  display: contents;
 }
 
 .body {
@@ -101,11 +110,4 @@
   padding-top: calc(var(--baseline) * 1);
   margin: 0 calc(var(--padding) * -1);
   margin-top: var(--baseline);
-}
-
-p.intro {
-  @extend %copy-large;
-  grid-column: 1 / 2;
-  grid-row: 1 / 4;
-  margin-top: -0.3em;
 }

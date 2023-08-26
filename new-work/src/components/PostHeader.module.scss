@@ -46,7 +46,6 @@
 .title {
   @extend %h1;
   hyphens: auto;
-  padding-top: 0.125em;
   margin-bottom: -0.125em;
 }
 .is-long {
@@ -55,7 +54,8 @@
 
 .intro {
   @extend %copy-large;
-  padding: var(--padding-small) var(--padding);
+  padding: 0.5em var(--padding);
+  padding-bottom: 0.4em;
   border-bottom: 1px solid var(--gray);
 }
 

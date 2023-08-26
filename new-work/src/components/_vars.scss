@@ -23,7 +23,7 @@
 }
 
 %h1 {
-  font-size: Max(9vw, var(--ms-5));
+  font-size: Max(9.3vw, var(--ms-5));
   font-family: var(--edge-rounded);
   line-height: 0.825;
   letter-spacing: -0.03em;
@@ -44,7 +44,7 @@
   hyphens: none;
   font-weight: bold;
   font-family: var(--edge);
-  letter-spacing: -0.01em;
+  line-height: calc(var(--baseline) * 1.333);
 }
 
 %h3 {

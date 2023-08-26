@@ -124,7 +124,7 @@ const Post = ({ data, children }) => {
           intro={frontmatter.intro}
         />
         <main className={styles.body}>
-          <aside className="credits">
+          <aside className={styles.credits}>
             <Bylines authors={frontmatter.authors}></Bylines>
             {frontmatter.hero_credit && (
               <aside className={styles.credit}>
@@ -132,7 +132,9 @@ const Post = ({ data, children }) => {
               </aside>
             )}
           </aside>
-          <PostBody>{children}</PostBody>
+          <div className={styles.copy}>
+            <PostBody>{children}</PostBody>
+          </div>
           <nav className={styles.postsNav}>
             <PostList>{posts}</PostList>
           </nav>
