@@ -9,6 +9,7 @@ const FileAdapter = function ({ file, title }) {
     query {
       files: allFile {
         nodes {
+          id
           relativePath
           base
           name
@@ -36,8 +37,12 @@ const FileList = function ({ files }) {
   if (!styles) styles = {}
   return (
     <ul className={styles.list}>
-      {files.map((el) => {
-        return <li className={styles.listItem}>{el}</li>
+      {files.map((el, i) => {
+        return (
+          <li key={`file.${i}`} className={styles.listItem}>
+            {el}
+          </li>
+        )
       })}
     </ul>
   )

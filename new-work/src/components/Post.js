@@ -133,7 +133,7 @@ const Post = ({ data, children }) => {
             )}
           </aside>
           <PostBody>{children}</PostBody>
-          <nav class={styles.postsNav}>
+          <nav className={styles.postsNav}>
             <PostList>{posts}</PostList>
           </nav>
         </main>
