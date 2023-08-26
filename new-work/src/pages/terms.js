@@ -19,7 +19,7 @@ export const query = graphql`
   }
 `
 
-const Index = ({ data }) => {
+const Terms = ({ data }) => {
   let initials = []
   const [currentLetter, setCurrentLetter] = useState(null)
   const [activeTerms, setActiveTerms] = useState([])
@@ -125,5 +125,5 @@ const Index = ({ data }) => {
   )
 }
 
-export default Index
+export default Terms
 export const Head = ({ data }) => <Meta />

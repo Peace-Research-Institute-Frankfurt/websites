@@ -8,7 +8,7 @@ export default function StickyHeader() {
   const scrollPosition = useScrollPosition()
   let scrollProgress = 0
   if (typeof window !== 'undefined') {
-    scrollProgress = Math.min(1, scrollPosition.y / Math.min(window.innerHeight, document.body.scrollHeight - window.innerHeight))
+    scrollProgress = Math.min(1, scrollPosition.y / 800)
   }
 
   return (
