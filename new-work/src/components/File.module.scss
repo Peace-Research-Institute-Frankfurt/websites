@@ -45,6 +45,10 @@
   }
   border-bottom: 1px solid var(--gray);
   margin-bottom: 0 !important;
+  .container {
+    margin-top: 0;
+    border: 0;
+  }
 }
 
 .meta {
