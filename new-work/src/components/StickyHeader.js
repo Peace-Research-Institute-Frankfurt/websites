@@ -8,25 +8,19 @@ export default function StickyHeader() {
   const scrollPosition = useScrollPosition()
   let scrollProgress = 0
   if (typeof window !== 'undefined') {
-    scrollProgress = Math.min(1, scrollPosition.y / window.innerHeight)
-  }
-  const containerStyles = {
-    '--scroll': scrollPosition.y,
-    '--progress': scrollProgress,
+    scrollProgress = Math.min(1, scrollPosition.y / Math.min(window.innerHeight, document.body.scrollHeight - window.innerHeight))
   }
 
   return (
-    <>
-      <header style={containerStyles} className={`${styles.container}`}>
-        <Link className={styles.logo} to="/">
-          <Logo progress={scrollProgress} />
+    <header className={`${styles.container}`}>
+      <Link className={styles.logo} to="/">
+        <Logo progress={scrollProgress} />
+      </Link>
+      <nav className={styles.nav}>
+        <Link className={styles.navItem} to="/terms">
+          Glossar
         </Link>
-        <nav className={styles.nav}>
-          <Link className={styles.navItem} to="/terms">
-            Glossar
-          </Link>
-        </nav>
-      </header>
-    </>
+      </nav>
+    </header>
   )
 }

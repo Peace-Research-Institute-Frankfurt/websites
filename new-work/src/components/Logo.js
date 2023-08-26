@@ -21,6 +21,7 @@ export default function Logo({ progress }) {
   const leibnizTransform = `translate(${easeInOutCubic(progress) * -428} 0)`
   const ewTransform = `translate(${easeInOutCubic(progress) * -428} 0)`
   const width = 1000 - easeInOutCubic(progress) * 425
+
   return (
     <div className={styles.container}>
       <span className={styles.label}> {data.site.siteMetadata.title}</span>
