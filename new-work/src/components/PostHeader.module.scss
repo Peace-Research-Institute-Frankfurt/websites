@@ -18,12 +18,15 @@
   border-top-left-radius: var(--br);
   border-top-right-radius: var(--br);
   z-index: 100;
-  margin-top: var(--header-height);
   position: relative;
 }
 
+.wrapper {
+  padding-top: var(--header-height);
+}
+
 .has-image {
-  margin-top: 65vh;
+  padding-top: 65vh;
 }
 
 .title-container {

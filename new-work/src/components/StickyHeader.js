@@ -1,35 +1,25 @@
-import { Link, graphql, useStaticQuery } from 'gatsby'
+import { Link } from 'gatsby'
 import React from 'react'
 import useScrollPosition from '@shared/hooks/useScrollPosition'
-import Logo from '../images/logo.svg'
 import * as styles from './StickyHeader.module.scss'
+import Logo from './Logo'
 
 export default function StickyHeader() {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
   const scrollPosition = useScrollPosition()
-  const isScrolled = scrollPosition.y > 50
   let scrollProgress = 0
   if (typeof window !== 'undefined') {
-    scrollProgress = Math.min(1, scrollPosition.y / (document.body.scrollHeight - window.innerHeight))
+    scrollProgress = Math.min(1, scrollPosition.y / window.innerHeight)
   }
   const containerStyles = {
     '--scroll': scrollPosition.y,
     '--progress': scrollProgress,
   }
+
   return (
     <>
-      <header style={containerStyles} className={`${styles.container} ${isScrolled && styles.stuck}`}>
+      <header style={containerStyles} className={`${styles.container}`}>
         <Link className={styles.logo} to="/">
-          {data.site.siteMetadata.title}
-          <Logo />
+          <Logo progress={scrollProgress} />
         </Link>
         <nav className={styles.nav}>
           <Link className={styles.navItem} to="/terms">

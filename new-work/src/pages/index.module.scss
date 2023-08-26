@@ -2,16 +2,6 @@
 
 .container {
   position: relative;
-  &:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(to bottom, transparent 0%, black 30vh);
-    z-index: 50;
-  }
 }
 
 .content {

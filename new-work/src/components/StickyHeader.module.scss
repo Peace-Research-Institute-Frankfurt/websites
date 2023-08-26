@@ -17,17 +17,15 @@
   border-bottom-left-radius: calc(0.5 * var(--br));
   border-bottom-right-radius: calc(0.5 * var(--br));
   border: 1px solid var(--gray);
-  font-size: 0;
+  border-top: 0;
   display: flex;
-  padding: 0 0.5rem;
+  padding: 0 0.65rem;
+  transition: border-color var(--fast);
   align-items: center;
   height: var(--header-height);
-  svg {
-    height: calc(var(--header-height) * 0.9);
-  }
-  path,
-  rect {
-    fill: white;
+  &:hover,
+  &:focus-visible {
+    background: rgb(19, 19, 19);
   }
 }
 

@@ -1,0 +1,27 @@
+.debug {
+  position: absolute;
+  z-index: 1000;
+  color: red;
+  top: 1em;
+  left: 1em;
+}
+
+.container {
+  position: relative;
+  padding-top: 0.5rem;
+  path,
+  rect {
+    fill: white;
+  }
+  svg {
+    height: calc(var(--header-height) * 0.675);
+    width: auto;
+  }
+}
+
+.ork {
+}
+
+.label {
+  font-size: 0;
+}
