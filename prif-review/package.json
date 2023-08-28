@@ -44,7 +44,7 @@
     "micromark-extension-gfm-footnote": "^2.0.0",
     "react": "18.2.0",
     "react-dom": "^18.2.0",
-    "react-i18next": "^13.1.2",
+    "react-i18next": "^13.2.0",
     "react-markdown-renderer": "^1.4.0",
     "remark-gfm": "^3.0.1",
     "sass": "^1.66.1",
