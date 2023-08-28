@@ -66,7 +66,7 @@
   letter-spacing: 0.05em;
   word-spacing: 0.05em;
   font-variation-settings: 'wght' 350, 'wdth' 200 !important;
-  line-height: calc(var(--baseline) * .66666);
+  line-height: calc(var(--baseline) * 0.66666);
 }
 
 %copy {
@@ -132,7 +132,7 @@
 %grid {
   display: grid;
   grid-template-columns: 1fr minmax(auto, 5rem) minmax(auto, 46rem) minmax(auto, 5rem) 1fr;
-  column-gap: var(--padding-small);
+  column-gap: var(--baseline);
   margin: 0 auto;
   padding: 0 var(--padding);
   max-width: 110rem;
