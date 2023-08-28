@@ -1,14 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { graphql } from 'gatsby'
 import { MDXProvider } from '@mdx-js/react'
 import MarkdownRenderer from 'react-markdown-renderer'
 import App from '../components/App'
 import Meta from '../components/Meta'
 import SkipToContent from '../components/SkipToContent'
-import Leadin from "./Leadin"
+import Leadin from './Leadin'
 import { useTranslation } from 'gatsby-plugin-react-i18next'
 import { Link } from 'gatsby-plugin-react-i18next'
-import useColors from "../hooks/useColors.js"
+import useColors from '../hooks/useColors.js'
 import { Person, PersonList } from './Person'
 import * as styles from './Report.module.scss'
 
@@ -108,27 +108,28 @@ export const query = graphql`
 
 const Index = ({ data, pageContext, children, location }) => {
   const year = data.post.relativeDirectory.replace(/(.{2})\/(reports)\//g, '')
+  const [introCollapsed, setIntroCollapsed] = useState(true)
   const { t } = useTranslation()
-  
+
   const shortCodes = {
     Leadin,
     Person,
-    PersonList
+    PersonList,
   }
-  
-  const {text, background, knockout} = useColors(data.post.childMdx.frontmatter.color || "black")
+
+  const { text, background, knockout } = useColors(data.post.childMdx.frontmatter.color || 'black')
 
   const appStyles = {
     '--fc-text': text.toString(),
     '--fc-background': background.toString(),
     '--fc-knockout': knockout.toString(),
-    '--logo-primary': "var(--prif-blue-dark)",
-    '--logo-secondary': "var(--prif-blue-light)"
+    '--logo-primary': 'var(--prif-blue-dark)',
+    '--logo-secondary': 'var(--prif-blue-light)',
   }
-  
+
   const posts = data.posts.nodes.map((p) => {
     let postStyles = {}
-    const year = data.post.relativeDirectory.replace(/(.{2})\/(reports)\//g, '')  
+    const year = data.post.relativeDirectory.replace(/(.{2})\/(reports)\//g, '')
     const frontmatter = p.childMdx.frontmatter
     const maxWords = 45
     let intro = ''
@@ -167,23 +168,32 @@ const Index = ({ data, pageContext, children, location }) => {
             </h1>
           </div>
         </header>
-        <section className={styles.intro}>
+        <section className={`${styles.intro} ${introCollapsed ? styles.collapsed : ''}`}>
           <h2 className={styles.sectionTitle}>{t('Editorial')}</h2>
           <div className={styles.introInner}>
             <MDXProvider components={shortCodes}>{children}</MDXProvider>
           </div>
-          {data.post.childMdx.frontmatter.authors &&
+          <button
+            className={styles.introToggle}
+            onClick={() => {
+              setIntroCollapsed(!introCollapsed)
+            }}
+          >
+            {introCollapsed ? t('Read more') : t('Less')}
+          </button>
+          {data.post.childMdx.frontmatter.authors && (
             <div className={styles.introAuthors}>
-            <PersonList>
-             {data.post.childMdx.frontmatter.authors.map((person, i) => {
-               return(
-                 <Person key={`person.${i}`} name={person.name} image={person.image}>
-                   {person.bio}
-                 </Person>)
-             })}
-            </PersonList>
+              <PersonList>
+                {data.post.childMdx.frontmatter.authors.map((person, i) => {
+                  return (
+                    <Person key={`person.${i}`} name={person.name} image={person.image}>
+                      {person.bio}
+                    </Person>
+                  )
+                })}
+              </PersonList>
             </div>
-          }
+          )}
         </section>
         <section className={styles.posts}>
           <h2 className={styles.sectionTitle}>{t('Contents')}</h2>
