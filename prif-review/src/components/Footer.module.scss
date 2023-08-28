@@ -14,7 +14,7 @@
 }
 
 .menu {
-  @extend %caption-bold;
+  @extend %caption;
   ul {
     display: flex;
     list-style: none;

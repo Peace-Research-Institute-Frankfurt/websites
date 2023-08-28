@@ -3,10 +3,48 @@
 .container {
 }
 
+.header {
+  background-color: var(--fc-background);
+  min-height: 50vh;
+  padding-top: 5em;
+  @include bp(m) {
+    min-height: 60vh;
+    padding-top: 8em;
+  }
+  @include bp(xl) {
+    min-height: 76vh;
+    padding-top: 12em;
+  }
+}
+.header-inner {
+  @extend %grid;
+}
+
+.title {
+  @extend %h1;
+  grid-column: 1 / 5;
+  line-height: 0.85;
+  font-size: Min(5rem, 12vw);
+  @include bp(m) {
+    grid-column: 3 / 6;
+    font-size: 6vw;
+  }
+  @include bp(xl) {
+    grid-column: 2 / 6;
+  }
+  span {
+    display: block;
+    font-size: 0.9em;
+    margin-top: 0.15em;
+    font-variation-settings: 'wght' 250;
+  }
+}
+
 .collapsed {
   max-height: 60vh;
   &:after {
     content: '';
+    pointer-events: none;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -32,8 +70,13 @@
   padding-right: 1.5em;
   gap: 0.35em;
   cursor: pointer;
-  grid-column: 3 / 4;
   transition: var(--fast);
+  left: var(--padding);
+  @include bp(m) {
+    left: auto;
+    transform: translateX(0);
+    grid-column: 3 / 4;
+  }
   @include bp(xl) {
     grid-column: 2 / 4;
   }
@@ -95,21 +138,21 @@
 .intro-authors {
   grid-column: 1 / 6;
   align-self: flex-end;
-  max-width: 10em;
   & > section {
     margin-bottom: 0;
   }
   @include bp(m) {
     padding-top: var(--baseline);
     grid-column: 3 / 4;
-    grid-row: 1 / 3;
     & > section > div {
       display: flex;
       flex-flow: row;
     }
   }
   @include bp(l) {
+    max-width: 10em;
     padding-top: 0;
+    grid-row: 1 / 3;
     margin-bottom: 0.3em; // Align to baseline
     grid-column: 1 / 3;
     & > section > div {
@@ -127,6 +170,7 @@
   @extend %h4;
   color: var(--black);
   grid-column: 1 / 5;
+  margin-bottom: var(--baseline);
   @include bp(m) {
     padding-top: 0.5em;
     grid-column: 1 / 3;
@@ -142,8 +186,11 @@
   position: relative;
   grid-column: 1 / 6;
   border-right: 1px solid var(--fc-text);
+  border-bottom: 1px solid var(--fc-text);
   @include bp(m) {
+    grid-row: 1 / 3;
     grid-column: 3 / 6;
+    border-bottom: 0;
   }
   @include bp(xl) {
     grid-column: 2 / 6;
@@ -178,8 +225,11 @@
   width: 100%;
   transition: var(--fast);
   grid-column: 3 / 4;
-  padding: var(--baseline);
   border-top: 1px solid var(--fc-text);
+  padding: 1em;
+  @include bp(m) {
+    padding: var(--baseline);
+  }
 
   &:hover,
   &:focus-visible {
@@ -191,56 +241,52 @@
   }
 }
 
-.header {
-  background-color: var(--fc-background);
-  min-height: 50vh;
-  padding-top: 5em;
-  @include bp(m) {
-    min-height: 60vh;
-    padding-top: 8em;
-  }
-  @include bp(xl) {
-    min-height: 76vh;
-    padding-top: 12em;
-  }
-}
-.header-inner {
-  @extend %grid;
-}
-
-.title {
-  @extend %h1;
-  grid-column: 1 / 5;
-  line-height: 0.85;
-  font-size: Min(5rem, 12vw);
-  @include bp(m) {
-    grid-column: 3 / 6;
-    font-size: 6vw;
-  }
-  @include bp(xl) {
-    grid-column: 2 / 6;
-  }
-  span {
-    display: block;
-    font-size: 0.9em;
-    font-variation-settings: 'wght' 250;
-  }
-}
-
 .post-title {
   @extend %h2;
-  @include bp(l) {
-    line-height: calc(var(--baseline) * 1.5);
-  }
 }
 
 .post-eyebrow {
   @extend %h4;
   display: block;
-  margin-bottom: calc(var(--baseline) * 0.25);
+  margin-bottom: calc(var(--baseline) * 0.3);
 }
 
 .post-intro {
   @extend %copy-large;
   margin-top: calc(var(--baseline) * 0.25);
+}
+
+.download {
+  @extend %caption;
+  border: 1px solid var(--fc-text);
+  padding: 0.5em 1em;
+  display: inline-flex;
+  gap: 1em;
+  grid-column: 1 / 4;
+  margin-top: var(--baseline);
+  margin-bottom: var(--baseline);
+  max-width: 13em;
+  @include bp(m) {
+    padding: 1em;
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+    align-self: flex-end;
+    flex-flow: column;
+    gap: 0.5em;
+  }
+  @include bp(l) {
+  }
+  svg {
+    width: 1.5em;
+    flex-shrink: 0;
+  }
+  &:hover,
+  &:focus-visible {
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+  }
+}
+
+.download-label {
+  display: block;
 }

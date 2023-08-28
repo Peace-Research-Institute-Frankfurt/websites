@@ -11,6 +11,7 @@ import { Link } from 'gatsby-plugin-react-i18next'
 import useColors from '../hooks/useColors.js'
 import { Person, PersonList } from './Person'
 import Arrow from '../images/arrow-right.svg'
+import DownloadIcon from '../images/download.svg'
 import * as styles from './Report.module.scss'
 
 export const query = graphql`
@@ -43,6 +44,7 @@ export const query = graphql`
           intro
           color
           order
+          download_url
           authors {
             name
             image
@@ -200,6 +202,12 @@ const Index = ({ data, pageContext, children, location }) => {
         <section className={styles.posts}>
           <h2 className={styles.sectionTitle}>{t('Contents')}</h2>
           <ol className={styles.postsList}>{posts}</ol>
+          {data.post.childMdx.frontmatter.download_url && (
+            <a className={styles.download} download href={data.post.childMdx.frontmatter.download_url}>
+              <DownloadIcon />
+              <span className={styles.downloadLabel}>{t('Download full report as PDF')}</span>
+            </a>
+          )}
         </section>
       </main>
     </App>

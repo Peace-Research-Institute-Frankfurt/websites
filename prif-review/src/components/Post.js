@@ -9,6 +9,7 @@ import Lines from '../images/trace-line.svg'
 import FigureAdapter from './FigureAdapter'
 import useColors from '../hooks/useColors.js'
 import Arrow from '../images/arrow-right.svg'
+import MenuIcon from '../images/all-apps.svg'
 import * as styles from './Post.module.scss'
 
 export const query = graphql`
@@ -190,6 +191,10 @@ const Post = ({ data, pageContext, children }) => {
 
   const pagination = (
     <nav className={styles.pagination}>
+      <Link className={styles.menuLink} to="../">
+        {t('Report Overview')}
+        <MenuIcon />
+      </Link>
       {previous && (
         <Link className={`${styles.paginationLink} ${styles.paginationPrev}`} rel="prev" to={`../${previous.childMdx.fields.slug}`}>
           <Arrow />
