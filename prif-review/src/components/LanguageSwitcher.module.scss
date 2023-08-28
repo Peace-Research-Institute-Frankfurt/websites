@@ -22,6 +22,12 @@
   color: white;
   border-right: 0 !important;
   border-left: 0 !important;
+  .inner {
+    &:hover,
+    &:focus-visible {
+      text-decoration: none;
+    }
+  }
 }
 
 .inner {
@@ -36,6 +42,6 @@
   font-variation-settings: 'wdth' 20, 'wght' 300;
   &:hover,
   &:focus-visible {
-    background: rgba(black, 0.05);
+    text-decoration: underline;
   }
 }

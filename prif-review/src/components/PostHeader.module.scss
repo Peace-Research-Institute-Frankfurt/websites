@@ -8,6 +8,8 @@
   overflow: hidden;
   padding: calc(var(--baseline) * 1) 0;
   padding-top: calc(var(--baseline) * 4);
+  box-shadow: 0 -20px 15px -10px inset rgba(black, 0.01);
+  border-bottom: 1px solid rgba(black, 0.05);
   @include bp(m) {
     padding: calc(var(--baseline) * 2) 0;
     padding-top: calc(var(--baseline) * 4);
@@ -33,7 +35,7 @@
     grid-column: 2 / 4;
   }
   @include bp(l) {
-    margin-bottom: calc(var(--baseline) * 1);
+    margin-bottom: calc(var(--baseline) * 1.5);
     grid-column: 3 / 4;
   }
 }

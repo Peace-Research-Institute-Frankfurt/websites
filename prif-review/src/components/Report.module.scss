@@ -7,6 +7,8 @@
   background-color: var(--fc-background);
   min-height: 50vh;
   padding-top: 5em;
+  box-shadow: 0 -20px 15px -10px inset rgba(black, 0.01);
+  border-bottom: 1px solid rgba(black, 0.05);
   @include bp(m) {
     min-height: 60vh;
     padding-top: 8em;
@@ -81,8 +83,10 @@
     grid-column: 2 / 4;
   }
   &:hover,
-  &:focus {
-    padding-right: 1.75em;
+  &:focus-visible {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.15em;
   }
   svg {
     height: 0.75em;
