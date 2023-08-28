@@ -9,9 +9,8 @@
   padding: calc(var(--baseline) * 1) 0;
   padding-top: calc(var(--baseline) * 4);
   @include bp(m) {
-    padding: calc(var(--baseline) * 2.5) 0;
-    padding-top: calc(var(--baseline) * 6);
-    box-shadow: calc(var(--padding) * 0.5) 0 var(--fc-text) inset;
+    padding: calc(var(--baseline) * 2) 0;
+    padding-top: calc(var(--baseline) * 4);
     text-align: left;
   }
 }
@@ -21,10 +20,15 @@
 }
 
 .eyebrow {
-  @extend %h4;
+  @extend %caption-bold;
   display: block;
   grid-column: 1 / 4;
-  margin-bottom: calc(var(--baseline) * 0.5);
+  margin-bottom: calc(var(--baseline) * 1);
+  text-decoration: underline;
+  text-decoration-thickness: 0.75em;
+  text-decoration-color: var(--fc-text);
+  text-decoration-skip-ink: none;
+  text-underline-offset: 0.5em;
   @include bp(m) {
     grid-column: 2 / 4;
   }

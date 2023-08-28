@@ -10,6 +10,7 @@ import { useTranslation } from 'gatsby-plugin-react-i18next'
 import { Link } from 'gatsby-plugin-react-i18next'
 import useColors from '../hooks/useColors.js'
 import { Person, PersonList } from './Person'
+import Arrow from '../images/arrow-right.svg'
 import * as styles from './Report.module.scss'
 
 export const query = graphql`
@@ -180,6 +181,7 @@ const Index = ({ data, pageContext, children, location }) => {
             }}
           >
             {introCollapsed ? t('Read more') : t('Less')}
+            <Arrow />
           </button>
           {data.post.childMdx.frontmatter.authors && (
             <div className={styles.introAuthors}>

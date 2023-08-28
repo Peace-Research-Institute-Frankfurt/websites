@@ -31,9 +31,10 @@
   align-items: center;
   outline-offset: 2px;
   gap: 0.5em;
+  text-decoration: none !important;
   &:hover,
   &:focus-visible {
-    text-decoration: underline;
+    text-decoration: underline !important;
     text-decoration-thickness: 1px;
   }
 
@@ -42,7 +43,7 @@
     transform: rotate(-45deg);
     path {
       stroke: none;
-      fill: var(--fc-knockout)
+      fill: var(--fc-knockout);
     }
   }
 }

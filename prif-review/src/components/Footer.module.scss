@@ -1,19 +1,20 @@
 @import 'vars';
 
 .container {
-  @extend %caption;
-  padding: calc(var(--baseline) * 1);
+  padding: var(--baseline) var(--padding);
   display: flex;
   flex-flow: column;
   clear: both;
   align-items: center;
   @include bp(m) {
-    padding-top: calc(var(--baseline) * 4);
     align-items: flex-start;
+    flex-flow: row;
+    justify-content: space-between;
   }
 }
 
 .menu {
+  @extend %caption-bold;
   ul {
     display: flex;
     list-style: none;
@@ -22,5 +23,6 @@
 }
 
 .copyright {
+  @extend %caption;
   opacity: 0.65;
 }

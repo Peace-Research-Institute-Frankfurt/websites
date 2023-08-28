@@ -6,8 +6,9 @@ import PostHeader from './PostHeader'
 import Meta from './Meta'
 import { useTranslation } from 'gatsby-plugin-react-i18next'
 import Lines from '../images/trace-line.svg'
-import FigureAdapter from "./FigureAdapter"
-import useColors from "../hooks/useColors.js"
+import FigureAdapter from './FigureAdapter'
+import useColors from '../hooks/useColors.js'
+import Arrow from '../images/arrow-right.svg'
 import * as styles from './Post.module.scss'
 
 export const query = graphql`
@@ -159,16 +160,16 @@ const Post = ({ data, pageContext, children }) => {
   })
   const next = posts[currentIndex + 1] || null
   const previous = posts[currentIndex - 1] || null
-  
-  const {text, background, knockout} = useColors(frontmatter.color)
-      
+
+  const { text, background, knockout } = useColors(frontmatter.color)
+
   const appStyles = {
     '--fc-text': text.toString(),
     '--fc-background': frontmatter.color_secondary ? frontmatter.color_secondary : background.toString(),
-    '--fc-knockout': knockout.toString()
+    '--fc-knockout': knockout.toString(),
   }
 
-const heroImage = (
+  const heroImage = (
     <>
       {frontmatter.hero_image && (
         <FigureAdapter
@@ -190,12 +191,14 @@ const heroImage = (
   const pagination = (
     <nav className={styles.pagination}>
       {previous && (
-        <Link className={styles.paginationLink} rel="prev" to={`../${previous.childMdx.fields.slug}`}>
-          <span>{t('Prev')}</span>
+        <Link className={`${styles.paginationLink} ${styles.paginationPrev}`} rel="prev" to={`../${previous.childMdx.fields.slug}`}>
+          <Arrow />
+          <span>{t('Previous')}</span>
         </Link>
       )}
       {next && (
-        <Link className={styles.paginationLink} rel="next" to={`../${next.childMdx.fields.slug}`}>
+        <Link className={`${styles.paginationLink}`} rel="next" to={`../${next.childMdx.fields.slug}`}>
+          <Arrow />
           <span>{t('Next')}</span>
         </Link>
       )}
@@ -227,7 +230,13 @@ export function Head({ data, pageContext, location }) {
     currentLanguage: pageContext.language,
     translations: data.translations.nodes,
   }
-  return <Meta translationData={translationData} title={`${frontmatter.title} – ${data.site.siteMetadata.title} ${year}`} description={frontmatter.intro} />
+  return (
+    <Meta
+      translationData={translationData}
+      title={`${frontmatter.title} – ${data.site.siteMetadata.title} ${year}`}
+      description={frontmatter.intro}
+    />
+  )
 }
 
 export default Post

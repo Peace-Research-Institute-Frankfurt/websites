@@ -9,24 +9,16 @@ export default function SiteHeader({ report, translationData, children }) {
   return (
     <header className={styles.container}>
       <div className={styles.inner}>
-      <nav className={styles.menu}>
-        <ul>
-          <li>
-            <Link to={homePath} className={`${styles.title}`}>
-              <Logo />
-              <span>Review</span>
-            </Link>
-          </li>
-          {report && (
-            <li>
-              <Link className={styles.link} to={`../`}>
-                {report.relativeDirectory.replace(/(.{2})\/(reports)\//g, '')}
-              </Link>
-            </li>
-          )}
-        </ul>
-      </nav>
-      <div className={styles.controls}>{children}</div>
+        <Link to={homePath} className={`${styles.title}`}>
+          <Logo />
+          <span>Review</span>
+        </Link>
+        {report && (
+          <Link className={styles.report} to={`../`}>
+            {report.childMdx.frontmatter.title} {report.relativeDirectory.replace(/(.{2})\/(reports)\//g, '')}
+          </Link>
+        )}
+        <div className={styles.controls}>{children}</div>
       </div>
     </header>
   )

@@ -14,24 +14,42 @@
     background: linear-gradient(to bottom, transparent 0%, white 100%);
     height: 12em;
   }
+  .intro-toggle {
+    svg {
+      transform: translateY(-50%) rotate(0deg);
+    }
+  }
 }
 
 .intro-toggle {
   @extend %copy-large;
-  font-variation-settings: 'wght' 400;
   position: absolute;
   bottom: -1px;
   z-index: 1000;
   background: var(--fc-text);
   color: var(--fc-knockout);
   padding: 0.25em 0.5em;
-  grid-column: 2 / 4;
+  padding-right: 1.5em;
+  gap: 0.35em;
   cursor: pointer;
+  grid-column: 3 / 4;
+  transition: var(--fast);
+  @include bp(xl) {
+    grid-column: 2 / 4;
+  }
   &:hover,
   &:focus {
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 0.15em;
+    padding-right: 1.75em;
+  }
+  svg {
+    height: 0.75em;
+    right: 0.45em;
+    top: 50%;
+    transform: translateY(-50%) rotate(-90deg);
+    position: absolute;
+  }
+  path {
+    fill: currentColor;
   }
 }
 
@@ -44,6 +62,8 @@
   padding-bottom: calc(var(--baseline) * 3);
   overflow: hidden;
   position: relative;
+  border-bottom: 1px dotted var(--fc-text);
+
   p + p {
     text-indent: 2em;
   }
@@ -100,7 +120,6 @@
 .posts {
   @extend %grid;
   padding-top: var(--baseline);
-  border-top: 1px dotted var(--fc-text);
   border-bottom: 1px dotted var(--fc-text);
 }
 
@@ -124,6 +143,9 @@
   grid-column: 1 / 6;
   border-right: 1px solid var(--fc-text);
   @include bp(m) {
+    grid-column: 3 / 6;
+  }
+  @include bp(xl) {
     grid-column: 2 / 6;
   }
   li {
@@ -145,7 +167,7 @@
       z-index: 100;
       width: 1.5rem;
       @include bp(m) {
-        width: 3rem;
+        width: 2.5rem;
       }
     }
   }
@@ -161,8 +183,29 @@
 
   &:hover,
   &:focus-visible {
-    background: var(--fc-background);
+    background: rgba(black, 0.02);
+    .post-title {
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+    }
   }
+}
+
+.header {
+  background-color: var(--fc-background);
+  min-height: 50vh;
+  padding-top: 5em;
+  @include bp(m) {
+    min-height: 60vh;
+    padding-top: 6em;
+  }
+  @include bp(xl) {
+    min-height: 76vh;
+    padding-top: 12em;
+  }
+}
+.header-inner {
+  @extend %grid;
 }
 
 .title {
@@ -174,28 +217,15 @@
   font-size: Min(5rem, 12vw);
   @include bp(m) {
     font-size: 6vw;
+    grid-column: 3 / 6;
+  }
+  @include bp(xl) {
     grid-column: 2 / 6;
   }
   span {
     display: block;
     font-variation-settings: 'wght' 250;
   }
-}
-
-.header {
-  background-color: var(--fc-background);
-  min-height: 50vh;
-  padding-top: 5em;
-  @include bp(m) {
-    min-height: 80vh;
-    padding-top: 6em;
-  }
-  @include bp(l) {
-    padding-top: 10em;
-  }
-}
-.header-inner {
-  @extend %grid;
 }
 
 .post-title {
