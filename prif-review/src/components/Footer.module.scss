@@ -1,14 +1,18 @@
 @import 'vars';
 
 .container {
-  padding: var(--baseline) var(--padding);
+  padding: 0 var(--padding);
   display: flex;
+  position: absolute;
+  bottom: 0;
+  height: 4rem;
+  left: 0;
+  right: 0;
   flex-flow: column;
-  clear: both;
-  align-items: center;
+  justify-content: center;
   @include bp(m) {
-    align-items: flex-start;
     flex-flow: row;
+    align-items: center;
     justify-content: space-between;
   }
 }

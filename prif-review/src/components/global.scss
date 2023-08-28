@@ -53,8 +53,15 @@
   box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   font-family: var(--sans);
+  min-height: 100%;
+  position: relative;
+  padding-bottom: 4rem;
 }
 
 table {

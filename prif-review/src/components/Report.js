@@ -120,16 +120,6 @@ const Index = ({ data, pageContext, children, location }) => {
     PersonList,
   }
 
-  const { text, background, knockout } = useColors(data.post.childMdx.frontmatter.color || 'black')
-
-  const appStyles = {
-    '--fc-text': text.toString(),
-    '--fc-background': background.toString(),
-    '--fc-knockout': knockout.toString(),
-    '--logo-primary': 'var(--prif-blue-dark)',
-    '--logo-secondary': 'var(--prif-blue-light)',
-  }
-
   const posts = data.posts.nodes.map((p) => {
     let postStyles = {}
     const year = data.post.relativeDirectory.replace(/(.{2})\/(reports)\//g, '')
@@ -160,7 +150,7 @@ const Index = ({ data, pageContext, children, location }) => {
     )
   })
   return (
-    <App styles={appStyles} pages={data.pages.nodes} translationData={{ currentLanguage: pageContext.language, currentSlug: location.pathname }}>
+    <App pages={data.pages.nodes} translationData={{ currentLanguage: pageContext.language, currentSlug: location.pathname }}>
       <SkipToContent />
       <main>
         <header className={styles.header}>
@@ -219,5 +209,19 @@ export default Index
 export const Head = ({ data, pageContext, location }) => {
   const year = data.post.relativeDirectory.replace(/(.{2})\/(reports)\//g, '')
   const translationData = { currentLanguage: pageContext.language, currentSlug: location.pathname }
-  return <Meta title={`${year} – ${data.site.siteMetadata.title}`} translationData={translationData} />
+  const { text, background, knockout } = useColors(data.post.childMdx.frontmatter.color || 'black')
+
+  const bodyStyles = {
+    '--fc-text': text.toString(),
+    '--fc-background': background.toString(),
+    '--fc-knockout': knockout.toString(),
+    '--logo-primary': 'var(--prif-blue-dark)',
+    '--logo-secondary': 'var(--prif-blue-light)',
+  }
+  return (
+    <>
+      <body style={bodyStyles} />
+      <Meta title={`${year} – ${data.site.siteMetadata.title}`} translationData={translationData} />
+    </>
+  )
 }

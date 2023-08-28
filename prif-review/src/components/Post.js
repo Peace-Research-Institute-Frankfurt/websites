@@ -162,14 +162,6 @@ const Post = ({ data, pageContext, children }) => {
   const next = posts[currentIndex + 1] || null
   const previous = posts[currentIndex - 1] || null
 
-  const { text, background, knockout } = useColors(frontmatter.color)
-
-  const appStyles = {
-    '--fc-text': text.toString(),
-    '--fc-background': frontmatter.color_secondary ? frontmatter.color_secondary : background.toString(),
-    '--fc-knockout': knockout.toString(),
-  }
-
   const heroImage = (
     <>
       {frontmatter.hero_image && (
@@ -215,7 +207,6 @@ const Post = ({ data, pageContext, children }) => {
       translationData={{ translations: data.translations.nodes, currentLanguage: pageContext.language, currentSlug: data.post.childMdx.fields.slug }}
       pages={data.pages.nodes}
       pagination={pagination}
-      styles={appStyles}
       report={data.report}
       post={data.post}
     >
@@ -235,7 +226,19 @@ export function Head({ data, pageContext, location }) {
     currentLanguage: pageContext.language,
     translations: data.translations.nodes,
   }
-  return <Meta translationData={translationData} title={`${frontmatter.title} – ${data.site.siteMetadata.title}`} description={frontmatter.intro} />
+
+  const { text, background, knockout } = useColors(frontmatter.color)
+  const bodyStyles = {
+    '--fc-text': text.toString(),
+    '--fc-background': frontmatter.color_secondary ? frontmatter.color_secondary : background.toString(),
+    '--fc-knockout': knockout.toString(),
+  }
+  return (
+    <>
+      <body style={bodyStyles} />
+      <Meta translationData={translationData} title={`${frontmatter.title} – ${data.site.siteMetadata.title}`} description={frontmatter.intro} />
+    </>
+  )
 }
 
 export default Post

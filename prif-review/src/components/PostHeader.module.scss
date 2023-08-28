@@ -1,13 +1,12 @@
 @import 'vars';
 
 .container {
-  margin-bottom: 0.5em;
   background-color: var(--fc-background);
   margin-bottom: var(--baseline);
   position: relative;
   overflow: hidden;
   padding: calc(var(--baseline) * 1) 0;
-  padding-top: calc(var(--baseline) * 4);
+  padding-top: calc(var(--baseline) * 3);
   box-shadow: 0 -20px 15px -10px inset rgba(black, 0.01);
   border-bottom: 1px solid rgba(black, 0.05);
   @include bp(m) {

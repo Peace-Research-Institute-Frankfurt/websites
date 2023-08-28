@@ -45,7 +45,10 @@
   margin-right: 0.65rem;
   font-size: 0;
   svg {
-    height: 1.2rem;
+    height: 1rem;
+    @include bp(m) {
+      height: 1.2rem;
+    }
   }
 }
 

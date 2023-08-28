@@ -6,7 +6,7 @@
 .header {
   background-color: var(--fc-background);
   min-height: 50vh;
-  padding-top: 5em;
+  padding-top: 3.5em;
   box-shadow: 0 -20px 15px -10px inset rgba(black, 0.01);
   border-bottom: 1px solid rgba(black, 0.05);
   @include bp(m) {
@@ -258,6 +258,12 @@
 .post-intro {
   @extend %copy-large;
   margin-top: calc(var(--baseline) * 0.25);
+  font-size: var(--ms-0);
+  line-height: var(--baseline);
+  @include bp(m) {
+    font-size: var(--ms-1);
+    line-height: calc(var(--baseline) * 1.25);
+  }
 }
 
 .download {
@@ -269,8 +275,9 @@
   grid-column: 1 / 4;
   margin-top: var(--baseline);
   margin-bottom: var(--baseline);
-  max-width: 13em;
+  max-width: 16em;
   @include bp(m) {
+    max-width: 13em;
     padding: 1em;
     grid-column: 1 / 3;
     grid-row: 2 / 3;

@@ -17,8 +17,10 @@
   @extend %grid;
   width: 100%;
   align-items: stretch;
-  height: 2.5em;
   padding: 0 var(--padding);
+  @include bp(l) {
+    height: 2.5em;
+  }
 }
 
 .title {
