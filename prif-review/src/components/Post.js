@@ -212,6 +212,7 @@ const Post = ({ data, pageContext, children }) => {
       pagination={pagination}
       styles={appStyles}
       report={data.report}
+      post={data.post}
     >
       <article id="content" className={styles.postContainer}>
         <PostHeader title={frontmatter.title} intro={frontmatter.intro} eyebrow={frontmatter.eyebrow} heroImage={heroImage} />
@@ -223,20 +224,13 @@ const Post = ({ data, pageContext, children }) => {
 
 export function Head({ data, pageContext, location }) {
   const frontmatter = data.post.childMdx.frontmatter
-  const year = data.post.relativeDirectory.replace(/(.{2})\/(reports)\//g, '').replace('/posts', '')
   const translationData = {
     currentPath: location,
     currentSlug: data.post.childMdx.fields.slug,
     currentLanguage: pageContext.language,
     translations: data.translations.nodes,
   }
-  return (
-    <Meta
-      translationData={translationData}
-      title={`${frontmatter.title} – ${data.site.siteMetadata.title} ${year}`}
-      description={frontmatter.intro}
-    />
-  )
+  return <Meta translationData={translationData} title={`${frontmatter.title} – ${data.site.siteMetadata.title}`} description={frontmatter.intro} />
 }
 
 export default Post

@@ -18,7 +18,10 @@
   align-items: center;
   font-size: 0;
   svg {
-    height: 1rem;
+    height: 0.75rem;
+    @include bp(m) {
+      height: 1rem;
+    }
   }
   path {
     stroke: 0;

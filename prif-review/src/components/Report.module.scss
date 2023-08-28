@@ -197,7 +197,7 @@
   padding-top: 5em;
   @include bp(m) {
     min-height: 60vh;
-    padding-top: 6em;
+    padding-top: 8em;
   }
   @include bp(xl) {
     min-height: 76vh;
@@ -211,19 +211,19 @@
 .title {
   @extend %h1;
   grid-column: 1 / 5;
-  letter-spacing: -0.015em;
   line-height: 0.85;
-  font-variation-settings: 'wght' 500, 'wdth' 90;
   font-size: Min(5rem, 12vw);
   @include bp(m) {
-    font-size: 6vw;
     grid-column: 3 / 6;
+    font-size: 6vw;
   }
   @include bp(xl) {
+    font-size: 8vw;
     grid-column: 2 / 6;
   }
   span {
     display: block;
+    font-size: 0.9em;
     font-variation-settings: 'wght' 250;
   }
 }
