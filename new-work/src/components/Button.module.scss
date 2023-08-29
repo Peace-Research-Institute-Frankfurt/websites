@@ -5,14 +5,15 @@
   font-family: var(--edge);
   cursor: pointer;
   align-items: center;
-  font-size: var(--ms-1);
   border-radius: var(--br);
-  color: var(--white);
-  border: 1px solid var(--gray);
+  color: var(--black);
+  background: var(--white);
+  font-size: var(--ms-0);
+  // border: 1px solid var(--gray);
   height: 1.85em;
   position: relative;
-  padding: 0 0.75em;
-  padding-top: 0.15em;
+  padding: 0 0.65em;
+  padding-top: 0.05em;
   @include bp(m) {
     height: 1.85em;
   }
@@ -51,9 +52,9 @@
 }
 
 .secondary {
-  background: var(--gray-light);
-  border: 1px solid var(--gray-light);
-  color: var(--black);
+  background: var(--black);
+  border: 1px solid var(--gray);
+  color: var(--gray-light);
   &.loading {
     color: var(--gray-dark);
     cursor: progress;

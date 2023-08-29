@@ -1,32 +1,29 @@
 @import 'vars';
 .item {
   text-align: left;
-  border-bottom: 1px solid var(--black);
+  border-bottom: 1px solid var(--gray);
   list-style: none;
-  padding: 0.75rem;
-  padding-right: 3.5rem;
+  padding: 0.4em var(--padding-small);
+  gap: 10em;
+  padding-bottom: 0.2em;
   position: relative;
-  @include bp(m) {
-    padding: rem;
-    padding-right: 3.5rem;
-  }
+  align-items: flex-end;
+  justify-content: space-between;
+  display: flex;
 }
 
 .link {
   &:hover,
   &:focus-visible {
-    .title {
-      text-decoration: underline;
-    }
+    background: rgba(white, 0.1);
   }
 }
 
 .title {
   display: block;
-  letter-spacing: -0.015em;
-  line-height: 1.1;
-  font-size: var(--ms-2);
-  font-weight: 600;
+  @extend %h2;
+  font-size: var(--ms-0);
+  font-weight: 100;
 }
 
 .authors {
@@ -34,15 +31,15 @@
 }
 
 .remove {
-  position: absolute;
-  right: 0.75rem;
-  top: 0.65rem;
+  button {
+    border: 0;
+  }
 }
 
 .actions {
-  padding: 0.75rem;
   display: flex;
   flex-flow: column;
+  padding: var(--padding-small);
 }
 
 .empty {

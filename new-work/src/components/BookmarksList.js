@@ -56,15 +56,6 @@ export default function BookmarksList({ bookmarks, setBookmarks }) {
       <li key={`${slug}`} className={styles.item}>
         <Link to={`/${slug}`} className={styles.link}>
           <span className={styles.title}>{p.childMdx.frontmatter.title}</span>
-          {p.childMdx.frontmatter.authors && (
-            <p className={styles.authors}>
-              {p.childMdx.frontmatter.authors
-                .map((a) => {
-                  return a.frontmatter.name
-                })
-                .join(',')}
-            </p>
-          )}
         </Link>
         <div className={styles.remove}>
           <Button

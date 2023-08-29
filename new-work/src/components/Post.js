@@ -9,6 +9,7 @@ import PostHeader from './PostHeader'
 import Bylines from './Bylines'
 import { PostList, PostListItem } from './PostList'
 import MarkdownRenderer from 'react-markdown-renderer'
+import StickyHeader from './StickyHeader'
 
 import * as styles from './Post.module.scss'
 
@@ -114,6 +115,7 @@ const Post = ({ data, children }) => {
   return (
     <App className={`${frontmatter.category}`}>
       <SkipToContent />
+      <StickyHeader post={data.post} />
       <article id="content" className={`${styles.container}`}>
         <PostHeader
           title={frontmatter.title}

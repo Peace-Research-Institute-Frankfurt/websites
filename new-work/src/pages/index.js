@@ -5,6 +5,7 @@ import App from '../components/App'
 import Meta from '../components/Meta'
 import SkipToContent from '../components/SkipToContent'
 import PostHeader from '../components/PostHeader'
+import StickyHeader from '../components/StickyHeader'
 import * as styles from './index.module.scss'
 import { PostList, PostListItem } from '../components/PostList'
 
@@ -53,6 +54,7 @@ const Index = ({ data }) => {
   return (
     <App>
       <SkipToContent />
+      <StickyHeader />
       <main id="content" className={styles.container}>
         <PostHeader
           image={<StaticImage src="../images/cubes.png" alt="" layout="fullWidth" />}

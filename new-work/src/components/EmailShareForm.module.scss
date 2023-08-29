@@ -8,30 +8,32 @@
   text-align: left;
 }
 
+.form {
+}
+
 .feedback {
   @extend %caption;
   background: var(--lightgray);
-  border-radius: var(--br);
-  padding: 0.75rem 1rem;
-  font-size: var(--ms-0);
-  margin-bottom: 0.75rem;
+  border-radius: var(--br-small);
+  padding: 0.75rem;
+  margin: var(--padding-small);
   p {
     opacity: 0.85;
   }
 }
 
 .success {
-  background: rgb(208, 248, 190);
+  @extend %caption;
+  background: rgba(208, 248, 190, 0.377);
 }
 .error {
-  background: rgb(248, 237, 190);
+  @extend %caption;
+  background: rgba(248, 237, 190, 0.144);
 }
 
 .privacy {
   @extend %caption;
-  font-size: var(--ms--1);
   text-align: left;
-  padding-top: 0.6rem;
-  color: var(--gray-dark);
-  max-width: 20em;
+  padding-top: 0.65em;
+  color: var(--gray-light);
 }

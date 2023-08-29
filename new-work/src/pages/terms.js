@@ -5,6 +5,7 @@ import App from '../components/App'
 import Meta from '../components/Meta'
 import SkipToContent from '../components/SkipToContent'
 import PageHeader from '../components/PageHeader'
+import StickyHeader from '../components/StickyHeader'
 import * as styles from './terms.module.scss'
 import * as pageStyles from '../components/Page.module.scss'
 
@@ -112,6 +113,7 @@ const Terms = ({ data }) => {
   return (
     <App>
       <SkipToContent />
+      <StickyHeader />
       <main id="content" className={pageStyles.container}>
         <PageHeader
           title="Glossar"

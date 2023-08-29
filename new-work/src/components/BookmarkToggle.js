@@ -11,10 +11,11 @@ export default function BookmarkToggle({ post, bookmarks, setBookmarks }) {
   function toggleBookmark() {
     setBookmarks((prevBookmarks) => {
       if (bookmarkIndex === -1) {
-        const bookmark = {
+        console.log(post)
+        const newBookmark = {
           slug: post.childMdx.fields.slug,
         }
-        return [...prevBookmarks, bookmark]
+        return [...prevBookmarks, newBookmark]
       } else {
         return prevBookmarks.filter((el) => {
           return el.slug !== post.childMdx.fields.slug

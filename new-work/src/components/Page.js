@@ -3,6 +3,7 @@ import React from 'react'
 import App from './App'
 import SkipToContent from './SkipToContent'
 import PostBody from './PostBody'
+import StickyHeader from './StickyHeader'
 import PageHeader from './PageHeader'
 import * as styles from './Page.module.scss'
 
@@ -32,6 +33,7 @@ const Page = ({ data, children }) => {
   return (
     <App>
       <SkipToContent />
+      <StickyHeader />
       <main id="content" className={styles.container}>
         <PageHeader intro={frontmatter.intro} title={frontmatter.title} />
         <div className={styles.body}>

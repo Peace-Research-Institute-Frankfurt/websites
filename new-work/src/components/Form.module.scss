@@ -11,16 +11,20 @@
   input,
   textarea {
     width: 100%;
+    @extend %caption;
     display: block;
     font-family: inherit;
-    border-radius: var(--br);
-    padding: 0.15em 0.5em;
-    padding-bottom: 0.3em;
+    border-radius: var(--br-small);
+    padding: 0.3em 0.6em;
+    padding-bottom: 0.34em;
+    background: transparent;
+    color: var(--white);
     line-height: 1;
     border: 1px solid var(--gray);
+    transition: var(--fast);
     &:hover,
     &:focus-visible {
-      border: 1px solid var(--black);
+      border: 1px solid var(--gray-light);
     }
     &::placeholder {
       opacity: 0.75;

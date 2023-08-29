@@ -36,9 +36,34 @@
   border-bottom-left-radius: calc(0.5 * var(--br));
   border-bottom-right-radius: calc(0.5 * var(--br));
 }
+
 .nav-item {
   display: flex;
   align-items: center;
   font-size: var(--ms-0);
-  padding: 0.5em var(--padding);
+  padding: 0.35em 0.65em;
+  color: var(--white);
+  border-right: 1px solid var(--gray);
+  &:last-child {
+    border-right: 0;
+  }
+}
+
+.bookmarks-container {
+  position: fixed;
+  background: var(--black);
+  top: 3.5rem;
+  max-width: 30rem;
+  right: var(--padding);
+  opacity: 0;
+  border: 1px solid var(--gray);
+  border-radius: var(--br-medium);
+}
+
+.bookmarks-container-active {
+  opacity: 1;
+}
+
+.backdrop {
+  display: none;
 }

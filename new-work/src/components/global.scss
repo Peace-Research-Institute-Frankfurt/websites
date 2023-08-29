@@ -16,6 +16,7 @@
 :root {
   --white: rgb(248, 247, 247);
   --gray: rgb(90, 88, 100);
+  --gray-light: rgb(140, 140, 140);
   --gray-hover: rgb(170, 170, 170);
   --blue: #6b7bb3;
   --green: #568d72;
@@ -47,8 +48,10 @@
   --header-height: 5rem;
   --color: rgb(3, 3, 3);
   --br: 20px;
+  --br-medium: 10px;
   @include bp(m) {
     --br: 40px;
+    --br-medium: 20px;
   }
 }
 
