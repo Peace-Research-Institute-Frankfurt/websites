@@ -4,7 +4,7 @@ import App from './App'
 import SkipToContent from './SkipToContent'
 import PostBody from './PostBody'
 import PageHeader from './PageHeader'
-import * as styles from './Post.module.scss'
+import * as styles from './Page.module.scss'
 
 export const query = graphql`
   query ($id: String!) {
@@ -32,12 +32,12 @@ const Page = ({ data, children }) => {
   return (
     <App>
       <SkipToContent />
-      <article id="content">
-        <PageHeader title={frontmatter.title} />
-        <main className={styles.body}>
+      <main id="content" className={styles.container}>
+        <PageHeader intro={frontmatter.intro} title={frontmatter.title} />
+        <div className={styles.body}>
           <PostBody>{children}</PostBody>
-        </main>
-      </article>
+        </div>
+      </main>
     </App>
   )
 }

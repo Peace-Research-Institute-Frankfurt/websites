@@ -19,6 +19,7 @@ import * as FigureStyles from './Figure.module.scss'
 import * as EmbedStyles from './Embed.module.scss'
 import * as EmbedChoicesStyles from './EmbedChoices.module.scss'
 import * as InterviewStyles from './Interview.module.scss'
+import * as styles from './PostBody.module.scss'
 
 const shortCodes = {
   Figure: ({ ...props }) => <FigureAdapter {...props} styles={FigureStyles} />,
@@ -41,5 +42,9 @@ const shortCodes = {
 }
 
 export default function PostBody({ children }) {
-  return <MDXProvider components={shortCodes}>{children}</MDXProvider>
+  return (
+    <div className={styles.container}>
+      <MDXProvider components={shortCodes}>{children}</MDXProvider>
+    </div>
+  )
 }

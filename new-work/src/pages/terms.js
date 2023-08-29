@@ -6,6 +6,7 @@ import Meta from '../components/Meta'
 import SkipToContent from '../components/SkipToContent'
 import PageHeader from '../components/PageHeader'
 import * as styles from './terms.module.scss'
+import * as pageStyles from '../components/Page.module.scss'
 
 export const query = graphql`
   query {
@@ -111,7 +112,7 @@ const Terms = ({ data }) => {
   return (
     <App>
       <SkipToContent />
-      <main id="content" className={styles.container}>
+      <main id="content" className={pageStyles.container}>
         <PageHeader
           title="Glossar"
           intro="Our existing learning units include a series of interactive graphics produced by an external agency. These can be embedded in new learning units and should behave as expected."

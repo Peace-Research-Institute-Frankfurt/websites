@@ -3,6 +3,7 @@
 .container {
   background: var(--black);
   border-top: 1px solid var(--gray);
+  border-top: 1px solid var(--gray);
   border-bottom: 1px solid var(--gray);
   margin-top: calc(var(--header-height) - 1px);
   padding-bottom: 0;
@@ -19,8 +20,9 @@
   display: flex;
   align-items: center;
   justify-self: center;
-  padding-left: calc(var(--padding) * 0.5);
-  padding-top: var(--padding); // optical correction
+  padding: var(--padding-small);
+  text-align: center;
+  padding-bottom: calc(var(--padding) * 0.5); // optical correction
 }
 
 .intro {
@@ -30,4 +32,5 @@
   border-right: 1px solid var(--gray);
   padding: var(--padding-small);
   padding-right: calc(var(--padding) * 0.5);
+  padding-bottom: 0.2em;
 }

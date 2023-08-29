@@ -30,9 +30,7 @@
 .copy {
   display: contents;
 }
-
 .body {
-  @extend %copy;
   z-index: 100;
   position: relative;
   background: var(--black);
@@ -44,64 +42,6 @@
     grid-template-columns: 1fr minmax(min-content, 55rem) 1fr;
   }
   column-gap: var(--padding);
-  p,
-  ol,
-  ul,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  table {
-    grid-column: 1 / 4;
-    @include bp(m) {
-      grid-column: 1 / 3;
-    }
-    @include bp(l) {
-      grid-column: 2 / 3;
-    }
-  }
-  h2 {
-    @extend %h2;
-    margin-top: calc(var(--baseline) * 0.5);
-    margin-bottom: calc(var(--baseline) * 0.25);
-
-    &:first-child {
-      margin-top: 0;
-    }
-  }
-  h3 {
-    @extend %h3;
-    &:first-child {
-      margin-top: 0;
-    }
-  }
-  h4 {
-    @extend %h4;
-  }
-  table {
-    margin-bottom: calc(var(--baseline) / 2);
-    border: 1px solid var(--gray);
-  }
-  td,
-  th {
-    text-align: left;
-    vertical-align: baseline;
-    padding: 0.25rem 0.5rem;
-    padding-bottom: 0.1rem;
-    border-right: 1px solid var(--gray);
-    hyphens: none;
-  }
-  th {
-    @extend %caption-bold;
-    white-space: nowrap;
-  }
-  tr {
-    border-bottom: 1px solid var(--gray);
-    &:last-child {
-      border-bottom: 0;
-    }
-  }
 }
 
 .posts-nav {

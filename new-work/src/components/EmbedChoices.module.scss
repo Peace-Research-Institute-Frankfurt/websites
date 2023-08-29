@@ -34,13 +34,15 @@
 }
 
 .checked {
-  color: var(--black);
+  background: rgba(white, 0.075);
 }
 .description {
-  @extend %caption;
   flex-grow: 1;
 }
-
+.title {
+  @extend %h3;
+  font-size: var(--ms-2);
+}
 .checkbox {
   display: block;
   flex-grow: 0;

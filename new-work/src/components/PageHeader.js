@@ -1,4 +1,5 @@
 import React from 'react'
+import MarkdownRenderer from 'react-markdown-renderer'
 import * as styles from './PageHeader.module.scss'
 
 export default function PageHeader({ title, intro }) {
@@ -7,7 +8,7 @@ export default function PageHeader({ title, intro }) {
       <h1 className={styles.title}>{title}</h1>
       {intro && (
         <div className={styles.intro}>
-          <p>{intro}</p>
+          <MarkdownRenderer markdown={intro} />
         </div>
       )}
     </header>

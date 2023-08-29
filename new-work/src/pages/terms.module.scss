@@ -1,16 +1,5 @@
 @import '../components/vars';
 
-.container {
-  background: var(--black);
-  margin: 0 var(--padding);
-  border-top: 1px solid var(--gray);
-  border-left: 1px solid var(--gray);
-  border-right: 1px solid var(--gray);
-  margin-top: -1px;
-  z-index: 1000;
-  position: relative;
-}
-
 .initials {
   display: flex;
   list-style: none;
@@ -61,19 +50,19 @@
     .term-title {
       border-bottom: 1px solid var(--gray);
       &:after {
-        transform: rotate(45deg);
+        transform: translateY(-50%) rotate(45deg);
       }
     }
   }
 }
 
 .term-title {
-  @extend %h3;
+  @extend %h2;
+  font-weight: 100;
   appearance: none;
   list-style: none;
-  padding: var(--padding-small);
-  padding-top: 0.45em;
-  padding-bottom: 0.45em;
+  padding: 0.35em var(--padding-small);
+  padding-bottom: 0.3em;
   white-space: nowrap;
   overflow: hidden;
   position: relative;
@@ -84,7 +73,8 @@
     transition: var(--fast);
     transform-origin: center;
     right: var(--padding-small);
-    top: 0.4em;
+    top: 50%;
+    transform: translateY(-50%);
   }
   &:hover,
   &:focus-visible {
