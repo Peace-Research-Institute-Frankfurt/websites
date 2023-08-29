@@ -195,7 +195,7 @@ const Index = ({ data, pageContext, children, location }) => {
           {data.post.childMdx.frontmatter.download_url && (
             <a className={styles.download} download href={data.post.childMdx.frontmatter.download_url}>
               <DownloadIcon />
-              <span className={styles.downloadLabel}>{t('Download full report as PDF')}</span>
+              <span className={styles.downloadLabel}>{t('Download full report in PDF format')}</span>
             </a>
           )}
         </section>
