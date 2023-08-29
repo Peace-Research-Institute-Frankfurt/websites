@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import slug from 'slug'
 import { graphql } from 'gatsby'
-import App from '../components/App'
+
 import Meta from '../components/Meta'
+import App from '../components/App'
+import StickyHeader from '../components/StickyHeader'
 import SkipToContent from '../components/SkipToContent'
 import PageHeader from '../components/PageHeader'
-import StickyHeader from '../components/StickyHeader'
 import * as styles from './terms.module.scss'
 import * as pageStyles from '../components/Page.module.scss'
 
@@ -119,7 +120,7 @@ const Terms = ({ data }) => {
           title="Glossar"
           intro="Our existing learning units include a series of interactive graphics produced by an external agency. These can be embedded in new learning units and should behave as expected."
         />
-        <section className={styles.content}>
+        <section>
           <ol className={styles.initials}>{initialEls}</ol>
           <ol className={styles.terms}>{termsEls}</ol>
         </section>

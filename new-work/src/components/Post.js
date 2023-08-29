@@ -1,15 +1,15 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import { GatsbyImage, getImage, getSrc } from 'gatsby-plugin-image'
-import App from './App'
 import Meta from './Meta'
+import App from './App'
+import StickyHeader from './StickyHeader'
 import SkipToContent from './SkipToContent'
 import PostBody from './PostBody'
 import PostHeader from './PostHeader'
 import Bylines from './Bylines'
 import { PostList, PostListItem } from './PostList'
 import MarkdownRenderer from 'react-markdown-renderer'
-import StickyHeader from './StickyHeader'
 
 import * as styles from './Post.module.scss'
 
@@ -85,9 +85,6 @@ export const query = graphql`
 `
 const Post = ({ data, children }) => {
   const frontmatter = data.post.childMdx.frontmatter
-  const currentIndex = data.posts.nodes.findIndex((el) => {
-    return el.childMdx.frontmatter.order === frontmatter.order
-  })
 
   let heroImage = null
   if (frontmatter.hero_image) {
@@ -108,9 +105,6 @@ const Post = ({ data, children }) => {
       </li>
     )
   })
-
-  const next = data.posts.nodes[currentIndex + 1]
-  const previous = data.posts.nodes[currentIndex - 1]
 
   return (
     <App className={`${frontmatter.category}`}>

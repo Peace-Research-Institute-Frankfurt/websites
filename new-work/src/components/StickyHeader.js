@@ -2,11 +2,12 @@ import { Link } from 'gatsby'
 import React, { useState, useEffect } from 'react'
 import useScrollPosition from '@shared/hooks/useScrollPosition'
 import useLocalStorage from '@shared/hooks/useLocalStorage'
-import * as styles from './StickyHeader.module.scss'
+
+import Logo from './Logo'
 import BookmarksList from './BookmarksList'
 import BookmarkToggle from './BookmarkToggle'
-import Button from './ButtonAdapter'
-import Logo from './Logo'
+
+import * as styles from './StickyHeader.module.scss'
 
 export default function StickyHeader({ post }) {
   const [storedBookmarks, setStoredBookmarks] = useLocalStorage('bookmarks', [])
@@ -40,9 +41,7 @@ export default function StickyHeader({ post }) {
         </div>
 
         <div className={`${styles.bookmarksContainer} ${bookmarksActive && styles.bookmarksContainerActive}`}>
-          <div className={styles.bookmarksContainerInner}>
-            <BookmarksList bookmarks={bookmarks} setBookmarks={setStoredBookmarks} />
-          </div>
+          <BookmarksList bookmarks={bookmarks} setBookmarks={setStoredBookmarks} />
         </div>
       </header>
       <button className={`${styles.backdrop} ${bookmarksActive && styles.backdropActive}`} onClick={() => setBookmarksActive(false)}>

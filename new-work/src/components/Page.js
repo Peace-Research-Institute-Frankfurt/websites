@@ -1,9 +1,9 @@
 import { graphql } from 'gatsby'
 import React from 'react'
 import App from './App'
+import StickyHeader from './StickyHeader'
 import SkipToContent from './SkipToContent'
 import PostBody from './PostBody'
-import StickyHeader from './StickyHeader'
 import PageHeader from './PageHeader'
 import * as styles from './Page.module.scss'
 

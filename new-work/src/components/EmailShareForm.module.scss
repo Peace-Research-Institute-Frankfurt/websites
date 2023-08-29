@@ -28,7 +28,7 @@
 }
 .error {
   @extend %caption;
-  background: rgba(248, 237, 190, 0.144);
+  background: hsla(24, 96%, 90%, 0.2);
 }
 
 .privacy {

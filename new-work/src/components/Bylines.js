@@ -1,5 +1,4 @@
 import React from 'react'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import * as styles from './Bylines.module.scss'
 
 export default function Bylines({ authors }) {

@@ -78,15 +78,7 @@ export default function EmailShareForm({ posts }) {
   }
   const defaultView = (
     <>
-      <Form
-        className={styles.form}
-        captchaRef={captchaRef}
-        onSubmit={handleSubmit}
-        data={formData}
-        setData={setFormData}
-        errors={formErrors}
-        loadingState={formLoadingState}
-      >
+      <Form captchaRef={captchaRef} onSubmit={handleSubmit} data={formData} setData={setFormData} errors={formErrors} loadingState={formLoadingState}>
         <Field
           state={formLoadingState === 'loading' && 'disabled'}
           name="userEmail"
