@@ -58,14 +58,7 @@ export default function BookmarksList({ bookmarks, setBookmarks }) {
           <span className={styles.title}>{p.childMdx.frontmatter.title}</span>
         </Link>
         <div className={styles.remove}>
-          <Button
-            size="small"
-            priority="secondary"
-            label="Favorit löschen"
-            hideLabel={true}
-            icon={<CrossIcon />}
-            onClick={() => removeBookmark(slug)}
-          />
+          <Button size="small" priority="text" label="Favorit löschen" hideLabel={true} icon={<CrossIcon />} onClick={() => removeBookmark(slug)} />
         </div>
       </li>
     )

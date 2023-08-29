@@ -153,7 +153,7 @@ export default function EmailShareForm({ posts }) {
     <>
       {flowState === 'collapsed' && (
         <div className={styles.toggle}>
-          <Button priority="secondary" onClick={() => setFlowState('default')} label="Per Email teilen" />
+          <Button priority="primary" onClick={() => setFlowState('default')} label="Per Email teilen" />
         </div>
       )}
       {flowState === 'default' && <>{defaultView}</>}

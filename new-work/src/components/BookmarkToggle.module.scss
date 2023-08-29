@@ -1,0 +1,10 @@
+.container {
+  font-size: 0;
+  color: white;
+  cursor: pointer;
+  padding: 0 var(--padding-small);
+  svg {
+    display: block;
+    width: var(--ms-0);
+  }
+}

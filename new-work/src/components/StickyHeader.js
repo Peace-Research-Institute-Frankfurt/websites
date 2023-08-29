@@ -36,7 +36,7 @@ export default function StickyHeader({ post }) {
           <button className={styles.navItem} onClick={() => setBookmarksActive(!bookmarksActive)}>
             Favoriten
           </button>
-          {post && <BookmarkToggle post={post} bookmarks={bookmarks} setBookmarks={setStoredBookmarks} />}
+          {post && <BookmarkToggle className={styles.navItem} post={post} bookmarks={bookmarks} setBookmarks={setStoredBookmarks} />}
         </div>
 
         <div className={`${styles.bookmarksContainer} ${bookmarksActive && styles.bookmarksContainerActive}`}>

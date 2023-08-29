@@ -35,6 +35,7 @@
   background: var(--black);
   border-bottom-left-radius: calc(0.5 * var(--br));
   border-bottom-right-radius: calc(0.5 * var(--br));
+  overflow: hidden;
 }
 
 .nav-item {
@@ -44,20 +45,26 @@
   padding: 0.35em 0.65em;
   color: var(--white);
   border-right: 1px solid var(--gray);
+  cursor: pointer;
   &:last-child {
     border-right: 0;
+  }
+  &:hover,
+  &:focus-visible {
+    background: var(--black-hover);
   }
 }
 
 .bookmarks-container {
   position: fixed;
   background: var(--black);
-  top: 3.5rem;
+  top: 4rem;
   max-width: 30rem;
   right: var(--padding);
   opacity: 0;
   border: 1px solid var(--gray);
   border-radius: var(--br-medium);
+  overflow: hidden;
 }
 
 .bookmarks-container-active {

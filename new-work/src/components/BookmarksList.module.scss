@@ -1,18 +1,19 @@
 @import 'vars';
+
 .item {
   text-align: left;
   border-bottom: 1px solid var(--gray);
   list-style: none;
-  padding: 0.4em var(--padding-small);
-  gap: 10em;
-  padding-bottom: 0.2em;
   position: relative;
-  align-items: flex-end;
+  align-items: stretch;
   justify-content: space-between;
   display: flex;
 }
 
 .link {
+  flex-grow: 1;
+  border-right: 1px solid var(--gray);
+  padding: 0.4em var(--padding-small);
   &:hover,
   &:focus-visible {
     background: rgba(white, 0.1);
@@ -32,7 +33,7 @@
 
 .remove {
   button {
-    border: 0;
+    width: 3rem;
   }
 }
 
@@ -44,5 +45,7 @@
 
 .empty {
   @extend %caption;
-  padding: 0.85rem 2rem;
+  max-width: 20em;
+  text-align: center;
+  padding: 0.5em var(--padding-small);
 }
