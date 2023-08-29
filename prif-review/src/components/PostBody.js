@@ -8,7 +8,7 @@ import Notes from './Notes'
 import Callout from '@shared/components/Callout'
 import Leadin from './Leadin'
 import { Map } from './Map'
-import Aside from "./Aside"
+import Aside from './Aside'
 import { PRIFNetworkLayer } from './PRIFNetworkLayer'
 import CountriesLayer from './CountriesLayer'
 import { Flowchart, FlowchartNode } from './Flowchart'

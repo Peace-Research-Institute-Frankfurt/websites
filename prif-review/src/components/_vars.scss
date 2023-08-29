@@ -23,32 +23,34 @@
 }
 
 %h1 {
-  font-variation-settings: 'wght' 520, 'wdth' 90, 'opsz' 144;
   font-family: var(--sans);
   letter-spacing: -0.005em;
   hyphens: none;
   text-wrap: balance;
-  font-size: var(--ms-4);
-  line-height: calc(var(--baseline) * 2);
+  font-size: var(--ms-5);
+  line-height: calc(var(--baseline) * 2.5);
+  font-variation-settings: 'wght' 560, 'wdth' 80, 'opsz' 144;
   @include bp(m) {
-    line-height: calc(var(--baseline) * 2.5);
-    font-size: var(--ms-5);
+    font-variation-settings: 'wght' 600, 'wdth' 105, 'opsz' 144;
+    letter-spacing: -0.01em;
+    word-spacing: -0.01em;
   }
   @include bp(xl) {
-    font-variation-settings: 'wght' 470, 'wdth' 90, 'opsz' 144;
-    line-height: calc(var(--baseline) * 3);
     font-size: var(--ms-6);
+    line-height: calc(var(--baseline) * 3.1);
+    font-variation-settings: 'wght' 670, 'wdth' 90, 'opsz' 144;
   }
 }
 %h2 {
   font-family: var(--sans);
   font-variation-settings: 'wght' 560, 'wdth' 90;
+  letter-spacing: -0.0075em;
   hyphens: none;
   font-size: var(--ms-2);
-  line-height: calc(var(--baseline) * 1.666);
+  line-height: calc(var(--baseline) * 1.333);
   @include bp(m) {
+    line-height: calc(var(--baseline) * 1.666);
     font-size: var(--ms-3);
-    font-variation-settings: 'wght' 480, 'wdth' 90;
   }
 }
 
@@ -66,7 +68,7 @@
   letter-spacing: 0.05em;
   word-spacing: 0.05em;
   font-variation-settings: 'wght' 350, 'wdth' 200 !important;
-  line-height: calc(var(--baseline) * .66666);
+  line-height: calc(var(--baseline) * 0.66666);
 }
 
 %copy {
@@ -120,7 +122,12 @@
   }
   a {
     text-decoration: underline;
-    text-underline-offset: 0.1em;
+    text-decoration-color: rgba(black, 0.5);
+    text-underline-offset: 0.15em;
+    &:hover,
+    &:focus-visible {
+      text-decoration-color: rgba(black, 1);
+    }
   }
 }
 %caption-bold {
@@ -131,8 +138,8 @@
 
 %grid {
   display: grid;
-  grid-template-columns: 1fr minmax(auto, 5rem) minmax(auto, 46rem) minmax(auto, 5rem) 1fr;
-  column-gap: var(--padding-small);
+  grid-template-columns: 1fr minmax(auto, 5rem) minmax(auto, 44rem) minmax(auto, 5rem) 1fr;
+  column-gap: var(--baseline);
   margin: 0 auto;
   padding: 0 var(--padding);
   max-width: 110rem;
@@ -141,12 +148,13 @@
 %text-link {
   text-decoration: underline;
   background: var(--fc-background);
-  text-decoration-color: var(--fc-text);
+  text-decoration-color: rgba(black, 0.5);
   text-decoration-thickness: 1px;
   text-underline-offset: 0.15em;
 
   &:hover,
   &:focus-visible {
     text-decoration-style: solid;
+    text-decoration-color: rgba(black, 1);
   }
 }

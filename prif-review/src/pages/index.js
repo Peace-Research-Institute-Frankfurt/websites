@@ -85,7 +85,7 @@ const Index = ({ data, pageContext, location }) => {
           </p>
           <ol className={styles.reports}>
             <li className={styles.reportLabels}>
-              <span className={styles.reportYear}>{t('Year')}</span>
+              <span className={styles.reportYear}>{t('Reporting Period')}</span>
               <span>{t('Published on')}</span>
             </li>
             {data.reports.nodes.map((report, i) => {
@@ -94,7 +94,7 @@ const Index = ({ data, pageContext, location }) => {
                 <li key={`report-${i}`}>
                   <Link className={styles.report} to={`/${year}`}>
                     <span className={styles.reportYear}>{year}</span>
-                    <span>23 Juni, 2023</span>
+                    <span className={styles.reportDate}>23 Juni, 2023</span>
                   </Link>
                 </li>
               )
@@ -114,5 +114,16 @@ const Index = ({ data, pageContext, location }) => {
 export default Index
 export const Head = ({ pageContext, location }) => {
   const translationData = { currentLanguage: pageContext.language, currentSlug: location.pathname }
-  return <Meta title="PRIF Review" translationData={translationData} />
+  const bodyStyles = {
+    '--fc-text': 'hsl(207, 49%, 26%)',
+    '--fc-background': 'hsl(200, 46%, 95%)',
+    '--logo-primary': 'var(--prif-blue-dark)',
+    '--logo-secondary': 'var(--prif-blue-light)',
+  }
+  return (
+    <>
+      <body style={bodyStyles} />
+      <Meta title="PRIF Review" translationData={translationData} />
+    </>
+  )
 }

@@ -10,19 +10,22 @@
   display: block;
   list-style: none;
   &:first-child {
-    border-left: 1px solid var(--black);
+    border-left: 1px solid var(--gray);
   }
   &:last-child {
-    border-right: 1px solid var(--black);
+    border-right: 1px solid var(--gray);
   }
 }
 
 .item-current {
   background: var(--black);
   color: white;
+  border-right: 0 !important;
+  border-left: 0 !important;
   .inner {
     &:hover,
     &:focus-visible {
+      text-decoration: none;
     }
   }
 }
@@ -30,15 +33,15 @@
 .inner {
   display: flex;
   text-transform: uppercase;
-  padding: 0 .5em;
+  padding: 0 0.65em;
   height: 100%;
   align-items: center;
   letter-spacing: 0.05em;
   font-size: var(--ms-0);
-  transform: skewX(10deg);  
-  font-variation-settings: "wdth" 20, "wght" 300;
+  transform: skewX(10deg);
+  font-variation-settings: 'wdth' 20, 'wght' 300;
   &:hover,
   &:focus-visible {
-    background: rgba(black, 0.05);
+    text-decoration: underline;
   }
 }

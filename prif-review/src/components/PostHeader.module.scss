@@ -1,17 +1,17 @@
 @import 'vars';
 
 .container {
-  margin-bottom: 0.5em;
   background-color: var(--fc-background);
   margin-bottom: var(--baseline);
   position: relative;
   overflow: hidden;
   padding: calc(var(--baseline) * 1) 0;
-  padding-top: calc(var(--baseline) * 4);
+  padding-top: calc(var(--baseline) * 3);
+  box-shadow: 0 -20px 15px -10px inset rgba(black, 0.01);
+  border-bottom: 1px solid rgba(black, 0.05);
   @include bp(m) {
-    padding: calc(var(--baseline) * 2.5) 0;
-    padding-top: calc(var(--baseline) * 6);
-    box-shadow: calc(var(--padding) * 0.5) 0 var(--fc-text) inset;
+    padding: calc(var(--baseline) * 2) 0;
+    padding-top: calc(var(--baseline) * 4);
     text-align: left;
   }
 }
@@ -21,15 +21,20 @@
 }
 
 .eyebrow {
-  @extend %h4;
+  @extend %caption-bold;
   display: block;
   grid-column: 1 / 4;
-  margin-bottom: calc(var(--baseline) * 0.5);
+  margin-bottom: calc(var(--baseline) * 1);
+  text-decoration: underline;
+  text-decoration-thickness: 0.75em;
+  text-decoration-color: var(--fc-text);
+  text-decoration-skip-ink: none;
+  text-underline-offset: 0.5em;
   @include bp(m) {
     grid-column: 2 / 4;
   }
   @include bp(l) {
-    margin-bottom: calc(var(--baseline) * 1);
+    margin-bottom: calc(var(--baseline) * 1.5);
     grid-column: 3 / 4;
   }
 }
