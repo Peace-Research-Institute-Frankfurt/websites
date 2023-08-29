@@ -94,7 +94,7 @@ const Index = ({ data, pageContext, location }) => {
                 <li key={`report-${i}`}>
                   <Link className={styles.report} to={`/${year}`}>
                     <span className={styles.reportYear}>{year}</span>
-                    <span className={styles.reportDate}>23 Juni, 2023</span>
+                    <span>30. August, 2023</span>
                   </Link>
                 </li>
               )

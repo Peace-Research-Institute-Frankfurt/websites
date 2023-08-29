@@ -9,7 +9,7 @@
   border-bottom: 1px solid var(--gray);
   z-index: 3000;
   background: white;
-  box-shadow: 0 2px 1px 0 rgba(black, 0.075);
+  box-shadow: 0 2px 2px 0 rgba(black, 0.05);
   overflow: hidden;
 }
 
@@ -18,9 +18,7 @@
   width: 100%;
   align-items: stretch;
   padding: 0 var(--padding);
-  @include bp(l) {
-    height: 2.5em;
-  }
+  height: 2.5em;
 }
 
 .title {
