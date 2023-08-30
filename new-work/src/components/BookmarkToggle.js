@@ -25,7 +25,7 @@ export default function BookmarkToggle({ post, className, bookmarks, setBookmark
   }
 
   return (
-    <button onClick={toggleBookmark} className={`${styles.container} ${className ? className : ''}`}>
+    <button onClick={toggleBookmark} className={`${className ? className : ''} ${styles.container}`}>
       {bookmarkIndex === -1 ? <HeartOutline /> : <HeartFilled />}
       {bookmarkIndex === -1 ? 'Als Favorit speichern' : 'Favorit löschen'}
     </button>

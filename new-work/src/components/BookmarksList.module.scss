@@ -13,10 +13,11 @@
 .link {
   flex-grow: 1;
   border-right: 1px solid var(--gray);
-  padding: 0.4em var(--padding-small);
+  padding: 0.25em var(--padding-small);
+  padding-top: 0.3em;
   &:hover,
   &:focus-visible {
-    background: rgba(white, 0.1);
+    background: var(--black-hover);
   }
 }
 
@@ -47,5 +48,6 @@
   @extend %caption;
   max-width: 20em;
   text-align: center;
-  padding: 0.5em var(--padding-small);
+  margin: 0 auto;
+  padding: 1em var(--padding-small);
 }

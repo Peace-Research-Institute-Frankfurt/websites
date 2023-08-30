@@ -12,7 +12,6 @@
   textarea {
     width: 100%;
     @extend %caption;
-    outline-offset: 2px;
     display: block;
     font-family: inherit;
     border-radius: var(--br-small);

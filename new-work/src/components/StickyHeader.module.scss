@@ -58,17 +58,21 @@
 .bookmarks-container {
   position: fixed;
   background: var(--black);
-  top: 4rem;
+  top: 3.5rem;
+  width: 90%;
   max-width: 30rem;
   right: var(--padding);
   opacity: 0;
   border: 1px solid var(--gray);
   border-radius: var(--br-medium);
   overflow: hidden;
+  transition: var(--fast);
+  transform: translateY(-5px);
 }
 
 .bookmarks-container-active {
   opacity: 1;
+  transform: translateY(0);
 }
 
 .backdrop {

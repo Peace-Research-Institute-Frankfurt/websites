@@ -10,9 +10,9 @@ import BookmarkToggle from './BookmarkToggle'
 import * as styles from './StickyHeader.module.scss'
 
 export default function StickyHeader({ post }) {
-  const [storedBookmarks, setStoredBookmarks] = useLocalStorage('bookmarks', [])
+  const [storedBookmarks, setStoredBookmarks] = useLocalStorage('nw_bookmarks', [])
   const [bookmarks, setBookmarks] = useState([])
-  const [bookmarksActive, setBookmarksActive] = useState(false)
+  const [bookmarksActive, setBookmarksActive] = useState(true)
 
   const scrollPosition = useScrollPosition()
   let scrollProgress = 0
@@ -35,9 +35,9 @@ export default function StickyHeader({ post }) {
             Glossar
           </Link>
           <button className={styles.navItem} onClick={() => setBookmarksActive(!bookmarksActive)}>
-            Favoriten
+            Favoriten {bookmarks.length > 0 && `(${bookmarks.length})`}
           </button>
-          {post && <BookmarkToggle className={styles.navItem} post={post} bookmarks={bookmarks} setBookmarks={setStoredBookmarks} />}
+          {post && <BookmarkToggle post={post} bookmarks={bookmarks} setBookmarks={setStoredBookmarks} />}
         </div>
 
         <div className={`${styles.bookmarksContainer} ${bookmarksActive && styles.bookmarksContainerActive}`}>
