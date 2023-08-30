@@ -79,7 +79,7 @@ const Index = ({ data }) => {
           <ol className={styles.filters}>
             {categories.map((category) => {
               return (
-                <li>
+                <li key={`category.${category}`}>
                   <button
                     onClick={() => {
                       if (activeFilters.includes(category)) {
