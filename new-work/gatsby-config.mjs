@@ -7,7 +7,7 @@ import remarkGfm from 'remark-gfm'
 const config = {
   siteMetadata: {
     siteUrl: `https://leibniz-nw.netlify.app`,
-    title: 'Work New @Leibniz',
+    title: 'WorkNew@Leibniz',
     description: 'Neue Arbeitformen für Wissenschaft und Forschung',
     siteTwitter: '@HSFK_PRIF',
     authorTwitter: '@HSFK_PRIF',
