@@ -17,7 +17,7 @@ export default function StickyHeader({ post }) {
   const scrollPosition = useScrollPosition()
   let scrollProgress = 0
   if (typeof window !== 'undefined') {
-    scrollProgress = Math.min(1, scrollPosition.y / 800)
+    scrollProgress = Math.min(1, scrollPosition.y / (window.innerHeight * 0.75))
   }
   useEffect(() => {
     setBookmarks(storedBookmarks)

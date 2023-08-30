@@ -1,3 +1,4 @@
+@import 'vars';
 .container {
   position: fixed;
   top: 0;
@@ -58,7 +59,6 @@
 .bookmarks-container {
   position: fixed;
   background: var(--black);
-  top: 3.5rem;
   width: 90%;
   max-width: 30rem;
   right: var(--padding);
@@ -68,6 +68,10 @@
   overflow: hidden;
   transition: var(--fast);
   transform: translateY(-5px);
+  top: 2.25rem;
+  @include bp(m) {
+    top: calc(var(--ms-0) * 2.5);
+  }
 }
 
 .bookmarks-container-active {
@@ -76,5 +80,19 @@
 }
 
 .backdrop {
-  display: none;
+  background: rgba(pink, 0.5);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1500;
+  font-size: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.backdrop-active {
+  visibility: visible;
+  pointer-events: all;
 }
