@@ -39,11 +39,14 @@
   @extend %h1;
   grid-column: 1 / 5;
   line-height: 0.85;
+  color: var(--prif-blue-dark);
+  mix-blend-mode: multiply;
   @include bp(m) {
     grid-column: 3 / 6;
   }
   @include bp(xl) {
     grid-column: 2 / 6;
+    font-size: var(--ms-6);
   }
   span {
     display: block;
