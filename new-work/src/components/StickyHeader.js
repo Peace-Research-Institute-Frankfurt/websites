@@ -12,7 +12,7 @@ import * as styles from './StickyHeader.module.scss'
 export default function StickyHeader({ post }) {
   const [storedBookmarks, setStoredBookmarks] = useLocalStorage('nw_bookmarks', [])
   const [bookmarks, setBookmarks] = useState([])
-  const [bookmarksActive, setBookmarksActive] = useState(true)
+  const [bookmarksActive, setBookmarksActive] = useState(false)
 
   const scrollPosition = useScrollPosition()
   let scrollProgress = 0
