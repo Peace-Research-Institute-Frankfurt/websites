@@ -102,7 +102,7 @@ const Index = ({ data, pageContext, location }) => {
           </ol>
           <div className={styles.notes}>
             <MarkdownRenderer
-              markdown={t('Annual reports from 2009 through 2021 can be found [on our website.](https://www.hsfk.de/en/about-us/annual-reports/)')}
+              markdown={t('Annual reports from 2009 through 2021 can be found [on our website.](https://www.hsfk.de/en/about-us/prif-review)')}
             />
           </div>
         </section>
