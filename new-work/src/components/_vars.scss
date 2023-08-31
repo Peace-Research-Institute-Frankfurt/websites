@@ -131,6 +131,7 @@
   font-weight: 400;
   hyphens: auto;
   font-size: var(--ms-1);
+  line-height: calc(var(--baseline) * 1.2);
   @include bp(m) {
     font-size: var(--ms-2);
     line-height: calc(var(--baseline) * 1.3333);

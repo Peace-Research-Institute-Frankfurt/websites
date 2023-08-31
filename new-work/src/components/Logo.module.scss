@@ -8,7 +8,7 @@
     fill: white;
   }
   svg {
-    height: 2.1em;
+    height: 2em;
     @include bp(m) {
       width: auto;
       height: calc(var(--header-height) * 0.675);
