@@ -22,6 +22,7 @@
     line-height: 1;
     border: 1px solid var(--gray);
     transition: var(--fast);
+    font-size: var(--ms--1);
     &:hover,
     &:focus-visible {
       border: 1px solid var(--gray-light);
