@@ -12,7 +12,10 @@
 }
 
 .title-line {
-  display: block;
+  display: inline;
+  @include bp(m) {
+    display: block;
+  }
 }
 
 .section-title {
@@ -31,6 +34,7 @@
   padding: var(--padding);
   padding-bottom: 0;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .filter {

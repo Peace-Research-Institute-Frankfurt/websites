@@ -4,7 +4,7 @@
   margin-bottom: var(--baseline);
   margin-top: calc(var(--baseline) * 0.5);
   counter-reset: items;
-  border-radius: var(--br);
+  border-radius: var(--br-medium);
   grid-column: 1 / 3;
   @include bp(l) {
     grid-column: 2 / 3;
@@ -16,7 +16,7 @@
 
 .item {
   counter-increment: items;
-  padding: 1em;
+  padding: var(--padding-small);
   list-style: none;
   border-bottom: 1px solid var(--gray);
   &:last-child {

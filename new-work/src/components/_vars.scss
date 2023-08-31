@@ -23,7 +23,6 @@
 }
 
 %h1 {
-  font-size: Max(9.3vw, var(--ms-5));
   font-family: var(--edge-rounded);
   line-height: 0.825;
   letter-spacing: -0.03em;
@@ -32,10 +31,14 @@
   text-transform: uppercase;
   text-shadow: 0 0 8px black;
   hyphens: none;
+  font-size: Max(14vw, var(--ms-5));
 }
 %h1-long {
   @extend %h1;
-  font-size: Max(8vw, var(--ms-5));
+  font-size: 12vw;
+  @include bp(m) {
+    font-size: 9.3vw;
+  }
 }
 
 %h2 {
@@ -122,11 +125,14 @@
 
 %copy-large {
   font-family: var(--circa);
-  font-size: var(--ms-2);
   letter-spacing: -0.001em;
-  line-height: calc(var(--baseline) * 1.3333);
   font-weight: 400;
   hyphens: auto;
+  font-size: var(--ms-1);
+  @include bp(m) {
+    font-size: var(--ms-2);
+    line-height: calc(var(--baseline) * 1.3333);
+  }
 }
 
 %caption {

@@ -47,7 +47,7 @@
 
 .title {
   @extend %h1;
-  hyphens: auto;
+  hyphens: none;
   margin-bottom: -0.125em;
 }
 .is-long {

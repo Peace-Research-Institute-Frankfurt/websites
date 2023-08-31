@@ -14,7 +14,10 @@
   }
   ol,
   ul {
-    list-style-position: inside;
+    margin-left: 1em;
+    @include bp(m) {
+      margin-left: 0;
+    }
   }
   .inner {
     grid-column: 2 / 3;

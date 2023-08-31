@@ -1,10 +1,4 @@
-.debug {
-  position: absolute;
-  z-index: 1000;
-  color: red;
-  top: 1em;
-  left: 1em;
-}
+@import 'vars';
 
 .container {
   position: relative;
@@ -14,8 +8,11 @@
     fill: white;
   }
   svg {
-    height: calc(var(--header-height) * 0.675);
-    width: auto;
+    height: 2.1em;
+    @include bp(m) {
+      width: auto;
+      height: calc(var(--header-height) * 0.675);
+    }
   }
 }
 
