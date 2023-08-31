@@ -31,11 +31,13 @@
   text-transform: uppercase;
   text-shadow: 0 0 8px black;
   hyphens: none;
-  font-size: Max(14vw, var(--ms-5));
+  font-size: Max(12vw, var(--ms-5));
 }
+
 %h1-long {
   @extend %h1;
-  font-size: 12vw;
+  font-size: 14vw;
+  hyphens: auto;
   @include bp(m) {
     font-size: 9.3vw;
   }
@@ -141,6 +143,7 @@
   font-size: var(--ms--2);
   letter-spacing: 0.05em;
 }
+
 %caption-bold {
   @extend %caption;
   font-weight: 600;

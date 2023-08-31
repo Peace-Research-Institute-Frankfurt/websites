@@ -21,6 +21,13 @@
   }
 }
 
+.link {
+  &:hover,
+  &:focus-visible {
+    text-decoration: underline;
+  }
+}
+
 .meta {
   display: flex;
   gap: 1em;

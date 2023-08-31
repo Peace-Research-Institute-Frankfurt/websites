@@ -47,7 +47,6 @@
 
 .title {
   @extend %h1;
-  hyphens: none;
   margin-bottom: -0.125em;
 }
 .is-long {
@@ -62,7 +61,11 @@
 }
 
 .has-portrait {
-  display: grid;
-  grid-template-columns: 4.2em 1fr;
   gap: var(--padding);
+  display: flex;
+  flex-flow: column;
+  @include bp(m) {
+    display: grid;
+    grid-template-columns: 4.2em 1fr;
+  }
 }

@@ -116,7 +116,6 @@ const Post = ({ data, children }) => {
           eyebrow={frontmatter.eyebrow || frontmatter.category}
           image={heroImage}
           portrait={portraitImage}
-          credit={frontmatter.hero_credit}
           intro={frontmatter.intro}
         />
         <main className={styles.body}>
