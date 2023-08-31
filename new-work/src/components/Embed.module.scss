@@ -1,14 +1,16 @@
 @import 'vars';
 .container {
-  margin-top: 1em;
-  margin-bottom: 1em;
+  margin: calc(var(--baseline) / 2) 0;
+  grid-column: 1 / 3;
+  @include bp(l) {
+    grid-column: 2 / 3;
+  }
 }
 
 .consent {
   @extend %caption;
-  border: 2px solid currentColor;
-  border-radius: var(--br);
-  padding: 1em;
+  border-top: 1px solid var(--gray);
+  padding: calc(var(--baseline) / 2) 0;
 }
 
 .iframe-container {

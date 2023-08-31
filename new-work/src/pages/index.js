@@ -1,13 +1,13 @@
-import React from 'react'
-import { Link, graphql } from 'gatsby'
+import React, { useState } from 'react'
+import { graphql } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import App from '../components/App'
 import Meta from '../components/Meta'
+import App from '../components/App'
+import StickyHeader from '../components/StickyHeader'
 import SkipToContent from '../components/SkipToContent'
-import { gri } from '../components/util'
-import LeibnizLogo from '../images/logo-black.svg'
+import PostHeader from '../components/PostHeader'
 import * as styles from './index.module.scss'
+import { PostList, PostListItem } from '../components/PostList'
 
 export const query = graphql`
   query {
@@ -20,19 +20,7 @@ export const query = graphql`
           }
           frontmatter {
             title
-            order
-            intro
-            authors {
-              frontmatter {
-                name
-                author_id
-                image {
-                  childImageSharp {
-                    gatsbyImageData(placeholder: NONE, width: 70, layout: CONSTRAINED)
-                  }
-                }
-              }
-            }
+            category
           }
         }
       }
@@ -41,75 +29,72 @@ export const query = graphql`
 `
 
 const Index = ({ data }) => {
-  const posts = data.posts.nodes.map((node, i) => {
-    const fm = node.childMdx.frontmatter
-    let byline = ''
-    if (fm.authors) {
-      byline = fm.authors.map((a, j) => {
-        const authorImage = getImage(a.frontmatter.image)
-        const imageStyles = {
-          transform: `translateX(${100 * j}%) rotate(${gri(-20, 20)}deg)`,
-        }
-        return (
-          <li style={imageStyles} key={`authors-${i}-${a.frontmatter.author_id}-${j}`}>
-            <GatsbyImage objectFit="contain" className={styles.bylineImage} image={authorImage} alt={`${a.frontmatter.name} profile image`} />
-          </li>
-        )
-      })
+  const categories = []
+
+  data.posts.nodes.forEach((node) => {
+    const category = node.childMdx.frontmatter.category
+    if (category && !categories.includes(category)) {
+      categories.push(category)
     }
-    return (
-      <li key={`post-${i}`}>
-        <Link className={styles.postsItem} to={node.childMdx.fields.slug}>
-          <div className={styles.postsHeader}>
-            <h2 className={styles.postsTitle}>{fm.title}</h2>
-            {byline.length > 0 && <ul className={styles.postsAuthors}>{byline}</ul>}
-          </div>
-          <p className={styles.postsIntro}>{fm.intro}</p>
-        </Link>
-      </li>
-    )
   })
+  const [activeFilters, setActiveFilters] = useState(categories)
+
+  const posts = data.posts.nodes
+    .filter((node) => {
+      return activeFilters.includes(node.childMdx.frontmatter.category)
+    })
+    .map((node) => {
+      const fm = node.childMdx.frontmatter
+      return (
+        <li key={`post-${node.id}`}>
+          <PostListItem title={fm.title} category={fm.category} slug={node.childMdx.fields.slug} />
+        </li>
+      )
+    })
   return (
     <App>
       <SkipToContent />
-      <main id="content">
-        <header role="banner" className={styles.hero}>
-          <h1 className={styles.title}>
-            <div>
-              <span className={styles.titleMain}>
-                <span className={styles.w}>W</span>
-                <span className={styles.o}>o</span>
-                <span>r</span>
-                <span>k</span>
-                <span> </span>
-                <span>N</span>
-                <span className={styles.e}>e</span>
-                <span className={styles.w}>w</span>
-              </span>
-            </div>
-            <div className={styles.tagline}>
-              <p>Wie wir Räume, Kulturen und Netzwerke für die Zukunft gestalten</p>
-            </div>
-            <span className={styles.titleSecondary}>
-              <span className={styles.at}>@</span>Leibniz
-            </span>
-          </h1>
-          <StaticImage
-            imgStyle={{ objectFit: 'contain' }}
-            placeholder="none"
-            layout="constrained"
-            className={styles.face}
-            loading="eager"
-            src="../images/leibniz-head.png"
-            alt=""
-            width={1000}
-          />
-          <a href="https://www.leibniz-gemeinschaft.de/" className={styles.sticker}>
-            <LeibnizLogo />
-          </a>
-        </header>
+      <StickyHeader />
+      <main id="content" className={styles.container}>
+        <PostHeader
+          image={<StaticImage src="../images/cubes.png" alt="" layout="fullWidth" />}
+          title="Neue Arbeitsformen für Wissenschaft und Forschung"
+          intro={
+            <>
+              New Work bricht Regeln auf, hinterfragt Machtverhältnisse und rückt den Menschen seinen Stärken, Bedürfnissen und Emotiononen in den
+              Fokus. Diese Handreichung sammelt Anleitungen und Resourcen zu <span className={styles.introSpace}>Raum</span>,{' '}
+              <span className={styles.introPeople}>Mensch</span>, und <span className={styles.introTools}>Methoden</span>, um den Übergang zur New
+              Work in wissenschaftlichen Einrichtungen zu begleiten.
+            </>
+          }
+          credit="Illustration von Max Köhler"
+        />
         <section className={styles.content}>
-          <ol className={styles.posts}>{posts}</ol>
+          <ol className={styles.filters}>
+            {categories.map((category) => {
+              return (
+                <li key={`category.${category}`}>
+                  <button
+                    onClick={() => {
+                      if (activeFilters.includes(category)) {
+                        setActiveFilters((prev) => {
+                          return prev.filter((el) => el !== category)
+                        })
+                      } else {
+                        setActiveFilters((prev) => {
+                          return [...prev, category]
+                        })
+                      }
+                    }}
+                    className={`${styles.filter} ${category} ${activeFilters.includes(category) && styles.activeFilter}`}
+                  >
+                    {category}
+                  </button>
+                </li>
+              )
+            })}
+          </ol>
+          <PostList>{posts}</PostList>
         </section>
       </main>
     </App>

@@ -1,9 +1,9 @@
 import React from 'react'
 import HeartFilled from '../images/heart-filled.svg'
 import HeartOutline from '../images/heart-stroke.svg'
-import Button from './ButtonAdapter.js'
+import * as styles from './BookmarkToggle.module.scss'
 
-export default function BookmarkToggle({ post, bookmarks, setBookmarks }) {
+export default function BookmarkToggle({ post, className, bookmarks, setBookmarks }) {
   const bookmarkIndex = bookmarks.findIndex((el) => {
     return el.slug === post.childMdx.fields.slug
   })
@@ -11,10 +11,11 @@ export default function BookmarkToggle({ post, bookmarks, setBookmarks }) {
   function toggleBookmark() {
     setBookmarks((prevBookmarks) => {
       if (bookmarkIndex === -1) {
-        const bookmark = {
+        console.log(post)
+        const newBookmark = {
           slug: post.childMdx.fields.slug,
         }
-        return [...prevBookmarks, bookmark]
+        return [...prevBookmarks, newBookmark]
       } else {
         return prevBookmarks.filter((el) => {
           return el.slug !== post.childMdx.fields.slug
@@ -24,13 +25,9 @@ export default function BookmarkToggle({ post, bookmarks, setBookmarks }) {
   }
 
   return (
-    <Button
-      label={bookmarkIndex === -1 ? 'Als Favorit speichern' : 'Favorit löschen'}
-      type="icon"
-      priority="secondary"
-      hideLabel={true}
-      onClick={toggleBookmark}
-      icon={bookmarkIndex === -1 ? <HeartOutline /> : <HeartFilled />}
-    />
+    <button onClick={toggleBookmark} className={`${className ? className : ''} ${styles.container}`}>
+      {bookmarkIndex === -1 ? <HeartOutline /> : <HeartFilled />}
+      {bookmarkIndex === -1 ? 'Als Favorit speichern' : 'Favorit löschen'}
+    </button>
   )
 }

@@ -1,0 +1,15 @@
+.container {
+  font-size: 0;
+  color: white;
+  cursor: pointer;
+  padding: 0 var(--padding-small);
+  &:hover,
+  &:focus-visible {
+    background: var(--black-hover);
+  }
+  svg {
+    display: block;
+    width: var(--ms-0);
+    overflow: visible;
+  }
+}

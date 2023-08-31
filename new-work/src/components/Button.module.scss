@@ -2,35 +2,24 @@
 
 .container {
   display: inline-flex;
-  font-family: var(--haas-text);
-  letter-spacing: -0.01em;
-  line-height: 1;
+  font-family: var(--edge);
   cursor: pointer;
   align-items: center;
-  font-size: var(--ms-1);
   border-radius: var(--br);
-  background: var(--gray-light);
-  border: 1px solid var(--gray-light);
-  gap: 0.35rem;
-  font-weight: 600;
-  padding: 0 0.75em;
-  padding-bottom: 0.15em;
+  color: var(--black);
+  background: var(--white);
+  font-size: var(--ms--1);
+  border: 1px solid var(--whte);
   height: 1.85em;
+  box-shadow: inset 0em 0.1em 0.35em rgba(white, 0.3), inset 0em -0.1em 0.35em rgba(black, 0.3);
   position: relative;
+  padding: 0 0.65em;
+  padding-top: 0.05em;
   @include bp(m) {
     height: 1.85em;
-    padding: 0 0.5em;
-    padding-bottom: 0.15em;
-  }
-  &:hover,
-  &:focus-visible {
-    border-color: var(--black);
-  }
-
-  &.has-icon {
-    padding-right: 2em;
   }
 }
+
 .hide-label {
   width: 2.1em;
   padding: 0;
@@ -56,20 +45,18 @@
   }
 }
 
-.primary {
-  background: var(--black);
-  border: 1px solid var(--black);
-  color: white;
-  &.loading {
-    background: var(--gray);
-    border: 1px solid var(--gray);
-    cursor: progress;
-  }
-}
 .secondary {
-  background: var(--gray-light);
-  border: 1px solid var(--gray-light);
-  color: var(--black);
+  background: var(--black);
+  border: 1px solid var(--gray);
+  color: var(--gray-light);
+  transition: var(--fast);
+  text-decoration-color: rgba(white, 0.5);
+  &:hover,
+  &:focus-visible {
+    border: 1px solid var(--gray-hover);
+    color: var(--gray-light-hover);
+    background: var(--black);
+  }
   &.loading {
     color: var(--gray-dark);
     cursor: progress;
@@ -78,7 +65,7 @@
     }
     &:hover,
     &:focus-visible {
-      border: 1px solid var(--gray-light);
+      border: 1px solid var(--gray);
     }
   }
 }
@@ -90,23 +77,26 @@
   height: auto;
   font-weight: inherit;
   color: inherit;
+  height: 100%;
+  box-shadow: none;
+  border-radius: 0;
   &:hover,
   &:focus-visible {
     border: 0;
+    background: var(--black-hover);
     text-decoration: underline;
   }
 }
 
 .icon {
-  width: 1.1em;
+  width: 1em;
   display: flex;
   position: absolute;
-  right: 0.45em;
+  left: 50%;
   top: 50%;
-  transform: translateY(-50%);
-  & > * {
+  transform: translateY(-50%) translateX(-50%);
+  svg {
     width: 100%;
-    height: auto;
   }
 }
 

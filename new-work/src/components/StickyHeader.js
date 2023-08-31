@@ -1,91 +1,47 @@
-import { Link, graphql, useStaticQuery } from 'gatsby'
-import { StaticImage } from 'gatsby-plugin-image'
-import React, { useEffect, useState } from 'react'
-import useLocalStorage from '@shared/hooks/useLocalStorage'
+import { Link } from 'gatsby'
+import React, { useState, useEffect } from 'react'
 import useScrollPosition from '@shared/hooks/useScrollPosition'
-import LeftArrow from '../images/arrow-left.svg'
-import RightArrow from '../images/arrow-right.svg'
-import BookmarkToggle from './BookmarkToggle.js'
+import useLocalStorage from '@shared/hooks/useLocalStorage'
+
+import Logo from './Logo'
 import BookmarksList from './BookmarksList'
-import Button from './ButtonAdapter'
-import ButtonGroup from './ButtonGroup'
+import BookmarkToggle from './BookmarkToggle'
+
 import * as styles from './StickyHeader.module.scss'
 
-export default function StickyHeader({ title, next, prev, post }) {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-  const [bookmarks, setBookmarks] = useLocalStorage('bookmarks', [])
-  const [faves, setFaves] = useState([])
+export default function StickyHeader({ post }) {
+  const [storedBookmarks, setStoredBookmarks] = useLocalStorage('nw_bookmarks', [])
+  const [bookmarks, setBookmarks] = useState([])
   const [bookmarksActive, setBookmarksActive] = useState(false)
+
   const scrollPosition = useScrollPosition()
-  const isScrolled = scrollPosition.y > 50
   let scrollProgress = 0
   if (typeof window !== 'undefined') {
-    scrollProgress = Math.min(1, scrollPosition.y / (document.body.scrollHeight - window.innerHeight))
-  }
-  const containerStyles = {
-    '--scroll': scrollPosition.y,
-    '--progress': scrollProgress,
+    scrollProgress = Math.min(1, scrollPosition.y / (window.innerHeight * 0.75))
   }
   useEffect(() => {
-    setFaves(bookmarks)
-  }, [bookmarks])
+    setBookmarks(storedBookmarks)
+  }, [storedBookmarks])
+
   return (
     <>
-      <header style={containerStyles} className={`${styles.container} ${isScrolled && styles.stuck}`}>
-        <div className={styles.copy}>
-          <div className={styles.left}>
-            <Link className={styles.logo} to="/">
-              <StaticImage
-                imgStyle={{ objectFit: 'contain' }}
-                placeholder="none"
-                width={70}
-                layout="constrained"
-                className={styles.face}
-                src="../images/leibniz-head.png"
-                alt="New Work Logo"
-              />
-            </Link>
-            <span className={styles.title}>{title}</span>
-          </div>
-          <Link to="/" className={styles.siteTitle}>
-            {data.site.siteMetadata.title}
+      <header className={`${styles.container}`}>
+        <Link className={styles.logo} to="/">
+          <Logo progress={scrollProgress} />
+        </Link>
+
+        <div className={styles.nav}>
+          <Link className={styles.navItem} to="/terms">
+            Glossar
           </Link>
-          <section>
-            <ButtonGroup>
-              <nav className={styles.pagination}>
-                {prev && (
-                  <Link to={`/${prev.childMdx.fields.slug}`}>
-                    Vorheriger Artikel
-                    <LeftArrow />
-                  </Link>
-                )}
-                {next && (
-                  <Link to={`/${next.childMdx.fields.slug}`}>
-                    Nächster Artikel
-                    <RightArrow />
-                  </Link>
-                )}
-              </nav>
-              <BookmarkToggle post={post} bookmarks={faves} setBookmarks={setBookmarks} />
-              <Button priority="secondary" label="Favoriten" onClick={() => setBookmarksActive(!bookmarksActive)} />
-            </ButtonGroup>
-            <div className={`${styles.bookmarksContainer} ${bookmarksActive && styles.bookmarksContainerActive}`}>
-              <div className={styles.bookmarksContainerInner}>
-                <BookmarksList bookmarks={faves} setBookmarks={setBookmarks} />
-              </div>
-            </div>
-          </section>
+          <button className={styles.navItem} onClick={() => setBookmarksActive(!bookmarksActive)}>
+            Favoriten {bookmarks.length > 0 && `(${bookmarks.length})`}
+          </button>
+          {post && <BookmarkToggle post={post} bookmarks={bookmarks} setBookmarks={setStoredBookmarks} />}
         </div>
-        <div className={styles.progress}>
-          <div className={styles.progressInner}></div>
+
+        <div className={`${styles.bookmarksContainer} ${bookmarksActive && styles.bookmarksContainerActive}`}>
+          <BookmarksList bookmarks={bookmarks} setBookmarks={setStoredBookmarks} />
         </div>
       </header>
       <button className={`${styles.backdrop} ${bookmarksActive && styles.backdropActive}`} onClick={() => setBookmarksActive(false)}>

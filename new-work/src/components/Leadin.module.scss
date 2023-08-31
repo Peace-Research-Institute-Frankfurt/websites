@@ -1,14 +1,6 @@
-@import 'vars';
-
 .container {
-  font-family: var(--haas-text);
   text-transform: uppercase;
-  letter-spacing: 0.015em;
-  word-spacing: 0.01em;
+  letter-spacing: 0.01em;
+  font-family: var(--edge-rounded);
   font-size: 0.95em;
-  font-weight: 600;
-  @include bp(m) {
-    font-weight: 700;
-    font-size: 0.9em;
-  }
 }

@@ -6,3 +6,7 @@
 
 [functions.emails]
   included_files = ["emails/**"]
+
+[dev]
+  framework = "gatsby"
+  command = "npm run develop"

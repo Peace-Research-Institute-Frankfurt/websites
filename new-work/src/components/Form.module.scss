@@ -11,16 +11,21 @@
   input,
   textarea {
     width: 100%;
+    @extend %caption;
     display: block;
     font-family: inherit;
-    border-radius: var(--br);
-    padding: 0.15em 0.5em;
-    padding-bottom: 0.3em;
+    border-radius: var(--br-small);
+    padding: 0.3em 0.6em;
+    padding-bottom: 0.34em;
+    background: transparent;
+    color: var(--white);
     line-height: 1;
     border: 1px solid var(--gray);
+    transition: var(--fast);
+    font-size: var(--ms--1);
     &:hover,
     &:focus-visible {
-      border: 1px solid var(--black);
+      border: 1px solid var(--gray-light);
     }
     &::placeholder {
       opacity: 0.75;
@@ -35,10 +40,10 @@
 
 .error {
   input {
-    border-color: hsl(20, 90%, 35%);
+    border-color: hsl(20, 80%, 55%);
     &:hover,
     &:focus-visible {
-      border-color: hsl(20, 90%, 25%);
+      border-color: hsl(20, 80%, 45%);
     }
   }
 }
@@ -62,7 +67,7 @@
 }
 .error-indicator {
   position: absolute;
-  right: 0.5rem;
+  right: 0.25rem;
   top: 50%;
   font-size: 0;
   transform: translateY(-50%);
@@ -70,7 +75,7 @@
     width: 1.5rem;
   }
   path {
-    fill: hsl(25, 90%, 35%);
+    fill: hsl(20, 80%, 45%);
   }
 }
 
@@ -85,9 +90,9 @@
 
 .field-error {
   @extend %caption;
-  padding: 0.75rem;
-  border-radius: var(--br);
-  background: hsl(25, 95%, 90%);
-  color: hsl(25, 90%, 5%);
-  margin-top: 0.5rem;
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+  border-radius: var(--br-small);
+  background: hsla(24, 96%, 90%, 0.2);
+  color: var(--white);
 }

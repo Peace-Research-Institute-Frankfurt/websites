@@ -1,23 +1,63 @@
 @import 'vars';
-a.container {
+
+.container {
+  grid-column: 1 / 4;
   display: flex;
   justify-content: space-between;
-  padding: 1em;
-  border-radius: var(--br);
   text-decoration: none !important;
-  color: var(--black);
-  border: 2px solid var(--black);
+  padding: 0.35em 0.5em;
+  border: 1px solid var(--gray);
+  margin-top: var(--baseline);
+  border-radius: var(--br-medium);
+
+  @include bp(m) {
+    grid-column: 1 / 3;
+  }
+  @include bp(l) {
+    grid-column: 2 / 3;
+  }
   &:hover,
   &:focus-visible {
-    background: var(--gray-light);
+    background: rgba(white, 0.05);
   }
   svg {
     width: 2.5rem;
   }
 }
 
+.title {
+  font-family: var(--edge);
+  letter-spacing: 0.025em;
+  display: block;
+  margin-bottom: -0.1em;
+}
+
+.list {
+  list-style: none;
+  border: 1px solid var(--gray);
+  padding-left: 0 !important;
+  border-radius: var(--br-medium);
+}
+
+.list-item {
+  border-bottom: 1px solid var(--gray);
+  margin-bottom: 0 !important;
+  border-radius: 0;
+  &:before {
+    display: none;
+  }
+  &:last-child {
+    border-bottom: 0;
+  }
+  .container {
+    margin-top: 0;
+    border: 0;
+  }
+}
+
 .meta {
   @extend %caption;
+  color: var(--gray-hover);
   display: flex;
 }
 
