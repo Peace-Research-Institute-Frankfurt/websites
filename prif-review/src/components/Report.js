@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { graphql } from 'gatsby'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { MDXProvider } from '@mdx-js/react'
 import MarkdownRenderer from 'react-markdown-renderer'
 import App from '../components/App'
@@ -44,6 +45,11 @@ export const query = graphql`
           intro
           color
           order
+          cover_image {
+            childImageSharp {
+              gatsbyImageData(width: 1200, layout: FULL_WIDTH, placeholder: NONE)
+            }
+          }
           download_url
           authors {
             name
@@ -110,7 +116,11 @@ export const query = graphql`
 `
 
 const Index = ({ data, pageContext, children, location }) => {
+  const frontmatter = data.post.childMdx.frontmatter
   const year = data.post.relativeDirectory.replace(/(.{2})\/(reports)\//g, '')
+
+  const coverImage = getImage(frontmatter.cover_image)
+
   const [introCollapsed, setIntroCollapsed] = useState(true)
   const { t } = useTranslation()
 
@@ -154,6 +164,7 @@ const Index = ({ data, pageContext, children, location }) => {
       <SkipToContent />
       <main>
         <header className={styles.header}>
+          <GatsbyImage className={styles.headerImage} image={coverImage} alt="" />
           <div className={styles.headerInner}>
             <h1 className={styles.title}>
               {data.post.childMdx.frontmatter.title}
@@ -195,7 +206,7 @@ const Index = ({ data, pageContext, children, location }) => {
           {data.post.childMdx.frontmatter.download_url && (
             <a className={styles.download} download href={data.post.childMdx.frontmatter.download_url}>
               <DownloadIcon />
-              <span className={styles.downloadLabel}>{t('Download full report as PDF')}</span>
+              <span className={styles.downloadLabel}>{t('Download full report in PDF format')}</span>
             </a>
           )}
         </section>

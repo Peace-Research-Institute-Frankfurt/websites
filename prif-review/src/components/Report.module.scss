@@ -8,36 +8,50 @@
   min-height: 50vh;
   padding-top: 3.5em;
   box-shadow: 0 -20px 15px -10px inset rgba(black, 0.01);
-  border-bottom: 1px solid rgba(black, 0.05);
+  border-bottom: 1px solid rgba(black, 0.1);
+  position: relative;
   @include bp(m) {
     min-height: 60vh;
     padding-top: 8em;
   }
   @include bp(xl) {
-    min-height: 76vh;
     padding-top: 12em;
   }
 }
 .header-inner {
   @extend %grid;
+  position: relative;
+  z-index: 100;
+}
+
+.header-image {
+  position: absolute !important;
+  top: 50%;
+  left: 50%;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translateX(-50%) translateY(-50%);
 }
 
 .title {
   @extend %h1;
   grid-column: 1 / 5;
   line-height: 0.85;
-  font-size: Min(5rem, 12vw);
+  color: var(--prif-blue-dark);
+  mix-blend-mode: multiply;
   @include bp(m) {
     grid-column: 3 / 6;
-    font-size: 6vw;
   }
   @include bp(xl) {
     grid-column: 2 / 6;
+    font-size: var(--ms-6);
   }
   span {
     display: block;
     font-size: 0.9em;
-    margin-top: 0.15em;
+    margin-top: 0.1em;
     font-variation-settings: 'wght' 250;
   }
 }
