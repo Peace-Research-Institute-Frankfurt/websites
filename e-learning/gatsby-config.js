@@ -26,8 +26,8 @@ module.exports = {
   flags: {
     FAST_DEV: true,
   },
-  headers: [{ source: '*', headers: [{ key: 'X-Frame-Options', value: 'SAMEORIGIN' }] }],
-  adapter: adapter({}),
+  headers: [{ source: '*', headers: [{ key: 'x-frame-options', value: 'SAMEORIGIN' }] }],
+  adapter: adapter.default(),
   plugins: [
     'gatsby-plugin-sass',
     'gatsby-plugin-image',

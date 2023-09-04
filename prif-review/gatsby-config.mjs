@@ -17,7 +17,7 @@ const config = {
       alt: 'image alt',
     },
   },
-  adapter: adapter(),
+  adapter: adapter.default(),
   plugins: [
     'gatsby-plugin-image',
     'gatsby-transformer-json',

@@ -4,7 +4,7 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 import remarkGfm from 'remark-gfm'
 import adapter from 'gatsby-adapter-netlify'
-
+console.log(adapter)
 const config = {
   siteMetadata: {
     siteUrl: `https://leibniz-nw.netlify.app`,
@@ -17,7 +17,7 @@ const config = {
       alt: 'image alt',
     },
   },
-  adapter: adapter(),
+  adapter: adapter.default(),
   plugins: [
     'gatsby-plugin-image',
     'gatsby-transformer-json',
