@@ -14,7 +14,7 @@
 }
 
 .title {
-  @extend %h1;
+  @extend %h1-long;
   hyphens: auto;
   display: flex;
   align-items: center;

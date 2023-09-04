@@ -43,18 +43,21 @@
   background: var(--black);
   margin: 0 var(--padding);
   padding: var(--baseline) var(--padding);
+  padding-bottom: 0;
   display: grid;
   grid-template-columns: 1fr minmax(min-content, 30rem) 1fr;
+  column-gap: var(--padding);
   @include bp(l) {
     grid-template-columns: 1fr minmax(min-content, 55rem) 1fr;
   }
-  column-gap: var(--padding);
 }
 
 .posts-nav {
   border-top: 1px solid var(--gray);
   grid-column: 1 / 4;
   padding-top: calc(var(--baseline) * 1);
+  padding-bottom: calc(var(--baseline) * 1);
   margin: 0 calc(var(--padding) * -1);
   margin-top: var(--baseline);
+  border-bottom: 1px solid var(--gray);
 }

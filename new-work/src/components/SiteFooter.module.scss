@@ -3,14 +3,21 @@
 .container {
   @extend %caption;
   display: flex;
+  color: var(--gray-light);
   justify-content: space-between;
+  align-items: center;
   background: var(--black);
-  border-top: 1px solid var(--gray);
-  padding: var(--padding);
+  padding: 0 var(--padding);
   bottom: 0;
+  right: 0;
+  left: 0;
   margin: 0 var(--padding);
   z-index: 2000;
-  position: relative;
+  position: absolute;
+  height: var(--footer-height);
+  @include bp(l) {
+    padding: 0;
+  }
 }
 .nav {
   justify-content: space-between;
@@ -25,6 +32,7 @@
   &:hover,
   &:focus-visible {
     text-decoration: underline;
+    color: var(--white);
   }
 }
 

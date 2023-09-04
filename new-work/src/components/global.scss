@@ -51,6 +51,7 @@
   --br: 20px;
   --br-medium: 10px;
   --header-height: 5rem;
+  --footer-height: 3rem;
   @include bp(m) {
     --header-height: 5rem;
     --br: 40px;
