@@ -3,6 +3,7 @@ import { fileURLToPath } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 import remarkGfm from 'remark-gfm'
+import adapter from 'gatsby-adapter-netlify'
 
 const config = {
   siteMetadata: {
@@ -16,11 +17,11 @@ const config = {
       alt: 'image alt',
     },
   },
+  adapter: adapter(),
   plugins: [
     'gatsby-plugin-image',
     'gatsby-transformer-json',
     'gatsby-transformer-sharp',
-    'gatsby-plugin-netlify',
     'gatsby-plugin-react-svg',
     {
       resolve: 'gatsby-plugin-sharp',

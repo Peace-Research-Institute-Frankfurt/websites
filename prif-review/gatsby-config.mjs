@@ -3,10 +3,11 @@ import { fileURLToPath } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 import remarkGfm from 'remark-gfm'
+import adapter from 'gatsby-adapter-netlify'
 
 const config = {
   siteMetadata: {
-    siteUrl: `https://prif-review.netlify.app`,
+    siteUrl: 'https://prif-review.netlify.app',
     title: 'PRIF Review',
     description: '',
     siteTwitter: '@HSFK_PRIF',
@@ -16,13 +17,13 @@ const config = {
       alt: 'image alt',
     },
   },
+  adapter: adapter(),
   plugins: [
     'gatsby-plugin-image',
     'gatsby-transformer-json',
     'gatsby-transformer-sharp',
-    'gatsby-plugin-netlify',
     'gatsby-plugin-sass',
-    `gatsby-transformer-csv`,
+    'gatsby-transformer-csv',
     'gatsby-plugin-react-svg',
     {
       resolve: 'gatsby-plugin-sharp',
@@ -75,19 +76,19 @@ const config = {
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/locales`,
-        name: `locale`,
+        name: 'locale',
       },
     },
     {
-      resolve: `gatsby-plugin-react-i18next`,
+      resolve: 'gatsby-plugin-react-i18next',
       options: {
-        localeJsonSourceName: `locale`,
-        languages: [`en`, `de`],
-        defaultLanguage: `de`,
-        fallbackLanguage: `de`,
+        localeJsonSourceName: 'locale',
+        languages: ['en', 'de'],
+        defaultLanguage: 'de',
+        fallbackLanguage: 'de',
         redirect: false,
         i18nextOptions: {
           interpolation: {
