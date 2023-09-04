@@ -26,6 +26,7 @@
   transition: var(--fast);
   text-decoration: none !important;
   font-size: var(--ms-1);
+  outline-offset: 3px;
   @include bp(s) {
     font-size: var(--ms-2);
   }

@@ -16,7 +16,7 @@
 
 .item {
   counter-increment: items;
-  padding: var(--padding-small);
+  padding: var(--padding);
   list-style: none;
   border-bottom: 1px solid var(--gray);
   &:last-child {

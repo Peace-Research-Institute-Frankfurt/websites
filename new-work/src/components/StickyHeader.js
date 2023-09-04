@@ -35,7 +35,7 @@ export default function StickyHeader({ post }) {
             Glossar
           </Link>
           <button className={styles.navItem} onClick={() => setBookmarksActive(!bookmarksActive)}>
-            Favoriten {bookmarks.length > 0 && `(${bookmarks.length})`}
+            Favoriten {bookmarks.length > 0 && <span className={styles.bookmarksCounter}>{bookmarks.length}</span>}
           </button>
           {post && <BookmarkToggle post={post} bookmarks={bookmarks} setBookmarks={setStoredBookmarks} />}
         </div>
