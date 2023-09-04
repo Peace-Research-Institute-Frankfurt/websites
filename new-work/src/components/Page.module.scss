@@ -16,11 +16,11 @@
   position: relative;
   background: var(--black);
   margin: 0 var(--padding);
-  padding: var(--baseline) var(--padding);
+  padding: var(--padding-small) 0;
   display: grid;
   grid-template-columns: 1fr minmax(min-content, 30rem) 1fr;
+  column-gap: var(--padding);
   @include bp(l) {
     grid-template-columns: 1fr minmax(min-content, 55rem) 1fr;
   }
-  column-gap: var(--padding);
 }

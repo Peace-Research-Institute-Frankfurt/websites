@@ -40,13 +40,17 @@
 .large {
   display: contents;
   .inner {
-    display: contents;
+    grid-column: 1 / 3;
+    @include bp(m) {
+      display: contents;
+    }
   }
   .image {
     grid-column: 1 / 3;
   }
   .captions {
     grid-column: 1 / 2;
+    margin-bottom: calc(var(--baseline) * 0.5);
   }
 
   img {
