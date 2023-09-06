@@ -89,12 +89,7 @@
   a {
     text-decoration: underline;
     text-decoration-thickness: 1px;
-    text-decoration-style: dotted;
     text-underline-offset: 0.15em;
-    &:hover,
-    &:focus-visible {
-      text-decoration-style: solid;
-    }
   }
   li {
     margin-bottom: 0.25em;

@@ -9,8 +9,9 @@
 
 .consent {
   @extend %caption;
-  border-top: 1px solid var(--gray);
-  padding: calc(var(--baseline) / 2) 0;
+  border: 1px solid var(--gray);
+  padding: var(--padding-small);
+  border-radius: var(--br-medium);
 }
 
 .iframe-container {
@@ -30,11 +31,12 @@
 }
 
 .active-controls {
+  @extend %caption;
   color: var(--gray-light);
   line-height: 1;
 }
 
 .caption {
-  @extend %caption-bold;
+  @extend %caption;
   padding-top: 0.75em;
 }

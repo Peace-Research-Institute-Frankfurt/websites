@@ -83,7 +83,7 @@
   &:hover,
   &:focus-visible {
     border: 0;
-    background: var(--black-hover);
+    background: transparent;
     text-decoration: underline;
   }
 }
@@ -101,7 +101,7 @@
 }
 
 .small {
-  font-size: var(--ms--1);
+  font-size: var(--ms--2);
   .icon {
     svg {
       height: 0.95em;
