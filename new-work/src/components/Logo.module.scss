@@ -2,7 +2,8 @@
 
 .container {
   position: relative;
-  padding-top: 0.5rem;
+  padding-top: 0.5em;
+  padding-bottom: 0.2em;
   path,
   rect {
     fill: white;
@@ -14,9 +15,6 @@
       height: calc(var(--header-height) * 0.675);
     }
   }
-}
-
-.ork {
 }
 
 .label {

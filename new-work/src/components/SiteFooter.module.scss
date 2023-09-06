@@ -4,8 +4,6 @@
   @extend %caption;
   display: flex;
   color: var(--gray-light);
-  justify-content: space-between;
-  align-items: center;
   background: var(--black);
   padding: 0 var(--padding);
   bottom: 0;
@@ -15,6 +13,14 @@
   z-index: 2000;
   position: absolute;
   height: var(--footer-height);
+  flex-flow: column;
+  justify-content: center;
+  gap: 0.25em;
+  @include bp(s) {
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row;
+  }
   @include bp(l) {
     padding: 0;
   }
