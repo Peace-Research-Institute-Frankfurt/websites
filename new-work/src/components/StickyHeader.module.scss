@@ -60,6 +60,11 @@
   color: var(--white);
   border-right: 1px solid var(--gray);
   cursor: pointer;
+  padding-bottom: 0.45em;
+  @include bp(m) {
+    padding: 0.2em 0.6em;
+    padding-bottom: 0.3em;
+  }
   &:last-child {
     border-right: 0;
   }
