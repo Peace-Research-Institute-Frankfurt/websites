@@ -12,15 +12,6 @@
   border-bottom: 1px solid var(--gray);
 }
 
-.section-title {
-  font-family: var(--edge-rounded);
-  font-size: var(--ms-1);
-  text-transform: uppercase;
-  border-bottom: 1px solid var(--gray);
-  padding: var(--padding-small) var(--padding);
-  padding-bottom: 0.3em;
-}
-
 .filters {
   display: flex;
   gap: var(--padding-small);
@@ -35,7 +26,7 @@
   font-family: var(--edge-rounded);
   line-height: 0.85;
   border-radius: 1000px;
-  padding: 0.1em 0.25em;
+  padding: 0.185em 0.3em;
   letter-spacing: -0.025em;
   text-transform: uppercase;
   padding-top: 0.2em;

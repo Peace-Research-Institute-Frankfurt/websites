@@ -1,7 +1,7 @@
 import React from 'react'
 import * as styles from './PostHeader.module.scss'
 
-export default function PostHeader({ title, intro, eyebrow, image, credit, portrait }) {
+export default function PostHeader({ title, intro, image, credit, portrait }) {
   return (
     <header className={`${styles.wrapper} ${image ? styles.hasImage : ''}`}>
       {image && <div className={styles.image}>{image}</div>}

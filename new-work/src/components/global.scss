@@ -2,14 +2,14 @@
 
 @font-face {
   font-family: 'NewEdge666Rounded';
-  src: url('/NewEdge666-UltraLightRounded.subset.woff2') format('woff2');
+  src: url('/newedge666-ultralightrounded-webfont.woff2') format('woff2'), url('/newedge666-ultralightrounded-webfont.woff') format('woff');
   font-weight: 200;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Circa';
-  src: url('/PPCirka-Variable.subset.woff2') format('woff2');
+  src: url('/PPCirka-Variable.subset.woff2') format('woff2'), url('/PPCirka-Variable.subset.woff') format('woff');
   font-display: swap;
 }
 

@@ -32,17 +32,9 @@
 .title-container {
   padding: var(--padding);
   padding-top: calc(var(--padding) * 1.15);
-  padding-bottom: calc(var(--padding) * 1.2);
+  padding-bottom: calc(var(--padding) * 2);
   border-bottom: 1px solid var(--gray);
   position: relative;
-}
-
-.eyebrow {
-  display: block;
-  font-family: var(--circa);
-  margin-left: 0.35em;
-  font-size: var(--ms-1);
-  text-transform: capitalize;
 }
 
 .title {
