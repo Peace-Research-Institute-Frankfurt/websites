@@ -10,7 +10,7 @@ export default function File({ styles, fileNode, title }) {
         <span className={styles.title}>{title || fileNode.base}</span>
         <p className={styles.meta}>
           <span className={styles.type}>{fileNode.extension}</span>
-          <span>{fileNode.prettySize.replace('.', ',')}</span>
+          <span>{fileNode.prettySize.replace('.', ',').replace(' ', '')}</span>
         </p>
       </div>
       <DownloadIcon />

@@ -5,7 +5,7 @@
   display: flex;
   justify-content: space-between;
   text-decoration: none !important;
-  padding: 0.35em 0.5em;
+  padding: var(--padding-small);
   border: 1px solid var(--gray);
   margin-top: var(--baseline);
   border-radius: var(--br-medium);
@@ -21,7 +21,7 @@
     background: rgba(white, 0.05);
   }
   svg {
-    width: 2.5rem;
+    width: 1.5em;
   }
 }
 
@@ -42,6 +42,7 @@
 .list-item {
   border-bottom: 1px solid var(--gray);
   margin-bottom: 0 !important;
+
   border-radius: 0;
   &:before {
     display: none;
@@ -57,7 +58,8 @@
 
 .meta {
   @extend %caption;
-  color: var(--gray-hover);
+  padding-top: 0.125em;
+  color: var(--gray-light);
   display: flex;
 }
 

@@ -16,7 +16,7 @@
     font-family: inherit;
     border-radius: var(--br-small);
     padding: 0.3em 0.6em;
-    padding-bottom: 0.34em;
+    padding-bottom: 0.35em;
     background: transparent;
     color: var(--white);
     line-height: 1;
@@ -80,7 +80,7 @@
 }
 
 .is-required {
-  color: var(--gray-dark);
+  color: var(--gray-light);
   margin-left: 0.25em;
 }
 
