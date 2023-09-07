@@ -15,6 +15,8 @@
     "@mdx-js/mdx": "^2.3.0",
     "@mdx-js/react": "^2.3.0",
     "@prif/shared": "0.0.1",
+    "d3": "^7.8.5",
+    "d3-geo": "^3.1.0",
     "gatsby": "^5.11.0",
     "gatsby-plugin-image": "^3.11.0",
     "gatsby-plugin-local-search": "^2.0.1",
@@ -33,6 +35,7 @@
     "mapbox-gl": "^2.15.0",
     "mdast-util-to-string": "^4.0.0",
     "pagedjs": "^0.4.3",
+    "puppeteer": "^21.1.0",
     "react": "18.2.0",
     "react-dom": "^18.2.0",
     "react-markdown-renderer": "^1.4.0",
@@ -42,8 +45,7 @@
     "remark-smartypants": "^2.0.0",
     "slug": "^8.2.3",
     "svg-react-loader": "^0.4.6",
-    "unist-util-visit": "^5.0.0",
-    "puppeteer": "^21.1.0"
+    "unist-util-visit": "^5.0.0"
   },
   "devDependencies": {
     "chalk": "^5.3.0",
