@@ -66,11 +66,7 @@ export default function BookmarksList({ bookmarks, setBookmarks }) {
 
   const bookmarksContent = (
     <>
-      <ul>
-        {bookmarksItems}
-        {bookmarksItems}
-        {bookmarksItems}
-      </ul>
+      <ul>{bookmarksItems}</ul>
       <div className={styles.actions}>
         <EmailShareForm posts={posts} />
       </div>
