@@ -66,7 +66,11 @@ export default function BookmarksList({ bookmarks, setBookmarks }) {
 
   const bookmarksContent = (
     <>
-      <ul>{bookmarksItems}</ul>
+      <ul>
+        {bookmarksItems}
+        {bookmarksItems}
+        {bookmarksItems}
+      </ul>
       <div className={styles.actions}>
         <EmailShareForm posts={posts} />
       </div>
@@ -75,5 +79,5 @@ export default function BookmarksList({ bookmarks, setBookmarks }) {
 
   const emptyState = <p className={styles.empty}>Wenn du Artikel zu deinen Favoriten hinzufügst erscheinen sie hier.</p>
 
-  return <aside>{bookmarksItems.length > 0 ? bookmarksContent : emptyState}</aside>
+  return <aside className={styles.container}>{bookmarksItems.length > 0 ? bookmarksContent : emptyState}</aside>
 }
