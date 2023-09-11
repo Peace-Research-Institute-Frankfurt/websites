@@ -57,7 +57,7 @@ const Index = ({ data }) => {
       <StickyHeader />
       <main id="content" className={styles.container}>
         <PostHeader
-          image={<StaticImage src="../images/cubes.png" alt="" layout="fullWidth" />}
+          image={<StaticImage src="../images/frame2.png" alt="" layout="fullWidth" />}
           title="Neue Arbeitsformen für Wissenschaft und Forschung"
           intro={
             <>
