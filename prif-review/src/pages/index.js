@@ -116,7 +116,7 @@ export const Head = ({ pageContext, location }) => {
   const translationData = { currentLanguage: pageContext.language, currentSlug: location.pathname }
   const bodyStyles = {
     '--fc-text': 'hsl(207, 49%, 26%)',
-    '--fc-background': 'hsl(200, 46%, 95%)',
+    '--fc-background': 'hsl(200, 0%, 99%)',
     '--logo-primary': 'var(--prif-blue-dark)',
     '--logo-secondary': 'var(--prif-blue-light)',
   }
