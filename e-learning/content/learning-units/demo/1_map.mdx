@@ -11,20 +11,22 @@ This uses Mapbox and the [Natural Earth projection](https://www.shadedrelief.com
 ## W&S LayeredMap
 
 <LayeredMap
-    mapScale='10'
-    centerLat='46.955799'
-    centerLong='7.416146'
+    mapScale={10}
+    centerLat={46.955799}
+    centerLong={7.416146}
 >
     <CountryStatisticsLayer
         statisticsGroupName='Lorem Ipsum (in %)'
         dataSrc='http://localhost:8000/data/map-example-countries.csv'
+        legendSize={10}
     />
 </LayeredMap>
 
 <LayeredMap
-    mapScale='3'
-    centerLat='58.405388'
-    centerLong='83.141796'
+    mapScale={3}
+    centerLat={58.405388}
+    centerLong={83.141796}
+    legendPosition='bottom-left'
 >
     <MarkerLayer
         markerGroupName='Lorem Ipsum Kraftwerke'
@@ -40,7 +42,7 @@ This uses Mapbox and the [Natural Earth projection](https://www.shadedrelief.com
     <CountryStatisticsLayer
         dataSrc='http://localhost:8000/data/map-example-countries-2.json'
         statisticsGroupName='Lorem Ipsum (in %)'
-        legendSize='3'
+        legendSize={3}
         colorRangeStart='#FCC203'
         colorRangeEnd='#FC2803FF'
     />

@@ -64,7 +64,7 @@ export default function MarkerLayer({ markerGroupName, dataSrc, projection, rend
             <circle
               key={`markerCircle.${i}`}
               r={6}
-              className={styles.circle}
+              className={styles.marker}
               transform={`translate(${projection.projection([
                 Number.isNaN(Number(marker.long)) ? convertDMSToDD(marker.long) : Number(marker.long),
                 Number.isNaN(Number(marker.lat)) ? convertDMSToDD(marker.lat) : Number(marker.lat),

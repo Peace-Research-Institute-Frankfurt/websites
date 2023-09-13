@@ -6,7 +6,7 @@ import MarkerMapLayer from './MarkerLayer'
 import CountryStatisticsLayer from './CountryStatisticsLayer'
 import MapLegend from './MapLegend'
 
-export default function LayeredMap({ children, centerLat = 0, centerLong = 0, mapScale = 1 }) {
+export default function LayeredMap({ children, centerLat = 0, centerLong = 0, mapScale = 1 , legendPosition = 'top-left'}) {
   const min = 263
   const max = 2000
   const scale = min + ((max - min) / 9) * (mapScale - 1)
@@ -55,7 +55,7 @@ export default function LayeredMap({ children, centerLat = 0, centerLong = 0, ma
         }}
       </NaturalEarth>
 
-      <MapLegend children={children} />
+      <MapLegend children={children} legendPosition={legendPosition}/>
     </div>
   )
 }
