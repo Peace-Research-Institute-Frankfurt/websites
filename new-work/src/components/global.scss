@@ -1,79 +1,37 @@
 @import 'vars';
 
 @font-face {
-  font-family: 'Suisse';
-  src: url('/fonts/SuisseNeue-Light-WebS.woff') format('woff');
+  font-family: 'NewEdge666Rounded';
+  src: url('/NewEdge666-UltraLightRounded.subset.woff2') format('woff2'), url('/NewEdge666-UltraLightRounded.subset.woff') format('woff');
   font-weight: 200;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Suisse';
-  src: url('/fonts/SuisseNeue-Light-WebS.woff2') format('woff2');
-  font-weight: 200;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Suisse';
-  src: url('/fonts/SuisseNeue-LightItalic-WebS.woff') format('woff');
-  font-weight: 200;
-  font-style: italic;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Suisse';
-
-  src: url('/fonts/SuisseNeue-LightItalic-WebS.woff2') format('woff2');
-  font-weight: 200;
-  font-style: italic;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Suisse';
-  src: url('/fonts/SuisseNeue-Regular-WebS.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Suisse';
-  src: url('/fonts/SuisseNeue-Regular-WebS.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Suisse';
-  src: url('/fonts/SuisseNeue-RegularItalic-WebS.woff') format('woff');
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Suisse';
-  src: url('/fonts/SuisseNeue-RegularItalic-WebS.woff2') format('woff2');
-  font-weight: 400;
-  font-style: italic;
+  font-family: 'Circa';
+  src: url('/PPCirka-Variable.subset.woff2') format('woff2'), url('/PPCirka-Variable.subset.woff') format('woff');
   font-display: swap;
 }
 
 :root {
-  --white: rgb(254, 251, 251);
-  --gray-light: rgb(244, 241, 241);
-  --gray: rgb(145, 145, 145);
-  --gray-dark: rgb(90, 90, 90);
-  --orange: #ff9720;
-  --orange-light: #feeedc;
-  --highlight: rgb(252, 235, 188);
-  --shadow: rgba(0, 0, 0, 0.7);
-  --black: rgba(0, 0, 0, 1);
-  --focus-color: rgb(37, 93, 216);
-  --haas-display: 'acumin-pro-condensed', serif;
-  --haas-text: 'acumin-pro', sans-serif;
-  --suisse: 'Suisse', Georgia, serif;
-  --ratio: 1.2; // Minor 3
-  --ms-0: clamp(0.75rem, calc(1.4vw + 0.1rem), 1.05rem);
+  --white: rgb(248, 247, 247);
+  --white-hover: rgb(221, 221, 221);
+  --gray-dark: rgb(58, 57, 59);
+  --gray: rgb(99, 98, 104);
+  --gray-light: rgb(180, 180, 180);
+  --gray-hover: rgb(170, 170, 170);
+  --blue: #6b7bb3;
+  --green: #568d72;
+  --yellow: #eabc47;
+  --black: rgb(1, 2, 2);
+  --black-hover: rgb(20, 20, 20);
+  --focus-color: rgb(193, 204, 226);
+  --edge: 'NewEdge666Rounded', sans-serif;
+  --edge-rounded: 'NewEdge666Rounded', sans-serif;
+  --circa: 'Circa', Georgia, serif;
+  --mono: 'Courier New', 'Lucida Console', serif, monospace;
+  --ratio: 1.3; // Minor 3
+  --ms-0: clamp(1.3rem, calc(1.6vw + 0.2rem), 1.6rem);
   --ms--2: calc(var(--ms--1) / var(--ratio));
   --ms--1: calc(var(--ms-0) / var(--ratio));
   --ms-1: calc(var(--ms-0) * var(--ratio));
@@ -85,12 +43,21 @@
   --ms-7: calc(var(--ms-6) * var(--ratio));
   --ms-8: calc(var(--ms-7) * var(--ratio));
   --ms-9: calc(var(--ms-8) * var(--ratio));
-  --ms-10: calc(var(--ms-9) * var(--ratio));
-  --ms-11: calc(var(--ms-10) * var(--ratio));
-  --ms-12: calc(var(--ms-11) * var(--ratio));
-  --br: 3px;
+  --br-small: 4px;
   --fast: 100ms;
-  --padding: max(2vw, 1rem);
+  --padding: max(1.5vw, 0.75rem);
+  --padding-small: max(1vw, 0.5rem);
+  --baseline: calc(var(--ms-0) * 1.3);
+  --color: rgb(3, 3, 3);
+  --br: 20px;
+  --br-medium: 10px;
+  --header-height: 5rem;
+  --footer-height: 3rem;
+  @include bp(m) {
+    --header-height: 5rem;
+    --br: 40px;
+    --br-medium: 20px;
+  }
 }
 
 * {
@@ -102,7 +69,9 @@
 }
 
 body {
-  background: rgb(254, 253, 253);
+  color: var(--white);
+  min-height: 100%;
+  background: black;
 }
 
 table {
@@ -131,8 +100,8 @@ textarea:focus-visible {
 }
 
 ::selection {
-  background-color: black;
-  color: white;
+  background-color: var(--white);
+  color: var(--black);
 }
 
 .gatsby-image-wrapper [data-main-image] {
@@ -145,4 +114,27 @@ img {
   align-items: center;
   font-family: monospace;
   word-wrap: break-word;
+}
+
+.raum {
+  --color: var(--blue);
+}
+.mensch {
+  --color: var(--green);
+}
+.tool {
+  --color: var(--yellow);
+}
+
+.footnotes {
+  @extend %caption;
+  grid-column: 1/4;
+  margin-top: var(--baseline);
+  margin-left: 1em;
+  @include bp(m) {
+    grid-column: 2 / 4;
+  }
+  h2 {
+    display: none;
+  }
 }

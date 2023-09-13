@@ -2,11 +2,11 @@
   display: inline-flex;
   padding: 0 0.65em;
   height: 2em;
-  padding-top: 0.05em;
+  padding-top: 0.15em;
   font-family: var(--sans);
   line-height: 1;
   border-radius: var(--br);
-  text-decoration-width: 1px;
+  text-decoration-thickness: 1px;
   cursor: pointer;
   gap: 0.25em;
   transition: var(--fast);
@@ -30,6 +30,8 @@
   &:hover,
   &:focus-visible {
     background: var(--gray-20);
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
     border: 1px solid var(--blue-90);
   }
 }

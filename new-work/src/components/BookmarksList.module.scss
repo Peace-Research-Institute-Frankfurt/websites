@@ -1,32 +1,36 @@
 @import 'vars';
+
+.container {
+  max-height: calc(100vh - var(--header-height));
+  overflow-y: auto;
+}
+
 .item {
   text-align: left;
-  border-bottom: 1px solid var(--black);
+  border-bottom: 1px solid var(--gray);
   list-style: none;
-  padding: 0.75rem;
-  padding-right: 3.5rem;
   position: relative;
-  @include bp(m) {
-    padding: rem;
-    padding-right: 3.5rem;
-  }
+  align-items: stretch;
+  justify-content: space-between;
+  display: flex;
 }
 
 .link {
+  flex-grow: 1;
+  border-right: 1px solid var(--gray);
+  padding: 0.25em var(--padding-small);
+  padding-top: 0.3em;
   &:hover,
   &:focus-visible {
-    .title {
-      text-decoration: underline;
-    }
+    background: var(--black-hover);
   }
 }
 
 .title {
   display: block;
-  letter-spacing: -0.015em;
-  line-height: 1.1;
-  font-size: var(--ms-2);
-  font-weight: 600;
+  @extend %h2;
+  font-size: var(--ms-0);
+  font-weight: 100;
 }
 
 .authors {
@@ -34,18 +38,21 @@
 }
 
 .remove {
-  position: absolute;
-  right: 0.75rem;
-  top: 0.65rem;
+  button {
+    width: 3rem;
+  }
 }
 
 .actions {
-  padding: 0.75rem;
   display: flex;
   flex-flow: column;
+  padding: var(--padding-small);
 }
 
 .empty {
   @extend %caption;
-  padding: 0.85rem 2rem;
+  max-width: 20em;
+  text-align: center;
+  margin: 0 auto;
+  padding: 1em var(--padding-small);
 }

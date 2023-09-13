@@ -99,10 +99,6 @@ exports.createPages = async function ({ actions, graphql }) {
       return report.relativeDirectory === post.relativeDirectory.replace('/posts', '')
     })
 
-    if (report) {
-      console.log(`Creating ${post.childMdx.frontmatter.title} (${report.childMdx.frontmatter.title})`)
-    }
-
     actions.createPage({
       path: path,
       component: `${postTemplate}?__contentFilePath=${post.childMdx.internal.contentFilePath}`,
@@ -145,7 +141,6 @@ exports.onCreateNode = ({ node, actions, createNodeId, getNode }) => {
         nodeLocale = locale
       }
     })
-    console.log(`Setting locale: ${nodeLocale}`)
     actions.createNodeField({ node, name: 'locale', value: nodeLocale })
 
     let path = createFilePath({ node, getNode })
@@ -176,6 +171,8 @@ exports.createSchemaCustomization = async ({ getNode, getNodesByType, pathPrefix
     color: String
     color_secondary: String
     trace_lines: Boolean
+    download_url: String
+    cover_image: File @link(by: "relativePath")
   }
   type Mdx {
     frontmatter: PostFrontmatter

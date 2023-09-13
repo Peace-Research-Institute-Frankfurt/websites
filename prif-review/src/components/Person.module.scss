@@ -58,7 +58,10 @@
 
 .name {
   @extend %h3;
-  margin-bottom: 0.2em;
+  font-size: var(--ms--1);
+  line-height: 1.2;
+  margin-bottom: 0.25em;
+  hyphens: none;
 }
 
 .image {

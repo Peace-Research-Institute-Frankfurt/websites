@@ -31,7 +31,7 @@ export const query = graphql`
       }
     }
     chapters: allFile(
-      filter: { relativeDirectory: { eq: $lu_id }, name: { ne: "index" }, ext: { eq: ".mdx" } }
+      filter: { relativeDirectory: { eq: $lu_id }, name: { nin: ["index", "__print"] }, ext: { eq: ".mdx" } }
       sort: { childMdx: { frontmatter: { order: ASC } } }
     ) {
       nodes {

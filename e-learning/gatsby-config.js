@@ -1,3 +1,5 @@
+const adapter = require('gatsby-adapter-netlify')
+
 const wrapESMPlugin = (name) =>
   function wrapESM(opts) {
     return async (...args) => {
@@ -20,24 +22,18 @@ module.exports = {
       alt: 'Stylised text: EU Non-Proliferation and Disarmament Consortium eLearning',
     },
   },
-  pathPrefix: `/lu`,
+  pathPrefix: '/lu',
   flags: {
     FAST_DEV: true,
   },
+  headers: [{ source: '*', headers: [{ key: 'x-frame-options', value: 'SAMEORIGIN' }] }],
+  adapter: adapter.default(),
   plugins: [
     'gatsby-plugin-sass',
     'gatsby-plugin-image',
     'gatsby-transformer-sharp',
     'gatsby-transformer-json',
-    `gatsby-transformer-csv`,
-    {
-      resolve: 'gatsby-plugin-netlify',
-      options: {
-        headers: {
-          '/*': ['X-Frame-Options: SAMEORIGIN'],
-        },
-      },
-    },
+    'gatsby-transformer-csv',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {

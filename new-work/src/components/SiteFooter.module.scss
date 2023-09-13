@@ -3,33 +3,47 @@
 .container {
   @extend %caption;
   display: flex;
-  justify-content: space-between;
+  color: var(--gray-light);
+  background: var(--black);
+  padding: 0 var(--padding);
+  bottom: 0;
+  right: 0;
+  left: 0;
   margin: 0 var(--padding);
-  padding-bottom: 1rem;
+  z-index: 1000;
+  position: absolute;
+  height: var(--footer-height);
   flex-flow: column;
-  align-items: center;
+  justify-content: center;
+  gap: 0.25em;
   @include bp(s) {
+    justify-content: space-between;
+    align-items: center;
     flex-flow: row;
+  }
+  @include bp(l) {
+    padding: 0;
+  }
+}
+.nav {
+  justify-content: space-between;
+  ul {
+    display: flex;
+    gap: var(--padding-small);
+    list-style: none;
   }
 }
 
-.nav {
-  ul {
-    margin-bottom: 0.25em;
-    gap: 0.65em;
-    display: flex;
-    justify-content: center;
-    line-height: 1;
-    list-style: none;
-    flex-wrap: wrap;
-  }
-  margin-bottom: 1em;
-  @include bp(m) {
-    margin-bottom: 0;
+.link {
+  &:hover,
+  &:focus-visible {
+    text-decoration: underline;
+    color: var(--white);
   }
 }
 
 .meta {
-  padding-top: 0.25rem;
-  font-size: var(--ms--1);
+  display: flex;
+  gap: 1em;
+  align-items: baseline;
 }

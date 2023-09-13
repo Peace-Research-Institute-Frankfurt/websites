@@ -1,14 +1,17 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import { GatsbyImage, getImage, getSrc } from 'gatsby-plugin-image'
+import Meta from './Meta'
 import App from './App'
+import StickyHeader from './StickyHeader'
+import SkipToContent from './SkipToContent'
 import PostBody from './PostBody'
 import PostHeader from './PostHeader'
-import Pagination from './PostPagination'
-import SkipToContent from './SkipToContent'
-import StickyHeader from './StickyHeader'
+import Bylines from './Bylines'
+import { PostList, PostListItem } from './PostList'
+import MarkdownRenderer from 'react-markdown-renderer'
+
 import * as styles from './Post.module.scss'
-import Meta from './Meta'
 
 export const query = graphql`
   query ($id: String!) {
@@ -18,6 +21,7 @@ export const query = graphql`
       }
     }
     post: file(id: { eq: $id }) {
+      id
       childMdx {
         fields {
           slug
@@ -27,12 +31,20 @@ export const query = graphql`
           intro
           color
           order
+          eyebrow
           reading_time
+          category
           hero_alt
+          hero_portrait_alt
           hero_credit
           hero_image {
             childImageSharp {
-              gatsbyImageData(width: 1000, placeholder: BLURRED)
+              gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
+            }
+          }
+          hero_portrait {
+            childImageSharp {
+              gatsbyImageData(layout: CONSTRAINED, placeholder: NONE, width: 500)
             }
           }
           authors {
@@ -64,6 +76,7 @@ export const query = graphql`
             order
             intro
             color
+            category
           }
         }
       }
@@ -72,40 +85,54 @@ export const query = graphql`
 `
 const Post = ({ data, children }) => {
   const frontmatter = data.post.childMdx.frontmatter
-  const currentIndex = data.posts.nodes.findIndex((el) => {
-    return el.childMdx.frontmatter.order === frontmatter.order
-  })
 
-  let heroImage = <></>
+  let heroImage = null
   if (frontmatter.hero_image) {
-    heroImage = (
-      <div className={styles.image}>
-        <GatsbyImage loading="eager" image={getImage(frontmatter.hero_image)} alt={frontmatter.hero_alt} />
-        {frontmatter.hero_credit && <p className={styles.credit}>Bild: {frontmatter.hero_credit}</p>}
-      </div>
+    heroImage = <GatsbyImage loading="eager" image={getImage(frontmatter.hero_image)} alt={frontmatter.hero_alt} />
+  }
+  let portraitImage = null
+  if (frontmatter.hero_portrait) {
+    portraitImage = (
+      <GatsbyImage className={styles.heroPortrait} loading="eager" image={getImage(frontmatter.hero_portrait)} alt={frontmatter.hero_portrait_alt} />
     )
   }
 
-  const next = data.posts.nodes[currentIndex + 1]
-  const previous = data.posts.nodes[currentIndex - 1]
+  const posts = data.posts.nodes.map((node) => {
+    const fm = node.childMdx.frontmatter
+    return (
+      <li key={`post-${node.id}`}>
+        <PostListItem isCurrent={node.id === data.post.id} title={fm.title} category={fm.category} slug={node.childMdx.fields.slug} />
+      </li>
+    )
+  })
 
   return (
-    <App>
+    <App className={`${frontmatter.category}`}>
       <SkipToContent />
-      <StickyHeader title={frontmatter.title} chapterIndex={frontmatter.order} next={next} prev={previous} post={data.post} />
-      <article id="content">
+      <StickyHeader post={data.post} />
+      <article id="content" className={`${styles.container}`}>
         <PostHeader
-          authors={frontmatter.authors}
-          readingTime={frontmatter.reading_time}
-          intro={frontmatter.intro}
-          image={heroImage}
           title={frontmatter.title}
-          fullHeight={true}
-          color={frontmatter.color}
+          eyebrow={frontmatter.eyebrow || frontmatter.category}
+          image={heroImage}
+          portrait={portraitImage}
+          intro={frontmatter.intro}
         />
         <main className={styles.body}>
-          <PostBody>{children}</PostBody>
-          <Pagination next={next} previous={previous} />
+          <aside className={styles.credits}>
+            <Bylines authors={frontmatter.authors}></Bylines>
+            {frontmatter.hero_credit && (
+              <aside className={styles.credit}>
+                <MarkdownRenderer markdown={frontmatter.hero_credit} />
+              </aside>
+            )}
+          </aside>
+          <div className={styles.copy}>
+            <PostBody>{children}</PostBody>
+          </div>
+          <nav className={styles.postsNav}>
+            <PostList>{posts}</PostList>
+          </nav>
         </main>
       </article>
     </App>

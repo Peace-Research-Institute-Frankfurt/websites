@@ -16,6 +16,6 @@
     "engine.io": "^6.4.2"
   },
   "dependencies": {
-    "retext": "^8.1.0"
+    "retext": "^9.0.0"
   }
 }

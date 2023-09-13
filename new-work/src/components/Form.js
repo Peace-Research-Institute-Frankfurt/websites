@@ -6,7 +6,7 @@ import * as styles from './Form.module.scss'
 
 const HCAPTCHA_SITE_KEY = '517bbe8f-3822-4493-b2bd-59c6b58a2da0'
 
-const Form = function ({ data, errors, loadingState, onSubmit, setData, children, captchaRef }) {
+const Form = function ({ data, className, errors, loadingState, onSubmit, setData, children, captchaRef }) {
   const handleSubmit = function (e) {
     e.preventDefault()
     onSubmit()
@@ -35,7 +35,11 @@ const Form = function ({ data, errors, loadingState, onSubmit, setData, children
     return React.cloneElement(child, props)
   })
 
-  return <form onSubmit={handleSubmit}>{fields}</form>
+  return (
+    <form className={className ? className : ''} onSubmit={handleSubmit}>
+      {fields}
+    </form>
+  )
 }
 
 const CaptchaInput = ({ name, onChange, captchaRef }) => {

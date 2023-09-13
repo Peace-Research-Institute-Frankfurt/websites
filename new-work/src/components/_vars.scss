@@ -22,56 +22,61 @@
   }
 }
 
-%h2 {
-  font-family: var(--haas-text);
-  line-height: 1.1;
-  hyphens: none;
-  font-weight: 600;
-  font-size: var(--ms-4);
-  letter-spacing: -0.02em;
-  & + h3 {
-    margin-top: 0;
+%h1 {
+  font-family: var(--edge-rounded);
+  letter-spacing: -0.03em;
+  hyphens: auto;
+  font-weight: 100;
+  text-transform: uppercase;
+  text-shadow: 1px 0 0 black, 1px 1px 0 black, 0 1px 0 black, -1px 1px 0 black, -1px 0 0 black, -1px -1px 0 black, 0px -1px 0 black;
+  font-size: Max(12vw, var(--ms-5));
+  line-height: 0.9;
+  @include bp(m) {
+    line-height: 0.825;
   }
+}
+
+%h1-long {
+  @extend %h1;
+  font-size: 14vw;
+  hyphens: auto;
+  @include bp(m) {
+    font-size: 9.3vw;
+  }
+}
+
+%h2 {
+  font-size: var(--ms-1);
+  text-wrap: balance;
+  hyphens: none;
+  font-weight: bold;
+  font-family: var(--edge);
+  line-height: calc(var(--baseline) * 1.333);
 }
 
 %h3 {
-  line-height: 1.1;
-  font-weight: 600;
-  font-family: var(--haas-text);
-  margin-top: calc(var(--ms-1) * 0.5);
-  margin-bottom: calc(var(--ms-1) * 0.25);
-  font-size: var(--ms-2);
-  & + h4 {
-    margin-top: 0.1em;
-  }
-}
-%h4 {
-  line-height: 1.1;
-  // font-weight: 600;
-  font-family: var(--haas-text);
-  margin-bottom: calc(var(--ms-1) * 0.25);
-  font-size: 0.9em;
+  font-family: var(--edge);
+  font-size: 0.85em;
+  letter-spacing: 0.025em;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-top: calc(var(--ms-1) * 1);
+}
+
+%h4 {
 }
 
 %copy {
-  font-family: var(--suisse);
-  font-size: var(--ms-1);
-  line-height: 1.45;
+  font-family: var(--circa);
+  font-size: var(--ms-0);
+  line-height: var(--baseline);
   letter-spacing: 0.005em;
   word-spacing: 0.005em;
   hyphens: auto;
-  font-weight: 500;
+  font-variation-settings: 'wght' 400;
   p,
   ul,
   ol {
-    margin-bottom: 0.65em;
-    @include bp(m) {
-      margin-bottom: 0.85em;
-    }
-    &:last-child {
+    margin-bottom: calc(var(--baseline) * 0.5);
+    &:last-of-type {
       margin-bottom: 0;
     }
   }
@@ -84,12 +89,7 @@
   a {
     text-decoration: underline;
     text-decoration-thickness: 1px;
-    text-decoration-style: dotted;
     text-underline-offset: 0.15em;
-    &:hover,
-    &:focus-visible {
-      text-decoration-style: solid;
-    }
   }
   li {
     margin-bottom: 0.25em;
@@ -98,16 +98,15 @@
     }
   }
   ul {
-    padding-left: 1.5em;
+    padding-left: 1em;
   }
   ul li {
     list-style: none;
     position: relative;
     &:before {
       position: absolute;
-      left: -1.4em;
-      top: -0.05em;
-      content: '→';
+      left: -1em;
+      content: '—';
       font-weight: 400;
     }
   }
@@ -121,69 +120,37 @@
       text-decoration: none !important;
     }
   }
-  h2 {
-    @extend %h2;
-    margin-top: calc(var(--ms-1) * 1);
-    margin-bottom: calc(var(--ms-1) * 0.5);
+}
 
-    &:first-child {
-      margin-top: 0;
-    }
-    @include bp(m) {
-      margin-top: calc(var(--ms-1) * 0.5);
-    }
-    @include bp(l) {
-      margin-top: calc(var(--ms-1) * 1.5);
-    }
-  }
-  h3 {
-    @extend %h3;
-    &:first-child {
-      margin-top: 0;
-    }
-  }
-  h4 {
-    @extend %h4;
+%copy-large {
+  font-family: var(--circa);
+  font-weight: 400;
+  hyphens: auto;
+  font-size: var(--ms-1);
+  line-height: calc(var(--baseline) * 1.1);
+  letter-spacing: 0.01em;
+  @include bp(m) {
+    letter-spacing: -0.001em;
+    font-size: var(--ms-2);
+    line-height: calc(var(--baseline) * 1.3333);
   }
 }
 
 %caption {
-  font-family: var(--haas-text);
-  font-feature-settings: 'ss03' 1, 'tnum' 1;
-  font-size: var(--ms-0);
-  line-height: 1.2;
-  letter-spacing: 0.005em;
-  a {
-    text-decoration: underline;
-    text-decoration-style: dotted;
-    text-underline-offset: 0.15em;
-    &:hover,
-    &:focus {
-      text-decoration-style: solid;
-    }
-  }
+  line-height: 1.25;
+  font-family: var(--edge);
+  font-size: var(--ms--2);
+  letter-spacing: 0.05em;
 }
+
 %caption-bold {
   @extend %caption;
   font-weight: 600;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.04em;
 }
 
 %caption-caps {
   @extend %caption;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-}
-
-%copy-large {
-  font-family: var(--suisse);
-  font-size: var(--ms-2);
-  letter-spacing: -0.025em;
-  line-height: 1.4;
-  font-weight: 400;
-  hyphens: auto;
-  @include bp(s) {
-    font-size: var(--ms-3);
-    line-height: 1.15;
-  }
 }

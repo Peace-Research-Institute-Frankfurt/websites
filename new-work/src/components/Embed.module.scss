@@ -1,14 +1,17 @@
 @import 'vars';
 .container {
-  margin-top: 1em;
-  margin-bottom: 1em;
+  margin: calc(var(--baseline) / 2) 0;
+  grid-column: 1 / 3;
+  @include bp(l) {
+    grid-column: 2 / 3;
+  }
 }
 
 .consent {
   @extend %caption;
-  border: 2px solid currentColor;
-  border-radius: var(--br);
-  padding: 1em;
+  border: 1px solid var(--gray);
+  padding: var(--padding-small);
+  border-radius: var(--br-medium);
 }
 
 .iframe-container {
@@ -28,11 +31,12 @@
 }
 
 .active-controls {
-  color: var(--gray-dark);
+  @extend %caption;
+  color: var(--gray-light);
   line-height: 1;
 }
 
 .caption {
-  @extend %caption-bold;
+  @extend %caption;
   padding-top: 0.75em;
 }

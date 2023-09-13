@@ -80,7 +80,7 @@ export default function EmailShareForm({ posts }) {
     <>
       <Form captchaRef={captchaRef} onSubmit={handleSubmit} data={formData} setData={setFormData} errors={formErrors} loadingState={formLoadingState}>
         <Field
-          state={formLoadingState === 'loading' && 'disabled'}
+          state={formLoadingState === 'loading' ? 'disabled' : 'default'}
           name="userEmail"
           type="email"
           label="Deine Email-Adresse"
@@ -88,7 +88,7 @@ export default function EmailShareForm({ posts }) {
           placeholder="you@work.com"
         />
         <Field
-          state={formLoadingState === 'loading' && 'disabled'}
+          state={formLoadingState === 'loading' ? 'disabled' : 'default'}
           name="targetEmails"
           type="text"
           label="Empfänger"
@@ -96,7 +96,7 @@ export default function EmailShareForm({ posts }) {
           placeholder="alice@work.com, bob@work.com"
         />
         <Field
-          state={formLoadingState === 'loading' && 'disabled'}
+          state={formLoadingState === 'loading' ? 'disabled' : 'default'}
           name="message"
           type="textarea"
           label="Nachricht"
@@ -145,7 +145,7 @@ export default function EmailShareForm({ posts }) {
     <>
       {flowState === 'collapsed' && (
         <div className={styles.toggle}>
-          <Button priority="secondary" onClick={() => setFlowState('default')} label="Per Email teilen" />
+          <Button priority="primary" onClick={() => setFlowState('default')} label="Per Email teilen" />
         </div>
       )}
       {flowState === 'default' && <>{defaultView}</>}
