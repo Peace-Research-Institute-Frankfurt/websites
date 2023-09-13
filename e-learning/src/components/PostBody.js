@@ -9,6 +9,9 @@ import Institution from './Institution'
 import LectureVideo from './LectureVideo'
 import Map from './Map'
 import LayeredMap from './LayeredMap'
+import MapLegend from './MapLegend'
+import MarkerLayer from './MarkerLayer'
+import CountryStatisticsLayer from './CountryStatisticsLayer'
 import { Choice } from './MultipleChoice'
 import { Question, Quiz, RadioChoice } from './Quiz.js'
 import QuoteAdapter from './QuoteAdapter'
@@ -56,6 +59,9 @@ const shortCodes = {
   Callout: ({ ...props }) => <Callout {...props} buttonComponent={Button} styles={CalloutStyles} />,
   Map,
   LayeredMap,
+  MapLegend,
+  MarkerLayer,
+  CountryStatisticsLayer,
   ColumnBreak: () => <></>,
 }
 
