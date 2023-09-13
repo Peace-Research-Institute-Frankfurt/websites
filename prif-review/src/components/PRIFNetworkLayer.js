@@ -2,25 +2,9 @@ import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import * as styles from './PRIFNetworkLayer.module.scss'
 
-const PRIFNetworkLayer = ({ projection }) => {
+const PRIFNetworkLayer = ({ cooperations, guests, residencies, projection }) => {
   const data = useStaticQuery(graphql`
     query PRIFNetworkLayerQuery {
-      cooperations: allCooperationsCsv {
-        nodes {
-          cities
-        }
-      }
-      guests: allGuestsCsv {
-        nodes {
-          name
-          city
-        }
-      }
-      residencies: allResidenciesCsv {
-        nodes {
-          city
-        }
-      }
       cities: allCitiesCsv {
         nodes {
           name
@@ -33,10 +17,14 @@ const PRIFNetworkLayer = ({ projection }) => {
   `)
 
   let connections = []
-  const stats = ['cooperations', 'guests', 'residencies']
+  const stats = [
+    { label: 'cooperations', data: cooperations },
+    { label: 'guests', data: guests },
+    { label: 'residencies', data: residencies },
+  ]
 
   stats.forEach((stat) => {
-    data[stat].nodes.forEach((node) => {
+    stat.data.forEach((node) => {
       let cities = []
       if (node.cities) {
         cities = node.cities.split(';')
@@ -48,7 +36,12 @@ const PRIFNetworkLayer = ({ projection }) => {
           return el.name === city
         })
         if (ci !== -1) {
-          connections.push({ type: stat, lat: data.cities.nodes[ci].lat, long: data.cities.nodes[ci].long, country: data.cities.nodes[ci].country })
+          connections.push({
+            type: stat.label,
+            lat: data.cities.nodes[ci].lat,
+            long: data.cities.nodes[ci].long,
+            country: data.cities.nodes[ci].country,
+          })
         }
       })
     })
