@@ -4,7 +4,50 @@ intro: Just seeing what a map component could look like.
 order: 2
 reading_time: 2
 ---
-
 {/* <Map caption="Member states of the Chemical Weapons Convention (CWC)" /> */}
 
 This uses Mapbox and the [Natural Earth projection](https://www.shadedrelief.com/NE_proj/index.html), which distorts sizes of territories less than Mercator and other projections. The data comes from the JSON file at `/content/data/treaties.json`.
+
+## W&S LayeredMap
+
+<LayeredMap
+    mapScale='10'
+    centerLat='46.955799'
+    centerLong='7.416146'
+>
+    <CountryStatisticsLayer
+        statisticsGroupName='Lorem Ipsum (in %)'
+        dataSrc='http://localhost:8000/data/map-example-countries.csv'
+    />
+</LayeredMap>
+
+<LayeredMap
+    mapScale='3'
+    centerLat='58.405388'
+    centerLong='83.141796'
+>
+    <MarkerLayer
+        markerGroupName='Lorem Ipsum Kraftwerke'
+        dataSrc='http://localhost:8000/data/map-example-locations.csv'
+    />
+</LayeredMap>
+
+<LayeredMap>
+    <CountryStatisticsLayer
+        dataSrc='http://localhost:8000/data/map-example-countries.csv'
+        statisticsGroupName='Lorem Ipsum (in %)'
+        />
+    <CountryStatisticsLayer
+        dataSrc='http://localhost:8000/data/map-example-countries-2.json'
+        statisticsGroupName='Lorem Ipsum (in %)'
+        legendSize='3'
+        colorRangeStart='#FCC203'
+        colorRangeEnd='#FC2803FF'
+    />
+    <MarkerLayer
+        markerGroupName='Lorem Ipsum Kraftwerke'
+        dataSrc='http://localhost:8000/data/map-example-locations.csv'
+    />
+</LayeredMap>
+
+

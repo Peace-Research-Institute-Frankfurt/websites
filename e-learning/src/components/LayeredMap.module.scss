@@ -2,29 +2,82 @@
 
 .container {
   grid-column: 1 / 6;
+  position: relative;
+  margin-bottom: 2em;
+
   @include bp(m) {
-    grid-column: 1 / 6;
+    margin-bottom: 4em;
   }
 }
 
 .map {
-  min-height: 500px;
+  max-width: 100%;
+  width: 100%;
+  @include bp(m) {
+    min-height: 500px;
+  }
 
   circle {
      fill: var(--blue-80);
   }
+  g {
+    max-width: 100%;
+    width: 100%;
+  }
 }
+.legends {
+  background: rgba(255, 255, 255);
+  padding: 0.5em;
+  box-shadow: 21px 19px 52px -9px rgba(0,0,0,0.16);
 
-.caption {
-  text-align: center;
+  transform: translateY(-0.5em);
+
+  @include bp(sm) {
+    max-width: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1em;
+    transform: none;
+  }
 }
-
-.credit {
+.legend {
   @extend %caption;
-  text-align: center;
-  display: flex;
-  gap: 0.5em;
-  justify-content: center;
+  margin-bottom: 0.8em;
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include bp(m) {
+    margin-bottom: 1.5em;
+  }
+
+  svg, rect {
+    width: 12px;
+    height: 12px;
+    @include bp(m) {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  circle {
+    r: 6px;
+    cx: 6px;
+    cy: 6px;
+    fill: var(--blue-80);
+
+    @include bp(m) {
+      r: 10px;
+      cx: 10px;
+      cy: 10px;
+    }
+  }
 }
 
+.legend-title {
+    margin-bottom: 0.1em;
 
+  @include bp(m) {
+    margin-bottom: 0.5em;
+  }
+}
