@@ -198,7 +198,15 @@ exports.onCreateWebpackConfig = ({ rules, actions, getConfig }) => {
     },
     { ...imgsRule, test: new RegExp(imgsRule.test.toString().replace('svg|', '').slice(1, -1)) },
     { ...imgsRule, issuer: /\.(css|scss|sass)$/ },
+    {
+      test: /\.csv$/,
+      loader: 'csv-loader',
+      options: {
+        dynamicTyping: true,
+        header: true,
+        skipEmptyLines: true,
+      },
+    },
   ]
-
   actions.replaceWebpackConfig(cfg)
 }
