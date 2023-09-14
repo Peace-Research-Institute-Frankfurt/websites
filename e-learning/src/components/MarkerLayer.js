@@ -1,40 +1,9 @@
 import * as styles from './LayeredMap.module.scss'
-import React, { useEffect } from 'react'
+import React from 'react'
 import { scaleOrdinal } from '@visx/scale'
 import { LegendItem, LegendLabel, LegendOrdinal } from '@visx/legend'
-import Papa from 'papaparse'
 
-export default function MarkerLayer({ markerGroupName, dataSrc, projection, renderLegend = false }) {
-  const [markers, setMarkers] = React.useState([])
-
-  useEffect(() => {
-    const fetchParseData = async () => {
-      if (dataSrc.includes('.csv')) {
-        Papa.parse(dataSrc, {
-          download: true,
-          delimiter: ',',
-          header: true,
-          complete: (result) => {
-            setMarkers(result.data.filter((marker) => marker.lat && marker.long && marker.name))
-          },
-        })
-      }
-
-      if (dataSrc.includes('.json')) {
-        return fetch(dataSrc)
-          .then((response) => response.json())
-          .then((responseJson) => {
-            return setMarkers(responseJson.filter((marker) => marker.lat && marker.long && marker.name))
-          })
-          .catch((error) => {
-            console.error(error)
-          })
-      }
-    }
-
-    fetchParseData()
-  }, [dataSrc])
-
+export default function MarkerLayer({ markerGroupName, data, projection, renderLegend = false }) {
   const ordinalColorScale = scaleOrdinal({
     domain: [markerGroupName],
     range: ['#0F1A24FF'],
@@ -60,7 +29,7 @@ export default function MarkerLayer({ markerGroupName, dataSrc, projection, rend
     <>
       {!renderLegend ? (
         <g>
-          {markers.map((marker, i) => (
+          {data.map((marker, i) => (
             <circle
               key={`markerCircle.${i}`}
               r={6}
