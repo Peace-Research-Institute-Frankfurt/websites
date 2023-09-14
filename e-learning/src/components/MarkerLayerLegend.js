@@ -9,8 +9,6 @@ export default function MarkerLayerLegend({ markerGroupName }) {
     range: ['#0F1A24FF'],
   })
 
-  console.log('ordinalColorScale', ordinalColorScale)
-
   return (
     <div>
       <LegendOrdinal scale={ordinalColorScale} labelFormat={(label) => `${label.toUpperCase()}`}>
