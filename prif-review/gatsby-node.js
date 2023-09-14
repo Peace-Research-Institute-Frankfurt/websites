@@ -187,5 +187,17 @@ exports.onCreateWebpackConfig = ({ actions, getConfig }) => {
     ...cfg.resolve.alias,
     '@shared': path.resolve(__dirname, '../shared'),
   }
+  cfg.module.rules = [
+    ...cfg.module.rules,
+    {
+      test: /\.csv$/,
+      loader: 'csv-loader',
+      options: {
+        dynamicTyping: true,
+        header: true,
+        skipEmptyLines: true,
+      },
+    },
+  ]
   actions.replaceWebpackConfig(cfg)
 }

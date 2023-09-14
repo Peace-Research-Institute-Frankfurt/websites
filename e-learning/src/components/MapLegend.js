@@ -3,14 +3,11 @@ import React from 'react'
 import MarkerMapLayer from './MarkerLayer'
 import CountryStatisticsLayer from './CountryStatisticsLayer'
 
-export default function MapLegend({ children , legendPosition}) {
-  const className = legendPosition.split('-').reduce((a, b) => a.charAt(0).toUpperCase() + a.slice(1) + b.charAt(0).toUpperCase() + b.slice(1));
+export default function MapLegend({ children, legendPosition }) {
+  const className = legendPosition.split('-').reduce((a, b) => a.charAt(0).toUpperCase() + a.slice(1) + b.charAt(0).toUpperCase() + b.slice(1))
 
   return (
-    <div
-        className={`${styles.legends} ${styles[`position${className}`]}`}
-
-    >
+    <div className={`${styles.legends} ${styles[`position${className}`]}`}>
       {/** marker Layer */}
       {React.Children.map(children, (child) => {
         if (child.type === MarkerMapLayer) {

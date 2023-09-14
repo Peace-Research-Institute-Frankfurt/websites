@@ -6,6 +6,10 @@ reading_time: 2
 ---
 {/* <Map caption="Member states of the Chemical Weapons Convention (CWC)" /> */}
 
+import MapExampleCountries from '../../data/map-example-countries.csv'
+import MapExampleLocations from '../../data/map-example-locations.csv'
+import MapExampleAlternativeCountries from '../../data/map-example-countries-2.json'
+
 This uses Mapbox and the [Natural Earth projection](https://www.shadedrelief.com/NE_proj/index.html), which distorts sizes of territories less than Mercator and other projections. The data comes from the JSON file at `/content/data/treaties.json`.
 
 ## W&S LayeredMap
@@ -17,7 +21,7 @@ This uses Mapbox and the [Natural Earth projection](https://www.shadedrelief.com
 >
     <CountryStatisticsLayer
         statisticsGroupName='Lorem Ipsum (in %)'
-        dataSrc='http://localhost:8000/data/map-example-countries.csv'
+        data={MapExampleCountries}
         legendSize={10}
     />
 </LayeredMap>
@@ -30,17 +34,17 @@ This uses Mapbox and the [Natural Earth projection](https://www.shadedrelief.com
 >
     <MarkerLayer
         markerGroupName='Lorem Ipsum Kraftwerke'
-        dataSrc='http://localhost:8000/data/map-example-locations.csv'
+        data={MapExampleLocations}
     />
 </LayeredMap>
 
 <LayeredMap>
     <CountryStatisticsLayer
-        dataSrc='http://localhost:8000/data/map-example-countries.csv'
+        data={MapExampleCountries}
         statisticsGroupName='Lorem Ipsum (in %)'
         />
     <CountryStatisticsLayer
-        dataSrc='http://localhost:8000/data/map-example-countries-2.json'
+        data={MapExampleAlternativeCountries}
         statisticsGroupName='Lorem Ipsum (in %)'
         legendSize={3}
         colorRangeStart='#FCC203'
@@ -48,7 +52,7 @@ This uses Mapbox and the [Natural Earth projection](https://www.shadedrelief.com
     />
     <MarkerLayer
         markerGroupName='Lorem Ipsum Kraftwerke'
-        dataSrc='http://localhost:8000/data/map-example-locations.csv'
+        data={MapExampleLocations}
     />
 </LayeredMap>
 
