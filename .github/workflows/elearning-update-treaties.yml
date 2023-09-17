@@ -14,18 +14,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-        with:
-          path: main
-      - uses: actions/checkout@v3
-        with:
-          path: updates
       - uses: actions/setup-node@v3
         with:
           node-version: 18
           cache: npm
-          cache-dependency-path: |
-            main/package-lock.json
-            updates/package-lock.json
       - name: Run update script
         run: ${GITHUB_WORKSPACE}/main/scripts/updateTreaties.sh
         env:
