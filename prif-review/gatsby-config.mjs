@@ -52,27 +52,27 @@ const config = {
         mdxOptions: {
           remarkPlugins: [remarkGfm],
         },
-        gatsbyRemarkPlugins: [
-          {
-            resolve: '../prif-gatsby-remark-smartypants',
-            options: {
-              locales: [
-                {
-                  openingQuotes: { single: '‚', double: '„' },
-                  closingQuotes: { single: '’', double: '“' },
-                  dashes: 'oldschool',
-                  locale: 'de',
-                },
-                {
-                  openingQuotes: { single: '‘', double: '“' },
-                  closingQuotes: { single: '’', double: '”' },
-                  dashes: 'oldschool',
-                  locale: 'en',
-                },
-              ],
-            },
-          },
-        ],
+        // gatsbyRemarkPlugins: [
+        //   {
+        //     resolve: '../prif-gatsby-remark-smartypants',
+        //     options: {
+        //       locales: [
+        //         {
+        //           openingQuotes: { single: '‚', double: '„' },
+        //           closingQuotes: { single: '’', double: '“' },
+        //           dashes: 'oldschool',
+        //           locale: 'de',
+        //         },
+        //         {
+        //           openingQuotes: { single: '‘', double: '“' },
+        //           closingQuotes: { single: '’', double: '”' },
+        //           dashes: 'oldschool',
+        //           locale: 'en',
+        //         },
+        //       ],
+        //     },
+        //   },
+        // ],
       },
     },
     {
