@@ -4,7 +4,7 @@ base_dir=${GITHUB_WORKSPACE:="."}
 branch_name=${BRANCH_NAME:="test"}
 github_actor=${GITHUB_ACTOR:="awesomephant"}
 
-# npm ci
+npm ci
 
 git config --local user.name "${github_actor}"
 git config --local user.email "${github_actor}@users.noreply.github.com"
