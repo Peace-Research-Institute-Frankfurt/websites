@@ -19,7 +19,7 @@ jobs:
           node-version: 18
           cache: npm
       - name: Run update script
-        run: ${GITHUB_WORKSPACE}/main/scripts/updateTreaties.sh
+        run: ${GITHUB_WORKSPACE}/scripts/updateTreaties.sh
         env:
           BRANCH_NAME: update-treaty-participants
           GITHUB_ACTOR: ${{ github.actor }}
