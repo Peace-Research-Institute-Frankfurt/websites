@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "description": "eunpdc-next",
-  "author": "Max Kohler",
   "license": "UNLICENSED",
+  "author": "Max Kohler",
   "scripts": {
     "build": "node ./utils/buildPrintMdx.js && gatsby build && node ./utils/buildUnitPDF.js",
     "clean": "gatsby clean",
@@ -30,6 +30,7 @@
     "gatsby-transformer-csv": "^5.12.0",
     "gatsby-transformer-json": "^5.12.0",
     "gatsby-transformer-sharp": "^5.12.0",
+    "luxon": "^3.4.3",
     "mapbox-gl": "^2.15.0",
     "mdast-util-to-string": "^4.0.0",
     "pagedjs": "^0.4.3",
@@ -51,7 +52,6 @@
     "express": "^4.18.2",
     "gray-matter": "^4.0.3",
     "just-diff": "^6.0.0",
-    "luxon": "^3.4.3",
     "pdf-lib": "^1.17.1"
   }
 }
