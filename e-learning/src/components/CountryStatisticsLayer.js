@@ -20,33 +20,18 @@ export default function CountryStatisticsLayer({
 
   const colorRange = d3.scaleLinear().domain([minValue, maxValue]).range([colorRangeStart, colorRangeEnd])
 
-  /** legend: */
-  const legendRangeFunc = (min, max, steps) => {
-    let stepsize = (max - min) / steps
-
-    let pow = Math.trunc(Math.log10(stepsize)) - 1
-    stepsize = Math.trunc(stepsize / 10 ** pow) * 10 ** pow
-
-    let result = [min]
-    min = Math.trunc(min / 10 ** pow) * 10 ** pow
-
-    for (let i = 0; i < steps - 1; i++) {
-      min += stepsize
-      result.push(roundLegendValues ? Math.round(min) : min.toFixed(2))
-    }
-
-    result.push(max)
-
-    return result
+  if (renderLegend) {
+    return (
+      <CountryStatisticsLayerLegend
+        minValue={minValue}
+        maxValue={maxValue}
+        roundLegendValues={roundLegendValues}
+        legendSize={legendSize}
+        statisticsGroupName={statisticsGroupName}
+        colorRange={colorRange}
+      />
+    )
   }
 
-  const legendRange = legendRangeFunc(minValue, maxValue, Number(legendSize))
-
-  const legendColorRange = legendRange.map((value) => colorRange && colorRange(value))
-
-  return renderLegend ? (
-    <CountryStatisticsLayerLegend legendRange={legendRange} legendColorRange={legendColorRange} statisticsGroupName={statisticsGroupName} />
-  ) : (
-    <CountryStatisticsLayerCountries projection={projection} data={data} colorRange={colorRange} />
-  )
+  return <CountryStatisticsLayerCountries projection={projection} data={data} colorRange={colorRange} />
 }

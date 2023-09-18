@@ -3,7 +3,30 @@ import React from 'react'
 import { LegendItem, LegendLabel, LegendThreshold } from '@visx/legend'
 import { scaleThreshold } from '@visx/scale'
 
-export default function CountryStatisticsLayerLegend({ legendRange, legendColorRange, statisticsGroupName }) {
+export default function CountryStatisticsLayerLegend({ minValue, maxValue, roundLegendValues, legendSize, statisticsGroupName, colorRange }) {
+  const legendRangeFunc = (min, max, steps) => {
+    let stepsize = (max - min) / steps
+
+    let pow = Math.trunc(Math.log10(stepsize)) - 1
+    stepsize = Math.trunc(stepsize / 10 ** pow) * 10 ** pow
+
+    let result = [min]
+    min = Math.trunc(min / 10 ** pow) * 10 ** pow
+
+    for (let i = 0; i < steps - 1; i++) {
+      min += stepsize
+      result.push(roundLegendValues ? Math.round(min) : min.toFixed(2))
+    }
+
+    result.push(max)
+
+    return result
+  }
+
+  const legendRange = legendRangeFunc(minValue, maxValue, Number(legendSize))
+
+  const legendColorRange = legendRange.map((value) => colorRange && colorRange(value))
+
   const thresholdScale = scaleThreshold({
     domain: legendRange,
     range: legendColorRange,
