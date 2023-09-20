@@ -1,4 +1,3 @@
-import * as styles from './LayeredMap.module.scss'
 import React from 'react'
 
 export default function CountryStatisticsLayerCountries({ projection, data, colorRange }) {
@@ -10,7 +9,6 @@ export default function CountryStatisticsLayerCountries({ projection, data, colo
         return (
           <g key={`feature.${i}`}>
             <path
-              className={styles.country}
               key={`map-feature-${i}`}
               d={path || ''}
               fill={matchingCountry.length > 0 && matchingCountry[0].value && colorRange ? colorRange(matchingCountry[0].value) : 'transparent'}

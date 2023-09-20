@@ -5,14 +5,58 @@ order: 3
 reading_time: 3
 ---
 
+import MapExampleCountries from '../../data/map-example-countries.csv'
+import ChartExampleTemperature from '../../data/charts-example-temperature.csv'
+import ChartExampleTemperatureReduced from '../../data/charts-example-temperature-reduced.csv'
+import ChartExampleTemperatureMonths from '../../data/charts-example-temperature-months.csv'
+import ChartExampleTemperatureWeeks from '../../data/charts-example-temperature-weeks.csv'
+
 
 ## W&S Charts
 
 ### BarGraph
-<BarGraph />
+<BarGraph
+    data={ChartExampleTemperatureReduced}
+    xAxis={'date'}
+    xAxisTitle={'Datum'}
+    yAxisTitle={'Temperatur (in °C)'}
+/>
+<BarGraph
+    data={ChartExampleTemperatureMonths}
+    xAxis={'date'}
+    xAxisTitle={'Datum'}
+    yAxisTitle={'Temperatur (in °C)'}
+/>
+
+<BarGraph
+    data={ChartExampleTemperatureReduced}
+    xAxisTitle={'Datum'}
+    yAxisTitle={'Temperatur (in °C)'}
+    bars={['Austin','San Francisco']}
+/>
 
 ### LineChart
-<LineChart />
+<LineChart
+xAxisTitle={'Zeit'}
+yAxisTitle={'Temperature (°F)'}
+    data={ChartExampleTemperature}
+/>
+
+<LineChart
+    data={ChartExampleTemperature}
+    lines={['Austin','San Francisco']}
+    xAxisDateOptions={{
+        year: "numeric",
+        month: "numeric",
+    }}
+/>
+<LineChart
+    data={ChartExampleTemperatureWeeks}
+    xAxis={'weeks'}
+    lines={['Austin','San Francisco']}
+/>
 
 ### PieChart
-<PieChart />
+<PieChart
+    data={MapExampleCountries}
+/>

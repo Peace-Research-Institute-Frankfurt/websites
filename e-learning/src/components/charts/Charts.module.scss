@@ -2,9 +2,65 @@
 
 .container {
   grid-column: 1 / 6;
-  margin-bottom: 2em;
+  margin-bottom: 4em;
+  position: relative;
+
 
   @include bp(m) {
-    margin-bottom: 4em;
+    margin-bottom: 4.5em;
+    //height: 500px;
   }
 }
+
+.graph-container {
+  //overflow-x: scroll;
+  position: relative;
+  height: 350px;
+  //padding-left: 16px;
+
+  @include bp(m) {
+
+    padding-left: 0px;
+    height: 500px;
+  }
+}
+
+.legend {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 0.1em;
+  flex-wrap: wrap;
+  @extend %caption;
+
+  @include bp(m) {
+    justify-content: center;
+  }
+
+
+  svg, rect {
+    width: 12px;
+    height: 12px;
+    @include bp(m) {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+
+.axis-label-left {
+  @extend %caption-bold;
+}
+
+.axis-label-bottom {
+  transform: translateY(1.3em);
+  @extend %caption-bold;
+}
+
+.axis-ticks {
+  @extend %caption;
+}
+
+
