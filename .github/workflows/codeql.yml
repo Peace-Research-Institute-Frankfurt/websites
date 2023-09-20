@@ -2,9 +2,9 @@ name: "CodeQL"
 
 on:
   push:
-    branches: [ "main", "feature/*"]
+    branches: [ "main", "Feature/*"]
   pull_request:
-    branches: [ "main", "feature/*" ]
+    branches: [ "main", "Feature/*" ]
   workflow_dispatch:
 
 jobs:
