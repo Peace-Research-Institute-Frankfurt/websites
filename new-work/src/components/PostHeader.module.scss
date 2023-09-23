@@ -16,10 +16,11 @@
 .video {
   position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
   z-index: 0;
+  left: -10%;
+  width: 120%;
   padding-top: 62.5%;
+  height: 100%;
   & > iframe {
     position: absolute;
     top: 0;
@@ -46,7 +47,10 @@
   padding-top: 65vh;
 }
 .has-video {
-  padding-top: 65vh;
+  padding-top: 25vh;
+  @include bp(m) {
+    padding-top: 65vh;
+  }
 }
 
 .title-container {
