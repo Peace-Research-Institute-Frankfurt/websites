@@ -81,16 +81,7 @@ const config = {
         mdxOptions: {
           remarkPlugins: [remarkGfm],
         },
-        gatsbyRemarkPlugins: [
-          {
-            resolve: '../prif-gatsby-remark-smartypants',
-            options: {
-              openingQuotes: { single: '‚', double: '„' },
-              closingQuotes: { single: '’', double: '“' },
-              dashes: 'oldschool',
-            },
-          },
-        ],
+        gatsbyRemarkPlugins: [],
       },
     },
   ],
