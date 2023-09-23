@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { graphql } from 'gatsby'
-import { StaticImage } from 'gatsby-plugin-image'
 import Meta from '../components/Meta'
 import App from '../components/App'
 import StickyHeader from '../components/StickyHeader'
@@ -57,7 +56,14 @@ const Index = ({ data }) => {
       <StickyHeader />
       <main id="content" className={styles.container}>
         <PostHeader
-          image={<StaticImage src="../images/frame2.png" alt="" layout="fullWidth" />}
+          video={
+            <iframe
+              src="https://player.vimeo.com/video/867440111?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&background=1"
+              frameborder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              title="1_storyboard-rooms-animated"
+            ></iframe>
+          }
           title="Neue Arbeitsformen für Wissenschaft und Forschung"
           intro={
             <>

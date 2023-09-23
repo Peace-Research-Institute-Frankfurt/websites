@@ -1,9 +1,10 @@
 import React from 'react'
 import * as styles from './PostHeader.module.scss'
 
-export default function PostHeader({ title, intro, image, credit, portrait }) {
+export default function PostHeader({ title, intro, image, video, portrait }) {
   return (
-    <header className={`${styles.wrapper} ${image ? styles.hasImage : ''}`}>
+    <header className={`${styles.wrapper} ${video ? styles.hasVideo : ''} ${image ? styles.hasImage : ''}`}>
+      {video && <div className={styles.video}>{video}</div>}
       {image && <div className={styles.image}>{image}</div>}
       <div className={`${styles.container}`}>
         <div className={styles.titleContainer}>

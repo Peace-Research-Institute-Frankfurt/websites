@@ -12,6 +12,23 @@
     height: 100% !important;
   }
 }
+
+.video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  padding-top: 62.5%;
+  & > iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
 .container {
   background: var(--black);
   margin: 0 var(--padding);
@@ -26,6 +43,9 @@
 }
 
 .has-image {
+  padding-top: 65vh;
+}
+.has-video {
   padding-top: 65vh;
 }
 
