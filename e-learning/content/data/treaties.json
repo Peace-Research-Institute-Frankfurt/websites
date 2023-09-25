@@ -2462,6 +2462,15 @@
         ]
       },
       {
+        "country": "BHS",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2023-09-19"
+          }
+        ]
+      },
+      {
         "country": "BGD",
         "events": [
           {
@@ -3328,6 +3337,15 @@
           {
             "type": "ratification",
             "date": "2019-02-25"
+          }
+        ]
+      },
+      {
+        "country": "LKA",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2023-09-19"
           }
         ]
       },
@@ -4636,6 +4654,15 @@
           {
             "type": "ratification",
             "date": "2004-09-30"
+          }
+        ]
+      },
+      {
+        "country": "SGP",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2023-09-21"
           }
         ]
       },
