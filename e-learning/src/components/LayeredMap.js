@@ -27,7 +27,7 @@ export default function LayeredMap({ children, centerLat = 0, centerLong = 0, ma
                 {projection.features.map(({ path }, i) => {
                   return (
                     <g key={`feature.${i}`}>
-                      <path className={styles.country} key={`map-feature-${i}`} d={path || ''} fill={'#9d9d9d'} stroke={'#ffffff'} />
+                      <path key={`map-feature-${i}`} d={path || ''} fill={'#9d9d9d'} stroke={'#ffffff'} />
                     </g>
                   )
                 })}

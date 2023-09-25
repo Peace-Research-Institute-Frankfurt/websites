@@ -17,7 +17,7 @@ export default function MarkerLayerLegend({ markerGroupName }) {
             {labels.map((label, i) => (
               <LegendItem key={`legend-quantile-${i}`} alignItems={'flex-start'}>
                 <svg width={20} height={20}>
-                  <circle key={`markerCircle.${i}`} className={styles.circle} />
+                  <circle key={`markerCircle.${i}`} />
                 </svg>
 
                 <LegendLabel align="left" margin="0 0 0 10px">
