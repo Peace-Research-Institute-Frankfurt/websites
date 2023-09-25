@@ -1,0 +1,26 @@
+name: '[eLearning] Run tests'
+
+on:
+  pull_request:
+    branches: ['main']
+    paths: ['./e-learning']
+  workflow_dispatch:
+permissions:
+  contents: read
+
+concurrency:
+  group: 'deploy'
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+      - name: Install dependencies
+        working-directory: ./e-learning/
+        run: npm install
+      - name: Run tests
+        working-directory: ./e-learning/
+        run: npm run test
