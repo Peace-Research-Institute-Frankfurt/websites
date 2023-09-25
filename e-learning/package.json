@@ -35,7 +35,7 @@
     "mapbox-gl": "^2.15.0",
     "mdast-util-to-string": "^4.0.0",
     "pagedjs": "^0.4.3",
-    "puppeteer": "^21.2.1",
+    "puppeteer": "^21.3.4",
     "react": "18.2.0",
     "react-dom": "^18.2.0",
     "react-markdown-renderer": "^1.4.0",
