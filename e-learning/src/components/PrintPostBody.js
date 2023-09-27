@@ -8,6 +8,14 @@ import Treaty from './PrintTreaty'
 import PrintTerm from './PrintTerm'
 import PrintChapter from './PrintChapter'
 import ColumnBreak from './ColumnBreak'
+import LayeredMap from "./LayeredMap";
+import MapLegend from "./MapLegend";
+import MarkerLayer from "./MarkerLayer";
+import MarkerLayerLegend from "./MarkerLayerLegend";
+import MarkerLayerMarkers from "./MarkerLayerMarkers";
+import CountryStatisticsLayer from "./CountryStatisticsLayer";
+import CountryStatisticsLayerCountries from "./CountryStatisticsLayerCountries";
+import CountryStatisticsLayerLegend from "./CountryStatisticsLayerLegend";
 
 const PostBody = ({ content, unit, site, setChapterList }) => {
   const [terms, setTerms] = useState([])
@@ -109,6 +117,14 @@ const PostBody = ({ content, unit, site, setChapterList }) => {
     DetailsGroup: ({ children }) => <>{children}</>,
     Callout: ({ ...props }) => <aside className="callout" {...props} />,
     Chapter: ({ ...props }) => <PrintChapter setChapterList={setChapterList} {...props} />,
+    LayeredMap,
+    MapLegend,
+    MarkerLayer,
+    MarkerLayerLegend,
+    MarkerLayerMarkers,
+    CountryStatisticsLayer,
+    CountryStatisticsLayerCountries,
+    CountryStatisticsLayerLegend,
   }
 
   return (
@@ -136,3 +152,4 @@ const PostBody = ({ content, unit, site, setChapterList }) => {
 }
 
 export default PostBody
+
