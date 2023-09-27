@@ -1,4 +1,3 @@
-import * as styles from './LayeredMap.module.scss'
 import React from 'react'
 import { LegendItem, LegendLabel, LegendOrdinal } from '@visx/legend'
 import { scaleOrdinal } from '@visx/scale'
