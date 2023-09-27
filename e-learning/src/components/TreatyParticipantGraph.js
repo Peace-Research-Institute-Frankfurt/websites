@@ -7,6 +7,16 @@ const TreatyParticipantGraph = function ({ treaty }) {
   const [tooltipTarget, setTooltipTarget] = useState(null)
   const [tooltipText, setTooltipText] = useState('')
   const containerRef = useRef()
+  let sourceLabel = ''
+
+  if (treaty.scrapeURL) {
+    if (treaty.scrapeURL.includes('treaties.un.org')) {
+      sourceLabel = 'United Nations Treaty Collection'
+    }
+    if (treaty.scrapeURL.includes('treaties.unoda.org')) {
+      sourceLabel = 'UNODA Treaties Database'
+    }
+  }
 
   function onMouseOver(e, p) {
     let text = `${p.country.name.common}`
@@ -94,7 +104,7 @@ const TreatyParticipantGraph = function ({ treaty }) {
       <ul className={styles.items}>{countryEls}</ul>
       {treaty.scrapeURL && (
         <p className={styles.source}>
-          Data: <a href={treaty.scrapeURL}>United Nations Treaty Collection</a>
+          Data: <a href={treaty.scrapeURL}>{sourceLabel}</a>
         </p>
       )}
       <TooltipAdapter active={tooltipActive} targetEl={tooltipTarget} position="topCenter">
