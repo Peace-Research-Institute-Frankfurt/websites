@@ -7,6 +7,7 @@ import {scaleBand, scaleLinear, scaleOrdinal} from '@visx/scale';
 import {ParentSize} from "@visx/responsive";
 import * as d3 from "d3";
 import {LegendOrdinal} from '@visx/legend';
+import {PatternCircles, PatternLines, PatternWaves} from '@visx/pattern';
 
 
 export default function BarGraph({
@@ -14,13 +15,13 @@ export default function BarGraph({
                                      xAxis,
                                      xAxisTitle,
                                      yAxisTitle,
-                                     bars,
+                                     series,
                                      colorRangeStart = '#6889a1',
                                      colorRangeEnd = '#203b54',
                                      maxValue
                                  }) {
     const xAxisKey = xAxis ? xAxis : Object.keys(data[0])[0]
-    const keys = bars ? bars : Object.keys(data[0]).filter((d) => d !== xAxisKey);
+    const keys = series ? series : Object.keys(data[0]).filter((d) => d !== xAxisKey);
     const margin = {top: 32, right: 30, bottom: 8, left: 32};
     const axisLegendHeight = 44
     const calculatedMaxVal = Math.max(...data.map((d) => Math.max(...keys.map((key) => Number(d[key])))))
@@ -48,26 +49,61 @@ export default function BarGraph({
         range: Array.from([...Array(keys.length)], (x, i) => colorRange(i)),
     });
 
+    const patternScale = scaleOrdinal({
+        domain: keys,
+        range: ['lines'],
+    });
+
+
+    // Patterns
+    const components = {
+        waves: PatternWaves,
+        circles: PatternCircles,
+        lines: PatternLines
+    };
+    const getColoredPattern = (color, id, pattern) => {
+        const PatternComponent = components[pattern]
+        return <PatternComponent
+            id={id}
+            height={6}
+            width={6}
+            stroke={color}
+            strokeWidth={3}
+            orientation={['diagonal']}
+        />
+    }
 
     return (
         <div className={styles.container}>
-            <LegendOrdinal scale={colorScale} direction="row" labelMargin="3px 18px 0 0"
-                           className={styles.legend}/>
+            <LegendOrdinal
+                scale={colorScale}
+                direction="row"
+                labelMargin="3px 18px 0 0"
+                className={styles.legend}
+                shape={(item) => {
+                    return <svg className={styles.legendShape}>
+                        <rect className={styles.legendShape}
+                              fill={keys.length > 2 ? item.itemIndex % 2 !== 0 ? `url('#p-id-${item.itemIndex}')` : item.fill : item.fill}
+                        />
+                    </svg>
+                }}
+
+            />
             <div>
-            <ParentSize>
-                {({width, height}) => {
-                    const responsiveWidth = width < 800 ? 800 : width
+                <ParentSize>
+                    {({width, height}) => {
+                        const responsiveWidth = width < 800 ? 800 : width
 
-                    // bounds
-                    const xMax = responsiveWidth - margin.left - margin.right;
-                    const yMax = height - margin.top - margin.bottom - axisLegendHeight;
+                        // bounds
+                        const xMax = responsiveWidth - margin.left - margin.right;
+                        const yMax = height - margin.top - margin.bottom - axisLegendHeight;
 
-                    // update scale output dimensions
-                    xScale.rangeRound([0, xMax]);
-                    barScale.rangeRound([0, xScale.bandwidth()]);
-                    yScale.range([yMax, 0]);
+                        // update scale output dimensions
+                        xScale.rangeRound([0, xMax]);
+                        barScale.rangeRound([0, xScale.bandwidth()]);
+                        yScale.range([yMax, 0]);
 
-                    return <div style={{overflow: 'scroll'}}>
+                        return <div style={{overflow: 'scroll'}}>
                             <svg className={styles.graphContainer}
                                  width={responsiveWidth} style={{overflow: 'visible'}}>
 
@@ -87,15 +123,35 @@ export default function BarGraph({
                                             return barGroups.map((barGroup, groupIndex) => (
                                                 <Group key={`bar-group-${barGroup.index}-${barGroup.x0}`}
                                                        left={barGroup.x0}>
-                                                    {barGroup.bars.map((bar) => {
-                                                        return <rect
-                                                            key={`bar-group-bar-${barGroup.index}-${bar.index}-${bar.value}-${bar.key}`}
-                                                            x={bar.x}
-                                                            y={bar.y}
-                                                            width={bar.width}
-                                                            height={bar.height}
-                                                            fill={bar.color}
-                                                        />
+                                                    {barGroup.bars.map((bar, i) => {
+                                                        return <>
+                                                            {/*    <PatternLines*/}
+                                                            {/*    id="lines"*/}
+                                                            {/*    height={5}*/}
+                                                            {/*    width={5}*/}
+                                                            {/*    // stroke={bar.color}*/}
+                                                            {/*    stroke={'transparent'}*/}
+                                                            {/*    strokeWidth={1}*/}
+                                                            {/*    orientation={['diagonal']}*/}
+                                                            {/*/>*/}
+
+                                                            {
+                                                                getColoredPattern(
+                                                                    bar.color,
+                                                                    `p-id-${i}`,
+                                                                    patternScale(bar.key)
+                                                                )
+                                                            }
+                                                            <rect
+                                                                key={`bar-group-bar-${barGroup.index}-${bar.index}-${bar.value}-${bar.key}`}
+                                                                x={bar.x}
+                                                                y={bar.y}
+                                                                width={bar.width}
+                                                                height={bar.height}
+                                                                // fill={bar.color}
+                                                                fill={barGroup.bars.length > 2 ? i % 2 !== 0 ? `url('#p-id-${i}')` : bar.color : bar.color}
+                                                            />
+                                                        </>
                                                     })}
                                                 </Group>
                                             ))
@@ -104,7 +160,7 @@ export default function BarGraph({
 
 
                                     <AxisBottom
-                                        label={xAxisTitle}
+                                        label={xAxisTitle ?? xAxisKey}
                                         labelProps={{className: styles.axisLabelBottom}}
                                         tickClassName={styles.axisTicks}
                                         top={yMax}
@@ -119,10 +175,11 @@ export default function BarGraph({
                                 </Group>
                             </svg>
                         </div>
-                }}
-            </ParentSize>
+                    }}
+                </ParentSize>
             </div>
 
-        </div>);
+        </div>)
+        ;
 }
 

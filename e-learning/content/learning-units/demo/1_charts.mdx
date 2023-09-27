@@ -31,8 +31,9 @@ import ChartExampleTemperatureWeeks from '../../data/charts-example-temperature-
 <BarGraph
     data={ChartExampleTemperatureReduced}
     xAxisTitle={'Datum'}
-    yAxisTitle={'Temperatur (in °C)'}
-    bars={['Austin','San Francisco']}
+    yAxisTitle={'Daten in %'}
+    series={['Austin','San Francisco']}
+    maxValue={100}
 />
 
 ### LineChart
@@ -44,7 +45,7 @@ yAxisTitle={'Temperature (°F)'}
 
 <LineChart
     data={ChartExampleTemperature}
-    lines={['Austin','San Francisco']}
+    series={['Austin','San Francisco']}
     xAxisDateOptions={{
         year: "numeric",
         month: "numeric",
@@ -53,7 +54,7 @@ yAxisTitle={'Temperature (°F)'}
 <LineChart
     data={ChartExampleTemperatureWeeks}
     xAxis={'weeks'}
-    lines={['Austin','San Francisco']}
+    series={['Austin','San Francisco']}
 />
 
 ### PieChart

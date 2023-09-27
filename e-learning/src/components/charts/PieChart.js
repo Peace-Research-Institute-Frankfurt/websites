@@ -14,24 +14,20 @@ export default function PieChart({
                                      colorRangeEnd = '#274868',
                                  }) {
     const value = (d) => d.value;
-    const names = data.map((d) => d.name);
-
+    const names = data.map((d,i) => `${i+1} ${d.name}`);
     const minValue = data.reduce((min, c) => (c.value < min ? c.value : min), data[0].value)
     const maxValue = data.reduce((max, c) => (c.value > max ? c.value : max), data[0].value)
-
     const colorRange = d3.scaleLinear().domain([minValue, maxValue]).range([colorRangeStart, colorRangeEnd])
     const colorScale = scaleOrdinal({
         domain: names,
         range: Array.from(data, (x, i) => colorRange(x.value)),
     });
-
     const margin = {top: 20, right: 20, bottom: 20, left: 20};
 
     const pieSortValues = (a, b) => b - a;
 
     return (
         <div className={styles.container}>
-            <LegendOrdinal scale={colorScale} direction="row" labelMargin="0 15px 0 0" className={styles.legend}/>
             <div className={styles.graphContainer}>
             <ParentSize>
                 {({width, height}) => {
@@ -64,25 +60,25 @@ export default function PieChart({
                                                     <>
                                                         <text
                                                             x={centroidX}
-                                                            y={centroidY}
+                                                            y={centroidY }
                                                             dy=".33em"
                                                             fill="#ffffff"
-                                                            fontSize={22}
                                                             textAnchor="middle"
                                                             pointerEvents="none"
+                                                            className={styles.pieChartLabelNumber}
                                                         >
-                                                            {arc.data.name}
+                                                            {index + 1}
                                                         </text>
                                                         <text
                                                             x={centroidX}
                                                             y={centroidY + 24}
                                                             dy=".33em"
                                                             fill="#ffffff"
-                                                            fontSize={14}
                                                             textAnchor="middle"
                                                             pointerEvents="none"
+                                                            className={styles.pieChartLabel}
                                                         >
-                                                            {arc.data.value}
+                                                            ({arc.data.value})
                                                         </text>
                                                     </>
                                                 )}
@@ -99,6 +95,7 @@ export default function PieChart({
             </ParentSize>
             </div>
 
+            <LegendOrdinal scale={colorScale} direction="row" labelMargin="0 15px 0 0" className={styles.pieChartLegend}/>
         </div>
     )
 }

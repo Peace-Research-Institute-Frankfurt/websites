@@ -12,7 +12,7 @@ import {LegendOrdinal} from '@visx/legend';
 
 export default function LineChart({
                                       data,
-                                      lines,
+                                      series,
                                       xAxis,
                                       xAxisTitle,
                                       yAxisTitle,
@@ -23,7 +23,7 @@ export default function LineChart({
     const xAxisKey = xAxis ? xAxis : Object.keys(data[0])[0]
     const margin = {top: 32, right: 30, bottom: 8, left: 32};
     const axisLegendHeight = 44
-    const keys = lines ? lines : Object.keys(data[0]).filter((d) => d !== xAxisKey);
+    const keys = series ? series : Object.keys(data[0]).filter((d) => d !== xAxisKey);
 
     /** accessors */
     const xValue = (obj) => {
@@ -44,7 +44,6 @@ export default function LineChart({
 
     const yScale = scaleLinear({
         domain: [
-            // Math.min(...data.map((d) => Math.min(ny(d), sf(d)))),
             Math.min(...data.map((d) => Math.min(
                 ...keys.map((key) => {
                     return d[key]
@@ -93,9 +92,9 @@ export default function LineChart({
                                     scale={xScale}
                                     numTicks={width > 520 ? 10 : 5}
                                     tickFormat={(v) =>
-                                        v instanceof Date ? v.toLocaleDateString('de-DE', xAxisDateOptions)
+                                        v instanceof Date ? v.toLocaleDateString('en-GB', xAxisDateOptions)
                                             : v}
-                                    label={xAxisTitle ? xAxisTitle : ''}
+                                    label={xAxisTitle?? xAxisKey}
                                     labelProps={{className: styles.axisLabelBottom}}
                                     tickClassName={styles.axisTicks}
                                 />
@@ -122,8 +121,8 @@ export default function LineChart({
                                             return yScale(yValue(d)) ?? 0
                                         }}
                                         stroke={colorScale(column)}
-                                        strokeWidth={1.5}
-                                        strokeOpacity={0.8}
+                                        strokeWidth={1.0 + (0.7 * Number(i))}
+                                        strokeOpacity={1}
                                     />
                                 })}
                             </Group>

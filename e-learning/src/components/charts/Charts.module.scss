@@ -8,15 +8,13 @@
 
   @include bp(m) {
     margin-bottom: 4.5em;
-    //height: 500px;
   }
 }
 
 .graph-container {
-  //overflow-x: scroll;
   position: relative;
   height: 350px;
-  //padding-left: 16px;
+  margin-bottom: 0.1em;
 
   @include bp(m) {
 
@@ -49,18 +47,56 @@
   }
 }
 
+.legend-shape {
+  width: 12px;
+  height: 12px;
+  @include bp(m) {
+    width: 18px;
+    height: 18px;
+  }
+}
+
 
 .axis-label-left {
+  //transform-box: fill-box;
+  //transform: rotate(-90deg) translateX(-5px);
+  //transform: rotate(-90deg) translateX(-50%);
+  //transform: translateX(-10px);
+  //left: -50%;
   @extend %caption-bold;
 }
 
 .axis-label-bottom {
-  transform: translateY(1.3em);
+  transform-box: fill-box;
+  transform: translateY(1.3em) translateX(-50%);
   @extend %caption-bold;
 }
 
 .axis-ticks {
   @extend %caption;
 }
+
+// Pie Chart
+.pie-chart-label-number {
+  @extend %h3;
+}
+
+.pie-chart-label {
+  @extend %caption;
+}
+
+.pie-chart-legend {
+  @extend .legend;
+  //@extend %h3;
+  //width: 100%;
+  //display: flex;
+  //align-items: center;
+  //justify-content: flex-start;
+  //
+  //@include bp(m) {
+  //  justify-content: center;
+  //}
+}
+
 
 
