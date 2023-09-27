@@ -12,7 +12,8 @@ export default function PieChart({ data, colorRangeStart = '#97aabd', colorRange
   const value = (d) => d.value
   const pieSortValues = (a, b) => b - a
 
-  const names = data.map((d, i) => `${i + 1} ${d.name}`)
+  const names = data.map((d) => d.name)
+  // const names = data.map((d, i) => `${i + 1} ${d.name}`)
   const minValue = data.reduce((min, c) => (c.value < min ? c.value : min), data[0].value)
   const maxValue = data.reduce((max, c) => (c.value > max ? c.value : max), data[0].value)
   const colorRange = d3.scaleLinear().domain([minValue, maxValue]).range([colorRangeStart, colorRangeEnd])
@@ -20,8 +21,10 @@ export default function PieChart({ data, colorRangeStart = '#97aabd', colorRange
 
   const colorScale = scaleOrdinal({
     domain: names,
-    range: Array.from(data, (x, i) => colorRange(x.value)),
+    range: Array.from(data, (x,) => colorRange(x.value)),
   })
+
+  const refMap = data.map(() => React.createRef());
 
   return (
     <div className={styles.container}>
@@ -47,13 +50,15 @@ export default function PieChart({ data, colorRangeStart = '#97aabd', colorRange
                         const arcPath = pie.path(arc)
                         const arcFill = colorRange(arc.value)
 
+                        const textWidth = refMap[index].current ? refMap[index].current.getBBox().width : 0
+
                         return (
                           <g key={`arc-${arc.value}-${index}`}>
                             <path d={arcPath} fill={arcFill} />
 
                             {hasSpaceForLabel && (
                               <>
-                                <text
+                                {/* <text
                                   x={centroidX}
                                   y={centroidY}
                                   dy=".33em"
@@ -63,18 +68,28 @@ export default function PieChart({ data, colorRangeStart = '#97aabd', colorRange
                                   className={styles.pieChartLabelNumber}
                                 >
                                   {index + 1}
-                                </text>
+                                </text> */}
+
+                                <rect
+                                  x={centroidX - textWidth / 2 - 10}
+                                  y={centroidY + 12}
+                                  width={textWidth + 20}
+                                  height={24}
+                                  fill="#FFFFFF"
+                                  className={styles.pieChartLabelBackground}
+                                />
 
                                 <text
                                   x={centroidX}
                                   y={centroidY + 24}
                                   dy=".33em"
-                                  fill="#ffffff"
+                                  fill="#000000"
                                   textAnchor="middle"
                                   pointerEvents="none"
                                   className={styles.pieChartLabel}
+                                  ref={refMap[index]}
                                 >
-                                  ({arc.data.value})
+                                  {arc.data.value}
                                 </text>
                               </>
                             )}
