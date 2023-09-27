@@ -11,7 +11,6 @@ import ChartExampleTemperatureReduced from '../../data/charts-example-temperatur
 import ChartExampleTemperatureMonths from '../../data/charts-example-temperature-months.csv'
 import ChartExampleTemperatureWeeks from '../../data/charts-example-temperature-weeks.csv'
 
-
 ## W&S Charts
 
 ### BarGraph
@@ -21,6 +20,7 @@ import ChartExampleTemperatureWeeks from '../../data/charts-example-temperature-
     xAxisTitle={'Datum'}
     yAxisTitle={'Temperatur (in °C)'}
 />
+
 <BarGraph
     data={ChartExampleTemperatureMonths}
     xAxis={'date'}
@@ -38,8 +38,8 @@ import ChartExampleTemperatureWeeks from '../../data/charts-example-temperature-
 
 ### LineChart
 <LineChart
-xAxisTitle={'Zeit'}
-yAxisTitle={'Temperature (°F)'}
+    xAxisTitle={'Zeit'}
+    yAxisTitle={'Temperature (°F)'}
     data={ChartExampleTemperature}
 />
 
@@ -51,6 +51,7 @@ yAxisTitle={'Temperature (°F)'}
         month: "numeric",
     }}
 />
+
 <LineChart
     data={ChartExampleTemperatureWeeks}
     xAxis={'weeks'}
