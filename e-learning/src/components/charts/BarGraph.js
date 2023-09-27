@@ -133,12 +133,24 @@ export default function BarGraph({ data, xAxis, xAxisTitle, yAxisTitle, series, 
 
                     <AxisBottom
                       label={xAxisTitle ?? xAxisKey}
-                      labelProps={{ className: styles.axisLabelBottom }}
+                      labelProps={{
+                        className: styles.axisLabelBottom,
+                        textAnchor: 'middle',
+                      }}
                       tickClassName={styles.axisTicks}
                       top={yMax}
                       scale={xScale}
                     />
-                    <AxisLeft label={yAxisTitle} labelProps={{ className: styles.axisLabelLeft }} tickClassName={styles.axisTicks} scale={yScale} />
+
+                    <AxisLeft
+                      label={yAxisTitle}
+                      labelProps={{
+                        className: styles.axisLabelLeft,
+                        textAnchor: 'middle',
+                      }}
+                      tickClassName={styles.axisTicks}
+                      scale={yScale}
+                    />
                   </Group>
                 </svg>
               </div>
