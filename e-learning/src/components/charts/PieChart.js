@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useId} from 'react'
 import { Pie } from '@visx/shape'
 import { Group } from '@visx/group'
 import * as styles from './Charts.module.scss'
@@ -8,9 +8,10 @@ import { ParentSize } from '@visx/responsive'
 import { LegendOrdinal } from '@visx/legend'
 import { scaleOrdinal } from '@visx/scale'
 
-export default function PieChart({ data, colorRangeStart = '#97aabd', colorRangeEnd = '#274868' }) {
+export default function PieChart({ data, colorRangeStart = '#97aabd', colorRangeEnd = '#274868', title, description,legendTitle }) {
   const value = (d) => d.value
   const pieSortValues = (a, b) => b - a
+  const graphId = useId()
 
   const names = data.map((d, i) => `${i + 1} ${d.name}`)
   const minValue = data.reduce((min, c) => (c.value < min ? c.value : min), data[0].value)
@@ -37,7 +38,9 @@ export default function PieChart({ data, colorRangeStart = '#97aabd', colorRange
             const left = centerX + margin.left
 
             return (
-              <svg width={width} height={height}>
+              <svg width={width} height={height} aria-labelledby={`${title && `${graphId}-map-title`} ${title && `${graphId}-map-description`}`} role={'graphics-object'}>
+                {title && <title id={`${graphId}-map-title`}>{title}</title>}
+                {description && <desc id={`${graphId}-map-description`}>{description}</desc>}
                 <Group top={top} left={left}>
                   <Pie data={data} pieValue={value} pieSortValues={pieSortValues} outerRadius={radius}>
                     {(pie) =>
@@ -49,7 +52,7 @@ export default function PieChart({ data, colorRangeStart = '#97aabd', colorRange
 
                         return (
                           <g key={`arc-${arc.value}-${index}`}>
-                            <path d={arcPath} fill={arcFill} />
+                            <path d={arcPath} fill={arcFill} stroke={'#ffffff'} strokeWidth={2}/>
 
                             {hasSpaceForLabel && (
                               <>
@@ -90,7 +93,10 @@ export default function PieChart({ data, colorRangeStart = '#97aabd', colorRange
         </ParentSize>
       </div>
 
-      <LegendOrdinal scale={colorScale} direction="row" labelMargin="0 15px 0 0" className={styles.pieChartLegend} />
+      <div>
+        <span aria-label={legendTitle??''} className={styles.srOnly}/>
+        <LegendOrdinal scale={colorScale} direction="row" labelMargin="0 15px 0 0" className={styles.pieChartLegend} />
+      </div>
     </div>
   )
 }

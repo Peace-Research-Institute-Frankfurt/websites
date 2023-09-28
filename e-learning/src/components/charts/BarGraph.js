@@ -1,5 +1,5 @@
 import * as styles from './Charts.module.scss'
-import React from 'react'
+import React, {useId} from 'react'
 import { Group } from '@visx/group'
 import { BarGroup } from '@visx/shape'
 import { AxisBottom, AxisLeft } from '@visx/axis'
@@ -9,12 +9,13 @@ import * as d3 from 'd3'
 import { LegendOrdinal } from '@visx/legend'
 import { PatternCircles, PatternLines, PatternWaves } from '@visx/pattern'
 
-export default function BarGraph({ data, xAxis, xAxisTitle, yAxisTitle, series, colorRangeStart = '#6889a1', colorRangeEnd = '#203b54', maxValue }) {
+export default function BarGraph({ data, xAxis, xAxisTitle, yAxisTitle, series, colorRangeStart = '#6889a1', colorRangeEnd = '#203b54', maxValue, title, description,legendTitle }) {
   const xAxisKey = xAxis ? xAxis : Object.keys(data[0])[0]
   const keys = series ? series : Object.keys(data[0]).filter((d) => d !== xAxisKey)
   const margin = { top: 32, right: 30, bottom: 8, left: 32 }
   const axisLegendHeight = 44
   const calculatedMaxVal = Math.max(...data.map((d) => Math.max(...keys.map((key) => Number(d[key])))))
+  const graphId = useId()
   maxValue = maxValue && maxValue > calculatedMaxVal ? maxValue : calculatedMaxVal
 
   /** accessors */
@@ -65,20 +66,23 @@ export default function BarGraph({ data, xAxis, xAxisTitle, yAxisTitle, series, 
 
   return (
     <div className={styles.container}>
-      <LegendOrdinal
-        scale={colorScale}
-        direction="row"
-        labelMargin="3px 18px 0 0"
-        className={styles.legend}
-        shape={(item) => (
-          <svg className={styles.legendShape}>
-            <rect
-              className={styles.legendShape}
-              fill={keys.length > 2 ? (item.itemIndex % 2 !== 0 ? `url('#p-id-${item.itemIndex}')` : item.fill) : item.fill}
-            />
-          </svg>
-        )}
-      />
+      <div>
+        <div className={styles.srOnly}>{legendTitle??''}</div>
+        <LegendOrdinal
+            scale={colorScale}
+            direction="row"
+            labelMargin="3px 18px 0 0"
+            className={styles.legend}
+            shape={(item) => (
+                <svg className={styles.legendShape}>
+                  <rect
+                      className={styles.legendShape}
+                      fill={keys.length > 2 ? (item.itemIndex % 2 !== 0 ? `url('#p-id-${item.itemIndex}')` : item.fill) : item.fill}
+                  />
+                </svg>
+            )}
+        />
+      </div>
 
       <div>
         <ParentSize>
@@ -96,7 +100,10 @@ export default function BarGraph({ data, xAxis, xAxisTitle, yAxisTitle, series, 
 
             return (
               <div style={{ overflow: 'scroll' }}>
-                <svg className={styles.graphContainer} width={responsiveWidth} style={{ overflow: 'visible' }}>
+                <svg className={styles.graphContainer} width={responsiveWidth} style={{ overflow: 'visible' }} aria-labelledby={`${title && `${graphId}-map-title`} ${title && `${graphId}-map-description`}`} role={'graphics-object'}>
+                  {title && <title id={`${graphId}-map-title`}>{title}</title>}
+                  {description && <desc id={`${graphId}-map-description`}>{description}</desc>}
+
                   <Group left={margin.left + 24} top={margin.top}>
                     <BarGroup
                       data={data}
@@ -113,18 +120,21 @@ export default function BarGraph({ data, xAxis, xAxisTitle, yAxisTitle, series, 
                         barGroups.map((barGroup) => (
                           <Group key={`bar-group-${barGroup.index}-${barGroup.x0}`} left={barGroup.x0}>
                             {barGroup.bars.map((bar, i) => (
-                              <>
+                              <g key={`bar-group-${barGroup.index}-${barGroup.x0}-${i}`}>
                                 {getColoredPattern(bar.color, `p-id-${i}`, patternScale(bar.key))}
 
-                                <rect
-                                  key={`bar-group-bar-${barGroup.index}-${bar.index}-${bar.value}-${bar.key}`}
-                                  x={bar.x}
-                                  y={bar.y}
-                                  width={bar.width}
-                                  height={bar.height}
-                                  fill={barGroup.bars.length > 2 ? (i % 2 !== 0 ? `url('#p-id-${i}')` : bar.color) : bar.color}
-                                />
-                              </>
+                                {bar.height > 0 &&
+                                    <rect
+                                        key={`bar-group-bar-${barGroup.index}-${bar.index}-${bar.value}-${bar.key}`}
+                                        x={bar.x}
+                                        y={bar.y}
+                                        width={bar.width}
+                                        height={bar.height}
+                                        fill={barGroup.bars.length > 2 ? (i % 2 !== 0 ? `url('#p-id-${i}')` : bar.color) : bar.color}
+                                    />
+                                }
+
+                              </g>
                             ))}
                           </Group>
                         ))

@@ -1,4 +1,4 @@
-import React, {useId, useRef} from 'react'
+import React, {useId} from 'react'
 import * as styles from './LayeredMap.module.scss'
 import { Graticule, NaturalEarth } from '@visx/geo'
 import admin0 from '../../../prif-review/src/data/ne_countries.json'
