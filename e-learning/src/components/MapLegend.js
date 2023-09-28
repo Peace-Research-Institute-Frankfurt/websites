@@ -7,7 +7,8 @@ export default function MapLegend({ children, legendPosition, legendTitle }) {
   const className = legendPosition.split('-').reduce((a, b) => a.charAt(0).toUpperCase() + a.slice(1) + b.charAt(0).toUpperCase() + b.slice(1))
 
   return (
-    <div className={`${styles.legends} ${styles[`position${className}`]}`} title={legendTitle?? ''}>
+    <div className={`${styles.legends} ${styles[`position${className}`]}`}>
+      <span aria-label={legendTitle??''} className={styles.srOnly}/>
       {/** marker Layer */}
       {React.Children.map(children, (child) => {
         if (child.type === MarkerMapLayer) {
