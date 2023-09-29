@@ -50,3 +50,22 @@ test('Shows the other tabs on click', async () => {
   expect(screen.getByText('Tab B content')).not.toBeVisible()
   expect(screen.getByText('Tab C content')).not.toBeVisible()
 })
+
+test.skip('Shows the other tabs on tab', async () => {
+  const { user } = setup(testTabs)
+
+  const tabATrigger = screen.getByText('Tab A Trigger')
+  const tabBTrigger = screen.getByText('Tab B Trigger')
+  const tabCTrigger = screen.getByText('Tab C Trigger')
+
+  expect(document.body).toHaveFocus()
+
+  await user.tab()
+  expect(tabATrigger).toHaveFocus()
+
+  await user.tab()
+  expect(tabBTrigger).toHaveFocus()
+
+  await user.tab()
+  expect(tabCTrigger).toHaveFocus()
+})
