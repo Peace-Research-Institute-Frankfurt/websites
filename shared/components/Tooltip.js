@@ -3,7 +3,7 @@ import useScrollPosition from '../hooks/useScrollPosition'
 import useViewport from '../hooks/useViewport'
 import { clamp } from './utils'
 
-export default function Tooltip({ styles, active, position, children, id, targetEl }) {
+export default function Tooltip({ styles, active, children, id, targetEl }) {
   if (!styles) styles = {}
   const scrollPosition = useScrollPosition()
   const viewportSize = useViewport()
