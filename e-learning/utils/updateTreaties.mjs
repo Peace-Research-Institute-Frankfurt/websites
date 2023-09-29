@@ -9,6 +9,7 @@ import { DateTime } from 'luxon'
 import puppeteer from 'puppeteer'
 import { diff } from 'just-diff'
 import { exit } from 'process'
+import { URL } from 'url'
 
 import fs from 'fs'
 import path from 'path'
@@ -56,13 +57,13 @@ const nameSubs = {
 let out = []
 
 const pages = treaties.filter((el) => el.scrapeURL)
+const browser = await puppeteer.launch({ headless: 'new' })
 console.log(`Found ${pages.length} treaties with scrapeURLs, running scrapers...`)
 
 for (let i = 0; i < pages.length; i++) {
   const p = pages[i]
   let treaty = { ...p }
 
-  const browser = await puppeteer.launch({ headless: 'new' })
   const page = await browser.newPage()
 
   page.on('console', async (msg) => {
@@ -72,18 +73,18 @@ for (let i = 0; i < pages.length; i++) {
     }
   })
   await page.goto(p.scrapeURL)
-  let participants = []
 
-  if (p.scrapeURL.includes('treaties.un.org')) {
+  let participants = []
+  const scrapeURL = new URL(p.scrapeURL)
+
+  if (scrapeURL.host === 'treaties.un.org') {
     console.log(`Updating ${treaty.name.toUpperCase()} (UNTC, ${p.scrapeURL})`)
     participants = await scrapeUNTreaty(page)
   }
-  if (p.scrapeURL.includes('treaties.unoda.org')) {
+  if (scrapeURL.host === 'treaties.unoda.org') {
     console.log(`Updating ${treaty.name.toUpperCase()} (UNODA, ${p.scrapeURL})`)
     participants = await scrapeUNODATreaty(page)
   }
-
-  await browser.close()
 
   // fs.writeFileSync(path.join(__dirname, `./tmp-${treaty.name}.json`), JSON.stringify(participants, null, '  '))
   // const participants = JSON.parse(fs.readFileSync(path.join(__dirname, `./tmp-${treaty.name}.json`)))
@@ -109,6 +110,8 @@ for (let i = 0; i < pages.length; i++) {
   treaty.participants = treatyParticipants
   out.push(treaty)
 }
+
+await browser.close()
 
 const differences = diff(treaties, out)
 

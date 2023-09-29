@@ -8,14 +8,13 @@ const TreatyParticipantGraph = function ({ treaty }) {
   const [tooltipText, setTooltipText] = useState('')
   const containerRef = useRef()
   let sourceLabel = ''
+  const scrapeURL = new URL(treaty.scrapeURL)
 
-  if (treaty.scrapeURL) {
-    if (treaty.scrapeURL.includes('treaties.un.org')) {
-      sourceLabel = 'United Nations Treaty Collection'
-    }
-    if (treaty.scrapeURL.includes('treaties.unoda.org')) {
-      sourceLabel = 'UNODA Treaties Database'
-    }
+  if (scrapeURL.host === 'treaties.un.org') {
+    sourceLabel = 'United Nations Treaty Collection'
+  }
+  if (scrapeURL.host === 'treaties.unoda.org') {
+    sourceLabel = 'UNODA Treaties Database'
   }
 
   function onMouseOver(e, p) {
