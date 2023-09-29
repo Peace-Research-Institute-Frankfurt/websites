@@ -1,0 +1,22 @@
+name: '[shared] Run tests'
+
+on:
+  pull_request:
+    paths:
+      - './shared/**'
+  workflow_dispatch:
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+      - name: Install dependencies
+        working-directory: ./shared/
+        run: npm install
+      - name: Run tests
+        working-directory: ./shared/
+        run: npm run test

@@ -14,7 +14,9 @@ const config = {
   testEnvironmentOptions: {
     url: `http://localhost`,
   },
-  setupFiles: [`<rootDir>/loadershim.js`],
+  setupFiles: [`./loadershim.js`],
+  testEnvironment: `jsdom`,
+  setupFilesAfterEnv: ['<rootDir>/setup-test-env.js'],
 }
 
 module.exports = config
