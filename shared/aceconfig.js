@@ -1,6 +1,6 @@
 module.exports = {
   ruleArchive: 'latest',
-  policies: ['WCAG_2_1'],
+  policies: ['IBM_Accessibility'],
   failLevels: ['violation'],
   reportLevels: ['violation', 'potentialviolation', 'recommendation', 'potentialrecommendation', 'manual'],
   outputFormat: ['json'],
