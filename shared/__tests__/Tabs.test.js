@@ -51,7 +51,7 @@ test('Shows the other tabs on click', async () => {
   expect(screen.getByText('Tab C content')).not.toBeVisible()
 })
 
-test.skip('Shows the other tabs on tab', async () => {
+test('Shows the other tabs on tab', async () => {
   const { user } = setup(testTabs)
 
   const tabATrigger = screen.getByText('Tab A Trigger')

@@ -11,13 +11,22 @@ function setup(jsx) {
   }
 }
 
-test('Renders closed by default', () => {
+test('renders closed by default', () => {
   render(<Details summary="Title">Content</Details>)
   expect(screen.getByText('Title')).toBeVisible()
   expect(screen.getByText('Content')).not.toBeVisible()
 })
 
-test('Opens on click', async () => {
+test('renders open when prop is passed', () => {
+  render(
+    <Details open={true} summary="Title">
+      Content
+    </Details>
+  )
+  expect(screen.getByText('Content')).toBeVisible()
+})
+
+test('opens on click', async () => {
   const { user } = setup(<Details summary="Title">Content</Details>)
 
   const trigger = screen.getByText('Title')
@@ -25,4 +34,14 @@ test('Opens on click', async () => {
   expect(screen.getByText('Content')).not.toBeVisible()
   await user.click(trigger)
   expect(screen.getByText('Content')).toBeVisible()
+})
+
+test('is accessible', async () => {
+  const main = document.createElement('main')
+
+  const result = render(<Details summary="Summary">Content</Details>, {
+    container: document.body.appendChild(main),
+  })
+  await expect(screen.getByText('Summary')).toBeVisible()
+  await expect(result.container).toBeAccessible('Details')
 })
