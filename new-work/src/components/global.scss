@@ -128,10 +128,10 @@ img {
 
 .footnotes {
   @extend %caption;
-  grid-column: 1/4;
+  grid-column: 1 / 4;
   margin-top: var(--baseline);
   margin-left: 1em;
-  @include bp(m) {
+  @include bp(l) {
     grid-column: 2 / 4;
   }
   h2 {

@@ -2,8 +2,6 @@ name: '[shared] Run tests'
 
 on:
   pull_request:
-    paths:
-      - './shared/**'
   workflow_dispatch:
 permissions:
   contents: read
