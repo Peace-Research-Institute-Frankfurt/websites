@@ -3,7 +3,7 @@ import CloseIcon from '../assets/close.svg'
 
 export default function Term({ TooltipAdapter, styles, term, title, description, children, ...props }) {
   if (!styles) styles = {}
-  const [active, setActive] = useState(true)
+  const [active, setActive] = useState(false)
   const triggerRef = useRef()
 
   function toggleTooltip() {
