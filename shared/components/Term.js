@@ -1,9 +1,9 @@
 import React, { useState, useRef } from 'react'
 import CloseIcon from '../assets/close.svg'
 
-export default function Term({ TooltipAdapter, styles, term, children, ...props }) {
+export default function Term({ TooltipAdapter, styles, term, title, description, children, ...props }) {
   if (!styles) styles = {}
-  const [active, setActive] = useState(false)
+  const [active, setActive] = useState(true)
   const triggerRef = useRef()
 
   function toggleTooltip() {
@@ -19,13 +19,13 @@ export default function Term({ TooltipAdapter, styles, term, children, ...props 
         <TooltipAdapter position="topCenter" active={active} targetEl={triggerRef.current}>
           <span className={styles.content}>
             <span className={styles.header}>
-              <em className={styles.title}>{term.title}</em>
+              {title && <em className={styles.title}>{title}</em>}
               <button onClick={toggleTooltip} role="button" className={styles.close}>
                 Close
                 <CloseIcon />
               </button>
             </span>
-            <span className={styles.description}>{term.description}</span>
+            {description && <div className={styles.description}>{description}</div>}
           </span>
         </TooltipAdapter>
       </>

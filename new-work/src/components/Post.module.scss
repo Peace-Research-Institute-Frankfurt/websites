@@ -23,15 +23,19 @@
 
 .credits {
   grid-column: 1/ 4;
+  margin-bottom: var(--baseline);
   @include bp(m) {
     grid-row: span 3;
     grid-column: 1/ 2;
+  }
+  @include bp(l) {
+    margin-bottom: 0;
   }
 }
 
 .credit {
   @extend %caption;
-  margin-top: 1em;
+  margin-top: 0.5em;
 }
 
 .copy {

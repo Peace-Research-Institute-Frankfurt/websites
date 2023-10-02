@@ -20,5 +20,5 @@ export default function TermAdapter({ t, ...props }) {
     return node.term_id === t
   })
 
-  return <Term term={termNode} TooltipAdapter={TooltipAdapter} {...props} />
+  return <Term term={termNode} title={termNode.title} description={termNode.description} TooltipAdapter={TooltipAdapter} {...props} />
 }
