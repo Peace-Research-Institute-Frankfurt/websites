@@ -19,7 +19,9 @@
 }
 .header {
   display: flex;
-  justify-content: space-between;
+  position: absolute;
+  justify-content: flex-end;
+  right: 0.5em;
   gap: 1em;
   font-size: var(--ms-0);
   align-items: center;
@@ -53,14 +55,6 @@
   }
 }
 
-.title {
-  @extend %h4;
-  font-style: normal !important;
-  margin: 0;
-  line-height: 1.2;
-  display: block;
-}
-
 .description {
   display: block;
   font-weight: 400;
@@ -73,6 +67,7 @@
   line-height: 1.3;
   padding: 1em;
   padding-top: 0.8em;
+  padding-right: 2.5em;
   hyphens: auto;
   max-width: Min(100vw - 4 * var(--padding), 28rem);
 }
