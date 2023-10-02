@@ -25,7 +25,7 @@ export default function Term({ TooltipAdapter, styles, term, title, description,
                 <CloseIcon />
               </button>
             </span>
-            {description && <div className={styles.description}>{description}</div>}
+            {description && <span className={styles.description}>{description}</span>}
           </span>
         </TooltipAdapter>
       </>
