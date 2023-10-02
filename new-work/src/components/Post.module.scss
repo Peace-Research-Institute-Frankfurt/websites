@@ -23,7 +23,7 @@
 
 .credits {
   grid-column: 1/ 4;
-  margin-bottom: var(--baseline);
+  margin-bottom: var(--ms-0);
   @include bp(m) {
     grid-row: span 3;
     grid-column: 1/ 2;
