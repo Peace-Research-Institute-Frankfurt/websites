@@ -16,20 +16,19 @@
   display: flex;
   gap: var(--padding-small);
   list-style: none;
-  margin-top: 1em;
   padding: calc(var(--padding) * 2) 1em;
   justify-content: center;
   flex-wrap: wrap;
+  border-bottom: 1px solid var(--gray);
 }
 
 .filter {
   font-family: var(--edge-rounded);
   line-height: 0.85;
   border-radius: 1000px;
-  padding: 0.185em 0.3em;
+  padding: 0.175em 0.3em;
   letter-spacing: -0.025em;
   text-transform: uppercase;
-  padding-top: 0.2em;
   border: 1px solid var(--color);
   color: var(--color);
   background-color: transparent;
@@ -57,14 +56,7 @@
 .intro-tools,
 .intro-people,
 .intro-space {
-  border: 1px solid var(--gray);
-  border-radius: 1000px;
-  line-height: 0.9;
-  display: inline-flex;
-  align-items: baseline;
-  padding-top: 0.1em;
-  padding-left: 0.2em;
-  padding-right: 0.2em;
+  font-style: italic;
 }
 
 .intro-tools {
