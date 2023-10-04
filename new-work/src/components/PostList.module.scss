@@ -13,7 +13,7 @@
   @extend %copy;
   font-family: var(--edge);
   padding: 0.2em 0.5em;
-  padding-top: 0.135em;
+  padding-top: 0.15em;
   line-height: 1;
   border-radius: 1000px;
   color: var(--black);
@@ -24,6 +24,7 @@
   text-shadow: 0 1px 2px rgba(white, 0.1);
   border: 1px solid var(--color);
   letter-spacing: -0.02em;
+  word-spacing: -0.05em;
   transition: var(--fast);
   text-decoration: none !important;
   font-size: var(--ms-1);
