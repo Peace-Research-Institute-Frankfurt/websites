@@ -32,11 +32,11 @@ const Index = ({ data }) => {
 
   data.posts.nodes.forEach((node) => {
     const category = node.childMdx.frontmatter.category
-    if (category && !categories.includes(category)) {
+    if (category && category !== 'meta' && !categories.includes(category)) {
       categories.push(category)
     }
   })
-  const [activeFilters, setActiveFilters] = useState(categories)
+  const [activeFilters, setActiveFilters] = useState(['meta', ...categories])
 
   const posts = data.posts.nodes
     .filter((node) => {

@@ -29,10 +29,7 @@ export const query = graphql`
         frontmatter {
           title
           intro
-          color
           order
-          eyebrow
-          reading_time
           category
           hero_alt
           hero_portrait_alt
@@ -75,7 +72,6 @@ export const query = graphql`
             title
             order
             intro
-            color
             category
           }
         }
