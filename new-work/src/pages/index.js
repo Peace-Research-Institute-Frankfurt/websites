@@ -69,8 +69,8 @@ const Index = ({ data }) => {
             <>
               New Work bricht Regeln auf, hinterfragt Machtverhältnisse und rückt den Menschen seinen Stärken, Bedürfnissen und Emotiononen in den
               Fokus. Diese Handreichung sammelt Anleitungen und Ressourcen zu <span className={styles.introSpace}>Raum</span>,{' '}
-              <span className={styles.introPeople}>Mensch</span>, und <span className={styles.introTools}>Methoden</span>, um den Übergang zur New
-              Work in wissenschaftlichen Einrichtungen zu begleiten.
+              <span className={styles.introPeople}>Mensch</span>, und <span className={styles.introTools}>Tools</span>, die den Übergang zur New Work
+              in wissenschaftlichen Einrichtungen zu begleiten.
             </>
           }
           credit="Illustration von Max Köhler"
