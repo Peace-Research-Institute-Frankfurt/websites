@@ -73,7 +73,7 @@ const Index = ({ data }) => {
               in wissenschaftlichen Einrichtungen zu begleiten.
             </>
           }
-          credit="Illustration von Max Köhler"
+          credit="[Verena Mack](https://verenamack.com/)"
         />
         <section className={styles.content}>
           <ol className={styles.filters}>
