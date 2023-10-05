@@ -76,7 +76,7 @@
   ul,
   ol {
     margin-bottom: calc(var(--baseline) * 0.5);
-    &:last-of-type {
+    &:last-child {
       margin-bottom: 0;
     }
   }
@@ -92,12 +92,12 @@
     text-underline-offset: 0.15em;
   }
   li {
-    margin-bottom: 0.25em;
     &:last-child {
       margin-bottom: 0;
     }
   }
-  ul {
+  ul,
+  ol {
     padding-left: 1em;
   }
   ul li {

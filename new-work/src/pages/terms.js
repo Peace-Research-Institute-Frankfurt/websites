@@ -7,6 +7,7 @@ import App from '../components/App'
 import StickyHeader from '../components/StickyHeader'
 import SkipToContent from '../components/SkipToContent'
 import PageHeader from '../components/PageHeader'
+import MarkdownRenderer from 'react-markdown-renderer'
 import * as styles from './terms.module.scss'
 import * as pageStyles from '../components/Page.module.scss'
 
@@ -86,8 +87,8 @@ const Terms = ({ data }) => {
     })
     .map((node, i) => {
       return (
-        <li key={`term-${i}`}>
-          <details id={slug(node.term_id)} className={styles.term} open={activeTerms.includes(node.term_id)}>
+        <li className={styles.termsItem} key={`term-${i}`}>
+          <details id={node.term_id} className={styles.term} open={activeTerms.includes(node.term_id)}>
             <summary
               onClick={(e) => {
                 e.preventDefault()
@@ -105,7 +106,9 @@ const Terms = ({ data }) => {
             >
               {node.title}
             </summary>
-            <div className={styles.termDescription}>{node.description}</div>
+            <div className={styles.termDescription}>
+              <MarkdownRenderer markdown={node.description} />
+            </div>
           </details>
         </li>
       )

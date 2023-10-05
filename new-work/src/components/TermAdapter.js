@@ -3,8 +3,9 @@ import { graphql, useStaticQuery } from 'gatsby'
 import Term from '@shared/components/Term'
 import TooltipAdapter from './TooltipAdapter'
 import * as styles from './Term.module.scss'
+import MarkdownRenderer from 'react-markdown-renderer'
 
-export default function TermAdapter({ t, ...props }) {
+export default function TermAdapter({ t, children, ...props }) {
   const data = useStaticQuery(graphql`
     query TermQuery {
       terms: allTermsJson {
@@ -44,5 +45,9 @@ export default function TermAdapter({ t, ...props }) {
     </>
   )
 
-  return <Term term={termNode} description={description} TooltipAdapter={TooltipAdapter} styles={styles} {...props} />
+  return (
+    <>
+      <Term term={termNode} description={description} TooltipAdapter={TooltipAdapter} styles={styles} children={children} />
+    </>
+  )
 }

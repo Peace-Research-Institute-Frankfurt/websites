@@ -9,7 +9,6 @@ import PostBody from './PostBody'
 import PostHeader from './PostHeader'
 import Bylines from './Bylines'
 import { PostList, PostListItem } from './PostList'
-import MarkdownRenderer from 'react-markdown-renderer'
 
 import * as styles from './Post.module.scss'
 
