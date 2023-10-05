@@ -59,15 +59,26 @@
   position: relative;
   border-bottom: 1px solid var(--gray);
   padding-bottom: calc(var(--padding) * 1.5);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
   @include bp(m) {
-    padding-bottom: calc(var(--padding) * 2);
     padding-top: calc(var(--padding) * 1.15);
+    padding-bottom: calc(var(--padding) * 1.25);
+  }
+}
+
+.credit {
+  @extend %caption;
+  text-align: right;
+  a {
+    text-decoration: underline;
+    text-decoration-color: var(--gray);
   }
 }
 
 .title {
   @extend %h1;
-  margin-bottom: -0.125em;
 }
 .is-long {
   @extend %h1-long;

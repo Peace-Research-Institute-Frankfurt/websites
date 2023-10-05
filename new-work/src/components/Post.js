@@ -113,15 +113,11 @@ const Post = ({ data, children }) => {
           image={heroImage}
           portrait={portraitImage}
           intro={frontmatter.intro}
+          credit={frontmatter.hero_credit}
         />
         <main className={styles.body}>
           <aside className={styles.credits}>
             <Bylines authors={frontmatter.authors}></Bylines>
-            {frontmatter.hero_credit && (
-              <aside className={styles.credit}>
-                <MarkdownRenderer markdown={frontmatter.hero_credit} />
-              </aside>
-            )}
           </aside>
           <div className={styles.copy}>
             <PostBody>{children}</PostBody>
