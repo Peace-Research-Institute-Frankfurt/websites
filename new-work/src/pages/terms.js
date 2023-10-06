@@ -121,7 +121,7 @@ const Terms = ({ data }) => {
       <main id="content" className={pageStyles.container}>
         <PageHeader
           title="Glossar"
-          intro="Our existing learning units include a series of interactive graphics produced by an external agency. These can be embedded in new learning units and should behave as expected."
+          intro="Was ist Kanban? Wozu ist „Working Out Loud“ gut? Und welche Vorteile bietet die Selbstorganisation? Die wichtigsten Begriffe aus der Welt des New Work kurz erklärt."
         />
         <section>
           <ol className={styles.initials}>{initialEls}</ol>
