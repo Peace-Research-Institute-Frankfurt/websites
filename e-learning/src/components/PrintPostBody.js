@@ -8,6 +8,7 @@ import Treaty from './PrintTreaty'
 import PrintTerm from './PrintTerm'
 import PrintChapter from './PrintChapter'
 import ColumnBreak from './ColumnBreak'
+import Gallery from './Gallery'
 
 const PostBody = ({ content, unit, site, setChapterList }) => {
   const [terms, setTerms] = useState([])
@@ -17,6 +18,7 @@ const PostBody = ({ content, unit, site, setChapterList }) => {
   }
 
   const shortCodes = {
+    Gallery,
     a: ({ href, children }) => {
       return (
         <a href={href}>

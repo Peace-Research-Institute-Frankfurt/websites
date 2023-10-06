@@ -1,0 +1,452 @@
+[
+  {
+    "term_id": "accountability",
+    "title": "Accountability",
+    "description": "Accountability betrifft die Verantwortlichkeit bzw. Rechenschaftspflicht einer Person, Organisation oder Institution für ihr Handeln, insbesondere in Bezug auf die Einhaltung von Standards, Gesetzen und Regeln. In einem organisatorischen Kontext bezieht sich Accountability auch auf die Verantwortlichkeit von Führungskräften und Beschäftigten innerhalb einer Organisation. Es geht darum, klare Rollen und Verantwortlichkeiten festzulegen, um sicherzustellen, dass Ziele erreicht, Ressourcen effektiv genutzt und Standards eingehalten werden."
+  },
+  {
+    "title": "Achtsamkeit",
+    "term_id": "achtsamkeit",
+    "description": " Der Begriff Achtsamkeit stammt ursprünglich aus der buddhistischen Lehre und bezieht sich auf eine Form des mentalen Trainings, bei der es darum geht, bewusst und aufmerksam den gegenwärtigen Moment wahrzunehmen, ohne dabei von Gedanken, Emotionen oder äußeren Ablenkungen vereinnahmt zu werden. In den letzten Jahren hat sich Achtsamkeit auch im Arbeitskontext etabliert. Ihre Praktiken können sich positiv auf das individuelle Wohlbefinden, die Arbeitszufriedenheit und die Leistungsfähigkeit der Beschäftigten auswirken und ein Umfeld schaffen, das Konzentration, Kreativität und Mitgefühl fördert."
+  },
+  {
+    "title": "Agiles Manifest",
+    "term_id": "agiles-manifest",
+    "description": "Das Agile Manifest ist ein Thesenpapier, das die Grundprinzipien der modernen Softwareentwicklung beschreibt und auf folgenden Werten basiert:\n\n- Menschen und Interaktionen sind wichtiger als Prozesse und Werkzeuge.\n- Eine funktionierende Software ist wichtiger als die umfassende Dokumentation.\n- Die Zusammenarbeit mit dem Kunden ist wichtiger als Vertragsverhandlungen.\n- Das Reagieren auf Veränderungen ist wichtiger als das Befolgen eines Plans.\n\n Es entstand bereits 2001 als Reaktion auf die althergebrachten und starren Methoden der Softwareerstellung, die die 17 Unterzeichner des Manifests als zu unflexibel und langsam empfanden. Sie wollten eine alternative Arbeitsweise etablieren, die auf Interaktion, Kundenorientierung und Flexibilität beruht. Das Agile Manifest wurde so erfolgreich, dass es nicht nur die Softwarebranche veränderte, sondern auch die Arbeitspraxis von Teams in Wissenschaft und Wirtschaft. Darüber hinaus dient es als Fundament für agile Entwicklungsmethoden wie [Scrum](#scrum), [Kanban](#kanban) und Extreme Programming."
+  },
+  {
+    "title": "Agilität",
+    "term_id": "agilitat",
+    "description": "Agilität ist eine Methode, die ursprünglich aus der Softwareentwicklung stammt, aber mittlerweile auch in anderen Branchen angewendet wird. Im Allgemeinen geht es dabei um die Fähigkeit einer Organisation, sich schnell an Veränderungen anzupassen, flexibel zu sein und effektiv auf unvorhergesehene Umstände zu reagieren.\n\nAgilität basiert auf den Grundprinzipien des [Agilen Manifests](#agiles-manifest), Kundenorientierung, enge Zusammenarbeit im Team, Anpassungsfähigkeit und kontinuierliche Verbesserung. Zu den spezifischen agilen Methoden gehören [Scrum](#scrum), [Kanban](#kanban) und Extreme Programming."
+  },
+  {
+    "title": "Autokratischer Führungsstil",
+    "term_id": "autokratischer-fuhrungsstil",
+    "description": "Autokratisch wird ein Führungsstil genannt, bei dem der oder die Vorgesetzte Entscheidungen eigenständig trifft und klare Anweisungen an die Beschäftigten gibt, an die sie sich halten müssen. Es besteht eine klare [Hierarchie](#hierarchie), in der die Führungskraft eine dominante Rolle spielt und die Mitarbeitenden hauptsächlich als Ausführende agieren."
+  },
+  {
+    "title": "Backlog",
+    "term_id": "backlog",
+    "description": "In der Softwareentwicklung und im Projektmanagement ist mit Backlog eine Liste von Aufgaben gemeint, die noch erledigt werden müssen. Die Aufgaben werden dort abgelegt und nach Prioritäten geordnet, um nach und nach abgearbeitet zu werden."
+  },
+  {
+    "title": "Bedarfsplanung",
+    "term_id": "bedarfsplanung",
+    "description": "Im Kontext von [New Work](#new-work) ist es die Aufgabe der Bedarfsplanung, Veränderungen im Arbeitsumfeld sorgfältig zu analysieren, um für die Beschäftigten eine Umgebung zu schaffen, die die [Motivation](#motivation), Zufriedenheit und Leistungsfähigkeit fördert. Die Bedarfsermittlung bringt die Bedürfnisse der Mitarbeitenden und die Anforderungen der Organisation so miteinander in Einklang, dass passende New-Work-Konzepte ([Homeoffice](#homeoffice)-Regelungen, partizipative Prozesse, selbstorganisierte Teams) entwickelt werden können. Dieser Prozess stellt eine wichtige Basis für Architekt:innen und Planer:innen dar, um ein inspirierendes Arbeitsumfeld entwerfen zu können."
+  },
+  {
+    "title": "Bergmann, Frithjof",
+    "term_id": "bergmann-frithjof",
+    "description": "Frithjof Bergmann war ein deutsch-amerikanischer Philosoph und Sozialwissenschaftler, der den Begriff [New Work](#new-work) geprägt hat. In seinen Texten und Theorien setzte er sich mit den Veränderungen in der modernen Arbeitswelt auseinander und betonte die Bedeutung von sinnvoller und erfüllender Arbeit für das individuelle Wohlbefinden. Sein Konzept von New Work gilt als soziale Utopie und geht über herkömmliche Vorstellungen von Arbeit hinaus. Er propagierte eine Umgestaltung der Arbeitswelt, in der Menschen nicht mehr nur aus finanziellen Gründen arbeiten, sondern auch, um ihre kreativen Potenziale zu entfalten und eine sinnstiftende Tätigkeit auszuüben."
+  },
+  {
+    "title": "Best Practices",
+    "term_id": "best-practices",
+    "description": "Best Practices sind Methoden, Prozesse oder Techniken, die sich in der Praxis als besonders wirkungsvoll erwiesen haben. Dabei geht es um Vorgehensweisen, die aufgrund ihrer positiven Ergebnisse und ihres Nutzens von Fachleuten empfohlen werden."
+  },
+  {
+    "title": "Bottom-up",
+    "term_id": "bottom-up",
+    "description": "Bottom-up bezeichnet einen Ansatz, bei dem Entscheidungen und Veränderungen von der Basis, also den unteren [Hierarchieebenen](#hierarchie) einer Organisation, initiiert werden. Im Kontext von [New Work](#new-work) hat das Bottom-up-Prinzip eine besondere Bedeutung: Mitarbeitende werden hier aktiv in Entscheidungen und Gestaltungsprozesse einbezogen, um ihre Ideen und Erfahrungen einzubringen."
+  },
+  {
+    "title": "Brainstorming",
+    "term_id": "brainstorming",
+    "description": "Brainstorming ist eine Kreativitätstechnik, die in Gruppen angewendet wird, um eine Vielzahl von Ideen, Vorschlägen und Lösungen zu einem bestimmten Thema zu generieren. Die Methode soll die Kreativität fördern und das Potenzial für innovative Lösungen erhöhen, indem sie eine offene und ungezwungene Umgebung schafft, in der Teilnehmer:innen ihre Ideen frei äußern können. Es gilt das Prinzip „Quantität vor Qualität“. Zunächst werden Vorschläge und Ideen in großer Zahl gesammelt und bewusst auf Kommentare und Bewertungen verzichtet, um den kreativen Prozess nicht zu unterbrechen. Erst zum Schluss erfolgt die Auswahl der vielversprechendsten Ideen."
+  },
+  {
+    "title": "Bullshit-Job",
+    "term_id": "bullshit-job",
+    "description": "Der Begriff Bullshit-Job wurde von dem Anthropologen und Soziologen David Graeber geprägt. Er beschreibt damit Arbeitsplätze, die von den Beschäftigten oder der Gesellschaft als sinnlos, überflüssig oder ohne wirklichen Beitrag zur Gesellschaft empfunden werden. Menschen, die solche Jobs ausüben, haben oft das Gefühl, dass ihre Arbeit keine echte Bedeutung hat und sie nur beschäftigt werden, um den Anschein von Produktivität aufrechtzuerhalten. Typischerweise werden Bullshit-Jobs als unnötig komplizierte, bürokratische Routineaufgaben angesehen, die wenig oder keinen Mehrwert für das Unternehmen bieten und dennoch oft gut bezahlt werden."
+  },
+  {
+    "title": "Call-to-Action",
+    "term_id": "call-to-action",
+    "description": "Call-to-Action (Handlungsaufforderung) ist ein Marketingbegriff, er beschreibt eine Aufforderung oder Anweisung, die das Publikum dazu ermutigen soll, eine spezifische Handlung auszuführen. Oft steht ein Call-to-Action am Ende einer Mail oder eines Flyers, um die Nutzer:innen dazu zu bewegen, Inhalte auf Social Media zu teilen, Kontakt aufzunehmen oder ein Produkt zu kaufen."
+  },
+  {
+    "title": "Canvas",
+    "term_id": "canvas",
+    "description": "Im Kontext von [New Work](#new-work) ist mit Canvas ein strukturiertes Modell oder eine visuelle Vorlage gemeint, die dazu dient, verschiedene Aspekte moderner Arbeitsformen, Organisationsstrukturen und -kulturen zu analysieren, zu planen oder zu gestalten. Ein Canvas bietet eine übersichtliche Möglichkeit, komplexe Konzepte zu erfassen und zu kommunizieren. Typische Themen für einen New-Work-Canvas wären Felder für Zielsetzung und Vision, Arbeitskultur, Arbeitsstrukturen, messbare Ziele und Erfolgskriterien sowie ein Umsetzungsplan."
+  },
+  {
+    "title": "Care-Arbeit",
+    "term_id": "care-arbeit",
+    "description": "Unter Care-Arbeit versteht man Tätigkeiten und Aufgaben, bei denen es um die Pflege und Betreuung von Menschen geht, sei es in der Familie oder im sozialen Bereich. Typische Beispiele für Care-Arbeit sind die Kinderbetreuung, die Pflege von älteren oder kranken Menschen, Hausarbeit und die emotionale Unterstützung von Angehörigen. Care-Arbeit ist oft mit traditionellen Geschlechterrollen verbunden und wurde historisch gesehen überwiegend von Frauen geleistet. Betrachtet man die Bedeutung der Care-Arbeit im Kontext von [New Work](#new-work), so zeigt sich, dass eine ganzheitliche Arbeitskultur nicht nur den persönlichen Bedürfnissen und sozialen Verantwortlichkeiten der Beschäftigten entspricht, sondern auch für die professionelle Arbeit zuträglich ist."
+  },
+  {
+    "title": "Changemanagement",
+    "term_id": "changemanagement",
+    "description": "Changemanagement ist ein strategischer Ansatz, der darauf abzielt, grundlegende Veränderungen in Organisationen, Unternehmen bzw. Projekten systematisch und effektiv zu planen, umzusetzen und zu steuern."
+  },
+  {
+    "title": "Check-in",
+    "term_id": "check-in",
+    "description": "In geschäftlichen oder organisatorischen Kontexten kann ein Check-in ein kurzes Status-Update oder eine Abstimmungsrunde am Anfang eines Meetings sein, um zu sehen, wie es den Teilnehmenden geht und ob sie Fragen oder Anmerkungen zum Meetingverlauf haben."
+  },
+  {
+    "title": "Check-out",
+    "term_id": "check-out",
+    "description": "In geschäftlichen oder organisatorischen Kontexten kann ein Check-out am Ende eines Meetings oder Workshops eine kurze Zusammenfassung oder ein Abschlussgespräch sein, bei dem die Teilnehmenden [Feedback](#feedback) geben, den Status der besprochenen Themen überprüfen und die nächsten Schritte diskutieren."
+  },
+  {
+    "title": "Co-Creation",
+    "term_id": "co-creation",
+    "description": "Co-Creation (auch: Ko-Kreation) bedeutet, dass mehrere Personen oder Akteure gemeinsam an einem Projekt arbeiten – auch Partner:innen aus anderen Disziplinen und Konsument:innen können miteinbezogen werden. Ziel ist es, dass die Beteiligten ihre Kenntnisse, Erfahrungen, Ideen und Ressourcen kombinieren, um innovative Lösungen, Produkte, Dienstleistungen bzw. Inhalte zu entwickeln."
+  },
+  {
+    "title": "Compassionate Leadership",
+    "term_id": "compassionate-leadership",
+    "description": "Compassionate Leadership ist ein Führungsstil, der auf Mitgefühl, Empathie und Fürsorge für Beschäftigte und Teammitglieder basiert. Es geht darum, sich als Führungskraft nicht nur auf Ziele und Ergebnisse zu fokussieren, sondern auch die Bedürfnisse, Gefühle und das Wohlbefinden der Mitarbeitenden ernst zu nehmen. So sollen die Mitarbeiterzufriedenheit, das Engagement und die Leistung gefördert werden. Durch Mitgefühl und Fürsorge werden Beziehungen gestärkt, wird Vertrauen aufgebaut und eine positive Unternehmenskultur geschaffen."
+  },
+  {
+    "title": "Corporate Social Responsibility",
+    "term_id": "corporate-social-responsibility",
+    "description": "Corporate Social Responsibility ist ein Konzept, bei dem Unternehmen freiwillig soziale und ökologische Verantwortung übernehmen und damit über die gesetzlichen Forderungen hinausgehen, um einen positiven Beitrag zur Gesellschaft und zur Umwelt zu leisten. Ziel dieser Selbstverpflichtung ist es, nicht nur wirtschaftlich erfolgreich zu sein, sondern die Geschäftspraktiken gleichzeitig so zu gestalten, dass sie soziale, ökologische und ethische Aspekte berücksichtigen. Corporate Social Responsibility ist ein wichtiger Faktor bei der Personalakquise, um neue Beschäftigte zu gewinnen."
+  },
+  {
+    "title": "Co-Working",
+    "term_id": "co-working",
+    "description": "Co-Working wird eine moderne Form der Arbeitsplatznutzung genannt, bei der verschiedene Freiberufler:innen und kleine Unternehmen in gemeinsamen Räumen arbeiten statt in isolierten Einzelbüros oder zu Hause. In einem Co-Working-Space teilen sich die Nutzer:innen oft nicht nur den Raum, sondern auch Ressourcen wie Büroinfrastruktur (z. B. Schreibtische, Sitzgelegenheiten, Internetzugang, Drucker), Besprechungsräume, Küchenbereiche und manchmal auch Gemeinschaftsbereiche für Networking und soziale Interaktion."
+  },
+  {
+    "title": "Daily-Meeting",
+    "term_id": "daily-meeting",
+    "description": "Ein Daily-Meeting (auch als Daily Standup, Daily Scrum oder Daily Huddle bekannt) ist ein kurzes, regelmäßiges Meeting, das von agilen Projektmanagementmethoden wie [Scrum](#scrum) und [Kanban](#kanban) verwendet wird. Es dient dazu, das Entwicklungsteam oder die beteiligten Kolleg:innen über den aktuellen Fortschritt, die Herausforderungen und geplanten Aufgaben zu informieren. Typischerweise wird das Daily-Meeting einmal täglich angesetzt, in der Regel zur gleichen Zeit und an einem festen Ort. Es dauert normalerweise nur etwa 10 bis 15 Minuten und findet häufig im Stehen statt, um sicherzustellen, dass es fokussiert bleibt."
+  },
+  {
+    "title": "Deep Work",
+    "term_id": "deep-work",
+    "description": "Deep Work ist ein Prinzip, das 2016 von Cal Newport in seinem Buch _Deep Work – Rules for Focused Success in a Distracted World_ eingeführt wurde. Es beschreibt eine Arbeitsweise, bei der man sich über einen längeren Zeitraum ungestört und konzentriert einer anspruchsvollen Aufgabe widmet, ohne sich von seinem Umfeld oder durch Medien und Technologien ablenken zu lassen. Das Ziel von Deep Work ist es, eine hohe Produktivität und Qualität in der Arbeit zu erreichen, indem man sich in einen Zustand vertiefter Konzentration versetzt und sich bewusst für einen gewissen Zeitraum von äußeren Einflüssen isoliert."
+  },
+  {
+    "title": "Definition of Done",
+    "term_id": "definition-of-done",
+    "description": "Definition of Done ist ein Begriff aus der agilen Softwareentwicklung, insbesondere im [Scrum](#scrum)-Framework. Es ist eine gemeinsame Vereinbarung oder Checkliste, die festlegt, welche Kriterien erfüllt sein müssen, damit ein Entwicklungsschritt oder eine Aufgabe als abgeschlossen (done) betrachtet werden kann. Die Definition of Done wird zu Beginn eines Projekts oder Sprints formuliert und während der Entwicklung kontinuierlich aktualisiert, um sicherzustellen, dass das Team einheitliche Qualitätsstandards einhält."
+  },
+  {
+    "title": "Design Thinking",
+    "term_id": "design-thinking",
+    "desscription": "Design Thinking ist eine Innovationsmethode, die an der d.school in Stanford entstand und auf Kreativstrategien aus dem Produktdesign beruht. Als Förderer der Methode gilt der deutsche SAP-Gründer Hasso Plattner, der mit seinen Hasso-Plattner-Instituten in Potsdam und Stanford (vormals d.school) für die weltweite Popularität des Ansatzes sorgte. Der Design-Thinking-Prozess zeichnet sich durch einen [iterativen](#iterativ) Prozess aus, der mit einer gründlichen Beobachtung der Nutzer:innen und ihrer Bedürfnisse beginnt und sich dann auf das Entwickeln, Testen und Evaluieren von [Prototypen](#prototyp) konzentriert. Kontinuierliches Lernen und Anpassen sind dabei zentrale Elemente, um das bestmögliche Ergebnis zu erzielen."
+  },
+  {
+    "title": "Digitale Transformation",
+    "term_id": "digitale-transformation",
+    "description": "Digitale Transformation beschreibt den umfassenden Wandel von Organisationen, Unternehmen und Gesellschaften durch den Einsatz digitaler Technologien und Innovationen. Es handelt sich um einen strategischen Prozess, bei dem traditionelle Arbeitsweisen und Geschäftsmodelle durch digitale Technologien ersetzt, verbessert oder neu gestaltet werden, um Wettbewerbsvorteile zu erlangen, die Effizienz zu steigern und Kundenerfahrungen zu verbessern. Die digitale Transformation gilt als wichtiger Treiber für [New Work](#new-work)."
+  },
+  {
+    "title": "Diversity",
+    "term_id": "diversity",
+    "description": "Diversity (Vielfalt) bezieht sich auf die Unterschiede und die Vielfalt in einer Gemeinschaft, Organisation oder der Gesellschaft. Innerhalb eines Unternehmens geht es darum, die verschiedenen individuellen Hintergründe, Merkmale und Zugehörigkeiten anzuerkennen und wertzuschätzen. So lassen sich unterschiedliche Perspektiven, Erfahrungen und Fähigkeiten integrieren. Eine diverse Umgebung fördert den Austausch von Ideen, die Kreativität, steigert die Innovationskraft und stärkt das soziale Miteinander. Es ist von großer Bedeutung für den langfristigen Erfolg eines Unternehmens, Diversity nicht nur anzuerkennen, sondern auch aktiv zu fördern, um eine Kultur zu schaffen, in der alle Menschen gleiche Chancen erhalten. Diversity kann dazu beitragen, Probleme zu lösen und Chancen zu nutzen."
+  },
+  {
+    "title": "Domain",
+    "term_id": "domain",
+    "description": "Im Kontext von [New Work](#new-work) meint Domain den Verantwortungsbereich eines Beschäftigten bzw. eines Teams in einer Organisation. Es kann sich um ein Projekt oder eine Aufgabe handeln, die sie selbstständig und autonom betreuen. In Unternehmen, die New-Work-Prinzipien anwenden, werden die Beschäftigten oft in Domains organisiert statt in klassischen [Hierarchien](#hierarchie). Die Idee dahinter ist, dass sie so mehr Eigenverantwortung und Freiheiten erhalten, um Entscheidungen in ihrem Verantwortungsbereich zu treffen und ihre Arbeit selbst zu organisieren."
+  },
+  {
+    "title": "Dual Leadership",
+    "term_id": "dual-leadership",
+    "description": "Unter Dual Leadership versteht man die Kooperation zwischen zwei Führungskräften, die gemeinsam Verantwortung für bestimmte Aufgaben, Projekte oder Teams tragen. Diese Führungsstruktur zielt darauf ab, traditionelle hierarchische Modelle aufzubrechen und agilere, flexiblere und kooperative Organisationsstrukturen zu schaffen."
+  },
+  {
+    "title": "Early Adopter",
+    "term_id": "early-adopter",
+    "description": "Early Adopters sind Menschen, die neue Produkte und Technologien frühzeitig ausprobieren und nutzen, noch bevor sie von der breiten Masse akzeptiert werden. Sie können als Testpersonen, aber auch als Markenbotschafter:innen dienen."
+  },
+  {
+    "title": "Emotionale Kompetenz",
+    "term_id": "emotionale-kompetenz",
+    "description": "Emotionale Kompetenz spielt eine Schlüsselrolle in der zwischenmenschlichen Führung und im Umgang mit den Emotionen und Bedürfnissen der Beschäftigten. Der Begriff bezeichnet die Fähigkeit, sich in andere hineinzuversetzen, indem etwa Führungskräfte mitfühlend und besonnen reagieren, wenn sie feststellen, dass Mitarbeitende durch eine herausfordernde Zeit gehen.Teil des Konzepts ist es auch, gegebenenfalls Unterstützung anzubieten und die  Arbeitsbelastung anzupassen."
+  },
+  {
+    "title": "Empowerment",
+    "term_id": "empowerment",
+    "description": "Empowerment (Ermächtigung) ist ein Prozess, in dem Menschen befähigt werden, Kontrolle über ihr Leben, ihre Entscheidungen und ihre Handlungen zu übernehmen. Es geht darum, ihnen die Werkzeuge, Ressourcen und das Selbstvertrauen zu geben, um ihre eigenen Ziele zu erreichen, ihre Potenziale zu entfalten und ihre Rechte einzufordern. In Organisationen wird Empowerment dazu genutzt, Beschäftigte stärker einzubinden."
+  },
+  {
+    "title": "Fachkräftemangel",
+    "term_id": "fachkraftemangel",
+    "description": "Fachkräftemangel beschreibt die Situation, dass in bestimmten Branchen oder Berufen qualifizierte und erfahrene Arbeitskräfte fehlen, die über die erforderlichen Fähigkeiten oder Ausbildungen verfügen. Er tritt auf, wenn die Nachfrage nach Fachkräften größer ist als das Angebot an qualifizierten Bewerber:innen."
+  },
+  {
+    "title": "Feedback",
+    "term_id": "feedback",
+    "description": "Bei einem Feedback geht es um eine Rückmeldung oder die Bewertung der Leistung, des Verhaltens, der Idee oder Aktivität einer Person bzw. Gruppe. Es ist eine Form der Kommunikation, bei der Informationen über die Qualität, Effektivität oder Wirkung einer Handlung oder einer Arbeitssituation übermittelt werden. Man spricht auch von Feedbackkultur. Eine positive Feedbackkultur zeichnet sich durch offene und ehrliche Kommunikation aus, bei der die Rückmeldung als wertvolle Informationsquelle betrachtet wird, um die Leistung zu steigern und die Zusammenarbeit zu verbessern."
+  },
+  {
+    "title": "Fehlerkultur",
+    "term_id": "fehlerkultur",
+    "description": "Der Begriff Fehlerkultur bezieht sich darauf, wie in einer Organisation oder einem Team mit Fehlern und Misserfolgen umgegangen wird, welche Werte und Verhaltensweisen dabei eine Rolle spielen. Es geht um die Frage, wie Fehler wahrgenommen und behandelt werden und welche Lernprozesse daraus entstehen."
+  },
+  {
+    "title": "Führung auf Augenhöhe",
+    "term_id": "fuhrung-auf-augenhohe",
+    "description": "Das Konzept „Führung auf Augenhöhe“ beschreibt einen Führungsstil, der auf Respekt, Gleichwertigkeit und Kooperation basiert. Führungskräfte und Mitarbeitende arbeiten auf gleicher Ebene zusammen – anders als bei einer traditionellen hierarchischen Struktur, bei der die Führungskräfte Anweisungen erteilen."
+  },
+  {
+    "title": "Gamification",
+    "term_id": "gamification",
+    "description": "Gamification bedeutet, dass typische Spielelemente in untypischen Kontexten Verwendung finden, etwa in einem Lern- oder Arbeitsumfeld. Der spielerische Zugang dient dazu, das Engagement und die [Motivation](#motivation) der Anwender:innen zu steigern. Elemente wie Auszeichnungen, Fortschrittsbalken, Highscores, Ranglisten und Belohnungen sollen die Interaktion und Beschäftigung mit den jeweiligen Applikationen fördern."
+  },
+  {
+    "title": "Gender-Pay-Gap",
+    "term_id": "gender-pay-gap",
+    "description": "Als Gender Pay Gap (dt. geschlechtsspezifische Lohnlücke) bezeichnet man die Verdienstunterschiede zwischen Frauen und Männern. Der Begriff steht für die Differenz im durchschnittlichen Bruttoeinkommen oder Stundenlohn, wird in der Regel prozentual berechnet und zeigt, wie viel weniger Frauen im Durchschnitt verdienen als Männer. In vielen Ländern besteht nach wie vor eine bedeutende Lohnlücke zwischen den Geschlechtern, obwohl Frauen die gleiche oder eine ähnliche Arbeit wie Männer leisten."
+  },
+  {
+    "title": "Generationenmodell",
+    "term_id": "generationenmodell",
+    "description": "Ein Generationenmodell ist ein Konzept, das dazu dient, die verschiedenen Generationen in einer Gesellschaft oder Organisation zu beschreiben und ihre Merkmale, Werte und Lebenseinstellungen zu analysieren. Ausgehend von der Annahme, dass bestimmte gemeinsame Erfahrungen und Prägungen zu bestimmten Verhaltensmustern führen, werden die Generationen anhand ihres Geburtsjahres zusammengefasst. Neben der Generation der Babyboomer (1946–1964) sind die Generation X (1965–1979) und die Generation Y (1980–1995) in der Arbeitswelt präsent. Aktuell etabliert sich gerade die Generation Z (1996–2010) auf dem Arbeitsmarkt und verlangt nach mehr Flexibilität, einer ausgeglicheneren Work-Life-Balance und sinnstiftenden Aufgaben."
+  },
+  {
+    "title": "Gewaltfreie Kommunikation",
+    "term_id": "gewaltfreie-kommunikation",
+    "description": "Gewaltfreie Kommunikation ist eine Kommunikationsmethode, die von dem US-amerikanischen Psychologen und Friedensaktivisten Marshall B. Rosenberg entwickelt wurde. Ihm zufolge sollen [Konflikte](#konflikt) ohne Bewertung und mithilfe von Ich-Botschaften thematisiert werden, um die menschlichen Beziehungen zu verbessern und Streit zu verhindern."
+  },
+  {
+    "title": "Hackathon",
+    "term_id": "hackathon",
+    "description": "Ein Hackathon ist ein Veranstaltungsformat, bei dem Entwickler:innen, Designer:innen, Unternehmer:innen und andere kreative Köpfe zusammenkommen, um in kurzer Zeit gemeinsam an innovativen technischen Lösungen, Softwareanwendungen oder Produkten zu arbeiten. Typischerweise dauert ein Hackathon ein oder mehrere Tage, oft über ein Wochenende."
+  },
+  {
+    "title": "Hard Skills",
+    "term_id": "hard-skills",
+    "description": "Hard Skills (auch fachliche Kompetenzen genannt) sind fachspezifische Fähigkeiten, die man durch Ausbildung, Training oder Erfahrung erwerben kann. Sie sind jeweils für einen bestimmten Beruf von Bedeutung und leicht nachweisbar."
+  },
+  {
+    "title": "Hierarchie",
+    "term_id": "hierarchie",
+    "description": "Hierarchie ist ein Ordnungsprinzip, in dem es um eine klare Rangordnung geht. Die übergeordneten Personen haben mehr Befugnisse und Einfluss als die untergeordneten."
+  },
+  {
+    "title": "Holokratie",
+    "term_id": "holokratie",
+    "description": "Holokratie (auch: Holakratie) ist ein Organisationsmodell, das auf [Selbstorganisation](#selbstorganisation), dezentraler Entscheidungsfindung und klaren Rollen basiert. Sie stellt eine Alternative zur [hierarchischen](#hierarchie) Unternehmensführung dar und ersetzt die traditionelle Befehls- und Kontrollstrukturen durch ein System von autonomen Teams und [rollenbasierten](#rollenbasiertes-arbeiten) Entscheidungsprozessen. Holokratie ist Teil einer Diskussion über neue Formen der Zusammenarbeit, die in den letzten Jahren im Rahmen von [New Work](#new-work) und der Transformation von Unternehmen und Organisationen zunehmend an Bedeutung gewonnen hat."
+  },
+  {
+    "title": "Homeoffice",
+    "term_id": "homeoffice",
+    "description": "Homeoffice nennt man es, wenn Beschäftigte ihre beruflichen Aufgaben und Tätigkeiten von zu Hause aus erledigen, sie nutzen dann das Internet, um mit Kolleg:innen und Vorgesetzten in Kontakt zu bleiben. Ein Homeoffice bietet Vorteile wie eine bessere Work-Life-Balance, Zeit- und Kostenersparnis durch den Wegfall des Pendelns sowie die Möglichkeit, in einer vertrauten Umgebung zu arbeiten. Es erfordert jedoch auch Disziplin, [Selbstorganisation](#selbstorganisation) und eine klare Kommunikation, um die Zusammenarbeit und den Erfolg der Arbeitsaufgaben sicherzustellen."
+  },
+  {
+    "title": "Human Resources",
+    "term_id": "human-resources",
+    "description": "Human Resources (HR) wird die Abteilung innerhalb einer Organisation genannt, die sich mit der Verwaltung der Personalangelegenheiten und der Entwicklung des Mitarbeiterpotenzials befasst. HR umfasst eine Vielzahl von Aufgaben und Verantwortlichkeiten, darunter Personalbeschaffung, Mitarbeiterbindung, Vergütung und Benefits, Arbeitsbeziehungen sowie Mitarbeiterbetreuung. Die Hauptaufgabe der HR-Abteilung besteht darin sicherzustellen, dass die Organisation über qualifizierte und engagierte Beschäftigte verfügt, die zum Unternehmenserfolg beitragen. Darüber hinaus übernimmt HR eine wichtige Rolle bei der Schaffung einer positiven Arbeitsumgebung, der Lösung von [Konflikten](#konflikt), der Förderung von [Diversität](#diversity) und Inklusion sowie der Einhaltung von Arbeitsgesetzen und -vorschriften."
+  },
+  {
+    "title": "Inner Work",
+    "term_id": "inner-work",
+    "description": "Inner Work bezieht sich auf einen Prozess der persönlichen und inneren Entwicklung mit dem Ziel, das eigene Bewusstsein, seine Emotionen, Überzeugungen und Denkmuster zu erforschen und zu transformieren. Zu dem Prozess gehören die Selbstreflexion und die [Achtsamkeit](#achtsamkeit), eigene Muster und Blockaden sollen erkannt und durchbrochen werden, bzw. das Selbstbewusstsein gestärkt werden. Inner Work kann verschiedene Praktiken umfassen, wie Meditation, Tagebuchschreiben, Coaching, Psychotherapie oder andere Methoden der persönlichen Entwicklung. Es geht darum, tiefer in die eigene innere Welt einzutauchen, um sich selbst besser zu verstehen, innere Konflikte aufzulösen und persönliches Wachstum zu ermöglichen. Das Konzept hat im Kontext von [New Work](#new-work) zunehmend an Bedeutung gewonnen. Die Selbstreflexion ermöglicht es den Beschäftigten, ihre [Motivation](#motivation) zu steigern und eine stärkere Identifikation mit ihrer Arbeit zu entwickeln."
+  },
+  {
+    "title": "Integratives Entscheiden",
+    "term_id": "integratives-entscheiden",
+    "description": "Integratives Entscheiden bedeutet, verschiedene Standpunkte und Interessen in den Entscheidungsprozess einzubeziehen, um eine gemeinsame Lösung zu finden. Es geht darum, aktiv zuzuhören und einen Konsens zu finden. Integratives Entscheiden fördert den offenen Dialog, die Zusammenarbeit und den Respekt vor unterschiedlichen Meinungen. Der Ansatz ermöglicht es, Lösungen zu finden, die von allen Beteiligten akzeptiert werden. So trägt integratives Entscheiden zu einer positiven Arbeitskultur bei, in der Zusammenarbeit und Mitbestimmung gefördert werden und zu besseren Ergebnissen führen."
+  },
+  {
+    "title": "Iterativ",
+    "term_id": "iterativ",
+    "description": "Iterativ leitet sich von dem lateinischen Wort iteratio ab, das „Wiederholung“ oder „wiederholen“ bedeutet. Im Kontext von Prozessen, Projekten oder Entwicklungsmethoden meint iteratives Arbeiten, dass in wiederholten Schleifen oder Zyklen vorgegangen wird, wobei jeder Durchlauf dazu verwendet wird, das Ergebnis schrittweise zu verbessern, anzupassen oder zu verfeinern."
+  },
+  {
+    "title": "Jobsharing",
+    "term_id": "jobsharing",
+    "description": "Unter Jobsharing versteht man ein flexibles Arbeitszeitmodell, bei dem sich zwei oder mehr Beschäftigte eine Vollzeitstelle teilen. Jede bzw. jeder von ihnen arbeitet in festgelegten Zeiträumen oder Tagen, um die erforderliche Arbeitszeit abzudecken. Diese Art der Arbeitsteilung kann die Work-Life-Balance verbessern und ermöglicht es, sich auf andere Lebensbereiche zu konzentrieren, während man weiterhin im Beruf tätig ist. Jobsharing bietet Vorteile wie gemeinsame Verantwortung, Wissenstransfer, gegenseitige Unterstützung und eine breitere Expertise, indem Fähigkeiten und Perspektiven kombiniert werden. Es fördert die Mitarbeiterbindung und -zufriedenheit."
+  },
+  {
+    "title": "Kanban",
+    "term_id": "kanban",
+    "description": "Kanban ist eine agile Arbeitsmethode, die entwickelt wurde, um die Effizienz, Transparenz und Flexibilität von Arbeitsprozessen zu verbessern. Ursprünglich in der Fertigungsindustrie entwickelt, findet sie heute Anwendung in verschiedenen Bereichen wie Softwareentwicklung, Projektmanagement und Dienstleistungen. Sie basiert auf dem Prinzip der Visualisierung von Arbeitsabläufen mittels eines Kanban-Boards, das aus Spalten und Karten besteht. Jede Karte repräsentiert eine Aufgabe oder ein Arbeitselement. Das Kanban-Board erleichtert es, den Fortschritt und den Status der Aufgaben zu verfolgen. Ziel der Kanban-Methode ist, den Workflow zu optimieren, Engpässe zu identifizieren und die Durchlaufzeiten zu reduzieren. Das System begrenzt auch die Menge der gleichzeitig in Bearbeitung befindlichen Aufgaben, um Überlastungen zu vermeiden."
+  },
+  {
+    "title": "Kollegiale Führung",
+    "term_id": "kollegiale-fuhrung",
+    "description": "Kollegiale Führung ist ein Führungsstil, bei dem die Verantwortung und Entscheidungsbefugnis auf mehrere Teammitglieder verteilt wird. Die Führungskraft gibt nicht mehr Anweisungen an Untergebene, sondern fungiert als Coach und Unterstützer, die Kompetenzen und Erfahrungen jedes Einzelnen werden wertgeschätzt und genutzt. Ziel ist eine offene Kommunikation und ein Klima des Vertrauens. So lassen sich die Potenziale der Beschäftigten voll ausschöpfen, wird die [Teamarbeit](#teamarbeit) gefördert und eine positive Arbeitskultur geschaffen, in der jede bzw. jeder eine aktive Rolle beim Erreichen gemeinsamer Ziele spielt."
+  },
+  {
+    "title": "Konflikt",
+    "term_id": "konflikt",
+    "description": "Bei Konflikten im Arbeitsalltag geht es um Meinungsverschiedenheiten, Spannungen oder einen Zusammenstoß zwischen Personen oder Gruppen. Solche Konflikte können verschiedene Ursachen haben: unterschiedliche Ansichten, Arbeitsstile oder Interessen, unklare Kommunikation, unzureichende Ressourcen oder mangelnde Zusammenarbeit. Oft wirken sich Konflikte negativ aus, sie erhöhen den Stress, vermindern die Produktivität, stören das Arbeitsklima und beeinträchtigen die [Teamarbeit](#teamarbeit). Zu einem angemessenen Umgang mit Konflikten gehören das aktive Zuhören, der Dialog, das Verständnis für verschiedene Perspektiven und das gemeinsame Erarbeiten von Lösungen."
+  },
+  {
+    "title": "Laloux, Frederic",
+    "term_id": "laloux-frederic",
+    "description": "Frederic Laloux ist ein belgischer Organisationsentwickler, Berater und Autor – und einer der Vordenker von [New Work](#new-work). Bekannt geworden ist er 2014 mit seinem Buch Reinventing Organizations, das in der Welt der Organisationsentwicklung und des Managements große Aufmerksamkeit erregte. Laloux untersucht darin verschiedene Formen der Organisationsstruktur und Unternehmensführung und beschreibt eine neue, evolutionäre Stufe von Organisationen, die er als „Teal-Organisationen“ bezeichnet. Teal-Organisationen zeichnen sich durch eine höhere Reife und Bewusstheit aus, durch Ganzheitlichkeit, [Selbstorganisation](#selbstorganisation), Sinnorientierung und dezentrale Entscheidungsstrukturen."
+  },
+  {
+    "title": "Leadership",
+    "term_id": "leadership",
+    "description": "Unter Leadership versteht man die Fähigkeit, andere zu inspirieren, zu motivieren und zu führen, um gemeinsame Ziele zu erreichen. Traditionell entwickeln Führungskräfte eine Vision, setzen klare Ziele und gestalten den Weg dorthin. Nicht zuletzt durch die [New-Work](#new-work)-Bewegung haben sich neue Führungskompetenzen herausgebildet, wie etwa Coaching, partizipative Entscheidungsfindung, Vertrauenskultur und offene Kommunikation. Insgesamt ist die Lead-Rolle bei New Work von einem kooperativen, unterstützenden und wertschätzenden Führungsstil geprägt, der die [Selbstorganisation](#selbstorganisation) und Selbstverantwortung der Beschäftigten fördert und zu einer positiven Arbeitskultur beiträgt."
+  },
+  {
+    "title": "Mindset",
+    "term_id": "mindset",
+    "description": "Mindset nennt man die Denkweise, die Überzeugungen und Einstellungen eines Menschen, wie jemand Situationen und Herausforderungen wahrnimmt, interpretiert und an diese herangeht. Ein positives oder negatives Mindset kann sich auf die persönliche Entwicklung, das Verhalten, die Leistung und die [Resilienz](#resilienz) einer Person auswirken. Ein positives und konstruktives Mindset zeichnet sich durch Offenheit, Wachstum, Flexibilität und die Überzeugung aus, dass Fähigkeiten und Intelligenz durch Anstrengung und Lernen entwickelt werden können."
+  },
+  {
+    "title": "Motivation",
+    "term_id": "motivation",
+    "description": "Motivation am Arbeitsplatz bezieht sich auf den inneren Antrieb und die Energie, die Beschäftigte dazu bewegen, sich zu engagieren, Ziele zu verfolgen und ihre Aufgaben erfolgreich zu erledigen. Intrinsische Motivation entspricht dem Wunsch, etwas zu erreichen, persönliche Zufriedenheit zu erleben und einen Sinn in der eigenen Arbeit zu finden. Extrinsische Motivation entsteht in der Regel durch Belohnung, etwa ein höheres Gehalt, Lob oder eine Beförderung. Motivierte Mitarbeitende sind engagiert, produktiv und haben eine positive Einstellung gegenüber ihren Aufgaben."
+  },
+  {
+    "title": "New Work",
+    "term_id": "new-work",
+    "description": "New Work ist ein Konzept, das sich mit der Zukunft der Arbeit beschäftigt und das durch die Digitalisierung und die Pandemie zuletzt stark an Bedeutung gewonnen hat. Es steht für eine radikale Veränderung herkömmlicher Arbeitsmodelle, um den sich verändernden Bedürfnissen von Beschäftigten und Unternehmen gerecht zu werden. Zu den Grundprinzipien von New Work zählen Flexibilität, Selbstbestimmung, Teilhabe, Sinnstiftung und eine menschenzentrierte Arbeitskultur. Im Kern geht es darum, Arbeit als etwas zu betrachten, das mehr als nur eine Einkommensquelle ist, das heißt, die Bedürfnisse und Potenziale der Mitarbeitenden zu berücksichtigen, ihnen mehr Autonomie und Verantwortung zu geben und ihnen die Möglichkeit zu eröffnen, ihre Fähigkeiten optimal einzusetzen. New Work fördert eine flexible Arbeitszeitgestaltung und den Einsatz digitaler Technologien, um die Work-Life-Balance zu verbessern, und strebt den Abbau hierarchischer Strukturen und eine stärkere [Selbstorganisation](#selbstorganisation) und Kollaboration an. Der Mensch und seine Bedürfnisse stehen im Mittelpunkt."
+  },
+  {
+    "title": "Onboarding",
+    "term_id": "onboarding",
+    "description": "Mit Onboarding ist die Einführung und Integration neuer Beschäftigter in einer Organisation gemeint. Es umfasst sämtliche Aktivitäten, die dazu dienen, ihnen den Einstieg zu erleichtern: die Bereitstellung von Informationen über die Werte, Ziele und Strukturen des Unternehmens, die Vorstellung des Teams und der Kolleg:innen, die Klärung von Rollen und Verantwortlichkeiten sowie die Vermittlung von relevanten Ressourcen. Ein effektives Onboarding trägt dazu bei, dass sich neue Kolleg:innen schnell wohlfühlen, ihre Aufgaben verstehen und in der Lage sind, produktiv zu arbeiten. Es unterstützt die Mitarbeiterbindung und fördert die langfristige Zufriedenheit und Leistungsfähigkeit. Typische Onboarding-Aktivitäten sind Orientierungsgespräche, Einführungstrainings, Mentoring-Programme und die soziale Integration."
+  },
+  {
+    "title": "Proof of Concept",
+    "term_id": "proof-of-concept",
+    "description": "Mit einem Proof of Concept wird die Machbarkeit und Funktionalität eines Konzepts oder einer Technologie überprüft. Eine solche Testphase dient dazu, die Leistungsfähigkeit einer Lösung zu demonstrieren, bevor größere Ressourcen in die Entwicklung investiert werden. Typischerweise wird bei einem Proof of Concept ein [Prototyp](#prototyp) entwickelt oder ein begrenztes Pilotprojekt umgesetzt. So lassen sich Unsicherheiten beseitigen, Risiken minimieren und Entscheidungen für die weitere Entwicklung treffen. Die Testphase ermöglicht es, technische und praktische Herausforderungen zu identifizieren und frühzeitig [Feedback](#feedback) von Stakeholdern zu erhalten."
+  },
+  {
+    "title": "Prototyp",
+    "term_id": "prototyp",
+    "description": "Ein Prototyp ist ein früher Entwurf bzw. das Modell eines Produkts, einer Dienstleistung oder Lösung. Er wird entwickelt, um ein Konzept oder eine Funktion zu testen und zu validieren. Mit einem Prototyp lässt sich frühzeitig [Feedback](#feedback) einholen, lassen sich potenzielle Probleme identifizieren und Verbesserungen vornehmen, bevor das endgültige Produkt entwickelt wird. Der Einsatz von Prototypen ermöglicht es Teams, Ideen greifbar zu machen und effektiver zusammenzuarbeiten. Durch den [iterativen](#iterativ) Prozess des Prototyping können Innovationen beschleunigt, Kosten reduziert und die Anpassungsfähigkeit an sich ändernde Anforderungen verbessert werden."
+  },
+  {
+    "title": "Psychologische Sicherheit",
+    "term_id": "psychologische-sicherheit",
+    "description": "Psychologische Sicherheit am Arbeitsplatz bezeichnet ein Umfeld, in dem Beschäftigte sich frei fühlen, ihre Meinungen, Ideen und Bedenken zu äußern, ohne Angst vor negativen Konsequenzen haben zu müssen. Eine offene Kommunikation und der konstruktive Umgang mit [Konflikten](#konflikt) ermöglichen ihnen, Risiken einzugehen, [Feedback](#feedback) zu geben und ihr volles Potenzial auszuschöpfen. In einer psychologisch sicheren Arbeitsumgebung fühlen sich Mitarbeitende unterstützt, wertgeschätzt und ermutigt, innovativ zu denken und sich weiterzuentwickeln. Führungskräfte und das gesamte Team sollten die psychologische Sicherheit aktiv fördern, um ein produktives, positives und gesundes Arbeitsklima zu schaffen."
+  },
+  {
+    "title": "Quiet Quitting",
+    "term_id": "quiet-quitting",
+    "description": "Quiet Quitting beschreibt eine Situation, in der sich Beschäftigte innerlich von ihrer Arbeit entfremdet haben, aber äußerlich weiterhin in ihrem Job verbleiben. Es ist eine passive Form des Rückzugs, sie reduzieren ihr Engagement und ihre Leistung schrittweise, ohne offiziell zu kündigen."
+  },
+  {
+    "title": "Reinventing Organizations",
+    "term_id": "reinventing-organizations",
+    "description": "_Reinventing Organizations – Ein Leitfaden zur Gestaltung sinnstiftender Formen der Zusammenarbeit_ ist ein Buch des belgischen Organisationsentwicklers [Frederic Laloux](#laloux-frederic), das sich mit der Transformation herkömmlicher Arbeitsstrukturen befasst. Darin schlägt er einen evolutionären Ansatz vor, der hierarchische Modelle durch neue, flexiblere Formen der Arbeit ersetzt.\n\nEr plädiert dafür, dass Unternehmen verstärkt auf [Selbstorganisation](#selbstorganisation) und geteilte Verantwortung setzen sollten. In sogenannten „Teal Organizations“ sollten Entscheidungen auf breiter Basis getroffen werden, wodurch [Hierarchien](#hierarchie) abgebaut und die Beschäftigten befähigt werden, ihr volles Potenzial auszuschöpfen. Stehen individuelles Wachstum und eine [sinnstiftende Arbeit](#sinnstiftende-arbeit) im Vordergrund, so Laloux, sind die Mitarbeitenden motivierter und engagierter. Das Konzept von Reinventing Organizations zielt darauf ab, eine Kultur des Vertrauens und der Zusammenarbeit zu schaffen, um so mehr Innovation und Flexibilität zu ermöglichen."
+  },
+  {
+    "title": "Remote-First-Company",
+    "term_id": "remote-first-company",
+    "description": "Eine Remote-First-Company ist ein Unternehmen, das seine Organisationsstruktur so gestaltet, dass Beschäftigte die Freiheit haben, von jedem beliebigen Ort aus zu arbeiten. Im Gegensatz zu herkömmlichen Unternehmen mit physischen Büros legt eine Remote-First-Company den Schwerpunkt auf Fernarbeit als Grundlage für ihre Aktivitäten. Die Mitarbeitenden haben die Möglichkeit, von zu Hause aus, in [Co-Working](#co-working)-Spaces oder an anderen Orten ihrer Wahl zu arbeiten. Die Kommunikation und Zusammenarbeit erfolgen über digitale [Tools](#tools) und Plattformen."
+  },
+  {
+    "title": "Remote Work",
+    "term_id": "remote-work",
+    "description": "Remote Work wird es genannt, wenn Beschäftigte ihre Aufgaben außerhalb des traditionellen Büros oder Arbeitsplatzes erledigen. Anstatt an einem festen Standort zu arbeiten, können sie einen Ort zu wählen, an dem sie sich wohlfühlen. Videokonferenzen und andere digitale Tools ermöglichen die nahtlose Kommunikation und Zusammenarbeit über Distanzen hinweg."
+  },
+  {
+    "title": "Resilienz",
+    "term_id": "resilienz",
+    "description": "Unter Resilienz versteht man die Fähigkeit, mit Herausforderungen, Krisen und Stress umzugehen, sie zu bewältigen und sich von ihnen zu erholen. Im Arbeitskontext geht es darum, mit den Anforderungen, Belastungen und Veränderungen in einer Organisation zurechtzukommen und weiterzumachen. Die Resilienz zeigt sich in der Anpassungsfähigkeit, Problemlösungsfähigkeit, Stressbewältigung sowie in der Selbstreflexion und Selbstfürsorge eines Menschen."
+  },
+  {
+    "title": "Rollenbasiertes Arbeiten",
+    "term_id": "rollenbasiertes-arbeiten",
+    "description": "Beim rollenbasierten Arbeiten werden Aufgaben und Verantwortlichkeiten anhand spezifischer Rollen innerhalb einer Organisation oder einem Projekt verteilt. Jede Rolle sollte mit den Fachkenntnissen, Fähigkeiten und Erfahrungen desjenigen Beschäftigten, der sie einnimmt, übereinstimmen. Rollenbasiertes Arbeiten schafft eine klare Struktur, erleichtert die Zusammenarbeit und Koordination, ermöglicht effektives Teamwork und stellt sicher, dass alle erforderlichen Aufgaben abgedeckt werden."
+  },
+  {
+    "title": "Scrum",
+    "term_id": "scrum",
+    "description": "Scrum ist ein agiles Projektmanagement-Framework, das darauf abzielt, komplexe Aufgaben effektiv zu bewältigen. Es basiert auf einem [iterativen](#iterativ) und inkrementellen Ansatz, bei dem Teams in kurzen, festgelegten Zeitabschnitten (sogenannten Sprints) arbeiten. Bei Scrum gibt es drei Hauptrollen: den Product Owner, der für die Anforderungen und den Mehrwert des Projekts verantwortlich ist, das Entwicklungsteam, das die Aufgaben umsetzt, und den [Scrum Master](#scrum-master), der das Team unterstützt und den Scrum-Prozess überwacht. Das Projekt wird in einem [Backlog](#backlog) festgehalten, das eine geordnete Liste von Anforderungen und Funktionen enthält. Scrum fördert die Zusammenarbeit, die Transparenz, die kontinuierliche Verbesserung und die schnelle Anpassung an Veränderungen. Es wird häufig in der Softwareentwicklung eingesetzt, kann aber auch in anderen Bereichen effektiv angewendet werden."
+  },
+  {
+    "title": "Scrum Master",
+    "term_id": "scrum-master",
+    "description": "Der Scrum Master spielt eine zentrale Rolle innerhalb der Projektmanagementmethode Scrum. Er ist der Servant Leader und dafür verantwortlich sicherzustellen, dass das Scrum-Team effektiv arbeitet und die Scrum-Prinzipien und -Praktiken einhält. Dabei fungiert er nicht als Teamleiter, sondern vielmehr als Mentor und Coach, der das Team befähigt und unterstützt."
+  },
+  {
+    "title": "Selbstorganisation",
+    "term_id": "selbstorganisation",
+    "description": "Die Selbstorganisation (auch Selbstführung genannt) der Beschäftigten ist ein zentraler Bestandteil von [New Work](#new-work). Es geht darum, eigenverantwortlich zu arbeiten, ohne dass ständige externe Anweisungen oder Kontrollen erforderlich sind. Die Mitarbeitenden sollen Verantwortung für das eigene Handeln übernehmen, die eigenen Ziele definieren und die eigenen Aufgaben und Ressourcen effektiv verwalten."
+  },
+  {
+    "title": "Servant Leadership",
+    "term_id": "servant-leadership",
+    "description": "Mit Servant Leadership ist ein Führungsstil gemeint, der den Mitarbeitenden dient und sie unterstützt. Anstatt seine Autorität und Macht zu betonen, liegt der Fokus des Servant Leaders auf den Bedürfnissen der Teammitglieder. Ziel ist es, eine Umgebung zu schaffen, in der Beschäftigte ihr volles Potenzial entfalten können und sich wertgeschätzt fühlen. Servant Leadership zeichnet sich durch Empathie, Dienstbarkeit, Ermächtigung und ganzheitliches Denken aus."
+  },
+  {
+    "title": "Sinnstiftende Arbeit",
+    "term_id": "sinnstiftende-arbeit",
+    "description": "Sinnstiftende Arbeit gibt Beschäftigten das Gefühl, dass ihre Arbeit einen positiven Einfluss hat und einen Beitrag für Unternehmen und Gesellschaft leistet – sie sind dann motivierter und engagierter. Mitarbeitende, die einer sinnstiftenden Arbeit nachgehen, sind bereit, zusätzliche Anstrengungen zu unternehmen und Herausforderungen zu meistern, um ihre Ziele zu erreichen."
+  },
+  {
+    "title": "Soft Skills",
+    "term_id": "soft-skills",
+    "description": "Soft Skills (auch soziale Kompetenzen genannt) sind nicht-technische Fähigkeiten, die über das fachliche Wissen hinausgehen und die zwischenmenschliche Interaktion, die Kommunikation und das Verhalten einer Person beeinflussen. Wichtige Soft Skills sind Kommunikationsfähigkeit, Teamfähigkeit, Problemlösungsfähigkeit, Empathie, Führungsfähigkeiten, Zeitmanagement und Flexibilität."
+  },
+  {
+    "title": "Soziokratie",
+    "term_id": "soziokratie",
+    "description": "Soziokratie ist ein Konzept der Organisationsführung, das auf Prinzipien der Gleichberechtigung, [Selbstorganisation](#selbstorganisation) und auf Konsens basiert. Ziel ist die effektive Zusammenarbeit, eine klare Rollenverteilung und eine partizipative Entscheidungskultur. Als Grundlage der Soziokratie dient ein Kreismodell, anhand dessen eine Organisation unterteilt wird: Jeder Kreis (bzw. jedes Team) bekommt auf diese Weise einen bestimmten Verantwortungsbereich zugewiesen."
+  },
+  {
+    "title": "Sync-Meeting",
+    "term_id": "sync-meeting",
+    "description": "Ein Sync-Meeting (auch Synchronisierungsmeeting genannt) ist eine Besprechung, bei der die Teammitglieder zusammenkommen, um sich über den aktuellen Stand von Projekten, Aufgaben oder Aktivitäten auszutauschen und Informationen zu synchronisieren. Das Ziel ist, alle Beteiligten auf den gleichen Wissensstand zu bringen und sicherzustellen, dass sie eine gemeinsame Ausrichtung haben. So lassen sich Fortschritte überprüfen und Missverständnisse vermeiden, eine effektive Zusammenarbeit ist gewährleistet."
+  },
+  {
+    "title": "Task Board",
+    "term_id": "task-board",
+    "description": "Ein Task Board ist ein visuelles Hilfsmittel zur Organisation von Teamarbeit. Es dient dazu, Arbeitsfortschritte, den Projektstatus und die Zuordnung von Verantwortlichkeiten auf einen Blick sichtbar zu machen. Typischerweise besteht ein Task Board aus Spalten, die den unterschiedlichen Status darstellen, wie beispielsweise „To Do“, „in Bearbeitung“ und „abgeschlossen“. Jede Aufgabe wird als Karte oder Post-it auf dem Board platziert und kann je nach Fortschritt in die entsprechenden Spalten verschoben werden. Zusätzliche Informationen wie Prioritäten, Verantwortliche oder Fristen können ebenfalls auf den Karten vermerkt werden."
+  },
+  {
+    "title": "Teamarbeit",
+    "term_id": "teamarbeit",
+    "description": "Teamarbeit bedeutet, gemeinsam Aufgaben zu bewältigen, Probleme zu lösen oder Projekte erfolgreich abzuschließen. Die Beschäftigten bringen dafür ihre individuellen Fähigkeiten, Kenntnisse und Erfahrungen ein. Es ist ein kooperativer Ansatz, bei dem die Aufgaben und Verantwortlichkeiten innerhalb des Teams aufgeteilt werden und jedes Teammitglied eine spezifische Rolle oder Funktion übernimmt. Die Zusammenarbeit erfolgt in enger Abstimmung und Koordination, um Synergien zu schaffen und das gemeinsame Ziel effektiv zu erreichen."
+  },
+  {
+    "title": "Thinktank",
+    "term_id": "thinktank",
+    "description": "Ein Thinktank (Denkfabrik) ist eine nichtstaatliche Organisation oder Institution, die sich auf die Entwicklung und Erforschung von Ideen, Politikvorschlägen, Strategien und Lösungen für gesellschaftliche, politische, wirtschaftliche oder kulturelle Herausforderungen konzentriert. Ihre Hauptaufgabe besteht darin, Analysen und Forschung zu betreiben, um fundierte Erkenntnisse und Empfehlungen zu verschiedenen Themenbereichen zu liefern. Im Kontext von [New Work](#new-work) können Thinktanks dazu beitragen, innovative Ideen und Konzepte für eine zeitgemäße Arbeitswelt zu entwickeln und zu verbreiten."
+  },
+  {
+    "title": "Third Place",
+    "term_id": "third-place",
+    "description": "Der Begriff Third Place (auch Dritter Ort genannt) geht auf den US-amerikanischen Soziologen Ray Oldenburg zurück. Er bezieht sich auf Orte außerhalb des eigenen Zuhauses (erster Ort) und des Arbeitsplatzes (zweiter Ort), an denen Menschen frei und informell interagieren, sich treffen, kommunizieren und soziale Bindungen knüpfen können. Third Places wie etwa Cafés, Bibliotheken, [Co-Working](#co-working)-Spaces oder öffentliche Plätze bieten wichtige soziale und kreative Umgebungen, die die Produktivität und das Wohlbefinden der Beschäftigten fördern können."
+  },
+  {
+    "title": "Timeboxing",
+    "term_id": "timeboxing",
+    "description": "Timeboxing ist eine Technik des Zeitmanagements, bei der ein fester Zeitrahmen (auch Box genannt) für eine bestimmte Aufgabe bzw. ein Projekt vorgegeben wird. Innerhalb dieser Box sollte die Aufgabe abgeschlossen sein oder so weit wie möglich vorangetrieben werden. Die Idee hinter Timeboxing ist es, die Zeit bewusst zu begrenzen, um die Konzentration und Effizienz zu erhöhen und damit die Produktivität zu steigern."
+  },
+  {
+    "title": "Tools",
+    "term_id": "tools",
+    "description": "Im Kontext von [New Work](#new-work) sind Tools Werkzeuge, Technologien oder Softwareanwendungen, die genutzt werden, um bestimmte Aufgaben effektiver und effizienter zu erledigen. Sie dienen dazu, die Arbeitsprozesse zu unterstützen, die Produktivität zu steigern und die Zusammenarbeit zu verbessern. Beispiele sind Tools für die Kommunikation (Zoom, Teams), für die Kollaboration (Projektmanagementtools, virtuelle Whiteboards), für die Produktivität (Zeiterfassung) oder die Automatisierung (KI)."
+  },
+  {
+    "title": "Top-down",
+    "term_id": "top-down",
+    "description": "Mit Top-down ist eine Vorgehensweise gemeint, bei der Entscheidungen und Anweisungen von der oberen Hierarchieebene einer Organisation ausgehen und nach unten weitergegeben werden. Es gibt eine klare Befehlskette, in der die Verantwortung und Autorität von oben nach unten delegiert werden."
+  },
+  {
+    "title": "Transparenz",
+    "term_id": "transparenz",
+    "description": "Transparenz bedeutet im Arbeitskontext, Informationen, Prozesse und Entscheidungen innerhalb einer Organisation oder zwischen Beschäftigten offenzulegen. Relevante Informationen und Daten sollten jederzeit für diejenigen zugänglich sein, die sie benötigen, damit sie ihre Arbeit effektiv erledigen oder informierte Entscheidungen treffen können. Transparenz ermöglicht eine offene Kommunikationskultur, fördert Vertrauen und stärkt die Zusammenarbeit. Es geht dabei nicht nur um den Zugang zu Informationen, Transparenz bezieht sich auch auf die Kommunikation, Entscheidungsprozesse und Leistungen."
+  },
+  {
+    "title": "Unternehmenskultur",
+    "term_id": "unternehmenskultur",
+    "description": "Zur Unternehmenskultur zählen die Werte, Normen, Überzeugungen, Verhaltensweisen und Traditionen einer Organisation. Diese Kultur bestimmt, wie Beschäftigte miteinander interagieren, Probleme lösen und wie sie ihre Arbeit wahrnehmen und ausführen. Außerdem charakterisiert sie ein Unternehmen oder eine wissenschaftliche Einrichtung und trägt entscheidend zum Erfolg bei, da sie sich prägend auf Innovationspotential, Mitarbeiterführung und Zusammenarbeit auswirkt."
+  },
+  {
+    "title": "Viertagewoche",
+    "term_id": "viertagewoche",
+    "description": "Das Ziel der Viertagewoche ist es, die Work-Life-Balance zu verbessern, die Produktivität zu steigern und die Zufriedenheit der Beschäftigten zu erhöhen. Wenn die Arbeitnehmer:innen einen Tag in der Woche frei haben, haben sie mehr Zeit für persönliche Angelegenheiten, Erholung und Freizeitaktivitäten. Dies kann zu einer höheren [Motivation](#motivation) und Arbeitszufriedenheit führen."
+  },
+  {
+    "title": "VUCA-Welt",
+    "term_id": "vuca-welt",
+    "description": "VUCA-Welt ist ein Begriff aus dem Bereich des strategischen Managements und steht für ein Umfeld, das von Volatilität (Volatility), Unsicherheit (Uncertainty), Komplexität (Complexity) und Mehrdeutigkeit (Ambiguity) geprägt ist. Volatilität bezieht sich auf die hohe Geschwindigkeit und die Unbeständigkeit der Veränderungen, Unsicherheit auf die Schwierigkeit, Vorhersagen zu treffen und Ereignisse genau einzuschätzen. Mit Komplexität ist gemeint, dass es viele unterschiedliche und vernetzte Faktoren gibt, die das Verständnis und die Entscheidungsfindung erschweren können. Und Mehrdeutigkeit verweist auf die Vielzahl von Informationen und widersprüchliche Interpretationen. Organisationen und Führungskräfte sind demnach heute mit neuen Herausforderungen konfrontiert, und es erfordert Anpassungsfähigkeit, Flexibilität und [Agilität](#agilitat), um in dieser VUCA-Welt erfolgreich zu sein."
+  },
+  {
+    "title": "Working Out Loud",
+    "term_id": "working-out-loud",
+    "description": "„Working Out Loud“ (WOL) nennt man die Praxis, aktiv an Projekten und Aufgaben zu arbeiten, während man gleichzeitig das eigene Wissen, die Erfahrungen und Fortschritte mit anderen teilt. Der Begriff steht für eine Kultur des offenen und kooperativen Arbeitens. Denn wenn Beschäftigte ihre Informationen, Ideen und Arbeitsfortschritten bereitstellen, können alle gemeinsam voneinander lernen, Synergien schaffen und die Zusammenarbeit verbessern. Es geht darum, das individuelle Wissen zu vernetzen und so kollektives Wissen aufzubauen, um gemeinsame Ziele zu erreichen."
+  },
+  {
+    "title": "Young Professionals",
+    "term_id": "young-professionals",
+    "description": "Young Professionals werden Beschäftigte in einer spezifischen Altersgruppe genannt, die zwischen dem Ende ihrer Ausbildung und dem Erreichen von Führungspositionen stehen. Sie zeichnen sich oft durch hohe [Motivation](#motivation), den Wunsch nach beruflicher Entwicklung und durch ihre Affinität zu neuen Technologien aus. Die genaue Altersspanne kann variieren, aber in der Regel sind es Menschen zwischen Mitte 20 und Anfang 30."
+  }
+]

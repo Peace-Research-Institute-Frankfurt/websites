@@ -56,25 +56,9 @@ export default function BookmarksList({ bookmarks, setBookmarks }) {
       <li key={`${slug}`} className={styles.item}>
         <Link to={`/${slug}`} className={styles.link}>
           <span className={styles.title}>{p.childMdx.frontmatter.title}</span>
-          {p.childMdx.frontmatter.authors && (
-            <p className={styles.authors}>
-              {p.childMdx.frontmatter.authors
-                .map((a) => {
-                  return a.frontmatter.name
-                })
-                .join(',')}
-            </p>
-          )}
         </Link>
         <div className={styles.remove}>
-          <Button
-            size="small"
-            priority="secondary"
-            label="Favorit löschen"
-            hideLabel={true}
-            icon={<CrossIcon />}
-            onClick={() => removeBookmark(slug)}
-          />
+          <Button size="small" priority="text" label="Favorit löschen" hideLabel={true} icon={<CrossIcon />} onClick={() => removeBookmark(slug)} />
         </div>
       </li>
     )
@@ -89,7 +73,7 @@ export default function BookmarksList({ bookmarks, setBookmarks }) {
     </>
   )
 
-  const emptyState = <p className={styles.empty}>Wenn du Artikel zu deinen Favoriten hinzufügst, erscheinen sie hier.</p>
+  const emptyState = <p className={styles.empty}>Wenn du Artikel zu deinen Favoriten hinzufügst erscheinen sie hier.</p>
 
-  return <aside>{bookmarksItems.length > 0 ? bookmarksContent : emptyState}</aside>
+  return <aside className={styles.container}>{bookmarksItems.length > 0 ? bookmarksContent : emptyState}</aside>
 }

@@ -18,3 +18,9 @@ updates:
       react:
         patterns:
           - 'react*'
+      retext:
+        patterns:
+          - 'retext*'
+      testing-library:
+        patterns:
+          - '@testing-library*'

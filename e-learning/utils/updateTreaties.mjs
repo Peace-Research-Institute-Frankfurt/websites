@@ -7,12 +7,17 @@
 
 import { DateTime } from 'luxon'
 import puppeteer from 'puppeteer'
-import fs from 'fs'
-import path from 'path'
 import { diff } from 'just-diff'
 import { exit } from 'process'
+import { URL } from 'url'
+
+import fs from 'fs'
+import path from 'path'
 import { fileURLToPath } from 'url'
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
+
+import scrapeUNTreaty from './scrapers/unTreaty.mjs'
+import scrapeUNODATreaty from './scrapers/unodaTreaty.mjs'
 
 const treatiesFile = path.join(__dirname, '../content/data/treaties.json')
 const countries = JSON.parse(fs.readFileSync(path.join(__dirname, '../content/data/countries.json')))
@@ -31,6 +36,7 @@ const nameSubs = {
   "Lao People's Democratic Republic": 'Laos',
   'Micronesia (Federated States of)': 'Micronesia',
   'Republic of Korea': 'South Korea',
+  "Democratic People's Republic of Korea": 'North Korea',
   'Republic of Moldova': 'Moldova',
   'Russian Federation': 'Russia',
   'Sao Tome and Principe': 'São Tomé and Príncipe',
@@ -41,29 +47,23 @@ const nameSubs = {
   'Syrian Arab Republic': 'Syria',
   'United Kingdom of Great Britain and Northern Ireland': 'United Kingdom',
   'United Republic of Tanzania': 'Tanzania',
+  'United States': 'United States of America',
   'Venezuela (Bolivarian Republic of)': 'Venezuela',
+  'Venezuela, Bolivarian Republic of': 'Venezuela',
   'Viet Nam': 'Vietnam',
   'Netherlands (Kingdom of the)': 'Netherlands',
-}
-
-const eventTypes = {
-  a: 'accession',
-  A: 'acceptance',
-  d: 'succession',
 }
 
 let out = []
 
 const pages = treaties.filter((el) => el.scrapeURL)
-console.log(`Found ${pages.length} treaties with scrapeURLs.`)
+const browser = await puppeteer.launch({ headless: 'new' })
+console.log(`Found ${pages.length} treaties with scrapeURLs, running scrapers...`)
 
 for (let i = 0; i < pages.length; i++) {
   const p = pages[i]
   let treaty = { ...p }
 
-  console.log(`Updating ${treaty.name} (${p.scrapeURL})`)
-
-  const browser = await puppeteer.launch({ headless: 'new' })
   const page = await browser.newPage()
 
   page.on('console', async (msg) => {
@@ -73,66 +73,45 @@ for (let i = 0; i < pages.length; i++) {
     }
   })
   await page.goto(p.scrapeURL)
-  const container = await page.waitForSelector('#participants')
 
-  const participants = await container.evaluate((el, eventTypes) => {
-    const participants = []
+  let participants = []
+  const scrapeURL = new URL(p.scrapeURL)
 
-    // Slice off the header row
-    const rows = Array.from(el.querySelectorAll('tr')).slice(1)
+  if (scrapeURL.host === 'treaties.un.org') {
+    console.log(`Updating ${treaty.name.toUpperCase()} (UNTC, ${p.scrapeURL})`)
+    participants = await scrapeUNTreaty(page)
+  }
+  if (scrapeURL.host === 'treaties.unoda.org') {
+    console.log(`Updating ${treaty.name.toUpperCase()} (UNODA, ${p.scrapeURL})`)
+    participants = await scrapeUNODATreaty(page)
+  }
 
-    rows.forEach((row) => {
-      const [countryEl, signedEl, treatyEventEl] = row.querySelectorAll('td')
-      const events = []
+  // fs.writeFileSync(path.join(__dirname, `./tmp-${treaty.name}.json`), JSON.stringify(participants, null, '  '))
+  // const participants = JSON.parse(fs.readFileSync(path.join(__dirname, `./tmp-${treaty.name}.json`)))
 
-      // Is the country a signatory?
-      if (signedEl.innerText.trim() !== '') {
-        events.push({ type: 'signature', date: signedEl.innerText.trim().replace('\n', '') })
-      }
+  console.log(`Found ${participants.length} treaty participants`)
 
-      // Has the country ratified/accepted/etc. the treaty?
-      if (treatyEventEl.innerText.trim() !== '') {
-        const matches = treatyEventEl.innerText.trim().match(/(\d+ [a-zA-Z]+ \d+) ?([a-zA-Z]?)/)
-        let eventType = 'ratification'
-        let eventDate = ''
-        if (matches && matches[1]) {
-          eventDate = matches[1]
-        }
-        if (matches && matches[2]) {
-          eventType = eventTypes[matches[2]] || `Unknown treaty event type (${matches[2]})`
-        }
-        events.push({ type: eventType, date: eventDate })
-      }
-      participants.push({
-        name: countryEl.innerText.replace(/(\d)|(\\n)/g, '').trim(),
-        events: events,
-      })
-    })
-    return participants
-  }, eventTypes)
-
-  await browser.close()
-  //   const participants = JSON.parse(fs.readFileSync(path.join(__dirname, './tmp.json')))
-  // fs.writeFileSync(path.join(__dirname, './tmp.json'), JSON.stringify(participants, null, '  '))
-  // console.log(`Found ${participants.length} treaty participants`)
-
-  const treatyParticipants = participants.flatMap((p) => {
+  const treatyParticipants = participants.map((p) => {
     // Find the corresponding country in countries.json
     const country = countries.find((c) => c.name.common === (nameSubs[p.name] || p.name))
     if (!country) {
       console.log(`Could not find country ${p.name}`)
       return []
     }
-    const events = p.events.map((e) => {
-      return { ...e, date: DateTime.fromFormat(e.date, 'd MMM yyyy').toFormat('yyyy-MM-dd') }
+    // Sort events by date
+    let events = [...p.events]
+    events.sort((a, b) => {
+      return DateTime.fromISO(a.date) - DateTime.fromISO(b.date)
     })
-    // We just save the country's alpha-3 code here,
-    // the join happens later at the GraphQl level
+
     return { country: country.alpha3, events: events }
   })
+
   treaty.participants = treatyParticipants
   out.push(treaty)
 }
+
+await browser.close()
 
 const differences = diff(treaties, out)
 
@@ -140,7 +119,6 @@ if (differences.length === 0) {
   console.log(`All treaties are up-to-date.`)
   exit(2)
 } else {
-  console.log(`Changes found:\n${JSON.stringify(differences)}`)
   fs.writeFileSync(treatiesFile, `${JSON.stringify(out, null, '  ')}\n`, 'utf-8')
   console.log(`Wrote new data to ${treatiesFile}`)
   exit(0)

@@ -3,12 +3,13 @@ import { fileURLToPath } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 import remarkGfm from 'remark-gfm'
+import adapter from 'gatsby-adapter-netlify'
 
 const config = {
   siteMetadata: {
     siteUrl: `https://leibniz-nw.netlify.app`,
-    title: 'Work New @Leibniz',
-    description: 'Wie wir Räume, Kulturen und Netzwerke für die Zukunft gestalten.',
+    title: 'WorkNew@Leibniz',
+    description: 'Neue Arbeitformen für Wissenschaft und Forschung',
     siteTwitter: '@HSFK_PRIF',
     authorTwitter: '@HSFK_PRIF',
     image: {
@@ -16,11 +17,11 @@ const config = {
       alt: 'image alt',
     },
   },
+  adapter: adapter.default(),
   plugins: [
     'gatsby-plugin-image',
     'gatsby-transformer-json',
     'gatsby-transformer-sharp',
-    'gatsby-plugin-netlify',
     'gatsby-plugin-react-svg',
     {
       resolve: 'gatsby-plugin-sharp',
@@ -80,16 +81,7 @@ const config = {
         mdxOptions: {
           remarkPlugins: [remarkGfm],
         },
-        gatsbyRemarkPlugins: [
-          {
-            resolve: '../prif-gatsby-remark-smartypants',
-            options: {
-              openingQuotes: { single: '‚', double: '„' },
-              closingQuotes: { single: '’', double: '“' },
-              dashes: 'oldschool',
-            },
-          },
-        ],
+        gatsbyRemarkPlugins: [],
       },
     },
   ],

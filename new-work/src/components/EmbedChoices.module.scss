@@ -1,9 +1,9 @@
 @import 'vars';
 
 .container {
-  border: 1px solid var(--black);
+  border: 1px solid var(--gray);
   padding-left: 0 !important;
-  border-radius: var(--br);
+  border-radius: var(--br-small);
   margin: 1em 0;
   margin-bottom: 1.5em !important;
   li {
@@ -22,29 +22,26 @@
 .choice {
   margin-left: 0;
   display: flex;
-  border-bottom: 1px solid var(--black);
+  border-bottom: 1px solid var(--gray);
   justify-content: space-between;
   align-items: flex-start;
-  color: var(--gray-dark);
+  color: var(--white);
   gap: 0.75em;
   padding: 0.75em;
-  @include bp(m) {
-    padding: 1em;
-    gap: 1em;
-  }
   &:last-child {
     border-bottom: 0;
   }
 }
 
 .checked {
-  color: var(--black);
+  background: rgba(white, 0.075);
 }
 .description {
-  @extend %caption;
   flex-grow: 1;
 }
-
+.title {
+  @extend %h4;
+}
 .checkbox {
   display: block;
   flex-grow: 0;

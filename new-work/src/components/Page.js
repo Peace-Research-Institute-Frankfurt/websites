@@ -1,11 +1,11 @@
 import { graphql } from 'gatsby'
 import React from 'react'
 import App from './App'
-import PostBody from './PostBody'
-import PostHeader from './PostHeader'
-import SkipToContent from './SkipToContent'
 import StickyHeader from './StickyHeader'
-import * as styles from './Post.module.scss'
+import SkipToContent from './SkipToContent'
+import PostBody from './PostBody'
+import PageHeader from './PageHeader'
+import * as styles from './Page.module.scss'
 
 export const query = graphql`
   query ($id: String!) {
@@ -33,13 +33,13 @@ const Page = ({ data, children }) => {
   return (
     <App>
       <SkipToContent />
-      <StickyHeader title={frontmatter.title} post={data.post} />
-      <article id="content">
-        <PostHeader title={frontmatter.title} />
-        <main className={styles.body}>
+      <StickyHeader />
+      <main id="content" className={styles.container}>
+        <PageHeader intro={frontmatter.intro} title={frontmatter.title} />
+        <div className={styles.body}>
           <PostBody>{children}</PostBody>
-        </main>
-      </article>
+        </div>
+      </main>
     </App>
   )
 }

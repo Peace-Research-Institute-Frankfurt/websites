@@ -1,0 +1,102 @@
+@import '../components/vars';
+
+.initials {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--padding-small);
+  padding: var(--padding-small) var(--padding);
+  border-bottom: 1px solid var(--gray);
+}
+.initial {
+  @extend %copy-large;
+  --r: 1.6em;
+  font-size: var(--ms-3);
+  border: 1px solid var(--gray);
+  color: var(--white);
+  width: var(--r);
+  height: var(--r);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0.15em;
+  border-radius: 1000px;
+  cursor: pointer;
+  box-shadow: inset 0em 0.2em 0.2em rgba(white, 0.1), inset 0em -0.1em 0.2em rgba(black, 0.3);
+  @include bp(m) {
+    font-size: var(--ms-4);
+  }
+  &:hover,
+  &:focus-visible,
+  &.active {
+    border-color: var(--white);
+    background: var(--white);
+    color: var(--black);
+  }
+}
+
+.terms {
+  list-style: none;
+  margin-bottom: -1px;
+}
+
+.terms-item {
+  display: contents;
+}
+
+.term {
+  border-bottom: 1px solid var(--gray);
+  &:before {
+    content: '';
+    display: block;
+    height: calc(var(--header-height) + 3px);
+    margin-top: calc(var(--header-height) * -1 - 3px);
+    background: transparent;
+  }
+  &[open] {
+    .term-title {
+      border-bottom: 1px solid var(--gray);
+      &:after {
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
+
+.term-title {
+  @extend %h2;
+  font-weight: 100;
+  appearance: none;
+  list-style: none;
+  padding: 0.35em var(--padding-small);
+  padding-bottom: 0.3em;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  text-overflow: ellipsis;
+  padding-right: 2em;
+  &:after {
+    content: '+';
+    height: 1em;
+    width: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 0.2em;
+    position: absolute;
+    transition: var(--fast);
+    right: var(--padding-small);
+    top: 0.5em;
+  }
+  &:hover,
+  &:focus-visible {
+    background: rgba(white, 0.04);
+    cursor: pointer;
+  }
+}
+
+.term-description {
+  @extend %copy;
+  padding: var(--padding-small);
+}

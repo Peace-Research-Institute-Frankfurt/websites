@@ -14,17 +14,10 @@
   border-bottom-left-radius: var(--br);
   border-bottom-right-radius: var(--br);
   border-top-right-radius: var(--br);
-  display: none;
   background-color: white;
-  visibility: hidden;
   *:last-child {
     margin-bottom: 0;
   }
-}
-
-.tab-content-active {
-  display: block;
-  visibility: visible;
 }
 
 .tabs-list {

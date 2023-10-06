@@ -1,8 +1,9 @@
 [[plugins]]
     package = "@netlify/plugin-emails"
 
-[[plugins]]
-    package = "@netlify/plugin-gatsby"
-
 [functions.emails]
   included_files = ["emails/**"]
+
+[dev]
+  framework = "gatsby"
+  command = "npm run develop"

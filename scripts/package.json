@@ -7,8 +7,8 @@
   "license": "UNLICENSED",
   "dependencies": {
     "just-diff": "^6.0.0",
-    "luxon": "^3.4.0",
+    "luxon": "^3.4.3",
     "minimist": "^1.2.8",
-    "puppeteer": "^21.1.0"
+    "puppeteer": "^21.3.6"
   }
 }

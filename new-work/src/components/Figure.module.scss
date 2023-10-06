@@ -1,49 +1,57 @@
 @import 'vars';
 
-.captions {
-  @extend %caption;
-  align-self: flex-start;
-  text-align: left;
-  max-width: 36em;
-  @include bp(m) {
-    max-width: 55em;
-    text-align: center;
-    align-self: center;
-  }
-}
-
-.credit {
-  color: var(--gray-dark);
-  display: block;
-  font-size: var(--ms--1);
-}
-
 .image {
   margin-bottom: 0.75rem;
+  width: 100%;
 }
 
 .container {
-  margin-top: calc(var(--ms-1) * 0.75);
-  margin-bottom: calc(var(--ms-1) * 0.75);
+  margin-bottom: calc(var(--baseline) * 0.75);
+}
+
+.captions {
+  @extend %caption;
+}
+
+.credit {
+  color: var(--gray-light);
 }
 
 .medium {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  img {
-    max-width: 100%;
-    max-height: 80vh;
+  display: contents;
+  .inner {
+    grid-column: 1 / 3;
+    @include bp(m) {
+      display: contents;
+    }
+  }
+  .image {
+    grid-column: 1 / 3;
+    margin-bottom: calc(var(--baseline) * 0.5);
+    @include bp(l) {
+      grid-column: 2 / 3;
+    }
+  }
+  .captions {
+    grid-column: 2 / 3;
   }
 }
 
 .large {
-  grid-column: 1/4 !important;
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  max-width: 100%;
-  text-align: center;
+  display: contents;
+  .inner {
+    grid-column: 1 / 3;
+    @include bp(m) {
+      display: contents;
+    }
+  }
+  .image {
+    grid-column: 1 / 3;
+  }
+  .captions {
+    grid-column: 1 / 2;
+    margin-bottom: calc(var(--baseline) * 0.5);
+  }
 
   img {
     max-height: 85vh;
@@ -52,20 +60,22 @@
 
 .full {
   display: contents;
-  & > div {
+  .inner {
     display: contents;
   }
   .image {
-    grid-column: 1/4 !important;
+    grid-column: 1/4;
     @include bp(m) {
-      margin-top: calc(var(--ms-1) * 1.5);
+      margin-top: calc(var(--baseline) * 0.5);
+      margin-bottom: calc(var(--baseline) * 0.5);
     }
   }
   .captions {
     margin-bottom: 1em;
-    grid-column: 2/3;
-    @include bp(m) {
-      margin-bottom: calc(var(--ms-1) * 1.5);
+    grid-column: 1 / 3;
+    @include bp(l) {
+      grid-column: 1 / 2;
+      max-width: 20em;
     }
   }
 }

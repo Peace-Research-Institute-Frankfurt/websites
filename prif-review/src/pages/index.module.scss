@@ -23,25 +23,32 @@
 
 .report-labels {
   @extend %h4;
+  border-bottom: 1px solid var(--black);
 }
 
 .report,
 .report-labels {
   display: flex;
-  border-bottom: 1px dotted var(--blue);
-  gap: var(--baseline);
+  padding: calc(var(--baseline) * 0.5) 0;
+  gap: 1rem;
 }
 
 .report {
-  padding: 0.1em 0;
   &:hover,
   &:focus-visible {
-    background: var(--gray-light);
+    background: rgba(black, 0.02);
+    .report-year {
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+    }
   }
 }
 
 .report-year {
-  flex-basis: 8rem;
+  flex-basis: 6rem;
+  @include bp(m) {
+    flex-basis: 10rem;
+  }
 }
 
 .notes {
