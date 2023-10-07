@@ -11,6 +11,7 @@ import Quote from '@shared/components/Quote'
 import { Tab, Tabs } from './TabsAdapter'
 import Callout from '@shared/components/Callout'
 import Button from './ButtonAdapter'
+import { Details, DetailsGroup } from '@shared/components/Details'
 import { Listicle, ListicleItem } from './Listicle'
 
 import * as QuoteStyles from './Quote.module.scss'
@@ -19,6 +20,7 @@ import * as FigureStyles from './Figure.module.scss'
 import * as EmbedStyles from './Embed.module.scss'
 import * as EmbedChoicesStyles from './EmbedChoices.module.scss'
 import * as InterviewStyles from './Interview.module.scss'
+import * as DetailsStyles from './Details.module.scss'
 import * as styles from './PostBody.module.scss'
 
 const shortCodes = {
@@ -33,6 +35,8 @@ const shortCodes = {
   Interview: ({ ...props }) => <Interview styles={InterviewStyles} {...props} />,
   InterviewQuestion: ({ ...props }) => <InterviewQuestion styles={InterviewStyles} {...props} />,
   Callout: ({ ...props }) => <Callout expandable={false} buttonComponent={Button} styles={CalloutStyles} {...props} />,
+  Details: ({ ...props }) => <Details {...props} styles={DetailsStyles} />,
+  DetailsGroup: ({ ...props }) => <DetailsGroup {...props} styles={DetailsStyles} />,
   Tab,
   Tabs,
   Leadin,
