@@ -21,6 +21,7 @@
   cursor: pointer;
   position: relative;
   list-style: none;
+  user-select: none;
   [open] & {
     padding-bottom: 0.1em;
     &:after {
