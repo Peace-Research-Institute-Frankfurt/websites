@@ -19,7 +19,7 @@
   z-index: 0;
   left: 50%;
   transform: translateX(-50%);
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 16 / 10;
   min-height: 100%;
   min-width: 140vmax;
   @include bp(m) {
