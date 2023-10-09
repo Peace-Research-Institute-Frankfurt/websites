@@ -4,6 +4,8 @@ import ButtonGroup from './ButtonGroup'
 import { useStaticQuery, graphql } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import MarkdownRenderer from 'react-markdown-renderer'
+import ArrowRight from '../images/arrow-right.svg'
+import ArrowLeft from '../images/arrow-left.svg'
 import * as styles from './ImageSlider.module.scss'
 
 export default function ImageSlider({ images }) {
@@ -92,6 +94,8 @@ export default function ImageSlider({ images }) {
           <Button
             label="Zurück"
             priority="secondary"
+            hideLabel={true}
+            icon={<ArrowLeft />}
             size="small"
             onClick={() => {
               advance(-1)
@@ -100,6 +104,8 @@ export default function ImageSlider({ images }) {
           <Button
             label="Weiter"
             size="small"
+            hideLabel={true}
+            icon={<ArrowRight />}
             priority="secondary"
             onClick={() => {
               advance(1)
