@@ -17,9 +17,31 @@
 
 .summary {
   padding: 0.5em var(--padding-small);
+  padding-bottom: 0.35em;
   cursor: pointer;
+  position: relative;
+  list-style: none;
   [open] & {
     padding-bottom: 0.1em;
+    &:after {
+      transform: rotate(45deg);
+    }
+  }
+  &:after {
+    @extend %h2;
+    content: '+';
+    height: 1.5em;
+    width: 1.5em;
+    display: flex;
+    font-size: 2rem;
+    font-weight: 100;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    transition: var(--fast);
+    padding-bottom: 0.1em;
+    right: 0;
+    top: 0;
   }
   &:hover,
   &:focus-visible {
@@ -34,9 +56,15 @@
 .body {
   padding: 0.35em;
   padding-left: 0.6em;
-  padding-top: 0;
+  padding-top: 0.35em;
   &:last-child {
     margin-bottom: 0;
+  }
+
+  figure {
+    display: inline-block;
+    width: auto;
+    margin-bottom: 0.5em;
   }
 }
 
