@@ -13,6 +13,7 @@ import Callout from '@shared/components/Callout'
 import Button from './ButtonAdapter'
 import { Details, DetailsGroup } from '@shared/components/Details'
 import { Listicle, ListicleItem } from './Listicle'
+import ImageSlider from './ImageSlider'
 
 import * as QuoteStyles from './Quote.module.scss'
 import * as CalloutStyles from './Callout.module.scss'
@@ -43,6 +44,7 @@ const shortCodes = {
   FileList,
   Listicle,
   ListicleItem,
+  ImageSlider,
 }
 
 export default function PostBody({ children }) {

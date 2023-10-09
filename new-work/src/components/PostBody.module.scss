@@ -40,15 +40,12 @@
   }
   table {
     margin-bottom: calc(var(--baseline) / 2);
-    border: 1px solid var(--gray);
   }
   td,
   th {
     text-align: left;
     vertical-align: baseline;
-    padding: 0.25rem 0.5rem;
-    padding-bottom: 0.1rem;
-    border-right: 1px solid var(--gray);
+    padding: 0.25rem 0;
     hyphens: none;
     p {
       margin: 0;
@@ -57,6 +54,7 @@
   th {
     @extend %caption-bold;
     white-space: nowrap;
+    padding-right: 1em;
   }
   tr {
     border-bottom: 1px solid var(--gray);
