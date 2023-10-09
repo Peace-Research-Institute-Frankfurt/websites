@@ -9,7 +9,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "gatsby-plugin-image": "^3.12.0",
+    "gatsby-plugin-image": "^3.12.1",
     "react": "18.2.0",
     "react-dom": "^18.2.0",
     "react-markdown-renderer": "^1.4.0"
