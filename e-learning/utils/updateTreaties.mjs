@@ -47,6 +47,7 @@ const nameSubs = {
   'Syrian Arab Republic': 'Syria',
   'United Kingdom of Great Britain and Northern Ireland': 'United Kingdom',
   'United Republic of Tanzania': 'Tanzania',
+  'United Republic of Tanzania (the)': 'Tanzania',
   'United States': 'United States of America',
   'Venezuela (Bolivarian Republic of)': 'Venezuela',
   'Venezuela, Bolivarian Republic of': 'Venezuela',
