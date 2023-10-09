@@ -877,14 +877,6 @@
           {
             "type": "ratification",
             "date": "1970-02-02"
-          },
-          {
-            "type": "ratification",
-            "date": "1970-02-10"
-          },
-          {
-            "type": "ratification",
-            "date": "1970-03-05"
           }
         ]
       },
@@ -2005,23 +1997,7 @@
           }
         ]
       },
-      {
-        "country": "TZA",
-        "events": [
-          {
-            "type": "accession",
-            "date": "1991-05-31"
-          },
-          {
-            "type": "accession",
-            "date": "1991-06-07"
-          },
-          {
-            "type": "accession",
-            "date": "1991-06-18"
-          }
-        ]
-      },
+      [],
       {
         "country": "USA",
         "events": [
