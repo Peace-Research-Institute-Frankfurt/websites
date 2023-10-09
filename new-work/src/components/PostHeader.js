@@ -9,7 +9,7 @@ export default function PostHeader({ title, intro, image, video, portrait, credi
       {image && <div className={styles.image}>{image}</div>}
       <div className={`${styles.container}`}>
         <div className={styles.titleContainer}>
-          <h1 className={`${styles.title} ${title.length > 25 ? styles.isLong : ''}`}>{title}</h1>
+          <h1 className={`${styles.title} ${title.length > 40 ? styles.isLong : ''}`}>{title}</h1>
           {credit && (
             <aside className={styles.credit}>
               <span>Illustration</span>

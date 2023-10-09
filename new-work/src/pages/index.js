@@ -67,10 +67,11 @@ const Index = ({ data }) => {
           title="Neue Arbeitsformen für die Wissenschaft"
           intro={
             <>
-              New Work bricht Regeln auf, hinterfragt Machtverhältnisse und rückt den Menschen seinen Stärken, Bedürfnissen und Emotiononen in den
-              Fokus. Diese Handreichung sammelt Anleitungen und Ressourcen zu <span className={styles.introSpace}>Raum</span>,{' '}
-              <span className={styles.introPeople}>Mensch</span> und <span className={styles.introTools}>Tools</span>, die den Übergang zur New Work
-              in wissenschaftlichen Einrichtungen zu begleiten.
+              New Work revolutioniert herkömmliche Strukturen, stellt tradierte Arbeitsweisen in Frage und stärkt die Bedeutung des Menschen mit
+              seinen Kompetenzen, Talenten, Wünschen und Emotionen. In Bezug auf die Leibniz Gemeinschaft und ihre wissenschaftlichen Einrichtungen
+              bietet diese Publikation zahlreiche Handreichungen, Ressourcen und Texte – rund um die Themen{' '}
+              <span className={styles.introSpace}>Räume</span>, <span className={styles.introPeople}>Mensch</span> und{' '}
+              <span className={styles.introTools}>Tools</span>.
             </>
           }
           credit="[Verena Mack](https://verenamack.com/)"
