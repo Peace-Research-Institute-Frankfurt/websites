@@ -64,7 +64,7 @@ const Index = ({ data }) => {
               title="1_storyboard-rooms-animated"
             ></iframe>
           }
-          title="Neue Arbeitsformen für Wissenschaft und Forschung"
+          title="Neue Arbeitsformen für die Wissenschaft"
           intro={
             <>
               New Work bricht Regeln auf, hinterfragt Machtverhältnisse und rückt den Menschen seinen Stärken, Bedürfnissen und Emotiononen in den

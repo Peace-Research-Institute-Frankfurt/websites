@@ -43,10 +43,11 @@
 .details-group {
   border-radius: var(--br);
   border: 1px solid var(--gray);
-  margin: 0.5em 0;
   grid-column: 1 / 4;
   border: 1px solid var(--gray);
-  margin-top: 0.5em;
+  margin-top: calc(var(--baseline) * 0.25);
+  margin-bottom: var(--baseline);
+
   border-radius: var(--br-medium);
   overflow: hidden;
 

@@ -50,6 +50,9 @@
     padding-bottom: 0.1rem;
     border-right: 1px solid var(--gray);
     hyphens: none;
+    p {
+      margin: 0;
+    }
   }
   th {
     @extend %caption-bold;
