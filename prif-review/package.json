@@ -47,7 +47,7 @@
     "react-i18next": "^13.2.2",
     "react-markdown-renderer": "^1.4.0",
     "remark-gfm": "^3.0.1",
-    "sass": "^1.68.0",
+    "sass": "^1.69.0",
     "slug": "^8.2.3",
     "unist-util-visit": "^5.0.0"
   },
