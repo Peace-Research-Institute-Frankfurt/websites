@@ -24,7 +24,7 @@ export default function ImageSlider({ images }) {
           extension
           publicURL
           childImageSharp {
-            gatsbyImageData(layout: CONSTRAINED, placeholder: NONE)
+            gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
           }
         }
       }
@@ -57,7 +57,7 @@ export default function ImageSlider({ images }) {
               {i + 1}/{images.length}
             </span>
             {el.caption && (
-              <figcaption className={styles.caption}>
+              <figcaption>
                 <MarkdownRenderer markdown={el.caption} />
               </figcaption>
             )}
