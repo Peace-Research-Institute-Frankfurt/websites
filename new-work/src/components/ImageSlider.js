@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Button from './ButtonAdapter'
 import ButtonGroup from './ButtonGroup'
-import { useStaticQuery } from 'gatsby'
+import { useStaticQuery, graphql } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import MarkdownRenderer from 'react-markdown-renderer'
 import * as styles from './ImageSlider.module.scss'
