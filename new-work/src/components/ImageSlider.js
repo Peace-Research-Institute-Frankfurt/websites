@@ -24,7 +24,7 @@ export default function ImageSlider({ images }) {
           extension
           publicURL
           childImageSharp {
-            gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
+            gatsbyImageData(layout: CONSTRAINED, placeholder: NONE)
           }
         }
       }
