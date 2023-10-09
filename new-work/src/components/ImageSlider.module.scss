@@ -59,6 +59,10 @@ ul.slides {
     opacity: 0;
     transition: var(--fast);
     background: var(--black-hover);
+    [data-placeholder-image] {
+      object-fit: contain !important;
+      object-position: left !important;
+    }
     @include bp(m) {
       position: absolute;
       grid-column: 1 / 3;
