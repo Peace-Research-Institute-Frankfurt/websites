@@ -39,7 +39,7 @@ export default function TermAdapter({ t, children, ...props }) {
           }}
           className={styles.more}
         >
-          {isExpanded ? 'Weniger lesen' : 'Mehr lesen'}
+          {isExpanded ? 'Weniger' : 'Mehr'}
         </button>
       )}
     </>
