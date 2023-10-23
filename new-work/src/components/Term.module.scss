@@ -51,7 +51,7 @@
   }
   &:hover,
   &:focus-visible {
-    border: 1px solid var(--white);
+    border: 1px solid var(--gray-hover);
   }
 }
 
@@ -68,12 +68,24 @@
   padding-top: 0.8em;
   padding-right: 3em;
   max-width: Min(100vw - 4 * var(--padding), 28rem);
+  p + p {
+    margin-top: 0.5em;
+  }
 }
 
 .more {
-  margin-inline-start: 0.15em;
-  display: inline-block;
+  margin-top: 0.5em;
+  display: block;
   color: inherit;
   text-decoration: underline;
   cursor: pointer;
+  border: 1px solid var(--gray);
+  text-decoration: none;
+  padding: 0.1em 0.35em;
+  transition: border-color var(--fast);
+  border-radius: var(--br-small);
+  &:hover,
+  &:focus-visible {
+    border-color: var(--gray-hover);
+  }
 }
