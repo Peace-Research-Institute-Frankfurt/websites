@@ -58,7 +58,7 @@ ul.slides {
     bottom: 0;
     opacity: 0;
     transition: var(--fast);
-    background: var(--black-hover);
+    background: var(--black);
     [data-placeholder-image] {
       @include bp(m) {
         grid-column: 1 / 3;
