@@ -6,6 +6,9 @@
 
 .container {
   margin-bottom: calc(var(--baseline) * 0.75);
+  .image {
+    bottom: calc(var(--baseline) * 0.25);
+  }
 }
 
 .captions {
@@ -89,7 +92,7 @@
 .expand,
 .collapse {
   position: absolute;
-  bottom: 0.2rem;
+  bottom: 0.7rem;
   right: 0.2rem;
   font-size: 0;
   background: black;
@@ -104,6 +107,10 @@
   path {
     fill: white;
   }
+}
+
+.collapse {
+  bottom: 0;
 }
 
 .lightbox {
