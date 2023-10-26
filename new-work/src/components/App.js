@@ -11,6 +11,7 @@ function App(props) {
         <Footer />
       </div>
       <div id="tooltips" />
+      <div id="lightboxes" />
     </>
   )
 }
