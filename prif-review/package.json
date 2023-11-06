@@ -25,7 +25,7 @@
     "colorjs.io": "^0.4.5",
     "dotenv": "^16.3.1",
     "gatsby": "^5.12.9",
-    "gatsby-adapter-netlify": "^1.0.2",
+    "gatsby-adapter-netlify": "^1.0.3",
     "gatsby-plugin-image": "^3.12.3",
     "gatsby-plugin-manifest": "^5.12.3",
     "gatsby-plugin-mdx": "^5.12.3",
