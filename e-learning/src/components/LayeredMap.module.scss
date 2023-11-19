@@ -30,25 +30,17 @@
 .marker {
   fill: var(--blue-80);
 
-  r:16;
+  r: 16;
 
   @include bp(m) {
     r: 6;
   }
 }
 
-
 .legends {
   padding: 0.5em;
-  text-shadow:
-          -1px -1px 7px #ffffff,
-          1px -1px 7px #ffffff,
-        -1px 1px 7px #ffffff,
-          1px 1px 7px #ffffff,
-          -2px 0 7px #ffffff,
-          2px 0 7px #ffffff,
-          0 -2px 7px #ffffff,
-          0 2px 7px #ffffff;
+  text-shadow: -1px -1px 7px #ffffff, 1px -1px 7px #ffffff, -1px 1px 7px #ffffff, 1px 1px 7px #ffffff, -2px 0 7px #ffffff, 2px 0 7px #ffffff,
+    0 -2px 7px #ffffff, 0 2px 7px #ffffff;
 
   transform: translateY(-0.5em);
 
@@ -62,26 +54,26 @@
 
 .position-top-left {
   @include bp(sm) {
-  top: 0;
-  left: 0;
+    top: 0;
+    left: 0;
   }
 }
 .position-top-right {
   @include bp(sm) {
-  top: 0;
-  right: 0;
+    top: 0;
+    right: 0;
   }
 }
 .position-bottom-left {
   @include bp(sm) {
-  bottom: 0;
-  left: 0;
+    bottom: 0;
+    left: 0;
   }
 }
 .position-bottom-right {
   @include bp(sm) {
-  bottom: 0;
-  right: 0;
+    bottom: 0;
+    right: 0;
   }
 }
 
@@ -97,7 +89,8 @@
     margin-bottom: 1.5em;
   }
 
-  svg, rect {
+  svg,
+  rect {
     width: 12px;
     height: 12px;
     @include bp(m) {
@@ -155,13 +148,14 @@
 
 .sr-only {
   //from Bootstrap 5 .visually-hidden class - to allow screen reader to read content
-  position: absolute!important;
-  width: 1px!important;
-  height: 1px!important;
-  padding: 0!important;
-  margin: -1px!important;
-  overflow: hidden!important;
-  clip: rect(0,0,0,0)!important;
-  white-space: nowrap!important;
-  border: 0!important;
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
 }
+

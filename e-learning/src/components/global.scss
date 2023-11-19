@@ -99,6 +99,7 @@
   --ms-11: calc(var(--ms-10) * var(--ratio));
   --ms-12: calc(var(--ms-11) * var(--ratio));
   --mono-size: calc(var(--ms-0) * 0.85);
+  --baseline: calc(var(--ms-0) * 1.425);
   --br: 3px;
   --fast: 100ms;
   --padding: min(5vw, 2.5rem);

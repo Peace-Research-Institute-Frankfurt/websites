@@ -16,26 +16,25 @@
   display: flex;
   gap: var(--padding-small);
   list-style: none;
-  padding: var(--padding);
-  padding-bottom: 0;
+  padding: calc(var(--padding) * 2) 1em;
   justify-content: center;
   flex-wrap: wrap;
+  border-bottom: 1px solid var(--gray);
 }
 
 .filter {
   font-family: var(--edge-rounded);
   line-height: 0.85;
   border-radius: 1000px;
-  padding: 0.185em 0.3em;
+  padding: 0.175em 0.3em;
   letter-spacing: -0.025em;
   text-transform: uppercase;
-  padding-top: 0.2em;
   border: 1px solid var(--color);
   color: var(--color);
   background-color: transparent;
   transition: var(--fast);
   cursor: pointer;
-  outline-offset: 3px;
+  outline-offset: 5px;
   box-shadow: inset 0em 0.2em 0.2em rgba(white, 0.3), inset 0em -0.2em 0.2em rgba(black, 0.3);
   font-size: var(--ms-5);
   @include bp(m) {
@@ -44,7 +43,7 @@
   &:hover,
   &:focus-visible {
     border: 1px solid var(--color);
-    filter: brightness(1.1);
+    filter: brightness(1.15);
   }
 }
 
@@ -57,14 +56,7 @@
 .intro-tools,
 .intro-people,
 .intro-space {
-  border: 1px solid var(--gray);
-  border-radius: 1000px;
-  line-height: 0.9;
-  display: inline-flex;
-  align-items: baseline;
-  padding-top: 0.1em;
-  padding-left: 0.2em;
-  padding-right: 0.2em;
+  font-style: italic;
 }
 
 .intro-tools {

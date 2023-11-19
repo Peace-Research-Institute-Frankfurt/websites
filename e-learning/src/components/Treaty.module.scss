@@ -1,14 +1,9 @@
 @import 'vars';
 
 .container {
-  background: var(--blue-10);
   border-radius: var(--br);
-  padding: 1em;
-}
-.eyebrow {
-  @extend %caption;
-  display: block;
-  margin-bottom: 0.25em;
+  padding: 1.35em 1.25em;
+  background: var(--blue-10);
 }
 
 .title {

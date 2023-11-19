@@ -1,11 +1,11 @@
-import React from 'react'
-import { graphql, useStaticQuery, Link } from 'gatsby'
+import React, { useState } from 'react'
+import { graphql, useStaticQuery } from 'gatsby'
 import Term from '@shared/components/Term'
 import TooltipAdapter from './TooltipAdapter'
-import slug from 'slug'
 import * as styles from './Term.module.scss'
+import MarkdownRenderer from 'react-markdown-renderer'
 
-export default function TermAdapter({ t, ...props }) {
+export default function TermAdapter({ t, children, ...props }) {
   const data = useStaticQuery(graphql`
     query TermQuery {
       terms: allTermsJson {
@@ -18,31 +18,36 @@ export default function TermAdapter({ t, ...props }) {
     }
   `)
 
-  const maxWordCount = 20
+  const maxWordCount = 25
 
   const termNode = data.terms.nodes.find((node) => {
     return node.term_id === t
   })
 
-  let copy = termNode.description
-  let isTruncated = false
-  if (termNode.description.split(' ').length > maxWordCount) {
-    copy = termNode.description.split(' ').slice(0, maxWordCount).join(' ') + '...'
-    isTruncated = true
-  }
+  const [isExpanded, setIsExanded] = useState(false)
 
-  const termData = {
-    ...termNode,
-    description: (
-      <>
-        <span>{copy}</span>
-        {isTruncated && (
-          <Link className={styles.more} to={`/terms#${slug(termNode.term_id)}`}>
-            Mehr lesen
-          </Link>
-        )}
-      </>
-    ),
-  }
-  return <Term term={termData} TooltipAdapter={TooltipAdapter} styles={styles} {...props} />
+  const isTruncated = termNode.description.split(' ').length > maxWordCount
+  const truncatedDescription = termNode.description.split(' ').slice(0, maxWordCount).join(' ') + '...'
+
+  const description = (
+    <>
+      <MarkdownRenderer markdown={isExpanded ? termNode.description : truncatedDescription} />
+      {isTruncated && (
+        <button
+          onClick={() => {
+            setIsExanded(!isExpanded)
+          }}
+          className={styles.more}
+        >
+          {isExpanded ? 'Weniger' : 'Mehr'}
+        </button>
+      )}
+    </>
+  )
+
+  return (
+    <>
+      <Term term={termNode} description={description} TooltipAdapter={TooltipAdapter} styles={styles} children={children} />
+    </>
+  )
 }

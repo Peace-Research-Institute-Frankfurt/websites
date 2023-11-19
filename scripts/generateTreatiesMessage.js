@@ -78,7 +78,7 @@ try {
     }
   })
 } catch {
-  errorMessage = `Could not generate automated summary, maybe due to a treaty participant being removed.`
+  errorMessage = `Could not generate automated summary.`
 }
 
 let copy = ''
@@ -101,9 +101,5 @@ ${errorMessage || copy}
 
 This PR is auto-generated, so please double-check that these changes are correct before merging it. Also note that the summary above may not reflect all changes in this PR – use the \`Files Changed\` tab to make sure nothing unexpected is going on.`
 
-if (!fs.existsSync('./tmp')) {
-  console.log('Creating tmp directory...')
-  fs.mkdirSync('./tmp')
-}
-console.log('Writing PR description to ./tmp/pr.md')
+console.log('Writing PR description to "./tmp/pr.md"...')
 fs.writeFileSync('./tmp/pr.md', body)

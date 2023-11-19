@@ -14,12 +14,12 @@
 }
 
 :root {
-  --white: rgb(248, 247, 247);
+  --white: rgb(242, 242, 242);
   --white-hover: rgb(221, 221, 221);
   --gray-dark: rgb(58, 57, 59);
   --gray: rgb(99, 98, 104);
   --gray-light: rgb(180, 180, 180);
-  --gray-hover: rgb(170, 170, 170);
+  --gray-hover: rgb(150, 150, 150);
   --blue: #6b7bb3;
   --green: #568d72;
   --yellow: #eabc47;
@@ -54,13 +54,14 @@
   --header-height: 5rem;
   --footer-height: 3rem;
   @include bp(m) {
-    --header-height: 5rem;
     --br: 40px;
     --br-medium: 20px;
   }
 }
 
-* {
+*,
+*:before,
+*:after {
   padding: 0;
   margin: 0;
   font-size: 100%;
@@ -96,7 +97,7 @@ a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 textarea:focus-visible {
-  outline: 2px solid var(--focus-color);
+  outline: 4px solid var(--white);
 }
 
 ::selection {
@@ -128,10 +129,10 @@ img {
 
 .footnotes {
   @extend %caption;
-  grid-column: 1/4;
+  grid-column: 1 / 4;
   margin-top: var(--baseline);
   margin-left: 1em;
-  @include bp(m) {
+  @include bp(l) {
     grid-column: 2 / 4;
   }
   h2 {

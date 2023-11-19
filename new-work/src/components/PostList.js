@@ -8,7 +8,10 @@ const PostList = ({ children }) => {
 
 const PostListItem = ({ title, category, isCurrent, slug }) => {
   return (
-    <Link className={`${styles.item} ${category ? category : ''} ${isCurrent ? styles.current : ''}`} to={`/${slug}`}>
+    <Link
+      className={`${styles.item} ${category === 'meta' ? styles.meta : ''} ${category ? category : ''} ${isCurrent ? styles.current : ''}`}
+      to={`/${slug}`}
+    >
       {title}
     </Link>
   )

@@ -31,7 +31,7 @@ export default function StickyHeader({ post }) {
         </Link>
 
         <div className={styles.nav}>
-          <Link className={styles.navItem} to="/terms">
+          <Link className={styles.navItem} to="/glossar">
             Glossar
           </Link>
           <button className={styles.navItem} onClick={() => setBookmarksActive(!bookmarksActive)}>

@@ -5,10 +5,14 @@ import * as styles from './App.module.scss'
 
 function App(props) {
   return (
-    <div className={`${styles.container} ${props.className ? props.className : ''}`}>
-      {props.children}
-      <Footer />
-    </div>
+    <>
+      <div className={`${styles.container} ${props.className ? props.className : ''}`}>
+        {props.children}
+        <Footer />
+      </div>
+      <div id="tooltips" />
+      <div id="lightboxes" />
+    </>
   )
 }
 

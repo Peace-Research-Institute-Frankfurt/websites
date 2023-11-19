@@ -8,6 +8,7 @@ import Treaty from './PrintTreaty'
 import PrintTerm from './PrintTerm'
 import PrintChapter from './PrintChapter'
 import ColumnBreak from './ColumnBreak'
+import Gallery from './Gallery'
 import LayeredMap from "./LayeredMap";
 import MapLegend from "./MapLegend";
 import MarkerLayer from "./MarkerLayer";
@@ -25,6 +26,7 @@ const PostBody = ({ content, unit, site, setChapterList }) => {
   }
 
   const shortCodes = {
+    Gallery,
     a: ({ href, children }) => {
       return (
         <a href={href}>

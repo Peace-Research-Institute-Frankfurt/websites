@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { graphql } from 'gatsby'
-import { StaticImage } from 'gatsby-plugin-image'
 import Meta from '../components/Meta'
 import App from '../components/App'
 import StickyHeader from '../components/StickyHeader'
@@ -33,11 +32,11 @@ const Index = ({ data }) => {
 
   data.posts.nodes.forEach((node) => {
     const category = node.childMdx.frontmatter.category
-    if (category && !categories.includes(category)) {
+    if (category && category !== 'meta' && !categories.includes(category)) {
       categories.push(category)
     }
   })
-  const [activeFilters, setActiveFilters] = useState(categories)
+  const [activeFilters, setActiveFilters] = useState(['meta', ...categories])
 
   const posts = data.posts.nodes
     .filter((node) => {
@@ -57,17 +56,25 @@ const Index = ({ data }) => {
       <StickyHeader />
       <main id="content" className={styles.container}>
         <PostHeader
-          image={<StaticImage src="../images/frame2.png" alt="" layout="fullWidth" />}
-          title="Neue Arbeitsformen für Wissenschaft und Forschung"
+          video={
+            <iframe
+              src="https://player.vimeo.com/video/867440111?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&background=1"
+              frameBorder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              title="1_storyboard-rooms-animated"
+            ></iframe>
+          }
+          title="Neue Arbeitsformen für die Wissenschaft"
           intro={
             <>
-              New Work bricht Regeln auf, hinterfragt Machtverhältnisse und rückt den Menschen seinen Stärken, Bedürfnissen und Emotiononen in den
-              Fokus. Diese Handreichung sammelt Anleitungen und Resourcen zu <span className={styles.introSpace}>Raum</span>,{' '}
-              <span className={styles.introPeople}>Mensch</span>, und <span className={styles.introTools}>Methoden</span>, um den Übergang zur New
-              Work in wissenschaftlichen Einrichtungen zu begleiten.
+              New Work revolutioniert herkömmliche Strukturen, stellt tradierte Arbeitsweisen in Frage und stärkt die Bedeutung des Menschen mit
+              seinen Kompetenzen, Talenten, Wünschen und Emotionen. In Bezug auf die Leibniz Gemeinschaft und ihre wissenschaftlichen Einrichtungen
+              bietet diese Publikation zahlreiche Handreichungen, Ressourcen und Texte – rund um die Themen{' '}
+              <span className={styles.introSpace}>Räume</span>, <span className={styles.introPeople}>Mensch</span> und{' '}
+              <span className={styles.introTools}>Tools</span>.
             </>
           }
-          credit="Illustration von Max Köhler"
+          credit="[Verena Mack](https://verenamack.com/)"
         />
         <section className={styles.content}>
           <ol className={styles.filters}>
