@@ -42,7 +42,7 @@ export default function Footer() {
         </ul>
       </nav>
       <p className={styles.meta}>
-        <span>© {new Date().getFullYear()}</span>
+        <span>© PRIF und die Autor*innen {new Date().getFullYear()}</span>
       </p>
     </footer>
   )

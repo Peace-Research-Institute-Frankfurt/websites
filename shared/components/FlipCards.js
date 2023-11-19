@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 
-function Card({front, children, active, styles, index, onClick}) {
-  return(
-    <li className={`${styles.card} + ${active ? styles.active : null}`} onClick={(e) => onClick(index)}>
-        <div className={styles.front}>{front}</div>
-        <div className={styles.back}>{children}</div>
-      </li>
+function Card({ front, children, active, styles, index, onClick }) {
+  return (
+    <li className={`${styles.card} ${active ? styles.active : ''}`} onClick={(e) => onClick(index)}>
+      <div className={styles.front}>{front}</div>
+      <div className={styles.back}>{children}</div>
+    </li>
   )
 }
 
@@ -23,7 +23,7 @@ function FlipCards({ styles, children }) {
   }
 
   const cards = React.Children.map(children, (child, index) => {
-    return (React.cloneElement(child, {styles: styles, active: activeCard === index, onClick: handleClick, index: index}))
+    return React.cloneElement(child, { styles: styles, active: activeCard === index, onClick: handleClick, index: index })
   })
 
   return <ul className={styles.container}>{cards}</ul>

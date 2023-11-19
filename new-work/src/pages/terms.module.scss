@@ -39,18 +39,26 @@
 .terms {
   list-style: none;
   margin-bottom: -1px;
-  li {
-    display: contents;
-  }
+}
+
+.terms-item {
+  display: contents;
 }
 
 .term {
   border-bottom: 1px solid var(--gray);
+  &:before {
+    content: '';
+    display: block;
+    height: calc(var(--header-height) + 3px);
+    margin-top: calc(var(--header-height) * -1 - 3px);
+    background: transparent;
+  }
   &[open] {
     .term-title {
       border-bottom: 1px solid var(--gray);
       &:after {
-        transform: translateY(-50%) rotate(45deg);
+        transform: rotate(45deg);
       }
     }
   }
@@ -70,12 +78,16 @@
   padding-right: 2em;
   &:after {
     content: '+';
+    height: 1em;
+    width: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 0.2em;
     position: absolute;
     transition: var(--fast);
-    transform-origin: center;
     right: var(--padding-small);
-    top: 50%;
-    transform: translateY(-50%);
+    top: 0.5em;
   }
   &:hover,
   &:focus-visible {
@@ -85,6 +97,6 @@
 }
 
 .term-description {
-  padding: var(--padding-small);
   @extend %copy;
+  padding: var(--padding-small);
 }

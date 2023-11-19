@@ -4,7 +4,7 @@ import * as styles from './Listicle.module.scss'
 const Listicle = ({ children }) => {
   return (
     <section className={styles.container}>
-      <ol>{children}</ol>
+      <ol className={styles.list}>{children}</ol>
     </section>
   )
 }

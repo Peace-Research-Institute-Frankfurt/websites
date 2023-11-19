@@ -5,6 +5,7 @@ function DetailsGroup({ styles, numbered, children }) {
 }
 
 function Details({ styles, summary, children, open }) {
+  if (!styles) styles = {}
   const [isOpen, setIsOpen] = useState(open || false)
 
   function toggleOpen(e) {

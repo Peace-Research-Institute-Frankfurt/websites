@@ -9,7 +9,6 @@ import PostBody from './PostBody'
 import PostHeader from './PostHeader'
 import Bylines from './Bylines'
 import { PostList, PostListItem } from './PostList'
-import MarkdownRenderer from 'react-markdown-renderer'
 
 import * as styles from './Post.module.scss'
 
@@ -29,10 +28,7 @@ export const query = graphql`
         frontmatter {
           title
           intro
-          color
           order
-          eyebrow
-          reading_time
           category
           hero_alt
           hero_portrait_alt
@@ -75,7 +71,6 @@ export const query = graphql`
             title
             order
             intro
-            color
             category
           }
         }
@@ -117,15 +112,11 @@ const Post = ({ data, children }) => {
           image={heroImage}
           portrait={portraitImage}
           intro={frontmatter.intro}
+          credit={frontmatter.hero_credit}
         />
         <main className={styles.body}>
           <aside className={styles.credits}>
             <Bylines authors={frontmatter.authors}></Bylines>
-            {frontmatter.hero_credit && (
-              <aside className={styles.credit}>
-                <MarkdownRenderer markdown={frontmatter.hero_credit} />
-              </aside>
-            )}
           </aside>
           <div className={styles.copy}>
             <PostBody>{children}</PostBody>

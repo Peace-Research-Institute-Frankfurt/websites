@@ -4,7 +4,7 @@
   @extend %caption;
   grid-column: 1 / 4;
   grid-row: 1;
-  margin-bottom: calc(var(--baseline) * 0.5);
+  margin-bottom: 0.5em;
   ul {
     display: flex;
     padding: 0 !important;

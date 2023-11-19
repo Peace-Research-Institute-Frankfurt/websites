@@ -4,6 +4,10 @@
   position: relative;
   padding-top: 0.5em;
   padding-bottom: 0.2em;
+  width: calc(var(--width) * 0.6);
+  @include bp(m) {
+    width: var(--width);
+  }
   path,
   rect {
     fill: white;
@@ -11,7 +15,6 @@
   svg {
     height: 2em;
     @include bp(m) {
-      width: auto;
       height: calc(var(--header-height) * 0.675);
     }
   }
@@ -19,4 +22,5 @@
 
 .label {
   font-size: 0;
+  position: absolute;
 }

@@ -2,13 +2,15 @@ import React, { useEffect, useRef, useState } from 'react'
 import useScrollPosition from '../hooks/useScrollPosition'
 import useViewport from '../hooks/useViewport'
 import { clamp } from './utils'
+import { createPortal } from 'react-dom'
 
-export default function Tooltip({ styles, active, position, children, id, targetEl }) {
+export default function Tooltip({ styles, active, children, id, targetEl, renderTargetEl }) {
   if (!styles) styles = {}
   const scrollPosition = useScrollPosition()
   const viewportSize = useViewport()
   const containerRef = useRef()
   const [targetRect, setTargetRect] = useState({})
+
   useEffect(() => {
     if (targetEl) {
       setTargetRect(targetEl.getBoundingClientRect())
@@ -35,10 +37,16 @@ export default function Tooltip({ styles, active, position, children, id, target
     containerStyles = { transform: `translateY(${yClamped}px) translateY(-100%) translateX(${xClamped}px)` }
     arrowStyles = { ...arrowStyles, left: `${tr.x - xClamped + tr.width / 2}px` }
   }
-  return (
+
+  if (!renderTargetEl) {
+    return null
+  }
+
+  return createPortal(
     <span ref={containerRef} style={containerStyles} id={id} role="tooltip" className={`${styles.container} ${active ? styles.active : ''}`}>
       {children}
       <span style={arrowStyles} className={`${styles.arrow} ${arrowClass}`}></span>
-    </span>
+    </span>,
+    renderTargetEl
   )
 }
