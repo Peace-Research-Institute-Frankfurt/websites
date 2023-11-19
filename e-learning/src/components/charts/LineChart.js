@@ -1,5 +1,5 @@
 import * as styles from './Charts.module.scss'
-import React from 'react'
+import React, {useId} from 'react'
 import { Group } from '@visx/group'
 import { curveBasis } from '@visx/curve'
 import { LinePath } from '@visx/shape'
@@ -19,11 +19,15 @@ export default function LineChart({
   colorRangeStart = '#6889a1',
   colorRangeEnd = '#203b54',
   xAxisDateOptions = { month: 'long' },
+  title,
+  description,
+  legendTitle
 }) {
   const xAxisKey = xAxis ? xAxis : Object.keys(data[0])[0]
   const margin = { top: 32, right: 30, bottom: 8, left: 32 }
   const axisLegendHeight = 44
   const keys = series ? series : Object.keys(data[0]).filter((d) => d !== xAxisKey)
+  const graphId = useId()
 
   /** accessors */
   const xValue = (obj) => {
@@ -76,7 +80,10 @@ export default function LineChart({
 
   return (
     <div className={styles.container}>
-      <LegendOrdinal scale={colorScale} direction="row" labelMargin="0 15px 0 0" className={styles.legend} />
+      <div>
+        <span aria-label={legendTitle??''} className={styles.srOnly}/>
+        <LegendOrdinal scale={colorScale} direction="row" labelMargin="0 15px 0 0" className={styles.legend} />
+      </div>
       <div>
         <ParentSize>
           {({ width, height }) => {
@@ -90,7 +97,10 @@ export default function LineChart({
 
             return (
               <div style={{ overflow: 'scroll' }}>
-                <svg className={styles.graphContainer} width={responsiveWidth} style={{ overflow: 'visible' }}>
+                <svg className={styles.graphContainer} width={responsiveWidth} style={{ overflow: 'visible' }} aria-labelledby={`${title && `${graphId}-map-title`} ${title && `${graphId}-map-description`}`} role={'graphics-object'}>
+                  {title && <title id={`${graphId}-map-title`}>{title}</title>}
+                  {description && <desc id={`${graphId}-map-description`}>{description}</desc>}
+
                   <Group left={margin.left + 24} top={margin.top}>
                     <GridRows scale={yScale} width={xMax} height={yMax} stroke="#e0e0e0" />
 
@@ -104,14 +114,20 @@ export default function LineChart({
                       numTicks={width > 520 ? 10 : 5}
                       tickFormat={(v) => (v instanceof Date ? v.toLocaleDateString('en-GB', xAxisDateOptions) : v)}
                       label={xAxisTitle ?? xAxisKey}
-                      labelProps={{ className: styles.axisLabelBottom }}
+                      labelProps={{
+                        className: styles.axisLabelBottom,
+                        textAnchor: 'middle',
+                      }}
                       tickClassName={styles.axisTicks}
                     />
 
                     <AxisLeft
                       scale={yScale}
                       label={yAxisTitle ? yAxisTitle : ''}
-                      labelProps={{ className: styles.axisLabelLeft }}
+                      labelProps={{
+                        className: styles.axisLabelLeft,
+                        textAnchor: 'middle',
+                      }}
                       tickClassName={styles.axisTicks}
                     />
 
