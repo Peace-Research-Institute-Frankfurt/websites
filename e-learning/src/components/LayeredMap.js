@@ -1,4 +1,4 @@
-import React, {useId, useRef} from 'react'
+import React, { useId } from 'react'
 import * as styles from './LayeredMap.module.scss'
 import { Graticule, NaturalEarth } from '@visx/geo'
 import admin0 from '../../../prif-review/src/data/ne_countries.json'
@@ -6,7 +6,16 @@ import MarkerMapLayer from './MarkerLayer'
 import CountryStatisticsLayer from './CountryStatisticsLayer'
 import MapLegend from './MapLegend'
 
-export default function LayeredMap({ children, centerLat = 0, centerLong = 0, mapScale = 1 , legendPosition = 'top-left', title, description,legendTitle}) {
+export default function LayeredMap({
+  children,
+  centerLat = 0,
+  centerLong = 0,
+  mapScale = 1,
+  legendPosition = 'top-left',
+  title,
+  description,
+  legendTitle,
+}) {
   const min = 263
   const max = 2000
   const scale = min + ((max - min) / 9) * (mapScale - 1)
@@ -22,9 +31,14 @@ export default function LayeredMap({ children, centerLat = 0, centerLong = 0, ma
       <NaturalEarth data={admin0.features} scale={scale} translate={translate} center={center}>
         {(projection) => {
           return (
-            <svg viewBox={`0 0 1438 777.2972972972973`} className={styles.map} aria-labelledby={`${title && `${mapId}-map-title`} ${title && `${mapId}-map-description`}`} role={'graphics-object'}>
-                {title && <title id={`${mapId}-map-title`}>{title}</title>}
-                {description && <desc id={`${mapId}-map-description`}>{description}</desc>}
+            <svg
+              viewBox={`0 0 1438 777.2972972972973`}
+              className={styles.map}
+              aria-labelledby={`${title && `${mapId}-map-title`} ${title && `${mapId}-map-description`}`}
+              role={'graphics-object'}
+            >
+              {title && <title id={`${mapId}-map-title`}>{title}</title>}
+              {description && <desc id={`${mapId}-map-description`}>{description}</desc>}
               <Graticule outline={(path) => projection.path(path)} graticule={(g) => projection.path(g)} stroke="rgba(0, 0, 0, .05)" fill="none" />
               <g data-layer="admin0">
                 {projection.features.map(({ path }, i) => {
@@ -58,8 +72,7 @@ export default function LayeredMap({ children, centerLat = 0, centerLong = 0, ma
         }}
       </NaturalEarth>
 
-      <MapLegend children={children} legendPosition={legendPosition} legendTitle={legendTitle}/>
+      <MapLegend children={children} legendPosition={legendPosition} legendTitle={legendTitle} />
     </div>
   )
 }
-
