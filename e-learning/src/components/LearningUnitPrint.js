@@ -71,7 +71,7 @@ const LearningUnit = ({ data, children }) => {
         console.log('Rendered', flow.total, 'pages.')
 
         // Setting page numbers and running headers with pseudo-elements
-        // produces an inaccessible PDF, so we set the with Javascript instead.
+        // produces an inaccessible PDF, so we set them with Javascript instead.
 
         // Set page numbers
         const pageNumberElements = previewRef.current.querySelectorAll('.pageNumber')
