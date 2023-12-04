@@ -131,7 +131,7 @@ img {
   @extend %caption;
   grid-column: 1 / 4;
   margin-top: var(--baseline);
-  max-width: 60em;
+  max-width: 50rem;
   counter-reset: fn_li;
   @include bp(l) {
     grid-column: 2 / 4;

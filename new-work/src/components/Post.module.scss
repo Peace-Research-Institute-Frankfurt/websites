@@ -52,7 +52,7 @@
   grid-template-columns: 1fr minmax(min-content, 30rem) 1fr;
   column-gap: var(--padding);
   @include bp(l) {
-    grid-template-columns: 1fr minmax(min-content, 55rem) 1fr;
+    grid-template-columns: 1fr minmax(min-content, 52rem) 1fr;
   }
 }
 
