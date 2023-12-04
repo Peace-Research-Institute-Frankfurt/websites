@@ -10,7 +10,8 @@
     padding: 0 !important;
     gap: var(--padding);
     @include bp(m) {
-      gap: 0.25rem;
+      gap: 1em;
+      max-width: 15em;
       flex-flow: column;
     }
   }
@@ -37,7 +38,9 @@
 
 .name {
   display: block;
-  line-height: 1.5;
+}
+.institution {
+  color: var(--gray-light);
 }
 
 .image {

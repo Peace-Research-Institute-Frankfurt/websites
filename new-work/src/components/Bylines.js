@@ -9,7 +9,7 @@ export default function Bylines({ authors }) {
       <li className={styles.person} key={`${fm.name}-${i}`}>
         <p>
           <span className={styles.name}>{fm.name}</span>
-          {fm.institution && <span> ({fm.institution})</span>}
+          {fm.institution && <span className={styles.institution}> {fm.institution}</span>}
         </p>
       </li>
     )

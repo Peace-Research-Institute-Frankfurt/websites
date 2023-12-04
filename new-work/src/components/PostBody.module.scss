@@ -11,6 +11,7 @@
   h4,
   h5,
   h6,
+  hr,
   table {
     grid-column: 1 / 4;
     @include bp(m) {
@@ -22,8 +23,8 @@
   }
   h2 {
     @extend %h2;
-    margin-top: calc(var(--baseline) * 0.5);
-    margin-bottom: calc(var(--baseline) * 0.25);
+    margin-top: calc(var(--baseline) * 1);
+    margin-bottom: calc(var(--baseline) * 0.5);
 
     &:first-child {
       margin-top: 0;
@@ -31,6 +32,8 @@
   }
   h3 {
     @extend %h3;
+    margin-top: calc(var(--baseline) * 0.5);
+    margin-bottom: calc(var(--baseline) * 0.25);
     &:first-child {
       margin-top: 0;
     }
@@ -40,6 +43,12 @@
   }
   table {
     margin-bottom: calc(var(--baseline) / 2);
+  }
+  hr {
+    margin-top: var(--baseline);
+    margin-bottom: calc(var(--baseline) * 1.5);
+    border: 0;
+    border-top: 1px solid var(--gray);
   }
   td,
   th {
@@ -51,6 +60,7 @@
       margin: 0;
     }
   }
+
   th {
     @extend %caption-bold;
     white-space: nowrap;
