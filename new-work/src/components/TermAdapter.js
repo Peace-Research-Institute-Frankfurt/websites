@@ -5,7 +5,7 @@ import TooltipAdapter from './TooltipAdapter'
 import * as styles from './Term.module.scss'
 import MarkdownRenderer from 'react-markdown-renderer'
 
-export default function TermAdapter({ t, children, ...props }) {
+export default function TermAdapter({ t, children }) {
   const data = useStaticQuery(graphql`
     query TermQuery {
       terms: allTermsJson {
@@ -18,13 +18,17 @@ export default function TermAdapter({ t, children, ...props }) {
     }
   `)
 
+  const [isExpanded, setIsExanded] = useState(false)
   const maxWordCount = 25
 
   const termNode = data.terms.nodes.find((node) => {
     return node.term_id === t
   })
 
-  const [isExpanded, setIsExanded] = useState(false)
+  if (!termNode) {
+    console.log(`Could not find term: ${t}`)
+    return <>{t}</>
+  }
 
   const isTruncated = termNode.description.split(' ').length > maxWordCount
   const truncatedDescription = termNode.description.split(' ').slice(0, maxWordCount).join(' ') + '...'
