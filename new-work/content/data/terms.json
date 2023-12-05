@@ -449,5 +449,6 @@
     "term_id": "young-professionals",
     "description": "Young Professionals werden Beschäftigte in einer spezifischen Altersgruppe genannt, die zwischen dem Ende ihrer Ausbildung und dem Erreichen von Führungspositionen stehen. Sie zeichnen sich oft durch hohe [Motivation](#motivation), den Wunsch nach beruflicher Entwicklung und durch ihre Affinität zu neuen Technologien aus. Die genaue Altersspanne kann variieren, aber in der Regel sind es Menschen zwischen Mitte 20 und Anfang 30."
   },
-  { "title": "Zwei-Pizza-Regel", "term_id": "zwei-pizza-regel", "description": "TK" }
+  { "title": "Zwei-Pizza-Regel", "term_id": "zwei-pizza-regel", "description": "TK" },
+  { "title": "Retrospektive", "term_id": "retrospektive", "description": "TK" }
 ]
