@@ -111,11 +111,20 @@
     }
   }
   sup {
-    @extend %caption;
     vertical-align: baseline;
-    position: relative;
     display: inline-block;
-    top: -0.4em;
+    font-size: 0.8em;
+    margin-left: 0.1em;
+    margin-right: 0.1em;
+    color: var(--gray);
+    height: 1.1em;
+    width: 1.1em;
+    padding-top: 0.2em;
+    border-radius: 1000px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--gray);
     a {
       text-decoration: none !important;
     }
