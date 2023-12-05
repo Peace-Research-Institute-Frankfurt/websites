@@ -96,8 +96,8 @@
       margin-bottom: 0;
     }
   }
-  ul,
-  ol {
+  & > ul,
+  & > ol {
     padding-left: 1em;
   }
   ul li {

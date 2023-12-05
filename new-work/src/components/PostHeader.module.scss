@@ -39,6 +39,10 @@
   margin: 0 var(--padding);
   border-top-left-radius: var(--br);
   border-top-right-radius: var(--br);
+  border-left: 1px solid var(--gray);
+  border-right: 1px solid var(--gray);
+  border-top: 1px solid var(--gray);
+
   z-index: 100;
   position: relative;
 }

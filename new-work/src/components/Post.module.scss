@@ -47,6 +47,8 @@
   background: var(--black);
   margin: 0 var(--padding);
   padding: var(--baseline) var(--padding);
+  border-left: 1px solid var(--gray);
+  border-right: 1px solid var(--gray);
   padding-bottom: 0;
   display: grid;
   grid-template-columns: 1fr minmax(min-content, 30rem) 1fr;
