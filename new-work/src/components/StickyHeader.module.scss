@@ -106,18 +106,18 @@
 }
 
 .bookmarks-counter {
-  font-size: var(--ms--1);
+  font-size: 0.75em;
   aspect-ratio: 1 / 1;
   display: inline-flex;
-  border: 1px solid var(--gray);
+  border: 1px solid var(--gray-light);
   align-items: center;
   justify-content: center;
   font-feature-settings: 'tnum' 1;
   border-radius: 1000px;
-  width: 1.35em;
-  height: 1.35em;
+  width: 1.5em;
+  height: 1.5em;
   position: relative;
-  top: 0.1em;
+  top: 0.05em;
   margin-left: 0.35em;
 }
 
