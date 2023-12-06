@@ -342,7 +342,7 @@
   {
     "title": "Retrospektive",
     "term_id": "retrospektive",
-    "description": "TK"
+    "description": "Die Retrospektive ist ein regelmäßiges Meeting im Scrum-Framework, in dem der vorangegangene Sprint evaluiert wird. Der Fokus dabei ist nicht die Arbeit selbst, sondern die Prozesse, Werkzeuge, und Interaktionsformate die das Team verwendet."
   },
   {
     "title": "Rollenbasiertes Arbeiten",
@@ -457,6 +457,6 @@
   {
     "title": "Zwei-Pizza-Regel",
     "term_id": "zwei-pizza-regel",
-    "description": "TK"
+    "description": "Die Zwei-Pizza-Regel besagt dass Meetings, Workshops, und Arbeitsgruppen nur so viele Teilnehmer:innen haben sollten, wie von zwei Pizzas satt werden."
   }
 ]
