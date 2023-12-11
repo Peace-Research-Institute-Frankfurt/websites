@@ -24,7 +24,7 @@
     "@visx/shape": "^3.5.0",
     "colorjs.io": "^0.4.5",
     "dotenv": "^16.3.1",
-    "gatsby": "^5.12.11",
+    "gatsby": "^5.12.12",
     "gatsby-adapter-netlify": "^1.0.4",
     "gatsby-plugin-image": "^3.12.3",
     "gatsby-plugin-manifest": "^5.12.3",
