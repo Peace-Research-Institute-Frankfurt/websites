@@ -37,7 +37,7 @@
     "react-dom": "^18.2.0",
     "react-markdown-renderer": "^1.4.0",
     "remark-gfm": "^3.0.1",
-    "sass": "^1.69.5",
+    "sass": "^1.69.6",
     "slug": "^8.2.3",
     "validator": "^13.11.0"
   },
