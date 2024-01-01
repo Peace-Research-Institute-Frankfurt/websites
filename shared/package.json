@@ -15,9 +15,9 @@
     "react-markdown-renderer": "^1.4.0"
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "^6.1.5",
+    "@testing-library/jest-dom": "^6.1.6",
     "@testing-library/react": "^14.1.2",
-    "@testing-library/user-event": "^14.5.1",
+    "@testing-library/user-event": "^14.5.2",
     "accessibility-checker": "^3.1.64",
     "axios": "^1.6.0",
     "babel-jest": "^29.7.0",
