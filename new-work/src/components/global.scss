@@ -130,26 +130,27 @@ img {
 .footnotes {
   @extend %copy;
   grid-column: 1 / 4;
-  margin-top: var(--baseline);
   counter-reset: fn_li;
   border-top: 1px solid var(--gray);
-  color: var(--gray);
+  color: var(--gray-light);
   padding-top: var(--baseline);
-  text-align: center;
+  margin-top: calc(var(--baseline) * 0.5);
+  @include bp(m) {
+    margin-top: var(--baseline);
+    grid-column: 2 / 3;
+  }
   ol {
     padding-left: 0 !important;
   }
   li {
-    display: inline;
     position: relative;
+    display: block;
+    list-style: none;
     padding-left: 1.25em;
     margin-right: 0.5em;
     counter-increment: fn_li;
     &:target {
       color: var(--white);
-    }
-    p {
-      display: inline;
     }
     &:before {
       content: counter(fn_li);
@@ -163,7 +164,7 @@ img {
       align-items: center;
       font-size: 0.8em;
       left: 0;
-      top: -0.1em;
+      top: 0.15em;
       padding-top: 0.15em;
     }
   }

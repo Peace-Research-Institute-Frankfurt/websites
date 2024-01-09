@@ -45,10 +45,14 @@
     margin-bottom: calc(var(--baseline) / 2);
   }
   hr {
-    margin-top: var(--baseline);
-    margin-bottom: calc(var(--baseline) * 1.5);
     border: 0;
     border-top: 1px solid var(--gray);
+    margin-top: calc(var(--baseline) * 0.5);
+    margin-bottom: calc(var(--baseline) * 1);
+    @include bp(m) {
+      margin-top: var(--baseline);
+      margin-bottom: calc(var(--baseline) * 1.5);
+    }
   }
   td,
   th {
