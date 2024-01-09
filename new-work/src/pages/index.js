@@ -67,11 +67,10 @@ const Index = ({ data }) => {
           title="Neue Arbeitsformen für die Wissenschaft"
           intro={
             <>
-              New Work revolutioniert herkömmliche Strukturen, stellt tradierte Arbeitsweisen in Frage und stärkt die Bedeutung des Menschen mit
-              seinen Kompetenzen, Talenten, Wünschen und Emotionen. In Bezug auf die Leibniz Gemeinschaft und ihre wissenschaftlichen Einrichtungen
-              bietet diese Publikation zahlreiche Handreichungen, Ressourcen und Texte – rund um die Themen{' '}
-              <span className={styles.introSpace}>Räume</span>, <span className={styles.introPeople}>Mensch</span> und{' '}
-              <span className={styles.introTools}>Tools</span>.
+              Vor dem Hintergrund der Digitalisierung revolutioniert New Work herkömmliche Strukturen, stellt tradierte Arbeitsweisen infrage und
+              stärkt die Bedeutung des Menschen mit seinen Kompetenzen, Talenten, Wünschen und Emotionen. Die Leibniz-Gemeinschaft bietet mit diesem
+              Web-Magazin zahlreiche Interviews, Texte und Tipps und unterstützt so ihre Forschungsinstitute auf dem Weg zu neuen Räumen und
+              Arbeitsformen.
             </>
           }
           credit="[Verena Mack](https://verenamack.com/)"
