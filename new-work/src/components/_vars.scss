@@ -83,7 +83,7 @@
   em {
     font-style: italic;
   }
-  strong {
+  & > p > strong {
     font-variation-settings: 'wght' 600;
     background: white;
     color: var(--black);
