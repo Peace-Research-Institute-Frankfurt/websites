@@ -55,7 +55,7 @@
     "csv-loader": "^3.0.5",
     "csv-parse": "^5.5.3",
     "eslint-import-resolver-alias": "^1.1.2",
-    "mapshaper": "^0.6.59",
+    "mapshaper": "^0.6.61",
     "qs": "^6.11.2"
   }
 }
