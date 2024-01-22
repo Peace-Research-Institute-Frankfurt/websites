@@ -1,5 +1,1692 @@
 [
   {
+    "name": "att",
+    "title": "Arms Trade Treaty (ATT)",
+    "date": "2013-04-02",
+    "shortTitle": "Arms Trade Treaty",
+    "description": "The Arms Trade Treaty regulates the international trade in conventional arms and aims to prevent illicit trading and diversions. ",
+    "scrapeURL": "https://treaties.unoda.org/t/att/participants",
+    "participants": [
+      {
+        "country": "AFG",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2020-07-30"
+          }
+        ]
+      },
+      {
+        "country": "ALB",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          },
+          {
+            "type": "ratification",
+            "date": "2014-03-19"
+          }
+        ]
+      },
+      {
+        "country": "AND",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2014-12-18"
+          },
+          {
+            "type": "ratification",
+            "date": "2022-12-02"
+          }
+        ]
+      },
+      {
+        "country": "AGO",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-09-24"
+          }
+        ]
+      },
+      {
+        "country": "ATG",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          },
+          {
+            "type": "ratification",
+            "date": "2013-08-12"
+          }
+        ]
+      },
+      {
+        "country": "ARG",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          },
+          {
+            "type": "ratification",
+            "date": "2014-09-25"
+          }
+        ]
+      },
+      {
+        "country": "AUS",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          },
+          {
+            "type": "ratification",
+            "date": "2014-06-03"
+          }
+        ]
+      },
+      {
+        "country": "AUT",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          },
+          {
+            "type": "ratification",
+            "date": "2014-06-03"
+          }
+        ]
+      },
+      {
+        "country": "BHS",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          },
+          {
+            "type": "ratification",
+            "date": "2014-09-25"
+          }
+        ]
+      },
+      {
+        "country": "BHR",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-11-21"
+          }
+        ]
+      },
+      {
+        "country": "BGD",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-09-26"
+          }
+        ]
+      },
+      {
+        "country": "BRB",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-09-25"
+          },
+          {
+            "type": "ratification",
+            "date": "2015-05-20"
+          }
+        ]
+      },
+      {
+        "country": "BEL",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          },
+          {
+            "type": "ratification",
+            "date": "2014-06-03"
+          }
+        ]
+      },
+      {
+        "country": "BLZ",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          },
+          {
+            "type": "ratification",
+            "date": "2015-03-19"
+          }
+        ]
+      },
+      {
+        "country": "BEN",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          },
+          {
+            "type": "ratification",
+            "date": "2016-11-07"
+          }
+        ]
+      },
+      {
+        "country": "BIH",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-09-25"
+          },
+          {
+            "type": "ratification",
+            "date": "2014-09-25"
+          }
+        ]
+      },
+      {
+        "country": "BWA",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2019-06-07"
+          }
+        ]
+      },
+      {
+        "country": "BRA",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          },
+          {
+            "type": "ratification",
+            "date": "2018-08-14"
+          }
+        ]
+      },
+      {
+        "country": "BGR",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-07-02"
+          },
+          {
+            "type": "ratification",
+            "date": "2014-04-02"
+          }
+        ]
+      },
+      {
+        "country": "BFA",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          },
+          {
+            "type": "ratification",
+            "date": "2014-06-03"
+          }
+        ]
+      },
+      {
+        "country": "BDI",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          }
+        ]
+      },
+      {
+        "country": "CPV",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-09-25"
+          },
+          {
+            "type": "ratification",
+            "date": "2016-09-23"
+          }
+        ]
+      },
+      {
+        "country": "KHM",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-10-18"
+          }
+        ]
+      },
+      {
+        "country": "CMR",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2014-12-03"
+          },
+          {
+            "type": "ratification",
+            "date": "2018-06-18"
+          }
+        ]
+      },
+      {
+        "country": "CAN",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2019-06-19"
+          }
+        ]
+      },
+      {
+        "country": "CAF",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2015-10-07"
+          }
+        ]
+      },
+      {
+        "country": "TCD",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-09-25"
+          },
+          {
+            "type": "ratification",
+            "date": "2015-03-25"
+          }
+        ]
+      },
+      {
+        "country": "CHL",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          },
+          {
+            "type": "ratification",
+            "date": "2018-05-18"
+          }
+        ]
+      },
+      {
+        "country": "CHN",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2020-07-06"
+          }
+        ]
+      },
+      {
+        "country": "COL",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-09-24"
+          }
+        ]
+      },
+      {
+        "country": "COM",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-09-26"
+          }
+        ]
+      },
+      {
+        "country": "COG",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-09-25"
+          }
+        ]
+      },
+      {
+        "country": "CRI",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          },
+          {
+            "type": "ratification",
+            "date": "2013-09-25"
+          }
+        ]
+      },
+      {
+        "country": "CIV",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          },
+          {
+            "type": "ratification",
+            "date": "2015-02-26"
+          }
+        ]
+      },
+      {
+        "country": "HRV",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          },
+          {
+            "type": "ratification",
+            "date": "2014-04-02"
+          }
+        ]
+      },
+      {
+        "country": "CYP",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          },
+          {
+            "type": "ratification",
+            "date": "2016-05-10"
+          }
+        ]
+      },
+      {
+        "country": "CZE",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          },
+          {
+            "type": "ratification",
+            "date": "2014-09-25"
+          }
+        ]
+      },
+      {
+        "country": "DNK",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          },
+          {
+            "type": "Unknown treaty event type (Approval)",
+            "date": "2014-04-02"
+          }
+        ]
+      },
+      {
+        "country": "DJI",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          }
+        ]
+      },
+      {
+        "country": "DMA",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-10-01"
+          },
+          {
+            "type": "ratification",
+            "date": "2015-05-21"
+          }
+        ]
+      },
+      {
+        "country": "DOM",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          },
+          {
+            "type": "ratification",
+            "date": "2014-08-07"
+          }
+        ]
+      },
+      {
+        "country": "SLV",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-05"
+          },
+          {
+            "type": "ratification",
+            "date": "2014-04-02"
+          }
+        ]
+      },
+      {
+        "country": "EST",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          },
+          {
+            "type": "Unknown treaty event type (Approval)",
+            "date": "2014-04-02"
+          }
+        ]
+      },
+      {
+        "country": "SWZ",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-09-04"
+          }
+        ]
+      },
+      {
+        "country": "FIN",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          },
+          {
+            "type": "ratification",
+            "date": "2014-04-02"
+          }
+        ]
+      },
+      {
+        "country": "FRA",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          },
+          {
+            "type": "ratification",
+            "date": "2014-04-02"
+          }
+        ]
+      },
+      {
+        "country": "GAB",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-09-25"
+          },
+          {
+            "type": "acceptance",
+            "date": "2022-09-21"
+          }
+        ]
+      },
+      {
+        "country": "GEO",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2014-09-25"
+          },
+          {
+            "type": "ratification",
+            "date": "2016-05-23"
+          }
+        ]
+      },
+      {
+        "country": "DEU",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          },
+          {
+            "type": "ratification",
+            "date": "2014-04-02"
+          }
+        ]
+      },
+      {
+        "country": "GHA",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-09-24"
+          },
+          {
+            "type": "ratification",
+            "date": "2015-12-22"
+          }
+        ]
+      },
+      {
+        "country": "GRC",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          },
+          {
+            "type": "ratification",
+            "date": "2016-02-29"
+          }
+        ]
+      },
+      {
+        "country": "GRD",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          },
+          {
+            "type": "ratification",
+            "date": "2013-10-22"
+          }
+        ]
+      },
+      {
+        "country": "GTM",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-24"
+          },
+          {
+            "type": "ratification",
+            "date": "2016-07-12"
+          }
+        ]
+      },
+      {
+        "country": "GIN",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-07-29"
+          },
+          {
+            "type": "ratification",
+            "date": "2014-10-21"
+          }
+        ]
+      },
+      {
+        "country": "GNB",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-09-26"
+          },
+          {
+            "type": "ratification",
+            "date": "2018-10-22"
+          }
+        ]
+      },
+      {
+        "country": "GUY",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          },
+          {
+            "type": "ratification",
+            "date": "2013-07-04"
+          }
+        ]
+      },
+      {
+        "country": "HTI",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2014-03-21"
+          }
+        ]
+      },
+      {
+        "country": "HND",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-09-25"
+          },
+          {
+            "type": "ratification",
+            "date": "2017-03-01"
+          }
+        ]
+      },
+      {
+        "country": "HUN",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          },
+          {
+            "type": "ratification",
+            "date": "2014-04-02"
+          }
+        ]
+      },
+      {
+        "country": "ISL",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          },
+          {
+            "type": "ratification",
+            "date": "2013-07-02"
+          }
+        ]
+      },
+      {
+        "country": "IRL",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          },
+          {
+            "type": "ratification",
+            "date": "2014-04-02"
+          }
+        ]
+      },
+      {
+        "country": "ISR",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2014-12-18"
+          }
+        ]
+      },
+      {
+        "country": "ITA",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          },
+          {
+            "type": "ratification",
+            "date": "2014-04-02"
+          }
+        ]
+      },
+      {
+        "country": "JAM",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          },
+          {
+            "type": "ratification",
+            "date": "2014-06-03"
+          }
+        ]
+      },
+      {
+        "country": "JPN",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          },
+          {
+            "type": "acceptance",
+            "date": "2014-05-09"
+          }
+        ]
+      },
+      {
+        "country": "KAZ",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2017-12-08"
+          }
+        ]
+      },
+      {
+        "country": "KIR",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-09-25"
+          }
+        ]
+      },
+      {
+        "country": "LVA",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          },
+          {
+            "type": "ratification",
+            "date": "2014-04-02"
+          }
+        ]
+      },
+      {
+        "country": "LBN",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2014-10-27"
+          },
+          {
+            "type": "ratification",
+            "date": "2019-05-09"
+          }
+        ]
+      },
+      {
+        "country": "LSO",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-09-25"
+          },
+          {
+            "type": "ratification",
+            "date": "2016-01-25"
+          }
+        ]
+      },
+      {
+        "country": "LBR",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-04"
+          },
+          {
+            "type": "ratification",
+            "date": "2015-04-21"
+          }
+        ]
+      },
+      {
+        "country": "LBY",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-07-09"
+          }
+        ]
+      },
+      {
+        "country": "LIE",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          },
+          {
+            "type": "ratification",
+            "date": "2014-12-16"
+          }
+        ]
+      },
+      {
+        "country": "LTU",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          },
+          {
+            "type": "ratification",
+            "date": "2014-12-18"
+          }
+        ]
+      },
+      {
+        "country": "LUX",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          },
+          {
+            "type": "ratification",
+            "date": "2014-06-03"
+          }
+        ]
+      },
+      {
+        "country": "MDG",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-09-25"
+          },
+          {
+            "type": "ratification",
+            "date": "2016-09-22"
+          }
+        ]
+      },
+      {
+        "country": "MWI",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2014-01-09"
+          }
+        ]
+      },
+      {
+        "country": "MYS",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-09-26"
+          }
+        ]
+      },
+      {
+        "country": "MDV",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2019-09-27"
+          }
+        ]
+      },
+      {
+        "country": "MLI",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          },
+          {
+            "type": "ratification",
+            "date": "2013-12-03"
+          }
+        ]
+      },
+      {
+        "country": "MLT",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          },
+          {
+            "type": "ratification",
+            "date": "2014-04-02"
+          }
+        ]
+      },
+      {
+        "country": "MRT",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          },
+          {
+            "type": "ratification",
+            "date": "2015-09-23"
+          }
+        ]
+      },
+      {
+        "country": "MUS",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2015-07-23"
+          }
+        ]
+      },
+      {
+        "country": "MEX",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          },
+          {
+            "type": "ratification",
+            "date": "2013-09-25"
+          }
+        ]
+      },
+      {
+        "country": "MCO",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2016-06-30"
+          }
+        ]
+      },
+      {
+        "country": "MNG",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-09-24"
+          }
+        ]
+      },
+      {
+        "country": "MNE",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          },
+          {
+            "type": "ratification",
+            "date": "2014-08-18"
+          }
+        ]
+      },
+      {
+        "country": "MOZ",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          },
+          {
+            "type": "ratification",
+            "date": "2018-12-14"
+          }
+        ]
+      },
+      {
+        "country": "NAM",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2014-09-25"
+          },
+          {
+            "type": "ratification",
+            "date": "2020-04-28"
+          }
+        ]
+      },
+      {
+        "country": "NRU",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-09-25"
+          }
+        ]
+      },
+      {
+        "country": "NLD",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          },
+          {
+            "type": "acceptance",
+            "date": "2014-12-18"
+          }
+        ]
+      },
+      {
+        "country": "NZL",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          },
+          {
+            "type": "ratification",
+            "date": "2014-09-02"
+          }
+        ]
+      },
+      {
+        "country": "NER",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2014-03-24"
+          },
+          {
+            "type": "ratification",
+            "date": "2015-07-24"
+          }
+        ]
+      },
+      {
+        "country": "NGA",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-08-12"
+          },
+          {
+            "type": "ratification",
+            "date": "2013-08-12"
+          }
+        ]
+      },
+      {
+        "country": "NIU",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2020-08-06"
+          }
+        ]
+      },
+      {
+        "country": "MKD",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-09-25"
+          },
+          {
+            "type": "ratification",
+            "date": "2014-03-06"
+          }
+        ]
+      },
+      {
+        "country": "NOR",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          },
+          {
+            "type": "ratification",
+            "date": "2014-02-12"
+          }
+        ]
+      },
+      {
+        "country": "PLW",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          },
+          {
+            "type": "ratification",
+            "date": "2019-04-08"
+          }
+        ]
+      },
+      {
+        "country": "PAN",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          },
+          {
+            "type": "ratification",
+            "date": "2014-02-11"
+          }
+        ]
+      },
+      {
+        "country": "PRY",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-19"
+          },
+          {
+            "type": "ratification",
+            "date": "2015-04-09"
+          }
+        ]
+      },
+      {
+        "country": "PER",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-09-24"
+          },
+          {
+            "type": "ratification",
+            "date": "2016-02-16"
+          }
+        ]
+      },
+      {
+        "country": "PHL",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-09-25"
+          },
+          {
+            "type": "ratification",
+            "date": "2022-03-24"
+          }
+        ]
+      },
+      {
+        "country": "POL",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-07-01"
+          },
+          {
+            "type": "ratification",
+            "date": "2014-12-17"
+          }
+        ]
+      },
+      {
+        "country": "PRT",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          },
+          {
+            "type": "ratification",
+            "date": "2014-09-25"
+          }
+        ]
+      },
+      {
+        "country": "KOR",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          },
+          {
+            "type": "ratification",
+            "date": "2016-11-28"
+          }
+        ]
+      },
+      {
+        "country": "MDA",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-09-10"
+          },
+          {
+            "type": "ratification",
+            "date": "2015-09-28"
+          }
+        ]
+      },
+      {
+        "country": "ROU",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          },
+          {
+            "type": "ratification",
+            "date": "2014-04-02"
+          }
+        ]
+      },
+      {
+        "country": "RWA",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-05"
+          }
+        ]
+      },
+      {
+        "country": "KNA",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-05"
+          },
+          {
+            "type": "ratification",
+            "date": "2014-12-15"
+          }
+        ]
+      },
+      {
+        "country": "LCA",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          },
+          {
+            "type": "ratification",
+            "date": "2014-09-25"
+          }
+        ]
+      },
+      {
+        "country": "VCT",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          },
+          {
+            "type": "ratification",
+            "date": "2014-06-03"
+          }
+        ]
+      },
+      {
+        "country": "WSM",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-09-25"
+          },
+          {
+            "type": "ratification",
+            "date": "2014-06-03"
+          }
+        ]
+      },
+      {
+        "country": "SMR",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2014-12-19"
+          },
+          {
+            "type": "ratification",
+            "date": "2015-07-29"
+          }
+        ]
+      },
+      {
+        "country": "STP",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2014-12-19"
+          },
+          {
+            "type": "ratification",
+            "date": "2020-07-28"
+          }
+        ]
+      },
+      {
+        "country": "SEN",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          },
+          {
+            "type": "ratification",
+            "date": "2014-09-25"
+          }
+        ]
+      },
+      {
+        "country": "SRB",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-08-12"
+          },
+          {
+            "type": "ratification",
+            "date": "2014-12-05"
+          }
+        ]
+      },
+      {
+        "country": "SYC",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          },
+          {
+            "type": "ratification",
+            "date": "2015-11-02"
+          }
+        ]
+      },
+      {
+        "country": "SLE",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-09-25"
+          },
+          {
+            "type": "ratification",
+            "date": "2014-08-12"
+          }
+        ]
+      },
+      {
+        "country": "SGP",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2014-12-05"
+          }
+        ]
+      },
+      {
+        "country": "SVK",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-10"
+          },
+          {
+            "type": "ratification",
+            "date": "2014-04-02"
+          }
+        ]
+      },
+      {
+        "country": "SVN",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          },
+          {
+            "type": "ratification",
+            "date": "2014-04-02"
+          }
+        ]
+      },
+      {
+        "country": "ZAF",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-09-25"
+          },
+          {
+            "type": "ratification",
+            "date": "2014-12-22"
+          }
+        ]
+      },
+      {
+        "country": "ESP",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          },
+          {
+            "type": "ratification",
+            "date": "2014-04-02"
+          }
+        ]
+      },
+      {
+        "country": "PSE",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2017-12-29"
+          }
+        ]
+      },
+      {
+        "country": "SUR",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          },
+          {
+            "type": "ratification",
+            "date": "2018-10-19"
+          }
+        ]
+      },
+      {
+        "country": "SWE",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          },
+          {
+            "type": "ratification",
+            "date": "2014-06-16"
+          }
+        ]
+      },
+      {
+        "country": "CHE",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          },
+          {
+            "type": "ratification",
+            "date": "2015-01-30"
+          }
+        ]
+      },
+      {
+        "country": "THA",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2014-11-25"
+          }
+        ]
+      },
+      {
+        "country": "TGO",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          },
+          {
+            "type": "ratification",
+            "date": "2015-10-08"
+          }
+        ]
+      },
+      {
+        "country": "TTO",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          },
+          {
+            "type": "ratification",
+            "date": "2013-09-25"
+          }
+        ]
+      },
+      {
+        "country": "TUR",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-07-02"
+          }
+        ]
+      },
+      {
+        "country": "TUV",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          },
+          {
+            "type": "ratification",
+            "date": "2015-09-04"
+          }
+        ]
+      },
+      {
+        "country": "UKR",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2014-09-23"
+          }
+        ]
+      },
+      {
+        "country": "ARE",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-07-09"
+          }
+        ]
+      },
+      {
+        "country": "GBR",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          },
+          {
+            "type": "ratification",
+            "date": "2014-04-02"
+          }
+        ]
+      },
+      {
+        "country": "TZA",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          }
+        ]
+      },
+      {
+        "country": "USA",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-09-25"
+          }
+        ]
+      },
+      {
+        "country": "URY",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          },
+          {
+            "type": "ratification",
+            "date": "2014-09-25"
+          }
+        ]
+      },
+      {
+        "country": "VUT",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-07-26"
+          }
+        ]
+      },
+      {
+        "country": "ZMB",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-09-25"
+          },
+          {
+            "type": "ratification",
+            "date": "2016-05-20"
+          }
+        ]
+      },
+      {
+        "country": "ZWE",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2014-12-18"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "name": "npt",
     "title": "Treaty on the Non-Proliferation of Nuclear Weapons",
     "date": "1970-04-05",
