@@ -35,7 +35,7 @@ export default function TermAdapter({ t, children }) {
 
   const description = (
     <>
-      <MarkdownRenderer markdown={isExpanded ? termNode.description : truncatedDescription} />
+      <MarkdownRenderer markdown={isExpanded || !isTruncated ? termNode.description : truncatedDescription} />
       {isTruncated && (
         <button
           onClick={() => {
