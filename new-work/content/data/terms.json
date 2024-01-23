@@ -280,6 +280,11 @@
     "description": "Unter Leadership versteht man die Fähigkeit, andere zu inspirieren, zu motivieren und zu führen, um gemeinsame Ziele zu erreichen. Traditionell entwickeln Führungskräfte eine Vision, setzen klare Ziele und gestalten den Weg dorthin. Nicht zuletzt durch die [New-Work](#new-work)-Bewegung haben sich neue Führungskompetenzen herausgebildet, wie etwa Coaching, partizipative Entscheidungsfindung, Vertrauenskultur und offene Kommunikation. Insgesamt ist die Lead-Rolle bei New Work von einem kooperativen, unterstützenden und wertschätzenden Führungsstil geprägt, der die [Selbstorganisation](#selbstorganisation) und Selbstverantwortung der Beschäftigten fördert und zu einer positiven Arbeitskultur beiträgt."
   },
   {
+    "title": "Microlearning",
+    "description": "TODO",
+    "term_id": "microlearning"
+  },
+  {
     "title": "Mindset",
     "term_id": "mindset",
     "description": "Mindset nennt man die Denkweise, die Überzeugungen und Einstellungen eines Menschen, wie jemand Situationen und Herausforderungen wahrnimmt, interpretiert und an diese herangeht. Ein positives oder negatives Mindset kann sich auf die persönliche Entwicklung, das Verhalten, die Leistung und die [Resilienz](#resilienz) einer Person auswirken. Ein positives und konstruktives Mindset zeichnet sich durch Offenheit, Wachstum, Flexibilität und die Überzeugung aus, dass Fähigkeiten und Intelligenz durch Anstrengung und Lernen entwickelt werden können."
@@ -388,6 +393,11 @@
     "title": "Soziokratie",
     "term_id": "soziokratie",
     "description": "Soziokratie ist ein Konzept der Organisationsführung, das auf Prinzipien der Gleichberechtigung, [Selbstorganisation](#selbstorganisation) und auf Konsens basiert. Ziel ist die effektive Zusammenarbeit, eine klare Rollenverteilung und eine partizipative Entscheidungskultur. Als Grundlage der Soziokratie dient ein Kreismodell, anhand dessen eine Organisation unterteilt wird: Jeder Kreis (bzw. jedes Team) bekommt auf diese Weise einen bestimmten Verantwortungsbereich zugewiesen."
+  },
+  {
+    "title": "Starfish-Methode",
+    "description": "TODO",
+    "term_id": "starfish-methode"
   },
   {
     "title": "Sync-Meeting",
