@@ -380,6 +380,11 @@
     "description": "Mit Servant Leadership ist ein Führungsstil gemeint, der den Mitarbeitenden dient und sie unterstützt. Anstatt seine Autorität und Macht zu betonen, liegt der Fokus des Servant Leaders auf den Bedürfnissen der Teammitglieder. Ziel ist es, eine Umgebung zu schaffen, in der Beschäftigte ihr volles Potenzial entfalten können und sich wertgeschätzt fühlen. Servant Leadership zeichnet sich durch Empathie, Dienstbarkeit, Ermächtigung und ganzheitliches Denken aus."
   },
   {
+    "title": "Silos",
+    "description": "Silos werden Strukturen und Verhaltensmuster genannt, die die Zusammenarbeit und Kommunikation innerhalb eines Unternehmens oder Instituts behindern. Gemeint sind damit zum Beispiel starre, isolierte Abteilungsstrukturen, in denen Informationen und Ressourcen nur innerhalb der eigenen Abteilung zirkulieren. Der Begriff bezieht sich aber auch auf parallel existierende, nicht aufeinander abgestimmte Tools und digitale Plattformen, die Barrieren für einen reibungslosen Informationsfluss darstellen. Phänomene dieser Art stehen im Widerspruch zu den Prinzipien von New Work, die darauf abzielen, agile und kooperative Arbeitsumgebungen zu schaffen. Ziel von New Work ist es deshalb, solche Silos oder auch ein Silodenken, das ein sich abgrenzendes Verhalten begünstigt, abzubauen.",
+    "term_id": "silos"
+  },
+  {
     "title": "Sinnstiftende Arbeit",
     "term_id": "sinnstiftende-arbeit",
     "description": "Sinnstiftende Arbeit gibt Beschäftigten das Gefühl, dass ihre Arbeit einen positiven Einfluss hat und einen Beitrag für Unternehmen und Gesellschaft leistet – sie sind dann motivierter und engagierter. Mitarbeitende, die einer sinnstiftenden Arbeit nachgehen, sind bereit, zusätzliche Anstrengungen zu unternehmen und Herausforderungen zu meistern, um ihre Ziele zu erreichen."
