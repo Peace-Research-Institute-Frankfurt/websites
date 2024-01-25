@@ -34,6 +34,7 @@ export const query = graphql`
           hero_alt
           hero_portrait_alt
           hero_credit
+          hide_body
           hero_image {
             childImageSharp {
               gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
@@ -119,12 +120,16 @@ const Post = ({ data, children }) => {
           credit={frontmatter.hero_credit}
         />
         <main className={styles.body}>
-          <aside className={styles.credits}>
-            <Bylines authors={frontmatter.authors}></Bylines>
-          </aside>
-          <div className={styles.copy}>
-            <PostBody>{children}</PostBody>
-          </div>
+          {!frontmatter.hide_body && (
+            <>
+              <aside className={styles.credits}>
+                <Bylines authors={frontmatter.authors}></Bylines>
+              </aside>
+              <div className={styles.copy}>
+                <PostBody>{children}</PostBody>
+              </div>
+            </>
+          )}
           <nav className={styles.postsNav}>
             <PostList>{posts}</PostList>
           </nav>

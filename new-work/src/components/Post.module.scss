@@ -79,4 +79,9 @@
   margin: 0 calc(var(--padding) * -1);
   margin-top: var(--baseline);
   border-bottom: 1px solid var(--gray);
+  &:first-child {
+    border-top: 0;
+    margin-top: 0;
+    padding-top: 0;
+  }
 }
