@@ -2,10 +2,15 @@ import React from 'react'
 import * as styles from './PostHeader.module.scss'
 import MarkdownRenderer from 'react-markdown-renderer'
 
-export default function PostHeader({ title, intro, image, video, portrait, credit }) {
+export default function PostHeader({ title, intro, image, video, media, videoAspectRatio, portrait, credit }) {
   return (
-    <header className={`${styles.wrapper} ${video ? styles.hasVideo : ''} ${image ? styles.hasImage : ''}`}>
-      {video && <div className={styles.video}>{video}</div>}
+    <header className={`${styles.wrapper} ${video ? styles.hasVideo : ''} ${image || media ? styles.hasImage : ''}`}>
+      {media && <div className={styles.media}>{media}</div>}
+      {video && (
+        <div className={styles.video} style={{ aspectRatio: `${videoAspectRatio ? videoAspectRatio : '16 / 9'}` }}>
+          {video}
+        </div>
+      )}
       {image && <div className={styles.image}>{image}</div>}
       <div className={`${styles.container}`}>
         <div className={styles.titleContainer}>

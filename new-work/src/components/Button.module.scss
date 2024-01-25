@@ -15,8 +15,18 @@
   position: relative;
   padding: 0 0.65em;
   padding-bottom: 0.05em;
+  outline-offset: 2px;
+  transition: var(--fast);
   @include bp(m) {
     height: 1.85em;
+  }
+  &:hover,
+  &:focus-visible {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-decoration-style: dotted;
+    background: white;
+    text-underline-offset: 0.1em;
   }
 }
 
@@ -107,4 +117,8 @@
       height: 0.95em;
     }
   }
+}
+
+.large {
+  font-size: var(--ms-3);
 }

@@ -26,7 +26,6 @@
   letter-spacing: -0.02em;
   word-spacing: -0.05em;
   transition: var(--fast);
-  text-decoration: none !important;
   font-size: var(--ms-1);
   outline-offset: 5px;
   @include bp(s) {
@@ -41,6 +40,10 @@
   &:hover,
   &:focus-visible {
     filter: brightness(1.15);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-decoration-style: dotted;
+    text-underline-offset: 0.1em;
   }
 }
 

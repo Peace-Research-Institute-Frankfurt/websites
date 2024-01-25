@@ -45,6 +45,7 @@
   --ms-9: calc(var(--ms-8) * var(--ratio));
   --br-small: 4px;
   --fast: 100ms;
+  --slow: 300ms;
   --padding: max(1.5vw, 0.75rem);
   --padding-small: max(1vw, 0.5rem);
   --baseline: calc(var(--ms-0) * 1.35);
@@ -97,7 +98,7 @@ a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 textarea:focus-visible {
-  outline: 4px solid var(--white);
+  outline: 3px solid var(--white);
 }
 
 ::selection {

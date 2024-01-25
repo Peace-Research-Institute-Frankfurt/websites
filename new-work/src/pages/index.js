@@ -64,6 +64,7 @@ const Index = ({ data }) => {
               title="1_storyboard-rooms-animated"
             ></iframe>
           }
+          videoAspectRatio="16 / 10"
           title="Neue Arbeitsformen für die Wissenschaft"
           intro={
             <>
