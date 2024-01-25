@@ -41,7 +41,6 @@ function EmbedAdapter({ provider, ...props }) {
 function Vimeo({ styles, url, width, height, caption }) {
   const matches = url.match(/(?:vimeo.com\/)(\d+)(?:\/)(.+)/)
   let src = null
-  console.log(matches)
   if (matches && matches[1]) {
     src = `https://player.vimeo.com/video/${matches[1]}?h=${matches[2]}&title=0&byline=0&portrait=0`
   }

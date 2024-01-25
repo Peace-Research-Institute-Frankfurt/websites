@@ -11,6 +11,7 @@ import Bylines from './Bylines'
 import { PostList, PostListItem } from './PostList'
 
 import * as styles from './Post.module.scss'
+import PostHeaderVideo from './PostHeaderVideo'
 
 export const query = graphql`
   query ($id: String!) {
@@ -38,6 +39,7 @@ export const query = graphql`
               gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
             }
           }
+          hero_video
           hero_portrait {
             childImageSharp {
               gatsbyImageData(layout: CONSTRAINED, placeholder: NONE, width: 500)
@@ -83,7 +85,7 @@ const Post = ({ data, children }) => {
 
   let heroImage = null
   if (frontmatter.hero_image) {
-    heroImage = <GatsbyImage loading="eager" image={getImage(frontmatter.hero_image)} alt={frontmatter.hero_alt} />
+    heroImage = <GatsbyImage className={styles.heroImage} loading="eager" image={getImage(frontmatter.hero_image)} alt={frontmatter.hero_alt} />
   }
   let portraitImage = null
   if (frontmatter.hero_portrait) {
@@ -101,6 +103,8 @@ const Post = ({ data, children }) => {
     )
   })
 
+  const videoEl = frontmatter.hero_video ? <PostHeaderVideo url={frontmatter.hero_video} poster={heroImage} /> : null
+
   return (
     <App className={`${frontmatter.category}`}>
       <SkipToContent />
@@ -109,7 +113,7 @@ const Post = ({ data, children }) => {
         <PostHeader
           title={frontmatter.title}
           eyebrow={frontmatter.eyebrow || frontmatter.category}
-          image={heroImage}
+          media={videoEl ? videoEl : heroImage}
           portrait={portraitImage}
           intro={frontmatter.intro}
           credit={frontmatter.hero_credit}
