@@ -85,7 +85,7 @@ const Post = ({ data, children }) => {
 
   let heroImage = null
   if (frontmatter.hero_image) {
-    heroImage = <GatsbyImage loading="eager" image={getImage(frontmatter.hero_image)} alt={frontmatter.hero_alt} />
+    heroImage = <GatsbyImage className={styles.heroImage} loading="eager" image={getImage(frontmatter.hero_image)} alt={frontmatter.hero_alt} />
   }
   let portraitImage = null
   if (frontmatter.hero_portrait) {

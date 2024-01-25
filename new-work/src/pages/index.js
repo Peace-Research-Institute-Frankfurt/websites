@@ -38,6 +38,17 @@ const Index = ({ data }) => {
   })
   const [activeFilters, setActiveFilters] = useState(['meta', ...categories])
 
+  const heroVideo = (
+    <div className={styles.heroVideo}>
+      <iframe
+        src="https://player.vimeo.com/video/867440111?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&background=1"
+        frameBorder="0"
+        allow="autoplay; fullscreen; picture-in-picture"
+        title="Neue Arbeitsformen in der Wissenschaft"
+      ></iframe>
+    </div>
+  )
+
   const posts = data.posts.nodes
     .filter((node) => {
       return activeFilters.includes(node.childMdx.frontmatter.category)
@@ -56,15 +67,7 @@ const Index = ({ data }) => {
       <StickyHeader />
       <main id="content" className={styles.container}>
         <PostHeader
-          video={
-            <iframe
-              src="https://player.vimeo.com/video/867440111?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&background=1"
-              frameBorder="0"
-              allow="autoplay; fullscreen; picture-in-picture"
-              title="1_storyboard-rooms-animated"
-            ></iframe>
-          }
-          videoAspectRatio="16 / 10"
+          media={heroVideo}
           title="Neue Arbeitsformen für die Wissenschaft"
           intro={
             <>
