@@ -1,3 +1,5 @@
+@import 'vars';
+
 .controls {
   position: absolute;
   top: 50%;
@@ -5,6 +7,15 @@
   display: flex;
   justify-content: center;
   transform: translateY(-50%) translateY(-8vh);
+  flex-flow: column;
+  align-items: center;
+  gap: 1em;
+  p {
+    @extend %caption;
+  }
+  a {
+    text-decoration: underline;
+  }
 }
 
 .poster {
