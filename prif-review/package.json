@@ -23,7 +23,7 @@
     "@visx/scale": "^3.5.0",
     "@visx/shape": "^3.5.0",
     "colorjs.io": "^0.4.5",
-    "dotenv": "^16.3.1",
+    "dotenv": "^16.4.1",
     "gatsby": "^5.13.1",
     "gatsby-adapter-netlify": "^1.1.1",
     "gatsby-plugin-image": "^3.13.0",
