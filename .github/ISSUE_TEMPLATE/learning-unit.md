@@ -1,0 +1,99 @@
+---
+name: Learning Unit
+about: Standard workflow for producing a new Learning Unit
+title: Build Learning Unit XX
+labels: content, e-learning
+assignees: awesomephant, J4coop, NiklasSchg, SchmidtLi
+
+---
+
+- [ ] Autorenvertrag
+  - [ ] Vertrag an die Autor:innen schicken
+  - [ ] Unterschriebenen Vertrag erhalten
+  - [ ] An Ute Möntnich schicken, fuer Vorstand zum unterschreiben
+  - [ ] Unterschriebenen Vertrag zurück an die Autor:innen schicken
+- [ ] Bezahlung (1. Hälfte)
+  - [ ] Rechnung 1 erhalten
+  - [ ] Rechnung 1 bezahlt
+- [ ] Onboarding-Anruf mit Autor:innen
+- [ ] Onboarding-Email an Autor:innen (mit Dropbox-Links)
+- [ ] Email an Autor:innen: Schickt uns CV, Profilbild, Affiliation
+- [x] 1. Draft von Autor:innen erhalten (Word oder Dropbox)
+- [x] 1. Inhaltliches Review (Niklas + nn) (Kommentare im Dokument + Email)
+- [x] 2. Draft von Autor:innen erhalten
+- [x] 2. Inhaltiches Review (Niklas + nn)
+- [x] 2. Draft erhalten, alle sind zufrieden
+- [x] Draft an Language Editing schicken (mit Frist: 9.2.2024)
+- [ ] Final Draft kommt zurueck
+- [ ] Animated Podcasts vorbereiten
+  - [ ] Email an Autor:innen: Nehmt eure Audios auf (mit Frist)!
+  - [ ] Audiofile Rohversion da
+  - [x] Storyboards erstellen 
+  - [ ] Storyboards abnehmen
+    - [ ] Icon-Auftrag erteilen (Icons, die in dem Storyboard gebraucht werden)
+    - [ ] Zusätzliche Assets sammeln (Bilder, Videos, etc; Rechte beachten)
+    - [ ] Zusätzliche Assets bearbeiten falls nötig / erlaubt
+    - [ ] Icons kommen zurueck
+- [ ] Animated Podcasts erstellen
+  - [ ] Dropbox-Order erstellen (Storyboard, Audio-Dateien, Icons, Assets, Autoren-Namen, Autoren-Bilder, Script fuer Kontext)
+  - [ ] Ordner an Form-Art schicken / Auftrag erteilen mit Frist
+  - [ ] Video + Cover-Bild kommt zurück (in editierbarem Format für weiter unten)
+  - [ ] Abnahme durch uns, wenn nicht: Monita
+  - [ ] Untertitel erstellen (Premiere)
+  - [ ] Finale Video-Dateien exportieren
+  - [ ] Video + Cover-Bild + Untertitel hochladen auf VideoStream Server
+- [ ] Assets im Text
+  - [ ] Fotos
+    - [ ] Nutzungs- und Barbeitungsrechte klären
+    - [ ] Bild nachbearbeiten falls nötig && erlaubt
+    - [ ] Fertiges Bild in Dropbox Ablegen
+    - [ ] Korrekte Lizenzinformationen in die Permissions-Tabelle schreiben
+  - [ ] Unsere Grafiken (PRIF) (Landkarten, Diagramme)
+    - [ ] Datengrundlagen für Grafiken einholen
+    - [ ] Nutzungsrechte der Datengrundlage klären
+  - [ ] Externe Grafiken
+    - [ ] Skizzen prüfen
+    - [ ] Dropbox-Paket mit allen Skizzen/Notitzen vorberreiten
+    - [ ] Email an Agentur: Hier ist das Paket, macht Grafiken, Frist
+    - [ ] Grafiken kommen zurueck
+    - [ ] Email an Autoren: Gebt die Grafiken frei!
+    - [ ] Grafiken sind fertig und bereit
+    - [ ] Fertige Grafiken in Dropbox speichern fuer spaeter
+- MDX Create
+  - [ ] Branch: Feat/LuXX
+  - [ ] Neuer Order fuer LU
+  - [ ] `index.mdx`:
+    - [ ] Titel
+    - [ ] Autor:innen (Namen, Fotos, CV, Institution)
+    - [ ] Summary
+    - [ ] Learning Objectives
+    - [ ] Cover-Bild (+ credits)
+  - [ ] Kapitel-MDX
+    - [ ] Titel
+    - [ ] Intro
+    - [ ] Inhalte
+    - [ ] Assets einbauen: (Karten, Charts, Bilder, Interaktive Komponenten, Timelines, Zitate, Externe Grafiken)
+    - [ ] Videos einbauen
+    - [ ] ggf. Glossar-Begriffe einbetten und Definitionen hinterlegen (`terms.json`): ggf. Review durch Niklas
+  - Einheit fertig, branch deploy erzeugen
+  - Email an Autor: Hier ist dein Branch Deploy, bitte abnehmen (Frist)
+  - [ ] Freigabe liegt vor?
+- Certificate Section aktualisieren
+  - [ ] Neues Quiz anlegen (versteckt), mit neuen Fraugen fuer die neuen Inhalte
+  - [ ] Scores vom alten aufs neue Quiz übertragen
+  - [ ] Certifikat anpassen (auf das neue Quiz zeigen, aber alte Quizzes weiterhin gelten lassen)
+- [ ] Veröffentlichung
+  - [ ] Text an PrÖA für Twitter und Email: Wir gehen dann und dann live!
+  - Email an Autor:innen: Wir gehen dann und dann live!
+  - `git merge feat/luXX`
+  - [ ] Moodle-Upload
+    - [ ] Autorin Bild + Text einfügen
+    - [ ] Inhaltsverzeichnis in Lernbar aktualisieren (siehe Dokumentation, ist glaubt Max, eine HTML-Datei)
+    - [ ] Startseite: Anzahl Experts + Videos aktualisieren
+    - [ ] In Moodle: LU in "new" Kategorie einfuegen
+    - [ ] Beschreibungstext der LU
+    - [ ] Redirect in .htaccess aktualisieren
+- Post-Launch
+  - [ ] Email an Autor:in: Ist live, schick Rechnung 2!
+  - [ ] Rechnung 2 erhalten
+  - [ ] Rechnung 2 bezahlt
