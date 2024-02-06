@@ -1,7 +1,9 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState, useContext } from 'react'
+import { Link } from 'gatsby'
 import Button from './ButtonAdapter'
 import CrossIcon from '../images/cross.svg'
 import * as styles from './PostHeaderVideo.module.scss'
+import { EmbedChoicesContext } from '../context/EmbedChoicesContext'
 
 export default function PostHeaderVideo({ url, poster }) {
   const [isActive, setIsActive] = useState(false)
@@ -9,6 +11,7 @@ export default function PostHeaderVideo({ url, poster }) {
   const matches = url.match(/(?:vimeo.com\/)(\d+)(?:\/)(.+)/)
   const closeButtonRef = useRef(null)
   const openButtonRef = useRef(null)
+  const { choices, setChoices } = useContext(EmbedChoicesContext)
 
   return (
     <div className={`${isActive ? styles.mediaActive : ''}`}>
@@ -21,9 +24,17 @@ export default function PostHeaderVideo({ url, poster }) {
           onClick={() => {
             setIsActive(true)
             setLoadedOnce(true)
+            setChoices((prev) => {
+              let newChoices = { ...prev }
+              newChoices['vimeo'] = true
+              return newChoices
+            })
             closeButtonRef.current.focus()
           }}
         />
+        <p>
+          <Link to="/datenschutz">Datenschutz</Link>
+        </p>
       </div>
 
       <div className={`${styles.media}`}>
