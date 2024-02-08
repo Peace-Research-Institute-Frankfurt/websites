@@ -17,6 +17,9 @@ const config = {
       alt: 'image alt',
     },
   },
+  flags: {
+    FAST_DEV: true,
+  },
   adapter: adapter.default(),
   plugins: [
     'gatsby-plugin-image',

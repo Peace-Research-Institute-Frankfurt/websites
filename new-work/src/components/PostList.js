@@ -51,10 +51,10 @@ const PostList = ({ posts, activeFilters, currentPostId }) => {
         )
       })
     return (
-      <>
+      <div className={styles.group} key={`group-${group.name}`}>
         {group.name !== 'none' && <PostGroupLabel label={group.name} />}
         {postEls}
-      </>
+      </div>
     )
   })
 

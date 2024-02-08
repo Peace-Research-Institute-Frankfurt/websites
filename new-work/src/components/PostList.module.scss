@@ -154,6 +154,10 @@
   }
 }
 
+.group {
+  display: contents;
+}
+
 .group-label {
   @extend .title;
   text-transform: capitalize;
