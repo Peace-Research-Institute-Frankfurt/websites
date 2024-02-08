@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import * as styles from './LoadingScreen.module.scss'
 import Logo from '../images/leibniz-logo.svg'
 import useLocalStorage from '@shared/hooks/useLocalStorage'
@@ -9,14 +9,12 @@ export default function LoadingScreen() {
 
   const [active, setActive] = useState(seenOn === false || daysSinceSeen > 7)
 
-  useEffect(() => {
-    if (active) {
-      window.setTimeout(() => {
-        setActive(false)
-        setSeenOn(new Date())
-      }, 1500)
-    }
-  }, [active, setSeenOn])
+  if (typeof window !== 'undefined' && active) {
+    setSeenOn(new Date())
+    window.setTimeout(() => {
+      setActive(false)
+    }, 1500)
+  }
 
   return (
     <div className={`${styles.container} ${active ? styles.containerActive : ''}`}>
