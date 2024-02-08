@@ -7,6 +7,7 @@ import SkipToContent from '../components/SkipToContent'
 import PostHeader from '../components/PostHeader'
 import * as styles from './index.module.scss'
 import { PostList, PostListItem } from '../components/PostList'
+import LoadingScreen from '../components/LoadingScreen'
 
 export const query = graphql`
   query {
@@ -63,6 +64,7 @@ const Index = ({ data }) => {
     })
   return (
     <App>
+      <LoadingScreen />
       <SkipToContent />
       <StickyHeader />
       <main id="content" className={styles.container}>
