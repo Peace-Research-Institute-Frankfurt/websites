@@ -6,7 +6,7 @@ import StickyHeader from '../components/StickyHeader'
 import SkipToContent from '../components/SkipToContent'
 import PostHeader from '../components/PostHeader'
 import * as styles from './index.module.scss'
-import { PostGroupLabel, PostList, PostListItem } from '../components/PostList'
+import { PostList } from '../components/PostList'
 import LoadingScreen from '../components/LoadingScreen'
 
 export const query = graphql`

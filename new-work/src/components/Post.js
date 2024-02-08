@@ -8,7 +8,7 @@ import SkipToContent from './SkipToContent'
 import PostBody from './PostBody'
 import PostHeader from './PostHeader'
 import Bylines from './Bylines'
-import { PostList, PostListItem } from './PostList'
+import { PostList } from './PostList'
 
 import * as styles from './Post.module.scss'
 import PostHeaderVideo from './PostHeaderVideo'

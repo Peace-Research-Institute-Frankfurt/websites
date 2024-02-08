@@ -27,7 +27,7 @@ export default function Footer() {
       <div className={styles.logo}>
         <Logo />
       </div>
-      <div className={styles.copy}>
+      <div>
         <nav className={styles.nav}>
           <ul>
             <li>
