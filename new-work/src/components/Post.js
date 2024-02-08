@@ -28,6 +28,7 @@ export const query = graphql`
         }
         frontmatter {
           title
+          short_title
           intro
           order
           category
@@ -72,6 +73,7 @@ export const query = graphql`
           }
           frontmatter {
             title
+            short_title
             order
             intro
             category
@@ -99,7 +101,12 @@ const Post = ({ data, children }) => {
     const fm = node.childMdx.frontmatter
     return (
       <li key={`post-${node.id}`}>
-        <PostListItem isCurrent={node.id === data.post.id} title={fm.title} category={fm.category} slug={node.childMdx.fields.slug} />
+        <PostListItem
+          isCurrent={node.id === data.post.id}
+          title={fm.short_title || fm.title}
+          category={fm.category}
+          slug={node.childMdx.fields.slug}
+        />
       </li>
     )
   })
@@ -113,7 +120,7 @@ const Post = ({ data, children }) => {
       <article id="content" className={`${styles.container}`}>
         <PostHeader
           title={frontmatter.title}
-          eyebrow={frontmatter.eyebrow || frontmatter.category}
+          eyebrow={frontmatter.short_title}
           media={videoEl ? videoEl : heroImage}
           portrait={portraitImage}
           intro={frontmatter.intro}
