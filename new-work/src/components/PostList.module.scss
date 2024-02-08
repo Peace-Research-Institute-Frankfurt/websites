@@ -17,7 +17,7 @@
     padding: 0;
   }
   .group-label {
-    display: none;
+    display: none !important;
   }
   .item {
     border-bottom: 1px solid var(--gray-dark);
