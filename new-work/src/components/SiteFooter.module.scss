@@ -20,7 +20,8 @@
     flex-flow: row-reverse;
   }
   @include bp(l) {
-    padding: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 .nav {

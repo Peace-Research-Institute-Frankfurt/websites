@@ -21,6 +21,7 @@ export const query = graphql`
           frontmatter {
             title
             short_title
+            intro
             category
           }
         }
@@ -59,7 +60,7 @@ const Index = ({ data }) => {
       const fm = node.childMdx.frontmatter
       return (
         <li key={`post-${node.id}`}>
-          <PostListItem title={fm.short_title || fm.title} category={fm.category} slug={node.childMdx.fields.slug} />
+          <PostListItem title={fm.short_title || fm.title} category={fm.category} slug={node.childMdx.fields.slug} intro={fm.intro} />
         </li>
       )
     })
