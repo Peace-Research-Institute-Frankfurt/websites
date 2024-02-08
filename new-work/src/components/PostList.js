@@ -6,8 +6,58 @@ import ButtonGroup from './ButtonGroup'
 import GridIcon from '../images/grid.svg'
 import ListIcon from '../images/list.svg'
 
-const PostList = ({ children }) => {
+const PostList = ({ posts, activeFilters, currentPostId }) => {
   const [showList, setShowList] = useState(false)
+  const postGroups = [
+    'none',
+    ...posts
+      .map((node) => {
+        return node.childMdx.frontmatter.format
+      })
+      .filter((el, i, arr) => {
+        return el && arr.indexOf(el) === i
+      }),
+  ]
+
+  const groupedPosts = []
+  postGroups.forEach((group) => {
+    const newGroup = { name: group, posts: [] }
+    posts.forEach((node) => {
+      const format = node.childMdx.frontmatter.format || 'none'
+      if (format === group) {
+        newGroup.posts.push(node)
+      }
+    })
+    groupedPosts.push(newGroup)
+  })
+
+  const postEls = groupedPosts.map((group) => {
+    const postEls = group.posts
+      .filter((node) => {
+        return activeFilters ? activeFilters.includes(node.childMdx.frontmatter.category) : true
+      })
+      .map((node) => {
+        const fm = node.childMdx.frontmatter
+        return (
+          <li key={`post-${node.id}`}>
+            <PostListItem
+              title={fm.short_title || fm.title}
+              category={fm.category}
+              slug={node.childMdx.fields.slug}
+              intro={fm.intro}
+              isCurrent={currentPostId && currentPostId === node.id}
+            />
+          </li>
+        )
+      })
+    return (
+      <>
+        {group.name !== 'none' && <PostGroupLabel label={group.name} />}
+        {postEls}
+      </>
+    )
+  })
+
   return (
     <section className={`${styles.container} ${showList ? styles.showList : styles.showBubbles}`}>
       <div className={styles.controls}>
@@ -34,7 +84,7 @@ const PostList = ({ children }) => {
           />
         </ButtonGroup>
       </div>
-      <ol className={`${styles.list}`}>{children}</ol>
+      <ol className={`${styles.list}`}>{postEls}</ol>
     </section>
   )
 }
@@ -56,4 +106,8 @@ const PostListItem = ({ title, intro, category, isCurrent, slug }) => {
   )
 }
 
-export { PostListItem, PostList }
+const PostGroupLabel = ({ label }) => {
+  return <h3 className={styles.groupLabel}>{label}</h3>
+}
+
+export { PostListItem, PostGroupLabel, PostList }

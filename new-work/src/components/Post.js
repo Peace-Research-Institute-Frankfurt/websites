@@ -77,6 +77,7 @@ export const query = graphql`
             order
             intro
             category
+            format
           }
         }
       }
@@ -96,20 +97,6 @@ const Post = ({ data, children }) => {
       <GatsbyImage className={styles.heroPortrait} loading="eager" image={getImage(frontmatter.hero_portrait)} alt={frontmatter.hero_portrait_alt} />
     )
   }
-
-  const posts = data.posts.nodes.map((node) => {
-    const fm = node.childMdx.frontmatter
-    return (
-      <li key={`post-${node.id}`}>
-        <PostListItem
-          isCurrent={node.id === data.post.id}
-          title={fm.short_title || fm.title}
-          category={fm.category}
-          slug={node.childMdx.fields.slug}
-        />
-      </li>
-    )
-  })
 
   const videoEl = frontmatter.hero_video ? <PostHeaderVideo url={frontmatter.hero_video} poster={heroImage} /> : null
 
@@ -138,7 +125,7 @@ const Post = ({ data, children }) => {
             </>
           )}
           <nav className={styles.postsNav}>
-            <PostList>{posts}</PostList>
+            <PostList posts={data.posts.nodes} currentPostId={data.post.id} />
           </nav>
         </main>
       </article>

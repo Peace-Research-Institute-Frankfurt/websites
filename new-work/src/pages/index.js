@@ -6,7 +6,7 @@ import StickyHeader from '../components/StickyHeader'
 import SkipToContent from '../components/SkipToContent'
 import PostHeader from '../components/PostHeader'
 import * as styles from './index.module.scss'
-import { PostList, PostListItem } from '../components/PostList'
+import { PostGroupLabel, PostList, PostListItem } from '../components/PostList'
 import LoadingScreen from '../components/LoadingScreen'
 
 export const query = graphql`
@@ -23,6 +23,7 @@ export const query = graphql`
             short_title
             intro
             category
+            format
           }
         }
       }
@@ -52,18 +53,6 @@ const Index = ({ data }) => {
     </div>
   )
 
-  const posts = data.posts.nodes
-    .filter((node) => {
-      return activeFilters.includes(node.childMdx.frontmatter.category)
-    })
-    .map((node) => {
-      const fm = node.childMdx.frontmatter
-      return (
-        <li key={`post-${node.id}`}>
-          <PostListItem title={fm.short_title || fm.title} category={fm.category} slug={node.childMdx.fields.slug} intro={fm.intro} />
-        </li>
-      )
-    })
   return (
     <App>
       <LoadingScreen />
@@ -108,7 +97,7 @@ const Index = ({ data }) => {
               )
             })}
           </ol>
-          <PostList>{posts}</PostList>
+          <PostList posts={data.posts.nodes} activeFilters={activeFilters} />
         </section>
       </main>
     </App>

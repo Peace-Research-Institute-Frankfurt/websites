@@ -16,6 +16,9 @@
     flex-flow: column;
     padding: 0;
   }
+  .group-label {
+    display: none;
+  }
   .item {
     border-bottom: 1px solid var(--gray-dark);
     width: 100%;
@@ -85,8 +88,6 @@
 }
 
 .item {
-  @extend %copy;
-  font-family: var(--edge);
   &:hover,
   &:focus-visible {
     filter: brightness(1.15);
@@ -99,6 +100,8 @@
 }
 
 .title {
+  @extend %copy;
+  font-family: var(--edge);
   background: var(--color);
   border: 1px solid var(--color);
   letter-spacing: -0.02em;
@@ -135,15 +138,27 @@
 }
 
 .current {
-  background: transparent;
-  text-shadow: none;
-  color: var(--color);
+  .title {
+    background: transparent;
+    text-shadow: none;
+    color: var(--color);
+  }
 }
 
 .meta {
   .title {
     background: transparent;
-    border: 1px solid var(--gray);
-    color: var(--white);
+    color: var(--black);
+    background: var(--white);
+    border: 1px solid var(--white);
   }
+}
+
+.group-label {
+  @extend .title;
+  text-transform: capitalize;
+  color: var(--white);
+  border: 1px solid var(--gray);
+  background: transparent;
+  display: inline-block;
 }
