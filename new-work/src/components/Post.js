@@ -7,7 +7,7 @@ import StickyHeader from './StickyHeader'
 import SkipToContent from './SkipToContent'
 import PostBody from './PostBody'
 import PostHeader from './PostHeader'
-import Bylines from './Bylines'
+import { Bylines } from './Bylines'
 import { PostList } from './PostList'
 
 import * as styles from './Post.module.scss'
@@ -53,11 +53,10 @@ export const query = graphql`
               author_id
               institution
               role
-              twitter
-              image {
-                childImageSharp {
-                  gatsbyImageData(placeholder: NONE, width: 100, layout: CONSTRAINED)
-                }
+            }
+            parent {
+              ... on Mdx {
+                body
               }
             }
           }
@@ -107,7 +106,6 @@ const Post = ({ data, children }) => {
       <article id="content" className={`${styles.container}`}>
         <PostHeader
           title={frontmatter.title}
-          eyebrow={frontmatter.short_title}
           media={videoEl ? videoEl : heroImage}
           portrait={portraitImage}
           intro={frontmatter.intro}

@@ -13,7 +13,7 @@ export default function Term({ TooltipAdapter, styles, term, title, description,
   if (term) {
     return (
       <>
-        <button type="button" ref={triggerRef} onClick={toggleTooltip} className={styles.container}>
+        <button type="button" ref={triggerRef} onClick={toggleTooltip} className={`${styles.container} ${active ? styles.active : ''}`}>
           {children ? <>{children}</> : <>{term.term_id}</>}
         </button>
         <TooltipAdapter position="topCenter" active={active} targetEl={triggerRef.current}>
