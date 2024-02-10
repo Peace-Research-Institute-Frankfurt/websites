@@ -10,17 +10,30 @@ const BylineItem = ({ author }) => {
   function toggleTooltip() {
     setIsActive(!isActive)
   }
+
+  const copy = (
+    <>
+      <span className={styles.name}>{fm.name}</span>
+      {fm.institution && <span className={styles.institution}> {fm.institution}</span>}
+    </>
+  )
+
   return (
     <>
-      <TooltipAdapter active={isActive} targetEl={authorRef.current} position="topLeft">
-        <div className={styles.bio}>
-          <MarkdownRenderer markdown={author.parent.body} />
-        </div>
-      </TooltipAdapter>
-      <button onClick={toggleTooltip} className={`${styles.person} ${isActive ? styles.active : ''}`} ref={authorRef}>
-        <span className={styles.name}>{fm.name}</span>
-        {fm.institution && <span className={styles.institution}> {fm.institution}</span>}
-      </button>
+      {author.parent.body.length > 0 && (
+        <TooltipAdapter active={isActive} targetEl={authorRef.current} position="topLeft">
+          <div className={styles.bio}>
+            <MarkdownRenderer markdown={author.parent.body} />
+          </div>
+        </TooltipAdapter>
+      )}
+      {author.parent.body.length > 0 ? (
+        <button onClick={toggleTooltip} className={`${styles.person} ${isActive ? styles.active : ''}`} ref={authorRef}>
+          {copy}
+        </button>
+      ) : (
+        <p className={styles.person}>{copy}</p>
+      )}
     </>
   )
 }

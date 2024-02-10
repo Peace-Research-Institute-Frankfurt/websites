@@ -10,7 +10,7 @@
     list-style: none;
     border-radius: var(--br-small);
     flex-flow: column;
-    border: 1px solid var(--gray-dark);
+    border: 1px solid var(--gray);
     overflow: hidden;
     @include bp(m) {
       max-width: 15em;
@@ -37,16 +37,16 @@
   padding: 0.5em;
   width: 100%;
   color: var(--white);
-  cursor: pointer;
 
   &.active {
     background: var(--white);
     color: var(--black);
   }
+}
 
-  &:before {
-    display: none;
-  }
+button.person {
+  cursor: pointer;
+
   &:hover,
   &:focus-visible {
     .name {

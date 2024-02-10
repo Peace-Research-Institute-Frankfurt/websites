@@ -74,10 +74,9 @@
 .posts-nav {
   border-top: 1px solid var(--gray);
   grid-column: 1 / 4;
-  padding-top: calc(var(--baseline) * 1);
-  padding-bottom: calc(var(--baseline) * 1);
+  padding: var(--padding-small) 0;
   margin: 0 calc(var(--padding) * -1);
-  margin-top: var(--baseline);
+  margin-top: var(--padding);
   border-bottom: 1px solid var(--gray);
   &:first-child {
     border-top: 0;
