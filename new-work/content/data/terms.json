@@ -401,8 +401,9 @@
   },
   {
     "title": "Starfish-Methode",
-    "description": "Retrospektiven sind regelmäßige Treffen zur gemeinsamen Evaluierung und Verbesserung der Teamleistung. Zu den bekanntesten Varianten gehört die Starfish-Retrospektive, die häufig von Scrum-Teams verwendet wird. Der Seestern (englisch: Starfish) versinnbildlicht mit seinen fünf Armen die fünf Schritte dieser Methode: 1. Keep (Gute Praktiken, die beibehalten werden sollten), 2. Less of (Dinge, die es zu reduzieren gilt), 3. More of (Aspekte, die verstärkt werden sollten) 4. Start (Neue Ideen, die das Projekt voranbringen könnten), 5. Stop (Aktivitäten, die nicht zum Projekterfolg beitragen und beendet werden sollten). Die Starfish-Methode soll Teammitglieder dazu ermutigen, ihr Feedback einzubringen und Probleme systematisch zu analysieren.",
-    "term_id": "starfish-methode"
+    "description": "![alt texr](/assets/starfish.svg)\n\nRetrospektiven sind regelmäßige Treffen zur gemeinsamen Evaluierung und Verbesserung der Teamleistung. Zu den bekanntesten Varianten gehört die Starfish-Retrospektive, die häufig von Scrum-Teams verwendet wird. Der Seestern (englisch: Starfish) versinnbildlicht mit seinen fünf Armen die fünf Schritte dieser Methode: 1. Keep (Gute Praktiken, die beibehalten werden sollten), 2. Less of (Dinge, die es zu reduzieren gilt), 3. More of (Aspekte, die verstärkt werden sollten) 4. Start (Neue Ideen, die das Projekt voranbringen könnten), 5. Stop (Aktivitäten, die nicht zum Projekterfolg beitragen und beendet werden sollten). Die Starfish-Methode soll Teammitglieder dazu ermutigen, ihr Feedback einzubringen und Probleme systematisch zu analysieren.",
+    "term_id": "starfish-methode",
+    "image": "starfish.png"
   },
   {
     "title": "Sync-Meeting",

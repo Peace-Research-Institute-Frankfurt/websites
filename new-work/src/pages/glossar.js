@@ -107,7 +107,7 @@ const Terms = ({ data }) => {
           >
             <summary className={styles.termTitle}>{node.title}</summary>
             <div className={styles.termDescription}>
-              <MarkdownRenderer markdown={node.description} />
+              <MarkdownRenderer markdown={node.description || ''} />
             </div>
           </details>
         </li>

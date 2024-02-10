@@ -101,4 +101,10 @@
 .term-description {
   @extend %copy;
   padding: var(--padding-small);
+  img {
+    width: 100%;
+    display: block;
+    margin: 1em;
+    max-width: 20em;
+  }
 }
