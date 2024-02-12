@@ -1,10 +1,8 @@
 ---
 name: Learning Unit
-about: Standard workflow for producing a new Learning Unit
-title: Build Learning Unit XX
+about: Standard workflow for producing a new learning unit
+title: LU XX
 labels: content, e-learning
-assignees: awesomephant, J4coop, NiklasSchg, SchmidtLi
-
 ---
 
 - [ ] Autorenvertrag
@@ -18,17 +16,17 @@ assignees: awesomephant, J4coop, NiklasSchg, SchmidtLi
 - [ ] Onboarding-Anruf mit Autor:innen
 - [ ] Onboarding-Email an Autor:innen (mit Dropbox-Links)
 - [ ] Email an Autor:innen: Schickt uns CV, Profilbild, Affiliation
-- [x] 1. Draft von Autor:innen erhalten (Word oder Dropbox)
-- [x] 1. Inhaltliches Review (Niklas + nn) (Kommentare im Dokument + Email)
-- [x] 2. Draft von Autor:innen erhalten
-- [x] 2. Inhaltiches Review (Niklas + nn)
-- [x] 2. Draft erhalten, alle sind zufrieden
-- [x] Draft an Language Editing schicken (mit Frist: 9.2.2024)
+- [ ] 1. Draft von Autor:innen erhalten (Word oder Dropbox)
+- [ ] 1. Inhaltliches Review (Niklas + nn) (Kommentare im Dokument + Email)
+- [ ] 2. Draft von Autor:innen erhalten
+- [ ] 2. Inhaltiches Review (Niklas + nn)
+- [ ] 2. Draft erhalten, alle sind zufrieden
+- [ ] Draft an Language Editing schicken (mit Frist: 9.2.2024)
 - [ ] Final Draft kommt zurueck
 - [ ] Animated Podcasts vorbereiten
   - [ ] Email an Autor:innen: Nehmt eure Audios auf (mit Frist)!
   - [ ] Audiofile Rohversion da
-  - [x] Storyboards erstellen 
+  - [ ] Storyboards erstellen
   - [ ] Storyboards abnehmen
     - [ ] Icon-Auftrag erteilen (Icons, die in dem Storyboard gebraucht werden)
     - [ ] Zusätzliche Assets sammeln (Bilder, Videos, etc; Rechte beachten)
@@ -44,7 +42,7 @@ assignees: awesomephant, J4coop, NiklasSchg, SchmidtLi
   - [ ] Video + Cover-Bild + Untertitel hochladen auf VideoStream Server
 - [ ] Assets im Text
   - [ ] Fotos
-    - [ ] Nutzungs- und Barbeitungsrechte klären
+    - [ ] Nutzungs- und Bearbeitungsrechte klären
     - [ ] Bild nachbearbeiten falls nötig && erlaubt
     - [ ] Fertiges Bild in Dropbox Ablegen
     - [ ] Korrekte Lizenzinformationen in die Permissions-Tabelle schreiben
