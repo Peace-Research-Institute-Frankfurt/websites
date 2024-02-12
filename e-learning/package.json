@@ -13,7 +13,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "@mdx-js/mdx": "^3.0.0",
+    "@mdx-js/mdx": "^3.0.1",
     "@mdx-js/react": "^2.3.0",
     "@prif/shared": "0.0.1",
     "gatsby": "^5.13.3",
