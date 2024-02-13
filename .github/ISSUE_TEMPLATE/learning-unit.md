@@ -2,7 +2,7 @@
 name: Learning Unit
 about: Standard workflow for producing a new learning unit
 title: LU XX
-labels: content, e-learning
+labels: e-learning, Learning Unit, content
 ---
 
 - [ ] Autorenvertrag
@@ -21,10 +21,10 @@ labels: content, e-learning
 - [ ] 2. Draft von Autor:innen erhalten
 - [ ] 2. Inhaltiches Review (Niklas + nn)
 - [ ] 2. Draft erhalten, alle sind zufrieden
-- [ ] Draft an Language Editing schicken (mit Frist: 9.2.2024)
+- [ ] Draft an Language Editing schicken (mit Frist: TBD)
 - [ ] Final Draft kommt zurueck
 - [ ] Animated Podcasts vorbereiten
-  - [ ] Email an Autor:innen: Nehmt eure Audios auf (mit Frist)!
+  - [ ] Email an Autor:innen: Nehmt eure Audios auf (mit Frist: TBD)
   - [ ] Audiofile Rohversion da
   - [ ] Storyboards erstellen
   - [ ] Storyboards abnehmen
@@ -59,7 +59,7 @@ labels: content, e-learning
     - [ ] Fertige Grafiken in Dropbox speichern fuer spaeter
 - MDX Create
   - [ ] Branch: Feat/LuXX
-  - [ ] Neuer Order fuer LU
+  - [ ] Neuer Order für LU
   - [ ] `index.mdx`:
     - [ ] Titel
     - [ ] Autor:innen (Namen, Fotos, CV, Institution)
