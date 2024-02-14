@@ -35,9 +35,7 @@ const Terms = ({ data }) => {
         return slug(el.term_id) === hash
       })
       if (term) {
-        setActiveTerms((prev) => {
-          return [...prev, term.term_id]
-        })
+        setActiveTerms([term.term_id])
       }
     }
   }, [data.terms.nodes])
@@ -88,24 +86,26 @@ const Terms = ({ data }) => {
     .map((node, i) => {
       return (
         <li className={styles.termsItem} key={`term-${i}`}>
-          <details
-            id={node.term_id}
-            className={styles.term}
-            onToggle={(e) => {
-              e.preventDefault()
-              if (activeTerms.includes(node.term_id)) {
-                setActiveTerms((prev) => {
-                  return prev.filter((el) => el !== node.term_id)
-                })
-              } else {
-                setActiveTerms((prev) => {
-                  return [...prev, node.term_id]
-                })
-              }
-            }}
-            open={activeTerms.includes(node.term_id)}
-          >
-            <summary className={styles.termTitle}>{node.title}</summary>
+          <details id={node.term_id} className={styles.term} open={activeTerms.includes(node.term_id)}>
+            <summary
+              role="button"
+              tabIndex={0}
+              onClick={(e) => {
+                e.preventDefault()
+                if (activeTerms.includes(node.term_id)) {
+                  setActiveTerms((prev) => {
+                    return prev.filter((el) => el !== node.term_id)
+                  })
+                } else {
+                  setActiveTerms((prev) => {
+                    return [...prev, node.term_id]
+                  })
+                }
+              }}
+              className={styles.termTitle}
+            >
+              {node.title}
+            </summary>
             <div className={styles.termDescription}>
               <MarkdownRenderer markdown={node.description || ''} />
             </div>

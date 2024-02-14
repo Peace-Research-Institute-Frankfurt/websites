@@ -94,7 +94,14 @@ const config = {
         engine: 'flexsearch',
         query: `
           {
-            allFile(filter: { extension: { eq: "mdx" }, sourceInstanceName: { eq: "posts" } }) {
+            terms: allTermsJson {
+              nodes {
+                id
+                title
+                term_id
+              }
+            }
+            posts: allFile(filter: { extension: { eq: "mdx" }, sourceInstanceName: { eq: "posts" } }) {
               nodes {
                 id
                 relativeDirectory
@@ -113,14 +120,25 @@ const config = {
         `,
         ref: 'id',
         index: ['title', 'short_title'],
-        store: ['id', 'title', 'slug'],
-        normalizer: ({ data }) =>
-          data.allFile.nodes.map((node) => ({
-            id: node.id,
-            slug: node.childMdx.fields.slug,
-            title: node.childMdx.frontmatter.title,
-            short_title: node.childMdx.frontmatter.short_title || '',
-          })),
+        store: ['id', 'title', 'slug', 'post_type'],
+        normalizer: ({ data }) => {
+          const mergedData = [
+            ...data.posts.nodes.map((node) => ({
+              id: node.id,
+              slug: node.childMdx.fields.slug,
+              title: node.childMdx.frontmatter.title,
+              short_title: node.childMdx.frontmatter.short_title || '',
+              post_type: 'post',
+            })),
+            ...data.terms.nodes.map((node) => ({
+              id: node.id,
+              slug: `glossar#${node.term_id}`,
+              title: node.title,
+              post_type: 'term',
+            })),
+          ]
+          return mergedData
+        },
       },
     },
   ],

@@ -5,6 +5,15 @@ import { useCombobox } from 'downshift'
 import SearchIcon from '../images/search.svg'
 import * as styles from './SearchForm.module.scss'
 
+function prettifyPostType(postType) {
+  if (postType === 'post') {
+    return 'Artikel'
+  } else if (postType === 'term') {
+    return 'Glossar-Begriff'
+  }
+  return postType
+}
+
 function DropdownCombobox({ value, setValue, inputItems }) {
   const { isOpen, getLabelProps, getMenuProps, getInputProps, highlightedIndex, getItemProps, selectedItem, selectItem } = useCombobox({
     items: inputItems,
@@ -47,7 +56,7 @@ function DropdownCombobox({ value, setValue, inputItems }) {
               })}
             >
               <span className={styles.choiceTitle}>{item.title}</span>
-              <span className={styles.choiceType}>Artikel</span>
+              <span className={styles.choiceType}>{prettifyPostType(item.post_type)}</span>
             </li>
           ))}
       </ul>

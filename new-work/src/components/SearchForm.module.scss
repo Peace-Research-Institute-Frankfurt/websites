@@ -3,7 +3,7 @@
 .container {
   position: relative;
   z-index: 5000;
-  min-width: 1.75em;
+  min-width: 1.85em;
   height: 100%;
   display: flex;
   align-items: center;
@@ -41,7 +41,7 @@
     height: auto;
     position: absolute;
     top: 50%;
-    left: 0.45em;
+    left: 0.5em;
     transform: translateY(-50%);
   }
   path {
@@ -84,6 +84,7 @@
   padding-bottom: 0.25em;
   display: flex;
   gap: 1em;
+  hyphens: none;
   justify-content: space-between;
   align-items: baseline;
 }
