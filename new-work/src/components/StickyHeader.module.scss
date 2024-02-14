@@ -75,6 +75,13 @@
   }
 }
 
+.nav-search {
+  @extend .nav-item;
+  padding: 0;
+  height: 1.8em;
+  display: flex;
+}
+
 .bookmarks-container {
   position: fixed;
   background: var(--black);

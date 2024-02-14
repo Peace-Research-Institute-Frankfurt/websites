@@ -46,7 +46,8 @@ function DropdownCombobox({ value, setValue, inputItems }) {
                 index,
               })}
             >
-              {item.title}
+              <span className={styles.choiceTitle}>{item.title}</span>
+              <span className={styles.choiceType}>Artikel</span>
             </li>
           ))}
       </ul>

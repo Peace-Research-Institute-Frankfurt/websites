@@ -31,7 +31,7 @@ export default function StickyHeader({ post }) {
         </Link>
 
         <div className={styles.nav}>
-          <div className={styles.navItem}>
+          <div className={styles.navSearch}>
             <SearchForm />
           </div>
 

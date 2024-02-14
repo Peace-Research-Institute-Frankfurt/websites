@@ -3,11 +3,14 @@
 .container {
   position: relative;
   z-index: 5000;
-  min-width: 0.8em;
+  min-width: 1.75em;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .input {
-  background: var(--black);
+  background: transparent;
   color: var(--white);
   font-family: inherit;
   width: 0;
@@ -15,8 +18,11 @@
   border: 0;
   &:focus {
     outline: 0;
-    padding-left: 1.25em;
-    width: 10em;
+    padding-left: 1.75em;
+    width: 5em;
+    @include bp(m) {
+      width: 10em;
+    }
   }
 }
 
@@ -24,15 +30,19 @@
   position: absolute;
   z-index: 5000;
   cursor: pointer;
+  height: 100%;
+  width: 100%;
 
   &:hover,
   &:focus-visible {
   }
   svg {
-    width: 0.8em;
-    height: 0.8em;
-    position: relative;
-    top: 0.1em;
+    width: 0.88em;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 0.45em;
+    transform: translateY(-50%);
   }
   path {
     fill: white;
@@ -50,25 +60,46 @@
   position: absolute;
   list-style: none;
   background: var(--black);
-  left: -0.6em;
-  right: -0.6em;
-  border-radius: var(--br-small);
+  border-radius: var(--br-medium);
+  width: Min(calc(100vw - var(--padding) * 2), 20em);
   top: calc(100% + var(--padding-small));
   opacity: 0;
+  transition: var(--fast);
+  transform: translateY(-5px);
+  overflow: hidden;
+  left: -1px;
+  @include bp(m) {
+  }
 }
 
 .choices-active {
   opacity: 1;
+  transform: translateY(0);
 }
 
 .choice {
-  @extend %caption;
+  @extend %copy;
   border-bottom: 1px solid var(--gray-dark);
-  padding: 0.65em;
+  padding: 0.4em 0.65em;
+  padding-bottom: 0.25em;
+  display: flex;
+  gap: 1em;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.choice-type {
+  @extend %caption;
+  color: var(--gray-light);
+  white-space: nowrap;
 }
 
 .selected {
   background: var(--black-hover);
-  text-decoration: underline;
   cursor: pointer;
+  .choice-title {
+    text-decoration: underline;
+    text-underline-offset: 0.1em;
+    text-decoration-thickness: 1px;
+  }
 }
