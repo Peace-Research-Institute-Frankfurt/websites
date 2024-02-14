@@ -44,7 +44,6 @@
   background: var(--black);
   border-bottom-left-radius: calc(0.5 * var(--br));
   border-bottom-right-radius: calc(0.5 * var(--br));
-  overflow: hidden;
   margin-top: -1px;
   @include bp(m) {
     border-top: 0;
@@ -70,7 +69,9 @@
   }
   &:hover,
   &:focus-visible {
-    background: var(--black-hover);
+    .nav-label {
+      text-decoration: underline;
+    }
   }
 }
 

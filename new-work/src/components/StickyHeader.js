@@ -6,7 +6,7 @@ import useLocalStorage from '@shared/hooks/useLocalStorage'
 import Logo from './Logo'
 import BookmarksList from './BookmarksList'
 import BookmarkToggle from './BookmarkToggle'
-
+import SearchForm from './SearchForm'
 import * as styles from './StickyHeader.module.scss'
 
 export default function StickyHeader({ post }) {
@@ -31,11 +31,16 @@ export default function StickyHeader({ post }) {
         </Link>
 
         <div className={styles.nav}>
+          <div className={styles.navItem}>
+            <SearchForm />
+          </div>
+
           <Link className={styles.navItem} to="/glossar">
-            Glossar
+            <span className={styles.navLabel}>Glossar</span>
           </Link>
           <button className={styles.navItem} onClick={() => setBookmarksActive(!bookmarksActive)}>
-            Favoriten {bookmarks.length > 0 && <span className={styles.bookmarksCounter}>{bookmarks.length}</span>}
+            <span className={styles.navLabel}>Favoriten</span>{' '}
+            {bookmarks.length > 0 && <span className={styles.bookmarksCounter}>{bookmarks.length}</span>}
           </button>
           {post && <BookmarkToggle post={post} bookmarks={bookmarks} setBookmarks={setStoredBookmarks} />}
         </div>

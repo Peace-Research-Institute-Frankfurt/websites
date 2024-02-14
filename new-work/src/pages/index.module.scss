@@ -34,7 +34,7 @@
   border: 1px solid var(--color);
   color: var(--color);
   background-color: transparent;
-  transition: var(--fast);
+  transition: calc(var(--fast) * 1.75);
   cursor: pointer;
   outline-offset: 5px;
   font-size: var(--ms-5);
@@ -44,10 +44,7 @@
   &:hover,
   &:focus-visible {
     filter: brightness(1.15);
-    text-decoration: underline;
-    text-decoration-style: dotted;
-    text-underline-offset: 0.1em;
-    text-decoration-thickness: 1px;
+    transform: scale(1.0175);
   }
 }
 

@@ -87,6 +87,41 @@ const config = {
         gatsbyRemarkPlugins: [],
       },
     },
+    {
+      resolve: 'gatsby-plugin-local-search',
+      options: {
+        name: 'posts',
+        engine: 'flexsearch',
+        query: `
+          {
+            allFile(filter: { extension: { eq: "mdx" }, sourceInstanceName: { eq: "posts" } }) {
+              nodes {
+                id
+                relativeDirectory
+                childMdx {
+                  fields {
+                    slug
+                  }
+                  frontmatter {
+                    title
+                    short_title
+                  }
+                }
+              }
+            }
+          }
+        `,
+        ref: 'id',
+        index: ['title'],
+        store: ['id', 'title', 'slug'],
+        normalizer: ({ data }) =>
+          data.allFile.nodes.map((node) => ({
+            id: node.id,
+            slug: node.childMdx.fields.slug,
+            title: node.childMdx.frontmatter.title,
+          })),
+      },
+    },
   ],
 }
 

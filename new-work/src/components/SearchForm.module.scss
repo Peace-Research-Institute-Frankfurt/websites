@@ -1,0 +1,74 @@
+@import 'vars';
+
+.container {
+  position: relative;
+  z-index: 5000;
+  min-width: 0.8em;
+}
+
+.input {
+  background: var(--black);
+  color: var(--white);
+  font-family: inherit;
+  width: 0;
+  transition: var(--slow);
+  border: 0;
+  &:focus {
+    outline: 0;
+    padding-left: 1.25em;
+    width: 10em;
+  }
+}
+
+.label {
+  position: absolute;
+  z-index: 5000;
+  cursor: pointer;
+
+  &:hover,
+  &:focus-visible {
+  }
+  svg {
+    width: 0.8em;
+    height: 0.8em;
+    position: relative;
+    top: 0.1em;
+  }
+  path {
+    fill: white;
+  }
+}
+
+.label-text {
+  position: absolute;
+  font-size: 0;
+  left: -9999px;
+}
+
+.choices {
+  border: 1px solid var(--gray);
+  position: absolute;
+  list-style: none;
+  background: var(--black);
+  left: -0.6em;
+  right: -0.6em;
+  border-radius: var(--br-small);
+  top: calc(100% + var(--padding-small));
+  opacity: 0;
+}
+
+.choices-active {
+  opacity: 1;
+}
+
+.choice {
+  @extend %caption;
+  border-bottom: 1px solid var(--gray-dark);
+  padding: 0.65em;
+}
+
+.selected {
+  background: var(--black-hover);
+  text-decoration: underline;
+  cursor: pointer;
+}
