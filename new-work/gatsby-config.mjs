@@ -112,13 +112,14 @@ const config = {
           }
         `,
         ref: 'id',
-        index: ['title'],
+        index: ['title', 'short_title'],
         store: ['id', 'title', 'slug'],
         normalizer: ({ data }) =>
           data.allFile.nodes.map((node) => ({
             id: node.id,
             slug: node.childMdx.fields.slug,
             title: node.childMdx.frontmatter.title,
+            short_title: node.childMdx.frontmatter.short_title || '',
           })),
       },
     },
