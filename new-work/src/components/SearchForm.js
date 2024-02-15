@@ -14,7 +14,7 @@ function prettifyPostType(postType) {
   return postType
 }
 
-function DropdownCombobox({ value, setValue, inputItems }) {
+function DropdownCombobox({ value, setValue, inputItems, addActiveTerm }) {
   const { isOpen, getLabelProps, getMenuProps, getInputProps, highlightedIndex, getItemProps, selectedItem, selectItem } = useCombobox({
     items: inputItems,
     defaultInputValue: value,
@@ -23,6 +23,9 @@ function DropdownCombobox({ value, setValue, inputItems }) {
     },
     onSelectedItemChange: ({ selectedItem }) => {
       navigate(`/${selectedItem.slug}`)
+      if (addActiveTerm) {
+        addActiveTerm(selectedItem.id)
+      }
     },
     itemToString: (item) => {
       if (item) {
@@ -64,7 +67,7 @@ function DropdownCombobox({ value, setValue, inputItems }) {
   )
 }
 
-function SearchForm() {
+function SearchForm({ addActiveTerm }) {
   const data = useStaticQuery(graphql`
     query {
       search: localSearchPosts {
@@ -78,7 +81,7 @@ function SearchForm() {
   const store = data.search.store
   const results = useFlexSearch(query, index, store)
 
-  return <DropdownCombobox value={query} setValue={setQuery} inputItems={results.slice(0, 5)} />
+  return <DropdownCombobox value={query} setValue={setQuery} inputItems={results.slice(0, 5)} addActiveTerm={addActiveTerm} />
 }
 
 export default SearchForm

@@ -131,7 +131,7 @@ const config = {
               post_type: 'post',
             })),
             ...data.terms.nodes.map((node) => ({
-              id: node.id,
+              id: node.term_id,
               slug: `glossar#${node.term_id}`,
               title: node.title,
               post_type: 'term',

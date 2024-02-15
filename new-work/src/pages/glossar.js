@@ -7,6 +7,7 @@ import App from '../components/App'
 import StickyHeader from '../components/StickyHeader'
 import SkipToContent from '../components/SkipToContent'
 import PageHeader from '../components/PageHeader'
+import SearchForm from '../components/SearchForm'
 import MarkdownRenderer from 'react-markdown-renderer'
 import * as styles from './terms.module.scss'
 import * as pageStyles from '../components/Page.module.scss'
@@ -39,6 +40,12 @@ const Terms = ({ data }) => {
       }
     }
   }, [data.terms.nodes])
+
+  function addActiveTerm(newTerm) {
+    setActiveTerms((prev) => {
+      return [...prev, newTerm]
+    })
+  }
 
   data.terms.nodes.forEach((node) => {
     const initial = node.title.slice(0, 1)
@@ -117,7 +124,7 @@ const Terms = ({ data }) => {
   return (
     <App>
       <SkipToContent />
-      <StickyHeader />
+      <StickyHeader searchForm={<SearchForm addActiveTerm={addActiveTerm} />} />
       <main id="content" className={pageStyles.container}>
         <PageHeader
           title="Glossar"

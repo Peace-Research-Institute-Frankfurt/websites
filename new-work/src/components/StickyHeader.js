@@ -6,10 +6,9 @@ import useLocalStorage from '@shared/hooks/useLocalStorage'
 import Logo from './Logo'
 import BookmarksList from './BookmarksList'
 import BookmarkToggle from './BookmarkToggle'
-import SearchForm from './SearchForm'
 import * as styles from './StickyHeader.module.scss'
 
-export default function StickyHeader({ post }) {
+export default function StickyHeader({ post, searchForm }) {
   const [storedBookmarks, setStoredBookmarks] = useLocalStorage('nw_bookmarks', [])
   const [bookmarks, setBookmarks] = useState([])
   const [bookmarksActive, setBookmarksActive] = useState(false)
@@ -31,9 +30,7 @@ export default function StickyHeader({ post }) {
         </Link>
 
         <div className={styles.nav}>
-          <div className={styles.navSearch}>
-            <SearchForm />
-          </div>
+          <div className={styles.navSearch}>{searchForm}</div>
 
           <Link className={styles.navItem} to="/glossar">
             <span className={styles.navLabel}>Glossar</span>
