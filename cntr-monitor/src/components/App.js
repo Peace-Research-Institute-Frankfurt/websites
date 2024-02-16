@@ -8,28 +8,10 @@ import './global.scss'
 import useTranslations from '../hooks/useTranslations'
 
 function App({ translationData, pages, issue, post, pagination, children }) {
-  const data = useStaticQuery(graphql`
-    query {
-      allSitePage {
-        nodes {
-          path
-          pageContext
-        }
-      }
-    }
-  `)
-
-  let translations = useTranslations(translationData, data.allSitePage.nodes)
-
   return (
     <>
       <SkipToContent />
-      <SiteHeader post={post} translationData={translationData}>
-        {pagination && pagination}
-        {translations.length > 0 && <LanguageSwitcher translations={translations} translationData={translationData} />}
-      </SiteHeader>
       {children}
-      <Footer pages={pages} language={translationData.currentLanguage} />
     </>
   )
 }

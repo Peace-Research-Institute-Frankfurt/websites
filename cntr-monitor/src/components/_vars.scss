@@ -24,8 +24,17 @@
 
 %copy {
   font-family: var(--roboto);
-  font-variation-settings: 'wght' 400, 'wdth' 112, 'opsz' 25;
+  font-variation-settings: 'wght' 400, 'wdth' 100, 'opsz' 25;
   font-size: var(--ms-0);
+}
+%copy-bold {
+  @extend %copy;
+  font-variation-settings: 'wght' 700, 'wdth' 100, 'opsz' 25;
+}
+%caption {
+  @extend %copy;
+  font-size: var(--ms--1);
+  font-variation-settings: 'wght' 400, 'wdth' 100, 'opsz' 5;
 }
 %h1 {
   font-family: var(--montserrat);

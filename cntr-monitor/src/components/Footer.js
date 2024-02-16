@@ -2,9 +2,8 @@ import { Link, useTranslation } from 'gatsby-plugin-react-i18next'
 import React from 'react'
 import * as styles from './Footer.module.scss'
 
-export default function Footer({ pages, language }) {
+export default function Footer({ pages }) {
   const { t } = useTranslation()
-  if (language === 'en') language = 'en-UK'
 
   if (!pages) pages = []
   return (

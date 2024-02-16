@@ -2,8 +2,12 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import App from './App'
 import PostBody from './PostBody'
+import Footer from './Footer.js'
 import Meta from './Meta'
 import { useTranslation } from 'gatsby-plugin-react-i18next'
+import useTranslations from '../hooks/useTranslations.js'
+import SiteHeader from './SiteHeader.js'
+import LanguageSwitcher from './LanguageSwitcher.js'
 import useColors from '../hooks/useColors.js'
 import Arrow from '../images/arrow-right.svg'
 import * as styles from './Post.module.scss'
@@ -134,6 +138,12 @@ export const query = graphql`
         }
       }
     }
+    allSitePage {
+      nodes {
+        path
+        pageContext
+      }
+    }
   }
 `
 export default function Post({ data, pageContext, children }) {
@@ -167,18 +177,20 @@ export default function Post({ data, pageContext, children }) {
     </nav>
   )
 
+  let translationData = { translations: data.translations.nodes, currentLanguage: pageContext.language, currentSlug: data.post.childMdx.fields.slug }
+  let translations = useTranslations(translationData, data.allSitePage.nodes)
+
   return (
-    <App
-      translationData={{ translations: data.translations.nodes, currentLanguage: pageContext.language, currentSlug: data.post.childMdx.fields.slug }}
-      pages={data.pages.nodes}
-      pagination={pagination}
-      issue={data.issue}
-      post={data.post}
-    >
-      <article id="content">
+    <App>
+      <SiteHeader post={data.post} translationData={translationData}>
+        {pagination && pagination}
+        {data.translations.nodes.length > 0 && <LanguageSwitcher translations={translations} translationData={translationData} />}
+      </SiteHeader>
+      <article id="content" className={styles.container}>
         <h1 className={styles.title}>{data.post.childMdx.frontmatter.title}</h1>
         <PostBody>{children}</PostBody>
       </article>
+      <Footer pages={data.pages.nodes} language={translationData.currentLanguage} />
     </App>
   )
 }
