@@ -7,8 +7,8 @@ import adapter from 'gatsby-adapter-netlify'
 
 const config = {
   siteMetadata: {
-    siteUrl: 'https://prif-review.netlify.app',
-    title: 'PRIF Review',
+    siteUrl: 'https://monitor.cntrarmscontrol.org/',
+    title: 'CNTR Monitor',
     description: '',
     siteTwitter: '@PRIF_org',
     authorTwitter: '@PRIF_org',
@@ -52,27 +52,6 @@ const config = {
         mdxOptions: {
           remarkPlugins: [remarkGfm],
         },
-        // gatsbyRemarkPlugins: [
-        //   {
-        //     resolve: '../prif-gatsby-remark-smartypants',
-        //     options: {
-        //       locales: [
-        //         {
-        //           openingQuotes: { single: '‚', double: '„' },
-        //           closingQuotes: { single: '’', double: '“' },
-        //           dashes: 'oldschool',
-        //           locale: 'de',
-        //         },
-        //         {
-        //           openingQuotes: { single: '‘', double: '“' },
-        //           closingQuotes: { single: '’', double: '”' },
-        //           dashes: 'oldschool',
-        //           locale: 'en',
-        //         },
-        //       ],
-        //     },
-        //   },
-        // ],
       },
     },
     {

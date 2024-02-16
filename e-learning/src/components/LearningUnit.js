@@ -190,7 +190,7 @@ const LearningUnit = ({ data, children }) => {
               <p>
                 The site may contain hyperlink text references (’Links’) to other sites that are offered by third parties. These Links are made
                 available solely for the purpose of information and as an additional service for users. Only the respective operator is responsible
-                for all content and statements on linked Internet sites. Therefore, HSFK cannot guarantee the correctness and accuracy or any other
+                for all content and statements on linked Internet sites. Therefore, PRIF cannot guarantee the correctness and accuracy or any other
                 aspect of third party sites.
               </p>
               <h3>Citation</h3>
