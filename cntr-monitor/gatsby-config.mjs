@@ -7,7 +7,7 @@ import adapter from 'gatsby-adapter-netlify'
 
 const config = {
   siteMetadata: {
-    siteUrl: 'https://prif-review.netlify.app',
+    siteUrl: 'https://monitor.cntrarmscontrol.org/',
     title: 'CNTR Monitor',
     description: '',
     siteTwitter: '@PRIF_org',
