@@ -10,8 +10,8 @@ const config = {
     siteUrl: `https://leibniz-nw.netlify.app`,
     title: 'WorkNew@Leibniz',
     description: 'Neue Arbeitformen für Wissenschaft und Forschung',
-    siteTwitter: '@HSFK_PRIF',
-    authorTwitter: '@HSFK_PRIF',
+    siteTwitter: '@PRIF_org',
+    authorTwitter: '@PRIF_org',
     image: {
       src: '/social-image.png',
       alt: 'image alt',
