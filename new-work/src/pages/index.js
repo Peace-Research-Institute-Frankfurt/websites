@@ -7,6 +7,7 @@ import SkipToContent from '../components/SkipToContent'
 import PostHeader from '../components/PostHeader'
 import * as styles from './index.module.scss'
 import { PostList } from '../components/PostList'
+import SearchForm from '../components/SearchForm'
 import LoadingScreen from '../components/LoadingScreen'
 
 export const query = graphql`
@@ -46,7 +47,7 @@ const Index = ({ data }) => {
     <div className={styles.heroVideo}>
       <iframe
         src="https://player.vimeo.com/video/867440111?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&background=1"
-        frameBorder="0"
+        frameBorder={0}
         allow="autoplay; fullscreen; picture-in-picture"
         title="Neue Arbeitsformen in der Wissenschaft"
       ></iframe>
@@ -57,7 +58,7 @@ const Index = ({ data }) => {
     <App>
       <LoadingScreen />
       <SkipToContent />
-      <StickyHeader />
+      <StickyHeader searchForm={<SearchForm />} />
       <main id="content" className={styles.container}>
         <PostHeader
           media={heroVideo}

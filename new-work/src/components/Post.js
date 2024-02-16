@@ -12,6 +12,7 @@ import { PostList } from './PostList'
 
 import * as styles from './Post.module.scss'
 import PostHeaderVideo from './PostHeaderVideo'
+import SearchForm from './SearchForm'
 
 export const query = graphql`
   query ($id: String!) {
@@ -102,7 +103,7 @@ const Post = ({ data, children }) => {
   return (
     <App className={`${frontmatter.category}`}>
       <SkipToContent />
-      <StickyHeader post={data.post} />
+      <StickyHeader searchForm={<SearchForm />} post={data.post} />
       <article id="content" className={`${styles.container}`}>
         <PostHeader
           title={frontmatter.title}
