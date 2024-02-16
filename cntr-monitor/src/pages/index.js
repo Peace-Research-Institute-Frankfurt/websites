@@ -69,7 +69,8 @@ const Index = ({ data, pageContext, location }) => {
   return (
     <App pages={data.pages.nodes} translationData={{ currentLanguage: pageContext.language, currentSlug: location.pathname }}>
       <SkipToContent />
-      <main>
+      <main className={styles.container}>
+        <h1 className={styles.title}>CNTR Monitor</h1>
         <p>{t('Site intro copy')}</p>
         {data.issues.nodes.map((node, i) => {
           const year = node.relativeDirectory.replace(/(.{2})\/(issues)\//g, '')

@@ -21,3 +21,14 @@
     }
   }
 }
+
+%copy {
+  font-family: var(--roboto);
+  font-variation-settings: 'wght' 400, 'wdth' 112, 'opsz' 25;
+  font-size: var(--ms-0);
+}
+%h1 {
+  font-family: var(--montserrat);
+  font-variation-settings: 'wght' 560, 'wdth' 110, 'opsz' 144;
+  font-size: var(--ms-4);
+}

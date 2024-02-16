@@ -1,6 +1,6 @@
 #!/bin/bash
 
-base_file="./fonts/SourceCodePro-Regular"
+base_file="./fonts/Montserrat-Italic-Variable"
 
 rm ${base_file}.subset.ttf
 rm ${base_file}.subset.ttx
@@ -11,3 +11,6 @@ fonttools subset ${base_file}.ttf --unicodes-file="latin-ext.txt" --layout-featu
 ttx ${base_file}.subset.ttf
 ttx --flavor woff ${base_file}.subset.ttx
 ttx --flavor woff2 ${base_file}.subset.ttx
+
+rm ${base_file}.subset.ttf
+rm ${base_file}.subset.ttx
