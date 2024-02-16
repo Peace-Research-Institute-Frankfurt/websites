@@ -1,1 +1,9 @@
 @import '../components/vars';
+
+.container {
+  padding: var(--padding);
+}
+
+.title {
+  @extend %h1;
+}

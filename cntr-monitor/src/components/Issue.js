@@ -126,7 +126,7 @@ const Index = ({ data, pageContext, children, location }) => {
       <SkipToContent />
       <main>
         <header>
-          <h1>{data.post.childMdx.frontmatter.title}</h1>
+          <h1 className={styles.title}>{data.post.childMdx.frontmatter.title}</h1>
         </header>
         <section>
           <h2>{t('Contents')}</h2>

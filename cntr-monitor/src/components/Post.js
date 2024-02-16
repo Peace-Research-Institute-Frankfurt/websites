@@ -176,6 +176,7 @@ export default function Post({ data, pageContext, children }) {
       post={data.post}
     >
       <article id="content">
+        <h1 className={styles.title}>{data.post.childMdx.frontmatter.title}</h1>
         <PostBody>{children}</PostBody>
       </article>
     </App>
