@@ -17,6 +17,9 @@ import MarkerLayerMarkers from "./MarkerLayerMarkers";
 import CountryStatisticsLayer from "./CountryStatisticsLayer";
 import CountryStatisticsLayerCountries from "./CountryStatisticsLayerCountries";
 import CountryStatisticsLayerLegend from "./CountryStatisticsLayerLegend";
+import BarGraph from './charts/BarGraph'
+import LineChart from './charts/LineChart'
+import PieChart from './charts/PieChart'
 
 const PostBody = ({ content, unit, site, setChapterList }) => {
   const [terms, setTerms] = useState([])
@@ -127,6 +130,9 @@ const PostBody = ({ content, unit, site, setChapterList }) => {
     CountryStatisticsLayer,
     CountryStatisticsLayerCountries,
     CountryStatisticsLayerLegend,
+    BarGraph,
+    LineChart,
+    PieChart,
   }
 
   return (
