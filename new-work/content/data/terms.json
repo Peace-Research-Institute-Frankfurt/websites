@@ -95,6 +95,11 @@
     "description": "Co-Creation (auch: Ko-Kreation) bedeutet, dass mehrere Personen oder Akteure gemeinsam an einem Projekt arbeiten – auch Partner:innen aus anderen Disziplinen und Konsument:innen können miteinbezogen werden. Ziel ist es, dass die Beteiligten ihre Kenntnisse, Erfahrungen, Ideen und Ressourcen kombinieren, um innovative Lösungen, Produkte, Dienstleistungen bzw. Inhalte zu entwickeln."
   },
   {
+    "title": "Co-Working",
+    "term_id": "co-working",
+    "description": "Co-Working wird eine moderne Form der Arbeitsplatznutzung genannt, bei der verschiedene Freiberufler:innen und kleine Unternehmen in gemeinsamen Räumen arbeiten statt in isolierten Einzelbüros oder zu Hause. In einem Co-Working-Space teilen sich die Nutzer:innen oft nicht nur den Raum, sondern auch Ressourcen wie Büroinfrastruktur (z. B. Schreibtische, Sitzgelegenheiten, Internetzugang, Drucker), Besprechungsräume, Küchenbereiche und manchmal auch Gemeinschaftsbereiche für Networking und soziale Interaktion."
+  },
+  {
     "title": "Compassionate Leadership",
     "term_id": "compassionate-leadership",
     "description": "Compassionate Leadership ist ein Führungsstil, der auf Mitgefühl, Empathie und Fürsorge für Beschäftigte und Teammitglieder basiert. Es geht darum, sich als Führungskraft nicht nur auf Ziele und Ergebnisse zu fokussieren, sondern auch die Bedürfnisse, Gefühle und das Wohlbefinden der Mitarbeitenden ernst zu nehmen. So sollen die Mitarbeiterzufriedenheit, das Engagement und die Leistung gefördert werden. Durch Mitgefühl und Fürsorge werden Beziehungen gestärkt, wird Vertrauen aufgebaut und eine positive Unternehmenskultur geschaffen."
@@ -103,11 +108,6 @@
     "title": "Corporate Social Responsibility",
     "term_id": "corporate-social-responsibility",
     "description": "Corporate Social Responsibility ist ein Konzept, bei dem Unternehmen freiwillig soziale und ökologische Verantwortung übernehmen und damit über die gesetzlichen Forderungen hinausgehen, um einen positiven Beitrag zur Gesellschaft und zur Umwelt zu leisten. Ziel dieser Selbstverpflichtung ist es, nicht nur wirtschaftlich erfolgreich zu sein, sondern die Geschäftspraktiken gleichzeitig so zu gestalten, dass sie soziale, ökologische und ethische Aspekte berücksichtigen. Corporate Social Responsibility ist ein wichtiger Faktor bei der Personalakquise, um neue Beschäftigte zu gewinnen."
-  },
-  {
-    "title": "Co-Working",
-    "term_id": "co-working",
-    "description": "Co-Working wird eine moderne Form der Arbeitsplatznutzung genannt, bei der verschiedene Freiberufler:innen und kleine Unternehmen in gemeinsamen Räumen arbeiten statt in isolierten Einzelbüros oder zu Hause. In einem Co-Working-Space teilen sich die Nutzer:innen oft nicht nur den Raum, sondern auch Ressourcen wie Büroinfrastruktur (z. B. Schreibtische, Sitzgelegenheiten, Internetzugang, Drucker), Besprechungsräume, Küchenbereiche und manchmal auch Gemeinschaftsbereiche für Networking und soziale Interaktion."
   },
   {
     "title": "Daily-Meeting",
@@ -280,6 +280,11 @@
     "description": "Unter Leadership versteht man die Fähigkeit, andere zu inspirieren, zu motivieren und zu führen, um gemeinsame Ziele zu erreichen. Traditionell entwickeln Führungskräfte eine Vision, setzen klare Ziele und gestalten den Weg dorthin. Nicht zuletzt durch die [New-Work](#new-work)-Bewegung haben sich neue Führungskompetenzen herausgebildet, wie etwa Coaching, partizipative Entscheidungsfindung, Vertrauenskultur und offene Kommunikation. Insgesamt ist die Lead-Rolle bei New Work von einem kooperativen, unterstützenden und wertschätzenden Führungsstil geprägt, der die [Selbstorganisation](#selbstorganisation) und Selbstverantwortung der Beschäftigten fördert und zu einer positiven Arbeitskultur beiträgt."
   },
   {
+    "title": "Microlearning",
+    "description": "Als Microlearning bezeichnet man das Lernen in sehr kurzen, interaktiven und unterhaltsamen Lerneinheiten, die sich auf spezifische Lernziele fokussieren. Anders als traditionelle Lektionen in Schule und Universität, die in der Regel umfassende Inhalte über einen längeren Zeitraum vermitteln, konzentriert sich das Microlearning auf kurze Videos, Infografiken und interaktive Elemente, die nur wenige Minuten in Anspruch nehmen. Dies ermöglicht es Beschäftigten, flexibler zu lernen, da sie kurze Lernsitzungen einfacher in ihren Zeitplan integrieren können.",
+    "term_id": "microlearning"
+  },
+  {
     "title": "Mindset",
     "term_id": "mindset",
     "description": "Mindset nennt man die Denkweise, die Überzeugungen und Einstellungen eines Menschen, wie jemand Situationen und Herausforderungen wahrnimmt, interpretiert und an diese herangeht. Ein positives oder negatives Mindset kann sich auf die persönliche Entwicklung, das Verhalten, die Leistung und die [Resilienz](#resilienz) einer Person auswirken. Ein positives und konstruktives Mindset zeichnet sich durch Offenheit, Wachstum, Flexibilität und die Überzeugung aus, dass Fähigkeiten und Intelligenz durch Anstrengung und Lernen entwickelt werden können."
@@ -288,6 +293,11 @@
     "title": "Motivation",
     "term_id": "motivation",
     "description": "Motivation am Arbeitsplatz bezieht sich auf den inneren Antrieb und die Energie, die Beschäftigte dazu bewegen, sich zu engagieren, Ziele zu verfolgen und ihre Aufgaben erfolgreich zu erledigen. Intrinsische Motivation entspricht dem Wunsch, etwas zu erreichen, persönliche Zufriedenheit zu erleben und einen Sinn in der eigenen Arbeit zu finden. Extrinsische Motivation entsteht in der Regel durch Belohnung, etwa ein höheres Gehalt, Lob oder eine Beförderung. Motivierte Mitarbeitende sind engagiert, produktiv und haben eine positive Einstellung gegenüber ihren Aufgaben."
+  },
+  {
+    "title": "Multi-Space",
+    "term_id": "multi-space",
+    "description": "Multi-Space-Büros sind eine Arbeitsumgebung, die flexible Arbeitsbereiche für verschiedene Aufgabenbereiche zur Verfügung stellt. Es gibt offene Gemeinschaftsbereiche für Teamarbeit und Diskussion, aber auch Ruhebereiche und Sitzungsräume für Einzelarbeit und Telefonate."
   },
   {
     "title": "New Work",
@@ -325,19 +335,24 @@
     "description": "_Reinventing Organizations – Ein Leitfaden zur Gestaltung sinnstiftender Formen der Zusammenarbeit_ ist ein Buch des belgischen Organisationsentwicklers [Frederic Laloux](#laloux-frederic), das sich mit der Transformation herkömmlicher Arbeitsstrukturen befasst. Darin schlägt er einen evolutionären Ansatz vor, der hierarchische Modelle durch neue, flexiblere Formen der Arbeit ersetzt.\n\nEr plädiert dafür, dass Unternehmen verstärkt auf [Selbstorganisation](#selbstorganisation) und geteilte Verantwortung setzen sollten. In sogenannten „Teal Organizations“ sollten Entscheidungen auf breiter Basis getroffen werden, wodurch [Hierarchien](#hierarchie) abgebaut und die Beschäftigten befähigt werden, ihr volles Potenzial auszuschöpfen. Stehen individuelles Wachstum und eine [sinnstiftende Arbeit](#sinnstiftende-arbeit) im Vordergrund, so Laloux, sind die Mitarbeitenden motivierter und engagierter. Das Konzept von Reinventing Organizations zielt darauf ab, eine Kultur des Vertrauens und der Zusammenarbeit zu schaffen, um so mehr Innovation und Flexibilität zu ermöglichen."
   },
   {
-    "title": "Remote-First-Company",
-    "term_id": "remote-first-company",
-    "description": "Eine Remote-First-Company ist ein Unternehmen, das seine Organisationsstruktur so gestaltet, dass Beschäftigte die Freiheit haben, von jedem beliebigen Ort aus zu arbeiten. Im Gegensatz zu herkömmlichen Unternehmen mit physischen Büros legt eine Remote-First-Company den Schwerpunkt auf Fernarbeit als Grundlage für ihre Aktivitäten. Die Mitarbeitenden haben die Möglichkeit, von zu Hause aus, in [Co-Working](#co-working)-Spaces oder an anderen Orten ihrer Wahl zu arbeiten. Die Kommunikation und Zusammenarbeit erfolgen über digitale [Tools](#tools) und Plattformen."
-  },
-  {
     "title": "Remote Work",
     "term_id": "remote-work",
     "description": "Remote Work wird es genannt, wenn Beschäftigte ihre Aufgaben außerhalb des traditionellen Büros oder Arbeitsplatzes erledigen. Anstatt an einem festen Standort zu arbeiten, können sie einen Ort zu wählen, an dem sie sich wohlfühlen. Videokonferenzen und andere digitale Tools ermöglichen die nahtlose Kommunikation und Zusammenarbeit über Distanzen hinweg."
   },
   {
+    "title": "Remote-First-Company",
+    "term_id": "remote-first-company",
+    "description": "Eine Remote-First-Company ist ein Unternehmen, das seine Organisationsstruktur so gestaltet, dass Beschäftigte die Freiheit haben, von jedem beliebigen Ort aus zu arbeiten. Im Gegensatz zu herkömmlichen Unternehmen mit physischen Büros legt eine Remote-First-Company den Schwerpunkt auf Fernarbeit als Grundlage für ihre Aktivitäten. Die Mitarbeitenden haben die Möglichkeit, von zu Hause aus, in [Co-Working](#co-working)-Spaces oder an anderen Orten ihrer Wahl zu arbeiten. Die Kommunikation und Zusammenarbeit erfolgen über digitale [Tools](#tools) und Plattformen."
+  },
+  {
     "title": "Resilienz",
     "term_id": "resilienz",
     "description": "Unter Resilienz versteht man die Fähigkeit, mit Herausforderungen, Krisen und Stress umzugehen, sie zu bewältigen und sich von ihnen zu erholen. Im Arbeitskontext geht es darum, mit den Anforderungen, Belastungen und Veränderungen in einer Organisation zurechtzukommen und weiterzumachen. Die Resilienz zeigt sich in der Anpassungsfähigkeit, Problemlösungsfähigkeit, Stressbewältigung sowie in der Selbstreflexion und Selbstfürsorge eines Menschen."
+  },
+  {
+    "title": "Retrospektive",
+    "term_id": "retrospektive",
+    "description": "Die Retrospektive ist ein regelmäßiges Meeting im Scrum-Framework, in dem der vorangegangene Sprint evaluiert wird. Der Fokus dabei ist nicht die Arbeit selbst, sondern die Prozesse, Werkzeuge, und Interaktionsformate die das Team verwendet."
   },
   {
     "title": "Rollenbasiertes Arbeiten",
@@ -365,6 +380,11 @@
     "description": "Mit Servant Leadership ist ein Führungsstil gemeint, der den Mitarbeitenden dient und sie unterstützt. Anstatt seine Autorität und Macht zu betonen, liegt der Fokus des Servant Leaders auf den Bedürfnissen der Teammitglieder. Ziel ist es, eine Umgebung zu schaffen, in der Beschäftigte ihr volles Potenzial entfalten können und sich wertgeschätzt fühlen. Servant Leadership zeichnet sich durch Empathie, Dienstbarkeit, Ermächtigung und ganzheitliches Denken aus."
   },
   {
+    "title": "Silos",
+    "description": "Silos werden Strukturen und Verhaltensmuster genannt, die die Zusammenarbeit und Kommunikation innerhalb eines Unternehmens oder Instituts behindern. Gemeint sind damit zum Beispiel starre, isolierte Abteilungsstrukturen, in denen Informationen und Ressourcen nur innerhalb der eigenen Abteilung zirkulieren. Der Begriff bezieht sich aber auch auf parallel existierende, nicht aufeinander abgestimmte Tools und digitale Plattformen, die Barrieren für einen reibungslosen Informationsfluss darstellen. Phänomene dieser Art stehen im Widerspruch zu den Prinzipien von New Work, die darauf abzielen, agile und kooperative Arbeitsumgebungen zu schaffen. Ziel von New Work ist es deshalb, solche Silos oder auch ein Silodenken, das ein sich abgrenzendes Verhalten begünstigt, abzubauen.",
+    "term_id": "silos"
+  },
+  {
     "title": "Sinnstiftende Arbeit",
     "term_id": "sinnstiftende-arbeit",
     "description": "Sinnstiftende Arbeit gibt Beschäftigten das Gefühl, dass ihre Arbeit einen positiven Einfluss hat und einen Beitrag für Unternehmen und Gesellschaft leistet – sie sind dann motivierter und engagierter. Mitarbeitende, die einer sinnstiftenden Arbeit nachgehen, sind bereit, zusätzliche Anstrengungen zu unternehmen und Herausforderungen zu meistern, um ihre Ziele zu erreichen."
@@ -378,6 +398,11 @@
     "title": "Soziokratie",
     "term_id": "soziokratie",
     "description": "Soziokratie ist ein Konzept der Organisationsführung, das auf Prinzipien der Gleichberechtigung, [Selbstorganisation](#selbstorganisation) und auf Konsens basiert. Ziel ist die effektive Zusammenarbeit, eine klare Rollenverteilung und eine partizipative Entscheidungskultur. Als Grundlage der Soziokratie dient ein Kreismodell, anhand dessen eine Organisation unterteilt wird: Jeder Kreis (bzw. jedes Team) bekommt auf diese Weise einen bestimmten Verantwortungsbereich zugewiesen."
+  },
+  {
+    "title": "Starfish-Methode",
+    "description": "![alt texr](/assets/starfish.svg)\n\nRetrospektiven sind regelmäßige Treffen zur gemeinsamen Evaluierung und Verbesserung der Teamleistung. Zu den bekanntesten Varianten gehört die Starfish-Retrospektive, die häufig von Scrum-Teams verwendet wird. Der Seestern (englisch: Starfish) versinnbildlicht mit seinen fünf Armen die fünf Schritte dieser Methode: 1. Keep (Gute Praktiken, die beibehalten werden sollten), 2. Less of (Dinge, die es zu reduzieren gilt), 3. More of (Aspekte, die verstärkt werden sollten) 4. Start (Neue Ideen, die das Projekt voranbringen könnten), 5. Stop (Aktivitäten, die nicht zum Projekterfolg beitragen und beendet werden sollten). Die Starfish-Methode soll Teammitglieder dazu ermutigen, ihr Feedback einzubringen und Probleme systematisch zu analysieren.",
+    "term_id": "starfish-methode"
   },
   {
     "title": "Sync-Meeting",
@@ -430,14 +455,14 @@
     "description": "Zur Unternehmenskultur zählen die Werte, Normen, Überzeugungen, Verhaltensweisen und Traditionen einer Organisation. Diese Kultur bestimmt, wie Beschäftigte miteinander interagieren, Probleme lösen und wie sie ihre Arbeit wahrnehmen und ausführen. Außerdem charakterisiert sie ein Unternehmen oder eine wissenschaftliche Einrichtung und trägt entscheidend zum Erfolg bei, da sie sich prägend auf Innovationspotential, Mitarbeiterführung und Zusammenarbeit auswirkt."
   },
   {
+    "title": "VUCA-Welt",
+    "term_id": "vuca-welt",
+    "description": "VUCA-Welt ist ein Begriff aus dem Bereich des strategischen Managements und steht für ein Umfeld, das von Volatilität (Volatility), Unsicherheit (Uncertainty), Komplexität (Complexity) und Mehrdeutigkeit (Ambiguity) geprägt ist. Volatilität bezieht sich auf die hohe Geschwindigkeit und die Unbeständigkeit der Veränderungen, Unsicherheit auf die Schwierigkeit, Vorhersagen zu treffen und Ereignisse genau einzuschätzen.\n\nMit Komplexität ist gemeint, dass es viele unterschiedliche und vernetzte Faktoren gibt, die das Verständnis und die Entscheidungsfindung erschweren können. Und Mehrdeutigkeit verweist auf die Vielzahl von Informationen und widersprüchliche Interpretationen. Organisationen und Führungskräfte sind demnach heute mit neuen Herausforderungen konfrontiert, und es erfordert Anpassungsfähigkeit, Flexibilität und [Agilität](#agilitat), um in dieser VUCA-Welt erfolgreich zu sein."
+  },
+  {
     "title": "Viertagewoche",
     "term_id": "viertagewoche",
     "description": "Das Ziel der Viertagewoche ist es, die Work-Life-Balance zu verbessern, die Produktivität zu steigern und die Zufriedenheit der Beschäftigten zu erhöhen. Wenn die Arbeitnehmer:innen einen Tag in der Woche frei haben, haben sie mehr Zeit für persönliche Angelegenheiten, Erholung und Freizeitaktivitäten. Dies kann zu einer höheren [Motivation](#motivation) und Arbeitszufriedenheit führen."
-  },
-  {
-    "title": "VUCA-Welt",
-    "term_id": "vuca-welt",
-    "description": "VUCA-Welt ist ein Begriff aus dem Bereich des strategischen Managements und steht für ein Umfeld, das von Volatilität (Volatility), Unsicherheit (Uncertainty), Komplexität (Complexity) und Mehrdeutigkeit (Ambiguity) geprägt ist. Volatilität bezieht sich auf die hohe Geschwindigkeit und die Unbeständigkeit der Veränderungen, Unsicherheit auf die Schwierigkeit, Vorhersagen zu treffen und Ereignisse genau einzuschätzen. Mit Komplexität ist gemeint, dass es viele unterschiedliche und vernetzte Faktoren gibt, die das Verständnis und die Entscheidungsfindung erschweren können. Und Mehrdeutigkeit verweist auf die Vielzahl von Informationen und widersprüchliche Interpretationen. Organisationen und Führungskräfte sind demnach heute mit neuen Herausforderungen konfrontiert, und es erfordert Anpassungsfähigkeit, Flexibilität und [Agilität](#agilitat), um in dieser VUCA-Welt erfolgreich zu sein."
   },
   {
     "title": "Working Out Loud",
@@ -448,5 +473,10 @@
     "title": "Young Professionals",
     "term_id": "young-professionals",
     "description": "Young Professionals werden Beschäftigte in einer spezifischen Altersgruppe genannt, die zwischen dem Ende ihrer Ausbildung und dem Erreichen von Führungspositionen stehen. Sie zeichnen sich oft durch hohe [Motivation](#motivation), den Wunsch nach beruflicher Entwicklung und durch ihre Affinität zu neuen Technologien aus. Die genaue Altersspanne kann variieren, aber in der Regel sind es Menschen zwischen Mitte 20 und Anfang 30."
+  },
+  {
+    "title": "Zwei-Pizza-Regel",
+    "term_id": "zwei-pizza-regel",
+    "description": "Die Zwei-Pizza-Regel besagt dass Meetings, Workshops, und Arbeitsgruppen nur so viele Teilnehmer:innen haben sollten, wie von zwei Pizzas satt werden."
   }
 ]

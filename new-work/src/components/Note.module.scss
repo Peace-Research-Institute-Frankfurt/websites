@@ -1,0 +1,11 @@
+@import 'vars';
+
+.container {
+  @extend %caption;
+  grid-column: 1 / 4;
+  line-height: calc(var(--baseline) * 0.666);
+  color: var(--gray-light);
+  @include bp(l) {
+    grid-column: 2 / 3;
+  }
+}

@@ -7,10 +7,12 @@ import StickyHeader from './StickyHeader'
 import SkipToContent from './SkipToContent'
 import PostBody from './PostBody'
 import PostHeader from './PostHeader'
-import Bylines from './Bylines'
-import { PostList, PostListItem } from './PostList'
+import { Bylines } from './Bylines'
+import { PostList } from './PostList'
 
 import * as styles from './Post.module.scss'
+import PostHeaderVideo from './PostHeaderVideo'
+import SearchForm from './SearchForm'
 
 export const query = graphql`
   query ($id: String!) {
@@ -27,17 +29,20 @@ export const query = graphql`
         }
         frontmatter {
           title
+          short_title
           intro
           order
           category
           hero_alt
           hero_portrait_alt
           hero_credit
+          hide_body
           hero_image {
             childImageSharp {
               gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
             }
           }
+          hero_video
           hero_portrait {
             childImageSharp {
               gatsbyImageData(layout: CONSTRAINED, placeholder: NONE, width: 500)
@@ -49,11 +54,10 @@ export const query = graphql`
               author_id
               institution
               role
-              twitter
-              image {
-                childImageSharp {
-                  gatsbyImageData(placeholder: NONE, width: 100, layout: CONSTRAINED)
-                }
+            }
+            parent {
+              ... on Mdx {
+                body
               }
             }
           }
@@ -69,9 +73,11 @@ export const query = graphql`
           }
           frontmatter {
             title
+            short_title
             order
             intro
             category
+            format
           }
         }
       }
@@ -83,7 +89,7 @@ const Post = ({ data, children }) => {
 
   let heroImage = null
   if (frontmatter.hero_image) {
-    heroImage = <GatsbyImage loading="eager" image={getImage(frontmatter.hero_image)} alt={frontmatter.hero_alt} />
+    heroImage = <GatsbyImage className={styles.heroImage} loading="eager" image={getImage(frontmatter.hero_image)} alt={frontmatter.hero_alt} />
   }
   let portraitImage = null
   if (frontmatter.hero_portrait) {
@@ -92,37 +98,33 @@ const Post = ({ data, children }) => {
     )
   }
 
-  const posts = data.posts.nodes.map((node) => {
-    const fm = node.childMdx.frontmatter
-    return (
-      <li key={`post-${node.id}`}>
-        <PostListItem isCurrent={node.id === data.post.id} title={fm.title} category={fm.category} slug={node.childMdx.fields.slug} />
-      </li>
-    )
-  })
+  const videoEl = frontmatter.hero_video ? <PostHeaderVideo url={frontmatter.hero_video} poster={heroImage} /> : null
 
   return (
     <App className={`${frontmatter.category}`}>
       <SkipToContent />
-      <StickyHeader post={data.post} />
+      <StickyHeader searchForm={<SearchForm />} post={data.post} />
       <article id="content" className={`${styles.container}`}>
         <PostHeader
           title={frontmatter.title}
-          eyebrow={frontmatter.eyebrow || frontmatter.category}
-          image={heroImage}
+          media={videoEl ? videoEl : heroImage}
           portrait={portraitImage}
           intro={frontmatter.intro}
           credit={frontmatter.hero_credit}
         />
         <main className={styles.body}>
-          <aside className={styles.credits}>
-            <Bylines authors={frontmatter.authors}></Bylines>
-          </aside>
-          <div className={styles.copy}>
-            <PostBody>{children}</PostBody>
-          </div>
+          {!frontmatter.hide_body && (
+            <>
+              <aside className={styles.credits}>
+                <Bylines authors={frontmatter.authors}></Bylines>
+              </aside>
+              <div className={styles.copy}>
+                <PostBody>{children}</PostBody>
+              </div>
+            </>
+          )}
           <nav className={styles.postsNav}>
-            <PostList>{posts}</PostList>
+            <PostList posts={data.posts.nodes} currentPostId={data.post.id} />
           </nav>
         </main>
       </article>

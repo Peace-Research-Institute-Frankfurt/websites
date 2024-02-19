@@ -14,6 +14,8 @@ import Button from './ButtonAdapter'
 import { Details, DetailsGroup } from '@shared/components/Details'
 import { Listicle, ListicleItem } from './Listicle'
 import ImageSlider from './ImageSlider'
+import Note from './Note'
+import { ManifestoSignatory, ManifestoSignatories, ManifestoList, ManifestoListItem } from './Manifesto'
 
 import * as QuoteStyles from './Quote.module.scss'
 import * as CalloutStyles from './Callout.module.scss'
@@ -45,6 +47,11 @@ const shortCodes = {
   Listicle,
   ListicleItem,
   ImageSlider,
+  Note,
+  ManifestoSignatories,
+  ManifestoSignatory,
+  ManifestoList,
+  ManifestoListItem,
 }
 
 export default function PostBody({ children }) {

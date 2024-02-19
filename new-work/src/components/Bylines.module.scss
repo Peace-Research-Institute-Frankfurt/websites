@@ -4,14 +4,22 @@
   @extend %caption;
   grid-column: 1 / 4;
   grid-row: 1;
-  margin-bottom: 0.5em;
   ul {
     display: flex;
     padding: 0 !important;
-    gap: var(--padding);
+    list-style: none;
+    border-radius: var(--br-small);
+    flex-flow: column;
+    border: 1px solid var(--gray);
+    overflow: hidden;
     @include bp(m) {
-      gap: 0.25rem;
-      flex-flow: column;
+      max-width: 15em;
+    }
+    li {
+      border-bottom: 1px solid var(--gray-dark);
+      &:last-child {
+        border-bottom: 0;
+      }
     }
   }
 
@@ -26,28 +34,40 @@
 .person {
   display: flex;
   gap: 0.5rem;
-  align-items: center;
-  &:before {
-    display: none;
+  padding: 0.5em;
+  width: 100%;
+  color: var(--white);
+
+  &.active {
+    background: var(--white);
+    color: var(--black);
   }
-  @include bp(m) {
-    align-items: center;
+}
+
+button.person {
+  cursor: pointer;
+
+  &:hover,
+  &:focus-visible {
+    .name {
+      text-decoration: underline;
+    }
   }
 }
 
 .name {
   display: block;
-  line-height: 1.5;
+}
+.institution {
+  opacity: 0.75;
 }
 
-.image {
-  width: 2.5rem;
-  flex-shrink: 0;
-  transform-origin: center;
-  background: var(--color);
-  border-radius: 1000px;
-  img {
-    mix-blend-mode: multiply;
-    filter: grayscale(1) contrast(2);
+.bio {
+  @extend %caption;
+  padding: 0.75em;
+  hyphens: auto;
+  max-width: Min(100vw - 4 * var(--padding), 28rem);
+  p + p {
+    margin-top: 0.5em;
   }
 }

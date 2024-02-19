@@ -56,8 +56,8 @@
 
 %h3 {
   font-family: var(--edge);
-  font-size: 0.85em;
-  letter-spacing: 0.025em;
+  font-size: 0.9em;
+  letter-spacing: 0.075em;
   text-transform: uppercase;
 }
 
@@ -68,10 +68,10 @@
   font-family: var(--circa);
   font-size: var(--ms-0);
   line-height: var(--baseline);
-  letter-spacing: 0.005em;
-  word-spacing: 0.005em;
+  letter-spacing: 0.01em;
+  word-spacing: 0.0075em;
   hyphens: auto;
-  font-variation-settings: 'wght' 400;
+  font-variation-settings: 'wght' 350;
   p,
   ul,
   ol {
@@ -83,8 +83,12 @@
   em {
     font-style: italic;
   }
-  strong {
-    font-weight: 600;
+  & > p > strong {
+    font-variation-settings: 'wght' 600;
+    background: white;
+    color: var(--black);
+    padding: 0.15em;
+    padding-bottom: 0;
   }
   a {
     text-decoration: underline;
@@ -111,11 +115,20 @@
     }
   }
   sup {
-    @extend %caption;
     vertical-align: baseline;
-    position: relative;
     display: inline-block;
-    top: -0.4em;
+    font-size: 0.75em;
+    margin-left: 0.1em;
+    margin-right: 0.1em;
+    color: var(--gray-light);
+    height: 1.1em;
+    width: 1.1em;
+    padding-top: 0.2em;
+    border-radius: 1000px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--gray-light);
     a {
       text-decoration: none !important;
     }
@@ -141,6 +154,7 @@
   font-family: var(--edge);
   font-size: var(--ms--2);
   letter-spacing: 0.05em;
+  word-spacing: -0.075em;
 }
 
 %caption-bold {
@@ -152,5 +166,5 @@
 %caption-caps {
   @extend %caption;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.055em;
 }

@@ -6,30 +6,30 @@
   color: var(--gray-light);
   background: var(--black);
   padding: 0 var(--padding);
-  bottom: 0;
-  right: 0;
-  left: 0;
   margin: 0 var(--padding);
+  padding-top: 1.5em;
+  padding-bottom: 2em;
   z-index: 1000;
-  position: absolute;
-  height: var(--footer-height);
   flex-flow: column;
   justify-content: center;
   gap: 0.25em;
+  position: relative;
   @include bp(s) {
     justify-content: space-between;
     align-items: center;
-    flex-flow: row;
+    flex-flow: row-reverse;
   }
   @include bp(l) {
-    padding: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 .nav {
   justify-content: space-between;
+  margin-bottom: 0.5em;
   ul {
     display: flex;
-    gap: 1em;
+    gap: 0.75em;
     list-style: none;
   }
 }
@@ -46,4 +46,16 @@
   display: flex;
   gap: 1em;
   align-items: baseline;
+}
+
+.logo {
+  svg {
+    display: block;
+    height: 3rem;
+    width: auto;
+    margin-bottom: 0.5rem;
+  }
+  path {
+    fill: white;
+  }
 }

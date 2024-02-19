@@ -1,0 +1,35 @@
+@import 'vars';
+
+.signatories {
+  padding-left: 0 !important;
+  list-style: none;
+  @include bp(m) {
+    display: grid;
+    column-gap: var(--baseline);
+    grid-template-columns: repeat(3, min-content);
+  }
+}
+
+.signatory {
+  white-space: nowrap;
+  &:before {
+    display: none;
+  }
+}
+
+ul.list {
+  padding-left: 0 !important;
+  font-size: var(--ms-1);
+  font-style: italic;
+  letter-spacing: 0;
+  line-height: calc(var(--baseline) * 1.333);
+}
+
+.list-item {
+  margin-bottom: var(--baseline);
+  hyphens: none;
+  text-wrap: balance;
+  &::before {
+    display: none;
+  }
+}

@@ -1,0 +1,13 @@
+@import 'vars';
+
+.container {
+  padding: 0 var(--padding);
+}
+
+.menu {
+  @extend %caption;
+  ul {
+    display: flex;
+    gap: 1em;
+  }
+}

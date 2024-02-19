@@ -20,7 +20,7 @@ export default function Logo({ progress }) {
   const nTransform = `translate(${easeInOutCubic(progress) * -238} 0)`
   const leibnizTransform = `translate(${easeInOutCubic(progress) * -428} 0)`
   const ewTransform = `translate(${easeInOutCubic(progress) * -428} 0)`
-  const width = Math.max(510 - easeInOutCubic(progress) * 225, 285)
+  const width = Math.max(510 - easeInOutCubic(progress) * 225, 286)
 
   return (
     <div className={styles.container} style={{ '--width': `${width}px` }}>

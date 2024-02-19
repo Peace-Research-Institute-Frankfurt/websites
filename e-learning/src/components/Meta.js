@@ -54,6 +54,8 @@ export default function Meta({ title, socialTitle, description, image, url, chil
       <meta property="og:image:alt" content={data.image.alt} />
       <meta name="author" content={data.siteTitle} />
 
+      <meta name="robots" content="noindex" />
+
       {children}
     </>
   )

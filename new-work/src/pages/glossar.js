@@ -7,6 +7,7 @@ import App from '../components/App'
 import StickyHeader from '../components/StickyHeader'
 import SkipToContent from '../components/SkipToContent'
 import PageHeader from '../components/PageHeader'
+import SearchForm from '../components/SearchForm'
 import MarkdownRenderer from 'react-markdown-renderer'
 import * as styles from './terms.module.scss'
 import * as pageStyles from '../components/Page.module.scss'
@@ -35,12 +36,16 @@ const Terms = ({ data }) => {
         return slug(el.term_id) === hash
       })
       if (term) {
-        setActiveTerms((prev) => {
-          return [...prev, term.term_id]
-        })
+        setActiveTerms([term.term_id])
       }
     }
   }, [data.terms.nodes])
+
+  function addActiveTerm(newTerm) {
+    setActiveTerms((prev) => {
+      return [...prev, newTerm]
+    })
+  }
 
   data.terms.nodes.forEach((node) => {
     const initial = node.title.slice(0, 1)
@@ -90,6 +95,8 @@ const Terms = ({ data }) => {
         <li className={styles.termsItem} key={`term-${i}`}>
           <details id={node.term_id} className={styles.term} open={activeTerms.includes(node.term_id)}>
             <summary
+              role="button"
+              tabIndex={0}
               onClick={(e) => {
                 e.preventDefault()
                 if (activeTerms.includes(node.term_id)) {
@@ -107,7 +114,7 @@ const Terms = ({ data }) => {
               {node.title}
             </summary>
             <div className={styles.termDescription}>
-              <MarkdownRenderer markdown={node.description} />
+              <MarkdownRenderer markdown={node.description || ''} />
             </div>
           </details>
         </li>
@@ -117,7 +124,7 @@ const Terms = ({ data }) => {
   return (
     <App>
       <SkipToContent />
-      <StickyHeader />
+      <StickyHeader searchForm={<SearchForm addActiveTerm={addActiveTerm} />} />
       <main id="content" className={pageStyles.container}>
         <PageHeader
           title="Glossar"

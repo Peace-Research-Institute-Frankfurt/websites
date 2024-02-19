@@ -10,12 +10,15 @@ const config = {
     siteUrl: `https://leibniz-nw.netlify.app`,
     title: 'WorkNew@Leibniz',
     description: 'Neue Arbeitformen für Wissenschaft und Forschung',
-    siteTwitter: '@HSFK_PRIF',
-    authorTwitter: '@HSFK_PRIF',
+    siteTwitter: '@PRIF_org',
+    authorTwitter: '@PRIF_org',
     image: {
       src: '/social-image.png',
       alt: 'image alt',
     },
+  },
+  flags: {
+    FAST_DEV: true,
   },
   adapter: adapter.default(),
   plugins: [
@@ -82,6 +85,60 @@ const config = {
           remarkPlugins: [remarkGfm],
         },
         gatsbyRemarkPlugins: [],
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-local-search',
+      options: {
+        name: 'posts',
+        engine: 'flexsearch',
+        query: `
+          {
+            terms: allTermsJson {
+              nodes {
+                id
+                title
+                term_id
+              }
+            }
+            posts: allFile(filter: { extension: { eq: "mdx" }, sourceInstanceName: { eq: "posts" } }) {
+              nodes {
+                id
+                relativeDirectory
+                childMdx {
+                  fields {
+                    slug
+                  }
+                  frontmatter {
+                    title
+                    short_title
+                  }
+                }
+              }
+            }
+          }
+        `,
+        ref: 'id',
+        index: ['title', 'short_title'],
+        store: ['id', 'title', 'slug', 'post_type'],
+        normalizer: ({ data }) => {
+          const mergedData = [
+            ...data.posts.nodes.map((node) => ({
+              id: node.id,
+              slug: node.childMdx.fields.slug,
+              title: node.childMdx.frontmatter.title,
+              short_title: node.childMdx.frontmatter.short_title || '',
+              post_type: 'post',
+            })),
+            ...data.terms.nodes.map((node) => ({
+              id: node.term_id,
+              slug: `glossar#${node.term_id}`,
+              title: node.title,
+              post_type: 'term',
+            })),
+          ]
+          return mergedData
+        },
       },
     },
   ],
