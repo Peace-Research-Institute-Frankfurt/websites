@@ -10,10 +10,10 @@
     list-style: none;
     border-radius: var(--br-small);
     flex-flow: column;
-    border: 1px solid var(--gray);
+    border: 1px solid var(--gray-dark);
     overflow: hidden;
     @include bp(m) {
-      max-width: 15em;
+      max-width: 16em;
     }
     li {
       border-bottom: 1px solid var(--gray-dark);
@@ -32,12 +32,10 @@
 }
 
 .person {
-  display: flex;
-  gap: 0.5rem;
   padding: 0.5em;
   width: 100%;
   color: var(--white);
-
+  text-align: left;
   &.active {
     background: var(--white);
     color: var(--black);
