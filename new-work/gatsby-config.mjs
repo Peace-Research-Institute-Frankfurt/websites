@@ -8,7 +8,7 @@ import adapter from 'gatsby-adapter-netlify'
 const config = {
   siteMetadata: {
     siteUrl: `https://leibniz-nw.netlify.app`,
-    title: 'WorkNew@Leibniz',
+    title: 'WorkNew@leibniz',
     description: 'Neue Arbeitformen für Wissenschaft und Forschung',
     siteTwitter: '@PRIF_org',
     authorTwitter: '@PRIF_org',
