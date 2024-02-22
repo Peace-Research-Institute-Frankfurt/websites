@@ -36,6 +36,7 @@
   position: relative;
   border-bottom: 1px solid var(--gray);
   padding-bottom: calc(var(--padding) * 1.5);
+  text-wrap: balance;
   @include bp(m) {
     padding-top: calc(var(--padding) * 1.15);
     padding-bottom: calc(var(--padding) * 1.25);
