@@ -15,7 +15,7 @@ function prettifyPostType(postType) {
 }
 
 function DropdownCombobox({ value, setValue, inputItems, addActiveTerm }) {
-  const { isOpen, getLabelProps, getMenuProps, getInputProps, highlightedIndex, getItemProps, selectedItem, selectItem } = useCombobox({
+  const { isOpen, getLabelProps, getMenuProps, getInputProps, highlightedIndex, getItemProps } = useCombobox({
     items: inputItems,
     defaultInputValue: value,
     onInputValueChange: ({ inputValue }) => {

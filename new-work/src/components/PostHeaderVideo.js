@@ -11,7 +11,7 @@ export default function PostHeaderVideo({ url, poster }) {
   const matches = url.match(/(?:vimeo.com\/)(\d+)(?:\/)(.+)/)
   const closeButtonRef = useRef(null)
   const openButtonRef = useRef(null)
-  const { choices, setChoices } = useContext(EmbedChoicesContext)
+  const { setChoices } = useContext(EmbedChoicesContext)
 
   return (
     <div className={`${isActive ? styles.mediaActive : ''}`}>

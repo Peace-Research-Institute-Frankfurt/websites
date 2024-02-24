@@ -29,7 +29,7 @@ const BookReview = ({ title, covers, meta, children }) => {
     for (let j = 0; j < data.images.nodes.length; j++) {
       let node = data.images.nodes[j]
       if (node.relativePath.toLowerCase() === cover.src.toLowerCase()) {
-        coverImages = [...coverImages, <GatsbyImage key={node.id} className={styles.cover} loading="lazy" image={getImage(node)} alt={cover.alt} />]
+        coverImages = [...coverImages, <GatsbyImage key={node.id} loading="lazy" image={getImage(node)} alt={cover.alt} />]
         break
       }
       i++
