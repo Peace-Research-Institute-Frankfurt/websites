@@ -46,6 +46,7 @@ const PostList = ({ posts, activeFilters, currentPostId }) => {
               slug={node.childMdx.fields.slug}
               intro={fm.intro}
               isCurrent={currentPostId && currentPostId === node.id}
+              format={node.childMdx.frontmatter.format}
             />
           </li>
         )
@@ -89,8 +90,8 @@ const PostList = ({ posts, activeFilters, currentPostId }) => {
   )
 }
 
-const PostListItem = ({ title, intro, category, isCurrent, slug }) => {
-  const maxWordCount = 25
+const PostListItem = ({ title, intro, format, category, isCurrent, slug }) => {
+  const maxWordCount = 35
   let truncatedIntro = ''
   if (intro) {
     truncatedIntro = intro.split(' ').length > maxWordCount ? intro.split(' ').slice(0, maxWordCount).join(' ') + '...' : intro
@@ -100,7 +101,10 @@ const PostListItem = ({ title, intro, category, isCurrent, slug }) => {
       className={`${styles.item} ${category === 'meta' ? styles.meta : ''} ${category ? category : ''} ${isCurrent ? styles.current : ''}`}
       to={`/${slug}`}
     >
-      <span className={styles.title}>{title}</span>
+      <div>
+        {format && format != '' && <span className={styles.format}>{format}</span>}
+        <span className={styles.title}>{title}</span>
+      </div>
       {intro && <p className={styles.intro}>{truncatedIntro}</p>}
     </Link>
   )
