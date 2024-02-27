@@ -102,7 +102,7 @@ const PostListItem = ({ title, intro, format, category, isCurrent, slug }) => {
       to={`/${slug}`}
     >
       <div>
-        {format && format != '' && <span className={styles.format}>{format}</span>}
+        {format && format !== '' && <span className={styles.format}>{format}</span>}
         <span className={styles.title}>{title}</span>
       </div>
       {intro && <p className={styles.intro}>{truncatedIntro}</p>}

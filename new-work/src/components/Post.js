@@ -36,6 +36,7 @@ export const query = graphql`
           hero_alt
           hero_portrait_alt
           hero_credit
+          hero_credit_label
           hide_body
           hero_image {
             childImageSharp {
@@ -111,6 +112,7 @@ const Post = ({ data, children }) => {
           portrait={portraitImage}
           intro={frontmatter.intro}
           credit={frontmatter.hero_credit}
+          creditLabel={frontmatter.hero_credit_label}
         />
         <main className={styles.body}>
           {!frontmatter.hide_body && (
