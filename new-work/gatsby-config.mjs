@@ -98,7 +98,14 @@ const config = {
               nodes {
                 id
                 title
+                description
                 term_id
+              }
+            }
+            allMdx {
+              nodes {
+                body
+                id
               }
             }
             posts: allFile(filter: { extension: { eq: "mdx" }, sourceInstanceName: { eq: "posts" } }) {
@@ -106,12 +113,14 @@ const config = {
                 id
                 relativeDirectory
                 childMdx {
+                  id
                   fields {
                     slug
                   }
                   frontmatter {
                     title
                     short_title
+                    intro
                   }
                 }
               }
@@ -119,21 +128,31 @@ const config = {
           }
         `,
         ref: 'id',
-        index: ['title', 'short_title'],
+        index: ['title', 'short_title', 'intro', 'body'],
         store: ['id', 'title', 'slug', 'post_type'],
         normalizer: ({ data }) => {
           const mergedData = [
-            ...data.posts.nodes.map((node) => ({
-              id: node.id,
-              slug: node.childMdx.fields.slug,
-              title: node.childMdx.frontmatter.title,
-              short_title: node.childMdx.frontmatter.short_title || '',
-              post_type: 'post',
-            })),
+            ...data.posts.nodes.map((node) => {
+              const mdxNode = data.allMdx.nodes.find((mn) => {
+                return mn.id === node.childMdx.id
+              })
+              return {
+                id: node.id,
+                slug: node.childMdx.fields.slug,
+                title: node.childMdx.frontmatter.title,
+                short_title: node.childMdx.frontmatter.short_title || '',
+                body: mdxNode.body.replace(/<[^>]*>/g, ''),
+                intro: node.childMdx.frontmatter.intro,
+                post_type: 'post',
+              }
+            }),
             ...data.terms.nodes.map((node) => ({
               id: node.term_id,
               slug: `glossar#${node.term_id}`,
               title: node.title,
+              short_title: '',
+              body: node.description,
+              intro: '',
               post_type: 'term',
             })),
           ]
