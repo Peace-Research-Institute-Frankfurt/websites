@@ -91,6 +91,8 @@ ul.slides {
 }
 
 .credit {
+  @extend %sub-caption;
+  margin-top: 0.5em;
   color: var(--gray-light);
 }
 
