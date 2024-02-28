@@ -97,6 +97,7 @@ exports.createSchemaCustomization = async ({ getNode, getNodesByType, pathPrefix
   }
   type FrontMatter {
     hero_image: File @fileByRelativePath
+    hero_video: String
     authors: [Author] @link(by: "author_id")
   }
   type Mdx {

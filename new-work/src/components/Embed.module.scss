@@ -1,9 +1,15 @@
 @import 'vars';
 .container {
   margin: calc(var(--baseline) / 2) 0;
-  grid-column: 1 / 3;
+  &:first-child {
+    margin-top: 0;
+  }
+  grid-column: 1 / 4;
+  @include bp(m) {
+    grid-column: 1 / 3;
+  }
   @include bp(l) {
-    grid-column: 2 / 3;
+    display: contents;
   }
 }
 
@@ -12,11 +18,28 @@
   border: 1px solid var(--gray);
   padding: var(--padding-small);
   border-radius: var(--br-medium);
+  @include bp(l) {
+    margin-bottom: var(--baseline);
+  }
+}
+
+.captions {
+  @extend %caption;
+  padding-top: 0.75em;
+
+  @include bp(l) {
+    padding-top: 0;
+    grid-column: 1 / 2;
+  }
 }
 
 .iframe-container {
   width: 100%;
   position: relative;
+  @include bp(l) {
+    grid-column: 1 / 3;
+    margin-bottom: var(--baseline);
+  }
   iframe {
     position: absolute;
     top: 0;
@@ -34,9 +57,4 @@
   @extend %caption;
   color: var(--gray-light);
   line-height: 1;
-}
-
-.caption {
-  @extend %caption;
-  padding-top: 0.75em;
 }

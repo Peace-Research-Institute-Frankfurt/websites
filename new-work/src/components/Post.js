@@ -117,9 +117,11 @@ const Post = ({ data, children }) => {
         <main className={styles.body}>
           {!frontmatter.hide_body && (
             <>
-              <aside className={styles.credits}>
-                <Bylines authors={frontmatter.authors}></Bylines>
-              </aside>
+              {frontmatter.authors && (
+                <aside className={styles.credits}>
+                  <Bylines authors={frontmatter.authors}></Bylines>
+                </aside>
+              )}
               <div className={styles.copy}>
                 <PostBody>{children}</PostBody>
               </div>
