@@ -30,9 +30,14 @@
 
 %copy {
   font-family: var(--roboto);
-  font-variation-settings: 'wght' 400, 'wdth' 100, 'opsz' 25;
+  text-rendering: optimizeLegibility;
+  font-variation-settings: 'wght' 400, 'wdth' 670, 'opsz' 25;
   font-size: var(--ms-0);
+  line-height: 1.4;
+  letter-spacing: 0.015em;
+  hyphens: auto;
 }
+
 %copy-large {
   font-family: var(--montserrat);
   font-variation-settings: 'wght' 200, 'wdth' 100, 'opsz' 25;
@@ -65,16 +70,27 @@
 }
 %h2 {
   font-family: var(--montserrat);
-  font-variation-settings: 'wght' 700, 'wdth' 110, 'opsz' 144;
+  font-variation-settings: 'wght' 600, 'wdth' 110, 'opsz' 144;
   font-size: var(--ms-4);
   @include bp(m) {
-    font-size: var(--ms-6);
+    font-size: var(--ms-7);
+  }
+}
+%h3 {
+  font-family: var(--montserrat);
+  font-variation-settings: 'wght' 600, 'wdth' 110, 'opsz' 144;
+  font-size: var(--ms-3);
+  @include bp(m) {
+    font-size: var(--ms-5);
   }
 }
 %h4 {
   font-family: var(--montserrat);
   font-variation-settings: 'wght' 300, 'wdth' 10, 'opsz' 14;
   text-transform: uppercase;
-  font-size: var(--ms-1);
+  font-size: var(--ms-0);
   letter-spacing: 0.01em;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  text-decoration-thickness: 1px;
 }

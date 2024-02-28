@@ -1,0 +1,21 @@
+@import 'vars';
+
+.container {
+  @extend %grid;
+  align-items: baseline;
+  padding: 0 var(--padding);
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.title {
+  grid-column: 2 / 5;
+  @extend %h4;
+}
+
+.copy {
+  @extend %copy;
+  grid-column: 5 / 13;
+  max-width: 40em;
+  hyphens: none;
+}

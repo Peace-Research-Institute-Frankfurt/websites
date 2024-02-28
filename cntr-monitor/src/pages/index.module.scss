@@ -84,7 +84,7 @@
     bottom: 0;
     right: 0;
     z-index: -10;
-    background-color: rgb(247, 246, 240, 0.95);
+    background-color: rgba(255, 255, 255, 0.905);
     mask: var(--mask);
   }
 }
@@ -108,6 +108,38 @@
 .current-issue {
   grid-column: 5 / 12;
   h2 {
-    @extend %h2;
+    @extend %h3;
   }
+}
+
+.archive {
+  @extend %grid;
+  background: var(--gray-light);
+  align-items: baseline;
+  padding-left: var(--padding);
+  padding-right: var(--padding);
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.archive-list {
+  grid-column: 5 / 12;
+  list-style: none;
+}
+
+.archive-title {
+  @extend %h3;
+}
+.archive-item {
+  border-bottom: 1px dotted var(--black);
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  &:last-child {
+    margin-bottom: 0;
+    border-bottom: 0;
+  }
+}
+
+.archive-intro {
+  @extend %copy-large;
 }

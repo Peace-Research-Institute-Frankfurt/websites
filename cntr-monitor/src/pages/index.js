@@ -8,6 +8,7 @@ import * as styles from './index.module.scss'
 import SiteHeader from '../components/SiteHeader'
 import Footer from '../components/Footer'
 import MarkdownRenderer from 'react-markdown-renderer'
+import AboutSection from '../components/AboutSection'
 
 export const query = graphql`
   query ($language: String!) {
@@ -94,7 +95,7 @@ const Index = ({ data, pageContext, location }) => {
         </section>
         <section className={styles.current}>
           <div className={styles.currentInner}>
-            <h2 className={styles.sectionTitle}>Current issue</h2>
+            <h2 className={styles.sectionTitle}>{t('Current issue')}</h2>
             <div className={styles.currentIssue}>
               <Link to={`/${currentYear}`}>
                 <h2>{currentYear}</h2>
@@ -106,17 +107,24 @@ const Index = ({ data, pageContext, location }) => {
           </div>
         </section>
         <section className={styles.archive}>
-          {data.issues.nodes.map((node, i) => {
-            const year = node.relativeDirectory.replace(/(.{2})\/(issues)\//g, '')
-            return (
-              <li key={`issue-${i}`}>
-                <Link to={`/${year}`}>
-                  <span>{year}</span>
-                </Link>
-              </li>
-            )
-          })}
+          <h2 className={styles.sectionTitle}>{t('Past issues')}</h2>
+          <ol className={styles.archiveList}>
+            {data.issues.nodes.map((node, i) => {
+              const year = node.relativeDirectory.replace(/(.{2})\/(issues)\//g, '')
+              return (
+                <li key={`issue-${i}`} className={styles.archiveItem}>
+                  <Link to={`/${year}`}>
+                    <span className={styles.archiveTitle}>{year}</span>
+                    <div className={styles.archiveIntro}>
+                      <MarkdownRenderer markdown={currentIssue.childMdx.frontmatter.intro} />
+                    </div>
+                  </Link>
+                </li>
+              )
+            })}
+          </ol>
         </section>
+        <AboutSection />
       </main>
       <Footer pages={data.pages.nodes} />
     </App>
