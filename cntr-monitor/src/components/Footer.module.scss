@@ -1,7 +1,10 @@
 @import 'vars';
 
 .container {
-  padding: 0 var(--padding);
+  padding: 1rem var(--padding);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .menu {
@@ -9,5 +12,21 @@
   ul {
     display: flex;
     gap: 1em;
+  }
+}
+
+.copyright {
+  @extend %caption;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1em;
+  svg {
+    height: 2rem;
+    width: auto;
+    display: block;
+  }
+  path {
+    fill: var(--blue-dark);
   }
 }

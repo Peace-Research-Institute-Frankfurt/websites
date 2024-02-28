@@ -1,9 +1,100 @@
 @import '../components/vars';
 
 .container {
-  padding: var(--padding);
 }
 
-.title {
+.hero {
+  @extend %grid;
+  color: var(--white);
+  position: relative;
+  padding: var(--padding);
+  height: 100vh;
+  padding-top: 10%;
+}
+
+.hero-title {
   @extend %h1;
+  grid-column: 3 / 10;
+}
+.hero-intro {
+  @extend %copy-large;
+  grid-column: 3 / 10;
+  &:after {
+    content: '';
+    position: absolute;
+    border-top: 1px dotted white;
+    height: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(1em) translateY(calc(var(--padding) * 3));
+  }
+}
+.header-blue,
+.header-black {
+  position: absolute;
+  svg {
+    width: 100%;
+  }
+}
+
+.header-blue {
+  bottom: 0;
+  left: 0;
+  right: var(--padding);
+  display: block;
+  z-index: -100;
+}
+
+.header-black {
+  right: 0;
+  z-index: -200;
+  bottom: 0;
+  width: 120%;
+  path {
+    fill: var(--blue-dark);
+  }
+}
+
+.current {
+  height: 60vh;
+  position: relative;
+  padding-left: var(--padding);
+}
+
+.current-inner {
+  @extend %grid;
+  padding-top: calc(var(--padding) * 2);
+}
+
+.current-brand {
+  background: #414a25;
+  position: absolute;
+  z-index: -300;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  path {
+    fill: #414a25;
+  }
+}
+
+.current-image {
+  position: absolute;
+  z-index: -150;
+  left: var(--padding);
+  right: var(--padding);
+  bottom: var(--padding);
+  path {
+    fill: rgb(215, 226, 235);
+  }
+}
+
+.section-title {
+  grid-column: 3 / 6;
+}
+.current-issue {
+  grid-column: 6 / 12;
+  h2 {
+    @extend %h2;
+  }
 }

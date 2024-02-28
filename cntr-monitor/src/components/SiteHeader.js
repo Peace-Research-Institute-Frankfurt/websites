@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import Logo from '../images/logo-reverse.svg'
 import * as styles from './SiteHeader.module.scss'
 
 export default function SiteHeader({ post, issue, translationData, children }) {
@@ -9,9 +10,9 @@ export default function SiteHeader({ post, issue, translationData, children }) {
     <header className={`${styles.container}`}>
       <div className={styles.inner}>
         <Link to={homePath} className={`${styles.title}`}>
-          <div className={styles.titleInner}>
-            <span>CNTR Monitor</span>
-          </div>
+          <Logo />
+          <span>Monitor</span>
+          <span className={styles.year}>2024</span>
         </Link>
         {issue && (
           <div>

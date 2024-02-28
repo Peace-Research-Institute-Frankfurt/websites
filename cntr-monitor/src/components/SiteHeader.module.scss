@@ -1,1 +1,29 @@
 @import 'vars';
+
+.container {
+  padding: 0 var(--padding);
+  padding-top: 1em;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 0.25em;
+  color: var(--white);
+  font-size: 2rem;
+  font-family: var(--montserrat);
+  font-variation-settings: 'wght' 700, 'wdth' 110, 'opsz' 45;
+  svg {
+    height: 1em;
+    width: auto;
+    display: block;
+  }
+  path {
+    fill: currentColor;
+  }
+}
+
+.year {
+  font-variation-settings: 'wght' 200, 'wdth' 110, 'opsz' 45;
+  font-feature-settings: 'onum' 1;
+}

@@ -22,12 +22,20 @@
   --ms-2: calc(var(--ms-1) * var(--ratio));
   --ms-3: calc(var(--ms-2) * var(--ratio));
   --ms-4: calc(var(--ms-3) * var(--ratio));
-  --padding: 4vw;
+  --ms-5: calc(var(--ms-4) * var(--ratio));
+  --ms-6: calc(var(--ms-5) * var(--ratio));
+  --ms-7: calc(var(--ms-6) * var(--ratio));
+  --padding: 1.5vw;
   --baseline: calc(var(--ms-0) * 1.45);
   --fast: 200ms;
   --black: black;
   --br-small: 4px;
-  --focus-color: blue;
+  --blue: #007ca0;
+  --blue-dark: #031d25;
+  --black: #050d0f;
+  --white: #ffffff;
+  --gray-light: #eaeef0;
+  --focus-color: var(--black);
 
   // Scale type size on high-res displays
   @media (min-resolution: 120dpi) and (min-width: 1200px) {
@@ -68,6 +76,11 @@ button {
   border: 0;
   font-family: inherit;
   letter-spacing: inherit;
+}
+
+::selection {
+  background: var(--black);
+  color: var(--white);
 }
 
 a:focus-visible,
