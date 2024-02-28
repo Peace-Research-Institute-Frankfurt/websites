@@ -5,22 +5,30 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: var(--black);
+  border-top: 1px dotted var(--black);
+}
+
+.copy {
+  display: flex;
+  gap: 1.5em;
 }
 
 .menu {
-  @extend %caption;
+  @extend %caption-bold;
   ul {
     display: flex;
-    gap: 1em;
+    list-style: none;
+    gap: 0.75em;
   }
 }
 
 .copyright {
   @extend %caption;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 1em;
+  opacity: 0.75;
+}
+
+.logo {
   svg {
     height: 2rem;
     width: auto;

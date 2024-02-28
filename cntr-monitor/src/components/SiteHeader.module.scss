@@ -1,8 +1,13 @@
 @import 'vars';
 
 .container {
-  padding: 0 var(--padding);
-  padding-top: 1em;
+  padding: 1em calc(var(--padding) * 2);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  border-bottom: 1px dotted var(--white);
 }
 
 .title {
@@ -10,7 +15,7 @@
   align-items: center;
   gap: 0.25em;
   color: var(--white);
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-family: var(--montserrat);
   font-variation-settings: 'wght' 700, 'wdth' 110, 'opsz' 45;
   svg {

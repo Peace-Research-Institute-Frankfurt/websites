@@ -9,24 +9,28 @@ export default function Footer({ pages }) {
   if (!pages) pages = []
   return (
     <footer className={styles.container}>
-      <nav className={styles.menu}>
-        <ul>
-          <li>
-            <Link to="/">{t('Home')}</Link>
-          </li>
-          {pages.map((p) => {
-            return (
-              <li key={`navitem-${p.id}`}>
-                <Link to={`/${p.childMdx.fields.slug}`}>{p.childMdx.frontmatter.title}</Link>
-              </li>
-            )
-          })}
-        </ul>
-      </nav>
-      <p className={styles.copyright}>
-        {t('© PRIF and the authors')} {new Date().getFullYear()}
+      <div className={styles.copy}>
+        <nav className={styles.menu}>
+          <ul>
+            <li>
+              <Link to="/">{t('Home')}</Link>
+            </li>
+            {pages.map((p) => {
+              return (
+                <li key={`navitem-${p.id}`}>
+                  <Link to={`/${p.childMdx.fields.slug}`}>{p.childMdx.frontmatter.title}</Link>
+                </li>
+              )
+            })}
+          </ul>
+        </nav>
+        <p className={styles.copyright}>
+          {t('© PRIF and the authors')} {new Date().getFullYear()}
+        </p>
+      </div>
+      <div className={styles.logo}>
         <Logo />
-      </p>
+      </div>
     </footer>
   )
 }

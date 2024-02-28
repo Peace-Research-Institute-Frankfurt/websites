@@ -8,73 +8,84 @@
   color: var(--white);
   position: relative;
   padding: var(--padding);
-  height: 100vh;
-  padding-top: 10%;
+  min-height: 75vh;
+  padding-top: 12rem;
+  padding-bottom: 12rem;
 }
+
+// each chevron side is 1/3
+// the whole thing is normally square but we can't really have that
 
 .hero-title {
   @extend %h1;
-  grid-column: 3 / 10;
+  grid-column: 2 / 10;
+  z-index: 200;
 }
 .hero-intro {
   @extend %copy-large;
-  grid-column: 3 / 10;
-  &:after {
-    content: '';
-    position: absolute;
-    border-top: 1px dotted white;
-    height: 0;
-    left: 0;
-    right: 0;
-    transform: translateY(1em) translateY(calc(var(--padding) * 3));
-  }
-}
-.header-blue,
-.header-black {
-  position: absolute;
-  svg {
-    width: 100%;
-  }
+  grid-column: 2 / 11;
+  z-index: 200;
 }
 
-.header-blue {
+.hero-blue {
   bottom: 0;
-  left: 0;
   right: var(--padding);
-  display: block;
-  z-index: -100;
+  left: var(--padding);
+  top: 0;
+  z-index: 100;
+  position: absolute;
+  background: var(--blue);
+  mask: var(--mask);
 }
 
-.header-black {
-  right: 0;
-  z-index: -200;
+.hero-black {
+  left: calc(var(--padding) * -2);
   bottom: 0;
-  width: 120%;
-  path {
-    fill: var(--blue-dark);
+  right: 0;
+  top: calc(var(--corner-size) * -1.5);
+  z-index: 50;
+  position: absolute;
+  filter: drop-shadow(2px 2px 20px rgba(0, 0, 0, 0.2));
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--blue-dark);
+    mask: var(--mask);
   }
 }
 
 .current {
-  height: 60vh;
-  position: relative;
+  // padding-left: calc(sqrt(2) * var(--corner-size) / 2);
   padding-left: var(--padding);
+  padding-right: var(--padding);
+  padding-bottom: var(--padding);
+  background: rgb(35, 78, 31);
 }
 
 .current-inner {
   @extend %grid;
-  padding-top: calc(var(--padding) * 2);
-}
-
-.current-brand {
-  background: #414a25;
-  position: absolute;
-  z-index: -300;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  path {
-    fill: #414a25;
+  padding-top: calc(var(--corner-size) * sqrt(2) + 6em);
+  padding-bottom: 10em;
+  margin-top: calc(var(--corner-size) * sqrt(2) * -1);
+  position: relative;
+  z-index: 75;
+  align-items: baseline;
+  filter: drop-shadow(2px 2px 10px rgba(0, 0, 0, 0.25));
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -10;
+    background-color: rgb(247, 246, 240, 0.95);
+    mask: var(--mask);
   }
 }
 
@@ -84,16 +95,18 @@
   left: var(--padding);
   right: var(--padding);
   bottom: var(--padding);
-  path {
-    fill: rgb(215, 226, 235);
-  }
+}
+
+.current-intro {
+  @extend %copy-large;
 }
 
 .section-title {
-  grid-column: 3 / 6;
+  grid-column: 2 / 5;
+  @extend %h4;
 }
 .current-issue {
-  grid-column: 6 / 12;
+  grid-column: 5 / 12;
   h2 {
     @extend %h2;
   }

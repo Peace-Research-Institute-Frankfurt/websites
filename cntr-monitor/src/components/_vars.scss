@@ -24,8 +24,7 @@
 
 %grid {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  column-gap: 1rem;
+  grid-template-columns: calc(sqrt(2) * var(--corner-size)) repeat(12, 1fr) calc(sqrt(2) * var(--corner-size));
   align-content: flex-start;
 }
 
@@ -49,7 +48,12 @@
 %caption {
   @extend %copy;
   font-size: var(--ms--1);
-  font-variation-settings: 'wght' 400, 'wdth' 100, 'opsz' 5;
+  font-variation-settings: 'wght' 400, 'wdth' 95, 'opsz' 5;
+}
+%caption-bold {
+  @extend %caption;
+  letter-spacing: -0.01em;
+  font-variation-settings: 'wght' 700, 'wdth' 95, 'opsz' 5;
 }
 %h1 {
   font-family: var(--montserrat);
@@ -61,9 +65,16 @@
 }
 %h2 {
   font-family: var(--montserrat);
-  font-variation-settings: 'wght' 800, 'wdth' 110, 'opsz' 144;
+  font-variation-settings: 'wght' 700, 'wdth' 110, 'opsz' 144;
   font-size: var(--ms-4);
   @include bp(m) {
-    font-size: var(--ms-5);
+    font-size: var(--ms-6);
   }
+}
+%h4 {
+  font-family: var(--montserrat);
+  font-variation-settings: 'wght' 300, 'wdth' 10, 'opsz' 14;
+  text-transform: uppercase;
+  font-size: var(--ms-1);
+  letter-spacing: 0.01em;
 }
