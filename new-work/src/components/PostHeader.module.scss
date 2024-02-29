@@ -8,6 +8,9 @@
   min-height: 100%;
   z-index: 50;
   min-width: 100%;
+  .has-default & {
+    display: contents;
+  }
 }
 
 .container {
@@ -18,7 +21,6 @@
   border-left: 1px solid var(--gray);
   border-right: 1px solid var(--gray);
   border-top: 1px solid var(--gray);
-
   z-index: 100;
   position: relative;
 }
@@ -29,6 +31,12 @@
 
 .has-media {
   padding-top: 80vh;
+  &.has-default {
+    padding-top: 30vh;
+    @include bp(m) {
+      padding-top: 50vh;
+    }
+  }
 }
 
 .title-container {

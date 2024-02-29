@@ -1,17 +1,36 @@
+@import 'vars';
 .container {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: auto;
   background: var(--black);
-  transform: scale(1.1);
+  overflow: hidden;
+  max-width: 100%;
+}
+.fixed,
+.scroll {
+  background: transparent;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.scroll {
+  position: absolute;
+  z-index: 10;
+  .cell {
+    opacity: 0.5;
+  }
+}
+
+.fixed {
+  position: fixed;
+  background: var(--black);
 }
 
 .cell {
   fill: var(--color);
-  &:nth-child(2n) {
-    opacity: 0.5;
+  stroke: rgb(0, 0, 0);
+  stroke-width: 0.1;
+  @include bp(m) {
+    stroke-width: 0.03;
   }
 }

@@ -19,7 +19,7 @@ const PostList = ({ posts, activeFilters, currentPostId }) => {
       }),
   ]
 
-  const categories = ['meta', 'tool', 'mensch', 'raum']
+  const categories = ['meta', 'raum', 'tool', 'mensch']
 
   const groupedPosts = []
   postGroups.forEach((group) => {

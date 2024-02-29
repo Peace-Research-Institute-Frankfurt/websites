@@ -78,8 +78,11 @@
 .nav-search {
   @extend .nav-item;
   padding: 0;
-  height: 1.8em;
   display: flex;
+  height: 100%;
+  @include bp(m) {
+    height: 1.75em;
+  }
 }
 
 .bookmarks-container {

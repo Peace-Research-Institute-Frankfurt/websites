@@ -116,6 +116,7 @@ const Post = ({ data, children }) => {
           intro={frontmatter.intro}
           credit={frontmatter.hero_credit}
           creditLabel={frontmatter.hero_credit_label}
+          hasIllustration={frontmatter.hero_image != null}
         />
         <main className={styles.body}>
           {!frontmatter.hide_body && (
