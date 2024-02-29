@@ -121,6 +121,11 @@ const config = {
                     title
                     short_title
                     intro
+                    authors {
+                      frontmatter {
+                        name
+                      }
+                    }
                   }
                 }
               }
@@ -128,14 +133,15 @@ const config = {
           }
         `,
         ref: 'id',
-        index: ['title', 'short_title', 'intro', 'body'],
-        store: ['id', 'title', 'slug', 'post_type'],
+        index: ['title', 'short_title', 'intro', 'authors', 'body'],
+        store: ['id', 'title', 'slug', 'authors', 'post_type'],
         normalizer: ({ data }) => {
           const mergedData = [
             ...data.posts.nodes.map((node) => {
               const mdxNode = data.allMdx.nodes.find((mn) => {
                 return mn.id === node.childMdx.id
               })
+              const authors = node.childMdx.frontmatter.authors || []
               return {
                 id: node.id,
                 slug: node.childMdx.fields.slug,
@@ -144,6 +150,7 @@ const config = {
                 body: mdxNode.body.replace(/<[^>]*>/g, ''),
                 intro: node.childMdx.frontmatter.intro,
                 post_type: 'post',
+                authors: authors.map((a) => a.frontmatter.name).join(';'),
               }
             }),
             ...data.terms.nodes.map((node) => ({
@@ -154,6 +161,7 @@ const config = {
               body: node.description,
               intro: '',
               post_type: 'term',
+              authors: '',
             })),
           ]
           return mergedData

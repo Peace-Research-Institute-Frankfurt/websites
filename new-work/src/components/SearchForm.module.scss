@@ -62,14 +62,12 @@
   background: var(--black);
   border-radius: var(--br-medium);
   width: Min(calc(100vw - var(--padding) * 2), 20em);
-  top: calc(100% + var(--padding-small));
+  top: calc(100% + 0.5em);
   opacity: 0;
   transition: var(--fast);
   transform: translateY(-5px);
   overflow: hidden;
   left: -1px;
-  @include bp(m) {
-  }
 }
 
 .choices-active {
@@ -87,6 +85,22 @@
   hyphens: none;
   justify-content: space-between;
   align-items: baseline;
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.choice-title {
+  display: block;
+  line-height: 1.15;
+}
+
+.choice-authors {
+  @extend %caption;
+  color: var(--gray-light);
+  display: block;
+  margin-top: -0.1em;
+  margin-bottom: 0.2em;
 }
 
 .choice-type {
@@ -98,9 +112,4 @@
 .selected {
   background: var(--black-hover);
   cursor: pointer;
-  .choice-title {
-    text-decoration: underline;
-    text-underline-offset: 0.1em;
-    text-decoration-thickness: 1px;
-  }
 }

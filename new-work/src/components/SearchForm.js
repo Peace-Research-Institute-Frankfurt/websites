@@ -58,7 +58,10 @@ function DropdownCombobox({ value, setValue, inputItems, addActiveTerm }) {
                 index,
               })}
             >
-              <span className={styles.choiceTitle}>{item.title}</span>
+              <div>
+                <span className={styles.choiceTitle}>{item.title}</span>
+                {item.authors.length > 0 && <span className={styles.choiceAuthors}>{item.authors.split(';').join(', ')}</span>}
+              </div>
               <span className={styles.choiceType}>{prettifyPostType(item.post_type)}</span>
             </li>
           ))}
