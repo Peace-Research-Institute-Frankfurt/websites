@@ -19,6 +19,8 @@ const PostList = ({ posts, activeFilters, currentPostId }) => {
       }),
   ]
 
+  const categories = ['meta', 'tool', 'mensch', 'raum']
+
   const groupedPosts = []
   postGroups.forEach((group) => {
     const newGroup = { name: group, posts: [] }
@@ -35,6 +37,9 @@ const PostList = ({ posts, activeFilters, currentPostId }) => {
     const postEls = group.posts
       .filter((node) => {
         return activeFilters ? activeFilters.includes(node.childMdx.frontmatter.category) : true
+      })
+      .sort((a, b) => {
+        return categories.indexOf(a.childMdx.frontmatter.category) - categories.indexOf(b.childMdx.frontmatter.category)
       })
       .map((node) => {
         const fm = node.childMdx.frontmatter
