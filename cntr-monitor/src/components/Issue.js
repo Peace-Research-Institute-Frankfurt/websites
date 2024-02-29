@@ -3,9 +3,13 @@ import { graphql } from 'gatsby'
 import MarkdownRenderer from 'react-markdown-renderer'
 import App from './App.js'
 import Meta from './Meta.js'
-import SkipToContent from './SkipToContent.js'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { useTranslation } from 'gatsby-plugin-react-i18next'
+import SiteHeader from './SiteHeader.js'
+import Footer from './Footer.js'
+import useColors from '../hooks/useColors.js'
 import { Link } from 'gatsby-plugin-react-i18next'
+import AboutSection from './AboutSection.js'
 import * as styles from './Issue.module.scss'
 
 export const query = graphql`
@@ -37,6 +41,14 @@ export const query = graphql`
           title
           intro
           order
+          color
+          cover_image {
+            childImageSharp {
+              gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
+            }
+          }
+          cover_caption
+          cover_credit
           authors {
             name
           }
@@ -65,6 +77,7 @@ export const query = graphql`
           frontmatter {
             title
             order
+            intro
           }
         }
       }
@@ -94,11 +107,11 @@ export const query = graphql`
   }
 `
 
-const Index = ({ data, pageContext, children, location }) => {
+const Issue = ({ data, pageContext, children, location }) => {
   const { t } = useTranslation()
+  const coverImage = getImage(data.post.childMdx.frontmatter.cover_image)
 
   const posts = data.posts.nodes.map((p) => {
-    let postStyles = {}
     const year = data.post.relativeDirectory.replace(/(.{2})\/(issues)\//g, '')
     const frontmatter = p.childMdx.frontmatter
     const maxWords = 45
@@ -113,37 +126,56 @@ const Index = ({ data, pageContext, children, location }) => {
     }
 
     return (
-      <li key={p.id}>
-        <Link style={postStyles} to={`/${year}/${p.childMdx.fields.slug}`}>
-          <h3>{frontmatter.title}</h3>
-          {frontmatter.intro && <MarkdownRenderer markdown={intro} />}
+      <li key={p.id} className={styles.postsItem}>
+        <Link to={`/${year}/${p.childMdx.fields.slug}`}>
+          <h3 className={styles.postsTitle}>{frontmatter.title}</h3>
+          <div className={styles.postsIntro}>{frontmatter.intro && <MarkdownRenderer markdown={intro} />}</div>
         </Link>
       </li>
     )
   })
+
   return (
     <App pages={data.pages.nodes} translationData={{ currentLanguage: pageContext.language, currentSlug: location.pathname }}>
-      <SkipToContent />
-      <main>
-        <header>
-          <h1 className={styles.title}>{data.post.childMdx.frontmatter.title}</h1>
+      <SiteHeader translationData={{ currentLanguage: pageContext.language, currentSlug: location.pathname }} />
+      <main className={styles.container}>
+        <header className={styles.header}>
+          <div className={styles.headerInner}>
+            <GatsbyImage className={styles.headerImage} image={coverImage} alt="" />
+            <div className={styles.headerCopy}>
+              <h1 className={styles.title}>{data.post.childMdx.frontmatter.title}</h1>
+              <div className={styles.intro}>
+                <MarkdownRenderer markdown={data.post.childMdx.frontmatter.intro} />
+              </div>
+            </div>
+          </div>
+          <aside className={styles.headerCaptions}>
+            {data.post.childMdx.frontmatter.cover_caption && <p className={styles.headerCaption}>{data.post.childMdx.frontmatter.cover_caption}</p>}
+            {data.post.childMdx.frontmatter.cover_credit && <p className={styles.headerCredit}>{data.post.childMdx.frontmatter.cover_credit}</p>}
+          </aside>
         </header>
-        <section>
-          <h2>{t('Contents')}</h2>
-          <ol>{posts}</ol>
+        <section className={styles.posts}>
+          <h2 className={styles.sectionTitle}>{t('Contents')}</h2>
+          <ol className={styles.postsList}>{posts}</ol>
         </section>
+        <AboutSection />
       </main>
+      <Footer pages={data.pages.nodes} />
     </App>
   )
 }
 
-export default Index
+export default Issue
 
 export const Head = ({ data, pageContext, location }) => {
   const year = data.post.relativeDirectory.replace(/(.{2})\/(issues)\//g, '')
   const translationData = { currentLanguage: pageContext.language, currentSlug: location.pathname }
-
-  const bodyStyles = {}
+  const { primary, dark, knockout } = useColors(data.post.childMdx.frontmatter.color)
+  const bodyStyles = {
+    '--fc-primary': primary.toString(),
+    '--fc-dark': dark.toString(),
+    '--fc-knockout': knockout.toString(),
+  }
   return (
     <>
       <body style={bodyStyles} />

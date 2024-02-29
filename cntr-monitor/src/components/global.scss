@@ -42,6 +42,9 @@
   @include bp(m) {
     --corner-size: 10rem;
   }
+  @include bp(l) {
+    --corner-size: 12rem;
+  }
 
   // Scale type size on high-res displays
   @media (min-resolution: 120dpi) and (min-width: 1200px) {

@@ -1,13 +1,14 @@
 import Color from 'colorjs.io'
 
 export default function useColors(color) {
-  const text = new Color(color)
+  if (!color) color = 'gray'
+  const primary = new Color(color)
 
-  const background = new Color(color).set({ 'lch.l': 96, 'lch.c': 2, 'lch.h': (h) => h + 10 })
+  const dark = new Color(color).set({ 'lch.l': 10, 'lch.c': 10, 'lch.h': (h) => h + 10 })
 
-  const onWhite = Math.abs(text.contrast('white', 'APCA'))
-  const onBlack = Math.abs(text.contrast('black', 'APCA'))
+  const onWhite = Math.abs(primary.contrast('white', 'APCA'))
+  const onBlack = Math.abs(primary.contrast('black', 'APCA'))
   const knockout = onWhite > onBlack ? 'white' : 'black'
 
-  return { text: text, background: background, knockout: knockout }
+  return { primary: primary, dark: dark, knockout: knockout }
 }

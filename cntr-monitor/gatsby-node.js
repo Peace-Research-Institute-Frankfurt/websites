@@ -159,17 +159,19 @@ exports.createSchemaCustomization = async ({ getNode, getNodesByType, pathPrefix
     image_alt: String
     bio: String
   }
-  type PostFrontmatter {
+  type MdxFrontmatter {
     authors: [Author]
     intro: String
     teaser: String
     eyebrow: String
     title: String
     color: String
-    color_secondary: String
+    cover_image: File @link(by: "relativePath")
+    cover_caption: String
+    cover_credit: String
   }
   type Mdx {
-    frontmatter: PostFrontmatter
+    frontmatter: MdxFrontmatter
   }
   `
   createTypes(typeDefs)

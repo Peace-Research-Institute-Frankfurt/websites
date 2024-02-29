@@ -8,13 +8,13 @@
   transform: translateY(-100%);
   transition: var(--fast);
   display: block;
-  padding: 0.5em 0.75em;
+  padding: 0.4em 0.6em;
   background: white;
-  border: 1px solid var(--black);
   border-top: 0;
+  z-index: 10000;
   border-bottom-left-radius: var(--br-small);
   border-bottom-right-radius: var(--br-small);
   &:focus-visible {
-    transform: translateY(100%);
+    transform: translateY(0);
   }
 }

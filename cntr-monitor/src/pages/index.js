@@ -9,6 +9,8 @@ import SiteHeader from '../components/SiteHeader'
 import Footer from '../components/Footer'
 import MarkdownRenderer from 'react-markdown-renderer'
 import AboutSection from '../components/AboutSection'
+import { getImage, GatsbyImage } from 'gatsby-plugin-image'
+import useColors from '../hooks/useColors'
 
 export const query = graphql`
   query ($language: String!) {
@@ -62,6 +64,12 @@ export const query = graphql`
           frontmatter {
             title
             intro
+            color
+            cover_image {
+              childImageSharp {
+                gatsbyImageData(width: 1200, layout: FULL_WIDTH, placeholder: BLURRED)
+              }
+            }
           }
         }
       }
@@ -75,12 +83,19 @@ const Index = ({ data, pageContext, location }) => {
 
   const currentIssue = data.issues.nodes[0]
   const currentYear = currentIssue.relativeDirectory.replace(/(.{2})\/(issues)\//g, '')
-
+  const currentImage = getImage(currentIssue.childMdx.frontmatter.cover_image)
+  const { primary, dark, knockout } = useColors(currentIssue.childMdx.frontmatter.color)
+  const currentStyles = {
+    '--fc-primary': primary.toString(),
+    '--fc-dark': dark.toString(),
+    '--fc-knockout': knockout.toString(),
+  }
+  console.log(currentStyles)
   return (
     <App pages={data.pages.nodes}>
       <SkipToContent />
 
-      <SiteHeader post={data.post} translationData={translationData}></SiteHeader>
+      <SiteHeader translationData={translationData}></SiteHeader>
 
       <main className={styles.container}>
         <section className={styles.hero}>
@@ -93,8 +108,9 @@ const Index = ({ data, pageContext, location }) => {
             )}
           </p>
         </section>
-        <section className={styles.current}>
+        <section className={styles.current} style={currentStyles}>
           <div className={styles.currentInner}>
+            <GatsbyImage alt="" image={currentImage} className={styles.currentImage} />
             <h2 className={styles.sectionTitle}>{t('Current issue')}</h2>
             <div className={styles.currentIssue}>
               <Link to={`/${currentYear}`}>
@@ -134,10 +150,10 @@ const Index = ({ data, pageContext, location }) => {
 export default Index
 export const Head = ({ pageContext, location }) => {
   const translationData = { currentLanguage: pageContext.language, currentSlug: location.pathname }
-  const bodyStyles = {}
+
   return (
     <>
-      <body style={bodyStyles} />
+      <body />
       <Meta title="CNTR Monitor" translationData={translationData} />
     </>
   )
