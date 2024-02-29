@@ -13,6 +13,7 @@ import { PostList } from './PostList'
 import * as styles from './Post.module.scss'
 import PostHeaderVideo from './PostHeaderVideo'
 import SearchForm from './SearchForm'
+import FallbackIllustration from './FallbackIllustration'
 
 export const query = graphql`
   query ($id: String!) {
@@ -91,6 +92,8 @@ const Post = ({ data, children }) => {
   let heroImage = null
   if (frontmatter.hero_image) {
     heroImage = <GatsbyImage className={styles.heroImage} loading="eager" image={getImage(frontmatter.hero_image)} alt={frontmatter.hero_alt} />
+  } else {
+    heroImage = <FallbackIllustration category={frontmatter.category} />
   }
   let portraitImage = null
   if (frontmatter.hero_portrait) {
