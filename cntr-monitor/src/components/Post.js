@@ -203,12 +203,7 @@ export function Head({ data, pageContext, location }) {
     currentLanguage: pageContext.language,
     translations: data.translations.nodes,
   }
-
-  const { text, background } = useColors(frontmatter.color)
-  const bodyStyles = {
-    '--fc-text': text.toString(),
-    '--fc-background': frontmatter.color_secondary ? frontmatter.color_secondary : background.toString(),
-  }
+  const bodyStyles = {}
   return (
     <>
       <body style={bodyStyles} />
