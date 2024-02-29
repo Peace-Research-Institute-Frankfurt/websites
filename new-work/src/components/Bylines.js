@@ -16,7 +16,7 @@ const BylineItem = ({ author }) => {
       <span className={styles.name}>{fm.name}</span>
       {fm.institution && (
         <span className={styles.institution}>
-          {fm.role}, {fm.institution}
+          {fm.role && `${fm.role},`} {fm.institution}
         </span>
       )}
     </>
