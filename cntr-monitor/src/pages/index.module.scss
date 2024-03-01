@@ -85,10 +85,22 @@
     z-index: -10;
     background: linear-gradient(to bottom, var(--fc-primary) 25rem, transparent 100%);
   }
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: calc(-0.5 * var(--padding));
+    right: 0;
+    bottom: calc(100% - var(--corner-size) * sqrt(2) - var(--padding));
+    z-index: -5;
+    background: var(--blue);
+    opacity: 0.4;
+    mask: var(--mask);
+  }
 }
 
 .current-image {
-  position: absolute;
+  position: absolute !important;
   top: 0;
   bottom: 0;
   left: 0;
@@ -102,7 +114,7 @@
 
 .section-title {
   grid-column: 2 / 5;
-  @extend %h4;
+  @extend %caps;
 }
 .current-issue {
   grid-column: 5 / 12;
@@ -127,7 +139,7 @@
 }
 
 .archive-title {
-  @extend %h3;
+  @extend %h4;
 }
 .archive-item {
   border-bottom: 1px dotted var(--black);
@@ -140,5 +152,5 @@
 }
 
 .archive-intro {
-  @extend %copy-large;
+  @extend %copy;
 }

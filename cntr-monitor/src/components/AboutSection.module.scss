@@ -10,7 +10,7 @@
 
 .title {
   grid-column: 2 / 5;
-  @extend %h4;
+  @extend %caps;
 }
 
 .copy {

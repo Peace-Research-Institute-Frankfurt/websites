@@ -5,14 +5,15 @@
   padding: 0 var(--padding);
   position: relative;
   z-index: 0;
+  padding-top: var(--header-height);
   &:before {
     content: '';
     position: absolute;
     top: -100%;
     left: var(--padding);
     bottom: 0;
-    right: 0;
-    background: var(--fc-dark);
+    right: var(--padding);
+    background: var(--blue);
     mask: var(--mask);
     z-index: 10;
   }
@@ -98,7 +99,7 @@
 }
 
 .section-title {
-  @extend %h4;
+  @extend %caps;
   grid-column: 2 / 3;
 }
 
@@ -109,13 +110,22 @@
     border-bottom: 0;
     padding-bottom: 0;
   }
+  &:hover,
+  &:focus-visible {
+    .posts-title {
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+    }
+  }
 }
 
 .posts-title {
   @extend %h3;
+  margin-bottom: calc(var(--baseline) * 0.25);
+  text-wrap: balance;
 }
 .posts-intro {
-  @extend %copy-large;
+  @extend %copy;
 }
 
 .posts-list {

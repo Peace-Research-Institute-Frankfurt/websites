@@ -126,8 +126,8 @@ const Issue = ({ data, pageContext, children, location }) => {
     }
 
     return (
-      <li key={p.id} className={styles.postsItem}>
-        <Link to={`/${year}/${p.childMdx.fields.slug}`}>
+      <li key={p.id}>
+        <Link className={styles.postsItem} to={`/${year}/${p.childMdx.fields.slug}`}>
           <h3 className={styles.postsTitle}>{frontmatter.title}</h3>
           <div className={styles.postsIntro}>{frontmatter.intro && <MarkdownRenderer markdown={intro} />}</div>
         </Link>
