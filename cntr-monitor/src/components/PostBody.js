@@ -5,6 +5,7 @@ import Leadin from './Leadin'
 import Figure from './FigureAdapter'
 import Button from './ButtonAdapter'
 import Quote from '@shared/components/Quote'
+import Chevron from '../images/chevron.svg'
 import * as CalloutStyles from './Callout.module.scss'
 import * as QuoteStyles from './Quote.module.scss'
 import * as styles from './PostBody.module.scss'
@@ -12,6 +13,7 @@ import * as styles from './PostBody.module.scss'
 const shortCodes = {
   Leadin,
   Figure,
+  Chevron,
   Callout: ({ ...props }) => <Callout {...props} buttonComponent={Button} styles={CalloutStyles} />,
   Quote: ({ ...props }) => <Quote {...props} styles={QuoteStyles} />,
 }

@@ -6,6 +6,7 @@ import Meta from './Meta'
 import Footer from './Footer'
 import SiteHeader from './SiteHeader'
 import useTranslations from '../hooks/useTranslations'
+import LanguageSwitcher from './LanguageSwitcher'
 import * as styles from './Page.module.scss'
 
 export const query = graphql`
@@ -90,7 +91,9 @@ const Page = ({ data, children, pageContext }) => {
       pages={data.pages.nodes}
       translationData={{ translations: data.translations.nodes, currentLanguage: pageContext.language, currentSlug: data.post.childMdx.fields.slug }}
     >
-      <SiteHeader translationData={translationData} color="var(--black)"></SiteHeader>
+      <SiteHeader translationData={translationData} color="var(--black)">
+        {data.translations.nodes.length > 0 && <LanguageSwitcher translations={translations} translationData={translationData} />}
+      </SiteHeader>
       <article id="content" className={styles.container}>
         <header className={styles.header}>
           <h1 className={styles.title}>{data.post.childMdx.frontmatter.title}</h1>

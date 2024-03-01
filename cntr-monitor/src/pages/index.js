@@ -11,6 +11,8 @@ import MarkdownRenderer from 'react-markdown-renderer'
 import AboutSection from '../components/AboutSection'
 import { getImage, GatsbyImage } from 'gatsby-plugin-image'
 import useColors from '../hooks/useColors'
+import useTranslations from '../hooks/useTranslations'
+import LanguageSwitcher from '../components/LanguageSwitcher'
 
 export const query = graphql`
   query ($language: String!) {
@@ -74,12 +76,20 @@ export const query = graphql`
         }
       }
     }
+    allSitePage {
+      nodes {
+        path
+        pageContext
+      }
+    }
   }
 `
 
 const Index = ({ data, pageContext, location }) => {
   const { t } = useTranslation()
   const translationData = { currentLanguage: pageContext.language, currentSlug: location.pathname }
+  const translations = useTranslations(translationData, data.allSitePage.nodes)
+
   const pastIssues = data.issues.nodes.slice(1)
   const currentIssue = data.issues.nodes[0]
   const currentYear = currentIssue.relativeDirectory.replace(/(.{2})\/(issues)\//g, '')
@@ -94,18 +104,16 @@ const Index = ({ data, pageContext, location }) => {
     <App pages={data.pages.nodes}>
       <SkipToContent />
 
-      <SiteHeader color="white" translationData={translationData}></SiteHeader>
+      <SiteHeader color="white" translationData={translationData}>
+        <LanguageSwitcher translations={translations} translationData={translationData} />
+      </SiteHeader>
 
       <main className={styles.container}>
         <section className={styles.hero}>
           <div className={styles.heroBlue} />
           <div className={styles.heroBlack} />
           <h1 className={styles.heroTitle}>CNTR Monitor</h1>
-          <p className={styles.heroIntro}>
-            {t(
-              `The CNTR Monitor is an open-access publication on trends on technology and arms control and the core product of CNTR's research. In addition to analyses of individual technologies and reports on research and development (R&D) activities, the CNTR Monitor highlights opportunities for political control and capacities in selected regions.`
-            )}
-          </p>
+          <p className={styles.heroIntro}>{t(`index.header.intro`)}</p>
         </section>
         <section className={styles.current} style={currentStyles}>
           <div className={styles.currentInner}>

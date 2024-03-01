@@ -63,4 +63,11 @@
     margin-top: calc(var(--ms-0) * 1.5);
     margin-bottom: calc(var(--ms-0) * 0.5);
   }
+  p > svg {
+    height: 0.65em;
+    display: inline-block;
+    path {
+      fill: var(--black);
+    }
+  }
 }

@@ -38,11 +38,12 @@
   @extend %h2;
   text-align: center;
   text-wrap: balance;
+  max-width: calc(var(--measure) * 1.5);
 }
 
 .intro {
   @extend %copy-large;
   text-align: center;
-  max-width: 30em;
+  max-width: calc(var(--measure) * 1.5);
   padding-top: var(--baseline);
 }

@@ -94,7 +94,7 @@
     bottom: calc(100% - var(--corner-size) * sqrt(2) - var(--padding) * 2);
     z-index: -5;
     background: var(--blue);
-    opacity: 0.2;
+    opacity: 0.4;
     mask: var(--mask);
   }
 }

@@ -10,6 +10,8 @@ import Footer from './Footer.js'
 import useColors from '../hooks/useColors.js'
 import { Link } from 'gatsby-plugin-react-i18next'
 import AboutSection from './AboutSection.js'
+import useTranslations from '../hooks/useTranslations.js'
+import LanguageSwitcher from './LanguageSwitcher.js'
 import * as styles from './Issue.module.scss'
 
 export const query = graphql`
@@ -104,11 +106,20 @@ export const query = graphql`
         }
       }
     }
+    allSitePage {
+      nodes {
+        path
+        pageContext
+      }
+    }
   }
 `
 
 const Issue = ({ data, pageContext, children, location }) => {
   const { t } = useTranslation()
+  const translationData = { currentLanguage: pageContext.language, currentSlug: location.pathname }
+  const translations = useTranslations(translationData, data.allSitePage.nodes)
+
   const coverImage = getImage(data.post.childMdx.frontmatter.cover_image)
 
   const posts = data.posts.nodes.map((p) => {
@@ -137,7 +148,9 @@ const Issue = ({ data, pageContext, children, location }) => {
 
   return (
     <App pages={data.pages.nodes} translationData={{ currentLanguage: pageContext.language, currentSlug: location.pathname }}>
-      <SiteHeader translationData={{ currentLanguage: pageContext.language, currentSlug: location.pathname }} />
+      <SiteHeader color="white" translationData={{ currentLanguage: pageContext.language, currentSlug: location.pathname }}>
+        <LanguageSwitcher translations={translations} translationData={translationData} />
+      </SiteHeader>
       <main className={styles.container}>
         <header className={styles.header}>
           <div className={styles.headerInner}>
