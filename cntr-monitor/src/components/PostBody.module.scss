@@ -26,30 +26,36 @@
     padding-right: 3em;
     li {
       margin-bottom: 0.25em;
-      margin-left: 1em;
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
-  ol {
+  & > ol {
     margin-bottom: 1em;
     padding-right: 3em;
     li {
-      padding-left: 1.25em;
+      margin-left: 1em;
       margin-bottom: 0.25em;
     }
   }
 
-  ol {
-    list-style: none;
-    counter-reset: ol;
-    li {
-      counter-increment: ol;
-      position: relative;
-    }
-    li:before {
-      @extend %copy-bold;
-      content: counter(ol) '.';
-      position: absolute;
-      left: 0;
+  sup {
+    vertical-align: baseline;
+    display: inline-block;
+    font-size: 0.75em;
+    height: 1.2em;
+    width: 1.2em;
+    border-radius: 1000px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: baseline;
+    margin-right: 0.2em;
+    font-feature-settings: 'tnum' 1;
+    border: 1px solid currentColor;
+    a {
+      text-decoration: none !important;
     }
   }
 

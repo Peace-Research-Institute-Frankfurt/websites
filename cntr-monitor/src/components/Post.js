@@ -11,6 +11,7 @@ import LanguageSwitcher from './LanguageSwitcher.js'
 import MarkdownRenderer from 'react-markdown-renderer'
 import useColors from '../hooks/useColors.js'
 import Arrow from '../images/arrow-right.svg'
+import { Bylines } from './Bylines.js'
 import * as styles from './Post.module.scss'
 
 export const query = graphql`
@@ -94,7 +95,6 @@ export const query = graphql`
       }
     ) {
       nodes {
-        id
         childMdx {
           frontmatter {
             name
@@ -159,6 +159,16 @@ export default function Post({ data, pageContext, children }) {
   const currentIndex = posts.findIndex((el) => {
     return el.childMdx.frontmatter.title === frontmatter.title
   })
+
+  let authors = null
+  if (data.post.childMdx.frontmatter.authors) {
+    authors = data.authors.nodes.filter((node) => {
+      const found = data.post.childMdx.frontmatter.authors.findIndex((el) => {
+        return el.frontmatter.author_id === node.childMdx.frontmatter.author_id
+      })
+      return found !== -1
+    })
+  }
   const next = posts[currentIndex + 1] || null
   const previous = posts[currentIndex - 1] || null
 
@@ -199,7 +209,14 @@ export default function Post({ data, pageContext, children }) {
           </div>
         </header>
         <main className={styles.body}>
-          <PostBody>{children}</PostBody>
+          <PostBody>
+            {children}
+            {authors && (
+              <aside className={styles.credits}>
+                <Bylines authors={authors} />
+              </aside>
+            )}
+          </PostBody>
         </main>
       </article>
       <Footer pages={data.pages.nodes} language={translationData.currentLanguage} />

@@ -1,0 +1,22 @@
+@import 'vars';
+
+.container {
+  @extend %caption;
+  margin: 0 auto;
+  display: block;
+  max-width: var(--measure);
+  border-top: 1px dotted var(--black);
+  margin-top: 1.5em;
+  padding-top: 1em;
+  li {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    list-style: none;
+  }
+}
+
+.name {
+  @extend %caps;
+  display: block;
+  margin-bottom: 0.25em;
+}

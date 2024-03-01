@@ -121,7 +121,7 @@ exports.createPages = async function ({ actions, graphql }) {
 }
 
 exports.onCreateNode = ({ node, actions, createNodeId, getNode }) => {
-  // Create auuthor nodes
+  // Create author nodes
   if (node.internal.type === 'Mdx' && node.internal.contentFilePath.indexOf('authors') !== -1) {
     actions.createNode({
       id: createNodeId(`author-${node.id}`),
@@ -155,12 +155,12 @@ exports.createSchemaCustomization = async ({ getNode, getNodesByType, pathPrefix
   const typeDefs = `
   type Author implements Node {
     name: String
+    author_id: String
     image: String
     image_alt: String
-    bio: String
   }
   type MdxFrontmatter {
-    authors: [Author]
+    authors: [Author] @link(by: "author_id")
     intro: String
     teaser: String
     eyebrow: String
