@@ -1,7 +1,11 @@
 @import 'vars';
 
 .container {
-  padding: 1em calc(var(--padding) * 2);
+  height: var(--header-height);
+  padding: 0 calc(var(--padding) * 2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   position: absolute;
   top: 0;
   left: 0;
@@ -31,4 +35,8 @@
 .year {
   font-variation-settings: 'wght' 200, 'wdth' 110, 'opsz' 45;
   font-feature-settings: 'onum' 1;
+}
+
+.controls {
+  display: flex;
 }

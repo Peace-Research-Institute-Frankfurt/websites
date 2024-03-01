@@ -32,12 +32,14 @@
   --br-small: 4px;
   --blue: #007ca0;
   --blue-dark: #063442;
+  --blue-light: rgb(114, 159, 172);
   --black: #050d0f;
   --white: #ffffff;
   --gray-light: #eaeef0;
   --focus-color: var(--black);
   --mask: linear-gradient(45deg, #0000 var(--corner-size), #000 0 calc(100% - var(--corner-size)), #0000 0);
   --corner-size: 5rem;
+  --header-height: 4rem;
 
   @include bp(m) {
     --corner-size: 10rem;

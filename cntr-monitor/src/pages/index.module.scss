@@ -119,7 +119,7 @@
 .current-issue {
   grid-column: 5 / 12;
   h2 {
-    @extend %h3;
+    @extend %h2;
   }
 }
 

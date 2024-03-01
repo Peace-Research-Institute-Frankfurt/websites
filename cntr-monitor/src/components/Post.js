@@ -8,6 +8,7 @@ import { useTranslation } from 'gatsby-plugin-react-i18next'
 import useTranslations from '../hooks/useTranslations.js'
 import SiteHeader from './SiteHeader.js'
 import LanguageSwitcher from './LanguageSwitcher.js'
+import MarkdownRenderer from 'react-markdown-renderer'
 import useColors from '../hooks/useColors.js'
 import Arrow from '../images/arrow-right.svg'
 import * as styles from './Post.module.scss'
@@ -38,6 +39,7 @@ export const query = graphql`
         }
         frontmatter {
           title
+          color
         }
       }
     }
@@ -50,7 +52,8 @@ export const query = graphql`
         }
         frontmatter {
           title
-          color
+          intro
+          eyebrow
           authors {
             frontmatter {
               author_id
@@ -182,13 +185,22 @@ export default function Post({ data, pageContext, children }) {
 
   return (
     <App>
-      <SiteHeader post={data.post} translationData={translationData}>
+      <SiteHeader post={data.post} issue={data.issue} translationData={translationData}>
         {pagination && pagination}
         {data.translations.nodes.length > 0 && <LanguageSwitcher translations={translations} translationData={translationData} />}
       </SiteHeader>
       <article id="content" className={styles.container}>
-        <h1 className={styles.title}>{data.post.childMdx.frontmatter.title}</h1>
-        <PostBody>{children}</PostBody>
+        <header className={styles.header}>
+          <div className={styles.headerInner}>
+            <h1 className={styles.title}>{data.post.childMdx.frontmatter.title}</h1>
+            <div className={styles.intro}>
+              <MarkdownRenderer markdown={data.post.childMdx.frontmatter.intro} />
+            </div>
+          </div>
+        </header>
+        <main className={styles.body}>
+          <PostBody>{children}</PostBody>
+        </main>
       </article>
       <Footer pages={data.pages.nodes} language={translationData.currentLanguage} />
     </App>
@@ -203,7 +215,12 @@ export function Head({ data, pageContext, location }) {
     currentLanguage: pageContext.language,
     translations: data.translations.nodes,
   }
-  const bodyStyles = {}
+  const { primary, dark, knockout } = useColors(data.issue.childMdx.frontmatter.color)
+  const bodyStyles = {
+    '--fc-primary': primary.toString(),
+    '--fc-dark': dark.toString(),
+    '--fc-knockout': knockout.toString(),
+  }
   return (
     <>
       <body style={bodyStyles} />

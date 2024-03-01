@@ -121,7 +121,7 @@
 
 .posts-title {
   @extend %h3;
-  margin-bottom: calc(var(--baseline) * 0.25);
+  margin-bottom: calc(var(--baseline) * 0.5);
   text-wrap: balance;
 }
 .posts-intro {
