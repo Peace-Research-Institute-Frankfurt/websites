@@ -1,1 +1,17 @@
 @import 'vars';
+
+.header {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: var(--header-height);
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  border-bottom: 1px dotted currentColor;
+  margin-bottom: var(--baseline);
+}
+
+.title {
+  @extend %h1;
+}

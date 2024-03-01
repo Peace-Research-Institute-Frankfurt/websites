@@ -11,14 +11,14 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  border-bottom: 1px dotted var(--white);
+  border-bottom: 1px dotted var(--color);
 }
 
 .title {
   display: flex;
   align-items: center;
   gap: 0.25em;
-  color: var(--white);
+  color: var(--color);
   font-size: 1.75rem;
   font-family: var(--montserrat);
   font-variation-settings: 'wght' 700, 'wdth' 110, 'opsz' 45;

@@ -73,11 +73,12 @@
 }
 %h1 {
   font-family: var(--montserrat);
-  font-variation-settings: 'wght' 700, 'wdth' 100, 'opsz' 144;
+  font-variation-settings: 'wght' 700, 'wdth' 110;
   font-size: var(--ms-4);
+  letter-spacing: -0.01em;
   line-height: calc(var(--baseline) * 5);
   @include bp(m) {
-    font-size: var(--ms-7);
+    font-size: var(--ms-6);
   }
 }
 %h2 {

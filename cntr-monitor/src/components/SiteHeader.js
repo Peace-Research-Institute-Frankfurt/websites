@@ -3,11 +3,11 @@ import { Link } from 'gatsby'
 import Logo from '../images/logo-reverse.svg'
 import * as styles from './SiteHeader.module.scss'
 
-export default function SiteHeader({ post, issue, translationData, children }) {
+export default function SiteHeader({ color, translationData, children }) {
   const homePath = translationData.currentLanguage !== 'de' ? `/${translationData.currentLanguage}` : '/'
 
   return (
-    <header className={`${styles.container}`}>
+    <header className={`${styles.container}`} style={{ '--color': color }}>
       <Link to={homePath} className={`${styles.title}`}>
         <Logo />
         <span>Monitor</span>

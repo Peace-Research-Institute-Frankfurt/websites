@@ -7,6 +7,7 @@ import Button from './ButtonAdapter'
 import Quote from '@shared/components/Quote'
 import * as CalloutStyles from './Callout.module.scss'
 import * as QuoteStyles from './Quote.module.scss'
+import * as styles from './PostBody.module.scss'
 
 const shortCodes = {
   Leadin,
@@ -17,7 +18,7 @@ const shortCodes = {
 
 export default function PostBody({ children }) {
   return (
-    <section>
+    <section className={styles.container}>
       <MDXProvider components={shortCodes}>{children}</MDXProvider>
     </section>
   )

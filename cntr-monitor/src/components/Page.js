@@ -3,6 +3,9 @@ import React from 'react'
 import App from './App'
 import PostBody from './PostBody'
 import Meta from './Meta'
+import Footer from './Footer'
+import SiteHeader from './SiteHeader'
+import useTranslations from '../hooks/useTranslations'
 import * as styles from './Page.module.scss'
 
 export const query = graphql`
@@ -70,17 +73,31 @@ export const query = graphql`
         }
       }
     }
+    allSitePage {
+      nodes {
+        path
+        pageContext
+      }
+    }
   }
 `
 const Page = ({ data, children, pageContext }) => {
+  let translationData = { translations: data.translations.nodes, currentLanguage: pageContext.language, currentSlug: data.post.childMdx.fields.slug }
+  let translations = useTranslations(translationData, data.allSitePage.nodes)
+
   return (
     <App
       pages={data.pages.nodes}
       translationData={{ translations: data.translations.nodes, currentLanguage: pageContext.language, currentSlug: data.post.childMdx.fields.slug }}
     >
-      <article id="content">
+      <SiteHeader translationData={translationData} color="var(--black)"></SiteHeader>
+      <article id="content" className={styles.container}>
+        <header className={styles.header}>
+          <h1 className={styles.title}>{data.post.childMdx.frontmatter.title}</h1>
+        </header>
         <PostBody>{children}</PostBody>
       </article>
+      <Footer pages={data.pages.nodes} language={translationData.currentLanguage} />
     </App>
   )
 }

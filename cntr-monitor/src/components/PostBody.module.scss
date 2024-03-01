@@ -1,0 +1,66 @@
+@import 'vars';
+.container {
+  --measure: 45rem;
+  padding-bottom: calc(var(--baseline) * 2);
+
+  p,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  ul,
+  ol {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--measure);
+  }
+
+  p {
+    margin-bottom: 1em;
+  }
+
+  ul {
+    margin-bottom: 1em;
+    padding-right: 3em;
+    li {
+      margin-bottom: 0.25em;
+      margin-left: 1em;
+    }
+  }
+  ol {
+    margin-bottom: 1em;
+    padding-right: 3em;
+    li {
+      padding-left: 1.25em;
+      margin-bottom: 0.25em;
+    }
+  }
+
+  ol {
+    list-style: none;
+    counter-reset: ol;
+    li {
+      counter-increment: ol;
+      position: relative;
+    }
+    li:before {
+      @extend %copy-bold;
+      content: counter(ol) '.';
+      position: absolute;
+      left: 0;
+    }
+  }
+
+  h2 {
+    @extend %h3;
+    margin-top: calc(var(--ms-0) * 2);
+    margin-bottom: calc(var(--ms-0) * 1);
+  }
+  h3 {
+    @extend %h4;
+    margin-top: calc(var(--ms-0) * 1.5);
+    margin-bottom: calc(var(--ms-0) * 0.5);
+  }
+}
