@@ -94,7 +94,7 @@ const Index = ({ data, pageContext, location }) => {
     <App pages={data.pages.nodes}>
       <SkipToContent />
 
-      <SiteHeader translationData={translationData}></SiteHeader>
+      <SiteHeader color="white" translationData={translationData}></SiteHeader>
 
       <main className={styles.container}>
         <section className={styles.hero}>

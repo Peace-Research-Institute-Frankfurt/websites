@@ -185,7 +185,7 @@ export default function Post({ data, pageContext, children }) {
 
   return (
     <App>
-      <SiteHeader post={data.post} issue={data.issue} translationData={translationData}>
+      <SiteHeader color="white" post={data.post} issue={data.issue} translationData={translationData}>
         {pagination && pagination}
         {data.translations.nodes.length > 0 && <LanguageSwitcher translations={translations} translationData={translationData} />}
       </SiteHeader>

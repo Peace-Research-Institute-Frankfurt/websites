@@ -89,12 +89,12 @@
     content: '';
     position: absolute;
     top: 0;
-    left: calc(-0.5 * var(--padding));
+    left: calc(-1 * var(--padding));
     right: 0;
-    bottom: calc(100% - var(--corner-size) * sqrt(2) - var(--padding));
+    bottom: calc(100% - var(--corner-size) * sqrt(2) - var(--padding) * 2);
     z-index: -5;
     background: var(--blue);
-    opacity: 0.4;
+    opacity: 0.2;
     mask: var(--mask);
   }
 }
