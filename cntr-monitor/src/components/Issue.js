@@ -148,7 +148,7 @@ const Issue = ({ data, pageContext, children, location }) => {
 
   return (
     <App pages={data.pages.nodes} translationData={{ currentLanguage: pageContext.language, currentSlug: location.pathname }}>
-      <SiteHeader color="white" translationData={{ currentLanguage: pageContext.language, currentSlug: location.pathname }}>
+      <SiteHeader issue={data.post} color="white" translationData={{ currentLanguage: pageContext.language, currentSlug: location.pathname }}>
         <LanguageSwitcher translations={translations} translationData={translationData} />
       </SiteHeader>
       <main className={styles.container}>

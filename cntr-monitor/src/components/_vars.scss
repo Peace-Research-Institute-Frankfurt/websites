@@ -31,7 +31,7 @@
 %copy {
   font-family: var(--roboto);
   text-rendering: optimizeLegibility;
-  font-variation-settings: 'wght' 400, 'wdth' 70, 'opsz' 25;
+  font-variation-settings: 'wght' 400, 'wdth' 70;
   font-size: var(--ms-0);
   line-height: var(--baseline);
   letter-spacing: 0.002em;
@@ -40,15 +40,15 @@
 
 %copy-large {
   font-family: var(--montserrat);
-  font-variation-settings: 'wght' 200, 'wdth' 100, 'opsz' 25;
+  font-variation-settings: 'wght' 300, 'wdth' 100;
   font-size: var(--ms-2);
   letter-spacing: 0.01em;
   word-spacing: 0.012em;
-  line-height: 1.3;
+  line-height: calc(var(--baseline) * 1.5);
 }
 %copy-bold {
   @extend %copy;
-  font-variation-settings: 'wght' 700, 'wdth' 95, 'opsz' 25;
+  font-variation-settings: 'wght' 700, 'wdth' 95;
   letter-spacing: -0.01em;
 }
 %caption {
@@ -73,7 +73,7 @@
 }
 %h1 {
   font-family: var(--montserrat);
-  font-variation-settings: 'wght' 600, 'wdth' 110;
+  font-variation-settings: 'wght' 600, 'wdth' 100;
   font-size: var(--ms-4);
   letter-spacing: -0.01em;
   line-height: calc(var(--baseline) * 5);
@@ -83,7 +83,7 @@
 }
 %h2 {
   font-family: var(--montserrat);
-  font-variation-settings: 'wght' 620, 'wdth' 100, 'opsz' 144;
+  font-variation-settings: 'wght' 620, 'wdth' 96;
   font-size: var(--ms-4);
   line-height: calc(var(--baseline) * 1.5);
   letter-spacing: -0.01em;

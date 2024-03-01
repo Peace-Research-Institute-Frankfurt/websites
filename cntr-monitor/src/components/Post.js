@@ -41,6 +41,7 @@ export const query = graphql`
         frontmatter {
           title
           color
+          year
         }
       }
     }

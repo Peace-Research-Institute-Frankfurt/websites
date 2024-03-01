@@ -102,8 +102,6 @@ const Index = ({ data, pageContext, location }) => {
   }
   return (
     <App pages={data.pages.nodes}>
-      <SkipToContent />
-
       <SiteHeader color="white" translationData={translationData}>
         <LanguageSwitcher translations={translations} translationData={translationData} />
       </SiteHeader>
@@ -120,7 +118,7 @@ const Index = ({ data, pageContext, location }) => {
             <GatsbyImage alt="" image={currentImage} className={styles.currentImage} />
             <h2 className={styles.sectionTitle}>{t('Current issue')}</h2>
             <div className={styles.currentIssue}>
-              <Link to={`/${currentYear}`}>
+              <Link className={styles.currentTitle} to={`/${currentYear}`}>
                 <h2>{currentYear}</h2>
               </Link>
               <div className={styles.currentIntro}>

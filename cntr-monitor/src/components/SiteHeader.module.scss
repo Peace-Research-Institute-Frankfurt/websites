@@ -11,6 +11,7 @@
   left: 0;
   right: 0;
   z-index: 1000;
+  border-bottom: 1px solid rgba(white, 0.2);
 }
 
 .title {
@@ -28,6 +29,13 @@
   }
   path {
     fill: currentColor;
+  }
+  a {
+    &:hover,
+    &:focus-visible {
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+    }
   }
 }
 

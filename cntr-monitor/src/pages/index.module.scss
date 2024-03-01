@@ -109,7 +109,10 @@
 }
 
 .current-intro {
-  @extend %copy-large;
+  @extend %h3;
+  padding-top: 0.5em;
+  text-wrap: balance;
+  font-variation-settings: 'wght' 400;
 }
 
 .section-title {
@@ -118,8 +121,14 @@
 }
 .current-issue {
   grid-column: 5 / 12;
-  h2 {
-    @extend %h2;
+}
+
+.current-title {
+  @extend %h2;
+  &:hover,
+  &:focus-visible {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
   }
 }
 
