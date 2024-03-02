@@ -140,12 +140,16 @@
 
 .posts-group-title {
   @extend %h4;
-  margin-bottom: var(--baseline);
+  margin-bottom: 0.75em;
 }
 
 .posts-group-has-title {
   ol {
     border-left: 1px solid var(--gray);
+  }
+  li:first-child .posts-item {
+    border-top: 1px solid var(--gray);
+    padding-top: 1em;
   }
   .posts-item {
     padding-left: 1.5em;
@@ -154,8 +158,8 @@
 
 .posts-item {
   border-bottom: 1px solid var(--gray);
-  padding-bottom: var(--baseline);
-  padding-top: var(--baseline);
+  padding-bottom: 1em;
+  padding-top: 1em;
   display: block;
   &:hover,
   &:focus-visible {

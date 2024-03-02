@@ -56,6 +56,7 @@ export const query = graphql`
           title
           intro
           eyebrow
+          category
           authors {
             frontmatter {
               author_id
@@ -202,7 +203,13 @@ export default function Post({ data, pageContext, children }) {
       <article id="content" className={styles.container}>
         <header className={styles.header}>
           <div className={styles.headerInner}>
-            {data.post.childMdx.frontmatter.eyebrow && <span className={styles.eyebrow}>{data.post.childMdx.frontmatter.eyebrow}</span>}
+            {(data.post.childMdx.frontmatter.eyebrow || data.post.childMdx.frontmatter.category) && (
+              <span className={styles.eyebrow}>
+                {data.post.childMdx.frontmatter.category}
+                {data.post.childMdx.frontmatter.eyebrow && data.post.childMdx.frontmatter.category && ' · '}
+                {data.post.childMdx.frontmatter.eyebrow}
+              </span>
+            )}
             <h1 className={styles.title}>{data.post.childMdx.frontmatter.title}</h1>
             <div className={styles.intro}>
               <MarkdownRenderer markdown={data.post.childMdx.frontmatter.intro} />
@@ -211,6 +218,7 @@ export default function Post({ data, pageContext, children }) {
         </header>
         <main className={styles.body}>
           <PostBody>
+            {authors && <p className={styles.bylines}>{authors.map((a) => a.childMdx.frontmatter.name).join(', ')}</p>}
             {children}
             {authors && (
               <aside className={styles.credits}>

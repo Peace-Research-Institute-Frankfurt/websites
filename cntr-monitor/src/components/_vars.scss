@@ -114,8 +114,9 @@
 }
 %caps {
   font-family: var(--montserrat);
-  font-variation-settings: 'wght' 500, 'wdth' 10;
+  font-variation-settings: 'wght' 400, 'wdth' 10;
   text-transform: uppercase;
   font-size: var(--ms-0);
-  letter-spacing: 0em;
+  letter-spacing: 0.01em;
+  word-spacing: 0.02em;
 }

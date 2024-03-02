@@ -34,7 +34,7 @@
 }
 
 .header-inner {
-  min-height: 70vh;
+  min-height: 60vh;
   padding-bottom: 1rem;
   display: flex;
   flex-flow: column;
@@ -48,7 +48,7 @@
 
 .eyebrow {
   @extend %caps;
-  margin-bottom: 1em;
+  margin-bottom: 1.25em;
 }
 
 .title {
@@ -63,7 +63,7 @@
   text-align: center;
   hyphens: none;
   max-width: calc(var(--measure) * 1.5);
-  padding-top: var(--baseline);
+  padding-top: calc(var(--baseline) * 1.5);
 }
 
 .body {
@@ -71,6 +71,11 @@
   border-right: 1px solid var(--gray);
   margin: 0 calc(var(--padding) - 1px);
   padding-top: calc(var(--baseline) * 2);
+}
+
+.bylines {
+  @extend %caption;
+  padding-bottom: 1em;
 }
 
 .pagination {

@@ -177,7 +177,7 @@ const Issue = ({ data, pageContext, children, location }) => {
     })
     return (
       <li className={`${styles.postsGroup} ${group.name !== 'none' ? styles.postsGroupHasTitle : ''}`} key={`group-${group.name}`}>
-        {group.name !== 'none' && <h3 className={styles.postsGroupTitle}>{t(group.name)}</h3>}
+        {group.name !== 'none' && <h3 className={styles.postsGroupTitle}>{group.name}</h3>}
         <ol>{postEls}</ol>
       </li>
     )
