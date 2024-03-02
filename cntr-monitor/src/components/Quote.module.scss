@@ -1,0 +1,28 @@
+@import 'vars';
+
+.container {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin-top: var(--baseline);
+  margin-bottom: var(--baseline);
+}
+
+.text {
+  font-size: var(--ms-2);
+  line-height: calc(var(--baseline) * 1.5);
+  font-style: italic;
+  text-align: center;
+
+  p {
+    margin-bottom: 0.5em !important;
+    @include bp(m) {
+      max-width: calc(var(--measure) * 1.2) !important;
+    }
+  }
+}
+
+.cite {
+  @extend %caption;
+  font-style: normal;
+}

@@ -33,7 +33,7 @@
 .header-inner {
   @extend %grid;
   padding-top: 8em;
-  min-height: 75vh;
+  min-height: 65vh;
   padding-bottom: 10em;
   color: var(--fc-knockout);
   mask: var(--mask);
@@ -104,23 +104,46 @@
 
 .body {
   margin: 0 var(--padding);
-  border-left: 1px solid var(--gray);
-  border-right: 1px solid var(--gray);
+  position: relative;
+  @include bp(l) {
+    border-left: 1px solid var(--gray);
+    border-right: 1px solid var(--gray);
+  }
+  &:after {
+    content: '';
+    z-index: -10;
+    background: var(--gray-light);
+    position: absolute;
+    top: -20%;
+    left: calc(var(--padding) * -1);
+    right: calc(var(--padding) * -1);
+    height: 50rem;
+    mask: var(--mask);
+  }
 }
 
 .posts {
   @extend %grid;
   align-items: baseline;
-  padding: 4rem 0;
+  padding: 2rem 0;
+  @include bp(l) {
+    padding: 4rem 0;
+  }
 }
 
 .section-title {
   @extend %caps;
-  grid-column: 2 / 3;
+  grid-column: 1 / 2;
+  @include bp(l) {
+    grid-column: 2 / 3;
+  }
 }
 
 .posts-list {
-  grid-column: 5 / 13;
+  grid-column: 2 / 13;
+  @include bp(l) {
+    grid-column: 5 / 13;
+  }
   li {
     list-style: none;
   }
@@ -144,15 +167,9 @@
 }
 
 .posts-group-has-title {
-  ol {
-    border-left: 1px solid var(--gray);
-  }
   li:first-child .posts-item {
     border-top: 1px solid var(--gray);
     padding-top: 1em;
-  }
-  .posts-item {
-    padding-left: 1.5em;
   }
 }
 

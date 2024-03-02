@@ -9,6 +9,11 @@
   max-width: 100%;
 }
 
+.medium {
+  margin-top: calc(var(--baseline) * 1);
+  margin-bottom: calc(var(--baseline) * 1);
+}
+
 .large {
   width: calc(var(--measure) * 1.5);
   margin-top: calc(var(--baseline) * 1.5);

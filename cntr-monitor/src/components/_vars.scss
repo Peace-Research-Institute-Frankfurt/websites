@@ -95,14 +95,15 @@
 }
 %h3 {
   font-family: var(--montserrat);
-  font-variation-settings: 'wght' 600, 'wdth' 100;
+  font-variation-settings: 'wght' 600, 'wdth' 110;
   font-size: var(--ms-3);
   letter-spacing: -0.005em;
-  line-height: calc(var(--baseline) * 1.5);
+  line-height: calc(var(--baseline) * 1.666);
+  hyphens: none;
 }
 %h4 {
   font-family: var(--montserrat);
-  font-variation-settings: 'wght' 600, 'wdth' 100;
+  font-variation-settings: 'wght' 500, 'wdth' 100;
   font-size: var(--ms-1);
   letter-spacing: 0em;
   line-height: calc(var(--baseline) * 1.15);
