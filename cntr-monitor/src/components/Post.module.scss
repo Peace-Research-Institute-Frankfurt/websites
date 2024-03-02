@@ -46,6 +46,11 @@
   mask: var(--mask);
 }
 
+.eyebrow {
+  @extend %caps;
+  margin-bottom: 1em;
+}
+
 .title {
   @extend %h2;
   text-align: center;

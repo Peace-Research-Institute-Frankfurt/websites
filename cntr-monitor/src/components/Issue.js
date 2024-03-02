@@ -77,6 +77,7 @@ export const query = graphql`
             title
             order
             intro
+            category
             eyebrow
             authors {
               frontmatter {
@@ -125,29 +126,59 @@ const Issue = ({ data, pageContext, children, location }) => {
 
   const coverImage = getImage(data.post.childMdx.frontmatter.cover_image)
 
-  const posts = data.posts.nodes.map((p) => {
-    const year = data.post.relativeDirectory.replace(/(.{2})\/(issues)\//g, '')
-    const frontmatter = p.childMdx.frontmatter
-    const maxWords = 45
-    let intro = ''
-    if (frontmatter.teaser) {
-      intro = frontmatter.teaser
-    } else {
-      intro =
-        frontmatter.intro && frontmatter.intro.split(' ').length > maxWords
-          ? frontmatter.intro.split(' ').slice(0, maxWords).join(' ') + '...'
-          : frontmatter.intro
-    }
+  const postGroups = [
+    'none',
+    ...data.posts.nodes
+      .map((el) => el.childMdx.frontmatter.category)
+      .filter((el, i, arr) => {
+        return el && arr.indexOf(el) === i
+      }),
+  ]
 
+  const groupedPosts = []
+
+  postGroups.forEach((group) => {
+    const newGroup = { name: group, posts: [] }
+    data.posts.nodes.forEach((node) => {
+      const format = node.childMdx.frontmatter.category || 'none'
+      if (format === group) {
+        newGroup.posts.push(node)
+      }
+    })
+    groupedPosts.push(newGroup)
+  })
+
+  const posts = groupedPosts.map((group) => {
+    const postEls = group.posts.map((p) => {
+      const year = data.post.relativeDirectory.replace(/(.{2})\/(issues)\//g, '')
+      const frontmatter = p.childMdx.frontmatter
+      const maxWords = 45
+      let intro = ''
+      if (frontmatter.teaser) {
+        intro = frontmatter.teaser
+      } else {
+        intro =
+          frontmatter.intro && frontmatter.intro.split(' ').length > maxWords
+            ? frontmatter.intro.split(' ').slice(0, maxWords).join(' ') + '...'
+            : frontmatter.intro
+      }
+
+      return (
+        <li key={p.id}>
+          <Link className={styles.postsItem} to={`/${year}/${p.childMdx.fields.slug}`}>
+            {frontmatter.eyebrow && <span className={styles.postsEyebrow}>{frontmatter.eyebrow}</span>}
+            <h3 className={styles.postsTitle}>{frontmatter.title}</h3>
+            <div className={styles.postsIntro}>{frontmatter.intro && <MarkdownRenderer markdown={intro} />}</div>
+
+            {frontmatter.authors && <div className={styles.postsMeta}> {frontmatter.authors.map((el) => el.frontmatter.name).join(', ')}</div>}
+          </Link>
+        </li>
+      )
+    })
     return (
-      <li key={p.id}>
-        <Link className={styles.postsItem} to={`/${year}/${p.childMdx.fields.slug}`}>
-          <span className={styles.postsEyebrow}>{frontmatter.eyebrow}</span>
-          <h3 className={styles.postsTitle}>{frontmatter.title}</h3>
-          <div className={styles.postsIntro}>{frontmatter.intro && <MarkdownRenderer markdown={intro} />}</div>
-
-          {frontmatter.authors && <div className={styles.postsMeta}> {frontmatter.authors.map((el) => el.frontmatter.name).join(', ')}</div>}
-        </Link>
+      <li className={`${styles.postsGroup} ${group.name !== 'none' ? styles.postsGroupHasTitle : ''}`} key={`group-${group.name}`}>
+        {group.name !== 'none' && <h3 className={styles.postsGroupTitle}>{t(group.name)}</h3>}
+        <ol>{postEls}</ol>
       </li>
     )
   })
