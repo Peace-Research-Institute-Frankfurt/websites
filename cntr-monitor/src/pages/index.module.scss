@@ -22,6 +22,9 @@
   letter-spacing: 0.01em;
   grid-column: 2 / 10;
   z-index: 200;
+  @include bp(m) {
+    font-size: var(--ms-7);
+  }
 }
 
 .cntr {
