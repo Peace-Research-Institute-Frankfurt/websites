@@ -1,0 +1,24 @@
+@import 'vars';
+
+.container {
+  @extend %caption;
+  width: calc((100% - var(--measure)) / 2 - 1em);
+  margin-left: var(--padding);
+  float: left;
+  min-width: 10em;
+  margin: 1em;
+  margin-bottom: 0;
+  max-width: 20em;
+  position: relative;
+  top: -0.75em;
+  display: none;
+  @include bp(m) {
+    display: block;
+  }
+}
+
+.title {
+  @extend %caps;
+  display: block;
+  margin-bottom: 0.1em;
+}
