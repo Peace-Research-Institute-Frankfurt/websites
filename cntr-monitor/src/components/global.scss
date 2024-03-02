@@ -32,16 +32,18 @@
   --fast: 200ms;
   --black: black;
   --br-small: 4px;
-  --blue: #007ca0;
+  --blue: rgb(0, 106, 140);
   --blue-dark: #063442;
   --blue-light: rgb(114, 159, 172);
   --black: #050d0f;
   --white: #ffffff;
+  --gray: rgba(0, 0, 0, 0.3);
   --gray-light: #eaeef0;
+  --gray-dark: #3a3a3a;
   --focus-color: var(--black);
   --mask: linear-gradient(45deg, #0000 var(--corner-size), #000 0 calc(100% - var(--corner-size)), #0000 0);
   --corner-size: 5rem;
-  --header-height: 4rem;
+  --header-height: 3.5rem;
   --measure: 45rem;
 
   @include bp(m) {

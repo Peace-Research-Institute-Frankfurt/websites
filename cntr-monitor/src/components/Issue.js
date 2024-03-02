@@ -51,9 +51,6 @@ export const query = graphql`
           }
           cover_caption
           cover_credit
-          authors {
-            name
-          }
         }
       }
     }
@@ -80,6 +77,12 @@ export const query = graphql`
             title
             order
             intro
+            eyebrow
+            authors {
+              frontmatter {
+                name
+              }
+            }
           }
         }
       }
@@ -139,8 +142,11 @@ const Issue = ({ data, pageContext, children, location }) => {
     return (
       <li key={p.id}>
         <Link className={styles.postsItem} to={`/${year}/${p.childMdx.fields.slug}`}>
+          <span className={styles.postsEyebrow}>{frontmatter.eyebrow}</span>
           <h3 className={styles.postsTitle}>{frontmatter.title}</h3>
           <div className={styles.postsIntro}>{frontmatter.intro && <MarkdownRenderer markdown={intro} />}</div>
+
+          {frontmatter.authors && <div className={styles.postsMeta}> {frontmatter.authors.map((el) => el.frontmatter.name).join(', ')}</div>}
         </Link>
       </li>
     )
@@ -167,11 +173,13 @@ const Issue = ({ data, pageContext, children, location }) => {
             {data.post.childMdx.frontmatter.cover_credit && <p className={styles.headerCredit}>{data.post.childMdx.frontmatter.cover_credit}</p>}
           </aside>
         </header>
-        <section className={styles.posts}>
-          <h2 className={styles.sectionTitle}>{t('Contents')}</h2>
-          <ol className={styles.postsList}>{posts}</ol>
-        </section>
-        <AboutSection />
+        <div className={styles.body}>
+          <section className={styles.posts}>
+            <h2 className={styles.sectionTitle}>{t('Contents')}</h2>
+            <ol className={styles.postsList}>{posts}</ol>
+          </section>
+          <AboutSection />
+        </div>
       </main>
       <Footer pages={data.pages.nodes} />
     </App>

@@ -174,16 +174,15 @@ export default function Post({ data, pageContext, children }) {
   const previous = posts[currentIndex - 1] || null
 
   const pagination = (
-    <nav>
-      <Link to="../">{t('Issue Overview')}</Link>
+    <nav className={styles.pagination}>
       {previous && (
-        <Link rel="prev" to={`../${previous.childMdx.fields.slug}`}>
+        <Link className={`${styles.paginationPrev} ${styles.paginationLink}`} rel="prev" to={`../${previous.childMdx.fields.slug}`}>
           <Arrow />
           <span>{t('Previous')}</span>
         </Link>
       )}
       {next && (
-        <Link rel="next" to={`../${next.childMdx.fields.slug}`}>
+        <Link className={`${styles.paginationNext} ${styles.paginationLink}`} rel="next" to={`../${next.childMdx.fields.slug}`}>
           <Arrow />
           <span>{t('Next')}</span>
         </Link>
@@ -197,7 +196,7 @@ export default function Post({ data, pageContext, children }) {
   return (
     <App>
       <SiteHeader color="white" post={data.post} issue={data.issue} translationData={translationData}>
-        {pagination && pagination}
+        {(previous || next) && pagination}
         {data.translations.nodes.length > 0 && <LanguageSwitcher translations={translations} translationData={translationData} />}
       </SiteHeader>
       <article id="content" className={styles.container}>

@@ -18,9 +18,21 @@
 
 .hero-title {
   @extend %h1;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
   grid-column: 2 / 10;
   z-index: 200;
 }
+
+.cntr {
+  font-variation-settings: 'wdth' 110, 'wght' 900;
+  margin-right: 0.1em;
+}
+.monitor {
+  font-variation-settings: 'wdth' 100, 'wght' 500;
+  letter-spacing: 0;
+}
+
 .hero-intro {
   @extend %copy-large;
   grid-column: 2 / 11;
@@ -89,12 +101,12 @@
     content: '';
     position: absolute;
     top: 0;
-    left: calc(-1 * var(--padding));
+    left: calc(-0.5 * var(--padding));
     right: 0;
-    bottom: calc(100% - var(--corner-size) * sqrt(2) - var(--padding) * 2);
+    bottom: calc(100% - var(--corner-size) * sqrt(2) - var(--padding) * 1);
     z-index: -5;
     background: var(--blue);
-    opacity: 0.4;
+    opacity: 0.2;
     mask: var(--mask);
   }
 }

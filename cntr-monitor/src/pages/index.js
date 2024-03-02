@@ -110,7 +110,10 @@ const Index = ({ data, pageContext, location }) => {
         <section className={styles.hero}>
           <div className={styles.heroBlue} />
           <div className={styles.heroBlack} />
-          <h1 className={styles.heroTitle}>CNTR Monitor</h1>
+          <h1 className={styles.heroTitle}>
+            <span className={styles.cntr}>CNTR</span>
+            <span className={styles.monitor}>Monitor</span>
+          </h1>
           <p className={styles.heroIntro}>{t(`index.header.intro`)}</p>
         </section>
         <section className={styles.current} style={currentStyles}>

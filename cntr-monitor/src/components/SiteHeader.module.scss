@@ -19,9 +19,10 @@
   align-items: center;
   gap: 0.25em;
   color: var(--color);
-  font-size: 1.75rem;
+  font-size: 1.65rem;
   font-family: var(--montserrat);
-  font-variation-settings: 'wght' 700, 'wdth' 110, 'opsz' 45;
+  font-variation-settings: 'wght' 600, 'wdth' 90;
+  text-transform: uppercase;
   svg {
     height: 1em;
     width: auto;
@@ -46,4 +47,5 @@
 
 .controls {
   display: flex;
+  gap: 0.5em;
 }

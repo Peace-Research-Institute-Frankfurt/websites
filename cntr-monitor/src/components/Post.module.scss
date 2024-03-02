@@ -7,17 +7,27 @@
 .header {
   padding: 0 var(--padding);
   padding-top: var(--header-height);
-  background: var(--blue-dark);
-  margin-bottom: calc(var(--baseline) * 2);
+  background: var(--fc-dark);
   position: relative;
   &:before {
     content: '';
     position: absolute;
-    top: -100%;
+    top: 0;
     left: var(--padding);
-    right: var(--padding);
+    right: calc(var(--padding) + var(--header-height));
     bottom: calc(var(--padding) * 4);
     background: var(--blue);
+    mask: var(--mask);
+    z-index: 10;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: var(--padding);
+    right: 0;
+    bottom: 0;
+    background: var(--blue-dark);
     mask: var(--mask);
     z-index: 0;
   }
@@ -30,7 +40,9 @@
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  background: var(--fc-primary);
+  background: var(--gray-light);
+  position: relative;
+  z-index: 100;
   mask: var(--mask);
 }
 
@@ -44,6 +56,55 @@
 .intro {
   @extend %copy-large;
   text-align: center;
+  hyphens: none;
   max-width: calc(var(--measure) * 1.5);
   padding-top: var(--baseline);
+}
+
+.body {
+  border-left: 1px solid var(--gray);
+  border-right: 1px solid var(--gray);
+  margin: 0 calc(var(--padding) - 1px);
+  padding-top: calc(var(--baseline) * 2);
+}
+
+.pagination {
+  color: var(--white);
+  display: flex;
+  border: 1px solid white;
+}
+
+.pagination-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3em 0.325em;
+  border-right: 1px solid white;
+  &:hover,
+  &:focus-visible {
+    background: var(--white);
+    path {
+      fill: var(--blue-dark);
+    }
+  }
+  &:last-child {
+    border-right: 0;
+  }
+  span {
+    position: absolute;
+    font-size: 0;
+    left: -9999px;
+  }
+  svg {
+    width: 0.75em;
+  }
+  path {
+    fill: var(--white);
+  }
+}
+
+.pagination-prev {
+  svg {
+    transform: rotate(180deg);
+  }
 }
