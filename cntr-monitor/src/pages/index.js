@@ -12,6 +12,7 @@ import { getImage, GatsbyImage } from 'gatsby-plugin-image'
 import useColors from '../hooks/useColors'
 import useTranslations from '../hooks/useTranslations'
 import LanguageSwitcher from '../components/LanguageSwitcher'
+import Button from '../components/ButtonAdapter'
 
 export const query = graphql`
   query ($language: String!) {
@@ -66,6 +67,7 @@ export const query = graphql`
             title
             intro
             color
+            download_url
             cover_image {
               childImageSharp {
                 gatsbyImageData(width: 1200, layout: FULL_WIDTH, placeholder: BLURRED)
@@ -125,6 +127,16 @@ const Index = ({ data, pageContext, location }) => {
               </Link>
               <div className={styles.currentIntro}>
                 <MarkdownRenderer markdown={currentIssue.childMdx.frontmatter.intro} />
+                <div className={styles.currentLinks}>
+                  <Link className={styles.currentRead} to={`/${currentYear}`}>
+                    {t('Read online')}
+                  </Link>
+                  {currentIssue.childMdx.frontmatter.download_url && (
+                    <a class={styles.currentDownload} href={currentIssue.childMdx.frontmatter.download_url}>
+                      {t('Download PDF')}
+                    </a>
+                  )}
+                </div>
               </div>
             </div>
           </div>

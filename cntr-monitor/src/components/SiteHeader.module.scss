@@ -17,12 +17,15 @@
 .title {
   display: flex;
   align-items: center;
-  gap: 0.25em;
+  gap: 0.2em;
   color: var(--color);
-  font-size: 1.65rem;
-  font-family: var(--montserrat);
-  font-variation-settings: 'wght' 600, 'wdth' 90;
+  font-variation-settings: 'wght' 550, 'wdth' 10;
+  letter-spacing: -0.025em;
   text-transform: uppercase;
+  font-size: 1.3rem;
+  @include bp(m) {
+    font-size: 1.6rem;
+  }
   svg {
     height: 1em;
     width: auto;
@@ -45,7 +48,7 @@
 }
 
 .year {
-  font-variation-settings: 'wght' 200, 'wdth' 110, 'opsz' 45;
+  font-variation-settings: 'wght' 250;
   font-feature-settings: 'onum' 1;
 }
 

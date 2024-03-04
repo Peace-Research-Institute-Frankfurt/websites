@@ -42,10 +42,13 @@
   --gray-dark: #3a3a3a;
   --focus-color: var(--black);
   --mask: linear-gradient(45deg, #0000 var(--corner-size), #000 0 calc(100% - var(--corner-size)), #0000 0);
-  --corner-size: 5rem;
+  --corner-size: 2rem;
   --header-height: 3.5rem;
   --measure: 45rem;
 
+  @include bp(s) {
+    --corner-size: 4rem;
+  }
   @include bp(m) {
     --corner-size: 10rem;
   }
