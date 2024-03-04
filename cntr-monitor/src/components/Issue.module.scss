@@ -32,13 +32,17 @@
 
 .header-inner {
   @extend %grid;
-  padding-top: 8em;
-  min-height: 65vh;
-  padding-bottom: 10em;
+  padding-top: 6em;
+  padding-bottom: 12em;
+  min-height: 60vh;
   color: var(--fc-knockout);
   mask: var(--mask);
   position: relative;
   z-index: 1000;
+  @include bp(m) {
+    min-height: 65vh;
+    padding-top: 8em;
+  }
   &:after {
     content: '';
     position: absolute;
@@ -85,11 +89,30 @@
 
 .header-captions {
   position: absolute;
-  left: var(--padding);
-  bottom: var(--padding);
   color: white;
-  z-index: 100;
-  max-width: calc(var(--corner-size) * 0.8);
+  z-index: 1000;
+  bottom: 0;
+  right: var(--padding);
+  background: rgba(black, 0.8);
+  padding: 0.2em 0.5em;
+  padding-bottom: 0.25em;
+  transform-origin: bottom right;
+  transform: rotate(90deg) translateY(100%);
+  display: flex;
+  gap: 0.5em;
+  white-space: nowrap;
+  transition: 300ms;
+  @include bp(m) {
+    white-space: inherit;
+    transform: none;
+    display: block;
+    max-width: calc(var(--corner-size) * 0.8);
+    left: var(--padding);
+    bottom: var(--padding);
+    right: auto;
+    text-align: left;
+    background: transparent;
+  }
 }
 
 .header-caption {
@@ -133,7 +156,12 @@
 
 .section-title {
   @extend %caps;
-  grid-column: 1 / 2;
+  grid-column: 2 / 15;
+  margin-bottom: 1em;
+  @include bp(m) {
+    margin-bottom: 0;
+    grid-column: 1 / 2;
+  }
   @include bp(l) {
     grid-column: 2 / 3;
   }
