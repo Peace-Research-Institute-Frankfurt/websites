@@ -34,21 +34,35 @@
 }
 
 .header-inner {
-  min-height: 55vh;
-  padding-bottom: 1rem;
+  min-height: 30vh;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
   display: flex;
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  background: var(--gray-light);
+  background: var(--fc-light);
   position: relative;
   z-index: 100;
   mask: var(--mask);
+  @include bp(m) {
+    min-height: 60vh;
+    padding-bottom: 8rem;
+  }
 }
 
 .eyebrow {
   @extend %caps;
-  margin-bottom: 1.25em;
+  margin-bottom: 1.5em;
+  text-decoration: underline;
+  text-decoration-color: var(--fc-primary);
+  background: var(--fc-primary);
+  color: var(--fc-knockout);
+  line-height: 1;
+  padding: 0.3em 0.4em;
+  @include bp(m) {
+    margin-bottom: 2em;
+  }
 }
 
 .title {
@@ -62,20 +76,28 @@
   @extend %copy-large;
   text-align: center;
   hyphens: none;
-  max-width: calc(var(--measure) * 1.5);
   padding-top: calc(var(--baseline) * 1.5);
+  max-width: 90%;
+  @include bp(m) {
+    max-width: Min(70%, 35em);
+  }
 }
 
 .body {
-  border-left: 1px solid var(--gray);
-  border-right: 1px solid var(--gray);
   margin: 0 calc(var(--padding) - 1px);
-  padding-top: calc(var(--baseline) * 2);
+  padding-top: 1.5em;
+  @include bp(m) {
+    padding-top: 2em;
+    border-left: 1px solid var(--gray);
+    border-right: 1px solid var(--gray);
+  }
 }
 
 .bylines {
   @extend %caption;
-  padding-bottom: 1em;
+  @include bp(m) {
+    padding-bottom: 1em;
+  }
 }
 
 .pagination {

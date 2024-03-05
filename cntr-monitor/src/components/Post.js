@@ -241,10 +241,11 @@ export function Head({ data, pageContext, location }) {
     currentLanguage: pageContext.language,
     translations: data.translations.nodes,
   }
-  const { primary, dark, knockout } = useColors(data.issue.childMdx.frontmatter.color)
+  const { primary, dark, light, knockout } = useColors(data.issue.childMdx.frontmatter.color)
   const bodyStyles = {
     '--fc-primary': primary.toString(),
     '--fc-dark': dark.toString(),
+    '--fc-light': light.toString(),
     '--fc-knockout': knockout.toString(),
   }
   return (

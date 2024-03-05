@@ -169,6 +169,7 @@ exports.createSchemaCustomization = async ({ getNode, getNodesByType, pathPrefix
     cover_image: File @link(by: "relativePath")
     cover_caption: String
     cover_credit: String
+    download_url: String
   }
   type Mdx {
     frontmatter: MdxFrontmatter

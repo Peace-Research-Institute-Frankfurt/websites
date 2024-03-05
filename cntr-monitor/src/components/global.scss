@@ -27,7 +27,6 @@
   --ms-7: calc(var(--ms-6) * var(--ratio));
   --ms-8: calc(var(--ms-7) * var(--ratio));
   --ms-9: calc(var(--ms-8) * var(--ratio));
-  --padding: 1.5vw;
   --baseline: calc(var(--ms-0) * 1.475);
   --fast: 200ms;
   --black: black;
@@ -45,15 +44,17 @@
   --corner-size: 2rem;
   --header-height: 3.5rem;
   --measure: 45rem;
+  --padding: 2.5vw;
 
   @include bp(s) {
     --corner-size: 4rem;
   }
   @include bp(m) {
-    --corner-size: 10rem;
+    --padding: 1.5vw;
+    --corner-size: 8rem;
   }
   @include bp(l) {
-    --corner-size: 12rem;
+    --corner-size: 11rem;
   }
 
   // Scale type size on high-res displays
@@ -120,10 +121,13 @@ img {
 .footnotes {
   border-top: 1px dotted var(--black);
   max-width: var(--measure);
-  margin: 0 auto;
-  margin-top: calc(var(--baseline) * 2);
   padding-top: 1em;
+  margin: 0 auto;
   counter-reset: fn;
+  margin-top: calc(var(--baseline) * 1);
+  @include bp(m) {
+    margin-top: calc(var(--baseline) * 2);
+  }
 
   #footnote-label {
     position: absolute;

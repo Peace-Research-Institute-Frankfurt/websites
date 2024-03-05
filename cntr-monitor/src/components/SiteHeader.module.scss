@@ -2,7 +2,7 @@
 
 .container {
   height: var(--header-height);
-  padding: 0 calc(var(--padding) * 2);
+  padding: 0 var(--padding);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -23,6 +23,7 @@
   letter-spacing: -0.025em;
   text-transform: uppercase;
   font-size: 1.3rem;
+  padding-left: var(--padding);
   @include bp(m) {
     font-size: 1.6rem;
   }

@@ -24,7 +24,7 @@
 
 %grid {
   display: grid;
-  grid-template-columns: calc(sqrt(2) * var(--corner-size)) repeat(12, 1fr) calc(sqrt(2) * var(--corner-size));
+  grid-template-columns: repeat(2, calc(sqrt(2) * var(--corner-size) * 0.5)) repeat(12, 1fr) repeat(2, calc(sqrt(2) * var(--corner-size) * 0.5));
   align-content: flex-start;
 }
 
@@ -56,7 +56,7 @@
   font-size: var(--ms--1);
   line-height: 1.2;
   letter-spacing: 0;
-  font-variation-settings: 'wght' 400, 'wdth' 95;
+  font-variation-settings: 'wght' 450, 'wdth' 95;
 }
 %caption-bold {
   @extend %caption;
@@ -69,15 +69,15 @@
   text-transform: uppercase;
   letter-spacing: 0.025em;
   font-size: var(--ms--2);
-  font-variation-settings: 'wght' 300, 'wdth' 25, 'opsz' 5;
+  font-variation-settings: 'wght' 350, 'wdth' 25, 'opsz' 5;
 }
 %h1 {
   font-family: var(--montserrat);
-  font-variation-settings: 'wght' 600, 'wdth' 100;
+  font-variation-settings: 'wght' 650, 'wdth' 100;
   font-size: var(--ms-4);
   letter-spacing: -0.01em;
-  line-height: calc(var(--baseline) * 5);
   @include bp(m) {
+    line-height: calc(var(--baseline) * 5);
     font-size: var(--ms-6);
   }
 }
@@ -85,7 +85,8 @@
   font-family: var(--montserrat);
   font-variation-settings: 'wght' 700, 'wdth' 100;
   font-size: var(--ms-4);
-  line-height: calc(var(--baseline) * 1.5);
+  line-height: calc(var(--baseline) * 2);
+  hyphens: none;
   letter-spacing: -0.01em;
   @include bp(m) {
     line-height: calc(var(--baseline) * 2.333);

@@ -1,6 +1,6 @@
 @import 'vars';
 .container {
-  --measure: 45rem;
+  --measure: calc(40 * var(--ms-0));
   padding-bottom: calc(var(--baseline) * 2);
 
   p,
@@ -80,7 +80,7 @@
     height: 0.65em;
     display: inline-block;
     path {
-      fill: var(--black);
+      fill: var(--fc-dark);
     }
   }
 }

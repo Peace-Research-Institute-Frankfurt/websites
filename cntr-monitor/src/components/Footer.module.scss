@@ -1,12 +1,13 @@
 @import 'vars';
 
 .container {
-  padding: 1rem var(--padding);
+  padding: var(--padding);
   display: flex;
   justify-content: space-between;
-  color: var(--black);
   border-top: 1px solid var(--gray);
   align-items: flex-end;
+  color: var(--blue-dark);
+
   @include bp(m) {
     align-items: center;
   }
@@ -28,8 +29,8 @@
   ul {
     display: flex;
     list-style: none;
-    flex-flow: column;
-    gap: 0.35em;
+    flex-wrap: wrap;
+    gap: 0.5em;
     @include bp(s) {
       gap: 0.75em;
       flex-flow: row;

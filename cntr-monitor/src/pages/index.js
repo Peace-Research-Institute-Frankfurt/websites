@@ -95,10 +95,11 @@ const Index = ({ data, pageContext, location }) => {
   const currentIssue = data.issues.nodes[0]
   const currentYear = currentIssue.relativeDirectory.replace(/(.{2})\/(issues)\//g, '')
   const currentImage = getImage(currentIssue.childMdx.frontmatter.cover_image)
-  const { primary, dark, knockout } = useColors(currentIssue.childMdx.frontmatter.color)
+  const { primary, dark, light, knockout } = useColors(currentIssue.childMdx.frontmatter.color)
   const currentStyles = {
     '--fc-primary': primary.toString(),
     '--fc-dark': dark.toString(),
+    '--fc-light': light.toString(),
     '--fc-knockout': knockout.toString(),
   }
   return (
@@ -141,27 +142,31 @@ const Index = ({ data, pageContext, location }) => {
             </div>
           </div>
         </section>
-        {pastIssues.length > 0 && (
-          <section className={styles.archive}>
-            <h2 className={styles.sectionTitle}>{t('Past issues')}</h2>
-            <ol className={styles.archiveList}>
-              {pastIssues.map((node, i) => {
-                const year = node.relativeDirectory.replace(/(.{2})\/(issues)\//g, '')
-                return (
-                  <li key={`issue-${i}`} className={styles.archiveItem}>
-                    <Link to={`/${year}`}>
-                      <span className={styles.archiveTitle}>{year}</span>
-                      <div className={styles.archiveIntro}>
-                        <MarkdownRenderer markdown={currentIssue.childMdx.frontmatter.intro} />
-                      </div>
-                    </Link>
-                  </li>
-                )
-              })}
-            </ol>
+        <section className={styles.body}>
+          {pastIssues.length > 0 && (
+            <section className={styles.archive}>
+              <h2 className={styles.sectionTitle}>{t('Past issues')}</h2>
+              <ol className={styles.archiveList}>
+                {pastIssues.map((node, i) => {
+                  const year = node.relativeDirectory.replace(/(.{2})\/(issues)\//g, '')
+                  return (
+                    <li key={`issue-${i}`} className={styles.archiveItem}>
+                      <Link to={`/${year}`}>
+                        <span className={styles.archiveTitle}>{year}</span>
+                        <div className={styles.archiveIntro}>
+                          <MarkdownRenderer markdown={currentIssue.childMdx.frontmatter.intro} />
+                        </div>
+                      </Link>
+                    </li>
+                  )
+                })}
+              </ol>
+            </section>
+          )}
+          <section className={styles.about}>
+            <AboutSection />
           </section>
-        )}
-        <AboutSection />
+        </section>
       </main>
       <Footer pages={data.pages.nodes} />
     </App>

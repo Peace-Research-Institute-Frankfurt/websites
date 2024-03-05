@@ -3,7 +3,6 @@
 .container {
   @extend %grid;
   align-items: baseline;
-  padding: 0 var(--padding);
   padding: var(--corner-size) 0;
   @include bp(m) {
     padding: 4rem 0;
@@ -17,14 +16,20 @@
   @include bp(m) {
     grid-column: 2 / 5;
   }
+  @include bp(l) {
+    grid-column: 3 / 6;
+  }
 }
 
 .copy {
   @extend %copy;
-  grid-column: 2 / 14;
+  grid-column: 2 / 16;
   max-width: 40em;
   hyphens: none;
   @include bp(m) {
-    grid-column: 5 / 13;
+    grid-column: 5 / 16;
+  }
+  @include bp(l) {
+    grid-column: 6 / 16;
   }
 }

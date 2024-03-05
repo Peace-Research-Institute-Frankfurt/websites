@@ -223,10 +223,11 @@ export default Issue
 export const Head = ({ data, pageContext, location }) => {
   const year = data.post.relativeDirectory.replace(/(.{2})\/(issues)\//g, '')
   const translationData = { currentLanguage: pageContext.language, currentSlug: location.pathname }
-  const { primary, dark, knockout } = useColors(data.post.childMdx.frontmatter.color)
+  const { primary, dark, light, knockout } = useColors(data.post.childMdx.frontmatter.color)
   const bodyStyles = {
     '--fc-primary': primary.toString(),
     '--fc-dark': dark.toString(),
+    '--fc-light': light.toString(),
     '--fc-knockout': knockout.toString(),
   }
   return (
