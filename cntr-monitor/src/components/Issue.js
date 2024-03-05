@@ -1,18 +1,17 @@
-import React from 'react'
 import { graphql } from 'gatsby'
-import MarkdownRenderer from 'react-markdown-renderer'
-import App from './App.js'
-import Meta from './Meta.js'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import { useTranslation } from 'gatsby-plugin-react-i18next'
-import SiteHeader from './SiteHeader.js'
-import Footer from './Footer.js'
+import { Link, useTranslation } from 'gatsby-plugin-react-i18next'
+import React from 'react'
+import MarkdownRenderer from 'react-markdown-renderer'
 import useColors from '../hooks/useColors.js'
-import { Link } from 'gatsby-plugin-react-i18next'
-import AboutSection from './AboutSection.js'
 import useTranslations from '../hooks/useTranslations.js'
-import LanguageSwitcher from './LanguageSwitcher.js'
+import AboutSection from './AboutSection.js'
+import App from './App.js'
+import Footer from './Footer.js'
 import * as styles from './Issue.module.scss'
+import LanguageSwitcher from './LanguageSwitcher.js'
+import Meta from './Meta.js'
+import SiteHeader from './SiteHeader.js'
 
 export const query = graphql`
   query ($id: String!, $language: String!, $postsDirectory: String!) {
@@ -189,7 +188,7 @@ const Issue = ({ data, pageContext, children, location }) => {
       <SiteHeader issue={data.post} color="white" translationData={{ currentLanguage: pageContext.language, currentSlug: location.pathname }}>
         <LanguageSwitcher translations={translations} translationData={translationData} />
       </SiteHeader>
-      <main className={styles.container}>
+      <main>
         <header className={styles.header}>
           <div className={styles.headerInner}>
             <GatsbyImage className={styles.headerImage} image={coverImage} alt="" />

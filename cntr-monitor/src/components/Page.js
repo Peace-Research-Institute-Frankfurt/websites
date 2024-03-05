@@ -1,13 +1,13 @@
 import { graphql } from 'gatsby'
 import React from 'react'
-import App from './App'
-import PostBody from './PostBody'
-import Meta from './Meta'
-import Footer from './Footer'
-import SiteHeader from './SiteHeader'
 import useTranslations from '../hooks/useTranslations'
+import App from './App'
+import Footer from './Footer'
 import LanguageSwitcher from './LanguageSwitcher'
+import Meta from './Meta'
 import * as styles from './Page.module.scss'
+import PostBody from './PostBody'
+import SiteHeader from './SiteHeader'
 
 export const query = graphql`
   query ($id: String!, $language: String!, $translations: [String!]) {
@@ -94,7 +94,7 @@ const Page = ({ data, children, pageContext }) => {
       <SiteHeader translationData={translationData} color="var(--white)">
         {data.translations.nodes.length > 0 && <LanguageSwitcher translations={translations} translationData={translationData} />}
       </SiteHeader>
-      <article id="content" className={styles.container}>
+      <article id="content">
         <header className={styles.header}>
           <div className={styles.headerInner}>
             <h1 className={styles.title}>{data.post.childMdx.frontmatter.title}</h1>

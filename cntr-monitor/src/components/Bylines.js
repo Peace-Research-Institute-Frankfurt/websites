@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React from 'react'
 import * as styles from './Bylines.module.scss'
 import MarkdownRenderer from 'react-markdown-renderer'
 
@@ -6,10 +6,10 @@ const BylineItem = ({ author }) => {
   const fm = author.childMdx.frontmatter
 
   return (
-    <div className={styles.person}>
+    <div>
       <span className={styles.name}>{fm.name}</span>
       {fm.institution && (
-        <span className={styles.institution}>
+        <span>
           {fm.role && `${fm.role},`} {fm.institution}
         </span>
       )}

@@ -4,25 +4,41 @@
   display: flex;
   flex-flow: column;
   align-items: center;
-  margin-top: var(--baseline);
-  margin-bottom: var(--baseline);
+  margin: var(--baseline) auto;
+  max-width: calc(var(--measure) * 1);
+  @include bp(m) {
+    margin: calc(var(--baseline) * 2) auto;
+    max-width: calc(var(--measure) * 1.25);
+  }
+  @include bp(l) {
+    max-width: calc(var(--measure) * 1.5);
+  }
 }
 
 .text {
-  font-size: var(--ms-2);
-  line-height: calc(var(--baseline) * 1.5);
   font-style: italic;
   text-align: center;
+  letter-spacing: -0.01em;
+  font-size: var(--ms-1);
+  line-height: calc(var(--baseline) * 1.333);
+  @include bp(m) {
+    font-size: var(--ms-2);
+    line-height: calc(var(--baseline) * 1.5);
+  }
+  @include bp(l) {
+    hyphens: none;
+    font-size: var(--ms-3);
+    line-height: calc(var(--baseline) * 2);
+  }
 
   p {
-    margin-bottom: 0.5em !important;
-    @include bp(m) {
-      max-width: calc(var(--measure) * 1.2) !important;
-    }
+    display: inline !important;
+    background: var(--fc-light);
   }
 }
 
 .cite {
   @extend %caption;
   font-style: normal;
+  margin-top: 1em;
 }

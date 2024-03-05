@@ -1,18 +1,18 @@
-import React from 'react'
 import { Link, graphql } from 'gatsby'
-import App from './App'
-import PostBody from './PostBody'
-import Footer from './Footer.js'
-import Meta from './Meta'
 import { useTranslation } from 'gatsby-plugin-react-i18next'
-import useTranslations from '../hooks/useTranslations.js'
-import SiteHeader from './SiteHeader.js'
-import LanguageSwitcher from './LanguageSwitcher.js'
+import React from 'react'
 import MarkdownRenderer from 'react-markdown-renderer'
 import useColors from '../hooks/useColors.js'
+import useTranslations from '../hooks/useTranslations.js'
 import Arrow from '../images/arrow-right.svg'
+import App from './App'
 import { Bylines } from './Bylines.js'
+import Footer from './Footer.js'
+import LanguageSwitcher from './LanguageSwitcher.js'
+import Meta from './Meta'
 import * as styles from './Post.module.scss'
+import PostBody from './PostBody'
+import SiteHeader from './SiteHeader.js'
 
 export const query = graphql`
   query ($id: String!, $language: String!, $translations: [String!], $issueId: String!) {
@@ -183,7 +183,7 @@ export default function Post({ data, pageContext, children }) {
         </Link>
       )}
       {next && (
-        <Link className={`${styles.paginationNext} ${styles.paginationLink}`} rel="next" to={`../${next.childMdx.fields.slug}`}>
+        <Link className={`${styles.paginationLink}`} rel="next" to={`../${next.childMdx.fields.slug}`}>
           <Arrow />
           <span>{t('Next')}</span>
         </Link>
@@ -206,7 +206,7 @@ export default function Post({ data, pageContext, children }) {
             {(data.post.childMdx.frontmatter.eyebrow || data.post.childMdx.frontmatter.category) && (
               <span className={styles.eyebrow}>
                 {data.post.childMdx.frontmatter.category}
-                {data.post.childMdx.frontmatter.eyebrow && data.post.childMdx.frontmatter.category && ' · '}
+                {data.post.childMdx.frontmatter.category && data.post.childMdx.frontmatter.eyebrow && ' · '}
                 {data.post.childMdx.frontmatter.eyebrow}
               </span>
             )}
@@ -221,7 +221,7 @@ export default function Post({ data, pageContext, children }) {
             {authors && <p className={styles.bylines}>{authors.map((a) => a.childMdx.frontmatter.name).join(', ')}</p>}
             {children}
             {authors && (
-              <aside className={styles.credits}>
+              <aside>
                 <Bylines authors={authors} />
               </aside>
             )}
@@ -241,7 +241,9 @@ export function Head({ data, pageContext, location }) {
     currentLanguage: pageContext.language,
     translations: data.translations.nodes,
   }
-  const { primary, dark, light, knockout } = useColors(data.issue.childMdx.frontmatter.color)
+  const { primary, dark, light, knockout } = useColors(
+    data.post.childMdx.frontmatter.category === 'Analyse' ? 'rgb(0, 106, 140)' : data.issue.childMdx.frontmatter.color
+  )
   const bodyStyles = {
     '--fc-primary': primary.toString(),
     '--fc-dark': dark.toString(),

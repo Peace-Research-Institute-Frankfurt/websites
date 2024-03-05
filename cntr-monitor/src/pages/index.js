@@ -1,18 +1,17 @@
-import React from 'react'
 import { graphql } from 'gatsby'
-import App from '../components/App'
-import Meta from '../components/Meta'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { Link, useTranslation } from 'gatsby-plugin-react-i18next'
-import * as styles from './index.module.scss'
-import SiteHeader from '../components/SiteHeader'
-import Footer from '../components/Footer'
+import React from 'react'
 import MarkdownRenderer from 'react-markdown-renderer'
 import AboutSection from '../components/AboutSection'
-import { getImage, GatsbyImage } from 'gatsby-plugin-image'
+import App from '../components/App'
+import Footer from '../components/Footer'
+import LanguageSwitcher from '../components/LanguageSwitcher'
+import Meta from '../components/Meta'
+import SiteHeader from '../components/SiteHeader'
 import useColors from '../hooks/useColors'
 import useTranslations from '../hooks/useTranslations'
-import LanguageSwitcher from '../components/LanguageSwitcher'
-import Button from '../components/ButtonAdapter'
+import * as styles from './index.module.scss'
 
 export const query = graphql`
   query ($language: String!) {
@@ -108,7 +107,7 @@ const Index = ({ data, pageContext, location }) => {
         <LanguageSwitcher translations={translations} translationData={translationData} />
       </SiteHeader>
 
-      <main className={styles.container}>
+      <main>
         <section className={styles.hero}>
           <div className={styles.heroBlue} />
           <div className={styles.heroBlack} />
@@ -132,11 +131,7 @@ const Index = ({ data, pageContext, location }) => {
                   <Link className={styles.currentRead} to={`/${currentYear}`}>
                     {t('Read online')}
                   </Link>
-                  {currentIssue.childMdx.frontmatter.download_url && (
-                    <a class={styles.currentDownload} href={currentIssue.childMdx.frontmatter.download_url}>
-                      {t('Download PDF')}
-                    </a>
-                  )}
+                  {currentIssue.childMdx.frontmatter.download_url && <a href={currentIssue.childMdx.frontmatter.download_url}>{t('Download PDF')}</a>}
                 </div>
               </div>
             </div>
@@ -163,7 +158,7 @@ const Index = ({ data, pageContext, location }) => {
               </ol>
             </section>
           )}
-          <section className={styles.about}>
+          <section>
             <AboutSection />
           </section>
         </section>

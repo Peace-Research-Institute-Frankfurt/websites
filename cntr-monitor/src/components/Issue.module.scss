@@ -11,8 +11,9 @@
     content: '';
     position: absolute;
     top: 0;
-    left: var(--padding);
-    bottom: 0;
+    left: 0;
+    bottom: var(--corner-size);
+    opacity: 0.9;
     right: var(--padding);
     background: var(--blue);
     mask: var(--mask);
@@ -36,9 +37,10 @@
   padding-bottom: 12em;
   min-height: 60vh;
   color: var(--black);
-  mask: var(--mask);
   position: relative;
   z-index: 1000;
+
+  mask: var(--mask);
   @include bp(m) {
     min-height: 70vh;
     padding-top: 8em;
@@ -92,7 +94,7 @@
 
 .header-captions {
   position: absolute;
-  color: rgba(white, 0.8);
+  color: rgba(white, 0.9);
   z-index: 1000;
   bottom: 0;
   right: var(--padding);
@@ -161,6 +163,7 @@
 
 .section-title {
   @extend %caps;
+  display: none;
   grid-column: 2 / 15;
   margin-bottom: 1em;
   @include bp(m) {
@@ -173,21 +176,19 @@
 }
 
 .posts-list {
-  grid-column: 2 / 16;
-  @include bp(m) {
-    grid-column: 5 / 16;
-  }
-  @include bp(l) {
-    grid-column: 6 / 14;
-  }
+  display: contents;
   li {
     list-style: none;
   }
 }
 
 .posts-group {
+  display: contents;
   margin-bottom: calc(var(--baseline) * 2);
 
+  li {
+    display: contents;
+  }
   li:first-child .posts-item {
     padding-top: 0;
   }
@@ -195,25 +196,48 @@
     border-bottom: 0;
     padding-bottom: 0;
   }
+  ol {
+    grid-column: 2 / 16;
+    @include bp(m) {
+      grid-column: 5 / 16;
+    }
+    @include bp(l) {
+      grid-column: 6 / 14;
+    }
+  }
 }
 
 .posts-group-title {
-  @extend %h4;
-  margin-bottom: 0.75em;
+  @extend %caps;
+  // margin-bottom: 0.75em;
+  padding: 0.75em 0;
+  grid-column: 2 / 16;
+  @include bp(m) {
+    padding: 0;
+    grid-column: 2 / 5;
+  }
+  @include bp(l) {
+    grid-column: 3 / 6;
+  }
 }
 
 .posts-group-has-title {
   li:first-child .posts-item {
-    border-top: 1px solid var(--gray);
+    border-top: 2px solid var(--black);
     padding-top: 1em;
+    @include bp(m) {
+      border-top: 3px solid var(--black);
+      margin-top: calc(var(--baseline) * 2);
+    }
   }
 }
 
 .posts-item {
-  border-bottom: 1px solid var(--gray);
-  padding-bottom: 1em;
-  padding-top: 1em;
+  border-bottom: 1px solid rgba(black, 0.5);
+  padding-bottom: var(--baseline);
+  padding-top: var(--baseline);
   display: block;
+
   &:hover,
   &:focus-visible {
     background: rgba(black, 0.03);
@@ -226,7 +250,7 @@
 
 .posts-title {
   @extend %h3;
-  margin-bottom: calc(var(--baseline) * 0.5);
+  margin-bottom: calc(var(--baseline) * 0.25);
   text-wrap: balance;
 }
 .posts-intro {
@@ -235,14 +259,13 @@
 
 .posts-meta {
   @extend %caption;
-  margin-top: 1em;
-  color: var(--gray-dark);
+  padding-top: 1em;
+  color: var(--fc-dark);
 }
 
 .posts-eyebrow {
   @extend %caption;
   display: block;
-  margin-bottom: 1em;
-  color: var(--fc-dark);
+  margin-bottom: 0.5em;
   display: inline-block;
 }

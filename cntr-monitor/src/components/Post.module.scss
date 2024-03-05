@@ -7,13 +7,16 @@
 .header {
   padding: 0 var(--padding);
   padding-top: var(--header-height);
-  background: var(--fc-dark);
+  background: var(--blue-dark);
+  border-bottom: 1px solid var(--gray);
+
   position: relative;
+  overflow: hidden;
   &:before {
     content: '';
     position: absolute;
     top: 0;
-    left: var(--padding);
+    left: 0;
     right: calc(var(--padding) + var(--header-height));
     bottom: calc(var(--padding) * 4);
     background: var(--blue);
@@ -23,11 +26,11 @@
   &:after {
     content: '';
     position: absolute;
-    top: -100%;
-    left: var(--padding);
-    right: 0;
-    bottom: 0;
-    background: var(--blue-dark);
+    top: var(--header-height);
+    left: 0;
+    right: var(--padding);
+    bottom: -100%;
+    background: var(--fc-dark);
     mask: var(--mask);
     z-index: 0;
   }
@@ -44,6 +47,7 @@
   background: var(--fc-light);
   position: relative;
   z-index: 100;
+  color: var(--black);
   mask: var(--mask);
   @include bp(m) {
     min-height: 60vh;
@@ -54,12 +58,7 @@
 .eyebrow {
   @extend %caps;
   margin-bottom: 1.5em;
-  text-decoration: underline;
-  text-decoration-color: var(--fc-primary);
-  background: var(--fc-primary);
-  color: var(--fc-knockout);
   line-height: 1;
-  padding: 0.3em 0.4em;
   @include bp(m) {
     margin-bottom: 2em;
   }
@@ -69,7 +68,8 @@
   @extend %h2;
   text-align: center;
   text-wrap: balance;
-  max-width: calc(var(--measure) * 1.5);
+  max-width: calc(var(--measure) * 1.75);
+  padding: 0 0.5em;
 }
 
 .intro {
@@ -79,13 +79,14 @@
   padding-top: calc(var(--baseline) * 1.5);
   max-width: 90%;
   @include bp(m) {
-    max-width: Min(70%, 35em);
+    max-width: Min(70%, 45em);
   }
 }
 
 .body {
   margin: 0 calc(var(--padding) - 1px);
   padding-top: 1.5em;
+
   @include bp(m) {
     padding-top: 2em;
     border-left: 1px solid var(--gray);
