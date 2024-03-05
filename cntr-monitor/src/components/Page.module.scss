@@ -10,7 +10,7 @@
     position: absolute;
     top: 0;
     left: var(--padding);
-    right: calc(var(--padding) + var(--corner-size));
+    right: var(--corner-size);
     bottom: 0;
     display: block;
     background: var(--blue);

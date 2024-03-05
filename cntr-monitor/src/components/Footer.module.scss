@@ -9,6 +9,7 @@
   color: var(--blue-dark);
 
   @include bp(m) {
+    padding: 1em var(--padding);
     align-items: center;
   }
 }
