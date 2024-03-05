@@ -30,7 +30,7 @@
 }
 
 .has-media {
-  padding-top: 80vh;
+  padding-top: calc(100vh - 16vw);
   &.has-default {
     padding-top: 30vh;
     @include bp(m) {

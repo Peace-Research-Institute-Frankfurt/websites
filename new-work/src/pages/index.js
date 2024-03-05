@@ -62,6 +62,7 @@ const Index = ({ data }) => {
       <main id="content" className={styles.container}>
         <PostHeader
           media={heroVideo}
+          hasIllustration={true}
           title="Neue Arbeitsformen für die Wissenschaft"
           intro={
             <>
