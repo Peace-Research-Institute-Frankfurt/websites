@@ -3,6 +3,7 @@ import * as styles from './PostList.module.scss'
 import { Link } from 'gatsby'
 import Button from './ButtonAdapter'
 import ButtonGroup from './ButtonGroup'
+import PlaceholderText from './PlaceholderText'
 import GridIcon from '../images/grid.svg'
 import ListIcon from '../images/list.svg'
 
@@ -110,7 +111,7 @@ const PostListItem = ({ title, intro, format, category, isCurrent, slug }) => {
         {format && format !== '' && <span className={styles.format}>{format}</span>}
         <span className={styles.title}>{title}</span>
       </div>
-      {intro && <p className={styles.intro}>{truncatedIntro}</p>}
+      {intro ? <p className={styles.intro}>{truncatedIntro}</p> : <PlaceholderText className={styles.intro} />}
     </Link>
   )
 }
