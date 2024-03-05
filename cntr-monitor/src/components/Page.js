@@ -91,14 +91,18 @@ const Page = ({ data, children, pageContext }) => {
       pages={data.pages.nodes}
       translationData={{ translations: data.translations.nodes, currentLanguage: pageContext.language, currentSlug: data.post.childMdx.fields.slug }}
     >
-      <SiteHeader translationData={translationData} color="var(--black)">
+      <SiteHeader translationData={translationData} color="var(--white)">
         {data.translations.nodes.length > 0 && <LanguageSwitcher translations={translations} translationData={translationData} />}
       </SiteHeader>
       <article id="content" className={styles.container}>
         <header className={styles.header}>
-          <h1 className={styles.title}>{data.post.childMdx.frontmatter.title}</h1>
+          <div className={styles.headerInner}>
+            <h1 className={styles.title}>{data.post.childMdx.frontmatter.title}</h1>
+          </div>
         </header>
-        <PostBody>{children}</PostBody>
+        <div className={styles.body}>
+          <PostBody>{children}</PostBody>
+        </div>
       </article>
       <Footer pages={data.pages.nodes} language={translationData.currentLanguage} />
     </App>

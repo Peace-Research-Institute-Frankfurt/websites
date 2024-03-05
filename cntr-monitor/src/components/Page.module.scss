@@ -1,17 +1,53 @@
 @import 'vars';
 
 .header {
+  background: var(--blue-dark);
+  position: relative;
+  overflow: hidden;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: var(--padding);
+    right: calc(var(--padding) + var(--corner-size));
+    bottom: 0;
+    display: block;
+    background: var(--blue);
+    z-index: 0;
+    mask: var(--mask);
+  }
+}
+
+.header-inner {
+  background: var(--gray-light);
+  z-index: 0;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
   display: flex;
+  position: relative;
+  z-index: 100;
   flex-flow: column;
   justify-content: center;
   align-items: center;
+  margin: 0 var(--padding);
+  mask: var(--mask);
   margin-top: var(--header-height);
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  border-bottom: 1px dotted currentColor;
-  margin-bottom: var(--baseline);
 }
 
 .title {
   @extend %h1;
+  color: var(--black);
+  position: relative;
+  z-index: 100;
+}
+
+.body {
+  margin: 0 var(--padding);
+  padding-top: calc(var(--baseline) * 1);
+  @include bp(m) {
+    padding-top: calc(var(--baseline) * 2);
+    border-left: 1px solid var(--gray);
+    border-right: 1px solid var(--gray);
+  }
 }

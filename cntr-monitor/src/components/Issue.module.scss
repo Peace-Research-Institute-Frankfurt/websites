@@ -178,7 +178,7 @@
     grid-column: 5 / 16;
   }
   @include bp(l) {
-    grid-column: 6 / 16;
+    grid-column: 6 / 14;
   }
   li {
     list-style: none;
@@ -242,7 +242,7 @@
 .posts-eyebrow {
   @extend %caption;
   display: block;
-  margin-bottom: 0.75em;
-  color: var(--fc-knockout);
+  margin-bottom: 1em;
+  color: var(--fc-dark);
   display: inline-block;
 }
