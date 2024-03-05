@@ -157,6 +157,11 @@ img {
     counter-increment: fn_li;
     &:target {
       color: var(--white);
+      &:before {
+        background: var(--white);
+        color: var(--black);
+        border-color: var(--white);
+      }
     }
     &:before {
       content: counter(fn_li);
