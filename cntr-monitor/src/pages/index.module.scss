@@ -57,7 +57,7 @@
 .hero-intro {
   @extend %copy-large;
   z-index: 200;
-  max-width: 34em;
+  max-width: 36em;
   grid-column: 2 / 15;
   @include bp(m) {
     hyphens: none;
@@ -110,19 +110,22 @@
 .current-inner {
   @extend %grid;
   padding-top: calc(var(--corner-size) * sqrt(2) + 3rem);
-  padding-bottom: 5em;
   margin-top: calc(var(--corner-size) * sqrt(2) * -1);
   position: relative;
   z-index: 75;
   align-items: baseline;
   min-height: 45vh;
   mask: var(--mask);
+  padding-bottom: 8em;
+  @include bp(s) {
+    padding-bottom: 10em;
+  }
   @include bp(m) {
     padding-top: calc(var(--corner-size) * sqrt(2) + 6em);
     padding-bottom: 10em;
     padding-left: 0;
     padding-right: 0;
-    min-height: 75vh;
+    min-height: 70vh;
   }
   &:after {
     content: '';
@@ -134,7 +137,7 @@
     z-index: -10;
     background: linear-gradient(to bottom, var(--fc-light) 10rem, transparent 100%);
     @include bp(m) {
-      background: linear-gradient(to bottom, var(--fc-light) 25rem, transparent 100%);
+      background: linear-gradient(to bottom, var(--fc-light) 15rem, transparent 100%);
     }
   }
   &:before {
@@ -164,7 +167,7 @@
   @extend %h3;
   text-wrap: balance;
   font-variation-settings: 'wght' 400;
-  max-width: 20em;
+  max-width: 24em;
   padding-top: 0.5em;
   @include bp(m) {
     padding-top: 0.25em;
@@ -185,7 +188,7 @@
   }
 }
 .current-issue {
-  grid-column: 2 / 13;
+  grid-column: 2 / 15;
   @include bp(m) {
     grid-column: 5 / 15;
   }
@@ -196,8 +199,10 @@
 
 .current-title {
   @extend %h2;
-  margin-bottom: 0.1em;
   display: block;
+  @include bp(m) {
+    margin-bottom: 0.1em;
+  }
   &:hover,
   &:focus-visible {
     text-decoration: underline;
@@ -209,7 +214,6 @@
   display: flex;
   padding-top: 1em;
   position: absolute;
-  flex-flow: column;
   align-items: flex-start;
   bottom: calc(var(--corner-size) * sqrt(2));
   @include bp(m) {

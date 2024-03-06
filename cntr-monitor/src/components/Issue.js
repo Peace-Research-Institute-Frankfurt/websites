@@ -12,6 +12,7 @@ import * as styles from './Issue.module.scss'
 import LanguageSwitcher from './LanguageSwitcher.js'
 import Meta from './Meta.js'
 import SiteHeader from './SiteHeader.js'
+import DownloadIcon from '../images/download.svg'
 
 export const query = graphql`
   query ($id: String!, $language: String!, $postsDirectory: String!) {
@@ -44,6 +45,7 @@ export const query = graphql`
           intro
           order
           color
+          download_url
           cover_image {
             childImageSharp {
               gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
@@ -208,6 +210,16 @@ const Issue = ({ data, pageContext, children, location }) => {
           <section className={styles.posts}>
             <h2 className={styles.sectionTitle}>{t('Contents')}</h2>
             <ol className={styles.postsList}>{posts}</ol>
+          </section>
+          <section className={styles.downloads}>
+            <div className={styles.downloadsInner}>
+              {data.post.childMdx.frontmatter.download_url && (
+                <a rel="download" href={data.post.childMdx.frontmatter.download_url}>
+                  <DownloadIcon />
+                  {t('Download (PDF)')}
+                </a>
+              )}
+            </div>
           </section>
           <AboutSection />
         </div>
