@@ -7,17 +7,15 @@
   margin: var(--baseline) auto;
   max-width: calc(var(--measure) * 1);
   @include bp(m) {
-    margin: calc(var(--baseline) * 2) auto;
-    max-width: calc(var(--measure) * 1.25);
-  }
-  @include bp(l) {
     max-width: calc(var(--measure) * 1.5);
+    margin: calc(var(--baseline) * 1.5) auto;
   }
 }
 
 .text {
   font-style: italic;
   text-align: center;
+  text-wrap: balance;
   letter-spacing: -0.01em;
   font-size: var(--ms-1);
   line-height: calc(var(--baseline) * 1.333);
@@ -30,9 +28,15 @@
     font-size: var(--ms-3);
     line-height: calc(var(--baseline) * 2);
   }
+  @include bp(xl) {
+    hyphens: none;
+    font-size: var(--ms-4);
+    line-height: calc(var(--baseline) * 2.5);
+  }
 
   p {
     display: inline !important;
+    padding: 0 0.2em;
     background: var(--fc-light);
   }
 }
