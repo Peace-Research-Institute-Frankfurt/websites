@@ -20,6 +20,9 @@
   p {
     margin-bottom: 1em;
   }
+  em {
+    @extend %copy-italics;
+  }
 
   ul {
     margin-bottom: 1em;
@@ -43,7 +46,6 @@
 
   a {
     text-decoration: underline;
-    color: var(--fc-dark);
     background: var(--fc-light, var(--blue-shade));
   }
 

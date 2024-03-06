@@ -28,9 +28,10 @@ export default function Footer({ pages }) {
           {t('© PRIF and the authors')} {new Date().getFullYear()}
         </p>
       </div>
-      <div className={styles.logo}>
+      <a href="https://www.cntrarmscontrol.org/" className={styles.logo}>
+        <span>CNTR</span>
         <Logo />
-      </div>
+      </a>
     </footer>
   )
 }

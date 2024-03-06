@@ -31,20 +31,27 @@
 %copy {
   font-family: var(--roboto);
   text-rendering: optimizeLegibility;
-  font-variation-settings: 'wght' 400, 'wdth' 70;
+  font-variation-settings: 'wght' 350, 'wdth' 120;
   font-size: var(--ms-0);
   line-height: var(--baseline);
-  letter-spacing: 0.002em;
+  letter-spacing: 0.005em;
   hyphens: auto;
+}
+%copy-italics {
+  @extend %copy;
+  font-style: normal;
+  font-variation-settings: 'wght' 350, 'wdth' 120, 'slnt' -14;
+  font-family: var(--roboto);
+  letter-spacing: 0em;
 }
 
 %copy-large {
   font-family: var(--roboto);
-  font-variation-settings: 'wght' 400, 'wdth' 100;
+  font-variation-settings: 'wght' 400, 'wdth' 140;
   font-size: var(--ms-1);
-  letter-spacing: -0.002em;
+  letter-spacing: 0.005em;
   word-spacing: -0.001em;
-  line-height: calc(var(--baseline) * 1.25);
+  line-height: calc(var(--baseline) * 1.2);
 }
 %copy-bold {
   @extend %copy;
@@ -53,6 +60,7 @@
 }
 %caption {
   @extend %copy;
+  font-family: var(--montserrat);
   font-size: var(--ms--1);
   line-height: 1.2;
   letter-spacing: 0;
@@ -65,11 +73,11 @@
 }
 %sub-caption {
   @extend %caption;
-  font-family: var(--montserrat);
+  font-family: var(--roboto);
   text-transform: uppercase;
-  letter-spacing: 0.025em;
+  letter-spacing: 0.0125em;
   font-size: var(--ms--2);
-  font-variation-settings: 'wght' 350, 'wdth' 25, 'opsz' 5;
+  font-variation-settings: 'wght' 400, 'wdth' 25, 'opsz' 5;
 }
 %h1 {
   font-family: var(--montserrat);
@@ -83,7 +91,7 @@
 }
 %h2 {
   font-family: var(--montserrat);
-  font-variation-settings: 'wght' 700, 'wdth' 100;
+  font-variation-settings: 'wght' 700;
   font-size: var(--ms-4);
   line-height: calc(var(--baseline) * 2);
   hyphens: none;
@@ -95,6 +103,7 @@
   }
   @include bp(l) {
     font-size: var(--ms-6);
+    letter-spacing: -0.035em;
     line-height: calc(var(--baseline) * 3);
   }
 }
@@ -105,14 +114,10 @@
   hyphens: none;
   font-size: var(--ms-2);
   line-height: calc(var(--baseline) * 1.333);
-  @include bp(m) {
-    line-height: calc(var(--baseline) * 1.666);
-    font-size: var(--ms-3);
-  }
 }
 %h4 {
   font-family: var(--montserrat);
-  font-variation-settings: 'wght' 500, 'wdth' 100;
+  font-variation-settings: 'wght' 600, 'wdth' 100;
   font-size: var(--ms-1);
   letter-spacing: 0em;
   line-height: calc(var(--baseline) * 1.15);
@@ -123,10 +128,10 @@
   letter-spacing: 0em;
 }
 %caps {
-  font-family: var(--montserrat);
-  font-variation-settings: 'wght' 300, 'wdth' 10;
+  font-family: var(--roboto);
+  font-variation-settings: 'wght' 400, 'wdth' 150;
   text-transform: uppercase;
-  font-size: var(--ms-0);
-  letter-spacing: 0.01em;
+  font-size: var(--ms--1);
+  letter-spacing: 0.05em;
   word-spacing: 0.02em;
 }

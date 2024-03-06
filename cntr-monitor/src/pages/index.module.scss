@@ -26,9 +26,8 @@
 
 .hero-title {
   @extend %h1;
-  font-family: var(--roboto);
   text-transform: uppercase;
-  line-height: 1;
+  line-height: 0.9;
   z-index: 200;
   grid-column: 2 / 13;
   margin-bottom: 0.25em;
@@ -56,8 +55,10 @@
 
 .hero-intro {
   @extend %copy-large;
+  font-variation-settings: 'wdth' 140, 'wght' 300;
   z-index: 200;
   max-width: 36em;
+  padding-top: 1em;
   grid-column: 2 / 15;
   @include bp(m) {
     hyphens: none;
@@ -206,7 +207,6 @@
   &:hover,
   &:focus-visible {
     text-decoration: underline;
-    text-decoration-thickness: 1px;
   }
 }
 

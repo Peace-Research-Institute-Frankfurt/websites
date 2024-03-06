@@ -75,7 +75,7 @@
   @extend %copy-large;
   text-align: center;
   hyphens: none;
-  padding-top: calc(var(--baseline) * 1.5);
+  padding-top: calc(var(--baseline) * 2);
   max-width: 90%;
   @include bp(m) {
     max-width: Min(70%, 45em);
