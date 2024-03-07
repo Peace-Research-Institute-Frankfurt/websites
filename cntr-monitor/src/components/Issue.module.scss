@@ -7,27 +7,29 @@
   padding-top: var(--header-height);
   background: var(--blue-dark);
 
+  overflow: hidden;
   &:before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
-    bottom: var(--corner-size);
-    opacity: 0.9;
-    right: var(--padding);
+    bottom: calc(var(--corner-size));
+    right: calc(var(--padding) + var(--header-height));
     background: var(--blue);
     mask: var(--mask);
     z-index: 10;
+    border-left: var(--padding) solid var(--blue-dark);
   }
   &:after {
     content: '';
     position: absolute;
-    top: -100%;
-    left: calc(var(--corner-size) * sqrt(2) * -1);
-    right: 50%;
+    top: 0;
+    left: -100%;
     bottom: 0;
-    background: var(--fc-dark);
+    right: calc(var(--padding) + var(--header-height));
+    background: var(--fc-primary);
     mask: var(--mask);
+    z-index: 2;
   }
 }
 
@@ -42,13 +44,14 @@
 
   mask: var(--mask);
   @include bp(m) {
-    min-height: 70vh;
+    min-height: 65vh;
+    padding-top: 6em;
     padding-top: 8em;
   }
   &:after {
     content: '';
     position: absolute;
-    background: linear-gradient(to bottom, var(--fc-light) 25%, transparent 100%);
+    background: linear-gradient(to bottom, var(--fc-light) 20%, transparent 120%);
     top: 0;
     left: 0;
     right: 0;
@@ -74,7 +77,7 @@
   font-family: var(--montserrat);
   font-size: var(--ms-7);
   line-height: 1;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.05em;
 }
 
 .intro {
@@ -111,11 +114,16 @@
     white-space: inherit;
     transform: none;
     display: block;
-    max-width: calc(var(--corner-size) * 0.9);
+    max-width: calc(var(--corner-size) * 1);
+    text-wrap: balance;
     left: var(--padding);
-    bottom: var(--padding);
+    padding-left: 1.25em;
+    padding-bottom: 0;
+    padding-right: 0;
+    bottom: 1em;
     right: auto;
     text-align: left;
+    color: var(--fc-knockout);
     background: transparent;
   }
 }
@@ -137,18 +145,6 @@
     border-left: 1px solid var(--gray);
     border-right: 1px solid var(--gray);
     padding-top: 2rem;
-  }
-  &:after {
-    content: '';
-    z-index: -10;
-    background: var(--fc-light);
-    position: absolute;
-    top: -30%;
-    opacity: 0.5;
-    left: calc(var(--padding) * -1);
-    right: calc(var(--padding) * -1);
-    height: 50rem;
-    mask: var(--mask);
   }
 }
 
@@ -255,6 +251,10 @@
   margin-bottom: calc(var(--baseline) * 0.25);
   text-wrap: balance;
   mix-blend-mode: multiply;
+  @include bp(l) {
+    font-size: var(--ms-3);
+    line-height: calc(var(--baseline) * 1.666);
+  }
 }
 .posts-intro {
   @extend %copy;

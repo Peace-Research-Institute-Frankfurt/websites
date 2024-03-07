@@ -2,16 +2,16 @@
 
 .container {
   @extend %caps;
-  font-variation-settings: 'wght' 300, 'wdth' 10;
+  border-radius: 3px;
   display: flex;
-  border: 1px solid var(--white);
+  color: var(--white);
+  border: 1px solid currentColor;
   overflow: hidden;
 }
 
 .item {
   display: block;
   list-style: none;
-  color: white;
 }
 
 .item-current {
@@ -30,8 +30,8 @@
 .inner {
   display: flex;
   text-transform: uppercase;
-  padding: 0em 0.3em;
-  line-height: 1.4;
+  padding: 0.35em 0.5em;
+  line-height: 1;
   height: 100%;
   align-items: center;
   &:hover,

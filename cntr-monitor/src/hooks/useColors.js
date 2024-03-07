@@ -5,7 +5,7 @@ export default function useColors(color) {
   const primary = new Color(color)
 
   const dark = new Color(color).set({ 'lch.l': 25, 'lch.c': 40, 'lch.h': (h) => h + 10 })
-  const light = new Color(color).set({ 'lch.l': 92, 'lch.c': 7, 'lch.h': (h) => h + 10 })
+  const light = new Color(color).set({ 'lch.l': 90, 'lch.c': 12, 'lch.h': (h) => h + 10 })
 
   const onWhite = Math.abs(primary.contrast('white', 'APCA'))
   const onBlack = Math.abs(primary.contrast('black', 'APCA'))

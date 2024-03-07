@@ -203,16 +203,18 @@ export default function Post({ data, pageContext, children }) {
       <article id="content" className={styles.container}>
         <header className={styles.header}>
           <div className={styles.headerInner}>
-            {(data.post.childMdx.frontmatter.eyebrow || data.post.childMdx.frontmatter.category) && (
-              <span className={styles.eyebrow}>
-                {data.post.childMdx.frontmatter.category}
-                {data.post.childMdx.frontmatter.category && data.post.childMdx.frontmatter.eyebrow && ' · '}
-                {data.post.childMdx.frontmatter.eyebrow}
-              </span>
-            )}
-            <h1 className={styles.title}>{data.post.childMdx.frontmatter.title}</h1>
-            <div className={styles.intro}>
-              <MarkdownRenderer markdown={data.post.childMdx.frontmatter.intro} />
+            <div className={styles.headerCopy}>
+              {(data.post.childMdx.frontmatter.eyebrow || data.post.childMdx.frontmatter.category) && (
+                <span className={styles.eyebrow}>
+                  {data.post.childMdx.frontmatter.category}
+                  {data.post.childMdx.frontmatter.category && data.post.childMdx.frontmatter.eyebrow && ' · '}
+                  {data.post.childMdx.frontmatter.eyebrow}
+                </span>
+              )}
+              <h1 className={styles.title}>{data.post.childMdx.frontmatter.title}</h1>
+              <div className={styles.intro}>
+                <MarkdownRenderer markdown={data.post.childMdx.frontmatter.intro} />
+              </div>
             </div>
           </div>
         </header>
