@@ -20,6 +20,7 @@
   border-radius: var(--br-medium);
   @include bp(l) {
     margin-bottom: var(--baseline);
+    grid-column: 2 / 3;
   }
 }
 
@@ -38,7 +39,7 @@
   position: relative;
   @include bp(l) {
     grid-column: 1 / 3;
-    margin-bottom: var(--baseline);
+    margin-bottom: 1em;
   }
   iframe {
     position: absolute;
