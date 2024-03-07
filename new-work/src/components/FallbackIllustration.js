@@ -43,12 +43,12 @@ const FallbackIllustration = ({ category }) => {
     }
     const colTransform = `translate(0 ${-1 * offsets[i] - i})`
     colsFixed.push(
-      <g key={`cols.${i}`} className={styles.cols} transform={colTransform}>
+      <g key={`cols.${i}`} transform={colTransform}>
         {cellsFixed}
       </g>
     )
     colsScroll.push(
-      <g key={`cols.${i}`} className={styles.cols} transform={colTransform}>
+      <g key={`cols.${i}`} transform={colTransform}>
         {cellsScroll}
       </g>
     )
