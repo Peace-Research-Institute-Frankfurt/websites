@@ -12,6 +12,7 @@
   padding-top: calc(var(--header-height) + 3rem);
   padding-bottom: 3rem;
   min-height: 55vh;
+  overflow: hidden;
   @include bp(m) {
     min-height: 65vh;
     padding-top: calc(var(--header-height) + 6rem);

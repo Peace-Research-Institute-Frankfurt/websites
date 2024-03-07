@@ -3,9 +3,9 @@
 .container {
   @extend %grid;
   align-items: baseline;
-  padding: var(--corner-size) 0;
+  padding-top: var(--corner-size);
   @include bp(m) {
-    padding: 4rem 0;
+    padding-top: 4em;
   }
 }
 

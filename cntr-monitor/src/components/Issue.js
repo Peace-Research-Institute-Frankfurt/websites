@@ -13,6 +13,7 @@ import LanguageSwitcher from './LanguageSwitcher.js'
 import Meta from './Meta.js'
 import SiteHeader from './SiteHeader.js'
 import DownloadIcon from '../images/download.svg'
+import PartnerLogos from './PartnerLogos.js'
 
 export const query = graphql`
   query ($id: String!, $language: String!, $postsDirectory: String!) {
@@ -222,6 +223,7 @@ const Issue = ({ data, pageContext, children, location }) => {
             </div>
           </section>
           <AboutSection />
+          <PartnerLogos />
         </div>
       </main>
       <Footer pages={data.pages.nodes} />

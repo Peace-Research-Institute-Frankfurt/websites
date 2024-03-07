@@ -12,6 +12,7 @@ import SiteHeader from '../components/SiteHeader'
 import useColors from '../hooks/useColors'
 import useTranslations from '../hooks/useTranslations'
 import * as styles from './index.module.scss'
+import PartnerLogos from '../components/PartnerLogos'
 
 export const query = graphql`
   query ($language: String!) {
@@ -160,6 +161,7 @@ const Index = ({ data, pageContext, location }) => {
           )}
           <section>
             <AboutSection />
+            <PartnerLogos />
           </section>
         </section>
       </main>
