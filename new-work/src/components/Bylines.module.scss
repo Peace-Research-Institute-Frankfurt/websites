@@ -12,7 +12,7 @@
     flex-flow: column;
     border: 1px solid var(--gray-dark);
     overflow: hidden;
-    @include bp(m) {
+    @include bp(l) {
       max-width: 16em;
     }
     li {
