@@ -127,7 +127,6 @@ const Index = ({ data, pageContext, location }) => {
         <section className={styles.current} style={currentStyles}>
           <div className={styles.currentInner}>
             <GatsbyImage alt="" image={currentImage} className={styles.currentImage} />
-            <h2 className={styles.sectionTitle}>{t('Current issue')}</h2>
             <div className={styles.currentIssue}>
               <Link className={styles.currentTitle} to={`/${currentYear}`}>
                 <h2>{currentYear}</h2>

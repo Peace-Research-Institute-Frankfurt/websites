@@ -137,7 +137,19 @@
     bottom: 0;
     right: 0;
     z-index: -10;
-    background: linear-gradient(to bottom, var(--fc-light) 10rem, transparent 100%);
+    background: var(--fc-primary);
+    opacity: 0.5;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: calc(var(--corner-size) * sqrt(2));
+    z-index: -5;
+    background: var(--white);
+    opacity: 0.5;
   }
 }
 
