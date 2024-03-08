@@ -1,5 +1,5 @@
-import { Link, graphql } from 'gatsby'
-import { useTranslation } from 'gatsby-plugin-react-i18next'
+import { graphql } from 'gatsby'
+import { Link, useTranslation } from 'gatsby-plugin-react-i18next'
 import React from 'react'
 import MarkdownRenderer from 'react-markdown-renderer'
 import useColors from '../hooks/useColors.js'
@@ -115,7 +115,7 @@ export const query = graphql`
       }
     ) {
       nodes {
-        id
+        base
         childMdx {
           fields {
             slug
@@ -191,13 +191,22 @@ export default function Post({ data, pageContext, children }) {
     </nav>
   )
 
-  let translationData = { translations: data.translations.nodes, currentLanguage: pageContext.language, currentSlug: data.post.childMdx.fields.slug }
-  let translations = useTranslations(translationData, data.allSitePage.nodes)
+  const translationData = {
+    translations: data.translations.nodes,
+    currentLanguage: pageContext.language,
+    currentSlug: data.post.childMdx.fields.slug,
+  }
+  const translations = useTranslations(translationData, data.allSitePage.nodes)
+
+  const termsPage = data.pages.nodes.find((node) => {
+    return node.base === 'terms.mdx'
+  })
 
   return (
     <App>
       <SiteHeader color="white" post={data.post} issue={data.issue} translationData={translationData}>
         {(previous || next) && pagination}
+        {termsPage && <Link to={`/${termsPage.childMdx.fields.slug}`}>{termsPage.childMdx.frontmatter.title}</Link>}
         {data.translations.nodes.length > 0 && <LanguageSwitcher translations={translations} translationData={translationData} />}
       </SiteHeader>
       <article id="content" className={styles.container}>

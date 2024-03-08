@@ -2,7 +2,6 @@
 
 .container {
   @extend %caps;
-  border-radius: 3px;
   display: flex;
   color: var(--white);
   border: 1px solid currentColor;
@@ -36,6 +35,6 @@
   align-items: center;
   &:hover,
   &:focus-visible {
-    text-decoration: underline;
+    background: rgba(white, 0.2);
   }
 }

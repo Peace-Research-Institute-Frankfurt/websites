@@ -57,4 +57,19 @@
 .controls {
   display: flex;
   gap: 0.5em;
+
+  & > a {
+    @extend %caption;
+    color: var(--white);
+    border: 1px solid var(--white);
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 0.5em;
+    &:hover,
+    &:focus-visible {
+      background: var(--white);
+      color: var(--blue-dark);
+    }
+  }
 }

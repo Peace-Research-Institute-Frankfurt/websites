@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import Term from '@shared/components/Term'
 import TooltipAdapter from './TooltipAdapter'

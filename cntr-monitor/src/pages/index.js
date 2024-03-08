@@ -35,6 +35,7 @@ export const query = graphql`
     ) {
       nodes {
         id
+        base
         childMdx {
           fields {
             slug
@@ -102,9 +103,14 @@ const Index = ({ data, pageContext, location }) => {
     '--fc-light': light.toString(),
     '--fc-knockout': knockout.toString(),
   }
+  const termsPage = data.pages.nodes.find((node) => {
+    return node.base === 'terms.mdx'
+  })
+
   return (
     <App pages={data.pages.nodes}>
       <SiteHeader color="white" translationData={translationData}>
+        {termsPage && <Link to={`/${termsPage.childMdx.fields.slug}`}>{termsPage.childMdx.frontmatter.title}</Link>}
         <LanguageSwitcher translations={translations} translationData={translationData} />
       </SiteHeader>
 
