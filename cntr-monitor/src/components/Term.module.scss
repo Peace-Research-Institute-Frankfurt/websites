@@ -1,0 +1,72 @@
+@import 'vars';
+
+.container {
+  @extend %copy;
+  background: var(--fc-light);
+  cursor: pointer;
+  padding: 0.15em 0.25em;
+  border-radius: 1px;
+  line-height: 1;
+  &:hover,
+  &:focus-visible {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+  }
+  &.active {
+    background: var(--black);
+    color: var(--white);
+  }
+}
+
+.content {
+  @extend %caption;
+  display: block;
+  padding: 1em;
+  hyphens: auto;
+  max-width: Min(100vw - 4 * var(--padding), 28rem);
+  p + p {
+    margin-top: 0.5em;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.25em;
+}
+
+.title {
+  @extend %caps;
+  font-style: normal;
+}
+.close {
+  cursor: pointer;
+  font-size: 0;
+  border-radius: var(--br);
+  border: 1px solid var(--black);
+  width: 1.4rem;
+  height: 1.3rem;
+  flex-shrink: 0;
+  position: relative;
+  path {
+    fill: var(--black);
+  }
+  svg {
+    width: 0.65rem;
+    height: 0.65rem;
+    overflow: visible;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  &:hover,
+  &:focus-visible {
+    background: var(--black);
+    path {
+      fill: white;
+    }
+  }
+}

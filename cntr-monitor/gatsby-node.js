@@ -134,6 +134,7 @@ exports.onCreateNode = ({ node, actions, createNodeId, getNode }) => {
       },
     })
   }
+
   if (node.internal.type === 'Mdx') {
     let nodeLocale = ''
     locales.forEach((locale) => {

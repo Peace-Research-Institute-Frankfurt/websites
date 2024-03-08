@@ -37,7 +37,6 @@
   & > ol,
   & > ul {
     margin-bottom: 1em;
-    padding-right: 3em;
     li {
       margin-left: 1.2em;
       margin-bottom: 0.25em;
@@ -69,7 +68,7 @@
     }
   }
 
-  h2 {
+  & > h2 {
     @extend %h3;
     margin-top: calc(var(--ms-0) * 2);
     margin-bottom: calc(var(--ms-0) * 1);
@@ -80,7 +79,7 @@
       margin-top: 0;
     }
   }
-  h3 {
+  & > h3 {
     @extend %h4;
     margin-top: calc(var(--baseline) * 1.5);
     margin-bottom: calc(var(--ms-0) * 1);

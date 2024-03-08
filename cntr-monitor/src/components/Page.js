@@ -69,7 +69,7 @@ export const query = graphql`
           }
           frontmatter {
             title
-            order
+            intro
           }
         }
       }
@@ -91,13 +91,16 @@ const Page = ({ data, children, pageContext }) => {
       pages={data.pages.nodes}
       translationData={{ translations: data.translations.nodes, currentLanguage: pageContext.language, currentSlug: data.post.childMdx.fields.slug }}
     >
-      <SiteHeader translationData={translationData} color="var(--white)">
+      <SiteHeader pages={data.pages.nodes} translationData={translationData} color="var(--white)">
         {data.translations.nodes.length > 0 && <LanguageSwitcher translations={translations} translationData={translationData} />}
       </SiteHeader>
       <article id="content">
         <header className={styles.header}>
           <div className={styles.headerInner}>
-            <h1 className={styles.title}>{data.post.childMdx.frontmatter.title}</h1>
+            <div className={styles.headerCopy}>
+              <h1 className={styles.title}>{data.post.childMdx.frontmatter.title}</h1>
+              {data.post.childMdx.frontmatter.intro && <p className={styles.intro}>{data.post.childMdx.frontmatter.intro}</p>}
+            </div>
           </div>
         </header>
         <div className={styles.body}>

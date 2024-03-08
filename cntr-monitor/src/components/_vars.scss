@@ -31,7 +31,7 @@
 %copy {
   font-family: var(--roboto);
   text-rendering: optimizeLegibility;
-  font-variation-settings: 'wght' 300, 'wdth' 120;
+  font-variation-settings: 'wght' 300, 'wdth' 130;
   font-size: var(--ms-0);
   line-height: var(--baseline);
   letter-spacing: 0.0045em;
@@ -63,9 +63,9 @@
   @extend %copy;
   font-family: var(--montserrat);
   font-size: var(--ms--1);
-  line-height: 1.2;
-  letter-spacing: 0;
-  font-variation-settings: 'wght' 450, 'wdth' 95;
+  line-height: 1.3;
+  letter-spacing: 0.01em;
+  font-variation-settings: 'wght' 400, 'wdth' 95;
 }
 %caption-bold {
   @extend %caption;
