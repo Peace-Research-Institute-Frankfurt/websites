@@ -99,6 +99,7 @@ const config = {
                 childMdx {
                   frontmatter {
                     title
+                    tags
                     authors {
                       frontmatter {
                         name
@@ -115,7 +116,7 @@ const config = {
           }
         `,
         ref: 'id',
-        index: ['title', 'authors'],
+        index: ['title', 'authors', 'tags'],
         store: ['id', 'title', 'slug', 'authors', 'locale', 'relativeDirectory', 'postType', 'issue'],
         normalizer: ({ data }) => {
           const posts = data.posts.nodes.filter((el) => {
@@ -134,15 +135,26 @@ const config = {
                 return issueNode.relativeDirectory === node.relativeDirectory.replace('/posts', '')
               })
               const authors = node.childMdx.frontmatter.authors || []
+              const tags = node.childMdx.frontmatter.tags || []
               return {
                 id: node.id,
                 slug: node.childMdx.fields.slug,
                 title: node.childMdx.frontmatter.title,
                 authors: authors.map((a) => a.frontmatter.name).join(';'),
+                tags: tags.join(';'),
                 relativeDirectory: node.relativeDirectory,
                 locale: node.childMdx.fields.locale,
                 issue: issue ? issue.childMdx.fields.slug : false,
                 postType: 'post',
+              }
+            }),
+            ...issues.map((node) => {
+              return {
+                id: node.id,
+                slug: node.childMdx.fields.slug,
+                locale: node.childMdx.fields.locale,
+                title: node.childMdx.frontmatter.title,
+                postType: 'issue',
               }
             }),
             ...pages.map((node) => {

@@ -6,13 +6,6 @@ import SearchIcon from '../images/search.svg'
 import * as styles from './SearchForm.module.scss'
 import { useTranslation } from 'react-i18next'
 
-function prettifyPostType(postType) {
-  if (postType === 'post') {
-    return 'Artikel'
-  }
-  return postType
-}
-
 function DropdownCombobox({ value, setValue, inputItems }) {
   const { t } = useTranslation()
   const { isOpen, getLabelProps, getMenuProps, getInputProps, highlightedIndex, getItemProps } = useCombobox({
@@ -52,12 +45,16 @@ function DropdownCombobox({ value, setValue, inputItems }) {
                 index,
               })}
             >
-              <span className={styles.choiceTitle}>{item.title}</span>
-              <span className={styles.choiceMeta}>
-                {item.relativeDirectory}
-                {prettifyPostType(item.postType)}
-                {item.authors && item.authors.length > 0 && ` ·  ${item.authors.split(';').join(', ')}`}
+              <span className={styles.choiceTitle}>
+                {item.postType === 'issue' && 'Monitor '}
+                {item.title}
               </span>
+              {(item.issue || item.authors) && (
+                <span className={styles.choiceMeta}>
+                  {item.issue && item.issue}
+                  {item.authors && item.authors.length > 0 && ` ·  ${item.authors.split(';').join(', ')}`}
+                </span>
+              )}
             </li>
           ))}
       </ul>
@@ -74,12 +71,19 @@ function SearchForm({ addActiveTerm }) {
       }
     }
   `)
+  const { i18n } = useTranslation()
   const [query, setQuery] = useState('')
   const index = data.search.index
   const store = data.search.store
   const results = useFlexSearch(query, index, store)
+    .filter((result) => {
+      console.log(i18n)
+      console.log(result)
+      return result.locale === i18n.language
+    })
+    .slice(0, 5)
 
-  return <DropdownCombobox value={query} setValue={setQuery} inputItems={results.slice(0, 5)} addActiveTerm={addActiveTerm} />
+  return <DropdownCombobox value={query} setValue={setQuery} inputItems={results} addActiveTerm={addActiveTerm} />
 }
 
 export default SearchForm

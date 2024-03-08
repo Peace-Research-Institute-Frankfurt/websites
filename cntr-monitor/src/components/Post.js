@@ -205,8 +205,8 @@ export default function Post({ data, pageContext, children }) {
   return (
     <App>
       <SiteHeader color="white" post={data.post} issue={data.issue} translationData={translationData}>
-        {(previous || next) && pagination}
         {termsPage && <Link to={`/${termsPage.childMdx.fields.slug}`}>{termsPage.childMdx.frontmatter.title}</Link>}
+        {(previous || next) && pagination}
         {data.translations.nodes.length > 0 && <LanguageSwitcher translations={translations} translationData={translationData} />}
       </SiteHeader>
       <article id="content" className={styles.container}>
