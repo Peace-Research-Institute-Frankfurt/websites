@@ -84,6 +84,81 @@ const config = {
         ],
       },
     },
+    {
+      resolve: 'gatsby-plugin-local-search',
+      options: {
+        name: 'posts',
+        engine: 'flexsearch',
+        query: `
+          {
+            posts: allFile(filter: { sourceInstanceName: { eq: "content" }, extension: { eq: "mdx" } }) {
+              nodes {
+                id
+                base
+                relativeDirectory
+                childMdx {
+                  frontmatter {
+                    title
+                    authors {
+                      frontmatter {
+                        name
+                      }
+                    }
+                  }
+                  fields {
+                    slug
+                    locale
+                  }
+                }
+              }
+            }
+          }
+        `,
+        ref: 'id',
+        index: ['title', 'authors'],
+        store: ['id', 'title', 'slug', 'authors', 'locale', 'relativeDirectory', 'postType', 'issue'],
+        normalizer: ({ data }) => {
+          const posts = data.posts.nodes.filter((el) => {
+            return el.relativeDirectory.includes('/posts')
+          })
+          const pages = data.posts.nodes.filter((el) => {
+            return el.relativeDirectory.includes('/pages')
+          })
+          const issues = data.posts.nodes.filter((el) => {
+            return el.base === 'index.mdx'
+          })
+
+          const mergedData = [
+            ...posts.map((node) => {
+              const issue = issues.find((issueNode) => {
+                return issueNode.relativeDirectory === node.relativeDirectory.replace('/posts', '')
+              })
+              const authors = node.childMdx.frontmatter.authors || []
+              return {
+                id: node.id,
+                slug: node.childMdx.fields.slug,
+                title: node.childMdx.frontmatter.title,
+                authors: authors.map((a) => a.frontmatter.name).join(';'),
+                relativeDirectory: node.relativeDirectory,
+                locale: node.childMdx.fields.locale,
+                issue: issue ? issue.childMdx.fields.slug : false,
+                postType: 'post',
+              }
+            }),
+            ...pages.map((node) => {
+              return {
+                id: node.id,
+                slug: node.childMdx.fields.slug,
+                title: node.childMdx.frontmatter.title,
+                locale: node.childMdx.fields.locale,
+                postType: 'page',
+              }
+            }),
+          ]
+          return mergedData
+        },
+      },
+    },
   ],
 }
 

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import Logo from '../images/logo-reverse.svg'
+import SearchForm from './SearchForm'
 import * as styles from './SiteHeader.module.scss'
 
 export default function SiteHeader({ color, issue, translationData, children }) {
@@ -19,7 +20,10 @@ export default function SiteHeader({ color, issue, translationData, children }) 
           </Link>
         )}
       </span>
-      <div className={styles.controls}>{children}</div>
+      <div className={styles.controls}>
+        <SearchForm />
+        {children}
+      </div>
     </header>
   )
 }

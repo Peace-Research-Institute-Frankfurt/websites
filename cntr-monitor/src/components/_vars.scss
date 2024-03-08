@@ -130,6 +130,7 @@
   font-family: var(--montserrat);
   font-variation-settings: 'wght' 600, 'wdth' 100;
   letter-spacing: 0em;
+  line-height: calc(var(--baseline) * 0.75);
 }
 %caps {
   font-family: var(--roboto);

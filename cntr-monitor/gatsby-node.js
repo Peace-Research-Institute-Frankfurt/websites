@@ -37,9 +37,6 @@ exports.createPages = async function ({ actions, graphql }) {
           base
           relativeDirectory
           childMdx {
-            frontmatter {
-              title
-            }
             fields {
               slug
               locale
@@ -171,6 +168,7 @@ exports.createSchemaCustomization = async ({ getNode, getNodesByType, pathPrefix
     cover_caption: String
     cover_credit: String
     download_url: String
+    tags: [String]
   }
   type Mdx {
     frontmatter: MdxFrontmatter
