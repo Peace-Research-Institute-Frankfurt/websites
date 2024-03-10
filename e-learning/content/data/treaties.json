@@ -1,5 +1,655 @@
 [
   {
+    "name": "pelindaba",
+    "title": "Treaty of Pelindaba",
+    "date": "2015-07-15",
+    "description": "The Treaty of Pelindaba establishes the nuclear-weapon-free zone (NWFZ) on the African continent.",
+    "scrapeURL": "https://treaties.unoda.org/t/pelindaba/participants",
+    "participants": [
+      {
+        "country": "DZA",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1996-04-11"
+          },
+          {
+            "type": "ratification",
+            "date": "1998-02-11"
+          }
+        ]
+      },
+      {
+        "country": "AGO",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1996-04-11"
+          },
+          {
+            "type": "ratification",
+            "date": "2014-06-20"
+          }
+        ]
+      },
+      {
+        "country": "BEN",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1996-04-11"
+          },
+          {
+            "type": "ratification",
+            "date": "2007-09-04"
+          }
+        ]
+      },
+      {
+        "country": "BWA",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1998-06-09"
+          },
+          {
+            "type": "ratification",
+            "date": "1999-06-16"
+          }
+        ]
+      },
+      {
+        "country": "BFA",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1996-04-11"
+          },
+          {
+            "type": "ratification",
+            "date": "1998-08-27"
+          }
+        ]
+      },
+      {
+        "country": "BDI",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1996-04-11"
+          },
+          {
+            "type": "ratification",
+            "date": "2009-07-15"
+          }
+        ]
+      },
+      {
+        "country": "CPV",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1996-04-11"
+          },
+          {
+            "type": "ratification",
+            "date": "2020-02-07"
+          }
+        ]
+      },
+      {
+        "country": "CMR",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1996-04-11"
+          },
+          {
+            "type": "ratification",
+            "date": "2010-09-28"
+          }
+        ]
+      },
+      {
+        "country": "CAF",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1996-04-11"
+          }
+        ]
+      },
+      {
+        "country": "TCD",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1996-04-11"
+          },
+          {
+            "type": "ratification",
+            "date": "2012-01-18"
+          }
+        ]
+      },
+      {
+        "country": "COM",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1996-04-11"
+          },
+          {
+            "type": "ratification",
+            "date": "2012-07-24"
+          }
+        ]
+      },
+      {
+        "country": "COG",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1997-01-27"
+          },
+          {
+            "type": "ratification",
+            "date": "2013-11-26"
+          }
+        ]
+      },
+      {
+        "country": "CIV",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1996-04-11"
+          },
+          {
+            "type": "ratification",
+            "date": "1999-07-28"
+          }
+        ]
+      },
+      {
+        "country": "COD",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1996-04-11"
+          },
+          {
+            "type": "ratification",
+            "date": "2022-02-23"
+          }
+        ]
+      },
+      {
+        "country": "DJI",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1996-04-11"
+          }
+        ]
+      },
+      {
+        "country": "EGY",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1996-04-11"
+          }
+        ]
+      },
+      {
+        "country": "GNQ",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2003-02-19"
+          }
+        ]
+      },
+      {
+        "country": "ERI",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1996-04-11"
+          }
+        ]
+      },
+      {
+        "country": "SWZ",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1996-04-11"
+          },
+          {
+            "type": "ratification",
+            "date": "2000-07-17"
+          }
+        ]
+      },
+      {
+        "country": "ETH",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1996-04-11"
+          },
+          {
+            "type": "ratification",
+            "date": "2008-03-13"
+          }
+        ]
+      },
+      {
+        "country": "GAB",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1996-04-11"
+          },
+          {
+            "type": "ratification",
+            "date": "2007-06-12"
+          }
+        ]
+      },
+      {
+        "country": "GMB",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1996-04-11"
+          },
+          {
+            "type": "ratification",
+            "date": "1996-10-16"
+          }
+        ]
+      },
+      {
+        "country": "GHA",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1996-04-11"
+          },
+          {
+            "type": "ratification",
+            "date": "2011-06-27"
+          }
+        ]
+      },
+      {
+        "country": "GIN",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1996-04-11"
+          },
+          {
+            "type": "ratification",
+            "date": "2000-01-21"
+          }
+        ]
+      },
+      {
+        "country": "GNB",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1996-04-11"
+          },
+          {
+            "type": "ratification",
+            "date": "2012-01-04"
+          }
+        ]
+      },
+      {
+        "country": "KEN",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1996-04-11"
+          },
+          {
+            "type": "ratification",
+            "date": "2001-01-09"
+          }
+        ]
+      },
+      {
+        "country": "LSO",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1996-04-11"
+          },
+          {
+            "type": "ratification",
+            "date": "2002-03-14"
+          }
+        ]
+      },
+      {
+        "country": "LBR",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1996-07-09"
+          }
+        ]
+      },
+      {
+        "country": "LBY",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1996-04-11"
+          },
+          {
+            "type": "ratification",
+            "date": "2005-05-11"
+          }
+        ]
+      },
+      {
+        "country": "MDG",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2003-12-23"
+          }
+        ]
+      },
+      {
+        "country": "MWI",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1996-04-11"
+          },
+          {
+            "type": "ratification",
+            "date": "2009-04-23"
+          }
+        ]
+      },
+      {
+        "country": "MLI",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1996-04-11"
+          },
+          {
+            "type": "ratification",
+            "date": "1999-07-22"
+          }
+        ]
+      },
+      {
+        "country": "MRT",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1996-04-11"
+          },
+          {
+            "type": "ratification",
+            "date": "1998-02-24"
+          }
+        ]
+      },
+      {
+        "country": "MUS",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1996-04-11"
+          },
+          {
+            "type": "ratification",
+            "date": "1996-04-24"
+          }
+        ]
+      },
+      {
+        "country": "MAR",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1996-04-11"
+          },
+          {
+            "type": "ratification",
+            "date": "2022-04-18"
+          }
+        ]
+      },
+      {
+        "country": "MOZ",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1996-04-11"
+          },
+          {
+            "type": "ratification",
+            "date": "2008-08-28"
+          }
+        ]
+      },
+      {
+        "country": "NAM",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1996-04-11"
+          },
+          {
+            "type": "ratification",
+            "date": "2012-03-01"
+          }
+        ]
+      },
+      {
+        "country": "NER",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1996-04-11"
+          },
+          {
+            "type": "ratification",
+            "date": "2017-02-22"
+          }
+        ]
+      },
+      {
+        "country": "NGA",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1996-04-11"
+          },
+          {
+            "type": "ratification",
+            "date": "2001-06-18"
+          }
+        ]
+      },
+      {
+        "country": "RWA",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1996-04-11"
+          },
+          {
+            "type": "ratification",
+            "date": "2007-02-01"
+          }
+        ]
+      },
+      {
+        "country": "STP",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1996-07-09"
+          }
+        ]
+      },
+      {
+        "country": "SEN",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1996-04-11"
+          },
+          {
+            "type": "ratification",
+            "date": "2006-10-25"
+          }
+        ]
+      },
+      {
+        "country": "SYC",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1996-07-09"
+          },
+          {
+            "type": "ratification",
+            "date": "2014-05-23"
+          }
+        ]
+      },
+      {
+        "country": "SLE",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1996-04-11"
+          }
+        ]
+      },
+      {
+        "country": "SOM",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2006-02-23"
+          }
+        ]
+      },
+      {
+        "country": "ZAF",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1996-04-11"
+          },
+          {
+            "type": "ratification",
+            "date": "1998-03-27"
+          }
+        ]
+      },
+      {
+        "country": "SDN",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1996-04-11"
+          }
+        ]
+      },
+      {
+        "country": "TGO",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1996-04-11"
+          },
+          {
+            "type": "ratification",
+            "date": "2000-07-18"
+          }
+        ]
+      },
+      {
+        "country": "TUN",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1996-04-11"
+          },
+          {
+            "type": "ratification",
+            "date": "2009-10-07"
+          }
+        ]
+      },
+      {
+        "country": "UGA",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1996-04-11"
+          }
+        ]
+      },
+      {
+        "country": "TZA",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1996-04-11"
+          },
+          {
+            "type": "ratification",
+            "date": "1998-06-19"
+          }
+        ]
+      },
+      {
+        "country": "ZMB",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1996-04-11"
+          },
+          {
+            "type": "ratification",
+            "date": "2010-08-18"
+          }
+        ]
+      },
+      {
+        "country": "ZWE",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1996-04-11"
+          },
+          {
+            "type": "ratification",
+            "date": "1998-04-06"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "name": "att",
     "title": "Arms Trade Treaty (ATT)",
     "date": "2013-04-02",
