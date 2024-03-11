@@ -15,7 +15,7 @@ import * as styles from './PostBody.module.scss'
 
 const shortCodes = {
   Aside,
-  Callout: ({ ...props }) => <Callout {...props} buttonComponent={Button} styles={CalloutStyles} />,
+  Callout: ({ ...props }) => <Callout expandable={false} buttonComponent={Button} {...props} styles={CalloutStyles} />,
   Chevron,
   Figure,
   Leadin,

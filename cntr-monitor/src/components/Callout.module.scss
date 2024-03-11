@@ -3,36 +3,42 @@
 .container {
   margin: var(--baseline) 0;
   position: relative;
-  grid-column: 1 / 6;
+  color: rgba(black, 0.9);
   @include bp(m) {
-    grid-column: 2 / 4;
+    width: calc(100% + var(--corner-size-small) * sqrt(2) * 2);
+    margin-left: calc(var(--corner-size-small) * sqrt(2) * -1);
   }
-  @include bp(l) {
-    grid-column: 3 / 4;
+  p,
+  ul,
+  ol {
+    margin-bottom: 0.5em;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
-  p:last-child {
-    margin-bottom: 0;
-  }
-  p {
-    margin-bottom: 0.6em;
+  ul,
+  ol {
+    margin-left: 1em;
   }
 }
 
 .inner {
-  padding: calc(var(--baseline) * 1);
+  mask: var(--mask-small);
+  border-top: 0.5em solid var(--fc-primary);
+  padding: 2em;
   background: var(--fc-light);
-  mask: var(--mask);
+  @include bp(m) {
+    padding: 3em calc(var(--corner-size-small) * sqrt(2));
+  }
 }
 
 .title {
   @extend %h3;
   font-size: var(--ms-1);
-  line-height: calc(var(--baseline) * 1);
-  margin-bottom: calc(var(--baseline) * 0.25);
+  margin-bottom: calc(var(--baseline) * 0.5);
 }
 
 .eyebrow {
-  @extend %h4;
+  @extend %caps;
   display: block;
-  margin-bottom: calc(var(--baseline) * 0.25);
 }

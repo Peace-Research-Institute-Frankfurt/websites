@@ -42,7 +42,9 @@
   --gray-dark: #3a3a3a;
   --focus-color: var(--black);
   --mask: linear-gradient(45deg, #0000 var(--corner-size), #000 0 calc(100% - var(--corner-size)), #0000 0);
+  --mask-small: linear-gradient(45deg, #0000 var(--corner-size-small), #000 0 calc(100% - var(--corner-size-small)), #0000 0);
   --corner-size: 2rem;
+  --corner-size-small: 1.5rem;
   --header-height: 3.5rem;
   --measure: 45rem;
   --padding: 2.5vw;
@@ -53,9 +55,11 @@
   @include bp(m) {
     --padding: 1.5vw;
     --corner-size: 9rem;
+    --corner-size-small: 2.5rem;
   }
   @include bp(l) {
     --corner-size: 12rem;
+    --corner-size-small: 3rem;
   }
 
   // Scale type size on high-res displays
