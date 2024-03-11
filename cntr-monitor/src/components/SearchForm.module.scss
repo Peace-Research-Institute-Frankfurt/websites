@@ -17,6 +17,9 @@
   transition: width var(--fast);
   width: 8em;
   height: 100%;
+  &::placeholder {
+    color: rgba(white, 0.75);
+  }
   &:focus {
     width: 12em;
     outline: 0;
