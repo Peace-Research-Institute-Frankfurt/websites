@@ -14,13 +14,13 @@ import * as QuoteStyles from './Quote.module.scss'
 import * as styles from './PostBody.module.scss'
 
 const shortCodes = {
-  Leadin,
   Aside,
-  Figure,
-  Chevron,
-  TermsList,
-  Term: ({ ...props }) => <TermAdapter {...props} />,
   Callout: ({ ...props }) => <Callout {...props} buttonComponent={Button} styles={CalloutStyles} />,
+  Chevron,
+  Figure,
+  Leadin,
+  Term: ({ ...props }) => <TermAdapter {...props} />,
+  TermsList,
   Quote: ({ ...props }) => <Quote {...props} styles={QuoteStyles} />,
 }
 
