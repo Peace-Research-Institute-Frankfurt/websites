@@ -20,8 +20,8 @@
 
 .inner {
   padding: calc(var(--baseline) * 1);
-  background: var(--fc-background);
-  border-top: 0.25em solid var(--fc-text);
+  background: var(--fc-light);
+  mask: var(--mask);
 }
 
 .title {

@@ -2,8 +2,6 @@
 
 .container {
   @extend %caption;
-  width: calc((100% - var(--measure)) / 2 - 1em);
-  margin-left: var(--padding);
   float: left;
   min-width: 10em;
   margin: 1em;
@@ -12,13 +10,24 @@
   position: relative;
   top: -0.75em;
   display: none;
+  border-right: 1px dotted var(--fc-primary);
+  padding-right: 1.5em;
+  margin-right: 1.5em;
+  padding-top: 0.1em;
   @include bp(m) {
     display: block;
+    margin-left: -5em;
+  }
+  @include bp(l) {
+    margin-left: -10em;
+  }
+  @include bp(xl) {
+    margin-left: -21.5em;
   }
 }
 
 .title {
   @extend %caps;
   display: block;
-  margin-bottom: 0.1em;
+  margin-bottom: calc(var(--baseline) * 0.25);
 }
