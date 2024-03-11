@@ -115,6 +115,7 @@ export const query = graphql`
       }
     ) {
       nodes {
+        id
         base
         childMdx {
           fields {
