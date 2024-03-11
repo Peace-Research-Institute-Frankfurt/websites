@@ -173,7 +173,6 @@ const Issue = ({ data, pageContext, children, location }) => {
             {frontmatter.eyebrow && <span className={styles.postsEyebrow}>{frontmatter.eyebrow}</span>}
             <h3 className={styles.postsTitle}>{frontmatter.title}</h3>
             <div className={styles.postsIntro}>{frontmatter.intro && <MarkdownRenderer markdown={intro} />}</div>
-
             {frontmatter.authors && <div className={styles.postsMeta}> {frontmatter.authors.map((el) => el.frontmatter.name).join(', ')}</div>}
           </Link>
         </li>
@@ -181,7 +180,7 @@ const Issue = ({ data, pageContext, children, location }) => {
     })
     return (
       <li className={`${styles.postsGroup} ${group.name !== 'none' ? styles.postsGroupHasTitle : ''}`} key={`group-${group.name}`}>
-        {group.name !== 'none' && <h3 className={styles.postsGroupTitle}>{group.name}</h3>}
+        {group.name !== 'none' && <h2 className={styles.postsGroupTitle}>{group.name}</h2>}
         <ol>{postEls}</ol>
       </li>
     )

@@ -158,17 +158,9 @@
 }
 
 .section-title {
-  @extend %caps;
-  display: none;
-  grid-column: 2 / 15;
-  margin-bottom: 1em;
-  @include bp(m) {
-    margin-bottom: 0;
-    grid-column: 2 / 3;
-  }
-  @include bp(l) {
-    grid-column: 3 / 4;
-  }
+  position: absolute;
+  font-size: 0;
+  left: -9999px;
 }
 
 .posts-list {
