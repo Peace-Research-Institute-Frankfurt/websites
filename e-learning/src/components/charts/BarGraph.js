@@ -99,7 +99,7 @@ export default function BarGraph({ data, xAxis, xAxisTitle, yAxisTitle, series, 
             yScale.range([yMax, 0])
 
             return (
-              <div style={{ overflow: 'scroll' }}>
+              <div style={{ overflow: 'auto' }}>
                 <svg className={styles.graphContainer} width={responsiveWidth} style={{ overflow: 'visible' }} aria-labelledby={`${title && `${graphId}-map-title`} ${title && `${graphId}-map-description`}`} role={'graphics-object'}>
                   {title && <title id={`${graphId}-map-title`}>{title}</title>}
                   {description && <desc id={`${graphId}-map-description`}>{description}</desc>}
