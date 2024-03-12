@@ -1,5 +1,4 @@
 import { graphql } from 'gatsby'
-import { Link } from 'gatsby-plugin-react-i18next'
 import React from 'react'
 import useTranslations from '../hooks/useTranslations'
 import App from './App'
@@ -86,16 +85,13 @@ export const query = graphql`
 const Page = ({ data, children, pageContext }) => {
   let translationData = { translations: data.translations.nodes, currentLanguage: pageContext.language, currentSlug: data.post.childMdx.fields.slug }
   let translations = useTranslations(translationData, data.allSitePage.nodes)
-  const termsPage = data.pages.nodes.find((node) => {
-    return node.base === 'terms.mdx'
-  })
+
   return (
     <App
       pages={data.pages.nodes}
       translationData={{ translations: data.translations.nodes, currentLanguage: pageContext.language, currentSlug: data.post.childMdx.fields.slug }}
     >
       <SiteHeader pages={data.pages.nodes} translationData={translationData} color="var(--white)">
-        {termsPage && <Link to={`/${termsPage.childMdx.fields.slug}`}>{termsPage.childMdx.frontmatter.title}</Link>}
         {data.translations.nodes.length > 0 && <LanguageSwitcher translations={translations} translationData={translationData} />}
       </SiteHeader>
       <article id="content">

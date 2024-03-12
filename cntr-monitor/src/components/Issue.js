@@ -186,14 +186,14 @@ const Issue = ({ data, pageContext, children, location }) => {
     )
   })
 
-  const termsPage = data.pages.nodes.find((node) => {
-    return node.base === 'terms.mdx'
-  })
-
   return (
     <App pages={data.pages.nodes} translationData={{ currentLanguage: pageContext.language, currentSlug: location.pathname }}>
-      <SiteHeader issue={data.post} color="white" translationData={{ currentLanguage: pageContext.language, currentSlug: location.pathname }}>
-        {termsPage && <Link to={`/${termsPage.childMdx.fields.slug}`}>{termsPage.childMdx.frontmatter.title}</Link>}
+      <SiteHeader
+        pages={data.pages.nodes}
+        issue={data.post}
+        color="white"
+        translationData={{ currentLanguage: pageContext.language, currentSlug: location.pathname }}
+      >
         <LanguageSwitcher translations={translations} translationData={translationData} />
       </SiteHeader>
       <main>

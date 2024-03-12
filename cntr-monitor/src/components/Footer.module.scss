@@ -12,13 +12,6 @@
     padding: 1em var(--padding);
     align-items: center;
   }
-
-  a {
-    &:hover,
-    &:focus-visible {
-      text-decoration: underline;
-    }
-  }
 }
 
 .copy {
@@ -44,6 +37,19 @@
       flex-flow: row;
     }
   }
+}
+
+.nav-link {
+  &:hover,
+  &:focus-visible {
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+  }
+}
+
+.nav-active {
+  @extend %caption-bold;
+  color: var(--black);
 }
 
 .copyright {

@@ -13,12 +13,16 @@ export default function Footer({ pages }) {
         <nav className={styles.menu}>
           <ul>
             <li>
-              <Link to="/">{t('Home')}</Link>
+              <Link className={styles.navLink} activeClassName={styles.navActive} to="/">
+                {t('Home')}
+              </Link>
             </li>
             {pages.map((p) => {
               return (
                 <li key={`navitem-${p.id}`}>
-                  <Link to={`/${p.childMdx.fields.slug}`}>{p.childMdx.frontmatter.title}</Link>
+                  <Link className={styles.navLink} activeClassName={styles.navActive} to={`/${p.childMdx.fields.slug}`}>
+                    {p.childMdx.frontmatter.title}
+                  </Link>
                 </li>
               )
             })}

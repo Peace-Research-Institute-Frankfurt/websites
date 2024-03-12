@@ -4,8 +4,12 @@ import Logo from '../images/logo-reverse.svg'
 import SearchForm from './SearchForm'
 import * as styles from './SiteHeader.module.scss'
 
-export default function SiteHeader({ color, issue, translationData, children }) {
+export default function SiteHeader({ color, issue, translationData, pages, children }) {
   const homePath = translationData.currentLanguage !== 'de' ? `/${translationData.currentLanguage}/` : '/'
+
+  const termsPage = pages.find((node) => {
+    return node.base === 'terms.mdx'
+  })
 
   return (
     <header className={`${styles.container}`} style={{ '--color': color }}>
@@ -22,6 +26,12 @@ export default function SiteHeader({ color, issue, translationData, children }) 
       </span>
       <div className={styles.controls}>
         <SearchForm />
+        {termsPage && (
+          <Link activeStyle={{ background: 'white', color: 'var(--blue-dark)' }} to={`/${termsPage.childMdx.fields.slug}`}>
+            {termsPage.childMdx.frontmatter.title}
+          </Link>
+        )}
+
         {children}
       </div>
     </header>

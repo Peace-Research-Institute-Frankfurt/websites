@@ -199,14 +199,9 @@ export default function Post({ data, pageContext, children }) {
   }
   const translations = useTranslations(translationData, data.allSitePage.nodes)
 
-  const termsPage = data.pages.nodes.find((node) => {
-    return node.base === 'terms.mdx'
-  })
-
   return (
     <App>
-      <SiteHeader color="white" post={data.post} issue={data.issue} translationData={translationData}>
-        {termsPage && <Link to={`/${termsPage.childMdx.fields.slug}`}>{termsPage.childMdx.frontmatter.title}</Link>}
+      <SiteHeader pages={data.pages.nodes} color="white" post={data.post} issue={data.issue} translationData={translationData}>
         {(previous || next) && pagination}
         {data.translations.nodes.length > 0 && <LanguageSwitcher translations={translations} translationData={translationData} />}
       </SiteHeader>
