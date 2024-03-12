@@ -71,7 +71,7 @@ async function setMetaData(unit, outline, outputPath) {
   })
   const page = await browser.newPage()
 
-  page.on('console', (msg) => console.log('PAGE:', msg.text()))
+  page.on('console', (msg) => console.log('Page:', msg.text()))
 
   for (let i = 0; i < printUnits.length; i++) {
     const unit = printUnits[i]
@@ -81,7 +81,7 @@ async function setMetaData(unit, outline, outputPath) {
     console.log(`\nBuilding "${unit}"...`)
 
     await page.goto(`http://localhost:3000/${unit}/print`, { waitUntil: 'networkidle0' })
-    await page.waitForSelector('.tocPage')
+    await page.waitForSelector('.tocPage', { timeout: 60000 })
 
     const tocContainer = await page.$('.toc')
     const tocEls = await tocContainer.$$('.toc li a')
