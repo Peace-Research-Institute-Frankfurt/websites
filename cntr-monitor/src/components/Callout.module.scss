@@ -1,0 +1,44 @@
+@import 'vars';
+
+.container {
+  margin: var(--baseline) 0;
+  position: relative;
+  color: rgba(black, 0.9);
+  @include bp(m) {
+    width: calc(100% + var(--corner-size-small) * sqrt(2) * 2);
+    margin-left: calc(var(--corner-size-small) * sqrt(2) * -1);
+  }
+  p,
+  ul,
+  ol {
+    margin-bottom: 0.5em;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  ul,
+  ol {
+    margin-left: 1em;
+  }
+}
+
+.inner {
+  mask: var(--mask-small);
+  border-top: 0.5em solid var(--fc-primary);
+  padding: 2em;
+  background: var(--fc-light);
+  @include bp(m) {
+    padding: 3em calc(var(--corner-size-small) * sqrt(2));
+  }
+}
+
+.title {
+  @extend %h3;
+  font-size: var(--ms-1);
+  margin-bottom: calc(var(--baseline) * 0.5);
+}
+
+.eyebrow {
+  @extend %caps;
+  display: block;
+}

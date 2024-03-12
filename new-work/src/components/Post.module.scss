@@ -59,15 +59,16 @@
   position: relative;
   background: var(--black);
   margin: 0 var(--padding);
-  padding: var(--baseline) var(--padding);
   border-left: 1px solid var(--gray);
   border-right: 1px solid var(--gray);
-  padding-bottom: 0;
   display: grid;
   grid-template-columns: 1fr minmax(min-content, 30rem) 1fr;
   column-gap: var(--padding);
+  padding-left: var(--padding);
+  padding-right: var(--padding);
+  padding-top: var(--padding);
   @include bp(l) {
-    grid-template-columns: 1fr minmax(min-content, 52rem) 1fr;
+    grid-template-columns: 1fr minmax(min-content, 48rem) 1fr;
   }
 }
 

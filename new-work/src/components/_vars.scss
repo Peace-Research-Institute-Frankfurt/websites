@@ -51,7 +51,7 @@
   hyphens: none;
   font-weight: bold;
   font-family: var(--edge);
-  line-height: calc(var(--baseline) * 1.333);
+  line-height: calc(var(--baseline) * 1.2);
 }
 
 %h3 {
@@ -167,4 +167,10 @@
   @extend %caption;
   text-transform: uppercase;
   letter-spacing: 0.055em;
+}
+
+%sub-caption {
+  @extend %caption-caps;
+  letter-spacing: 0.1em;
+  font-size: var(--ms--3);
 }

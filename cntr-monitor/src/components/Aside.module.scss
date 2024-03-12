@@ -1,0 +1,34 @@
+@import 'vars';
+
+.container {
+  @extend %caption;
+  float: left;
+  min-width: 10em;
+  margin: 1em;
+  margin-bottom: 0;
+  max-width: 20em;
+  position: relative;
+  top: -0.75em;
+  display: none;
+  border-right: 1px dotted var(--fc-primary);
+  padding-right: 1.5em;
+  margin-right: 1.5em;
+  padding-top: 0.1em;
+  @include bp(m) {
+    display: block;
+    margin-left: -5em;
+  }
+  @include bp(l) {
+    margin-left: -10em;
+  }
+  @include bp(xl) {
+    padding-right: 1.5em;
+    margin-left: -22.5em;
+  }
+}
+
+.title {
+  @extend %caps;
+  display: block;
+  margin-bottom: calc(var(--baseline) * 0.25);
+}

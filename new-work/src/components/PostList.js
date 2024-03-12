@@ -3,6 +3,7 @@ import * as styles from './PostList.module.scss'
 import { Link } from 'gatsby'
 import Button from './ButtonAdapter'
 import ButtonGroup from './ButtonGroup'
+import PlaceholderText from './PlaceholderText'
 import GridIcon from '../images/grid.svg'
 import ListIcon from '../images/list.svg'
 
@@ -18,6 +19,8 @@ const PostList = ({ posts, activeFilters, currentPostId }) => {
         return el && arr.indexOf(el) === i
       }),
   ]
+
+  const categories = ['meta', 'raum', 'tool', 'mensch']
 
   const groupedPosts = []
   postGroups.forEach((group) => {
@@ -36,6 +39,9 @@ const PostList = ({ posts, activeFilters, currentPostId }) => {
       .filter((node) => {
         return activeFilters ? activeFilters.includes(node.childMdx.frontmatter.category) : true
       })
+      .sort((a, b) => {
+        return categories.indexOf(a.childMdx.frontmatter.category) - categories.indexOf(b.childMdx.frontmatter.category)
+      })
       .map((node) => {
         const fm = node.childMdx.frontmatter
         return (
@@ -46,6 +52,7 @@ const PostList = ({ posts, activeFilters, currentPostId }) => {
               slug={node.childMdx.fields.slug}
               intro={fm.intro}
               isCurrent={currentPostId && currentPostId === node.id}
+              format={node.childMdx.frontmatter.format}
             />
           </li>
         )
@@ -89,8 +96,8 @@ const PostList = ({ posts, activeFilters, currentPostId }) => {
   )
 }
 
-const PostListItem = ({ title, intro, category, isCurrent, slug }) => {
-  const maxWordCount = 25
+const PostListItem = ({ title, intro, format, category, isCurrent, slug }) => {
+  const maxWordCount = 35
   let truncatedIntro = ''
   if (intro) {
     truncatedIntro = intro.split(' ').length > maxWordCount ? intro.split(' ').slice(0, maxWordCount).join(' ') + '...' : intro
@@ -100,8 +107,11 @@ const PostListItem = ({ title, intro, category, isCurrent, slug }) => {
       className={`${styles.item} ${category === 'meta' ? styles.meta : ''} ${category ? category : ''} ${isCurrent ? styles.current : ''}`}
       to={`/${slug}`}
     >
-      <span className={styles.title}>{title}</span>
-      {intro && <p className={styles.intro}>{truncatedIntro}</p>}
+      <div>
+        {format && format !== '' && <span className={styles.format}>{format}</span>}
+        <span className={styles.title}>{title}</span>
+      </div>
+      {intro ? <p className={styles.intro}>{truncatedIntro}</p> : <PlaceholderText className={styles.intro} />}
     </Link>
   )
 }

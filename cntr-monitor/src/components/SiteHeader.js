@@ -1,29 +1,38 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Link } from 'gatsby-plugin-react-i18next'
+import Logo from '../images/logo-reverse.svg'
+import SearchForm from './SearchForm'
 import * as styles from './SiteHeader.module.scss'
 
-export default function SiteHeader({ post, issue, translationData, children }) {
-  const homePath = translationData.currentLanguage !== 'de' ? `/${translationData.currentLanguage}` : '/'
+export default function SiteHeader({ color, issue, translationData, pages, children }) {
+  const homePath = translationData.currentLanguage !== 'de' ? `/${translationData.currentLanguage}/` : '/'
+
+  const termsPage = pages.find((node) => {
+    return node.base === 'terms.mdx'
+  })
 
   return (
-    <header className={`${styles.container}`}>
-      <div className={styles.inner}>
+    <header className={`${styles.container}`} style={{ '--color': color }}>
+      <span className={styles.title}>
         <Link to={homePath} className={`${styles.title}`}>
-          <div className={styles.titleInner}>
-            <span>CNTR Monitor</span>
-          </div>
+          <Logo />
+          <span>Monitor</span>
         </Link>
         {issue && (
-          <div>
-            <p>
-              <span>
-                {issue.childMdx.frontmatter.title} {issue.relativeDirectory.replace(/(.{2})\/(issues)\//g, '')}
-              </span>
-              {post && <span>{post.childMdx.frontmatter.title}</span>}
-            </p>
-          </div>
+          <Link to={`${homePath}${issue.childMdx.frontmatter.year}`} className={styles.year}>
+            {issue.childMdx.frontmatter.title}
+          </Link>
         )}
-        <div className={styles.controls}>{children}</div>
+      </span>
+      <div className={styles.controls}>
+        <SearchForm />
+        {termsPage && (
+          <Link activeStyle={{ background: 'white', color: 'var(--blue-dark)' }} to={`/${termsPage.childMdx.fields.slug}`}>
+            {termsPage.childMdx.frontmatter.title}
+          </Link>
+        )}
+
+        {children}
       </div>
     </header>
   )

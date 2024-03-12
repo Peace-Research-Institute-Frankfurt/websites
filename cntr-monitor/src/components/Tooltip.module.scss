@@ -1,0 +1,39 @@
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: var(--white);
+  font-size: var(--ms--1);
+  border: 1px solid var(--black);
+  display: block;
+  opacity: 0;
+  transition: opacity var(--fast);
+  pointer-events: none;
+  z-index: 10000;
+  visibility: hidden;
+}
+
+.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+
+.arrow {
+  background-color: var(--white);
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  display: block;
+  border-bottom: 1px solid var(--black);
+  border-right: 1px solid var(--black);
+}
+
+.arrow-top {
+  transform: translateX(-50%) translateY(-50%) rotate(-135deg);
+  top: -1px;
+}
+.arrow-bottom {
+  transform: translateX(-50%) translateY(50%) rotate(45deg);
+  bottom: -1px;
+}

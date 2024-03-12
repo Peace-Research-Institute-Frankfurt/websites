@@ -1,18 +1,15 @@
 import React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
-import LanguageSwitcher from './LanguageSwitcher'
-import Footer from './Footer'
 import SkipToContent from './SkipToContent'
-import SiteHeader from './SiteHeader'
 import './global.scss'
-import useTranslations from '../hooks/useTranslations'
+import * as styles from './App.module.scss'
 
-function App({ translationData, pages, issue, post, pagination, children }) {
+function App({ children }) {
   return (
-    <>
+    <div className={styles.container}>
       <SkipToContent />
       {children}
-    </>
+      <div id="tooltips" />
+    </div>
   )
 }
 

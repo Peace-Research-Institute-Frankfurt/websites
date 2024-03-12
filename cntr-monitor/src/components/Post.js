@@ -1,16 +1,18 @@
+import { graphql } from 'gatsby'
+import { Link, useTranslation } from 'gatsby-plugin-react-i18next'
 import React from 'react'
-import { Link, graphql } from 'gatsby'
-import App from './App'
-import PostBody from './PostBody'
-import Footer from './Footer.js'
-import Meta from './Meta'
-import { useTranslation } from 'gatsby-plugin-react-i18next'
-import useTranslations from '../hooks/useTranslations.js'
-import SiteHeader from './SiteHeader.js'
-import LanguageSwitcher from './LanguageSwitcher.js'
+import MarkdownRenderer from 'react-markdown-renderer'
 import useColors from '../hooks/useColors.js'
+import useTranslations from '../hooks/useTranslations.js'
 import Arrow from '../images/arrow-right.svg'
+import App from './App'
+import { Bylines } from './Bylines.js'
+import Footer from './Footer.js'
+import LanguageSwitcher from './LanguageSwitcher.js'
+import Meta from './Meta'
 import * as styles from './Post.module.scss'
+import PostBody from './PostBody'
+import SiteHeader from './SiteHeader.js'
 
 export const query = graphql`
   query ($id: String!, $language: String!, $translations: [String!], $issueId: String!) {
@@ -38,6 +40,8 @@ export const query = graphql`
         }
         frontmatter {
           title
+          color
+          year
         }
       }
     }
@@ -50,7 +54,9 @@ export const query = graphql`
         }
         frontmatter {
           title
-          color
+          intro
+          eyebrow
+          category
           authors {
             frontmatter {
               author_id
@@ -91,7 +97,6 @@ export const query = graphql`
       }
     ) {
       nodes {
-        id
         childMdx {
           frontmatter {
             name
@@ -111,6 +116,7 @@ export const query = graphql`
     ) {
       nodes {
         id
+        base
         childMdx {
           fields {
             slug
@@ -156,20 +162,29 @@ export default function Post({ data, pageContext, children }) {
   const currentIndex = posts.findIndex((el) => {
     return el.childMdx.frontmatter.title === frontmatter.title
   })
+
+  let authors = null
+  if (data.post.childMdx.frontmatter.authors) {
+    authors = data.authors.nodes.filter((node) => {
+      const found = data.post.childMdx.frontmatter.authors.findIndex((el) => {
+        return el.frontmatter.author_id === node.childMdx.frontmatter.author_id
+      })
+      return found !== -1
+    })
+  }
   const next = posts[currentIndex + 1] || null
   const previous = posts[currentIndex - 1] || null
 
   const pagination = (
-    <nav>
-      <Link to="../">{t('Issue Overview')}</Link>
+    <nav className={styles.pagination}>
       {previous && (
-        <Link rel="prev" to={`../${previous.childMdx.fields.slug}`}>
+        <Link className={`${styles.paginationPrev} ${styles.paginationLink}`} rel="prev" to={`../${previous.childMdx.fields.slug}`}>
           <Arrow />
           <span>{t('Previous')}</span>
         </Link>
       )}
       {next && (
-        <Link rel="next" to={`../${next.childMdx.fields.slug}`}>
+        <Link className={`${styles.paginationLink}`} rel="next" to={`../${next.childMdx.fields.slug}`}>
           <Arrow />
           <span>{t('Next')}</span>
         </Link>
@@ -177,18 +192,48 @@ export default function Post({ data, pageContext, children }) {
     </nav>
   )
 
-  let translationData = { translations: data.translations.nodes, currentLanguage: pageContext.language, currentSlug: data.post.childMdx.fields.slug }
-  let translations = useTranslations(translationData, data.allSitePage.nodes)
+  const translationData = {
+    translations: data.translations.nodes,
+    currentLanguage: pageContext.language,
+    currentSlug: data.post.childMdx.fields.slug,
+  }
+  const translations = useTranslations(translationData, data.allSitePage.nodes)
 
   return (
     <App>
-      <SiteHeader post={data.post} translationData={translationData}>
-        {pagination && pagination}
+      <SiteHeader pages={data.pages.nodes} color="white" post={data.post} issue={data.issue} translationData={translationData}>
+        {(previous || next) && pagination}
         {data.translations.nodes.length > 0 && <LanguageSwitcher translations={translations} translationData={translationData} />}
       </SiteHeader>
       <article id="content" className={styles.container}>
-        <h1 className={styles.title}>{data.post.childMdx.frontmatter.title}</h1>
-        <PostBody>{children}</PostBody>
+        <header className={styles.header}>
+          <div className={styles.headerInner}>
+            <div className={styles.headerCopy}>
+              {(data.post.childMdx.frontmatter.eyebrow || data.post.childMdx.frontmatter.category) && (
+                <span className={styles.eyebrow}>
+                  {data.post.childMdx.frontmatter.category}
+                  {data.post.childMdx.frontmatter.category && data.post.childMdx.frontmatter.eyebrow && ' · '}
+                  {data.post.childMdx.frontmatter.eyebrow}
+                </span>
+              )}
+              <h1 className={styles.title}>{data.post.childMdx.frontmatter.title}</h1>
+              <div className={styles.intro}>
+                <MarkdownRenderer markdown={data.post.childMdx.frontmatter.intro} />
+              </div>
+            </div>
+          </div>
+        </header>
+        <main className={styles.body}>
+          <PostBody>
+            {authors && <p className={styles.bylines}>{authors.map((a) => a.childMdx.frontmatter.name).join(', ')}</p>}
+            {children}
+            {authors && (
+              <aside>
+                <Bylines authors={authors} />
+              </aside>
+            )}
+          </PostBody>
+        </main>
       </article>
       <Footer pages={data.pages.nodes} language={translationData.currentLanguage} />
     </App>
@@ -203,11 +248,16 @@ export function Head({ data, pageContext, location }) {
     currentLanguage: pageContext.language,
     translations: data.translations.nodes,
   }
-
-  const { text, background } = useColors(frontmatter.color)
+  const { primary, dark, light, knockout } = useColors(
+    data.post.childMdx.frontmatter.category === 'Analyse' || data.post.childMdx.frontmatter.category === 'Analysis'
+      ? 'rgb(0, 106, 140)'
+      : data.issue.childMdx.frontmatter.color
+  )
   const bodyStyles = {
-    '--fc-text': text.toString(),
-    '--fc-background': frontmatter.color_secondary ? frontmatter.color_secondary : background.toString(),
+    '--fc-primary': primary.toString(),
+    '--fc-dark': dark.toString(),
+    '--fc-light': light.toString(),
+    '--fc-knockout': knockout.toString(),
   }
   return (
     <>

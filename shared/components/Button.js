@@ -1,9 +1,7 @@
 import React, { forwardRef } from 'react'
 import { Spinner } from './Spinner'
 
-const Button = forwardRef(function Button(props, ref) {
-  let { onClick, label, icon, hideLabel, state, styles, priority, size, htmlType } = props
-
+const Button = forwardRef(function Button({ onClick, label, icon, hideLabel, state, styles, priority, size, htmlType }, ref) {
   if (!styles) styles = {}
   if (!priority) priority = 'primary'
   if (!size) size = 'medium'

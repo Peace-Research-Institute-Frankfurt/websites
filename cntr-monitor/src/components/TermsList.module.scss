@@ -1,0 +1,51 @@
+@import 'vars';
+
+.container {
+  max-width: var(--measure);
+  color: var(--blue-dark);
+  margin: 0 auto;
+  list-style: none;
+  li {
+    margin-left: 0 !important;
+  }
+  @include bp(l) {
+    margin-right: 0;
+    margin-left: calc((100% - var(--measure)) / 2) !important;
+    max-width: calc(var(--measure) * 1.2) !important;
+  }
+}
+
+.group {
+  position: relative;
+}
+
+.letter {
+  @extend %h2;
+  text-transform: uppercase;
+  margin-bottom: 0.2em;
+  @include bp(m) {
+    left: -2em;
+    top: 0em;
+    position: absolute;
+  }
+}
+
+.term {
+  display: inline-block;
+}
+
+.terms {
+  @include bp(l) {
+    columns: 2;
+    gap: 3em;
+  }
+}
+
+.title {
+  @extend %h4;
+  margin-bottom: 0.25em;
+}
+
+.description {
+  hyphens: auto;
+}

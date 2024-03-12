@@ -16,7 +16,8 @@ import { Listicle, ListicleItem } from './Listicle'
 import ImageSlider from './ImageSlider'
 import Note from './Note'
 import { ManifestoSignatory, ManifestoSignatories, ManifestoList, ManifestoListItem } from './Manifesto'
-
+import { BookReview, BookReviewList } from './BookReview'
+import PlaceholderText from './PlaceholderText'
 import * as QuoteStyles from './Quote.module.scss'
 import * as CalloutStyles from './Callout.module.scss'
 import * as FigureStyles from './Figure.module.scss'
@@ -52,6 +53,9 @@ const shortCodes = {
   ManifestoSignatory,
   ManifestoList,
   ManifestoListItem,
+  BookReview,
+  BookReviewList,
+  PlaceholderText,
 }
 
 export default function PostBody({ children }) {

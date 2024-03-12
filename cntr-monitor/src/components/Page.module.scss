@@ -1,1 +1,82 @@
 @import 'vars';
+
+.header {
+  background: var(--blue-light);
+  position: relative;
+  overflow: hidden;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: var(--padding);
+    right: calc(var(--padding) + var(--header-height));
+    bottom: 0;
+    display: block;
+    background: var(--blue);
+    z-index: 10;
+    mask: var(--mask);
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: var(--padding);
+    right: 0;
+    bottom: 0;
+    display: block;
+    background: var(--blue-dark);
+    z-index: 0;
+    mask: var(--mask);
+  }
+}
+
+.header-inner {
+  background: rgba(white, 0.9);
+  z-index: 0;
+  display: flex;
+  position: relative;
+  z-index: 100;
+  flex-flow: column;
+  align-items: center;
+  margin: 0 var(--padding);
+  mask: var(--mask);
+  margin-top: var(--header-height);
+  padding-top: 3rem;
+  padding-bottom: 8rem;
+  @include bp(m) {
+    padding-top: 6rem;
+    padding-bottom: 10rem;
+  }
+}
+
+.header-copy {
+  width: 100%;
+  max-width: min(90%, var(--measure));
+  margin: 0 auto;
+}
+
+.title {
+  @extend %h1;
+  color: var(--black);
+  position: relative;
+  z-index: 100;
+}
+
+.intro {
+  @extend %copy-large;
+  margin-top: 0.75em;
+  @include bp(m) {
+    margin-top: 0;
+  }
+}
+
+.body {
+  margin: 0 var(--padding);
+  padding-top: calc(var(--baseline) * 1);
+  @include bp(m) {
+    padding-top: calc(var(--baseline) * 2);
+    border-left: 1px solid var(--gray);
+    border-right: 1px solid var(--gray);
+  }
+}

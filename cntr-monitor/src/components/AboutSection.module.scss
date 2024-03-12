@@ -1,0 +1,34 @@
+@import 'vars';
+
+.container {
+  @extend %grid;
+  align-items: baseline;
+  padding-top: var(--corner-size);
+  @include bp(m) {
+    padding-top: 4em;
+  }
+}
+
+.title {
+  @extend %caps;
+  grid-column: 2 / 13;
+  margin-bottom: 0.5em;
+  @include bp(m) {
+    grid-column: 2 / 5;
+  }
+  @include bp(l) {
+    grid-column: 3 / 6;
+  }
+}
+
+.copy {
+  @extend %copy;
+  grid-column: 2 / 16;
+  hyphens: none;
+  @include bp(m) {
+    grid-column: 5 / 16;
+  }
+  @include bp(l) {
+    grid-column: 6 / 14;
+  }
+}

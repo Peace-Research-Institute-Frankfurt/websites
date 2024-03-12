@@ -30,6 +30,7 @@ const PostBody = ({ content, unit, site, setChapterList }) => {
 
   const shortCodes = {
     Gallery,
+    Gallery,
     a: ({ href, children }) => {
       return (
         <a href={href}>

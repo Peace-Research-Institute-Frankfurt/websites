@@ -1,12 +1,19 @@
-import React from 'react'
 import { graphql } from 'gatsby'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { Link, useTranslation } from 'gatsby-plugin-react-i18next'
+import React from 'react'
 import MarkdownRenderer from 'react-markdown-renderer'
+import useColors from '../hooks/useColors.js'
+import useTranslations from '../hooks/useTranslations.js'
+import AboutSection from './AboutSection.js'
 import App from './App.js'
-import Meta from './Meta.js'
-import SkipToContent from './SkipToContent.js'
-import { useTranslation } from 'gatsby-plugin-react-i18next'
-import { Link } from 'gatsby-plugin-react-i18next'
+import Footer from './Footer.js'
 import * as styles from './Issue.module.scss'
+import LanguageSwitcher from './LanguageSwitcher.js'
+import Meta from './Meta.js'
+import SiteHeader from './SiteHeader.js'
+import DownloadIcon from '../images/download.svg'
+import PartnerLogos from './PartnerLogos.js'
 
 export const query = graphql`
   query ($id: String!, $language: String!, $postsDirectory: String!) {
@@ -35,11 +42,18 @@ export const query = graphql`
         }
         frontmatter {
           title
+          year
           intro
           order
-          authors {
-            name
+          color
+          download_url
+          cover_image {
+            childImageSharp {
+              gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
+            }
           }
+          cover_caption
+          cover_credit
         }
       }
     }
@@ -65,6 +79,14 @@ export const query = graphql`
           frontmatter {
             title
             order
+            intro
+            category
+            eyebrow
+            authors {
+              frontmatter {
+                name
+              }
+            }
           }
         }
       }
@@ -80,6 +102,7 @@ export const query = graphql`
     ) {
       nodes {
         id
+        base
         childMdx {
           fields {
             slug
@@ -91,59 +114,140 @@ export const query = graphql`
         }
       }
     }
+    allSitePage {
+      nodes {
+        path
+        pageContext
+      }
+    }
   }
 `
 
-const Index = ({ data, pageContext, children, location }) => {
+const Issue = ({ data, pageContext, children, location }) => {
   const { t } = useTranslation()
+  const translationData = { currentLanguage: pageContext.language, currentSlug: location.pathname }
+  const translations = useTranslations(translationData, data.allSitePage.nodes)
 
-  const posts = data.posts.nodes.map((p) => {
-    let postStyles = {}
-    const year = data.post.relativeDirectory.replace(/(.{2})\/(issues)\//g, '')
-    const frontmatter = p.childMdx.frontmatter
-    const maxWords = 45
-    let intro = ''
-    if (frontmatter.teaser) {
-      intro = frontmatter.teaser
-    } else {
-      intro =
-        frontmatter.intro && frontmatter.intro.split(' ').length > maxWords
-          ? frontmatter.intro.split(' ').slice(0, maxWords).join(' ') + '...'
-          : frontmatter.intro
-    }
+  const coverImage = getImage(data.post.childMdx.frontmatter.cover_image)
 
+  const postGroups = [
+    'none',
+    ...data.posts.nodes
+      .map((el) => el.childMdx.frontmatter.category)
+      .filter((el, i, arr) => {
+        return el && arr.indexOf(el) === i
+      }),
+  ]
+
+  const groupedPosts = []
+
+  postGroups.forEach((group) => {
+    const newGroup = { name: group, posts: [] }
+    data.posts.nodes.forEach((node) => {
+      const format = node.childMdx.frontmatter.category || 'none'
+      if (format === group) {
+        newGroup.posts.push(node)
+      }
+    })
+    groupedPosts.push(newGroup)
+  })
+
+  const posts = groupedPosts.map((group) => {
+    const postEls = group.posts.map((p) => {
+      const year = data.post.relativeDirectory.replace(/(.{2})\/(issues)\//g, '')
+      const frontmatter = p.childMdx.frontmatter
+      const maxWords = 45
+      let intro = ''
+      if (frontmatter.teaser) {
+        intro = frontmatter.teaser
+      } else {
+        intro =
+          frontmatter.intro && frontmatter.intro.split(' ').length > maxWords
+            ? frontmatter.intro.split(' ').slice(0, maxWords).join(' ') + '...'
+            : frontmatter.intro
+      }
+
+      return (
+        <li key={p.id}>
+          <Link className={styles.postsItem} to={`/${year}/${p.childMdx.fields.slug}`}>
+            {frontmatter.eyebrow && <span className={styles.postsEyebrow}>{frontmatter.eyebrow}</span>}
+            <h3 className={styles.postsTitle}>{frontmatter.title}</h3>
+            <div className={styles.postsIntro}>{frontmatter.intro && <MarkdownRenderer markdown={intro} />}</div>
+            {frontmatter.authors && <div className={styles.postsMeta}> {frontmatter.authors.map((el) => el.frontmatter.name).join(', ')}</div>}
+          </Link>
+        </li>
+      )
+    })
     return (
-      <li key={p.id}>
-        <Link style={postStyles} to={`/${year}/${p.childMdx.fields.slug}`}>
-          <h3>{frontmatter.title}</h3>
-          {frontmatter.intro && <MarkdownRenderer markdown={intro} />}
-        </Link>
+      <li className={`${styles.postsGroup} ${group.name !== 'none' ? styles.postsGroupHasTitle : ''}`} key={`group-${group.name}`}>
+        {group.name !== 'none' && <h2 className={styles.postsGroupTitle}>{group.name}</h2>}
+        <ol>{postEls}</ol>
       </li>
     )
   })
+
   return (
     <App pages={data.pages.nodes} translationData={{ currentLanguage: pageContext.language, currentSlug: location.pathname }}>
-      <SkipToContent />
+      <SiteHeader
+        pages={data.pages.nodes}
+        issue={data.post}
+        color="white"
+        translationData={{ currentLanguage: pageContext.language, currentSlug: location.pathname }}
+      >
+        <LanguageSwitcher translations={translations} translationData={translationData} />
+      </SiteHeader>
       <main>
-        <header>
-          <h1 className={styles.title}>{data.post.childMdx.frontmatter.title}</h1>
+        <header className={styles.header}>
+          <div className={styles.headerInner}>
+            <GatsbyImage className={styles.headerImage} image={coverImage} alt="" />
+            <div className={styles.headerCopy}>
+              <h1 className={styles.title}>{data.post.childMdx.frontmatter.title}</h1>
+              <div className={styles.intro}>
+                <MarkdownRenderer markdown={data.post.childMdx.frontmatter.intro} />
+              </div>
+            </div>
+          </div>
+          <aside className={styles.headerCaptions}>
+            {data.post.childMdx.frontmatter.cover_caption && <p className={styles.headerCaption}>{data.post.childMdx.frontmatter.cover_caption}</p>}
+            {data.post.childMdx.frontmatter.cover_credit && <p className={styles.headerCredit}>{data.post.childMdx.frontmatter.cover_credit}</p>}
+          </aside>
         </header>
-        <section>
-          <h2>{t('Contents')}</h2>
-          <ol>{posts}</ol>
-        </section>
+        <div className={styles.body}>
+          <section className={styles.posts}>
+            <h2 className={styles.sectionTitle}>{t('Contents')}</h2>
+            <ol className={styles.postsList}>{posts}</ol>
+          </section>
+          <section className={styles.downloads}>
+            <div className={styles.downloadsInner}>
+              {data.post.childMdx.frontmatter.download_url && (
+                <a rel="download" href={data.post.childMdx.frontmatter.download_url}>
+                  <DownloadIcon />
+                  {t('Download (PDF)')}
+                </a>
+              )}
+            </div>
+          </section>
+          <AboutSection />
+          <PartnerLogos />
+        </div>
       </main>
+      <Footer pages={data.pages.nodes} />
     </App>
   )
 }
 
-export default Index
+export default Issue
 
 export const Head = ({ data, pageContext, location }) => {
   const year = data.post.relativeDirectory.replace(/(.{2})\/(issues)\//g, '')
   const translationData = { currentLanguage: pageContext.language, currentSlug: location.pathname }
-
-  const bodyStyles = {}
+  const { primary, dark, light, knockout } = useColors(data.post.childMdx.frontmatter.color)
+  const bodyStyles = {
+    '--fc-primary': primary.toString(),
+    '--fc-dark': dark.toString(),
+    '--fc-light': light.toString(),
+    '--fc-knockout': knockout.toString(),
+  }
   return (
     <>
       <body style={bodyStyles} />

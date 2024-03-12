@@ -1,24 +1,21 @@
 @import 'vars';
 
 .container {
+  @extend %caps;
   display: flex;
-  font-size: var(--ms--1);
+  color: var(--white);
+  border: 1px solid currentColor;
+  overflow: hidden;
 }
 
 .item {
   display: block;
   list-style: none;
-  &:first-child {
-    border-left: 1px solid var(--gray);
-  }
-  &:last-child {
-    border-right: 1px solid var(--gray);
-  }
 }
 
 .item-current {
-  background: black;
-  color: white;
+  background: var(--white);
+  color: var(--blue-dark);
   border-right: 0 !important;
   border-left: 0 !important;
   .inner {
@@ -32,13 +29,12 @@
 .inner {
   display: flex;
   text-transform: uppercase;
-  padding: 0 0.65em;
+  padding: 0.35em 0.5em;
+  line-height: 1;
   height: 100%;
   align-items: center;
-  letter-spacing: 0.05em;
-  font-size: var(--ms-0);
   &:hover,
   &:focus-visible {
-    text-decoration: underline;
+    background: rgba(white, 0.2);
   }
 }

@@ -13,6 +13,7 @@ import { PostList } from './PostList'
 import * as styles from './Post.module.scss'
 import PostHeaderVideo from './PostHeaderVideo'
 import SearchForm from './SearchForm'
+import FallbackIllustration from './FallbackIllustration'
 
 export const query = graphql`
   query ($id: String!) {
@@ -36,6 +37,7 @@ export const query = graphql`
           hero_alt
           hero_portrait_alt
           hero_credit
+          hero_credit_label
           hide_body
           hero_image {
             childImageSharp {
@@ -90,6 +92,8 @@ const Post = ({ data, children }) => {
   let heroImage = null
   if (frontmatter.hero_image) {
     heroImage = <GatsbyImage className={styles.heroImage} loading="eager" image={getImage(frontmatter.hero_image)} alt={frontmatter.hero_alt} />
+  } else {
+    heroImage = <FallbackIllustration category={frontmatter.category} />
   }
   let portraitImage = null
   if (frontmatter.hero_portrait) {
@@ -111,13 +115,17 @@ const Post = ({ data, children }) => {
           portrait={portraitImage}
           intro={frontmatter.intro}
           credit={frontmatter.hero_credit}
+          creditLabel={frontmatter.hero_credit_label}
+          hasIllustration={frontmatter.hero_image != null}
         />
         <main className={styles.body}>
           {!frontmatter.hide_body && (
             <>
-              <aside className={styles.credits}>
-                <Bylines authors={frontmatter.authors}></Bylines>
-              </aside>
+              {frontmatter.authors && (
+                <aside className={styles.credits}>
+                  <Bylines authors={frontmatter.authors}></Bylines>
+                </aside>
+              )}
               <div className={styles.copy}>
                 <PostBody>{children}</PostBody>
               </div>

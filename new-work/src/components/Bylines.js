@@ -14,7 +14,11 @@ const BylineItem = ({ author }) => {
   const copy = (
     <>
       <span className={styles.name}>{fm.name}</span>
-      {fm.institution && <span className={styles.institution}> {fm.institution}</span>}
+      {fm.institution && (
+        <span className={styles.institution}>
+          {fm.role && `${fm.role},`} {fm.institution}
+        </span>
+      )}
     </>
   )
 

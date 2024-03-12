@@ -37,9 +37,6 @@ exports.createPages = async function ({ actions, graphql }) {
           base
           relativeDirectory
           childMdx {
-            frontmatter {
-              title
-            }
             fields {
               slug
               locale
@@ -121,7 +118,7 @@ exports.createPages = async function ({ actions, graphql }) {
 }
 
 exports.onCreateNode = ({ node, actions, createNodeId, getNode }) => {
-  // Create auuthor nodes
+  // Create author nodes
   if (node.internal.type === 'Mdx' && node.internal.contentFilePath.indexOf('authors') !== -1) {
     actions.createNode({
       id: createNodeId(`author-${node.id}`),
@@ -134,6 +131,7 @@ exports.onCreateNode = ({ node, actions, createNodeId, getNode }) => {
       },
     })
   }
+
   if (node.internal.type === 'Mdx') {
     let nodeLocale = ''
     locales.forEach((locale) => {
@@ -155,21 +153,25 @@ exports.createSchemaCustomization = async ({ getNode, getNodesByType, pathPrefix
   const typeDefs = `
   type Author implements Node {
     name: String
+    author_id: String
     image: String
     image_alt: String
-    bio: String
   }
-  type PostFrontmatter {
-    authors: [Author]
+  type MdxFrontmatter {
+    authors: [Author] @link(by: "author_id")
     intro: String
     teaser: String
     eyebrow: String
     title: String
     color: String
-    color_secondary: String
+    cover_image: File @link(by: "relativePath")
+    cover_caption: String
+    cover_credit: String
+    download_url: String
+    tags: [String]
   }
   type Mdx {
-    frontmatter: PostFrontmatter
+    frontmatter: MdxFrontmatter
   }
   `
   createTypes(typeDefs)

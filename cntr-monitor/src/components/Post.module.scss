@@ -1,9 +1,150 @@
 @import 'vars';
 
 .container {
+  @extend %copy;
+}
+
+.header {
   padding: 0 var(--padding);
+  padding-top: var(--header-height);
+  background: var(--blue-dark);
+  position: relative;
+  overflow: hidden;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: calc(var(--padding) + var(--header-height));
+    bottom: calc(var(--padding) * 4);
+    background: var(--blue);
+    mask: var(--mask);
+    border-left: var(--padding) solid var(--blue-dark);
+    z-index: 10;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: calc(var(--padding) * 2 + var(--header-height));
+    bottom: -50%;
+    background: var(--fc-primary);
+    opacity: 0.9;
+    mask: var(--mask);
+    z-index: 0;
+  }
+}
+
+.header-inner {
+  min-height: 30vh;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  background: var(--fc-light);
+  position: relative;
+  z-index: 100;
+  color: var(--black);
+  mask: var(--mask);
+  @include bp(m) {
+    min-height: 50vh;
+    padding-top: 6em;
+    padding-bottom: 9em;
+  }
+  @include bp(l) {
+    padding-top: 7em;
+    padding-bottom: 9em;
+  }
+}
+
+.header-copy {
+  padding-left: calc((100% - var(--measure)) / 2 - var(--padding));
+  padding-right: var(--corner-size);
+}
+
+.eyebrow {
+  @extend %caps;
+  margin-bottom: 1.5em;
+  line-height: 1;
+  display: block;
+  @include bp(m) {
+    margin-bottom: 2em;
+  }
 }
 
 .title {
-  @extend %h1;
+  @extend %h2;
+  text-align: center;
+  text-wrap: balance;
+  max-width: calc(var(--measure) * 1.75);
+  padding: 0 0.5em;
+  @include bp(m) {
+    text-align: left;
+    padding: 0;
+  }
+}
+
+.intro {
+  @extend %copy-large;
+  hyphens: none;
+  padding-top: calc(var(--baseline) * 1.5);
+  max-width: 90%;
+}
+
+.body {
+  margin: 0 calc(var(--padding) - 1px);
+  padding-top: 1.5em;
+
+  @include bp(m) {
+    padding-top: 2em;
+    border-left: 1px solid var(--gray);
+    border-right: 1px solid var(--gray);
+  }
+}
+
+.bylines {
+  @extend %caption;
+  @include bp(m) {
+    padding-bottom: 1em;
+  }
+}
+
+.pagination {
+  color: var(--white);
+  display: flex;
+  border: 1px solid white;
+}
+
+.pagination-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3em 0.325em;
+  border-right: 1px solid white;
+  &:hover,
+  &:focus-visible {
+    background: var(--white);
+    path {
+      fill: var(--blue-dark);
+    }
+  }
+  &:last-child {
+    border-right: 0;
+  }
+  span {
+    position: absolute;
+    font-size: 0;
+    left: -9999px;
+  }
+  svg {
+    width: 0.75em;
+  }
+  path {
+    fill: var(--white);
+  }
+}
+
+.pagination-prev {
+  svg {
+    transform: rotate(180deg);
+  }
 }

@@ -1,13 +1,72 @@
 @import 'vars';
 
 .container {
-  padding: 0 var(--padding);
+  padding: var(--padding);
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--gray);
+  align-items: flex-end;
+  color: var(--blue-dark);
+
+  @include bp(m) {
+    padding: 1em var(--padding);
+    align-items: center;
+  }
+}
+
+.copy {
+  display: flex;
+  align-items: baseline;
+  flex-flow: column;
+  gap: 0.5em;
+  @include bp(m) {
+    gap: 1.5em;
+    flex-flow: row;
+  }
 }
 
 .menu {
   @extend %caption;
   ul {
     display: flex;
-    gap: 1em;
+    list-style: none;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    @include bp(s) {
+      gap: 0.75em;
+      flex-flow: row;
+    }
+  }
+}
+
+.nav-link {
+  &:hover,
+  &:focus-visible {
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+  }
+}
+
+.nav-active {
+  @extend %caption-bold;
+  color: var(--black);
+}
+
+.copyright {
+  @extend %sub-caption;
+}
+
+.logo {
+  span {
+    position: absolute;
+    font-size: 0;
+  }
+  svg {
+    height: 2rem;
+    width: auto;
+    display: block;
+  }
+  path {
+    fill: var(--blue-dark);
   }
 }

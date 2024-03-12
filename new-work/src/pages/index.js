@@ -8,7 +8,6 @@ import PostHeader from '../components/PostHeader'
 import * as styles from './index.module.scss'
 import { PostList } from '../components/PostList'
 import SearchForm from '../components/SearchForm'
-import LoadingScreen from '../components/LoadingScreen'
 
 export const query = graphql`
   query {
@@ -56,12 +55,12 @@ const Index = ({ data }) => {
 
   return (
     <App>
-      <LoadingScreen />
       <SkipToContent />
       <StickyHeader searchForm={<SearchForm />} />
       <main id="content" className={styles.container}>
         <PostHeader
           media={heroVideo}
+          hasIllustration={true}
           title="Neue Arbeitsformen für die Wissenschaft"
           intro={
             <>
