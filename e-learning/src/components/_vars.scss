@@ -1,6 +1,6 @@
 @mixin bp($point) {
   @if $point==xl {
-    @media (min-width: 95rem) {
+    @media (min-width: 90rem) {
       @content;
     }
   } @else if $point==l {
@@ -68,7 +68,7 @@ $text-border: 2px solid var(--gray-40);
   }
   & > h2 {
     @extend %h2;
-    margin-top: 1em;
+    margin-top: 1.4em;
     margin-bottom: 0.25em;
     &:first-child {
       margin-top: 0;

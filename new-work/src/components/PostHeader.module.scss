@@ -1,22 +1,24 @@
 @import 'vars';
 
-.image {
+.media {
   position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
-  z-index: 0;
-  height: 100vh;
-  overflow: hidden;
-  & > div {
-    height: 100% !important;
-  }
+  left: 50%;
+  transform: translateX(-50%);
+  min-height: 100%;
+  z-index: 50;
+  min-width: 100%;
 }
+
 .container {
   background: var(--black);
   margin: 0 var(--padding);
   border-top-left-radius: var(--br);
   border-top-right-radius: var(--br);
+  border-left: 1px solid var(--gray);
+  border-right: 1px solid var(--gray);
+  border-top: 1px solid var(--gray);
+
   z-index: 100;
   position: relative;
 }
@@ -25,8 +27,8 @@
   padding-top: var(--header-height);
 }
 
-.has-image {
-  padding-top: 65vh;
+.has-media {
+  padding-top: 80vh;
 }
 
 .title-container {
@@ -35,15 +37,26 @@
   border-bottom: 1px solid var(--gray);
   padding-bottom: calc(var(--padding) * 1.5);
   @include bp(m) {
-    padding-bottom: calc(var(--padding) * 2);
     padding-top: calc(var(--padding) * 1.15);
+    padding-bottom: calc(var(--padding) * 1.25);
   }
 }
 
 .title {
   @extend %h1;
-  margin-bottom: -0.125em;
+  display: inline;
 }
+.credit {
+  @extend %caption;
+  display: inline-block;
+  margin-left: 2em;
+
+  a {
+    text-decoration: underline;
+    text-decoration-color: var(--gray);
+  }
+}
+
 .is-long {
   @extend %h1-long;
 }

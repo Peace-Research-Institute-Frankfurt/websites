@@ -26,6 +26,15 @@
   @include bp(l) {
     grid-column: 2 / 3;
   }
+  &:before {
+    content: '„';
+  }
+  &:after {
+    content: '“';
+  }
+  p {
+    display: inline;
+  }
 }
 .cite {
   @extend %caption;

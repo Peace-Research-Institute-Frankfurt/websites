@@ -2,7 +2,6 @@
   background: var(--color);
   min-height: 100svh;
   position: relative;
-  padding-bottom: var(--footer-height);
 
   &:after {
     content: '';
@@ -11,7 +10,8 @@
     right: 0;
     bottom: 0;
     height: 100%;
-    background: linear-gradient(to bottom, transparent 70vh, black 100vh);
+    background: linear-gradient(to bottom, transparent 80vh, black 100vh);
     z-index: 50;
+    pointer-events: none;
   }
 }

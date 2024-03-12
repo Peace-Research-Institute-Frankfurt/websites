@@ -20,12 +20,12 @@ export default function Logo({ progress }) {
   const nTransform = `translate(${easeInOutCubic(progress) * -238} 0)`
   const leibnizTransform = `translate(${easeInOutCubic(progress) * -428} 0)`
   const ewTransform = `translate(${easeInOutCubic(progress) * -428} 0)`
-  const width = 1000 - easeInOutCubic(progress) * 425
+  const width = Math.max(510 - easeInOutCubic(progress) * 225, 286)
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} style={{ '--width': `${width}px` }}>
       <span className={styles.label}> {data.site.siteMetadata.title}</span>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox={`0 0 ${width} 107.192`}>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox={`0 0 1000 107.192`}>
         <mask id="mask-1" x1={0} y1={0}>
           <polygon fill="white" points="100.199 111.3738 136.5067 -4.6262 795.0461 -4.6262 795.0461 111.3738 100.199 111.3738" />{' '}
         </mask>

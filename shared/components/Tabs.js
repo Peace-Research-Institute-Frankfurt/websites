@@ -5,9 +5,8 @@ import { useId } from 'react'
 function Tab({ styles, children, tabId, labelledBy, isActive }) {
   if (!styles) styles = {}
 
-  const activeClass = isActive ? styles.tabContentActive : ''
   return (
-    <div className={`${styles.tabContent} ${activeClass}`} aria-labelledby={labelledBy} id={tabId}>
+    <div style={{ display: isActive ? 'block' : 'none' }} className={`${styles.tabContent}`} aria-labelledby={labelledBy} id={tabId}>
       {children}
     </div>
   )

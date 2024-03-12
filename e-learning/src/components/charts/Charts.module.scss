@@ -1,0 +1,104 @@
+@import '../vars';
+
+.container {
+  grid-column: 1 / 6;
+  margin-bottom: 4em;
+  position: relative;
+
+  @include bp(m) {
+    margin-bottom: 4.5em;
+  }
+}
+
+.graph-container {
+  position: relative;
+  height: 350px;
+  margin-bottom: 0.1em;
+
+  @include bp(m) {
+    padding-left: 0px;
+    height: 500px;
+  }
+}
+
+.legend {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 0.1em;
+  flex-wrap: wrap;
+  @extend %caption;
+
+  @include bp(m) {
+    justify-content: center;
+  }
+
+  svg,
+  rect {
+    width: 12px;
+    height: 12px;
+    @include bp(m) {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.legend-shape {
+  width: 12px;
+  height: 12px;
+  @include bp(m) {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.axis-label-left {
+  @extend %caption-bold;
+}
+
+.axis-label-bottom {
+  transform: translateY(1.3em);
+  @extend %caption-bold;
+}
+
+.axis-ticks {
+  @extend %caption;
+}
+
+// Pie Chart
+.pie-chart-label-number {
+  @extend %h3;
+}
+
+.pie-chart-label {
+  @extend %caption;
+}
+
+.pie-chart-legend {
+  @extend .legend;
+  //@extend %h3;
+  //width: 100%;
+  //display: flex;
+  //align-items: center;
+  //justify-content: flex-start;
+  //
+  //@include bp(m) {
+  //  justify-content: center;
+  //}
+}
+
+.sr-only {
+  //from Bootstrap 5 .visually-hidden class - to allow screen reader to read content
+  position: absolute!important;
+  width: 1px!important;
+  height: 1px!important;
+  padding: 0!important;
+  margin: -1px!important;
+  overflow: hidden!important;
+  clip: rect(0,0,0,0)!important;
+  white-space: nowrap!important;
+  border: 0!important;
+}
+

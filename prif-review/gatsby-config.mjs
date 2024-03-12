@@ -10,8 +10,8 @@ const config = {
     siteUrl: 'https://prif-review.netlify.app',
     title: 'PRIF Review',
     description: '',
-    siteTwitter: '@HSFK_PRIF',
-    authorTwitter: '@HSFK_PRIF',
+    siteTwitter: '@PRIF_org',
+    authorTwitter: '@PRIF_org',
     image: {
       src: '/social-image.png',
       alt: 'image alt',
@@ -52,27 +52,27 @@ const config = {
         mdxOptions: {
           remarkPlugins: [remarkGfm],
         },
-        gatsbyRemarkPlugins: [
-          {
-            resolve: '../prif-gatsby-remark-smartypants',
-            options: {
-              locales: [
-                {
-                  openingQuotes: { single: '‚', double: '„' },
-                  closingQuotes: { single: '’', double: '“' },
-                  dashes: 'oldschool',
-                  locale: 'de',
-                },
-                {
-                  openingQuotes: { single: '‘', double: '“' },
-                  closingQuotes: { single: '’', double: '”' },
-                  dashes: 'oldschool',
-                  locale: 'en',
-                },
-              ],
-            },
-          },
-        ],
+        // gatsbyRemarkPlugins: [
+        //   {
+        //     resolve: '../prif-gatsby-remark-smartypants',
+        //     options: {
+        //       locales: [
+        //         {
+        //           openingQuotes: { single: '‚', double: '„' },
+        //           closingQuotes: { single: '’', double: '“' },
+        //           dashes: 'oldschool',
+        //           locale: 'de',
+        //         },
+        //         {
+        //           openingQuotes: { single: '‘', double: '“' },
+        //           closingQuotes: { single: '’', double: '”' },
+        //           dashes: 'oldschool',
+        //           locale: 'en',
+        //         },
+        //       ],
+        //     },
+        //   },
+        // ],
       },
     },
     {

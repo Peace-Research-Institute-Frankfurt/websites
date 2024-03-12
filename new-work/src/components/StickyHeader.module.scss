@@ -44,7 +44,6 @@
   background: var(--black);
   border-bottom-left-radius: calc(0.5 * var(--br));
   border-bottom-right-radius: calc(0.5 * var(--br));
-  overflow: hidden;
   margin-top: -1px;
   @include bp(m) {
     border-top: 0;
@@ -70,8 +69,17 @@
   }
   &:hover,
   &:focus-visible {
-    background: var(--black-hover);
+    .nav-label {
+      text-decoration: underline;
+    }
   }
+}
+
+.nav-search {
+  @extend .nav-item;
+  padding: 0;
+  height: 1.8em;
+  display: flex;
 }
 
 .bookmarks-container {
@@ -106,17 +114,18 @@
 }
 
 .bookmarks-counter {
-  background: var(--gray-dark);
-  font-size: var(--ms--1);
+  font-size: 0.75em;
   aspect-ratio: 1 / 1;
   display: inline-flex;
+  border: 1px solid var(--gray-light);
   align-items: center;
   justify-content: center;
-  width: 1.3em;
   font-feature-settings: 'tnum' 1;
   border-radius: 1000px;
-  padding-top: 0.1em;
-  height: 1.3em;
+  width: 1.5em;
+  height: 1.5em;
+  position: relative;
+  top: 0.05em;
   margin-left: 0.35em;
 }
 

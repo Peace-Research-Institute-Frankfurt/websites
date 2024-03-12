@@ -97,6 +97,7 @@
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  padding-top: 0.15em;
   max-width: 100%;
   .container-active & {
     opacity: 1;

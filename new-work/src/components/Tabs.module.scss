@@ -14,17 +14,10 @@
 .tab-content {
   @extend %copy;
   padding: var(--padding-small);
-  display: none;
-  visibility: hidden;
   border: 1px solid var(--gray);
   *:last-child {
     margin-bottom: 0;
   }
-}
-
-.tab-content-active {
-  display: block;
-  visibility: visible;
 }
 
 .tabs-list {
@@ -50,8 +43,7 @@
     border: 1px solid var(--gray);
     border-radius: 1000px;
     padding: 0 0.5em;
-    padding-top: 0.25em;
-    height: 2em;
+    height: 1.8em;
     display: inline-flex;
     align-items: center;
     justify-content: center;

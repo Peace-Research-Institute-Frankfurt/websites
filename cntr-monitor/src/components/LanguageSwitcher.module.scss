@@ -1,0 +1,44 @@
+@import 'vars';
+
+.container {
+  display: flex;
+  font-size: var(--ms--1);
+}
+
+.item {
+  display: block;
+  list-style: none;
+  &:first-child {
+    border-left: 1px solid var(--gray);
+  }
+  &:last-child {
+    border-right: 1px solid var(--gray);
+  }
+}
+
+.item-current {
+  background: black;
+  color: white;
+  border-right: 0 !important;
+  border-left: 0 !important;
+  .inner {
+    &:hover,
+    &:focus-visible {
+      text-decoration: none;
+    }
+  }
+}
+
+.inner {
+  display: flex;
+  text-transform: uppercase;
+  padding: 0 0.65em;
+  height: 100%;
+  align-items: center;
+  letter-spacing: 0.05em;
+  font-size: var(--ms-0);
+  &:hover,
+  &:focus-visible {
+    text-decoration: underline;
+  }
+}

@@ -15,8 +15,8 @@ module.exports = {
     title: 'EUNPDC E-Learning',
     description:
       "This course aimns to cover all aspects of the European Union's non-proliferation and disarmament agenda and provide a comprehensive knowledge resource.",
-    siteTwitter: '@HSFK_PRIF',
-    authorTwitter: '@HSFK_PRIF',
+    siteTwitter: '@PRIF_org',
+    authorTwitter: '@PRIF_org',
     image: {
       src: '/social-image.png',
       alt: 'Stylised text: EU Non-Proliferation and Disarmament Consortium eLearning',

@@ -1,0 +1,43 @@
+@mixin bp($point) {
+  @if $point==xl {
+    @media (min-width: 100rem) {
+      @content;
+    }
+  } @else if $point==l {
+    @media (min-width: 80rem) {
+      @content;
+    }
+  } @else if $point==m {
+    @media (min-width: 55rem) {
+      @content;
+    }
+  } @else if $point==s {
+    @media (min-width: 40rem) {
+      @content;
+    }
+  } @else if $point==xs {
+    @media (min-width: 30rem) {
+      @content;
+    }
+  }
+}
+
+%copy {
+  font-family: var(--roboto);
+  font-variation-settings: 'wght' 400, 'wdth' 100, 'opsz' 25;
+  font-size: var(--ms-0);
+}
+%copy-bold {
+  @extend %copy;
+  font-variation-settings: 'wght' 700, 'wdth' 100, 'opsz' 25;
+}
+%caption {
+  @extend %copy;
+  font-size: var(--ms--1);
+  font-variation-settings: 'wght' 400, 'wdth' 100, 'opsz' 5;
+}
+%h1 {
+  font-family: var(--montserrat);
+  font-variation-settings: 'wght' 560, 'wdth' 110, 'opsz' 144;
+  font-size: var(--ms-4);
+}

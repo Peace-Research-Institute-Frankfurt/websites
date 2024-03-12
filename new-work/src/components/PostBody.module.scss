@@ -11,6 +11,7 @@
   h4,
   h5,
   h6,
+  hr,
   table {
     grid-column: 1 / 4;
     @include bp(m) {
@@ -22,8 +23,8 @@
   }
   h2 {
     @extend %h2;
-    margin-top: calc(var(--baseline) * 0.5);
-    margin-bottom: calc(var(--baseline) * 0.25);
+    margin-top: calc(var(--baseline) * 1);
+    margin-bottom: calc(var(--baseline) * 0.5);
 
     &:first-child {
       margin-top: 0;
@@ -31,6 +32,8 @@
   }
   h3 {
     @extend %h3;
+    margin-top: calc(var(--baseline) * 0.5);
+    margin-bottom: calc(var(--baseline) * 0.25);
     &:first-child {
       margin-top: 0;
     }
@@ -40,20 +43,32 @@
   }
   table {
     margin-bottom: calc(var(--baseline) / 2);
-    border: 1px solid var(--gray);
+  }
+  hr {
+    border: 0;
+    border-top: 1px solid var(--gray);
+    margin-top: calc(var(--baseline) * 0.5);
+    margin-bottom: calc(var(--baseline) * 1);
+    @include bp(m) {
+      margin-top: var(--baseline);
+      margin-bottom: calc(var(--baseline) * 1.5);
+    }
   }
   td,
   th {
     text-align: left;
     vertical-align: baseline;
-    padding: 0.25rem 0.5rem;
-    padding-bottom: 0.1rem;
-    border-right: 1px solid var(--gray);
+    padding: 0.25rem 0;
     hyphens: none;
+    p {
+      margin: 0;
+    }
   }
+
   th {
     @extend %caption-bold;
     white-space: nowrap;
+    padding-right: 2em;
   }
   tr {
     border-bottom: 1px solid var(--gray);

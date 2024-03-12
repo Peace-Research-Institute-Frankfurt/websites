@@ -1,0 +1,20 @@
+@import 'vars';
+
+.container {
+  @extend %copy-bold;
+  position: absolute;
+  top: 0;
+  left: var(--padding);
+  transform: translateY(-100%);
+  transition: var(--fast);
+  display: block;
+  padding: 0.5em 0.75em;
+  background: white;
+  border: 1px solid var(--black);
+  border-top: 0;
+  border-bottom-left-radius: var(--br-small);
+  border-bottom-right-radius: var(--br-small);
+  &:focus-visible {
+    transform: translateY(100%);
+  }
+}

@@ -39,10 +39,10 @@ function EmbedAdapter({ provider, ...props }) {
 }
 
 function Vimeo({ styles, url, width, height, caption }) {
-  const matches = url.match(/(?:vimeo.com\/)(\d+)/)
+  const matches = url.match(/(?:vimeo.com\/)(\d+)(?:\/)(.+)/)
   let src = null
   if (matches && matches[1]) {
-    src = `https://player.vimeo.com/video/${matches[1]}?h=0e92d36ba9&title=0&byline=0&portrait=0`
+    src = `https://player.vimeo.com/video/${matches[1]}?h=${matches[2]}&title=0&byline=0&portrait=0`
   }
   return <EmbedAdapter styles={styles} provider="vimeo" width={width} height={height} src={src} caption={caption} />
 }

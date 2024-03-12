@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
 import { graphql } from 'gatsby'
-import { StaticImage } from 'gatsby-plugin-image'
 import Meta from '../components/Meta'
 import App from '../components/App'
 import StickyHeader from '../components/StickyHeader'
 import SkipToContent from '../components/SkipToContent'
 import PostHeader from '../components/PostHeader'
 import * as styles from './index.module.scss'
-import { PostList, PostListItem } from '../components/PostList'
+import { PostList } from '../components/PostList'
+import SearchForm from '../components/SearchForm'
+import LoadingScreen from '../components/LoadingScreen'
 
 export const query = graphql`
   query {
@@ -20,7 +21,10 @@ export const query = graphql`
           }
           frontmatter {
             title
+            short_title
+            intro
             category
+            format
           }
         }
       }
@@ -33,41 +37,41 @@ const Index = ({ data }) => {
 
   data.posts.nodes.forEach((node) => {
     const category = node.childMdx.frontmatter.category
-    if (category && !categories.includes(category)) {
+    if (category && category !== 'meta' && !categories.includes(category)) {
       categories.push(category)
     }
   })
-  const [activeFilters, setActiveFilters] = useState(categories)
+  const [activeFilters, setActiveFilters] = useState(['meta', ...categories])
 
-  const posts = data.posts.nodes
-    .filter((node) => {
-      return activeFilters.includes(node.childMdx.frontmatter.category)
-    })
-    .map((node) => {
-      const fm = node.childMdx.frontmatter
-      return (
-        <li key={`post-${node.id}`}>
-          <PostListItem title={fm.title} category={fm.category} slug={node.childMdx.fields.slug} />
-        </li>
-      )
-    })
+  const heroVideo = (
+    <div className={styles.heroVideo}>
+      <iframe
+        src="https://player.vimeo.com/video/867440111?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&background=1"
+        frameBorder={0}
+        allow="autoplay; fullscreen; picture-in-picture"
+        title="Neue Arbeitsformen in der Wissenschaft"
+      ></iframe>
+    </div>
+  )
+
   return (
     <App>
+      <LoadingScreen />
       <SkipToContent />
-      <StickyHeader />
+      <StickyHeader searchForm={<SearchForm />} />
       <main id="content" className={styles.container}>
         <PostHeader
-          image={<StaticImage src="../images/frame2.png" alt="" layout="fullWidth" />}
-          title="Neue Arbeitsformen für Wissenschaft und Forschung"
+          media={heroVideo}
+          title="Neue Arbeitsformen für die Wissenschaft"
           intro={
             <>
-              New Work bricht Regeln auf, hinterfragt Machtverhältnisse und rückt den Menschen seinen Stärken, Bedürfnissen und Emotiononen in den
-              Fokus. Diese Handreichung sammelt Anleitungen und Resourcen zu <span className={styles.introSpace}>Raum</span>,{' '}
-              <span className={styles.introPeople}>Mensch</span>, und <span className={styles.introTools}>Methoden</span>, um den Übergang zur New
-              Work in wissenschaftlichen Einrichtungen zu begleiten.
+              Vor dem Hintergrund der Digitalisierung revolutioniert New Work herkömmliche Strukturen, stellt tradierte Arbeitsweisen infrage und
+              stärkt die Bedeutung des Menschen mit seinen Kompetenzen, Talenten, Wünschen und Emotionen. Die Leibniz-Gemeinschaft bietet mit diesem
+              Web-Magazin zahlreiche Interviews, Texte und Tipps und unterstützt so ihre Forschungsinstitute auf dem Weg zu neuen Räumen und
+              Arbeitsformen.
             </>
           }
-          credit="Illustration von Max Köhler"
+          credit="[Verena Mack](https://verenamack.com/)"
         />
         <section className={styles.content}>
           <ol className={styles.filters}>
@@ -94,7 +98,7 @@ const Index = ({ data }) => {
               )
             })}
           </ol>
-          <PostList>{posts}</PostList>
+          <PostList posts={data.posts.nodes} activeFilters={activeFilters} />
         </section>
       </main>
     </App>

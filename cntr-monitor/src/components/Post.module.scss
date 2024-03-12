@@ -1,0 +1,9 @@
+@import 'vars';
+
+.container {
+  padding: 0 var(--padding);
+}
+
+.title {
+  @extend %h1;
+}

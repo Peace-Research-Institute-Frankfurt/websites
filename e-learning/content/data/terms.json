@@ -1,112 +1,112 @@
 [
-    {
-        "term_id": "CW",
-        "title": "Chemical Weapon (CW)",
-        "description": "The toxic agent, the delivery system and specially designed equipment to enable the delivery of the toxic agent. The term applies to each category individually or together, according to the Chemical Weapons Convention."
-    },
-    {
-        "term_id": "Poison",
-        "title": "Poison",
-        "description": "A generic term for any toxic substance. In the context of chemical warfare, 'poison' may refer to a naturally occurring toxins or mineral toxicants, whereas 'chemical warfare agent' tends to be reserved for human-made or industrially produced toxic substances."
-    },
-    {
-        "term_id": "Review Conference",
-        "title": "Review Conference",
-        "description": "Periodic (usually quinquennial) meeting of States Parties to review the status and effectiveness of a disarmament treaty, assess and address the challenges facing the treaty regime, and decide on agreements and common understandings that advance or adapt the treaty regime to new challenges."
-    },
-    {
-        "term_id": "Rome Statute",
-        "title": "Rome Statute",
-        "description": "An international treaty agreed in 1998 that establishes the International Criminal Court (based in The Hague, The Netherlands) and defines war crimes in both international and non-international armed conflicts. Under the Rome Statute individuals may be prosecuted for war crimes. The criminalisation of chemical warfare is based on the language of the 1925 Geneva Protocol."
-    },
-    {
-        "term_id": "Schedule",
-        "title": "Schedule",
-        "description": "One of three lists of chemical warfare agents and their precursors contained in an annex to the Chemical Weapons Convention. Each schedule is based on an assessment of the risks posed by a particular compound that played a role in the history of chemical warfare to the objectives and purpose of the CWC and its commercial and industrial importance. Schedule 1 chemicals cannot be exploited for civilian purposes. Each schedule has its own specific verification requirements. Schedules do not replace the General Purpose Criterion, but support the practical organisation of declarations and inspections."
-    },
-    {
-        "term_id": "Toxic Agent",
-        "title": "Toxic agent",
-        "description": "A poisonous chemical element or compound that interferes with the life processes, thereby causing temporary or permanent damage to a living organism or killing it all together."
-    },
-    {
-        "term_id": "Toxin",
-        "title": "Toxin",
-        "description": "A poisonous substance produced by living organisms, such as animals, plants, or bacteria. Their synthetic analogues are also considered to be toxins."
-    },
-    {
-        "term_id": "UNSCR-1540",
-        "title": "UN Security Council Resolution 1540",
-        "description": "One of the documents adopted in the wake of the terrorist attacks of 11 September 2001 to deny terrorist entities access to biological, chemical or nuclear weapon technologies by means of appropriate domestic legislative measures. With respect to chemical weapons the resolution essentially reiterates the relevant national obligations in the Chemical Weapons Convention, but extends the requirement for national laws and regulations to states not party to the treaty too."
-    },
-    {
-        "term_id": "CWC",
-        "title": "Chemical Weapons Convention (CWC)",
-        "description": "The Chemical Weapons Convention prohibits the large-scale use, development, production, stockpiling and transfer of chemical weapons and their precursors. It entered into force in 1997 and is administered by the Organisation for the Prohibition of Chemical Weapons (OPCW)."
-    },
-    {
-        "term_id": "BWC",
-        "title": "Biological Weapons Convention (BWC)",
-        "description": "The Convention on the Prohibition of the Development, Production and Stockpiling of Bacteriological (Biological) and Toxin Weapons and on their Destruction entered into force on 26 March 1975. It was the first multilateral disarmament treaty banning the production of an entire category of weapons."
-    },
-    {
-        "term_id": "NPT",
-        "title": "Nuclear Non-Proliferation Treaty",
-        "description": ""
-    },
-    {
-        "term_id": "CD",
-        "title": "Conference on Disarmament",
-        "description": ""
-    },
-    {
-        "term_id": "GPS",
-        "title": "Global Positioning System (GPS)",
-        "description": ""
-    },
-    {
-        "term_id": "PAROS",
-        "title": "Prevention of an Arms Race in Outer Space (PAROS)",
-        "description": "PAROS is a UN resolution that reaffirms the fundamental principles of the 1967 Outer Space Treaty and advocates for a ban on the weaponization of space."
-    },
-    {
-        "term_id": "ATT",
-        "title": "Arms trade treaty",
-        "description": ""
-    },
-    {
-        "term_id": "CCW",
-        "title": "Convention on Certain Conventional Weapons",
-        "description": ""
-    },
-    {
-        "term_id": "Ottawa Treaty",
-        "title": "Ottawa Treaty",
-        "description": ""
-    },
-    {
-        "term_id": "TPNW",
-        "title": "Treaty on the Prohibition of Nuclear Weapons",
-        "description": ""
-    },
-    {
-        "term_id": "NWFZ",
-        "title": "Nuclear-Weapon-Free Zones",
-        "description": ""
-    },
-    {
-        "term_id": "CTBT",
-        "title": "Comprehensive Test-Ban Treaty",
-        "description": ""
-    },
-    {
-        "term_id": "IAEA",
-        "title": "International Atomic Energy Agency (IAEA)",
-        "description": ""
-    },
-    {
-        "term_id": "WMD",
-        "title": "Weapons of Mass Destruction (WMD)",
-        "description": ""
-    }
+  {
+    "term_id": "CW",
+    "title": "Chemical Weapon (CW)",
+    "description": "The toxic agent, the delivery system and specially designed equipment to enable the delivery of the toxic agent. The term applies to each category individually or together, according to the Chemical Weapons Convention."
+  },
+  {
+    "term_id": "Poison",
+    "title": "Poison",
+    "description": "A generic term for any toxic substance. In the context of chemical warfare, 'poison' may refer to a naturally occurring toxins or mineral toxicants, whereas 'chemical warfare agent' tends to be reserved for human-made or industrially produced toxic substances."
+  },
+  {
+    "term_id": "Review Conference",
+    "title": "Review Conference",
+    "description": "Periodic (usually quinquennial) meeting of States Parties to review the status and effectiveness of a disarmament treaty, assess and address the challenges facing the treaty regime, and decide on agreements and common understandings that advance or adapt the treaty regime to new challenges."
+  },
+  {
+    "term_id": "Rome Statute",
+    "title": "Rome Statute",
+    "description": "An international treaty agreed in 1998 that establishes the International Criminal Court (based in The Hague, The Netherlands) and defines war crimes in both international and non-international armed conflicts. Under the Rome Statute individuals may be prosecuted for war crimes. The criminalisation of chemical warfare is based on the language of the 1925 Geneva Protocol."
+  },
+  {
+    "term_id": "Schedule",
+    "title": "Schedule",
+    "description": "One of three lists of chemical warfare agents and their precursors contained in an annex to the Chemical Weapons Convention. Each schedule is based on an assessment of the risks posed by a particular compound that played a role in the history of chemical warfare to the objectives and purpose of the CWC and its commercial and industrial importance. Schedule 1 chemicals cannot be exploited for civilian purposes. Each schedule has its own specific verification requirements. Schedules do not replace the General Purpose Criterion, but support the practical organisation of declarations and inspections."
+  },
+  {
+    "term_id": "Toxic Agent",
+    "title": "Toxic agent",
+    "description": "A poisonous chemical element or compound that interferes with the life processes, thereby causing temporary or permanent damage to a living organism or killing it all together."
+  },
+  {
+    "term_id": "Toxin",
+    "title": "Toxin",
+    "description": "A poisonous substance produced by living organisms, such as animals, plants, or bacteria. Their synthetic analogues are also considered to be toxins."
+  },
+  {
+    "term_id": "UNSCR-1540",
+    "title": "UN Security Council Resolution 1540",
+    "description": "One of the documents adopted in the wake of the terrorist attacks of 11 September 2001 to deny terrorist entities access to biological, chemical or nuclear weapon technologies by means of appropriate domestic legislative measures. With respect to chemical weapons the resolution essentially reiterates the relevant national obligations in the Chemical Weapons Convention, but extends the requirement for national laws and regulations to states not party to the treaty too."
+  },
+  {
+    "term_id": "CWC",
+    "title": "Chemical Weapons Convention (CWC)",
+    "description": "The Chemical Weapons Convention prohibits the large-scale use, development, production, stockpiling and transfer of chemical weapons and their precursors. It entered into force in 1997 and is administered by the _Organisation for the Prohibition of Chemical Weapons (OPCW)_."
+  },
+  {
+    "term_id": "BWC",
+    "title": "Biological Weapons Convention (BWC)",
+    "description": "The Convention on the Prohibition of the Development, Production and Stockpiling of Bacteriological (Biological) and Toxin Weapons and on their Destruction entered into force on 26 March 1975. It was the first multilateral disarmament treaty banning the production of an entire category of weapons."
+  },
+  {
+    "term_id": "NPT",
+    "title": "Nuclear Non-Proliferation Treaty",
+    "description": ""
+  },
+  {
+    "term_id": "CD",
+    "title": "Conference on Disarmament",
+    "description": ""
+  },
+  {
+    "term_id": "GPS",
+    "title": "Global Positioning System (GPS)",
+    "description": ""
+  },
+  {
+    "term_id": "PAROS",
+    "title": "Prevention of an Arms Race in Outer Space (PAROS)",
+    "description": "PAROS is a UN resolution that reaffirms the fundamental principles of the 1967 Outer Space Treaty and advocates for a ban on the weaponization of space."
+  },
+  {
+    "term_id": "ATT",
+    "title": "Arms trade treaty",
+    "description": ""
+  },
+  {
+    "term_id": "CCW",
+    "title": "Convention on Certain Conventional Weapons",
+    "description": ""
+  },
+  {
+    "term_id": "Ottawa Treaty",
+    "title": "Ottawa Treaty",
+    "description": ""
+  },
+  {
+    "term_id": "TPNW",
+    "title": "Treaty on the Prohibition of Nuclear Weapons",
+    "description": ""
+  },
+  {
+    "term_id": "NWFZ",
+    "title": "Nuclear-Weapon-Free Zones",
+    "description": ""
+  },
+  {
+    "term_id": "CTBT",
+    "title": "Comprehensive Test-Ban Treaty",
+    "description": ""
+  },
+  {
+    "term_id": "IAEA",
+    "title": "International Atomic Energy Agency (IAEA)",
+    "description": ""
+  },
+  {
+    "term_id": "WMD",
+    "title": "Weapons of Mass Destruction (WMD)",
+    "description": ""
+  }
 ]

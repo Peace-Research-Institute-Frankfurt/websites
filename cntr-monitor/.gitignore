@@ -1,0 +1,6 @@
+.cache/
+public
+fonts/
+documentation/
+.env
+.netlify

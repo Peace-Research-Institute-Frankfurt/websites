@@ -38,7 +38,7 @@
       margin-top: 0;
     }
   }
-  .image {
+  .image-container {
     margin-top: 0.5em;
     grid-column: 1 / 6;
     margin-left: calc(var(--padding) * -1);
@@ -72,7 +72,7 @@
       grid-column: 2 / 4;
     }
   }
-  .image {
+  .image-container {
     margin-top: 0.5em;
     grid-column: 1 / 6;
     @include bp(m) {
@@ -85,7 +85,7 @@
   @include bp(m) {
     grid-column: 3 / 4;
   }
-  .image {
+  .image-container {
     max-height: 80vh;
     width: auto;
     max-width: 100%;
@@ -109,7 +109,7 @@
 
 .left-margin {
   grid-column: 1 / 6;
-  .image {
+  .image-container {
     max-width: 15rem;
   }
   @include bp(m) {
