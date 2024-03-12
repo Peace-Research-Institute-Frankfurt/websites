@@ -32,7 +32,6 @@ import { Details, DetailsGroup } from '@shared/components/Details'
 import { Event, Timeline } from '@shared/components/Timeline'
 import { FlipCards, Card } from '@shared/components/FlipCards'
 import Gallery from './Gallery'
-import Gallery from './Gallery'
 
 import * as CalloutStyles from './Callout.module.scss'
 import * as DetailsStyles from './Details.module.scss'
@@ -46,7 +45,6 @@ const shortCodes = {
   Embed,
   EmbedChoices,
   Quiz,
-  Gallery,
   Gallery,
   RadioChoice,
   Question,
@@ -80,7 +78,7 @@ const shortCodes = {
   ColumnBreak: () => <></>,
   BarGraph,
   PieChart,
-  LineChart
+  LineChart,
 }
 
 const PostBody = ({ content }) => {
