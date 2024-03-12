@@ -1,0 +1,79 @@
+---
+title: Charts demo
+intro: An example display of charts.
+order: 3
+reading_time: 3
+---
+
+import MapExampleCountries from '../../data/map-example-countries.csv'
+import ChartExampleTemperature from '../../data/charts-example-temperature.csv'
+import ChartExampleTemperatureReduced from '../../data/charts-example-temperature-reduced.csv'
+import ChartExampleTemperatureMonths from '../../data/charts-example-temperature-months.csv'
+import ChartExampleTemperatureWeeks from '../../data/charts-example-temperature-weeks.csv'
+
+## W&S Charts
+
+### BarGraph
+<BarGraph
+    data={ChartExampleTemperatureReduced}
+    xAxis={'date'}
+    xAxisTitle={'Datum'}
+    yAxisTitle={'Temperatur (in °C)'}
+    title={"Beispieltitel"}
+    description={"Dies ist die Beispieldescription"}
+    legendTitle={'Legende zum Diagramm Lorem Ipsum'}
+/>
+
+<BarGraph
+    data={ChartExampleTemperatureMonths}
+    xAxis={'date'}
+    xAxisTitle={'Datum'}
+    yAxisTitle={'Temperatur (in °C)'}
+     title={"Beispieltitel"}
+    description={"Dies ist die Beispieldescription"}
+    legendTitle={'Legende zum Diagramm Lorem Ipsum'}
+/>
+
+<BarGraph
+    data={ChartExampleTemperatureReduced}
+    xAxisTitle={'Datum'}
+    yAxisTitle={'Daten in %'}
+    series={['Austin','San Francisco']}
+    maxValue={100}
+     title={"Beispieltitel"}
+    description={"Dies ist die Beispieldescription"}
+    legendTitle={'Legende zum Diagramm Lorem Ipsum'}
+/>
+
+### LineChart
+<LineChart
+    xAxisTitle={'Zeit'}
+    yAxisTitle={'Temperature (°F)'}
+    data={ChartExampleTemperature}
+    title={"Beispieltitel"}
+    description={"Dies ist die Beispieldescription"}
+    legendTitle={'Legende zum Diagramm Lorem Ipsum'}
+/>
+
+<LineChart
+    data={ChartExampleTemperature}
+    series={['Austin','San Francisco']}
+    xAxisDateOptions={{
+        year: "numeric",
+        month: "numeric",
+    }}
+/>
+
+<LineChart
+    data={ChartExampleTemperatureWeeks}
+    xAxis={'weeks'}
+    series={['Austin','San Francisco']}
+/>
+
+### PieChart
+<PieChart
+    data={MapExampleCountries}
+    title={"Beispieltitel"}
+    description={"Dies ist die Beispieldescription"}
+    legendTitle={'Legende zum Diagramm Lorem Ipsum'}
+/>

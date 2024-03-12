@@ -9,6 +9,17 @@ import PrintTerm from './PrintTerm'
 import PrintChapter from './PrintChapter'
 import ColumnBreak from './ColumnBreak'
 import Gallery from './Gallery'
+import LayeredMap from "./LayeredMap";
+import MapLegend from "./MapLegend";
+import MarkerLayer from "./MarkerLayer";
+import MarkerLayerLegend from "./MarkerLayerLegend";
+import MarkerLayerMarkers from "./MarkerLayerMarkers";
+import CountryStatisticsLayer from "./CountryStatisticsLayer";
+import CountryStatisticsLayerCountries from "./CountryStatisticsLayerCountries";
+import CountryStatisticsLayerLegend from "./CountryStatisticsLayerLegend";
+import BarGraph from './charts/BarGraph'
+import LineChart from './charts/LineChart'
+import PieChart from './charts/PieChart'
 
 const PostBody = ({ content, unit, site, setChapterList }) => {
   const [terms, setTerms] = useState([])
@@ -18,6 +29,7 @@ const PostBody = ({ content, unit, site, setChapterList }) => {
   }
 
   const shortCodes = {
+    Gallery,
     Gallery,
     a: ({ href, children }) => {
       return (
@@ -111,6 +123,17 @@ const PostBody = ({ content, unit, site, setChapterList }) => {
     DetailsGroup: ({ children }) => <>{children}</>,
     Callout: ({ ...props }) => <aside className="callout" {...props} />,
     Chapter: ({ ...props }) => <PrintChapter setChapterList={setChapterList} {...props} />,
+    LayeredMap,
+    MapLegend,
+    MarkerLayer,
+    MarkerLayerLegend,
+    MarkerLayerMarkers,
+    CountryStatisticsLayer,
+    CountryStatisticsLayerCountries,
+    CountryStatisticsLayerLegend,
+    BarGraph,
+    LineChart,
+    PieChart,
   }
 
   return (
@@ -138,3 +161,4 @@ const PostBody = ({ content, unit, site, setChapterList }) => {
 }
 
 export default PostBody
+

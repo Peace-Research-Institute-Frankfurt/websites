@@ -8,6 +8,17 @@ import FigureAdapter from './FigureAdapter'
 import Institution from './Institution'
 import LectureVideo from './LectureVideo'
 import Map from './Map'
+import LayeredMap from './LayeredMap'
+import MapLegend from './MapLegend'
+import MarkerLayer from './MarkerLayer'
+import BarGraph from './charts/BarGraph'
+import PieChart from './charts/PieChart'
+import LineChart from './charts/LineChart'
+import MarkerLayerLegend from './MarkerLayerLegend'
+import MarkerLayerMarkers from './MarkerLayerMarkers'
+import CountryStatisticsLayer from './CountryStatisticsLayer'
+import CountryStatisticsLayerCountries from './CountryStatisticsLayerCountries'
+import CountryStatisticsLayerLegend from './CountryStatisticsLayerLegend'
 import { Choice } from './MultipleChoice'
 import { Question, Quiz, RadioChoice } from './Quiz.js'
 import QuoteAdapter from './QuoteAdapter'
@@ -56,7 +67,18 @@ const shortCodes = {
   DetailsGroup: ({ ...props }) => <DetailsGroup {...props} styles={DetailsStyles} />,
   Callout: ({ ...props }) => <Callout {...props} buttonComponent={Button} styles={CalloutStyles} />,
   Map,
+  LayeredMap,
+  MapLegend,
+  MarkerLayer,
+  MarkerLayerLegend,
+  MarkerLayerMarkers,
+  CountryStatisticsLayer,
+  CountryStatisticsLayerCountries,
+  CountryStatisticsLayerLegend,
   ColumnBreak: () => <></>,
+  BarGraph,
+  PieChart,
+  LineChart,
 }
 
 const PostBody = ({ content }) => {

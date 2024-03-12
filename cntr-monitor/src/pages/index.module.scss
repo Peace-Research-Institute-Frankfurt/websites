@@ -1,8 +1,5 @@
 @import '../components/vars';
 
-.container {
-}
-
 .hero {
   @extend %grid;
   color: var(--white);
