@@ -82,7 +82,7 @@
   padding-top: 0.5rem;
   margin-bottom: 0 !important;
   display: none;
-  @include bp(m) {
+  @include bp(l) {
     display: block;
   }
 }
