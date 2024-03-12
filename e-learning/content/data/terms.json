@@ -108,5 +108,20 @@
     "term_id": "WMD",
     "title": "Weapons of Mass Destruction (WMD)",
     "description": ""
+  },
+  {
+    "term_id": "negative-security-assurance",
+    "title": "Negative Security Assurances (WMD)",
+    "description": "NSAs, sometimes referred to as negative security assurances, are a binding commitment by a state that possesses nuclear weapons (a so-called Nuclear Weapon State, NWS) to a Non-Nuclear Weapon State (NNWS) not to use or threaten to use nuclear weapons against the NNWS."
+  },
+  {
+    "term_id": "track-1-5-diplomacy",
+    "title": "Track 1.5 diplomacy",
+    "description": "Non-governmental experts debate with government officials who are not participating in the talks in their official capacicity."
+  },
+  {
+    "term_id": "track-2-diplomacy",
+    "title": "Track 2 diplomacy",
+    "description": "Debate between non-governmental experts from different countries only. "
   }
 ]
