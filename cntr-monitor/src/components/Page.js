@@ -26,7 +26,7 @@ export const query = graphql`
       }
     }
     post: file(id: { eq: $id }) {
-      modifiedTime(locale: $language, formatString: "dddd, D.M.YYYY")
+      modifiedTime(locale: $language, formatString: "LL")
       childMdx {
         fields {
           slug
