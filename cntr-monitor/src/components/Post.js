@@ -249,7 +249,7 @@ export function Head({ data, pageContext, location }) {
   }
   const { primary, dark, light, knockout } = useColors(
     ['Analyse', 'Analysis', 'Anhang', 'Appendix'].includes(data.post.childMdx.frontmatter.category)
-      ? 'rgb(0, 106, 140)'
+      ? 'rgb(34,70,99)'
       : data.issue.childMdx.frontmatter.color
   )
   const bodyStyles = {
