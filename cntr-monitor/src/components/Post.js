@@ -248,7 +248,7 @@ export function Head({ data, pageContext, location }) {
     translations: data.translations.nodes,
   }
   const { primary, dark, light, knockout } = useColors(
-    data.post.childMdx.frontmatter.category === 'Analyse' || data.post.childMdx.frontmatter.category === 'Analysis'
+    ['Analyse', 'Analysis', 'Anhang', 'Appendix'].includes(data.post.childMdx.frontmatter.category)
       ? 'rgb(0, 106, 140)'
       : data.issue.childMdx.frontmatter.color
   )
