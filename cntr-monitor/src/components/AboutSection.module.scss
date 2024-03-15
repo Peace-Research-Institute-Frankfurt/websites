@@ -3,10 +3,7 @@
 .container {
   @extend %grid;
   align-items: baseline;
-  padding-top: var(--corner-size);
-  @include bp(m) {
-    padding-top: 4em;
-  }
+  padding-top: 2em;
 }
 
 .title {

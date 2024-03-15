@@ -273,6 +273,8 @@
 
 .downloads {
   @extend %grid;
+  border-top: 1px solid var(--gray);
+  padding-top: 2em;
   a {
     @extend %caption;
     border: 1px solid var(--black);
@@ -295,5 +297,17 @@
   grid-column: 2 / 15;
   @include bp(m) {
     grid-column: 6 / 14;
+  }
+}
+
+.downloads-title {
+  @extend %caps;
+  grid-column: 2 / 13;
+  margin-bottom: 0.5em;
+  @include bp(m) {
+    grid-column: 2 / 5;
+  }
+  @include bp(l) {
+    grid-column: 3 / 6;
   }
 }

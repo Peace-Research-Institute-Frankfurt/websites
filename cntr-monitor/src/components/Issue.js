@@ -222,11 +222,12 @@ const Issue = ({ data, pageContext, children, location }) => {
             <ol className={styles.postsList}>{posts}</ol>
           </section>
           <section className={styles.downloads}>
+            <h2 className={styles.downloadsTitle}>{t('Downloads')}</h2>
             <div className={styles.downloadsInner}>
               {data.post.childMdx.frontmatter.download_url && (
                 <a rel="download" href={data.post.childMdx.frontmatter.download_url}>
                   <DownloadIcon />
-                  {t('Download (PDF)')}
+                  {t('Complete Issue (PDF)')}
                 </a>
               )}
             </div>
