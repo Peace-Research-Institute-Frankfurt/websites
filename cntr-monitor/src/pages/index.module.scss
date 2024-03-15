@@ -136,6 +136,10 @@
     z-index: -10;
     background: var(--fc-primary);
     opacity: 0.5;
+    display: none;
+    @include bp(s) {
+      display: block;
+    }
   }
   &:before {
     content: '';

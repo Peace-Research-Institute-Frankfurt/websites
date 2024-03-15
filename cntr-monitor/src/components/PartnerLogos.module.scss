@@ -26,6 +26,10 @@
   width: 8rem;
   height: 8rem;
   position: relative;
+  @include bp(m) {
+    width: 10rem;
+    height: 10rem;
+  }
   svg {
     position: absolute;
     width: 100%;

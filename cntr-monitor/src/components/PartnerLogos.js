@@ -11,8 +11,10 @@ const PartnerLogos = () => {
   return (
     <div className={styles.container}>
       <ul className={styles.list}>
-        {logos.map((l) => (
-          <li className={styles.item}>{l}</li>
+        {logos.map((l, i) => (
+          <li key={`partner.${i}`} className={styles.item}>
+            {l}
+          </li>
         ))}
       </ul>
     </div>

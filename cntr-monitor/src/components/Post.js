@@ -225,7 +225,6 @@ export default function Post({ data, pageContext, children }) {
         </header>
         <main className={styles.body}>
           <PostBody>
-            {authors && <p className={styles.bylines}>{authors.map((a) => a.childMdx.frontmatter.name).join(', ')}</p>}
             {children}
             {authors && (
               <aside>
@@ -249,8 +248,8 @@ export function Head({ data, pageContext, location }) {
     translations: data.translations.nodes,
   }
   const { primary, dark, light, knockout } = useColors(
-    data.post.childMdx.frontmatter.category === 'Analyse' || data.post.childMdx.frontmatter.category === 'Analysis'
-      ? 'rgb(0, 106, 140)'
+    ['Analyse', 'Analysis', 'Anhang', 'Appendix'].includes(data.post.childMdx.frontmatter.category)
+      ? 'rgb(34,70,99)'
       : data.issue.childMdx.frontmatter.color
   )
   const bodyStyles = {

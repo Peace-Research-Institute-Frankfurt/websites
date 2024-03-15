@@ -21,15 +21,17 @@
 .title {
   display: flex;
   align-items: center;
-  gap: 0.2em;
   font-family: var(--montserrat);
   color: var(--color);
   font-variation-settings: 'wght' 550, 'wdth' 120;
   letter-spacing: -0.025em;
   text-transform: uppercase;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   padding-left: var(--padding);
+  white-space: nowrap;
+  gap: 0.1em;
   @include bp(m) {
+    gap: 0.2em;
     font-size: 1.6rem;
   }
   svg {
@@ -58,6 +60,19 @@
   font-feature-settings: 'onum' 1;
 }
 
+.year-long {
+  display: none;
+  @include bp(s) {
+    display: inline;
+  }
+}
+
+.year-short {
+  @include bp(s) {
+    display: none;
+  }
+}
+
 .controls {
   display: flex;
   gap: 0.5em;
@@ -71,10 +86,28 @@
     display: inline-flex;
     align-items: center;
     padding: 0 0.5em;
+    svg {
+      height: 2em;
+      width: auto;
+    }
+    path {
+      fill: currentColor;
+    }
     &:hover,
     &:focus-visible {
       background: var(--white);
       color: var(--blue-dark);
     }
+  }
+}
+
+.controls-label {
+  position: absolute;
+  font-size: 0;
+  left: -9999px;
+  padding-left: 0.25em;
+  @include bp(s) {
+    position: static;
+    font-size: var(--ms--1);
   }
 }

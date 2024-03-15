@@ -46,6 +46,7 @@ export const query = graphql`
           intro
           order
           color
+          publication_date(locale: $language, formatString: "LL")
           download_url
           cover_image {
             childImageSharp {
@@ -205,6 +206,9 @@ const Issue = ({ data, pageContext, children, location }) => {
               <div className={styles.intro}>
                 <MarkdownRenderer markdown={data.post.childMdx.frontmatter.intro} />
               </div>
+              {data.post.childMdx.frontmatter.publication_date && (
+                <span className={styles.date}>{data.post.childMdx.frontmatter.publication_date}</span>
+              )}
             </div>
           </div>
           <aside className={styles.headerCaptions}>
@@ -218,11 +222,12 @@ const Issue = ({ data, pageContext, children, location }) => {
             <ol className={styles.postsList}>{posts}</ol>
           </section>
           <section className={styles.downloads}>
+            <h2 className={styles.downloadsTitle}>{t('Downloads')}</h2>
             <div className={styles.downloadsInner}>
               {data.post.childMdx.frontmatter.download_url && (
                 <a rel="download" href={data.post.childMdx.frontmatter.download_url}>
                   <DownloadIcon />
-                  {t('Download (PDF)')}
+                  {t('Complete Issue (PDF)')}
                 </a>
               )}
             </div>
