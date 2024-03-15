@@ -6,8 +6,6 @@ import SearchForm from './SearchForm'
 import * as styles from './SiteHeader.module.scss'
 
 export default function SiteHeader({ color, issue, translationData, pages, children }) {
-  const homePath = translationData.currentLanguage !== 'de' ? `/${translationData.currentLanguage}/` : '/'
-
   const termsPage = pages.find((node) => {
     return node.base === 'terms.mdx'
   })
@@ -15,12 +13,12 @@ export default function SiteHeader({ color, issue, translationData, pages, child
   return (
     <header className={`${styles.container}`} style={{ '--color': color }}>
       <span className={styles.title}>
-        <Link to={homePath} className={`${styles.title}`}>
+        <Link to="/" className={`${styles.title}`}>
           <Logo />
           <span>Monitor</span>
         </Link>
         {issue && (
-          <Link to={`${homePath}${issue.childMdx.frontmatter.year}`} className={styles.year}>
+          <Link to={`/${issue.childMdx.frontmatter.year}`} className={styles.year}>
             <span className={styles.yearLong}>{issue.childMdx.frontmatter.title}</span>
             <span className={styles.yearShort}>’{issue.childMdx.frontmatter.title.replace('20', '')}</span>
           </Link>
