@@ -225,7 +225,6 @@ export default function Post({ data, pageContext, children }) {
         </header>
         <main className={styles.body}>
           <PostBody>
-            {authors && <p className={styles.bylines}>{authors.map((a) => a.childMdx.frontmatter.name).join(', ')}</p>}
             {children}
             {authors && (
               <aside>
