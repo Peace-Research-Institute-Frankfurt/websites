@@ -123,5 +123,25 @@
     "term_id": "track-2-diplomacy",
     "title": "Track 2 diplomacy",
     "description": "Debate between non-governmental experts from different countries only. "
-  }
+  },
+  {
+    "term_id": "eez",
+    "title": "Exclusive Economic Zone (EEZ)",
+    "description": "This is a concept adopted at the Third United Nations Conference on the Law of the Sea (1982), whereby a coastal state assumes jurisdiction over the exploration and exploitation of marine resources in its adjacent section ofthe continental shelf, taken to be a band extending 200 nautical miles from the shore."
+  },
+  {
+    "term_id": "opanal",
+    "title": "OPANAL",
+    "description": "Organismo para la Proscripción de las Armas Nucleares en la América Latina y el Caribe/Agency for the Prohibition of Nuclear Weapons in Latin America and the Caribbean established as the verification body of the Tlatelolco Treaty"
+  },
+  { "term_id": "afcone", "title": "African Commision of Nuclear Energy", "description": "" },
+  {
+    "term_id": "seanfwz",
+    "title": "South-East Asian Nuclear Weapon Free Zone",
+    "description": "Southeast Asian Nuclear-Weapon-Free Zone Treaty or Bangkok TReaty (1995)"
+  },
+  { "term_id": "ned", "title": "Nuclear Explosive Device", "description": "" },
+  { "term_id": "pne", "title": "Peaceful Nuclear Explosion", "description": "" },
+  { "term_id": "cppnm", "title": "Convention on the Physical Protection of Nuclear Material (CPPNM)", "description": "" },
+  { "term_id": "cenna", "title": "Convention on Early Notification of a Nuclear Accident (CENNA)", "description": "" }
 ]
