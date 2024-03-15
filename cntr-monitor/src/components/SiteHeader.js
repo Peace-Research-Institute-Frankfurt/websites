@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby-plugin-react-i18next'
 import Logo from '../images/logo-reverse.svg'
+import TermsIcon from '../images/terms.svg'
 import SearchForm from './SearchForm'
 import * as styles from './SiteHeader.module.scss'
 
@@ -20,7 +21,8 @@ export default function SiteHeader({ color, issue, translationData, pages, child
         </Link>
         {issue && (
           <Link to={`${homePath}${issue.childMdx.frontmatter.year}`} className={styles.year}>
-            {issue.childMdx.frontmatter.title}
+            <span className={styles.yearLong}>{issue.childMdx.frontmatter.title}</span>
+            <span className={styles.yearShort}>’{issue.childMdx.frontmatter.title.replace('20', '')}</span>
           </Link>
         )}
       </span>
@@ -28,7 +30,8 @@ export default function SiteHeader({ color, issue, translationData, pages, child
         <SearchForm />
         {termsPage && (
           <Link activeStyle={{ background: 'white', color: 'var(--blue-dark)' }} to={`/${termsPage.childMdx.fields.slug}`}>
-            {termsPage.childMdx.frontmatter.title}
+            <TermsIcon />
+            <span className={styles.controlsLabel}>{termsPage.childMdx.frontmatter.title}</span>
           </Link>
         )}
 

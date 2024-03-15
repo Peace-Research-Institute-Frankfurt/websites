@@ -286,6 +286,7 @@
 }
 
 .downloads-inner {
+  grid-column: 2 / 15;
   @include bp(m) {
     grid-column: 6 / 14;
   }
