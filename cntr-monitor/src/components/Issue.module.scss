@@ -44,7 +44,7 @@
 
   mask: var(--mask);
   @include bp(m) {
-    min-height: 65vh;
+    min-height: 75vh;
     padding-top: 6em;
     padding-top: 8em;
   }
@@ -83,8 +83,14 @@
 .intro {
   @extend %h3;
   font-variation-settings: 'wght' 400;
-  margin-top: 0.25em;
+  margin-top: 0.5em;
   text-wrap: balance;
+}
+
+.date {
+  @extend %caps;
+  display: block;
+  margin-top: 1.5em;
 }
 
 .header-image {
