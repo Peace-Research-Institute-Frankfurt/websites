@@ -31,7 +31,9 @@
     display: flex;
     list-style: none;
     flex-wrap: wrap;
-    gap: 0.5em;
+    column-gap: 0.5em;
+    row-gap: 0.15em;
+    max-width: 80%;
     @include bp(s) {
       gap: 0.75em;
       flex-flow: row;
