@@ -118,8 +118,11 @@
     gap: 0.4em;
     border: 1px solid var(--white);
     text-transform: uppercase;
-    padding: 0 0.35em;
+    padding: 0 0.5em;
+    padding-top: 0.1em;
+    padding-right: 0.75em;
     width: auto;
+    font-variation-settings: 'wght' 300, 'wdth' 150;
   }
   svg {
     width: auto;
