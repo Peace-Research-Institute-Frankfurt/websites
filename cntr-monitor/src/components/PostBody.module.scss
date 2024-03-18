@@ -65,7 +65,7 @@
       margin-top: calc(var(--baseline) * 2);
     }
     & + h3 {
-      margin-top: 0;
+      margin-top: calc(var(--baseline) * 0.75);
     }
     &:first-child {
       margin-top: 0;

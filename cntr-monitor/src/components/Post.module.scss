@@ -76,6 +76,7 @@
   line-height: 1.5;
   display: block;
   hyphens: none;
+  text-wrap: balance;
   @include bp(m) {
     margin-bottom: 2em;
   }
@@ -102,11 +103,12 @@
 }
 
 .body {
-  margin: 0 calc(var(--padding) - 1px);
   padding-top: 1.5em;
+  margin: 0 calc(var(--padding) * 2);
 
   @include bp(m) {
     padding-top: 2em;
+    margin: 0 calc(var(--padding) - 1px);
     border-left: 1px solid var(--gray);
     border-right: 1px solid var(--gray);
   }
