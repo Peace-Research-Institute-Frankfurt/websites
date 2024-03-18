@@ -1,9 +1,12 @@
 @import 'vars';
 .container {
   --measure: calc(40 * var(--ms-0));
-  padding-bottom: calc(var(--baseline) * 2);
   max-width: var(--measure);
   margin: 0 auto;
+  padding-bottom: calc(var(--baseline) * 1);
+  @include bp(m) {
+    padding-bottom: calc(var(--baseline) * 2);
+  }
 
   p {
     margin-bottom: 1em;
@@ -65,7 +68,7 @@
       margin-top: calc(var(--baseline) * 2);
     }
     & + h3 {
-      margin-top: calc(var(--baseline) * 0.75);
+      margin-top: calc(var(--baseline) * 0.25);
     }
     &:first-child {
       margin-top: 0;
@@ -73,8 +76,12 @@
   }
   & > h3 {
     @extend %h4;
-    margin-top: calc(var(--baseline) * 1.5);
-    margin-bottom: calc(var(--ms-0) * 1);
+    margin-top: calc(var(--baseline) * 1);
+    margin-bottom: calc(var(--ms-0) * 0.5);
+    @include bp(m) {
+      margin-top: calc(var(--baseline) * 1.5);
+      margin-bottom: calc(var(--ms-0) * 1);
+    }
   }
 
   p > svg {

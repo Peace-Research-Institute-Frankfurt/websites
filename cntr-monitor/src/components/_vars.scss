@@ -136,9 +136,10 @@
 }
 %h4 {
   font-family: var(--montserrat);
-  font-variation-settings: 'wght' 550, 'wdth' 100;
   letter-spacing: -0.01em;
+  font-variation-settings: 'wght' 600, 'wdth' 100;
   @include bp(s) {
+    font-variation-settings: 'wght' 550, 'wdth' 100;
     line-height: calc(var(--baseline) * 1.15);
     font-size: var(--ms-1);
   }
