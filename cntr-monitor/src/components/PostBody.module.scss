@@ -58,8 +58,12 @@
 
   & > h2 {
     @extend %h3;
-    margin-top: calc(var(--ms-0) * 2);
-    margin-bottom: calc(var(--ms-0) * 1);
+    margin-top: calc(var(--baseline) * 1);
+    margin-bottom: calc(var(--baseline) * 0.25);
+    @include bp(s) {
+      margin-bottom: calc(var(--baseline) * 1);
+      margin-top: calc(var(--baseline) * 2);
+    }
     & + h3 {
       margin-top: 0;
     }

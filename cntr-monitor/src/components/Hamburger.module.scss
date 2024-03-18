@@ -1,0 +1,40 @@
+.burger {
+  width: 100%;
+  position: relative;
+  --lw: 3px;
+  --height: 1.2rem;
+  height: var(--height);
+}
+
+.top,
+.beef,
+.bottom {
+  height: var(--lw);
+  width: 100%;
+  background: var(--white);
+  position: absolute;
+  left: 0;
+  transform-origin: center;
+  right: 0;
+  transition: var(--fast);
+}
+
+.beef {
+  top: calc(50% - var(--lw) / 2);
+}
+
+.bottom {
+  bottom: 0;
+}
+
+.open {
+  .top {
+    transform: translateY(calc(var(--height) * 0.5)) translateY(-50%) rotate(40deg);
+  }
+  .bottom {
+    transform: translateY(calc(var(--height) * -0.5)) translateY(50%) rotate(-40deg);
+  }
+  .beef {
+    opacity: 0;
+  }
+}

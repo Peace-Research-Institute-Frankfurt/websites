@@ -45,11 +45,12 @@
   --mask-small: linear-gradient(45deg, #0000 var(--corner-size-small), #000 0 calc(100% - var(--corner-size-small)), #0000 0);
   --corner-size: 2rem;
   --corner-size-small: 1.5rem;
-  --header-height: 3.5rem;
   --measure: 45rem;
   --padding: 2.5vw;
+  --header-height: 3rem;
 
   @include bp(s) {
+    --header-height: 3.5rem;
     --corner-size: 3rem;
   }
   @include bp(m) {

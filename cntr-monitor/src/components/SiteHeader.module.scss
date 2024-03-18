@@ -26,12 +26,11 @@
   font-variation-settings: 'wght' 550, 'wdth' 120;
   letter-spacing: -0.025em;
   text-transform: uppercase;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   padding-left: var(--padding);
   white-space: nowrap;
-  gap: 0.1em;
-  @include bp(m) {
-    gap: 0.2em;
+  gap: 0.25em;
+  @include bp(s) {
     font-size: 1.6rem;
   }
   svg {
@@ -60,54 +59,126 @@
   font-feature-settings: 'onum' 1;
 }
 
-.year-long {
-  display: none;
-  @include bp(s) {
-    display: inline;
-  }
-}
-
-.year-short {
+.toggle-menu {
+  width: 2.5rem;
+  padding: 0.35rem;
+  position: relative;
+  z-index: 2000;
+  font-size: 0;
+  cursor: pointer;
   @include bp(s) {
     display: none;
   }
 }
 
-.controls {
+.menu {
   display: flex;
   gap: 0.5em;
+  justify-content: space-between;
   align-items: stretch;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: calc(var(--padding) + 1.25rem);
+  height: 100vh;
+  z-index: 1000;
+  flex-flow: column;
+  padding: var(--padding);
+  padding-right: 4rem;
+  background: var(--blue-dark);
+  transform: translateX(-100%);
+  transition: var(--fast);
+  align-items: flex-start;
+  font-size: var(--ms-1);
 
-  & > a {
-    @extend %caption;
-    color: var(--white);
+  @include bp(s) {
+    flex-flow: row;
+    padding: 0;
+    height: auto;
+    transform: translateX(0);
+    justify-content: flex-end;
+    align-items: stretch;
+    background: transparent;
+    position: static;
+    font-size: var(--ms--1);
+  }
+}
+
+.menu-link {
+  color: var(--white);
+  display: inline-flex;
+  font-size: inherit;
+  width: 100%;
+  align-items: center;
+  border-bottom: 1px solid rgba(white, 0.2);
+  padding: 0.3em 0;
+  padding-bottom: 0.35em;
+  gap: 0.35em;
+  @include bp(s) {
+    gap: 0.4em;
     border: 1px solid var(--white);
     text-transform: uppercase;
-    display: inline-flex;
-    align-items: center;
-    padding: 0 0.5em;
-    svg {
-      height: 2em;
-      width: auto;
+    padding: 0 0.35em;
+    width: auto;
+  }
+  svg {
+    width: auto;
+    height: 1.4em;
+    @include bp(s) {
+      height: 1.85em;
     }
-    path {
-      fill: currentColor;
-    }
-    &:hover,
-    &:focus-visible {
-      background: var(--white);
+  }
+  path {
+    fill: currentColor;
+  }
+  &:hover,
+  &:focus-visible {
+    background: rgba(white, 0.05);
+    @include bp(s) {
       color: var(--blue-dark);
+      background: var(--white);
     }
   }
 }
 
-.controls-label {
-  position: absolute;
-  font-size: 0;
-  left: -9999px;
-  padding-left: 0.25em;
+.menu-active {
+  transform: translateX(0);
+  pointer-events: all;
+}
+
+.menu-backdrop {
+  background: rgba(black, 0.65);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 500;
+  pointer-events: none;
+  opacity: 0;
+  transition: var(--fast);
+}
+
+.menu-backdrop-active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.menu-main {
+  width: 100%;
   @include bp(s) {
-    position: static;
+    display: contents;
+  }
+}
+
+.tools {
+  @extend %caption;
+  border-top: 1px solid rgba(white, 0.15);
+  width: 100%;
+  padding-top: 0.75em;
+  font-size: var(--ms-0);
+  @include bp(s) {
     font-size: var(--ms--1);
+    display: contents;
   }
 }
