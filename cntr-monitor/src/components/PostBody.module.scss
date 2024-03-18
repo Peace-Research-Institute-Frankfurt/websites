@@ -77,10 +77,9 @@
   & > h3 {
     @extend %h4;
     margin-top: calc(var(--baseline) * 1);
-    margin-bottom: calc(var(--ms-0) * 0.5);
+    margin-bottom: calc(var(--ms-0) * 1);
     @include bp(m) {
       margin-top: calc(var(--baseline) * 1.5);
-      margin-bottom: calc(var(--ms-0) * 1);
     }
   }
 
