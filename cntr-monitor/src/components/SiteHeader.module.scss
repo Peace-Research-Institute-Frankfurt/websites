@@ -89,7 +89,7 @@
   transform: translateX(-100%);
   transition: var(--fast);
   align-items: flex-start;
-  font-size: var(--ms-1);
+  font-size: var(--ms-2);
 
   @include bp(s) {
     flex-flow: row;
