@@ -79,7 +79,9 @@
   overflow: hidden;
   left: 0;
   @include bp(m) {
-    right: 0;
+    right: -1px;
+    top: calc(100% + 0.5rem);
+    left: auto;
   }
   li:last-child .choice {
     border-bottom: 0;

@@ -37,7 +37,7 @@ export default function SiteHeader({ color, issue, translationData, pages, child
         <Hamburger open={menuIsActive} />
       </button>
       <div className={`${styles.menu} ${menuIsActive ? styles.menuActive : ''}`}>
-        <div class={styles.menuMain}>
+        <div className={styles.menuMain}>
           <SearchForm />
           {termsPage && (
             <Link

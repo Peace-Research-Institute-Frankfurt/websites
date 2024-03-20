@@ -124,7 +124,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.3em 0.325em;
+  padding: 0.3em 0.5em;
   border-right: 1px solid white;
   &:hover,
   &:focus-visible {
@@ -145,7 +145,7 @@
   svg {
     width: 1.5em;
     @include bp(m) {
-      width: 0.75em;
+      width: 1em;
     }
   }
   path {
