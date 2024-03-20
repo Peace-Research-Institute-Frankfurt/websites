@@ -248,10 +248,10 @@ export function Head({ data, pageContext, location }) {
     translations: data.translations.nodes,
   }
   const { primary, dark, light, knockout } = useColors(
+    data.issue.childMdx.frontmatter.color,
     ['Analyse', 'Analysis', 'Anhang', 'Appendix'].includes(data.post.childMdx.frontmatter.category)
-      ? 'rgb(34,70,99)'
-      : data.issue.childMdx.frontmatter.color
   )
+
   const bodyStyles = {
     '--fc-primary': primary.toString(),
     '--fc-dark': dark.toString(),
