@@ -38,13 +38,17 @@
 
 .header-inner {
   min-height: 30vh;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
   background: var(--fc-light);
   position: relative;
   z-index: 100;
   color: var(--black);
   mask: var(--mask);
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  @include bp(s) {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
   @include bp(m) {
     min-height: 50vh;
     padding-top: 6em;
@@ -68,9 +72,11 @@
 
 .eyebrow {
   @extend %caps;
-  margin-bottom: 1.5em;
-  line-height: 1;
+  margin-bottom: 1em;
+  line-height: 1.5;
   display: block;
+  hyphens: none;
+  text-wrap: balance;
   @include bp(m) {
     margin-bottom: 2em;
   }
@@ -90,18 +96,19 @@
 .intro {
   @extend %copy-large;
   hyphens: none;
-  padding-top: calc(var(--baseline) * 1.5);
+  padding-top: 1.25em;
   @include bp(m) {
     max-width: 90%;
   }
 }
 
 .body {
-  margin: 0 calc(var(--padding) - 1px);
   padding-top: 1.5em;
+  margin: 0 calc(var(--padding) * 2);
 
   @include bp(m) {
     padding-top: 2em;
+    margin: 0 calc(var(--padding) - 1px);
     border-left: 1px solid var(--gray);
     border-right: 1px solid var(--gray);
   }
@@ -109,7 +116,7 @@
 
 .pagination {
   color: var(--white);
-  display: flex;
+  display: inline-flex;
   border: 1px solid white;
 }
 
@@ -117,13 +124,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.3em 0.325em;
+  padding: 0.3em 0.5em;
   border-right: 1px solid white;
   &:hover,
   &:focus-visible {
-    background: var(--white);
-    path {
-      fill: var(--blue-dark);
+    background: rgba(white, 0.1);
+    @include bp(m) {
+      background: var(--white);
+      color: var(--blue-dark);
     }
   }
   &:last-child {
@@ -135,10 +143,13 @@
     left: -9999px;
   }
   svg {
-    width: 0.75em;
+    width: 1.5em;
+    @include bp(m) {
+      width: 1em;
+    }
   }
   path {
-    fill: var(--white);
+    fill: currentColor;
   }
 }
 

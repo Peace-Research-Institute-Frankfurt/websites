@@ -77,8 +77,6 @@ function SearchForm({ addActiveTerm }) {
   const store = data.search.store
   const results = useFlexSearch(query, index, store)
     .filter((result) => {
-      console.log(i18n)
-      console.log(result)
       return result.locale === i18n.language
     })
     .slice(0, 5)

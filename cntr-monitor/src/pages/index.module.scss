@@ -47,6 +47,7 @@
   margin-right: 0.1em;
 }
 .monitor {
+  white-space: nowrap;
   display: block;
   font-variation-settings: 'wdth' 100, 'wght' 450;
   letter-spacing: -0.065em;
@@ -57,9 +58,9 @@
   font-variation-settings: 'wdth' 140, 'wght' 300;
   z-index: 200;
   max-width: 36em;
-  padding-top: 1em;
-  grid-column: 2 / 15;
+  grid-column: 2 / 16;
   @include bp(m) {
+    padding-top: 1em;
     hyphens: none;
     grid-column: 2 / 15;
   }
@@ -147,10 +148,13 @@
     top: 0;
     right: 0;
     bottom: 0;
-    left: calc(var(--corner-size) * sqrt(2));
     z-index: -5;
     background: var(--white);
     opacity: 0.5;
+    left: 0;
+    @include bp(m) {
+      left: calc(var(--corner-size) * sqrt(2));
+    }
   }
 }
 
@@ -167,9 +171,9 @@
   @extend %h3;
   text-wrap: balance;
   font-variation-settings: 'wght' 400;
-  max-width: 24em;
   padding-top: 0.5em;
   @include bp(m) {
+    max-width: 24em;
     padding-top: 0.25em;
   }
 }
@@ -211,8 +215,8 @@
 
 .current-links {
   display: flex;
-  padding-top: 1em;
   position: absolute;
+  padding-top: 1em;
   align-items: flex-start;
   bottom: calc(var(--corner-size) * sqrt(2));
   @include bp(m) {

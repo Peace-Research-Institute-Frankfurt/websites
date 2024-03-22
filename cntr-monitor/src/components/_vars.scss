@@ -47,13 +47,19 @@
 
 %copy-large {
   font-family: var(--roboto);
-  font-variation-settings: 'wght' 400, 'wdth' 150;
   font-feature-settings: 'onum' 1;
-  font-size: var(--ms-1);
   letter-spacing: 0.005em;
   word-spacing: -0.001em;
-  line-height: calc(var(--baseline) * 1.2);
+  font-size: var(--ms-0);
+  line-height: calc(var(--baseline) * 1);
+  font-variation-settings: 'wght' 350, 'wdth' 140;
+  @include bp(s) {
+    font-size: var(--ms-1);
+    font-variation-settings: 'wght' 400, 'wdth' 150;
+    line-height: calc(var(--baseline) * 1.2);
+  }
 }
+
 %copy-bold {
   @extend %copy;
   font-variation-settings: 'wght' 700, 'wdth' 95;
@@ -93,11 +99,15 @@
 %h2 {
   font-family: var(--montserrat);
   font-variation-settings: 'wght' 700;
-  font-size: var(--ms-4);
-  line-height: calc(var(--baseline) * 2);
   hyphens: none;
   letter-spacing: -0.01em;
   text-wrap: balance;
+  font-size: var(--ms-3);
+  line-height: calc(var(--baseline) * 1.666);
+  @include bp(s) {
+    font-size: var(--ms-4);
+    line-height: calc(var(--baseline) * 2);
+  }
   @include bp(m) {
     line-height: calc(var(--baseline) * 2.333);
     font-size: var(--ms-5);
@@ -116,15 +126,23 @@
   font-variation-settings: 'wght' 700, 'wdth' 110;
   letter-spacing: -0.01em;
   hyphens: none;
-  font-size: var(--ms-2);
-  line-height: calc(var(--baseline) * 1.333);
+  text-wrap: balance;
+  font-size: var(--ms-1);
+  line-height: calc(var(--baseline) * 1.1);
+  @include bp(s) {
+    line-height: calc(var(--baseline) * 1.333);
+    font-size: var(--ms-2);
+  }
 }
 %h4 {
   font-family: var(--montserrat);
-  font-variation-settings: 'wght' 550, 'wdth' 100;
-  font-size: var(--ms-1);
   letter-spacing: -0.01em;
-  line-height: calc(var(--baseline) * 1.15);
+  font-variation-settings: 'wght' 650, 'wdth' 100;
+  @include bp(s) {
+    font-variation-settings: 'wght' 550, 'wdth' 100;
+    line-height: calc(var(--baseline) * 1.15);
+    font-size: var(--ms-1);
+  }
 }
 %h5 {
   font-family: var(--montserrat);

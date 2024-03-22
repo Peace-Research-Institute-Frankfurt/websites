@@ -107,15 +107,16 @@
   z-index: 1000;
   bottom: 0;
   right: var(--padding);
-  background: rgba(black, 0.8);
-  padding: 0.2em 0.5em;
-  padding-bottom: 0.25em;
+  background: rgba(black, 0.75);
+  padding: 0.1em 0.5em;
+  padding-bottom: 0.15em;
   transform-origin: bottom right;
   transform: rotate(90deg) translateY(100%);
   display: flex;
   gap: 0.5em;
   white-space: nowrap;
   transition: 300ms;
+  align-items: center;
   @include bp(m) {
     white-space: inherit;
     transform: none;

@@ -21,8 +21,8 @@
 .copy {
   @extend %copy;
   grid-column: 2 / 16;
-  hyphens: none;
   @include bp(m) {
+    hyphens: none;
     grid-column: 5 / 16;
   }
   @include bp(l) {

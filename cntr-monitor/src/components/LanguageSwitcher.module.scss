@@ -1,11 +1,11 @@
 @import 'vars';
 
 .container {
-  @extend %caps;
-  display: flex;
+  display: inline-flex;
   color: var(--white);
   border: 1px solid currentColor;
   overflow: hidden;
+  font-size: inherit;
 }
 
 .item {
