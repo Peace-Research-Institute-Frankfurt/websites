@@ -540,6 +540,10 @@ dt {
   overflow: visible;
 }
 
+.tableContainer:has(.large) {
+  column-span: all;
+}
+
 .tableContainer:first-child {
   margin-top: 0;
 }
@@ -572,10 +576,10 @@ dt {
 }
 
 table {
-  font-size: var(--ms--1);
+  font-size: 6.5pt;
   margin: 0;
   width: 100%;
-  line-height: calc(var(--baseline) * 0.6);
+  line-height: 8pt;
 }
 
 td,
