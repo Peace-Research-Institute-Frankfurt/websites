@@ -12,8 +12,8 @@ console.log(`\nGenerating Unit PDFs...`)
 // Find our which units we need to make PDFs for
 const basePath = `./content/learning-units`
 
-const units = fs.readdirSync(basePath)
-// const units = ['lu-18']
+const units = fs.readdirSync(basePath).filter((path) => path !== '.DS_Store')
+// const units = ['lu-02']
 
 let printUnits = []
 let skippedUnits = []

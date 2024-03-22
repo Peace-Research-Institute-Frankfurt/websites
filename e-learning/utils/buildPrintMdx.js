@@ -10,7 +10,8 @@ const basePath = `./content/learning-units`
 
 console.log('Generating print templates... ')
 
-const units = fs.readdirSync(basePath)
+const units = fs.readdirSync(basePath).filter((path) => path !== '.DS_Store')
+
 units.forEach((unit) => {
   const chapters = fs.readdirSync(`${basePath}/${unit}`)
   const hasChapters = chapters.length > 0
