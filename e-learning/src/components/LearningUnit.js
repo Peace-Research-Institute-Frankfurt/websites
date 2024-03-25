@@ -185,7 +185,7 @@ const LearningUnit = ({ data, children }) => {
                 sole responsibility of the author(s) and should under no circumstances be regarded as reflecting the position of the European Union.
               </p>
               <h3>Content Warning</h3>
-              <p>This learning unit may contain audio-visual material or texts, which may not be suitable for all audiences. </p>
+              <p>This learning unit may contain audio-visual material or texts which may not be suitable for all audiences.</p>
               <h3>External Links</h3>
               <p>
                 The site may contain hyperlink text references (’Links’) to other sites that are offered by third parties. These Links are made
@@ -193,7 +193,7 @@ const LearningUnit = ({ data, children }) => {
                 for all content and statements on linked Internet sites. Therefore, PRIF cannot guarantee the correctness and accuracy or any other
                 aspect of third party sites.
               </p>
-              <h3>Citation</h3>
+              <h3>Preferred Citation</h3>
               <p>
                 {authorsToString(authors)}, "{frontmatter.title}" in EUNPDC eLearning, ed. Niklas Schörnig, Peace Research Institute Frankfurt.
                 Available at {data.site.siteMetadata.siteUrl}

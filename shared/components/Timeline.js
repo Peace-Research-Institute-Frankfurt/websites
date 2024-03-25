@@ -26,8 +26,8 @@ function Event({ styles, date, title, collapsed, children }) {
       <div className={styles.eventDescription}>
         <div className={styles.eventHeader}>
           <div className={styles.eventHeaderCopy}>
-            <span className={styles.eventDate}>{date}</span>
-            <h3 className={styles.eventTitle}>{title}</h3>
+            {date && title && <span className={styles.eventDate}>{date}</span>}
+            <h3 className={styles.eventTitle}>{title || date}</h3>
           </div>
           <button className={styles.eventToggle} onClick={handleToggle}>
             {isCollapsed ? 'Expand' : 'Collapse'}

@@ -77,14 +77,22 @@
   h5,
   h6,
   blockquote,
-  section,
-  table {
+  section {
     grid-column: 1 / 6;
     @include bp(m) {
       grid-column: 2 / 5;
     }
     @include bp(l) {
       grid-column: 3 / 4;
+    }
+  }
+  table {
+    grid-column: 1 / 6;
+    @include bp(m) {
+      grid-column: 2 / 5;
+    }
+    @include bp(l) {
+      grid-column: 3 / 6;
     }
   }
 }
