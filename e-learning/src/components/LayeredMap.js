@@ -1,6 +1,6 @@
-import React, { useId } from 'react'
+import React from 'react'
 import * as styles from './LayeredMap.module.scss'
-import { Graticule, NaturalEarth } from '@visx/geo'
+import { NaturalEarth } from '@visx/geo'
 import admin0 from '../../../prif-review/src/data/ne_countries.json'
 import MarkerMapLayer from './MarkerLayer'
 import CountryStatisticsLayer from './CountryStatisticsLayer'
@@ -21,58 +21,51 @@ export default function LayeredMap({
   const scale = min + ((max - min) / 9) * (mapScale - 1)
   const center = [centerLong, centerLat]
   const width = 1438
-  const ratio = 1.85
+  const ratio = 2.5
   const height = width / ratio
   const translate = [width / 2, height / 2]
-  const mapId = useId()
 
   return (
-    <div className={styles.container}>
+    <figure className={styles.container}>
       <NaturalEarth data={admin0.features} scale={scale} translate={translate} center={center}>
         {(projection) => {
           return (
-            <svg
-              viewBox={`0 0 1438 777.2972972972973`}
-              className={styles.map}
-              aria-labelledby={`${title && `${mapId}-map-title`} ${title && `${mapId}-map-description`}`}
-              role={'graphics-object'}
-            >
-              {title && <title id={`${mapId}-map-title`}>{title}</title>}
-              {description && <desc id={`${mapId}-map-description`}>{description}</desc>}
-              <Graticule outline={(path) => projection.path(path)} graticule={(g) => projection.path(g)} stroke="rgba(0, 0, 0, .05)" fill="none" />
-              <g data-layer="admin0">
+            <svg viewBox={`0 0 1438 777.2972972972973`} className={styles.map} role="image">
+              {title && <title>{title}</title>}
+              {description && <desc>{description}</desc>}
+              <g data-layer="admin0" className={styles.baseMap}>
                 {projection.features.map(({ path }, i) => {
                   return (
                     <g key={`feature.${i}`}>
-                      <path key={`map-feature-${i}`} d={path || ''} fill={'#9d9d9d'} stroke={'#ffffff'} />
+                      <path key={`map-feature-${i}`} d={path || ''} />
                     </g>
                   )
                 })}
-
-                {/** country statistics Layer */}
-                {React.Children.map(children, (child) => {
-                  if (child.type === CountryStatisticsLayer) {
-                    return React.cloneElement(child, {
-                      projection: projection,
-                    })
-                  }
-                })}
-
-                {/** marker Layer */}
-                {React.Children.map(children, (child) => {
-                  if (child.type === MarkerMapLayer) {
-                    return React.cloneElement(child, {
-                      projection: projection,
-                    })
-                  }
-                })}
               </g>
+
+              {/** country statistics Layer */}
+              {React.Children.map(children, (child) => {
+                if (child.type === CountryStatisticsLayer) {
+                  return React.cloneElement(child, {
+                    projection: projection,
+                  })
+                }
+              })}
+
+              {/** marker Layer */}
+              {React.Children.map(children, (child) => {
+                if (child.type === MarkerMapLayer) {
+                  return React.cloneElement(child, {
+                    projection: projection,
+                  })
+                }
+              })}
             </svg>
           )
         }}
       </NaturalEarth>
 
       <MapLegend children={children} legendPosition={legendPosition} legendTitle={legendTitle} />
-    </div>
+    </figure>
   )
 }
