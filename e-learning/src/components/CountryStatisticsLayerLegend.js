@@ -40,46 +40,40 @@ export default function CountryStatisticsLayerLegend({ data, dataType, roundLege
   return (
     <div>
       <div className={styles.legendTitle}>{statisticsGroupName}</div>
-      <div className={styles.legendInner}>
-        {dataType === 'categorical' && (
-          <LegendOrdinal scale={legendScale}>
-            {(labels) =>
-              labels.map((label, i) => (
-                <li key={`legend-item-${i}`} className={styles.legendItem}>
+      {dataType === 'categorical' && (
+        <LegendOrdinal scale={legendScale}>
+          {(labels) =>
+            labels.map((label, i) => (
+              <li key={`legend-item-${i}`} className={styles.legendItem}>
+                <svg width={15} height={15} className={styles.legendItemIcon}>
+                  <rect fill={label.value} width={20} height={20} />
+                </svg>
+                {label.datum}
+              </li>
+            ))
+          }
+        </LegendOrdinal>
+      )}
+      {dataType === 'numerical' && (
+        <LegendThreshold scale={legendScale}>
+          {(labels) =>
+            labels.reverse().map((label, i) => (
+              <li key={`legend-item-${i}`} className={styles.legendItem}>
+                {label.extent[0] && (
                   <LegendItem margin="1px 0">
                     <svg width={15} height={15} className={styles.legendItemIcon}>
                       <rect fill={label.value} width={20} height={20} />
                     </svg>
                     <LegendLabel align="left" margin={0}>
-                      {label.datum}
+                      {label.extent[0]}–{label.extent[1]}
                     </LegendLabel>
                   </LegendItem>
-                </li>
-              ))
-            }
-          </LegendOrdinal>
-        )}
-        {dataType === 'numerical' && (
-          <LegendThreshold scale={legendScale}>
-            {(labels) =>
-              labels.reverse().map((label, i) => (
-                <li key={`legend-item-${i}`} className={styles.legendItem}>
-                  {label.extent[0] && (
-                    <LegendItem margin="1px 0">
-                      <svg width={15} height={15} className={styles.legendItemIcon}>
-                        <rect fill={label.value} width={20} height={20} />
-                      </svg>
-                      <LegendLabel align="left" margin={0}>
-                        {label.extent[0]}–{label.extent[1]}
-                      </LegendLabel>
-                    </LegendItem>
-                  )}
-                </li>
-              ))
-            }
-          </LegendThreshold>
-        )}
-      </div>
+                )}
+              </li>
+            ))
+          }
+        </LegendThreshold>
+      )}
     </div>
   )
 }

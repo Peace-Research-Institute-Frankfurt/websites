@@ -4,10 +4,10 @@ export default function CountryStatisticsLayerCountries({ projection, data, colo
   return (
     <>
       {projection.features.map(({ feature, path }, i) => {
-        const matchingCountry = data.filter((country) => (country.ISO_A3_EH === feature.properties.ISO_A3_EH ? country.value : null))
+        const matchingCountry = data.filter((country) => (country.iso3 === feature.properties.ADM0_A3 ? country.value : null))
         return matchingCountry.length > 0 && matchingCountry[0].value ? (
           <g key={`feature.${i}`}>
-            <path key={`map-feature-${i}`} d={path || ''} fill={colorRange(matchingCountry[0].value)} stroke={'#ffffff'} />
+            <path d={path || ''} fill={colorRange(matchingCountry[0].value)} stroke="black" strokeWidth={1.5} />
           </g>
         ) : null
       })}
