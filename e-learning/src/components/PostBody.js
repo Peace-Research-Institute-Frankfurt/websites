@@ -5,33 +5,36 @@ import Button from './ButtonAdapter'
 import { Embed } from './EmbedAdapter'
 import EmbedChoices from './EmbedChoicesAdapter'
 import FigureAdapter from './FigureAdapter'
+
 import Institution from './Institution'
+import Treaty from './Treaty'
+import TermAdapter from './TermAdapter'
+
 import LectureVideo from './LectureVideo'
-import Map from './Map'
-import LayeredMap from './LayeredMap'
-import MapLegend from './MapLegend'
-import MarkerLayer from './MarkerLayer'
-import BarGraph from './charts/BarGraph'
-import PieChart from './charts/PieChart'
-import LineChart from './charts/LineChart'
-import MarkerLayerLegend from './MarkerLayerLegend'
-import MarkerLayerMarkers from './MarkerLayerMarkers'
-import CountryStatisticsLayer from './CountryStatisticsLayer'
-import CountryStatisticsLayerCountries from './CountryStatisticsLayerCountries'
-import CountryStatisticsLayerLegend from './CountryStatisticsLayerLegend'
 import { Choice } from './MultipleChoice'
 import { Question, Quiz, RadioChoice } from './Quiz.js'
 import QuoteAdapter from './QuoteAdapter'
 import Resolution from './Resolution'
 import { Tab, Tabs } from './TabsAdapter'
-import TermAdapter from './TermAdapter'
-import Treaty from './Treaty'
 import Related from './Related'
 import Callout from '@shared/components/Callout'
 import { Details, DetailsGroup } from '@shared/components/Details'
 import { Event, Timeline } from '@shared/components/Timeline'
 import { FlipCards, Card } from '@shared/components/FlipCards'
 import Gallery from './Gallery'
+
+import LayeredMap from './LayeredMap'
+import MapLegend from './MapLegend'
+import MarkerLayer from './MarkerLayer'
+import MarkerLayerLegend from './MarkerLayerLegend'
+import MarkerLayerMarkers from './MarkerLayerMarkers'
+import CountryStatisticsLayer from './CountryStatisticsLayer'
+import CountryStatisticsLayerCountries from './CountryStatisticsLayerCountries'
+import CountryStatisticsLayerLegend from './CountryStatisticsLayerLegend'
+
+import BarGraph from './charts/BarGraph'
+import LineChart from './charts/LineChart'
+import PieChart from './charts/PieChart'
 
 import * as CalloutStyles from './Callout.module.scss'
 import * as DetailsStyles from './Details.module.scss'
@@ -66,7 +69,6 @@ const shortCodes = {
   Details: ({ ...props }) => <Details {...props} styles={DetailsStyles} />,
   DetailsGroup: ({ ...props }) => <DetailsGroup {...props} styles={DetailsStyles} />,
   Callout: ({ ...props }) => <Callout {...props} buttonComponent={Button} styles={CalloutStyles} />,
-  Map,
   LayeredMap,
   MapLegend,
   MarkerLayer,

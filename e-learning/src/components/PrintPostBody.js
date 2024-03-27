@@ -4,19 +4,23 @@ import { MDXProvider } from '@mdx-js/react'
 import Figure from './PrintFigure'
 import Institution from './PrintInstitution'
 import Resolution from './PrintResolution'
+
 import Treaty from './PrintTreaty'
 import PrintTerm from './PrintTerm'
+import Gallery from './Gallery'
+
 import PrintChapter from './PrintChapter'
 import ColumnBreak from './ColumnBreak'
-import Gallery from './Gallery'
-import LayeredMap from "./LayeredMap";
-import MapLegend from "./MapLegend";
-import MarkerLayer from "./MarkerLayer";
-import MarkerLayerLegend from "./MarkerLayerLegend";
-import MarkerLayerMarkers from "./MarkerLayerMarkers";
-import CountryStatisticsLayer from "./CountryStatisticsLayer";
-import CountryStatisticsLayerCountries from "./CountryStatisticsLayerCountries";
-import CountryStatisticsLayerLegend from "./CountryStatisticsLayerLegend";
+
+import LayeredMap from './LayeredMap'
+import MapLegend from './MapLegend'
+import MarkerLayer from './MarkerLayer'
+import MarkerLayerLegend from './MarkerLayerLegend'
+import MarkerLayerMarkers from './MarkerLayerMarkers'
+import CountryStatisticsLayer from './CountryStatisticsLayer'
+import CountryStatisticsLayerCountries from './CountryStatisticsLayerCountries'
+import CountryStatisticsLayerLegend from './CountryStatisticsLayerLegend'
+
 import BarGraph from './charts/BarGraph'
 import LineChart from './charts/LineChart'
 import PieChart from './charts/PieChart'
@@ -29,7 +33,6 @@ const PostBody = ({ content, unit, site, setChapterList }) => {
   }
 
   const shortCodes = {
-    Gallery,
     Gallery,
     a: ({ href, children }) => {
       return (
@@ -161,4 +164,3 @@ const PostBody = ({ content, unit, site, setChapterList }) => {
 }
 
 export default PostBody
-
