@@ -79,6 +79,9 @@
   margin: 0 calc(var(--padding) * -1);
   margin-top: var(--padding);
   border-bottom: 1px solid var(--gray);
+  @include bp(m) {
+    margin-top: calc(var(--baseline) * 3);
+  }
   &:first-child {
     border-top: 0;
     margin-top: 0;
