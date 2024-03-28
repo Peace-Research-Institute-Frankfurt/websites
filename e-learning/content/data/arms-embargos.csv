@@ -1,25 +1,25 @@
 name,iso3,value
 
-Afghanistan,AFG,United Nations arms embargo
-Central African Republic,CAF,United Nations arms embargo
-Democratic Republic of the Congo,COD,United Nations arms embargo
-Haiti,HTI,United Nations arms embargo
-Iraq,IRQ,United Nations arms embargo
-Lebanon,LBN,United Nations arms embargo
-Lybia,LBY,United Nations arms embargo
-North Korea,PRK,United Nations arms embargo
-Somalia,SOM,United Nations arms embargo
-Somaliland,SOL,United Nations arms embargo
-Yemen,YEM,United Nations arms embargo
+Afghanistan,AFG,United Nations embargo
+Central African Republic,CAF,United Nations embargo
+Democratic Republic of the Congo,COD,United Nations embargo
+Haiti,HTI,United Nations embargo
+Iraq,IRQ,United Nations embargo
+Lebanon,LBN,United Nations embargo
+Lybia,LBY,United Nations embargo
+North Korea,PRK,United Nations embargo
+Somalia,SOM,United Nations embargo
+Somaliland,SOL,United Nations embargo
+Yemen,YEM,United Nations embargo
 
-Belarus,BLR,European Union arms embargo without UN counterpart
-China,CHN,European Union arms embargo without UN counterpart
-Egypt,EGY,European Union arms embargo without UN counterpart
-Russia,RUS,European Union arms embargo without UN counterpart
-Venezuela,VEN,European Union arms embargo without UN counterpart
-Myanmar,MMR,European Union arms embargo without UN counterpart
-Zimbabwe,ZWE,European Union arms embargo without UN counterpart
+Belarus,BLR,EU embargo without UN counterpart
+China,CHN,EU embargo without UN counterpart
+Egypt,EGY,EU embargo without UN counterpart
+Russia,RUS,EU embargo without UN counterpart
+Venezuela,VEN,EU embargo without UN counterpart
+Myanmar,MMR,EU embargo without UN counterpart
+Zimbabwe,ZWE,EU embargo without UN counterpart
 
-Sudan,SDN,European Union arms embargo with broader scope than UN embargos on the same target
-South Sudan,SDS,European Union arms embargo with broader scope than UN embargos on the same target
-IRN,IRN,European Union arms embargo with broader scope than UN embargos on the same target
+Sudan,SDN,EU embargo with broader scope than UN embargos on the same target
+South Sudan,SDS,EU embargo with broader scope than UN embargos on the same target
+IRN,IRN,EU embargo with broader scope than UN embargos on the same target
