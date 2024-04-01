@@ -48,7 +48,7 @@
     "react-markdown-renderer": "^1.4.0",
     "remark-gfm": "^3.0.1",
     "sass": "^1.72.0",
-    "slug": "^8.2.3",
+    "slug": "^9.0.0",
     "unist-util-visit": "^5.0.0"
   },
   "devDependencies": {
