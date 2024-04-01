@@ -41,7 +41,7 @@
     "react-use-flexsearch": "^0.1.1",
     "remark-gfm": "^3.0.1",
     "sass": "^1.72.0",
-    "slug": "^8.2.3",
+    "slug": "^9.0.0",
     "validator": "^13.11.0"
   },
   "devDependencies": {
