@@ -44,7 +44,7 @@
     "gatsby-transformer-json": "^5.13.1",
     "gatsby-transformer-sharp": "^5.13.1",
     "luxon": "^3.4.4",
-    "mapbox-gl": "^3.1.2",
+    "mapbox-gl": "^3.3.0",
     "mdast-util-to-string": "^4.0.0",
     "pagedjs": "^0.4.3",
     "puppeteer": "^22.6.1",
