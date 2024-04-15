@@ -61,7 +61,7 @@
   },
   "devDependencies": {
     "babel-jest": "^29.7.0",
-    "babel-preset-gatsby": "^3.12.1",
+    "babel-preset-gatsby": "^3.13.2",
     "chalk": "^5.3.0",
     "csv-loader": "^3.0.5",
     "d3-hierarchy": "^3.1.2",
