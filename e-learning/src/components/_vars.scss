@@ -74,6 +74,7 @@ $text-border: 2px solid var(--gray-40);
     @extend %h2;
     margin-top: 1.4em;
     margin-bottom: 0.25em;
+    text-wrap: balance;
     &:first-child {
       margin-top: 0;
     }
