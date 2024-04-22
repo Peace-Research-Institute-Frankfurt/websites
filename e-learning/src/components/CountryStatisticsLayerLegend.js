@@ -62,7 +62,8 @@ export default function CountryStatisticsLayerLegend({ data, dataType, roundLege
                 <svg width={15} height={15} className={styles.legendItemIcon}>
                   <rect fill={label.value} width={20} height={20} />
                 </svg>
-                {label.extent[0]}–{label.extent[1]}
+                {label.extent[0] && `${label.extent[0]}–`}
+                {label.extent[1]}
               </li>
             ))
           }
