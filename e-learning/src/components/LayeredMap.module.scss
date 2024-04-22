@@ -37,6 +37,8 @@
 
   circle {
     fill: var(--blue-80);
+    stroke: white;
+    stroke-width: 1;
   }
 
   g {
@@ -116,20 +118,14 @@
   svg {
     width: 1em;
     height: 1em;
-    border: 1px solid var(--blue-80);
-  }
-
-  circle {
-    r: 6px;
-    cx: 6px;
-    cy: 6px;
-    fill: var(--blue-80);
-
-    @include bp(m) {
-      r: 10px;
-      cx: 10px;
-      cy: 10px;
+    border-radius: 2px;
+    overflow: hidden;
+    &:has(rect) {
+      border: 1px solid var(--blue-80);
     }
+  }
+  circle {
+    fill: var(--blue-80);
   }
 }
 

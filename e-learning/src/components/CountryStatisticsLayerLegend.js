@@ -1,7 +1,7 @@
 import * as styles from './LayeredMap.module.scss'
 import React from 'react'
-import { LegendItem, LegendLabel, LegendOrdinal, LegendThreshold } from '@visx/legend'
-import { scaleThreshold, scaleOrdinal } from '@visx/scale'
+import { LegendOrdinal, LegendThreshold } from '@visx/legend'
+import { scaleThreshold } from '@visx/scale'
 import { min, max } from 'd3'
 
 const computeThresholdValues = (min, max, steps, round) => {
@@ -45,8 +45,8 @@ export default function CountryStatisticsLayerLegend({ data, dataType, roundLege
           {(labels) =>
             labels.map((label, i) => (
               <li key={`legend-item-${i}`} className={styles.legendItem}>
-                <svg width={15} height={15} className={styles.legendItemIcon}>
-                  <rect fill={label.value} width={20} height={20} />
+                <svg width={10} height={10} viewBox="0 0 10 10" className={styles.legendItemIcon}>
+                  <rect fill={label.value} width={10} height={10} />
                 </svg>
                 {label.datum}
               </li>
@@ -59,16 +59,10 @@ export default function CountryStatisticsLayerLegend({ data, dataType, roundLege
           {(labels) =>
             labels.reverse().map((label, i) => (
               <li key={`legend-item-${i}`} className={styles.legendItem}>
-                {label.extent[0] && (
-                  <LegendItem margin="1px 0">
-                    <svg width={15} height={15} className={styles.legendItemIcon}>
-                      <rect fill={label.value} width={20} height={20} />
-                    </svg>
-                    <LegendLabel align="left" margin={0}>
-                      {label.extent[0]}–{label.extent[1]}
-                    </LegendLabel>
-                  </LegendItem>
-                )}
+                <svg width={15} height={15} className={styles.legendItemIcon}>
+                  <rect fill={label.value} width={20} height={20} />
+                </svg>
+                {label.extent[0]}–{label.extent[1]}
               </li>
             ))
           }
