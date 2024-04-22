@@ -15,6 +15,7 @@ import { Details, DetailsGroup } from '@shared/components/Details'
 import { Listicle, ListicleItem } from './Listicle'
 import ImageSlider from './ImageSlider'
 import Note from './Note'
+import { BubbleQuotes, BubbleQuote } from './BubbleQuote'
 import { ManifestoSignatory, ManifestoSignatories, ManifestoList, ManifestoListItem } from './Manifesto'
 import { BookReview, BookReviewList } from './BookReview'
 import PlaceholderText from './PlaceholderText'
@@ -47,6 +48,8 @@ const shortCodes = {
   FileList,
   Listicle,
   ListicleItem,
+  BubbleQuotes,
+  BubbleQuote,
   ImageSlider,
   Note,
   ManifestoSignatories,

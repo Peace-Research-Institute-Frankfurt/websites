@@ -133,8 +133,9 @@ img {
   --color: var(--gray);
 }
 
-body ul.contains-task-list {
+ul.contains-task-list {
   padding: 0;
+  grid-column: 2 / 3;
   overflow: hidden;
   input {
     background: pink;

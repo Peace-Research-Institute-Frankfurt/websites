@@ -4,8 +4,8 @@
   @extend %copy;
   display: contents;
   p,
-  ol,
-  ul,
+  ol:not([class]),
+  ul:not([class]),
   h2,
   h3,
   h4,
@@ -19,6 +19,14 @@
     }
     @include bp(l) {
       grid-column: 2 / 3;
+    }
+  }
+  p,
+  ul:not([class]),
+  ol:not([class]) {
+    margin-bottom: calc(var(--baseline) * 0.5);
+    &:last-child {
+      margin-bottom: 0;
     }
   }
   h2 {
@@ -71,9 +79,52 @@
     padding-right: 2em;
   }
   tr {
+    @extend %copy-sans;
     border-bottom: 1px solid var(--gray);
     &:last-child {
       border-bottom: 0;
+    }
+  }
+  td {
+    padding-bottom: 0.25em;
+  }
+  li {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  ul:not([class]),
+  ol:not([class]) {
+    padding-left: 1em;
+  }
+  ul:not([class]) li {
+    list-style: none;
+    position: relative;
+    &:before {
+      position: absolute;
+      left: -1em;
+      content: '—';
+      font-weight: 400;
+    }
+  }
+
+  sup {
+    vertical-align: baseline;
+    display: inline-block;
+    font-size: 0.75em;
+    margin-left: 0.1em;
+    margin-right: 0.1em;
+    color: var(--gray-light);
+    height: 1.1em;
+    width: 1.1em;
+    padding-top: 0.2em;
+    border-radius: 1000px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--gray-light);
+    a {
+      text-decoration: none !important;
     }
   }
 }
