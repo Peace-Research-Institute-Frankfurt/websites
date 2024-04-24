@@ -1,6 +1,7 @@
 import React from 'react'
-import { LegendItem, LegendLabel, LegendOrdinal } from '@visx/legend'
+import { LegendOrdinal } from '@visx/legend'
 import { scaleOrdinal } from '@visx/scale'
+import * as styles from './LayeredMap.module.scss'
 
 export default function MarkerLayerLegend({ markerGroupName }) {
   const ordinalColorScale = scaleOrdinal({
@@ -14,15 +15,12 @@ export default function MarkerLayerLegend({ markerGroupName }) {
         {(labels) => (
           <div>
             {labels.map((label, i) => (
-              <LegendItem key={`legend-quantile-${i}`} alignItems={'flex-start'}>
-                <svg width={20} height={20}>
-                  <circle key={`markerCircle.${i}`} />
+              <li key={`legend-item-${i}`} className={styles.legendItem}>
+                <svg width={10} height={10} viewBox="0 0 10 10" className={styles.legendItemIcon}>
+                  <circle r={5} cx={5} cy={5} />
                 </svg>
-
-                <LegendLabel align="left" margin="0 0 0 10px">
-                  {label.datum}
-                </LegendLabel>
-              </LegendItem>
+                {label.datum}
+              </li>
             ))}
           </div>
         )}

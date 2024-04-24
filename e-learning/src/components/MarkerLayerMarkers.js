@@ -23,7 +23,7 @@ export default function MarkerLayerMarkers({ data, projection }) {
       {data.map((marker, i) => (
         <circle
           key={`markerCircle.${i}`}
-          r={6}
+          r={8}
           className={styles.marker}
           transform={`translate(${projection.projection([
             Number.isNaN(Number(marker.long)) ? convertDMSToDD(marker.long) : Number(marker.long),
