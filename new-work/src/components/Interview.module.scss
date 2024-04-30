@@ -6,13 +6,9 @@
     display: contents;
   }
 
-  &:last-child {
-    margin-bottom: 0;
-  }
   &:first-child {
-    margin-top: 0;
     .question:first-of-type:before {
-      display: none;
+      visibility: hidden;
     }
   }
 }
