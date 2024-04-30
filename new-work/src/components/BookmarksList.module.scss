@@ -18,8 +18,7 @@
 .link {
   flex-grow: 1;
   border-right: 1px solid var(--gray);
-  padding: 0.75em var(--padding-small);
-  padding-top: 0.75em;
+  padding: 0.5em var(--padding-small);
   &:hover,
   &:focus-visible {
     background: var(--black-hover);
@@ -40,14 +39,14 @@
 
 .remove {
   button {
-    width: 3rem;
+    width: 3.4rem;
   }
 }
 
 .actions {
   display: flex;
   flex-flow: column;
-  padding: var(--padding-small);
+  padding: 0.85rem var(--padding-small);
 }
 
 .empty {
