@@ -105,8 +105,9 @@ export default function EmailShareForm({ posts }) {
           placeholder=""
         />
         <ButtonGroup>
-          <Button htmlType="submit" priority="primary" as="input" label={`${posts.length} Artikel teilen`} state={formLoadingState} />
+          <Button size="medium" htmlType="submit" priority="primary" as="input" label={`${posts.length} Artikel teilen`} state={formLoadingState} />
           <Button
+            size="medium"
             state={formLoadingState === 'loading' && 'disabled'}
             priority="secondary"
             label="Abbrechen"
@@ -124,8 +125,8 @@ export default function EmailShareForm({ posts }) {
     <div>
       <p className={`${styles.feedback} ${styles.success}`}>Email erfolgreich verschickt!</p>
       <ButtonGroup>
-        <Button onClick={() => setFlowState('collapsed')} priority="primary" state="" label="Schließen" />
-        <Button onClick={() => setFlowState('default')} priority="secondary" state="" label="Weitere Email schicken" />
+        <Button size="medium" onClick={() => setFlowState('collapsed')} priority="primary" state="" label="Schließen" />
+        <Button size="medium" onClick={() => setFlowState('default')} priority="secondary" state="" label="Weitere Email schicken" />
       </ButtonGroup>
     </div>
   )
@@ -135,8 +136,8 @@ export default function EmailShareForm({ posts }) {
         Versand fehlgeschlagen. Versuch es in ein paar Minuten erneut oder <a href={mailto}>schick die Email manuell</a> mit deiner Email-App.
       </p>
       <ButtonGroup>
-        <Button onClick={() => setFlowState('default')} state="" label="Zurück" />
-        <Button onClick={() => setFlowState('collapsed')} state="" label="Abbrechen" />
+        <Button size="medium" onClick={() => setFlowState('default')} state="" label="Zurück" />
+        <Button size="medium" onClick={() => setFlowState('collapsed')} state="" label="Abbrechen" />
       </ButtonGroup>
     </div>
   )
@@ -145,7 +146,7 @@ export default function EmailShareForm({ posts }) {
     <>
       {flowState === 'collapsed' && (
         <div className={styles.toggle}>
-          <Button priority="primary" onClick={() => setFlowState('default')} label="Per Email teilen" />
+          <Button size="medium" priority="primary" onClick={() => setFlowState('default')} label="Per Email teilen" />
         </div>
       )}
       {flowState === 'default' && <>{defaultView}</>}

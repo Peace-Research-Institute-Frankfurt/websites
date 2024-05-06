@@ -54,9 +54,6 @@
 .title {
   @extend %h1;
   display: inline;
-  @include bp(m) {
-    hyphens: none;
-  }
 }
 .credit {
   @extend %caption;
@@ -86,6 +83,6 @@
   flex-flow: column;
   @include bp(m) {
     display: grid;
-    grid-template-columns: 4.2em 1fr;
+    grid-template-columns: 6em 1fr;
   }
 }

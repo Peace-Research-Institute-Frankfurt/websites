@@ -105,7 +105,7 @@
   @include bp(m) {
     left: auto;
     right: var(--padding);
-    top: calc(var(--ms-0) * 2.5);
+    top: calc(var(--ms-0) * 2.25);
   }
 }
 
