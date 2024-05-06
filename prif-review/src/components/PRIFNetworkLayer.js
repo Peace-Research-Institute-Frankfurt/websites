@@ -40,6 +40,7 @@ const PRIFNetworkLayer = ({ cooperations, guests, residencies, projection }) => 
             type: stat.label,
             lat: data.cities.nodes[ci].lat,
             long: data.cities.nodes[ci].long,
+            city: data.cities.nodes[ci],
             country: data.cities.nodes[ci].country,
           })
         }
