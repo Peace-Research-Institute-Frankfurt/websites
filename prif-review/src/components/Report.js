@@ -172,6 +172,7 @@ const Index = ({ data, pageContext, children, location }) => {
             </h1>
           </div>
         </header>
+
         <section className={`${styles.intro} ${introCollapsed ? styles.collapsed : ''}`}>
           <h2 className={styles.sectionTitle}>{t('Editorial')}</h2>
           <div className={styles.introInner}>

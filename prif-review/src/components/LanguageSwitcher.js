@@ -8,7 +8,7 @@ export default function LanguageSwitcher({ translationData, translations }) {
   const currentLanguage = translationData.currentLanguage
 
   const languageLinks = languages.map((l, i) => {
-    const t = translations.find((el) => el.language === l)
+    const t = translations.find((el) => el && el.language === l)
     let inner = <span className={styles.inner}>{l}</span>
     if (t) {
       inner = (

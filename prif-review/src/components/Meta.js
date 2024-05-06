@@ -42,8 +42,11 @@ export default function Meta({ title, description, image, url, translationData, 
   let translations = useTranslations(translationData, defaultData.allSitePage.nodes)
 
   const alternateLinks = translations.map((t, i) => {
-    const path = `${defaultData.site.siteMetadata.siteUrl}/${t.path}`
-    return <link key={`alternate-${i}`} rel="alternate" hrefLang={t.language} href={path} />
+    if (t) {
+      const path = `${defaultData.site.siteMetadata.siteUrl}/${t.path}`
+      return <link key={`alternate-${i}`} rel="alternate" hrefLang={t.language} href={path} />
+    }
+    return null
   })
 
   return (
