@@ -56,7 +56,7 @@ const PRIFNetworkLayer = ({ cooperations, guests, residencies, projection }) => 
       const lineElement = (
         <g className={`${styles.connection} ${styles[connection.type]}`} key={`connection.${i}`}>
           <line x1={prifPosition[0]} y1={prifPosition[1]} x2={position[0]} y2={position[1]} />
-          <circle cx={position[0]} cy={position[1]} r={8} />
+          <circle cx={position[0]} cy={position[1]} r={6} />
         </g>
       )
 
@@ -66,7 +66,7 @@ const PRIFNetworkLayer = ({ cooperations, guests, residencies, projection }) => 
   return (
     <>
       {connectionElements}
-      <circle className={styles.prif} cx={prifPosition[0]} cy={prifPosition[1]} r={8} />
+      <circle className={styles.prif} cx={prifPosition[0]} cy={prifPosition[1]} r={10} />
     </>
   )
 }

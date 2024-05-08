@@ -1,5 +1,5 @@
 import React from 'react'
-import { Graticule, NaturalEarth } from '@visx/geo'
+import { NaturalEarth } from '@visx/geo'
 import admin0 from '../data/ne_countries.json'
 import MarkdownRenderer from 'react-markdown-renderer'
 import * as styles from './Map.module.scss'
@@ -21,9 +21,8 @@ const Map = ({ caption, credit, children }) => {
         {(projection) => {
           return (
             <svg viewBox={`0 0 ${width} ${height}`} className={styles.map}>
-              <Graticule outline={(path) => projection.path(path)} graticule={(g) => projection.path(g)} stroke="rgba(0, 0, 0, .05)" fill="none" />
               <g data-layer="admin0">
-                {projection.features.map(({ feature, path }, i) => {
+                {projection.features.map(({ path }, i) => {
                   return (
                     <g key={`feature.${i}`}>
                       <path className={styles.country} key={`map-feature-${i}`} d={path || ''} />
