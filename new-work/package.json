@@ -42,7 +42,7 @@
     "remark-gfm": "^3.0.1",
     "sass": "^1.76.0",
     "slug": "^9.0.0",
-    "validator": "^13.11.0"
+    "validator": "^13.12.0"
   },
   "devDependencies": {
     "@sendgrid/mail": "^8.1.3",
