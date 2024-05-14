@@ -42,6 +42,7 @@ Cairo,30.0443879,31.2357257,eg
 "Cambridge, Mass",42.3655767,-71.1040018,us
 "Cambridge, UK",52.2055314,0.1186637,gb
 "Carthage, Tunisia",36.8548083,10.3309924,tn
+Casablanca,33.5992,-7.6200,ma
 "Catania, Sicily",37.5023612,15.0873718,it
 "Chichester, UK",50.84467705,-0.7831144316193243,gb
 "Chisinau, Moldova",47.0245117,28.8322923,md
@@ -58,6 +59,7 @@ Erkner,52.4259804,13.7542811,de
 Essen,51.4582235,7.0158171,de
 "Evanston, US",42.0447388,-87.6930459,us
 Exeter,50.7255794,-3.5269497,gb
+Fes,34.0433,-5.0033,ma
 Flensburg,54.7833021,9.4333264,de
 Florence,43.7698712,11.2555757,it
 Frankfurt,50.1106444,8.6820917,de
@@ -85,6 +87,7 @@ Helsinki,60.1674881,24.9427473,fi
 Innsbruck,47.2654296,11.3927685,at
 Istanbul,41.0766019,29.052495,tr
 "Ithaca, New York",42.437417499999995,-76.54837235139263,us
+Jeddah,21.5428,39.1728,,sau
 Jerusalem,31.7788242,35.2257626,il
 "Joensuu, Finland",62.6005753,29.7622128,fi
 Johannesburg,-26.2044,28.0416,za
@@ -147,10 +150,12 @@ Ottawa,45.4247,-75.6950,ca
 "Oxford, UK",51.7520131,-1.2578499,gb
 Pamplona,42.8167,-1.6500,es
 Paris, 48.8566,2.3522, fr
+Piran,45.5271,13.5685,si
 "Podgorica, Montenegro",42.4415238,19.2621081,me
 "Potrerillo, Colombia",2.46722,-75.4875,co
 Potsdam,52.4009309,13.0591397,de
 Prague,50.0596288,14.446459273258009,cz
+Pretoria,-25.7464,28.1881,za
 "Quito, Ecuador",-0.2201641,-78.5123274,ec
 Rabat,34.02236,-6.8340222,ma
 "Ramat Gan, Israel",32.0686867,34.8246812,il
@@ -182,6 +187,7 @@ Stuttgart,48.7784485,9.1800132,de
 "Sydney, Australia",-33.8698439,151.2082848,au
 Swakopmund,-22.6667,14.5333,na
 "Talence, France",44.8088438,-0.5879629,fr
+"Tampere, Finland",61.4981,23.7608,fi
 Tbilisi,41.6934591,44.8014495,ge
 Tel Aviv,32.0852997,34.7818064,il
 Temara,33.920327,-6.927397,ma
