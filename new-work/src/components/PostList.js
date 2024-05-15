@@ -51,6 +51,7 @@ const PostList = ({ posts, activeFilters, currentPostId }) => {
               category={fm.category}
               slug={node.childMdx.fields.slug}
               intro={fm.intro}
+              authors={fm.authors}
               isCurrent={currentPostId && currentPostId === node.id}
               format={node.childMdx.frontmatter.format}
             />
@@ -96,7 +97,7 @@ const PostList = ({ posts, activeFilters, currentPostId }) => {
   )
 }
 
-const PostListItem = ({ title, intro, format, category, isCurrent, slug }) => {
+const PostListItem = ({ title, authors, intro, format, category, isCurrent, slug }) => {
   const maxWordCount = 35
   let truncatedIntro = ''
   if (intro) {
@@ -111,7 +112,18 @@ const PostListItem = ({ title, intro, format, category, isCurrent, slug }) => {
         {format && format !== '' && <span className={styles.format}>{format}</span>}
         <span className={styles.title}>{title}</span>
       </div>
-      {intro ? <p className={styles.intro}>{truncatedIntro}</p> : <PlaceholderText className={styles.intro} />}
+      <div className={styles.intro}>
+        {intro ? <p>{truncatedIntro}</p> : <PlaceholderText className={styles.intro} />}
+        {authors && (
+          <p className={styles.authors}>
+            {authors
+              .map((el) => {
+                return el.frontmatter.name
+              })
+              .join(', ')}
+          </p>
+        )}
+      </div>
     </Link>
   )
 }

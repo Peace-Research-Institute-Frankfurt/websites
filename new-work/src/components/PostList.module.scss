@@ -45,6 +45,10 @@
     @include bp(m) {
       grid-column: 2 / 3;
     }
+    .authors {
+      @extend %caption;
+      margin-top: 0.5em;
+    }
   }
   .controls {
     position: static;

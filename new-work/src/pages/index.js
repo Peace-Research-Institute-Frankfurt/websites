@@ -24,6 +24,11 @@ export const query = graphql`
             intro
             category
             format
+            authors {
+              frontmatter {
+                name
+              }
+            }
           }
         }
       }
