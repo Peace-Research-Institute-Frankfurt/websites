@@ -16,6 +16,8 @@
 .question {
   list-style: none;
   display: contents;
+  text-wrap: balance;
+  hyphens: none;
 
   &:before {
     content: '';
@@ -28,7 +30,7 @@
     }
   }
   &:first-child:before {
-    margin-top: 0;
+    display: none;
   }
   &:last-child {
     margin-bottom: 0;
