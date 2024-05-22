@@ -108,19 +108,19 @@ const PostListItem = ({ title, authors, intro, format, category, isCurrent, slug
       className={`${styles.item} ${category === 'meta' ? styles.meta : ''} ${category ? category : ''} ${isCurrent ? styles.current : ''}`}
       to={`/${slug}`}
     >
-      <div>
-        {format && format !== '' && <span className={styles.format}>{format}</span>}
-        <span className={styles.title}>{title}</span>
-      </div>
+      <span className={styles.title}>{title}</span>
       <div className={styles.intro}>
-        {intro ? <p>{truncatedIntro}</p> : <PlaceholderText className={styles.intro} />}
+        {intro ? <p>{truncatedIntro}</p> : <PlaceholderText />}
         {authors && (
           <p className={styles.authors}>
-            {authors
-              .map((el) => {
-                return el.frontmatter.name
-              })
-              .join(', ')}
+            {authors.map((el, i) => {
+              return (
+                <>
+                  <span>{el.frontmatter.name}</span>
+                  {i < authors.length - 1 && ', '}
+                </>
+              )
+            })}
           </p>
         )}
       </div>

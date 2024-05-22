@@ -23,10 +23,13 @@
     border-bottom: 1px solid var(--gray-dark);
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr 0.5fr;
     align-items: flex-start;
-    gap: var(--padding-small) var(--padding);
-    padding: var(--padding-small) var(--padding);
+    gap: var(--padding-small);
+    padding: 0.75em var(--padding);
+    @include bp(m) {
+      padding: var(--padding-small) var(--padding);
+    }
   }
   li:last-of-type .item {
     border-bottom: 0;
@@ -34,20 +37,40 @@
   .title {
     display: inline-block;
     justify-self: flex-start;
-    grid-column: 1 / 3;
-    @include bp(m) {
+    grid-column: 1 / 4;
+    font-size: var(--ms-1);
+
+    @include bp(s) {
       grid-column: 1 / 2;
+    }
+    @include bp(m) {
+      font-size: var(--ms-2);
     }
   }
   .intro {
     display: block;
-    grid-column: 1 / 3;
-    @include bp(m) {
-      grid-column: 2 / 3;
+    hyphens: auto;
+    grid-column: 1 / 4;
+    @include bp(s) {
+      grid-column: 2 / 4;
+    }
+    @include bp(l) {
+      display: contents;
     }
     .authors {
       @extend %caption;
-      margin-top: 0.5em;
+      margin-top: 0.25em;
+      color: var(--gray-light);
+      span {
+        display: inline-block;
+      }
+      @include bp(m) {
+        margin-top: 0.5em;
+      }
+      @include bp(l) {
+        margin-top: 0;
+        font-size: var(--ms--2);
+      }
     }
   }
   .controls {
@@ -89,11 +112,6 @@
       border-bottom: 0;
     }
   }
-  .title {
-    @include bp(m) {
-      white-space: nowrap;
-    }
-  }
 }
 
 .controls {
@@ -108,11 +126,9 @@
 .item {
   &:hover,
   &:focus-visible {
-    filter: brightness(1.15);
+    filter: brightness(1.1);
     .title {
-      text-decoration: underline;
-      text-decoration-thickness: 1px;
-      text-underline-offset: 0.1em;
+      transform: scale(1.01);
     }
   }
 }
@@ -152,6 +168,9 @@
     letter-spacing: 0.01em;
     word-spacing: 0.0075em;
     font-variation-settings: 'wght' 350;
+  }
+  @include bp(l) {
+    font-size: var(--ms--1);
   }
 }
 
