@@ -53,11 +53,9 @@
   grid-column: 1 / 4;
   margin-bottom: calc(var(--baseline) * 0.25);
   @include bp(m) {
+    font-size: var(--ms--1);
     top: 0.45em; // align baselines
     margin-bottom: 0;
     grid-column: 1 / 2;
-  }
-  &:before {
-    content: 'Q: ';
   }
 }
