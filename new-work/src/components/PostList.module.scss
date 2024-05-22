@@ -7,31 +7,40 @@
 .list {
   display: flex;
   list-style: none;
-  padding: var(--padding);
-  padding-top: var(--padding-small);
+  padding: 1.5em var(--padding);
+  @include bp(m) {
+    padding: var(--padding);
+    padding-top: var(--padding-small);
+  }
 }
 
 .show-list {
   .list {
-    flex-flow: column;
     padding: 0;
+    grid-template-columns: max-content 1fr 0.5fr;
+    display: grid;
+    align-items: flex-start;
+    gap: 0 var(--padding);
   }
   .group-label {
     border: 0;
     border-radius: 0;
-    margin-top: -1px;
     border-top: 1px solid var(--gray);
     border-bottom: 1px solid var(--gray);
     padding: 0.5em var(--padding);
     text-align: left;
+    grid-column: 1 / 4 !important;
+    width: 100%;
+  }
+  li {
+    display: contents;
   }
   .item {
     border-bottom: 1px solid var(--gray-dark);
-    width: 100%;
+    grid-column: 1 / 4;
     display: grid;
-    grid-template-columns: 1fr 1fr 0.5fr;
+    grid-template-columns: subgrid;
     align-items: flex-start;
-    gap: var(--padding-small);
     padding: 0.75em var(--padding);
     @include bp(m) {
       padding: var(--padding-small) var(--padding);
@@ -44,10 +53,13 @@
     display: inline-block;
     justify-self: flex-start;
     grid-column: 1 / 4;
-    font-size: var(--ms-1);
+    margin-bottom: var(--padding-small);
+    font-size: var(--ms-0);
 
     @include bp(s) {
+      font-size: var(--ms-1);
       grid-column: 1 / 2;
+      margin-bottom: 0;
     }
     @include bp(m) {
       font-size: var(--ms-2);

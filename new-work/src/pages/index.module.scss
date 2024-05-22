@@ -37,7 +37,10 @@
   transition: calc(var(--fast) * 1.75);
   cursor: pointer;
   outline-offset: 5px;
-  font-size: var(--ms-5);
+  font-size: var(--ms-4);
+  @include bp(s) {
+    font-size: var(--ms-5);
+  }
   @include bp(m) {
     font-size: 8.5vw;
   }
