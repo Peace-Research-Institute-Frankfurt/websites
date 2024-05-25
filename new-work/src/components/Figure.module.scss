@@ -16,6 +16,11 @@
   color: var(--gray-light);
 }
 
+.small {
+  grid-column: 2 / 3;
+  max-width: 20em;
+}
+
 .medium {
   display: contents;
   .inner {

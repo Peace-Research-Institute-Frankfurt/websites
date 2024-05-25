@@ -10,10 +10,9 @@
     list-style: none;
     border-radius: var(--br-small);
     flex-flow: column;
-    border: 1px solid var(--gray-dark);
     overflow: hidden;
     @include bp(l) {
-      max-width: 16em;
+      max-width: 24em;
     }
     li {
       border-bottom: 1px solid var(--gray-dark);
@@ -32,14 +31,10 @@
 }
 
 .person {
-  padding: 0.5em;
+  padding: 0.5em 0;
   width: 100%;
   color: var(--white);
   text-align: left;
-  &.active {
-    background: var(--white);
-    color: var(--black);
-  }
 }
 
 button.person {
@@ -57,7 +52,7 @@ button.person {
   display: block;
 }
 .institution {
-  opacity: 0.75;
+  color: var(--gray-light);
 }
 
 .bio {
