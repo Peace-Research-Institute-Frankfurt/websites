@@ -116,7 +116,7 @@ const PostListItem = ({ title, authors, intro, format, category, isCurrent, slug
             {authors.map((el, i) => {
               return (
                 <>
-                  <span>{el.frontmatter.name}</span>
+                  <span key={`${title}.author.${i}`}>{el.frontmatter.name}</span>
                   {i < authors.length - 1 && ', '}
                 </>
               )
