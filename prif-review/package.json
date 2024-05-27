@@ -17,7 +17,7 @@
     "@prif/shared": "0.0.1",
     "@visx/geo": "^3.5.0",
     "@visx/group": "^3.0.0",
-    "@visx/legend": "^3.5.0",
+    "@visx/legend": "^3.10.3",
     "@visx/mock-data": "^3.0.0",
     "@visx/point": "^3.0.1",
     "@visx/scale": "^3.5.0",

@@ -20,7 +20,7 @@
     "@visx/event": "^3.3.0",
     "@visx/geo": "^3.3.0",
     "@visx/grid": "^3.5.0",
-    "@visx/legend": "^3.3.0",
+    "@visx/legend": "^3.10.3",
     "@visx/pattern": "^3.3.0",
     "@visx/responsive": "^3.3.0",
     "@visx/scale": "^3.3.0",
