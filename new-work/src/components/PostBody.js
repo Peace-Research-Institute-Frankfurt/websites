@@ -42,6 +42,7 @@ const shortCodes = {
   Callout: ({ ...props }) => <Callout expandable={false} buttonComponent={Button} styles={CalloutStyles} {...props} />,
   Details: ({ ...props }) => <Details {...props} styles={DetailsStyles} />,
   DetailsGroup: ({ ...props }) => <DetailsGroup {...props} styles={DetailsStyles} />,
+  NoBreak: ({ ...props }) => <span {...props} className={styles.noBreak} />,
   Tab,
   Tabs,
   Leadin,

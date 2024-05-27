@@ -2,7 +2,7 @@
   {
     "term_id": "accountability",
     "title": "Accountability",
-    "description": "Accountability betrifft die _Verantwortlichkeit_ bzw. Rechenschaftspflicht einer Person, Organisation oder Institution für ihr Handeln, insbesondere in Bezug auf die Einhaltung von Standards, Gesetzen und Regeln. In einem organisatorischen Kontext bezieht sich Accountability auch auf die Verantwortlichkeit von Führungskräften und Beschäftigten innerhalb einer Organisation.\n\nEs geht darum, klare Rollen und Verantwortlichkeiten festzulegen, um sicherzustellen, dass Ziele erreicht, Ressourcen effektiv genutzt und Standards eingehalten werden."
+    "description": "Accountability betrifft die Verantwortlichkeit bzw. Rechenschaftspflicht einer Person, Organisation oder Institution für ihr Handeln, insbesondere in Bezug auf die Einhaltung von Standards, Gesetzen und Regeln. In einem organisatorischen Kontext bezieht sich Accountability auch auf die Verantwortlichkeit von Führungskräften und Beschäftigten innerhalb einer Organisation. Es geht darum, klare Rollen und Verantwortlichkeiten festzulegen, um sicherzustellen, dass Ziele erreicht, Ressourcen effektiv genutzt und Standards eingehalten werden."
   },
   {
     "title": "Achtsamkeit",
@@ -33,6 +33,11 @@
     "title": "Bedarfsplanung",
     "term_id": "bedarfsplanung",
     "description": "Im Kontext von [New Work](#new-work) ist es die Aufgabe der Bedarfsplanung, Veränderungen im Arbeitsumfeld sorgfältig zu analysieren, um für die Beschäftigten eine Umgebung zu schaffen, die die [Motivation](#motivation), Zufriedenheit und Leistungsfähigkeit fördert. Die Bedarfsermittlung bringt die Bedürfnisse der Mitarbeitenden und die Anforderungen der Organisation so miteinander in Einklang, dass passende New-Work-Konzepte ([Homeoffice](#homeoffice)-Regelungen, partizipative Prozesse, selbstorganisierte Teams) entwickelt werden können. Dieser Prozess stellt eine wichtige Basis für Architekt:innen und Planer:innen dar, um ein inspirierendes Arbeitsumfeld entwerfen zu können."
+  },
+  {
+    "title": "Bedarfsermittlung",
+    "term_id": "bedarfsermittlung",
+    "description": "Es ist die Aufgabe der Bedarfsermittlung, Ressourcen, Personalaufwand und Güter zu erfassen, die für die Umsetzung der neuen Arbeitsumgebungen nötig sind. Die Bedarfsplanung setzt sich mit der Deckung des zuvor festgestellten Bedarfs auseinander und ordnet finanzielle und personelle Ressourcen den einzelnen Posten zu. Die Bedarfsermittlung ist der erste Schritt, und die Bedarfsplanung baut darauf auf und leitet daraus konkrete Maßnahmen ab."
   },
   {
     "title": "Bergmann, Frithjof",
@@ -337,7 +342,7 @@
   {
     "title": "Reinventing Organizations",
     "term_id": "reinventing-organizations",
-    "description": "_Reinventing Organizations – Ein Leitfaden zur Gestaltung sinnstiftender Formen der Zusammenarbeit_ ist ein Buch des belgischen Organisationsentwicklers [Frederic Laloux](#laloux-frederic), das sich mit der Transformation herkömmlicher Arbeitsstrukturen befasst. Darin schlägt er einen evolutionären Ansatz vor, der hierarchische Modelle durch neue, flexiblere Formen der Arbeit ersetzt.\n\nEr plädiert dafür, dass Unternehmen verstärkt auf [Selbstorganisation](#selbstorganisation) und geteilte Verantwortung setzen sollten. In sogenannten „Teal Organizations“ sollten Entscheidungen auf breiter Basis getroffen werden, wodurch [Hierarchien](#hierarchie) abgebaut und die Beschäftigten befähigt werden, ihr volles Potenzial auszuschöpfen. Stehen individuelles Wachstum und eine [sinnstiftende Arbeit](#sinnstiftende-arbeit) im Vordergrund, so Laloux, sind die Mitarbeitenden motivierter und engagierter. Das Konzept von Reinventing Organizations zielt darauf ab, eine Kultur des Vertrauens und der Zusammenarbeit zu schaffen, um so mehr Innovation und Flexibilität zu ermöglichen."
+    "description": "_Reinventing Organizations – Ein Leitfaden zur Gestaltung sinnstiftender Formen der Zusammenarbeit_ ist ein Buch des belgischen Organisationsentwicklers [Frederic Laloux](#laloux-frederic), das sich mit der Transformation herkömmlicher Arbeitsstrukturen befasst. Darin schlägt er einen evolutionären Ansatz vor, der hierarchische Modelle durch neue, flexiblere Formen der Arbeit ersetzt. Er plädiert dafür, dass Unternehmen verstärkt auf [Selbstorganisation](#selbstorganisation) und geteilte Verantwortung setzen sollten. In sogenannten „Teal Organizations“ sollten Entscheidungen auf breiter Basis getroffen werden, wodurch [Hierarchien](#hierarchie) abgebaut und die Beschäftigten befähigt werden, ihr volles Potenzial auszuschöpfen. Stehen individuelles Wachstum und eine [sinnstiftende Arbeit](#sinnstiftende-arbeit) im Vordergrund, so Laloux, sind die Mitarbeitenden motivierter und engagierter. Das Konzept von Reinventing Organizations zielt darauf ab, eine Kultur des Vertrauens und der Zusammenarbeit zu schaffen, um so mehr Innovation und Flexibilität zu ermöglichen."
   },
   {
     "title": "Remote Work",
@@ -462,7 +467,7 @@
   {
     "title": "VUCA-Welt",
     "term_id": "vuca-welt",
-    "description": "VUCA-Welt ist ein Begriff aus dem Bereich des strategischen Managements und steht für ein Umfeld, das von Volatilität (Volatility), Unsicherheit (Uncertainty), Komplexität (Complexity) und Mehrdeutigkeit (Ambiguity) geprägt ist. Volatilität bezieht sich auf die hohe Geschwindigkeit und die Unbeständigkeit der Veränderungen, Unsicherheit auf die Schwierigkeit, Vorhersagen zu treffen und Ereignisse genau einzuschätzen.\n\nMit Komplexität ist gemeint, dass es viele unterschiedliche und vernetzte Faktoren gibt, die das Verständnis und die Entscheidungsfindung erschweren können. Und Mehrdeutigkeit verweist auf die Vielzahl von Informationen und widersprüchliche Interpretationen. Organisationen und Führungskräfte sind demnach heute mit neuen Herausforderungen konfrontiert, und es erfordert Anpassungsfähigkeit, Flexibilität und [Agilität](#agilitat), um in dieser VUCA-Welt erfolgreich zu sein."
+    "description": "VUCA-Welt ist ein Begriff aus dem Bereich des strategischen Managements und steht für ein Umfeld, das von Volatilität (Volatility), Unsicherheit (Uncertainty), Komplexität (Complexity) und Mehrdeutigkeit (Ambiguity) geprägt ist. Volatilität bezieht sich auf die hohe Geschwindigkeit und die Unbeständigkeit der Veränderungen, Unsicherheit auf die Schwierigkeit, Vorhersagen zu treffen und Ereignisse genau einzuschätzen. Mit Komplexität ist gemeint, dass es viele unterschiedliche und vernetzte Faktoren gibt, die das Verständnis und die Entscheidungsfindung erschweren können. Und Mehrdeutigkeit verweist auf die Vielzahl von Informationen und widersprüchliche Interpretationen. Organisationen und Führungskräfte sind demnach heute mit neuen Herausforderungen konfrontiert, und es erfordert Anpassungsfähigkeit, Flexibilität und [Agilität](#agilitat), um in dieser VUCA-Welt erfolgreich zu sein."
   },
   {
     "title": "Viertagewoche",
