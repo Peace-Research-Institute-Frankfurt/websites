@@ -115,10 +115,10 @@ const PostListItem = ({ title, authors, intro, format, category, isCurrent, slug
           <p className={styles.authors}>
             {authors.map((el, i) => {
               return (
-                <>
-                  <span key={`${title}.author.${i}`}>{el.frontmatter.name}</span>
+                <React.Fragment key={`${title}.author.${i}`}>
+                  <span>{el.frontmatter.name}</span>
                   {i < authors.length - 1 && ', '}
-                </>
+                </React.Fragment>
               )
             })}
           </p>
