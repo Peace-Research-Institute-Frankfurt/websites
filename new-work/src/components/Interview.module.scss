@@ -11,6 +11,9 @@
       visibility: hidden;
     }
   }
+  & + p {
+    margin-top: var(--baseline);
+  }
 }
 
 .question {
@@ -31,9 +34,6 @@
   }
   &:first-child:before {
     display: none;
-  }
-  &:last-child {
-    margin-bottom: 0;
   }
 }
 
