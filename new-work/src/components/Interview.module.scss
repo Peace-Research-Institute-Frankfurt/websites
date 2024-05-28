@@ -51,7 +51,8 @@
   @extend %caption;
   position: relative;
   grid-column: 1 / 4;
-  margin-bottom: calc(var(--baseline) * 0.25);
+  font-size: var(--ms--1);
+  margin-bottom: 0.5em;
   @include bp(m) {
     font-size: var(--ms--1);
     top: 0.45em; // align baselines

@@ -132,3 +132,22 @@
 .no-break {
   white-space: nowrap;
 }
+
+.aside {
+  @extend %caption;
+  align-self: flex-end;
+  position: relative;
+  grid-column: 1 / 4;
+  margin: 1em 0;
+  margin-bottom: 1.5em;
+  @include bp(m) {
+    margin: 0;
+    margin-top: calc(var(--baseline) * 1.5);
+    grid-column: 2 / 3;
+  }
+}
+
+.aside-inner {
+  bottom: 0;
+  color: var(--gray-light);
+}
