@@ -43,6 +43,11 @@ const shortCodes = {
   Details: ({ ...props }) => <Details {...props} styles={DetailsStyles} />,
   DetailsGroup: ({ ...props }) => <DetailsGroup {...props} styles={DetailsStyles} />,
   NoBreak: ({ ...props }) => <span {...props} className={styles.noBreak} />,
+  Aside: ({ children }) => (
+    <aside className={styles.aside}>
+      <div className={styles.asideInner}>{children}</div>
+    </aside>
+  ),
   Tab,
   Tabs,
   Leadin,
