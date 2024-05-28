@@ -10,6 +10,11 @@
     "description": " Der Begriff Achtsamkeit stammt ursprünglich aus der buddhistischen Lehre und bezieht sich auf eine Form des mentalen Trainings, bei der es darum geht, bewusst und aufmerksam den gegenwärtigen Moment wahrzunehmen, ohne dabei von Gedanken, Emotionen oder äußeren Ablenkungen vereinnahmt zu werden. In den letzten Jahren hat sich Achtsamkeit auch im Arbeitskontext etabliert. Ihre Praktiken können sich positiv auf das individuelle Wohlbefinden, die Arbeitszufriedenheit und die Leistungsfähigkeit der Beschäftigten auswirken und ein Umfeld schaffen, das Konzentration, Kreativität und Mitgefühl fördert."
   },
   {
+    "title": "Activity-based working",
+    "term_id": "activity-based-working",
+    "description": "Beim Activity Based Working werden traditionelle Bürostrukturen zugunsten flexibler Arbeitsformen aufgelöst. Die Mitarbeitenden können ihre Arbeitsumgebung selbst wählen – je nachdem, welche Aufgabe sie erledigen wollen. Das können zum Beispiel schallgeschützte Räume für Telefonate, Ruhezonen für konzentrierte Textarbeit oder Teamräume für Besprechungen sein"
+  },
+  {
     "title": "Agiles Manifest",
     "term_id": "agiles-manifest",
     "description": "Das Agile Manifest ist ein Thesenpapier, das die Grundprinzipien der modernen Softwareentwicklung beschreibt und auf folgenden Werten basiert:\n\n- Menschen und Interaktionen sind wichtiger als Prozesse und Werkzeuge.\n- Eine funktionierende Software ist wichtiger als die umfassende Dokumentation.\n- Die Zusammenarbeit mit dem Kunden ist wichtiger als Vertragsverhandlungen.\n- Das Reagieren auf Veränderungen ist wichtiger als das Befolgen eines Plans.\n\n Es entstand bereits 2001 als Reaktion auf die althergebrachten und starren Methoden der Softwareerstellung, die die 17 Unterzeichner des Manifests als zu unflexibel und langsam empfanden. Sie wollten eine alternative Arbeitsweise etablieren, die auf Interaktion, Kundenorientierung und Flexibilität beruht. Das Agile Manifest wurde so erfolgreich, dass es nicht nur die Softwarebranche veränderte, sondern auch die Arbeitspraxis von Teams in Wissenschaft und Wirtschaft. Darüber hinaus dient es als Fundament für agile Entwicklungsmethoden wie [Scrum](#scrum), [Kanban](#kanban) und Extreme Programming."
@@ -30,14 +35,14 @@
     "description": "In der Softwareentwicklung und im Projektmanagement ist mit Backlog eine Liste von Aufgaben gemeint, die noch erledigt werden müssen. Die Aufgaben werden dort abgelegt und nach Prioritäten geordnet, um nach und nach abgearbeitet zu werden."
   },
   {
-    "title": "Bedarfsplanung",
-    "term_id": "bedarfsplanung",
-    "description": "Im Kontext von [New Work](#new-work) ist es die Aufgabe der Bedarfsplanung, Veränderungen im Arbeitsumfeld sorgfältig zu analysieren, um für die Beschäftigten eine Umgebung zu schaffen, die die [Motivation](#motivation), Zufriedenheit und Leistungsfähigkeit fördert. Die Bedarfsermittlung bringt die Bedürfnisse der Mitarbeitenden und die Anforderungen der Organisation so miteinander in Einklang, dass passende New-Work-Konzepte ([Homeoffice](#homeoffice)-Regelungen, partizipative Prozesse, selbstorganisierte Teams) entwickelt werden können. Dieser Prozess stellt eine wichtige Basis für Architekt:innen und Planer:innen dar, um ein inspirierendes Arbeitsumfeld entwerfen zu können."
-  },
-  {
     "title": "Bedarfsermittlung",
     "term_id": "bedarfsermittlung",
     "description": "Es ist die Aufgabe der Bedarfsermittlung, Ressourcen, Personalaufwand und Güter zu erfassen, die für die Umsetzung der neuen Arbeitsumgebungen nötig sind. Die Bedarfsplanung setzt sich mit der Deckung des zuvor festgestellten Bedarfs auseinander und ordnet finanzielle und personelle Ressourcen den einzelnen Posten zu. Die Bedarfsermittlung ist der erste Schritt, und die Bedarfsplanung baut darauf auf und leitet daraus konkrete Maßnahmen ab."
+  },
+  {
+    "title": "Bedarfsplanung",
+    "term_id": "bedarfsplanung",
+    "description": "Im Kontext von [New Work](#new-work) ist es die Aufgabe der Bedarfsplanung, Veränderungen im Arbeitsumfeld sorgfältig zu analysieren, um für die Beschäftigten eine Umgebung zu schaffen, die die [Motivation](#motivation), Zufriedenheit und Leistungsfähigkeit fördert. Die Bedarfsermittlung bringt die Bedürfnisse der Mitarbeitenden und die Anforderungen der Organisation so miteinander in Einklang, dass passende New-Work-Konzepte ([Homeoffice](#homeoffice)-Regelungen, partizipative Prozesse, selbstorganisierte Teams) entwickelt werden können. Dieser Prozess stellt eine wichtige Basis für Architekt:innen und Planer:innen dar, um ein inspirierendes Arbeitsumfeld entwerfen zu können."
   },
   {
     "title": "Bergmann, Frithjof",
@@ -315,6 +320,11 @@
     "description": "Mit Onboarding ist die Einführung und Integration neuer Beschäftigter in einer Organisation gemeint. Es umfasst sämtliche Aktivitäten, die dazu dienen, ihnen den Einstieg zu erleichtern: die Bereitstellung von Informationen über die Werte, Ziele und Strukturen des Unternehmens, die Vorstellung des Teams und der Kolleg:innen, die Klärung von Rollen und Verantwortlichkeiten sowie die Vermittlung von relevanten Ressourcen. Ein effektives Onboarding trägt dazu bei, dass sich neue Kolleg:innen schnell wohlfühlen, ihre Aufgaben verstehen und in der Lage sind, produktiv zu arbeiten. Es unterstützt die Mitarbeiterbindung und fördert die langfristige Zufriedenheit und Leistungsfähigkeit. Typische Onboarding-Aktivitäten sind Orientierungsgespräche, Einführungstrainings, Mentoring-Programme und die soziale Integration."
   },
   {
+    "title": "Preboarding",
+    "term_id": "preboarding",
+    "description": "Preboarding wird die erste Phase eines Onboarding-Prozesses genannt, sie beginnt mit der Vertragsunterzeichnung und endet am ersten Arbeitstag eines neuen Mitarbeitenden. In dieser Zeit geht es darum, mit den künftigen Kolleg:innen in Verbindung zu bleiben und erste Schritte zu unternehmen, dass sie sich in ihr neues Team möglichst leicht und schnell einfinden können. Hilfreich ist zum Beispiel, bereits vor dem ersten Arbeitstag Kontakte zu den Teammitgliedern anzubieten, Pat:innen zuzuweisen und einen Einarbeitungsplan zu erstellen. Die Organisation sollte mit den neuen Mitarbeitenden offen und wertschätzend kommunizieren, damit sie sich willkommen fühlen und nicht vorzeitig abspringen."
+  },
+  {
     "title": "Proof of Concept",
     "term_id": "proof-of-concept",
     "description": "Mit einem Proof of Concept wird die Machbarkeit und Funktionalität eines Konzepts oder einer Technologie überprüft. Eine solche Testphase dient dazu, die Leistungsfähigkeit einer Lösung zu demonstrieren, bevor größere Ressourcen in die Entwicklung investiert werden. Typischerweise wird bei einem Proof of Concept ein [Prototyp](#prototyp) entwickelt oder ein begrenztes Pilotprojekt umgesetzt. So lassen sich Unsicherheiten beseitigen, Risiken minimieren und Entscheidungen für die weitere Entwicklung treffen. Die Testphase ermöglicht es, technische und praktische Herausforderungen zu identifizieren und frühzeitig [Feedback](#feedback) von Stakeholdern zu erhalten."
@@ -323,11 +333,6 @@
     "title": "Prototyp",
     "term_id": "prototyp",
     "description": "Ein Prototyp ist ein früher Entwurf bzw. das Modell eines Produkts, einer Dienstleistung oder Lösung. Er wird entwickelt, um ein Konzept oder eine Funktion zu testen und zu validieren. Mit einem Prototyp lässt sich frühzeitig [Feedback](#feedback) einholen, lassen sich potenzielle Probleme identifizieren und Verbesserungen vornehmen, bevor das endgültige Produkt entwickelt wird. Der Einsatz von Prototypen ermöglicht es Teams, Ideen greifbar zu machen und effektiver zusammenzuarbeiten. Durch den [iterativen](#iterativ) Prozess des Prototyping können Innovationen beschleunigt, Kosten reduziert und die Anpassungsfähigkeit an sich ändernde Anforderungen verbessert werden."
-  },
-  {
-    "title": "Preboarding",
-    "term_id": "preboarding",
-    "description": "Preboarding wird die erste Phase eines Onboarding-Prozesses genannt, sie beginnt mit der Vertragsunterzeichnung und endet am ersten Arbeitstag eines neuen Mitarbeitenden. In dieser Zeit geht es darum, mit den künftigen Kolleg:innen in Verbindung zu bleiben und erste Schritte zu unternehmen, dass sie sich in ihr neues Team möglichst leicht und schnell einfinden können. Hilfreich ist zum Beispiel, bereits vor dem ersten Arbeitstag Kontakte zu den Teammitgliedern anzubieten, Pat:innen zuzuweisen und einen Einarbeitungsplan zu erstellen. Die Organisation sollte mit den neuen Mitarbeitenden offen und wertschätzend kommunizieren, damit sie sich willkommen fühlen und nicht vorzeitig abspringen."
   },
   {
     "title": "Psychologische Sicherheit",
@@ -398,6 +403,11 @@
     "title": "Sinnstiftende Arbeit",
     "term_id": "sinnstiftende-arbeit",
     "description": "Sinnstiftende Arbeit gibt Beschäftigten das Gefühl, dass ihre Arbeit einen positiven Einfluss hat und einen Beitrag für Unternehmen und Gesellschaft leistet – sie sind dann motivierter und engagierter. Mitarbeitende, die einer sinnstiftenden Arbeit nachgehen, sind bereit, zusätzliche Anstrengungen zu unternehmen und Herausforderungen zu meistern, um ihre Ziele zu erreichen."
+  },
+  {
+    "title": "Smart City",
+    "term_id": "smart-city",
+    "description": "Die Smart City steht für eine nachhaltige Stadt, die Informations- und Kommunikationstechnologien strategisch integriert und einsetzt, um Mobilität, Müllabfuhr, Energie- und Wasserversorgung sowie Gütertransport effizient zu gestalten. Ziel ist es, ein sozial inklusives, umweltfreundliches und lebenswertes Umfeld für die gesamte Stadtgesellschaft zu schaffen."
   },
   {
     "title": "Soft Skills",
