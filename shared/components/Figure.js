@@ -5,7 +5,20 @@ import MarkdownRenderer from 'react-markdown-renderer'
 import ExpandIcon from '../assets/expand.svg'
 import CollapseIcon from '../assets/collapse.svg'
 
-export default function Figure({ styles, image, license, caption, credit, size, alt, src, expandable, lightboxTargetEl, className }) {
+export default function Figure({
+  styles,
+  image,
+  license,
+  caption,
+  credit,
+  size,
+  alt,
+  src,
+  expandable,
+  lightboxTargetEl,
+  className,
+  discourageSaving,
+}) {
   if (!styles) styles = {}
 
   const [isExpanded, setIsExpanded] = useState(false)
@@ -28,7 +41,10 @@ export default function Figure({ styles, image, license, caption, credit, size, 
 
   return (
     <>
-      <figure onKeyUp={handleKeyUp} className={`${styles.container} ${styles[size]} ${className ? className : ''}`}>
+      <figure
+        onKeyUp={handleKeyUp}
+        className={`${styles.container} ${styles[size]} ${discourageSaving ? styles.discourageSaving : ''} ${className ? className : ''}`}
+      >
         <div className={styles.inner}>
           <div className={styles.imageContainer}>
             {imageEl}
