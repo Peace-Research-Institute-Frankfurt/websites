@@ -67,7 +67,7 @@
   {
     "title": "Bullshit-Job",
     "term_id": "bullshit-job",
-    "description": "Der Begriff Bullshit-Job wurde von dem Anthropologen und Soziologen David Graeber geprägt. Er beschreibt damit Arbeitsplätze, die von den Beschäftigten oder der Gesellschaft als sinnlos, überflüssig oder ohne wirklichen Beitrag zur Gesellschaft empfunden werden. Menschen, die solche Jobs ausüben, haben oft das Gefühl, dass ihre Arbeit keine echte Bedeutung hat und sie nur beschäftigt werden, um den Anschein von Produktivität aufrechtzuerhalten. Typischerweise werden Bullshit-Jobs als unnötig komplizierte, bürokratische Routineaufgaben angesehen, die wenig oder keinen Mehrwert für das Unternehmen bieten und dennoch oft gut bezahlt werden."
+    "description": "Der Begriff Bullshit-Job wurde von dem Anthropologen und Soziologen David Graeber geprägt. Er beschreibt damit Arbeitsplätze, die von den Beschäftigten oder der Gesellschaft als sinnlos, überflüssig oder ohne wirklichen Beitrag zur Gesellschaft empfunden werden. Menschen, die solche Jobs ausüben, haben oft das Gefühl, dass ihre Arbeit keine echte Bedeutung hat und sie nur beschäftigt werden, um den Anschein von Produktivität aufrechtzuerhalten. Typischerweise werden Bullshit-Jobs als unnötig komplizierte, bürokratische Routineaufgaben angesehen, die wenig oder keinen Mehrwert für die Organisation bieten und dennoch oft gut bezahlt werden."
   },
   {
     "title": "Call-to-Action",
@@ -87,7 +87,7 @@
   {
     "title": "Changemanagement",
     "term_id": "changemanagement",
-    "description": "Changemanagement ist ein strategischer Ansatz, der darauf abzielt, grundlegende Veränderungen in Organisationen, Unternehmen bzw. Projekten systematisch und effektiv zu planen, umzusetzen und zu steuern."
+    "description": "Changemanagement ist ein strategischer Ansatz, der darauf abzielt, grundlegende Veränderungen in Organisationen und Projekten systematisch und effektiv zu planen, umzusetzen und zu steuern."
   },
   {
     "title": "Check-in",
@@ -107,12 +107,12 @@
   {
     "title": "Co-Working",
     "term_id": "co-working",
-    "description": "Co-Working wird eine moderne Form der Arbeitsplatznutzung genannt, bei der verschiedene Freiberufler:innen und kleine Unternehmen in gemeinsamen Räumen arbeiten statt in isolierten Einzelbüros oder zu Hause. In einem Co-Working-Space teilen sich die Nutzer:innen oft nicht nur den Raum, sondern auch Ressourcen wie Büroinfrastruktur (z. B. Schreibtische, Sitzgelegenheiten, Internetzugang, Drucker), Besprechungsräume, Küchenbereiche und manchmal auch Gemeinschaftsbereiche für Networking und soziale Interaktion."
+    "description": "Co-Working wird eine moderne Form der Arbeitsplatznutzung genannt, bei der verschiedene Freiberufler:innen und kleine Organisationen in gemeinsamen Räumen arbeiten statt in isolierten Einzelbüros oder zu Hause. In einem Co-Working-Space teilen sich die Nutzer:innen oft nicht nur den Raum, sondern auch Ressourcen wie Büroinfrastruktur (z. B. Schreibtische, Sitzgelegenheiten, Internetzugang, Drucker), Besprechungsräume, Küchenbereiche und manchmal auch Gemeinschaftsbereiche für Networking und soziale Interaktion."
   },
   {
     "title": "Compassionate Leadership",
     "term_id": "compassionate-leadership",
-    "description": "Compassionate Leadership ist ein Führungsstil, der auf Mitgefühl, Empathie und Fürsorge für Beschäftigte und Teammitglieder basiert. Es geht darum, sich als Führungskraft nicht nur auf Ziele und Ergebnisse zu fokussieren, sondern auch die Bedürfnisse, Gefühle und das Wohlbefinden der Mitarbeitenden ernst zu nehmen. So sollen die Mitarbeiterzufriedenheit, das Engagement und die Leistung gefördert werden. Durch Mitgefühl und Fürsorge werden Beziehungen gestärkt, wird Vertrauen aufgebaut und eine positive Unternehmenskultur geschaffen."
+    "description": "Compassionate Leadership ist ein Führungsstil, der auf Mitgefühl, Empathie und Fürsorge für Beschäftigte und Teammitglieder basiert. Es geht darum, sich als Führungskraft nicht nur auf Ziele und Ergebnisse zu fokussieren, sondern auch die Bedürfnisse, Gefühle und das Wohlbefinden der Mitarbeitenden ernst zu nehmen. So sollen die Mitarbeiterzufriedenheit, das Engagement und die Leistung gefördert werden. Durch Mitgefühl und Fürsorge werden Beziehungen gestärkt, wird Vertrauen aufgebaut und eine positive Organisationsskultur geschaffen."
   },
   {
     "title": "Corporate Social Responsibility",
@@ -142,17 +142,17 @@
   {
     "title": "Digitale Transformation",
     "term_id": "digitale-transformation",
-    "description": "Digitale Transformation beschreibt den umfassenden Wandel von Organisationen, Unternehmen und Gesellschaften durch den Einsatz digitaler Technologien und Innovationen. Es handelt sich um einen strategischen Prozess, bei dem traditionelle Arbeitsweisen und Geschäftsmodelle durch digitale Technologien ersetzt, verbessert oder neu gestaltet werden, um Wettbewerbsvorteile zu erlangen, die Effizienz zu steigern und Kundenerfahrungen zu verbessern. Die digitale Transformation gilt als wichtiger Treiber für [New Work](#new-work)."
+    "description": "Digitale Transformation beschreibt den umfassenden Wandel von Organisationen und Gesellschaften durch den Einsatz digitaler Technologien und Innovationen. Es handelt sich um einen strategischen Prozess, bei dem traditionelle Arbeitsweisen und Geschäftsmodelle durch digitale Technologien ersetzt, verbessert oder neu gestaltet werden, um Wettbewerbsvorteile zu erlangen, die Effizienz zu steigern und Kundenerfahrungen zu verbessern. Die digitale Transformation gilt als wichtiger Treiber für [New Work](#new-work)."
   },
   {
     "title": "Diversity",
     "term_id": "diversity",
-    "description": "Diversity (Vielfalt) bezieht sich auf die Unterschiede und die Vielfalt in einer Gemeinschaft, Organisation oder der Gesellschaft. Innerhalb eines Unternehmens geht es darum, die verschiedenen individuellen Hintergründe, Merkmale und Zugehörigkeiten anzuerkennen und wertzuschätzen. So lassen sich unterschiedliche Perspektiven, Erfahrungen und Fähigkeiten integrieren. Eine diverse Umgebung fördert den Austausch von Ideen, die Kreativität, steigert die Innovationskraft und stärkt das soziale Miteinander. Es ist von großer Bedeutung für den langfristigen Erfolg eines Unternehmens, Diversity nicht nur anzuerkennen, sondern auch aktiv zu fördern, um eine Kultur zu schaffen, in der alle Menschen gleiche Chancen erhalten. Diversity kann dazu beitragen, Probleme zu lösen und Chancen zu nutzen."
+    "description": "Diversity (Vielfalt) bezieht sich auf die Unterschiede und die Vielfalt in einer Gemeinschaft, Organisation oder der Gesellschaft. Innerhalb einer Organisation geht es darum, die verschiedenen individuellen Hintergründe, Merkmale und Zugehörigkeiten anzuerkennen und wertzuschätzen. So lassen sich unterschiedliche Perspektiven, Erfahrungen und Fähigkeiten integrieren. Eine diverse Umgebung fördert den Austausch von Ideen, die Kreativität, steigert die Innovationskraft und stärkt das soziale Miteinander. Es ist von großer Bedeutung für den langfristigen Erfolg einer Organisation, Diversity nicht nur anzuerkennen, sondern auch aktiv zu fördern, um eine Kultur zu schaffen, in der alle Menschen gleiche Chancen erhalten. Diversity kann dazu beitragen, Probleme zu lösen und Chancen zu nutzen."
   },
   {
     "title": "Domain",
     "term_id": "domain",
-    "description": "Im Kontext von [New Work](#new-work) meint Domain den Verantwortungsbereich eines Beschäftigten bzw. eines Teams in einer Organisation. Es kann sich um ein Projekt oder eine Aufgabe handeln, die sie selbstständig und autonom betreuen. In Unternehmen, die New-Work-Prinzipien anwenden, werden die Beschäftigten oft in Domains organisiert statt in klassischen [Hierarchien](#hierarchie). Die Idee dahinter ist, dass sie so mehr Eigenverantwortung und Freiheiten erhalten, um Entscheidungen in ihrem Verantwortungsbereich zu treffen und ihre Arbeit selbst zu organisieren."
+    "description": "Im Kontext von [New Work](#new-work) meint Domain den Verantwortungsbereich eines Beschäftigten bzw. eines Teams in einer Organisation. Es kann sich um ein Projekt oder eine Aufgabe handeln, die sie selbstständig und autonom betreuen. In Organisationen, die New-Work-Prinzipien anwenden, werden die Beschäftigten oft in Domains organisiert statt in klassischen [Hierarchien](#hierarchie). Die Idee dahinter ist, dass sie so mehr Eigenverantwortung und Freiheiten erhalten, um Entscheidungen in ihrem Verantwortungsbereich zu treffen und ihre Arbeit selbst zu organisieren."
   },
   {
     "title": "Dual Leadership",
@@ -232,7 +232,7 @@
   {
     "title": "Holokratie",
     "term_id": "holokratie",
-    "description": "Holokratie (auch: Holakratie) ist ein Organisationsmodell, das auf [Selbstorganisation](#selbstorganisation), dezentraler Entscheidungsfindung und klaren Rollen basiert. Sie stellt eine Alternative zur [hierarchischen](#hierarchie) Unternehmensführung dar und ersetzt die traditionelle Befehls- und Kontrollstrukturen durch ein System von autonomen Teams und [rollenbasierten](#rollenbasiertes-arbeiten) Entscheidungsprozessen. Holokratie ist Teil einer Diskussion über neue Formen der Zusammenarbeit, die in den letzten Jahren im Rahmen von [New Work](#new-work) und der Transformation von Unternehmen und Organisationen zunehmend an Bedeutung gewonnen hat."
+    "description": "Holokratie (auch: Holakratie) ist ein Organisationsmodell, das auf [Selbstorganisation](#selbstorganisation), dezentraler Entscheidungsfindung und klaren Rollen basiert. Sie stellt eine Alternative zur [hierarchischen](#hierarchie) Führung dar und ersetzt die traditionelle Befehls- und Kontrollstrukturen durch ein System von autonomen Teams und [rollenbasierten](#rollenbasiertes-arbeiten) Entscheidungsprozessen. Holokratie ist Teil einer Diskussion über neue Formen der Zusammenarbeit, die in den letzten Jahren im Rahmen von [New Work](#new-work) und der Transformation von Organisationen zunehmend an Bedeutung gewonnen hat."
   },
   {
     "title": "Homeoffice",
@@ -242,7 +242,7 @@
   {
     "title": "Human Resources",
     "term_id": "human-resources",
-    "description": "Human Resources (HR) wird die Abteilung innerhalb einer Organisation genannt, die sich mit der Verwaltung der Personalangelegenheiten und der Entwicklung des Mitarbeiterpotenzials befasst. HR umfasst eine Vielzahl von Aufgaben und Verantwortlichkeiten, darunter Personalbeschaffung, Mitarbeiterbindung, Vergütung und Benefits, Arbeitsbeziehungen sowie Mitarbeiterbetreuung. Die Hauptaufgabe der HR-Abteilung besteht darin sicherzustellen, dass die Organisation über qualifizierte und engagierte Beschäftigte verfügt, die zum Unternehmenserfolg beitragen. Darüber hinaus übernimmt HR eine wichtige Rolle bei der Schaffung einer positiven Arbeitsumgebung, der Lösung von [Konflikten](#konflikt), der Förderung von [Diversität](#diversity) und Inklusion sowie der Einhaltung von Arbeitsgesetzen und -vorschriften."
+    "description": "Human Resources (HR) wird die Abteilung innerhalb einer Organisation genannt, die sich mit der Verwaltung der Personalangelegenheiten und der Entwicklung des Mitarbeiterpotenzials befasst. HR umfasst eine Vielzahl von Aufgaben und Verantwortlichkeiten, darunter Personalbeschaffung, Mitarbeiterbindung, Vergütung und Benefits, Arbeitsbeziehungen sowie Mitarbeiterbetreuung. Die Hauptaufgabe der HR-Abteilung besteht darin sicherzustellen, dass die Organisation über qualifizierte und engagierte Beschäftigte verfügt, die zum gemeinsamen Erfolg beitragen. Darüber hinaus übernimmt HR eine wichtige Rolle bei der Schaffung einer positiven Arbeitsumgebung, der Lösung von [Konflikten](#konflikt), der Förderung von [Diversität](#diversity) und Inklusion sowie der Einhaltung von Arbeitsgesetzen und -vorschriften."
   },
   {
     "title": "Inner Work",
@@ -282,7 +282,7 @@
   {
     "title": "Laloux, Frederic",
     "term_id": "laloux-frederic",
-    "description": "Frederic Laloux ist ein belgischer Organisationsentwickler, Berater und Autor – und einer der Vordenker von [New Work](#new-work). Bekannt geworden ist er 2014 mit seinem Buch Reinventing Organizations, das in der Welt der Organisationsentwicklung und des Managements große Aufmerksamkeit erregte. Laloux untersucht darin verschiedene Formen der Organisationsstruktur und Unternehmensführung und beschreibt eine neue, evolutionäre Stufe von Organisationen, die er als „Teal-Organisationen“ bezeichnet. Teal-Organisationen zeichnen sich durch eine höhere Reife und Bewusstheit aus, durch Ganzheitlichkeit, [Selbstorganisation](#selbstorganisation), Sinnorientierung und dezentrale Entscheidungsstrukturen."
+    "description": "Frederic Laloux ist ein belgischer Organisationsentwickler, Berater und Autor – und einer der Vordenker von [New Work](#new-work). Bekannt geworden ist er 2014 mit seinem Buch Reinventing Organizations, das in der Welt der Organisationsentwicklung und des Managements große Aufmerksamkeit erregte. Laloux untersucht darin verschiedene Formen der Organisationsstruktur und Führung und beschreibt eine neue, evolutionäre Stufe von Organisationen, die er als „Teal-Organisationen“ bezeichnet. Teal-Organisationen zeichnen sich durch eine höhere Reife und Bewusstheit aus, durch Ganzheitlichkeit, [Selbstorganisation](#selbstorganisation), Sinnorientierung und dezentrale Entscheidungsstrukturen."
   },
   {
     "title": "Leadership",
@@ -312,12 +312,12 @@
   {
     "title": "New Work",
     "term_id": "new-work",
-    "description": "New Work ist ein Konzept, das sich mit der Zukunft der Arbeit beschäftigt und das durch die Digitalisierung und die Pandemie zuletzt stark an Bedeutung gewonnen hat. Es steht für eine radikale Veränderung herkömmlicher Arbeitsmodelle, um den sich verändernden Bedürfnissen von Beschäftigten und Unternehmen gerecht zu werden. Zu den Grundprinzipien von New Work zählen Flexibilität, Selbstbestimmung, Teilhabe, Sinnstiftung und eine menschenzentrierte Arbeitskultur. Im Kern geht es darum, Arbeit als etwas zu betrachten, das mehr als nur eine Einkommensquelle ist, das heißt, die Bedürfnisse und Potenziale der Mitarbeitenden zu berücksichtigen, ihnen mehr Autonomie und Verantwortung zu geben und ihnen die Möglichkeit zu eröffnen, ihre Fähigkeiten optimal einzusetzen. New Work fördert eine flexible Arbeitszeitgestaltung und den Einsatz digitaler Technologien, um die Work-Life-Balance zu verbessern, und strebt den Abbau hierarchischer Strukturen und eine stärkere [Selbstorganisation](#selbstorganisation) und Kollaboration an. Der Mensch und seine Bedürfnisse stehen im Mittelpunkt."
+    "description": "New Work ist ein Konzept, das sich mit der Zukunft der Arbeit beschäftigt und das durch die Digitalisierung und die Pandemie zuletzt stark an Bedeutung gewonnen hat. Es steht für eine radikale Veränderung herkömmlicher Arbeitsmodelle, um den sich verändernden Bedürfnissen von Beschäftigten und Organisationen gerecht zu werden. Zu den Grundprinzipien von New Work zählen Flexibilität, Selbstbestimmung, Teilhabe, Sinnstiftung und eine menschenzentrierte Arbeitskultur. Im Kern geht es darum, Arbeit als etwas zu betrachten, das mehr als nur eine Einkommensquelle ist, das heißt, die Bedürfnisse und Potenziale der Mitarbeitenden zu berücksichtigen, ihnen mehr Autonomie und Verantwortung zu geben und ihnen die Möglichkeit zu eröffnen, ihre Fähigkeiten optimal einzusetzen. New Work fördert eine flexible Arbeitszeitgestaltung und den Einsatz digitaler Technologien, um die Work-Life-Balance zu verbessern, und strebt den Abbau hierarchischer Strukturen und eine stärkere [Selbstorganisation](#selbstorganisation) und Kollaboration an. Der Mensch und seine Bedürfnisse stehen im Mittelpunkt."
   },
   {
     "title": "Onboarding",
     "term_id": "onboarding",
-    "description": "Mit Onboarding ist die Einführung und Integration neuer Beschäftigter in einer Organisation gemeint. Es umfasst sämtliche Aktivitäten, die dazu dienen, ihnen den Einstieg zu erleichtern: die Bereitstellung von Informationen über die Werte, Ziele und Strukturen des Unternehmens, die Vorstellung des Teams und der Kolleg:innen, die Klärung von Rollen und Verantwortlichkeiten sowie die Vermittlung von relevanten Ressourcen. Ein effektives Onboarding trägt dazu bei, dass sich neue Kolleg:innen schnell wohlfühlen, ihre Aufgaben verstehen und in der Lage sind, produktiv zu arbeiten. Es unterstützt die Mitarbeiterbindung und fördert die langfristige Zufriedenheit und Leistungsfähigkeit. Typische Onboarding-Aktivitäten sind Orientierungsgespräche, Einführungstrainings, Mentoring-Programme und die soziale Integration."
+    "description": "Mit Onboarding ist die Einführung und Integration neuer Beschäftigter in einer Organisation gemeint. Es umfasst sämtliche Aktivitäten, die dazu dienen, ihnen den Einstieg zu erleichtern: die Bereitstellung von Informationen über die Werte, Ziele und Strukturen der Organisation, die Vorstellung des Teams und der Kolleg:innen, die Klärung von Rollen und Verantwortlichkeiten sowie die Vermittlung von relevanten Ressourcen. Ein effektives Onboarding trägt dazu bei, dass sich neue Kolleg:innen schnell wohlfühlen, ihre Aufgaben verstehen und in der Lage sind, produktiv zu arbeiten. Es unterstützt die Mitarbeiterbindung und fördert die langfristige Zufriedenheit und Leistungsfähigkeit. Typische Onboarding-Aktivitäten sind Orientierungsgespräche, Einführungstrainings, Mentoring-Programme und die soziale Integration."
   },
   {
     "title": "Preboarding",
@@ -347,7 +347,7 @@
   {
     "title": "Reinventing Organizations",
     "term_id": "reinventing-organizations",
-    "description": "_Reinventing Organizations – Ein Leitfaden zur Gestaltung sinnstiftender Formen der Zusammenarbeit_ ist ein Buch des belgischen Organisationsentwicklers [Frederic Laloux](#laloux-frederic), das sich mit der Transformation herkömmlicher Arbeitsstrukturen befasst. Darin schlägt er einen evolutionären Ansatz vor, der hierarchische Modelle durch neue, flexiblere Formen der Arbeit ersetzt. Er plädiert dafür, dass Unternehmen verstärkt auf [Selbstorganisation](#selbstorganisation) und geteilte Verantwortung setzen sollten. In sogenannten „Teal Organizations“ sollten Entscheidungen auf breiter Basis getroffen werden, wodurch [Hierarchien](#hierarchie) abgebaut und die Beschäftigten befähigt werden, ihr volles Potenzial auszuschöpfen. Stehen individuelles Wachstum und eine [sinnstiftende Arbeit](#sinnstiftende-arbeit) im Vordergrund, so Laloux, sind die Mitarbeitenden motivierter und engagierter. Das Konzept von Reinventing Organizations zielt darauf ab, eine Kultur des Vertrauens und der Zusammenarbeit zu schaffen, um so mehr Innovation und Flexibilität zu ermöglichen."
+    "description": "_Reinventing Organizations – Ein Leitfaden zur Gestaltung sinnstiftender Formen der Zusammenarbeit_ ist ein Buch des belgischen Organisationsentwicklers [Frederic Laloux](#laloux-frederic), das sich mit der Transformation herkömmlicher Arbeitsstrukturen befasst. Darin schlägt er einen evolutionären Ansatz vor, der hierarchische Modelle durch neue, flexiblere Formen der Arbeit ersetzt. Er plädiert dafür, dass Organisationen verstärkt auf [Selbstorganisation](#selbstorganisation) und geteilte Verantwortung setzen sollten. In sogenannten „Teal Organizations“ sollten Entscheidungen auf breiter Basis getroffen werden, wodurch [Hierarchien](#hierarchie) abgebaut und die Beschäftigten befähigt werden, ihr volles Potenzial auszuschöpfen. Stehen individuelles Wachstum und eine [sinnstiftende Arbeit](#sinnstiftende-arbeit) im Vordergrund, so Laloux, sind die Mitarbeitenden motivierter und engagierter. Das Konzept von Reinventing Organizations zielt darauf ab, eine Kultur des Vertrauens und der Zusammenarbeit zu schaffen, um so mehr Innovation und Flexibilität zu ermöglichen."
   },
   {
     "title": "Remote Work",
@@ -357,7 +357,7 @@
   {
     "title": "Remote-First-Company",
     "term_id": "remote-first-company",
-    "description": "Eine Remote-First-Company ist ein Unternehmen, das seine Organisationsstruktur so gestaltet, dass Beschäftigte die Freiheit haben, von jedem beliebigen Ort aus zu arbeiten. Im Gegensatz zu herkömmlichen Unternehmen mit physischen Büros legt eine Remote-First-Company den Schwerpunkt auf Fernarbeit als Grundlage für ihre Aktivitäten. Die Mitarbeitenden haben die Möglichkeit, von zu Hause aus, in [Co-Working](#co-working)-Spaces oder an anderen Orten ihrer Wahl zu arbeiten. Die Kommunikation und Zusammenarbeit erfolgen über digitale [Tools](#tools) und Plattformen."
+    "description": "Eine Remote-First-Company ist eine Organisation, das seine Organisationsstruktur so gestaltet, dass Beschäftigte die Freiheit haben, von jedem beliebigen Ort aus zu arbeiten. Im Gegensatz zu herkömmlichen Organisationen mit physischen Büros legt eine Remote-First-Company den Schwerpunkt auf Fernarbeit als Grundlage für ihre Aktivitäten. Die Mitarbeitenden haben die Möglichkeit, von zu Hause aus, in [Co-Working](#co-working)-Spaces oder an anderen Orten ihrer Wahl zu arbeiten. Die Kommunikation und Zusammenarbeit erfolgen über digitale [Tools](#tools) und Plattformen."
   },
   {
     "title": "Resilienz",
@@ -396,13 +396,13 @@
   },
   {
     "title": "Silos",
-    "description": "Silos werden Strukturen und Verhaltensmuster genannt, die die Zusammenarbeit und Kommunikation innerhalb eines Unternehmens oder Instituts behindern. Gemeint sind damit zum Beispiel starre, isolierte Abteilungsstrukturen, in denen Informationen und Ressourcen nur innerhalb der eigenen Abteilung zirkulieren. Der Begriff bezieht sich aber auch auf parallel existierende, nicht aufeinander abgestimmte Tools und digitale Plattformen, die Barrieren für einen reibungslosen Informationsfluss darstellen. Phänomene dieser Art stehen im Widerspruch zu den Prinzipien von New Work, die darauf abzielen, agile und kooperative Arbeitsumgebungen zu schaffen. Ziel von New Work ist es deshalb, solche Silos oder auch ein Silodenken, das ein sich abgrenzendes Verhalten begünstigt, abzubauen.",
+    "description": "Silos werden Strukturen und Verhaltensmuster genannt, die die Zusammenarbeit und Kommunikation innerhalb einer Organisation oder Instituts behindern. Gemeint sind damit zum Beispiel starre, isolierte Abteilungsstrukturen, in denen Informationen und Ressourcen nur innerhalb der eigenen Abteilung zirkulieren. Der Begriff bezieht sich aber auch auf parallel existierende, nicht aufeinander abgestimmte Tools und digitale Plattformen, die Barrieren für einen reibungslosen Informationsfluss darstellen. Phänomene dieser Art stehen im Widerspruch zu den Prinzipien von New Work, die darauf abzielen, agile und kooperative Arbeitsumgebungen zu schaffen. Ziel von New Work ist es deshalb, solche Silos oder auch ein Silodenken, das ein sich abgrenzendes Verhalten begünstigt, abzubauen.",
     "term_id": "silos"
   },
   {
     "title": "Sinnstiftende Arbeit",
     "term_id": "sinnstiftende-arbeit",
-    "description": "Sinnstiftende Arbeit gibt Beschäftigten das Gefühl, dass ihre Arbeit einen positiven Einfluss hat und einen Beitrag für Unternehmen und Gesellschaft leistet – sie sind dann motivierter und engagierter. Mitarbeitende, die einer sinnstiftenden Arbeit nachgehen, sind bereit, zusätzliche Anstrengungen zu unternehmen und Herausforderungen zu meistern, um ihre Ziele zu erreichen."
+    "description": "Sinnstiftende Arbeit gibt Beschäftigten das Gefühl, dass ihre Arbeit einen positiven Einfluss hat und einen Beitrag für ihre Einrichtung und Gesellschaft leistet – sie sind dann motivierter und engagierter. Mitarbeitende, die einer sinnstiftenden Arbeit nachgehen, sind bereit, zusätzliche Anstrengungen zu unternehmen und Herausforderungen zu meistern, um ihre Ziele zu erreichen."
   },
   {
     "title": "Smart City",
@@ -472,7 +472,7 @@
   {
     "title": "Unternehmenskultur",
     "term_id": "unternehmenskultur",
-    "description": "Zur Unternehmenskultur zählen die Werte, Normen, Überzeugungen, Verhaltensweisen und Traditionen einer Organisation. Diese Kultur bestimmt, wie Beschäftigte miteinander interagieren, Probleme lösen und wie sie ihre Arbeit wahrnehmen und ausführen. Außerdem charakterisiert sie ein Unternehmen oder eine wissenschaftliche Einrichtung und trägt entscheidend zum Erfolg bei, da sie sich prägend auf Innovationspotential, Mitarbeiterführung und Zusammenarbeit auswirkt."
+    "description": "Zur Unternehmenskultur zählen die Werte, Normen, Überzeugungen, Verhaltensweisen und Traditionen einer Organisation. Diese Kultur bestimmt, wie Beschäftigte miteinander interagieren, Probleme lösen und wie sie ihre Arbeit wahrnehmen und ausführen. Außerdem charakterisiert sie eine Organisation oder wissenschaftliche Einrichtung und trägt entscheidend zum Erfolg bei, da sie sich prägend auf Innovationspotential, Mitarbeiterführung und Zusammenarbeit auswirkt."
   },
   {
     "title": "VUCA-Welt",
