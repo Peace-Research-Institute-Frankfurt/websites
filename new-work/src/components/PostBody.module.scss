@@ -50,7 +50,8 @@
     @extend %h4;
   }
   table {
-    margin-bottom: calc(var(--baseline) / 2);
+    margin-top: var(--baseline);
+    margin-bottom: var(--baseline);
   }
   hr {
     border: 0;
@@ -68,22 +69,28 @@
     vertical-align: baseline;
     padding: 0.25rem 0;
     hyphens: none;
+    padding-right: 1.5em;
+    text-wrap: balance;
     p {
       margin: 0;
+    }
+    img {
+      display: block;
+      height: 5em;
+      width: auto;
+      margin: 1em 0;
+      margin-bottom: 1.2em;
     }
   }
 
   th {
     @extend %caption-bold;
     white-space: nowrap;
-    padding-right: 2em;
+    padding-right: 1em;
   }
   tr {
-    @extend %copy-sans;
+    @extend %caption;
     border-bottom: 1px solid var(--gray);
-    &:last-child {
-      border-bottom: 0;
-    }
   }
   td {
     padding-bottom: 0.25em;
