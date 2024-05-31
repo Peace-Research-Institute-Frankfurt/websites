@@ -77,6 +77,7 @@
   grid-column: 1 / 4;
   margin: 0 calc(var(--padding) * -1);
   border-bottom: 1px solid var(--gray);
+  margin-top: calc(var(--baseline) * 1);
   @include bp(m) {
     padding: var(--padding-small) 0;
     margin-top: calc(var(--baseline) * 3);

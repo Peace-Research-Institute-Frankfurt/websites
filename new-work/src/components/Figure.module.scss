@@ -16,6 +16,39 @@
   color: var(--gray-light);
 }
 
+.thumb-left,
+.thumb-right {
+  grid-column: 1 / 4;
+  position: relative;
+  margin-bottom: 0.5em;
+  .inner {
+    max-width: 10em;
+    height: auto;
+    display: block;
+    top: 0;
+    @include bp(m) {
+      position: absolute;
+    }
+  }
+}
+
+.thumb-left {
+  @include bp(m) {
+    grid-column: 3 / 4;
+  }
+  @include bp(l) {
+    grid-column: 1 / 2;
+    .inner {
+      right: 0;
+    }
+  }
+}
+.thumb-right {
+  @include bp(m) {
+    grid-column: 3 / 4;
+  }
+}
+
 .small {
   grid-column: 2 / 3;
   width: 100%;
