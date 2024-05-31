@@ -18,7 +18,9 @@
 
 .small {
   grid-column: 2 / 3;
-  max-width: 20em;
+  width: 100%;
+  max-width: 24em;
+  margin: var(--baseline) auto;
 }
 
 .medium {
