@@ -7,7 +7,7 @@
 .list {
   display: flex;
   list-style: none;
-  padding: 1.5em var(--padding);
+  padding: var(--padding);
   @include bp(m) {
     padding: var(--padding);
     padding-top: var(--padding-small);
@@ -120,10 +120,13 @@
 .controls {
   display: flex;
   justify-content: flex-start;
-  padding-top: var(--padding-small);
+  padding-top: var(--padding);
   padding-bottom: var(--padding-small);
   padding-left: var(--padding);
   border-bottom: 1px solid var(--gray-dark);
+  @include bp(m) {
+    padding-top: var(--padding-small);
+  }
 }
 
 .item {
