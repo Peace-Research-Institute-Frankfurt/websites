@@ -15,7 +15,11 @@ export default function PostHeader({ title, intro, hasIllustration, media, portr
     : false
 
   return (
-    <header className={`${styles.wrapper} ${media ? styles.hasMedia : ''} ${!hasIllustration ? styles.hasDefault : ''}`}>
+    <header
+      className={`${styles.wrapper} ${media ? styles.hasMedia : ''} ${!hasIllustration ? styles.hasDefault : ''} ${
+        title.length > 40 ? styles.hasLongTitle : ''
+      }`}
+    >
       {media && <div className={`${styles.media}`}>{media}</div>}
       <div className={`${styles.container}`}>
         <div className={styles.titleContainer}>

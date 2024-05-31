@@ -30,12 +30,21 @@
 }
 
 .has-media {
-  padding-top: calc(100vh - 16vw);
+  padding-top: 75vh;
+  @include bp(m) {
+    padding-top: calc(100vh - 16vw);
+  }
   &.has-default {
     padding-top: 30vh;
     @include bp(m) {
       padding-top: 50vh;
     }
+  }
+}
+
+.has-long-title {
+  @include bp(m) {
+    padding-top: calc(100vh - 11.5vw);
   }
 }
 
