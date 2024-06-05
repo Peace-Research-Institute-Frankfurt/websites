@@ -54,11 +54,12 @@
     margin-top: var(--baseline);
     margin-bottom: var(--baseline);
   }
+  em {
+    @extend %copy-italic;
+  }
   strong {
-    @extend %copy-sans;
-    font-weight: bold;
-    background: var(--white);
-    color: var(--black);
+    @extend %copy-italic;
+    background: var(--gray-dark);
     padding: 0 0.2em;
   }
   hr {

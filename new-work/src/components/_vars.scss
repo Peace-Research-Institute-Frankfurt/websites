@@ -73,21 +73,17 @@
   hyphens: auto;
   font-variation-settings: 'wght' 350;
 
-  em {
-    font-style: italic;
-  }
-  & > p > strong {
-    font-variation-settings: 'wght' 600;
-    background: white;
-    color: var(--black);
-    padding: 0.15em;
-    padding-bottom: 0;
-  }
   a {
     text-decoration: underline;
     text-decoration-thickness: 1px;
     text-underline-offset: 0.15em;
   }
+}
+
+%copy-italic {
+  @extend %copy;
+  font-style: italic;
+  letter-spacing: 0;
 }
 
 %copy-sans {
