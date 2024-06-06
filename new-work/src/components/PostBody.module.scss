@@ -57,7 +57,8 @@
   em {
     @extend %copy-italic;
   }
-  strong {
+  & > p > strong,
+  li > strong {
     @extend %copy-italic;
     background: var(--gray-dark);
     padding: 0 0.2em;
