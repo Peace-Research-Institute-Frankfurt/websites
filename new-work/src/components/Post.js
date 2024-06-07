@@ -80,6 +80,7 @@ export const query = graphql`
             short_title
             order
             intro
+            title_prefix
             category
             format
             authors {

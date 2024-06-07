@@ -21,6 +21,7 @@ export const query = graphql`
           frontmatter {
             title
             short_title
+            title_prefix
             intro
             category
             format

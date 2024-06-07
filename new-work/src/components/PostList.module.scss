@@ -166,6 +166,22 @@
   }
 }
 
+.has-prefix {
+  padding-top: 0;
+  padding-bottom: 0;
+  display: inline-flex;
+  align-items: baseline;
+}
+
+.title-prefix {
+  display: inline-block;
+  border-right: 1px solid var(--black);
+  padding: 0.2em 0;
+  padding-top: 0.15em;
+  padding-right: 0.25em;
+  margin-right: 0.2em;
+}
+
 .intro {
   @extend %caption;
   display: none;
@@ -185,6 +201,9 @@
     background: transparent;
     text-shadow: none;
     color: var(--color);
+  }
+  .title-prefix {
+    border-right: 1px solid var(--color);
   }
 }
 

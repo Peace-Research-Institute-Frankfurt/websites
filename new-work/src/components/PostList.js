@@ -52,6 +52,7 @@ const PostList = ({ posts, activeFilters, currentPostId }) => {
               slug={node.childMdx.fields.slug}
               intro={fm.intro}
               authors={fm.authors}
+              prefix={fm.title_prefix}
               isCurrent={currentPostId && currentPostId === node.id}
               format={node.childMdx.frontmatter.format}
             />
@@ -97,7 +98,7 @@ const PostList = ({ posts, activeFilters, currentPostId }) => {
   )
 }
 
-const PostListItem = ({ title, authors, intro, format, category, isCurrent, slug }) => {
+const PostListItem = ({ title, authors, intro, prefix, category, isCurrent, slug }) => {
   const maxWordCount = 35
   let truncatedIntro = ''
   if (intro) {
@@ -108,7 +109,10 @@ const PostListItem = ({ title, authors, intro, format, category, isCurrent, slug
       className={`${styles.item} ${category === 'meta' ? styles.meta : ''} ${category ? category : ''} ${isCurrent ? styles.current : ''}`}
       to={`/${slug}`}
     >
-      <span className={styles.title}>{title}</span>
+      <span className={`${styles.title} ${prefix ? styles.hasPrefix : ''}`}>
+        {prefix && <span className={styles.titlePrefix}>{prefix}</span>}
+        {title}
+      </span>
       <div className={styles.intro}>
         {intro ? <p>{truncatedIntro}</p> : <PlaceholderText />}
         {authors && (
