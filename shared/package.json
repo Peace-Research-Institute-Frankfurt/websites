@@ -18,7 +18,7 @@
     "@testing-library/jest-dom": "^6.4.5",
     "@testing-library/react": "^16.0.0",
     "@testing-library/user-event": "^14.5.2",
-    "accessibility-checker": "^3.1.71",
+    "accessibility-checker": "^3.1.72",
     "axios": "^1.7.2",
     "babel-jest": "^29.7.0",
     "babel-preset-gatsby": "^3.13.2",
