@@ -2,6 +2,9 @@
 
 .container {
   display: contents;
+  &:first-child:before {
+    display: none;
+  }
   &:before {
     content: '';
     display: block;
