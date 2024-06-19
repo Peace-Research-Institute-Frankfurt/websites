@@ -230,6 +230,7 @@ ul.unitAuthors {
   font-size: var(--ms-1);
   line-height: var(--baseline);
   margin-top: var(--baseline);
+  margin-bottom: var(--baseline);
   break-after: avoid;
   break-inside: avoid;
 }
@@ -535,9 +536,14 @@ dt {
 
 .tableContainer {
   position: relative;
-  display: flex;
+  display: block;
   margin: var(--baseline) 0;
   overflow: visible;
+  break-inside: avoid;
+}
+
+.tableContainer:has(.large) {
+  column-span: all;
 }
 
 .tableContainer:first-child {
@@ -572,10 +578,10 @@ dt {
 }
 
 table {
-  font-size: var(--ms--1);
+  font-size: 6.5pt;
   margin: 0;
   width: 100%;
-  line-height: calc(var(--baseline) * 0.6);
+  line-height: 8pt;
 }
 
 td,

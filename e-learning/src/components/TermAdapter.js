@@ -21,6 +21,7 @@ export default function TermAdapter({ t, ...props }) {
     return node.term_id === t
   })
 
+  if (!termNode) return <>not found {t}</>
   return (
     <Term
       term={termNode}
