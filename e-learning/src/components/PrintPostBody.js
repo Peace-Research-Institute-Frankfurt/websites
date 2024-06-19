@@ -2,12 +2,10 @@ import React, { useState } from 'react'
 import { MDXProvider } from '@mdx-js/react'
 
 import Figure from './PrintFigure'
-import Gallery from './Gallery'
 import Institution from './PrintInstitution'
 import Resolution from './PrintResolution'
 
 import Treaty from './PrintTreaty'
-
 import PrintTerm from './PrintTerm'
 import Gallery from './Gallery'
 

@@ -1,6 +1,9 @@
 import React from 'react'
 import { MDXProvider } from '@mdx-js/react'
 
+import Button from './ButtonAdapter'
+import { Embed } from './EmbedAdapter'
+import EmbedChoices from './EmbedChoicesAdapter'
 import FigureAdapter from './FigureAdapter'
 
 import Institution from './Institution'
@@ -11,6 +14,7 @@ import LectureVideo from './LectureVideo'
 import { Choice } from './MultipleChoice'
 import { Question, Quiz, RadioChoice } from './Quiz.js'
 import QuoteAdapter from './QuoteAdapter'
+import Resolution from './Resolution'
 import { Tab, Tabs } from './TabsAdapter'
 import Related from './Related'
 import Callout from '@shared/components/Callout'
