@@ -1,15 +1,5 @@
 [
   {
-    "license_id": "cc-by-2",
-    "title": "CC BY 2.0",
-    "url": "https://creativecommons.org/licenses/by/2.0/"
-  },
-  {
-    "license_id": "cc-by-sa-2",
-    "title": "CC BY SA 2.0",
-    "url": "https://creativecommons.org/licenses/by-sa/2.0/"
-  },
-  {
     "license_id": "cc-by-nc-nd-2",
     "title": "CC BY-NC-ND 2.0",
     "url": "https://creativecommons.org/licenses/by-nc-nd/2.0/"

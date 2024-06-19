@@ -28,7 +28,7 @@
   --focus-color: rgb(193, 204, 226);
   --edge: 'NewEdge666Rounded', sans-serif;
   --edge-rounded: 'NewEdge666Rounded', sans-serif;
-  --circa: 'Circa', Georgia, serif;
+  --circa: 'Circa', 'Times New Roman', serif;
   --mono: 'Courier New', 'Lucida Console', serif, monospace;
   --ratio: 1.3; // Minor 3
   --ms-0: clamp(1.3rem, calc(1.6vw + 0.2rem), 1.55rem);
@@ -131,6 +131,47 @@ img {
 }
 .meta {
   --color: var(--gray);
+}
+
+ul.contains-task-list {
+  padding: 0;
+  grid-column: 2 / 3;
+  overflow: hidden;
+  input {
+    background: pink;
+  }
+  li {
+    padding: 0.35em 0;
+    padding-bottom: 0.2em;
+    position: relative;
+    border-bottom: 1px solid var(--gray);
+    display: flex;
+    align-items: middle;
+    gap: 0.35em;
+    &:last-child {
+      border-bottom: 0;
+    }
+    input {
+      display: none;
+    }
+
+    &:before {
+      content: '';
+      border: 1px solid var(--white);
+      width: 0.9em;
+      height: 0.9em;
+      display: block;
+      position: relative;
+      top: 0.15em;
+      left: 0;
+    }
+    &:has(input[checked]):before {
+      background: url('data:image/svg+xml; utf8, <svg width="176" height="176" viewBox="0 0 176 176" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M88 100.322L14.9744 173.348C13.2958 175.027 11.2645 175.888 8.88037 175.933C6.49626 175.978 4.42022 175.116 2.65227 173.348C0.88409 171.58 0 169.526 0 167.187C0 164.847 0.88409 162.794 2.65227 161.026L75.6775 88L2.65227 14.9744C0.973474 13.2958 0.111791 11.2645 0.0672152 8.88037C0.022407 6.49626 0.88409 4.42023 2.65227 2.65228C4.42022 0.8841 6.47385 0 8.81316 0C11.1527 0 13.2065 0.8841 14.9744 2.65228L88 75.6775L161.026 2.65228C162.704 0.973484 164.735 0.111786 167.12 0.0672099C169.504 0.0224017 171.58 0.8841 173.348 2.65228C175.116 4.42023 176 6.47385 176 8.81316C176 11.1527 175.116 13.2065 173.348 14.9744L100.322 88L173.348 161.026C175.027 162.704 175.888 164.735 175.933 167.12C175.978 169.504 175.116 171.58 173.348 173.348C171.58 175.116 169.526 176 167.187 176C164.847 176 162.794 175.116 161.026 173.348L88 100.322Z" fill="white"/></svg>');
+      background-size: 0.5em;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
 }
 
 .footnotes {

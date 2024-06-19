@@ -55,7 +55,7 @@
 :root {
   --gray-10: #fafafa;
   --gray-20: #f4f3f1;
-  --gray-30: hsl(2, 5%, 90%);
+  --gray-30: hsl(2, 5%, 88%);
   --gray-40: hsl(2, 1%, 75%);
   --gray-50: hsl(2, 2%, 50%);
   --gray-60: hsl(2, 2%, 30%);
@@ -63,21 +63,23 @@
   --black: hsl(0, 0%, 5%);
   --blue-90: hsl(209, 22%, 4%);
   --blue-80: hsl(209, 40%, 10%);
-  --blue-70: hsl(209, 45%, 28%);
-  --blue-60: hsl(209, 50%, 40%);
+  --blue-70: #274868;
+  --blue-60: #336899;
   --blue-50: hsl(209, 55%, 55%);
   --blue-40: hsl(209, 40%, 65%);
-  --blue-30: hsl(209, 30%, 75%);
+  --blue-30: #acc0d2;
   --blue-20: hsl(209, 30%, 85%);
   --blue-10: hsl(209, 25%, 96%);
   --yellow-60: hsl(46, 98%, 50%);
   --yellow-50: hsl(49, 96%, 60%);
   --yellow-40: hsl(49, 90%, 65%);
-  --yellow-30: hsl(48, 60%, 70%);
+  --yellow-30: #e0ce85;
   --yellow-20: hsl(49, 80%, 85%);
   --yellow-10: hsl(49, 85%, 95%);
   --purple-10: hsl(284, 60%, 95%);
-  --orange-50: hsl(13, 85%, 60%);
+  --orange-40: #ef7f60;
+  --orange-50: #f06842;
+  --orange-60: #dc3609;
   --sans: 'Atlas', -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', sans-serif, 'Apple Color Emoji',
     'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   --serif: 'Publico', Georgia, serif;

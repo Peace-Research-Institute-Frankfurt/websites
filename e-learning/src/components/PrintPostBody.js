@@ -5,9 +5,12 @@ import Figure from './PrintFigure'
 import Gallery from './Gallery'
 import Institution from './PrintInstitution'
 import Resolution from './PrintResolution'
+
 import Treaty from './PrintTreaty'
 
 import PrintTerm from './PrintTerm'
+import Gallery from './Gallery'
+
 import PrintChapter from './PrintChapter'
 import ColumnBreak from './ColumnBreak'
 

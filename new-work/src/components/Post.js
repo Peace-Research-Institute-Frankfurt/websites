@@ -36,8 +36,10 @@ export const query = graphql`
           category
           hero_alt
           hero_portrait_alt
-          hero_credit
-          hero_credit_label
+          hero_credits {
+            label
+            name
+          }
           hide_body
           hero_image {
             childImageSharp {
@@ -78,8 +80,14 @@ export const query = graphql`
             short_title
             order
             intro
+            title_prefix
             category
             format
+            authors {
+              frontmatter {
+                name
+              }
+            }
           }
         }
       }
@@ -114,8 +122,7 @@ const Post = ({ data, children }) => {
           media={videoEl ? videoEl : heroImage}
           portrait={portraitImage}
           intro={frontmatter.intro}
-          credit={frontmatter.hero_credit}
-          creditLabel={frontmatter.hero_credit_label}
+          credits={frontmatter.hero_credits}
           hasIllustration={frontmatter.hero_image != null}
         />
         <main className={styles.body}>

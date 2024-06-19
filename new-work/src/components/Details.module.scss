@@ -66,6 +66,9 @@
     display: inline-block;
     width: auto;
     margin-bottom: 0.5em;
+    &:first-child {
+      margin-top: 0;
+    }
   }
 }
 

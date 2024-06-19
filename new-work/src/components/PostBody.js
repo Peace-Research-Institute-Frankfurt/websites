@@ -15,6 +15,7 @@ import { Details, DetailsGroup } from '@shared/components/Details'
 import { Listicle, ListicleItem } from './Listicle'
 import ImageSlider from './ImageSlider'
 import Note from './Note'
+import { BubbleQuotes, BubbleQuote } from './BubbleQuote'
 import { ManifestoSignatory, ManifestoSignatories, ManifestoList, ManifestoListItem } from './Manifesto'
 import { BookReview, BookReviewList } from './BookReview'
 import PlaceholderText from './PlaceholderText'
@@ -41,12 +42,20 @@ const shortCodes = {
   Callout: ({ ...props }) => <Callout expandable={false} buttonComponent={Button} styles={CalloutStyles} {...props} />,
   Details: ({ ...props }) => <Details {...props} styles={DetailsStyles} />,
   DetailsGroup: ({ ...props }) => <DetailsGroup {...props} styles={DetailsStyles} />,
+  NoBreak: ({ ...props }) => <span {...props} className={styles.noBreak} />,
+  Aside: ({ children }) => (
+    <aside className={styles.aside}>
+      <div className={styles.asideInner}>{children}</div>
+    </aside>
+  ),
   Tab,
   Tabs,
   Leadin,
   FileList,
   Listicle,
   ListicleItem,
+  BubbleQuotes,
+  BubbleQuote,
   ImageSlider,
   Note,
   ManifestoSignatories,

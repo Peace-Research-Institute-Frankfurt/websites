@@ -24,12 +24,13 @@ const FallbackIllustration = ({ category }) => {
       const cellHeight = heights[j] * scale
       const cell = (
         <rect
+          key={`cell.${i}`}
           className={styles.cell}
           x={colWidth * i - width * 0.5 - colWidth / 2}
           y={currentY}
           width={colWidth}
           height={cellHeight}
-          stroke-width="0.1"
+          strokeWidth="0.1"
           ry={colWidth * 0.5}
           rx={colWidth * 0.5}
         />

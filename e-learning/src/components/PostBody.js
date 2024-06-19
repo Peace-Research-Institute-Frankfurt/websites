@@ -2,12 +2,22 @@ import React from 'react'
 import { MDXProvider } from '@mdx-js/react'
 
 import FigureAdapter from './FigureAdapter'
-import Gallery from './Gallery'
-import Institution from './Institution'
-import Resolution from './Resolution'
-import Treaty from './Treaty'
 
+import Institution from './Institution'
+import Treaty from './Treaty'
 import TermAdapter from './TermAdapter'
+
+import LectureVideo from './LectureVideo'
+import { Choice } from './MultipleChoice'
+import { Question, Quiz, RadioChoice } from './Quiz.js'
+import QuoteAdapter from './QuoteAdapter'
+import { Tab, Tabs } from './TabsAdapter'
+import Related from './Related'
+import Callout from '@shared/components/Callout'
+import { Details, DetailsGroup } from '@shared/components/Details'
+import { Event, Timeline } from '@shared/components/Timeline'
+import { FlipCards, Card } from '@shared/components/FlipCards'
+import Gallery from './Gallery'
 
 import LayeredMap from './LayeredMap'
 import MapLegend from './MapLegend'
@@ -19,23 +29,8 @@ import CountryStatisticsLayerCountries from './CountryStatisticsLayerCountries'
 import CountryStatisticsLayerLegend from './CountryStatisticsLayerLegend'
 
 import BarGraph from './charts/BarGraph'
-import PieChart from './charts/PieChart'
 import LineChart from './charts/LineChart'
-
-import Button from './ButtonAdapter'
-import { Embed } from './EmbedAdapter'
-import EmbedChoices from './EmbedChoicesAdapter'
-import LectureVideo from './LectureVideo'
-import Map from './Map'
-import { Choice } from './MultipleChoice'
-import { Question, Quiz, RadioChoice } from './Quiz.js'
-import QuoteAdapter from './QuoteAdapter'
-import { Tab, Tabs } from './TabsAdapter'
-import Related from './Related'
-import Callout from '@shared/components/Callout'
-import { Details, DetailsGroup } from '@shared/components/Details'
-import { Event, Timeline } from '@shared/components/Timeline'
-import { FlipCards, Card } from '@shared/components/FlipCards'
+import PieChart from './charts/PieChart'
 
 import * as CalloutStyles from './Callout.module.scss'
 import * as DetailsStyles from './Details.module.scss'
@@ -70,7 +65,6 @@ const shortCodes = {
   Details: ({ ...props }) => <Details {...props} styles={DetailsStyles} />,
   DetailsGroup: ({ ...props }) => <DetailsGroup {...props} styles={DetailsStyles} />,
   Callout: ({ ...props }) => <Callout {...props} buttonComponent={Button} styles={CalloutStyles} />,
-  Map,
   LayeredMap,
   MapLegend,
   MarkerLayer,

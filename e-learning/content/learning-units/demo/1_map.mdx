@@ -4,15 +4,10 @@ intro: Just seeing what a map component could look like.
 order: 2
 reading_time: 2
 ---
-{/* <Map caption="Member states of the Chemical Weapons Convention (CWC)" /> */}
 
 import MapExampleCountries from '../../data/map-example-countries.csv'
 import MapExampleLocations from '../../data/map-example-locations.csv'
 import MapExampleAlternativeCountries from '../../data/map-example-countries-2.json'
-
-This uses Mapbox and the [Natural Earth projection](https://www.shadedrelief.com/NE_proj/index.html), which distorts sizes of territories less than Mercator and other projections. The data comes from the JSON file at `/content/data/treaties.json`.
-
-## W&S LayeredMap
 
 <LayeredMap
     mapScale={10}
@@ -25,7 +20,7 @@ This uses Mapbox and the [Natural Earth projection](https://www.shadedrelief.com
     <CountryStatisticsLayer
         statisticsGroupName='Lorem Ipsum (in %)'
         data={MapExampleCountries}
-        legendSize={10}
+        legendSize={5}
     />
 </LayeredMap>
 
@@ -43,6 +38,7 @@ This uses Mapbox and the [Natural Earth projection](https://www.shadedrelief.com
 
 <LayeredMap
     title={"Zweiter Beispiel Titel"}
+    centerLat={22}
 >
     <CountryStatisticsLayer
         data={MapExampleCountries}

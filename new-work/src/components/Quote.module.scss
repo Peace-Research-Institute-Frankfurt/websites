@@ -2,6 +2,9 @@
 
 .container {
   display: contents;
+  &:first-child:before {
+    display: none;
+  }
   &:before {
     content: '';
     display: block;
@@ -25,12 +28,6 @@
   }
   @include bp(l) {
     grid-column: 2 / 3;
-  }
-  &:before {
-    content: '„';
-  }
-  &:after {
-    content: '“';
   }
   p {
     display: inline;

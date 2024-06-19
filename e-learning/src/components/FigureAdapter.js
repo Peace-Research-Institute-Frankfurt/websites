@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import Figure from '@shared/components/Figure'
 
-export default function FigureAdapter({ styles, caption, credit, size, alt, src, license }) {
+export default function FigureAdapter({ styles, caption, credit, size, alt, src, license, discourageSaving }) {
   const data = useStaticQuery(graphql`
     query ImageQuery {
       licenses: allLicensesJson {
@@ -54,5 +54,17 @@ export default function FigureAdapter({ styles, caption, credit, size, alt, src,
     }
   })
 
-  return <Figure styles={styles} image={image} src={src} caption={caption} license={licenseNode} credit={credit} alt={alt} size={size} />
+  return (
+    <Figure
+      styles={styles}
+      image={image}
+      src={src}
+      caption={caption}
+      license={licenseNode}
+      credit={credit}
+      alt={alt}
+      size={size}
+      discourageSaving={discourageSaving || false}
+    />
+  )
 }

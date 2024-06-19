@@ -10,28 +10,34 @@ export default function CountryStatisticsLayer({
   roundLegendValues = true,
   projection,
   renderLegend = false,
-  colorRangeStart = '#97aabd',
-  colorRangeEnd = '#274868',
+  colors = ['#97aabd', '#274868'],
 }) {
   if (data.length <= 0) return <></>
 
-  const minValue = data.reduce((min, c) => (c.value < min ? c.value : min), data[0].value)
-  const maxValue = data.reduce((max, c) => (c.value > max ? c.value : max), data[0].value)
+  // Infer data type
+  const values = data.map((el) => el.value)
+  const dataType = typeof values[0] === 'number' ? 'numerical' : 'categorical'
 
-  const colorRange = d3.scaleLinear().domain([minValue, maxValue]).range([colorRangeStart, colorRangeEnd])
+  let scale
+
+  if (dataType === 'numerical') {
+    scale = d3.scaleLinear().domain(d3.extent(values)).range(colors.slice(0, 2))
+  } else if (dataType === 'categorical') {
+    scale = d3.scaleOrdinal([...new Set(data.map((el) => el.value))], colors)
+  }
 
   if (renderLegend) {
     return (
       <CountryStatisticsLayerLegend
-        minValue={minValue}
-        maxValue={maxValue}
-        roundLegendValues={roundLegendValues}
+        data={data}
+        dataType={dataType}
+        scale={scale}
         legendSize={legendSize}
+        roundLegendValues={roundLegendValues}
         statisticsGroupName={statisticsGroupName}
-        colorRange={colorRange}
       />
     )
+  } else {
+    return <CountryStatisticsLayerCountries projection={projection} data={data} colorRange={scale} />
   }
-
-  return <CountryStatisticsLayerCountries projection={projection} data={data} colorRange={colorRange} />
 }

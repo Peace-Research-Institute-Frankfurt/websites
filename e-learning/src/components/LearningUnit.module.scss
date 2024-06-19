@@ -42,6 +42,7 @@
   padding-top: var(--padding);
   padding-bottom: var(--padding);
   grid-column: 1 / 6;
+  width: 100%;
   @include bp(xl) {
     border-left: 1px dotted var(--blue-90);
     border-right: 1px dotted var(--blue-90);

@@ -51,6 +51,8 @@ const PostList = ({ posts, activeFilters, currentPostId }) => {
               category={fm.category}
               slug={node.childMdx.fields.slug}
               intro={fm.intro}
+              authors={fm.authors}
+              prefix={fm.title_prefix}
               isCurrent={currentPostId && currentPostId === node.id}
               format={node.childMdx.frontmatter.format}
             />
@@ -96,7 +98,7 @@ const PostList = ({ posts, activeFilters, currentPostId }) => {
   )
 }
 
-const PostListItem = ({ title, intro, format, category, isCurrent, slug }) => {
+const PostListItem = ({ title, authors, intro, prefix, category, isCurrent, slug }) => {
   const maxWordCount = 35
   let truncatedIntro = ''
   if (intro) {
@@ -107,11 +109,25 @@ const PostListItem = ({ title, intro, format, category, isCurrent, slug }) => {
       className={`${styles.item} ${category === 'meta' ? styles.meta : ''} ${category ? category : ''} ${isCurrent ? styles.current : ''}`}
       to={`/${slug}`}
     >
-      <div>
-        {format && format !== '' && <span className={styles.format}>{format}</span>}
-        <span className={styles.title}>{title}</span>
+      <span className={`${styles.title} ${prefix ? styles.hasPrefix : ''}`}>
+        {prefix && <span className={styles.titlePrefix}>{prefix}</span>}
+        {title}
+      </span>
+      <div className={styles.intro}>
+        {intro ? <p>{truncatedIntro}</p> : <PlaceholderText />}
+        {authors && (
+          <p className={styles.authors}>
+            {authors.map((el, i) => {
+              return (
+                <React.Fragment key={`${title}.author.${i}`}>
+                  <span>{el.frontmatter.name}</span>
+                  {i < authors.length - 1 && ', '}
+                </React.Fragment>
+              )
+            })}
+          </p>
+        )}
       </div>
-      {intro ? <p className={styles.intro}>{truncatedIntro}</p> : <PlaceholderText className={styles.intro} />}
     </Link>
   )
 }
