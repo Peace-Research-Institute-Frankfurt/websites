@@ -58,9 +58,14 @@ button.person {
 .bio {
   @extend %caption;
   padding: 0.75em;
+  gap: 0.4em;
   hyphens: auto;
+  display: flex;
   max-width: Min(100vw - 4 * var(--padding), 28rem);
   p + p {
     margin-top: 0.5em;
+  }
+  button {
+    flex-shrink: 0;
   }
 }
