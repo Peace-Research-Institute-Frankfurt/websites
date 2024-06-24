@@ -3,9 +3,11 @@
 .signatories {
   padding-left: 0 !important;
   list-style: none;
+  grid-column: 1 / 4;
   @include bp(m) {
     display: grid;
     column-gap: var(--baseline);
+    grid-column: 2 / 3;
     grid-template-columns: repeat(3, min-content);
   }
 }
@@ -22,11 +24,17 @@ ul.list {
   font-size: var(--ms-1);
   font-style: italic;
   letter-spacing: 0;
-  line-height: calc(var(--baseline) * 1.333);
+  line-height: calc(var(--baseline) * 1.25);
+  list-style: none;
+  grid-column: 1 / 4;
+  max-width: 30em;
+  @include bp(l) {
+    grid-column: 2 / 3;
+  }
 }
 
 .list-item {
-  margin-bottom: var(--baseline);
+  margin-bottom: 0.75em;
   hyphens: none;
   text-wrap: balance;
   &::before {

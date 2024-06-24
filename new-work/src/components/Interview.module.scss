@@ -11,11 +11,16 @@
       visibility: hidden;
     }
   }
+  & + p {
+    margin-top: var(--baseline);
+  }
 }
 
 .question {
   list-style: none;
   display: contents;
+  text-wrap: balance;
+  hyphens: none;
 
   &:before {
     content: '';
@@ -28,10 +33,7 @@
     }
   }
   &:first-child:before {
-    margin-top: 0;
-  }
-  &:last-child {
-    margin-bottom: 0;
+    display: none;
   }
 }
 
@@ -49,13 +51,12 @@
   @extend %caption;
   position: relative;
   grid-column: 1 / 4;
-  margin-bottom: calc(var(--baseline) * 0.25);
+  font-size: var(--ms--1);
+  margin-bottom: 0.5em;
   @include bp(m) {
+    font-size: var(--ms--1);
     top: 0.45em; // align baselines
     margin-bottom: 0;
     grid-column: 1 / 2;
-  }
-  &:before {
-    content: 'Q: ';
   }
 }

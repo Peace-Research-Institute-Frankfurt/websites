@@ -1,4 +1,5 @@
 import React, { useId, Children } from 'react'
+import MarkdownRenderer from 'react-markdown-renderer'
 
 function Interview({ styles, title, children }) {
   if (!styles) styles = {}
@@ -37,7 +38,9 @@ function InterviewQuestion({ styles, q, children }) {
   if (!styles) styles = {}
   return (
     <li className={styles.question}>
-      <strong className={styles.prompt}>{q}</strong>
+      <strong className={styles.prompt}>
+        <MarkdownRenderer markdown={q} />
+      </strong>
       <div className={styles.answer}>{children}</div>
     </li>
   )

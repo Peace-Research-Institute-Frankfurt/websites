@@ -42,6 +42,7 @@
     @extend %h3;
     margin-top: calc(var(--baseline) * 0.5);
     margin-bottom: calc(var(--baseline) * 0.25);
+    text-wrap: balance;
     &:first-child {
       margin-top: 0;
     }
@@ -50,7 +51,17 @@
     @extend %h4;
   }
   table {
-    margin-bottom: calc(var(--baseline) / 2);
+    margin-top: var(--baseline);
+    margin-bottom: var(--baseline);
+  }
+  em {
+    @extend %copy-italic;
+  }
+  & > p > strong,
+  li > strong {
+    @extend %copy-italic;
+    background: var(--gray-dark);
+    padding: 0 0.2em;
   }
   hr {
     border: 0;
@@ -68,22 +79,28 @@
     vertical-align: baseline;
     padding: 0.25rem 0;
     hyphens: none;
+    padding-right: 1.5em;
+    text-wrap: balance;
     p {
       margin: 0;
+    }
+    img {
+      display: block;
+      height: 5em;
+      width: auto;
+      margin: 1em 0;
+      margin-bottom: 1.2em;
     }
   }
 
   th {
     @extend %caption-bold;
     white-space: nowrap;
-    padding-right: 2em;
+    padding-right: 1em;
   }
   tr {
-    @extend %copy-sans;
+    @extend %caption;
     border-bottom: 1px solid var(--gray);
-    &:last-child {
-      border-bottom: 0;
-    }
   }
   td {
     padding-bottom: 0.25em;
@@ -96,14 +113,25 @@
   ul:not([class]),
   ol:not([class]) {
     padding-left: 1em;
+    li {
+      margin-bottom: calc(var(--baseline) * 0.25);
+    }
   }
   ul:not([class]) li {
     list-style: none;
     position: relative;
+
     &:before {
+      content: '';
+      background-size: 70%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url('data:image/svg+xml;utf8,<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M100 0C103.395 53.7596 146.24 96.6052 200 100C146.24 103.395 103.395 146.24 100 200C96.6052 146.24 53.7596 103.395 0 100C53.7596 96.6052 96.6052 53.7596 100 0Z" fill="white"/></svg>');
+      width: 1em;
+      height: 1em;
       position: absolute;
-      left: -1em;
-      content: '—';
+      left: -1.2em;
+      top: 0.05em;
       font-weight: 400;
     }
   }
@@ -127,4 +155,27 @@
       text-decoration: none !important;
     }
   }
+}
+
+.no-break {
+  white-space: nowrap;
+}
+
+.aside {
+  @extend %caption;
+  align-self: flex-end;
+  position: relative;
+  grid-column: 1 / 4;
+  margin: 1em 0;
+  margin-bottom: 1.5em;
+  @include bp(m) {
+    margin: 0;
+    margin-top: calc(var(--baseline) * 1.5);
+    grid-column: 2 / 3;
+  }
+}
+
+.aside-inner {
+  bottom: 0;
+  color: var(--gray-light);
 }

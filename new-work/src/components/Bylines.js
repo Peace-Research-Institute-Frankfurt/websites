@@ -1,7 +1,9 @@
 import React, { useRef, useState } from 'react'
 import * as styles from './Bylines.module.scss'
 import TooltipAdapter from './TooltipAdapter'
+import CrossIcon from '../images/cross.svg'
 import MarkdownRenderer from 'react-markdown-renderer'
+import Button from './ButtonAdapter'
 
 const BylineItem = ({ author }) => {
   const fm = author.frontmatter
@@ -28,6 +30,7 @@ const BylineItem = ({ author }) => {
         <TooltipAdapter active={isActive} targetEl={authorRef.current} position="topLeft">
           <div className={styles.bio}>
             <MarkdownRenderer markdown={author.parent.body} />
+            <Button onClick={toggleTooltip} icon={<CrossIcon />} label="Schließen" hideLabel={true} size="small" priority="secondary" />
           </div>
         </TooltipAdapter>
       )}

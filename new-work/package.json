@@ -17,9 +17,9 @@
     "@mdx-js/react": "^2.3.0",
     "@prif/shared": "0.0.1",
     "dotenv": "^16.4.5",
-    "downshift": "^9.0.4",
-    "gatsby": "^5.13.4",
-    "gatsby-adapter-netlify": "^1.1.4",
+    "downshift": "^9.0.6",
+    "gatsby": "^5.13.6",
+    "gatsby-adapter-netlify": "^1.1.6",
     "gatsby-plugin-image": "^3.13.1",
     "gatsby-plugin-local-search": "^2.0.1",
     "gatsby-plugin-manifest": "^5.13.1",
@@ -40,9 +40,9 @@
     "react-markdown-renderer": "^1.4.0",
     "react-use-flexsearch": "^0.1.1",
     "remark-gfm": "^3.0.1",
-    "sass": "^1.75.0",
-    "slug": "^9.0.0",
-    "validator": "^13.11.0"
+    "sass": "^1.77.5",
+    "slug": "^9.1.0",
+    "validator": "^13.12.0"
   },
   "devDependencies": {
     "@sendgrid/mail": "^8.1.3",
