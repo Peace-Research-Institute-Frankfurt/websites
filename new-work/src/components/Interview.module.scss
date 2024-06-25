@@ -53,6 +53,9 @@
   grid-column: 1 / 4;
   font-size: var(--ms--1);
   margin-bottom: 0.5em;
+  em {
+    @extend %caption-italic;
+  }
   @include bp(m) {
     font-size: var(--ms--1);
     top: 0.45em; // align baselines

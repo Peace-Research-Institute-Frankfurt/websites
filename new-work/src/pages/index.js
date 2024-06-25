@@ -71,8 +71,8 @@ const Index = ({ data }) => {
           intro={
             <>
               Vor dem Hintergrund der Digitalisierung revolutioniert New Work herkömmliche Strukturen, stellt tradierte Arbeitsweisen infrage und
-              stärkt die Bedeutung des Menschen mit seinen Kompetenzen, Talenten, Wünschen und Emotionen. Die Leibniz-Gemeinschaft bietet mit diesem
-              Web-Magazin zahlreiche Interviews, Texte und Tipps und unterstützt so ihre Forschungsinstitute auf dem Weg zu neuen Räumen und
+              stärkt die Bedeutung des Menschen mit seinen Kompetenzen, Talenten, Wünschen und Emotionen. Die Leibniz-Gemeinschaft bietet mit
+              WorkNew@leibniz zahlreiche Interviews, Texte und Tipps und unterstützt so ihre Forschungsinstitute auf dem Weg zu neuen Räumen und
               Arbeitsformen.
             </>
           }

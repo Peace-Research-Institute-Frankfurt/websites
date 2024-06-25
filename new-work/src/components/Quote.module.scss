@@ -16,6 +16,16 @@
     }
   }
 }
+.epigram {
+  display: block;
+  margin-bottom: var(--baseline);
+  .text {
+    @extend %copy-italic;
+    text-wrap: balance;
+    hyphens: none;
+    margin-bottom: 0;
+  }
+}
 
 .text {
   @extend %copy-large;

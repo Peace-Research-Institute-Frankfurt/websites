@@ -57,8 +57,16 @@
   em {
     @extend %copy-italic;
   }
-  & > p > strong,
-  li > strong {
+  a:not([class]) {
+    text-decoration: underline;
+    text-decoration-color: var(--gray);
+    &:hover,
+    &:focus-visible {
+      text-decoration-color: white;
+    }
+  }
+  & > p > strong:not([class]),
+  li > strong:not([class]) {
     @extend %copy-italic;
     background: var(--gray-dark);
     padding: 0 0.2em;

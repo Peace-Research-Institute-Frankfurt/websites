@@ -28,7 +28,14 @@
   hyphens: auto;
   font-weight: 100;
   text-transform: uppercase;
-  text-shadow: 1px 0 0 black, 1px 1px 0 black, 0 1px 0 black, -1px 1px 0 black, -1px 0 0 black, -1px -1px 0 black, 0px -1px 0 black;
+  text-shadow:
+    1px 0 0 black,
+    1px 1px 0 black,
+    0 1px 0 black,
+    -1px 1px 0 black,
+    -1px 0 0 black,
+    -1px -1px 0 black,
+    0px -1px 0 black;
   font-size: Max(11.5vw, var(--ms-5));
   line-height: 0.9;
   @include bp(m) {
@@ -81,8 +88,8 @@
 }
 
 %copy-italic {
-  @extend %copy;
   font-style: italic;
+  font-size: inherit;
   letter-spacing: 0;
 }
 
@@ -114,6 +121,11 @@
   font-size: var(--ms--2);
   letter-spacing: 0.05em;
   word-spacing: -0.075em;
+}
+%caption-italic {
+  @extend %caption;
+  font-style: italic;
+  letter-spacing: 0.025em !important;
 }
 
 %caption-bold {
