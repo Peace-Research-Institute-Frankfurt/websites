@@ -2,7 +2,9 @@
 
 @font-face {
   font-family: 'Roboto';
-  src: url('/fonts/roboto-flex.subset.woff2') format('woff2'), url('/fonts/roboto-flex.subset.woff') format('woff');
+  src:
+    url('/fonts/roboto-flex.subset.woff2') format('woff2'),
+    url('/fonts/roboto-flex.subset.woff') format('woff');
   font-display: swap;
 }
 
@@ -41,7 +43,7 @@
 
   // Scale type size on high-res displays
   @media (min-resolution: 120dpi) and (min-width: 1200px) {
-    font-size: 0.85rem;
+    font-size: 0.95rem;
   }
 }
 

@@ -15,7 +15,10 @@ export default function useTranslations(translationData, pageNodes) {
   if (translationData.translations) {
     translations = translationData.translations.map((t) => {
       const translationPage = pageNodes.find((el) => el.pageContext.id === t.id)
-      return { path: translationPage.path, language: translationPage.pageContext.language }
+      if (translationPage) {
+        return { path: translationPage.path, language: translationPage.pageContext.language }
+      }
+      return null
     })
   } else {
     translations = targetLanguages.map((l) => {
@@ -23,7 +26,10 @@ export default function useTranslations(translationData, pageNodes) {
         const p = removeLanguagePrefix(el.path)
         return el.pageContext.language === l && p === basePath
       })
-      return { path: translationPage.path, language: l }
+      if (translationPage) {
+        return { path: translationPage.path, language: l }
+      }
+      return null
     })
   }
   return translations
