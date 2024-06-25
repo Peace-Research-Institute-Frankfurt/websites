@@ -1,0 +1,8 @@
+.cache/
+public
+fonts/
+documentation/
+.env
+.netlify
+**/__print.mdx
+countries_raw.json
