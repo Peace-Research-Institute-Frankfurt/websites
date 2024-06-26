@@ -3,7 +3,7 @@
 .container {
   @extend %caption;
   display: flex;
-  color: var(--gray-light);
+  color: var(--white);
   background: var(--black);
   padding: 0 var(--padding);
   margin: 0 var(--padding);
@@ -43,6 +43,7 @@
 
 .meta {
   display: flex;
+  color: var(--gray-light);
   gap: 1em;
   align-items: baseline;
   font-size: 0.85em;

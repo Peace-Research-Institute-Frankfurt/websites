@@ -24,6 +24,7 @@ export const query = graphql`
             title_prefix
             intro
             category
+            published_on
             format
             authors {
               frontmatter {

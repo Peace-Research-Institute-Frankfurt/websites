@@ -83,6 +83,7 @@ export const query = graphql`
             title_prefix
             category
             format
+            published_on
             authors {
               frontmatter {
                 name

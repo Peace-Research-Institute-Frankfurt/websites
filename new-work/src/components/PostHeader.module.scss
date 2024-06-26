@@ -63,9 +63,7 @@
 .title {
   @extend %h1;
   display: inline;
-  @include bp(l) {
-    hyphens: none;
-  }
+  text-wrap: balance;
 }
 .credits {
   @extend %caption;

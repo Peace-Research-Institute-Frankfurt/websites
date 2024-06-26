@@ -6,6 +6,7 @@ import ButtonGroup from './ButtonGroup'
 import PlaceholderText from './PlaceholderText'
 import GridIcon from '../images/grid.svg'
 import ListIcon from '../images/list.svg'
+import ArrowRightIcon from '../images/arrow-right.svg'
 
 const PostList = ({ posts, activeFilters, currentPostId }) => {
   const [showList, setShowList] = useState(false)
@@ -53,6 +54,7 @@ const PostList = ({ posts, activeFilters, currentPostId }) => {
               intro={fm.intro}
               authors={fm.authors}
               prefix={fm.title_prefix}
+              publishedOn={fm.published_on}
               isCurrent={currentPostId && currentPostId === node.id}
               format={node.childMdx.frontmatter.format}
             />
@@ -98,36 +100,53 @@ const PostList = ({ posts, activeFilters, currentPostId }) => {
   )
 }
 
-const PostListItem = ({ title, authors, intro, prefix, category, isCurrent, slug }) => {
+const PostListItem = ({ title, authors, intro, prefix, category, isCurrent, publishedOn, slug }) => {
   const maxWordCount = 35
   let truncatedIntro = ''
+  let publishedOnDate = null
   if (intro) {
     truncatedIntro = intro.split(' ').length > maxWordCount ? intro.split(' ').slice(0, maxWordCount).join(' ') + '...' : intro
   }
+  if (publishedOn) {
+    publishedOnDate = new Date(publishedOn)
+  }
+
+  const isPending = publishedOnDate && publishedOnDate > Date.now()
+
   return (
     <Link
-      className={`${styles.item} ${category === 'meta' ? styles.meta : ''} ${category ? category : ''} ${isCurrent ? styles.current : ''}`}
+      className={`${styles.item} ${category === 'meta' ? styles.meta : ''} ${category ? category : ''} ${isPending ? styles.isPending : ''} ${isCurrent ? styles.current : ''}`}
       to={`/${slug}`}
     >
+      {publishedOnDate && (
+        <span className={styles.publishedDate}>
+          <date>
+            <ArrowRightIcon />
+            {publishedOnDate.toLocaleDateString('de-DE')}
+          </date>
+        </span>
+      )}
       <span className={`${styles.title} ${prefix ? styles.hasPrefix : ''}`}>
         {prefix && <span className={styles.titlePrefix}>{prefix}</span>}
         {title}
       </span>
-      <div className={styles.intro}>
-        {intro ? <p>{truncatedIntro}</p> : <PlaceholderText />}
-        {authors && (
-          <p className={styles.authors}>
-            {authors.map((el, i) => {
-              return (
-                <React.Fragment key={`${title}.author.${i}`}>
-                  <span>{el.frontmatter.name}</span>
-                  {i < authors.length - 1 && ', '}
-                </React.Fragment>
-              )
-            })}
-          </p>
-        )}
-      </div>
+      {!isPending && (
+        <div className={styles.intro}>
+          {intro ? <p>{truncatedIntro}</p> : <PlaceholderText />}
+          {authors && (
+            <p className={styles.authors}>
+              {authors.map((el, i) => {
+                return (
+                  <React.Fragment key={`${title}.author.${i}`}>
+                    <span>{el.frontmatter.name}</span>
+                    {i < authors.length - 1 && ', '}
+                  </React.Fragment>
+                )
+              })}
+            </p>
+          )}
+        </div>
+      )}
     </Link>
   )
 }
