@@ -16,7 +16,7 @@ import DownloadIcon from '../images/download.svg'
 import * as styles from './Report.module.scss'
 
 export const query = graphql`
-  query ($id: String!, $language: String!, $postsDirectory: String!) {
+  query ($id: String!, $language: String!, $postsDirectory: String!, $creditsNode: String!) {
     locales: allLocale(filter: { language: { eq: $language } }) {
       edges {
         node {
@@ -58,6 +58,13 @@ export const query = graphql`
             bio
           }
         }
+      }
+    }
+
+    credits: file(id: { eq: $creditsNode }) {
+      relativeDirectory
+      childMdx {
+        body
       }
     }
 
@@ -204,12 +211,20 @@ const Index = ({ data, pageContext, children, location }) => {
         <section className={styles.posts}>
           <h2 className={styles.sectionTitle}>{t('Contents')}</h2>
           <ol className={styles.postsList}>{posts}</ol>
-          {data.post.childMdx.frontmatter.download_url && (
-            <a className={styles.download} download href={data.post.childMdx.frontmatter.download_url}>
-              <DownloadIcon />
-              <span className={styles.downloadLabel}>{t('Download full report in PDF format')}</span>
-            </a>
-          )}
+          <aside className={styles.sidebar}>
+            {data.post.childMdx.frontmatter.download_url && (
+              <a className={styles.download} download href={data.post.childMdx.frontmatter.download_url}>
+                <DownloadIcon />
+                <span className={styles.downloadLabel}>{t('Download full report in PDF format')}</span>
+              </a>
+            )}
+            {data.credits && (
+              <div className={styles.credits}>
+                <h2>{t('Legal')}</h2>
+                <MarkdownRenderer markdown={data.credits.childMdx.body} />
+              </div>
+            )}
+          </aside>
         </section>
       </main>
     </App>
