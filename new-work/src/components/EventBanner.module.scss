@@ -8,7 +8,7 @@
   position: relative;
   margin: 0 var(--padding);
   overflow: hidden;
-  background: #262e4a;
+  background: #101424;
   padding: 2rem var(--padding);
   position: relative;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.35) inset;
@@ -78,12 +78,16 @@
     width: 40%;
   }
   @include bp(l) {
-    width: 45%;
+    width: 50%;
+  }
+  @include bp(xl) {
+    width: 65%;
   }
 }
 
 .details {
   @extend %caption;
+  line-height: 1.4;
 }
 
 .cta {
