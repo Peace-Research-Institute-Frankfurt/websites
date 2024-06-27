@@ -7,6 +7,7 @@ import SkipToContent from '../components/SkipToContent'
 import PostHeader from '../components/PostHeader'
 import * as styles from './index.module.scss'
 import { PostList } from '../components/PostList'
+import EventBanner from '../components/EventBanner'
 import SearchForm from '../components/SearchForm'
 
 export const query = graphql`
@@ -79,6 +80,7 @@ const Index = ({ data }) => {
           }
           credit="[Verena Mack](https://verenamack.com/)"
         />
+        <EventBanner />
         <section className={styles.content}>
           <ol className={styles.filters}>
             {categories.map((category) => {

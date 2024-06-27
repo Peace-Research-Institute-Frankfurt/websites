@@ -13,6 +13,7 @@
   height: 1.85em;
   position: relative;
   padding: 0 0.65em;
+  gap: 0.25em;
   padding-bottom: 0.05em;
   outline-offset: 2px;
   transition: var(--fast);
@@ -98,12 +99,16 @@
 }
 
 .icon {
-  width: 1em;
+  width: 0.8em;
   display: flex;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translateY(-50%) translateX(-50%);
+  position: relative;
+  top: 0.01em;
+  .hide-label & {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+  }
   svg {
     width: 100%;
   }
