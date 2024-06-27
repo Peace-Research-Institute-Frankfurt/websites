@@ -25,7 +25,9 @@ export default function EventBanner() {
         <p>Festsaal, Senckenberg Naturmuseum Frankfurt</p>
       </div>
       <div className={styles.cta}>
-        <Button size="medium" priority="primary" label="Jetzt anmelden" icon={<ArrowRightIcon />} />
+        <a href="https://www.example.com">
+          Jetzt anmelden <ArrowRightIcon />
+        </a>
       </div>
     </section>
   )

@@ -12,40 +12,57 @@
   padding: 2rem var(--padding);
   position: relative;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.35) inset;
+  padding-bottom: 8rem;
+  @include bp(s) {
+    padding-bottom: 5rem;
+  }
+  @include bp(m) {
+    padding-bottom: 2rem;
+  }
 }
 
 .eyebrow {
   @extend %caption-caps;
   display: block;
-  margin-bottom: 1.5em;
+  margin-bottom: 0.5em;
 }
 
 .title {
   @extend %h2;
-  color: #ed91f4;
+  color: #ffb3e1;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
   margin-bottom: 0.5em;
+  word-spacing: -0.05em;
   em {
-    font-size: var(--ms-4);
     display: block;
     font-style: normal;
     word-spacing: -0.15em;
-    margin-bottom: 0.3em;
+    margin-bottom: 0.1em;
+    font-size: var(--ms-3);
+    line-height: calc(var(--baseline) * 1.5);
+    @include bp(m) {
+      line-height: calc(var(--baseline) * 2);
+      font-size: var(--ms-4);
+    }
   }
 }
 
 .intro {
   @extend %copy;
-  max-width: 32em;
   padding-top: 2em;
   line-height: 1.25;
   margin-bottom: 0.5em;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.35);
+  max-width: 32em;
+  @include bp(sm) {
+    width: 55%;
+  }
 }
 
 .illustration-container {
   position: absolute;
   bottom: -1rem;
-  right: 1rem;
+  right: 0.5rem;
   display: flex;
   justify-content: flex-end;
   z-index: -100;
@@ -53,7 +70,16 @@
 
 .illustration {
   max-height: 100%;
-  width: 50%;
+  width: 60%;
+  @include bp(s) {
+    width: 45%;
+  }
+  @include bp(m) {
+    width: 40%;
+  }
+  @include bp(l) {
+    width: 45%;
+  }
 }
 
 .details {
@@ -61,5 +87,30 @@
 }
 
 .cta {
-  margin-top: 1.5em;
+  margin-top: 1em;
+  position: relative;
+  z-index: 1000;
+  a {
+    font-family: var(--edge);
+    font-size: var(--ms--1);
+    display: inline-flex;
+    cursor: pointer;
+    padding: 0.25em 0.65em;
+    white-space: nowrap;
+    background: var(--white);
+    color: var(--black);
+    gap: 0.25em;
+    border-radius: 1000px;
+    &:hover,
+    &:focus-visible {
+      background: white;
+    }
+    svg {
+      width: 0.7em;
+      transform: translateY(0.05em) rotate(-45deg);
+    }
+  }
+  @include bp(m) {
+    margin-top: 1.25em;
+  }
 }
