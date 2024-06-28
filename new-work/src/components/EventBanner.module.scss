@@ -108,6 +108,7 @@
     &:hover,
     &:focus-visible {
       background: white;
+      outline-offset: 2px;
     }
     svg {
       width: 0.7em;
