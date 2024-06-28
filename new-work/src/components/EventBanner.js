@@ -1,6 +1,5 @@
 import React from 'react'
 import * as styles from './EventBanner.module.scss'
-import Button from './ButtonAdapter'
 import ArrowRightIcon from '../images/arrow-right.svg'
 import { StaticImage } from 'gatsby-plugin-image'
 

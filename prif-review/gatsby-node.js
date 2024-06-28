@@ -65,10 +65,16 @@ exports.createPages = async function ({ actions, graphql }) {
   const reports = data.posts.nodes.filter((el) => {
     return el.base === 'index.mdx'
   })
+  const credits = data.posts.nodes.filter((el) => {
+    return el.base === 'credits.mdx'
+  })
 
   console.log(`${reports.length} reports found`)
+  console.log(`${credits.length} credits found`)
   console.log(`${posts.length} posts found`)
   console.log(`${pages.length} pages found`)
+
+  console.log(credits)
 
   // Create report pages
   reports.forEach((node) => {
@@ -79,10 +85,15 @@ exports.createPages = async function ({ actions, graphql }) {
     const year = node.relativeDirectory.replace(/(.{2})\/(reports)\//g, '')
     let path = `${locale && locale !== defaultLocale ? locale : ''}/${year}/`
 
+    // Find credits file
+    const creditsNode = credits.find((el) => {
+      return el.relativeDirectory === node.relativeDirectory
+    })
+
     actions.createPage({
       path: path,
       component: `${postTemplate}?__contentFilePath=${node.childMdx.internal.contentFilePath}`,
-      context: { id: node.id, postsDirectory: `${node.relativeDirectory}/posts`, translations: translationIds },
+      context: { id: node.id, postsDirectory: `${node.relativeDirectory}/posts`, translations: translationIds, creditsNode: creditsNode?.id || '' },
     })
   })
 

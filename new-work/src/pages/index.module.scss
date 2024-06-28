@@ -18,7 +18,7 @@
   display: flex;
   gap: var(--padding-small);
   list-style: none;
-  padding: calc(var(--padding) * 2) 1em;
+  padding: var(--padding) 1em;
   justify-content: center;
   flex-wrap: wrap;
   border-bottom: 1px solid var(--gray);
