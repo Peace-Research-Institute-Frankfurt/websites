@@ -1,6 +1,7 @@
 import React from 'react'
 import * as styles from './EventBanner.module.scss'
 import ArrowRightIcon from '../images/arrow-right.svg'
+import StarIcon from '../images/star.svg'
 import { StaticImage } from 'gatsby-plugin-image'
 
 export default function EventBanner() {
@@ -9,7 +10,10 @@ export default function EventBanner() {
       <div className={styles.illustrationContainer}>
         <StaticImage src={'../images/Rosa-Ahlers_Inner-Work-crop.png'} className={styles.illustration} />
       </div>
-      <span className={styles.eyebrow}>Veranstaltung</span>
+      <span className={styles.eyebrow}>
+        <StarIcon />
+        Veranstaltung
+      </span>
       <h2 className={styles.title}>
         <em>KI und New Work</em>
         <span>Zukunftsstrategien für Wissenschaftseinrichtungen</span>

@@ -23,8 +23,14 @@
 
 .eyebrow {
   @extend %caption-caps;
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
   margin-bottom: 0.5em;
+  svg {
+    height: 0.8em;
+    width: auto;
+  }
 }
 
 .title {
