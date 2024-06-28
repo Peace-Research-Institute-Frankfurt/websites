@@ -220,7 +220,7 @@ const Index = ({ data, pageContext, children, location }) => {
             )}
             {data.credits && (
               <div className={styles.credits}>
-                <h2>{t('Legal')}</h2>
+                <h2>{t('Credits')}</h2>
                 <MarkdownRenderer markdown={data.credits.childMdx.body} />
               </div>
             )}
