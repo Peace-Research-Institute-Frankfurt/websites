@@ -9,6 +9,7 @@ import * as styles from './index.module.scss'
 import { PostList } from '../components/PostList'
 import EventBanner from '../components/EventBanner'
 import SearchForm from '../components/SearchForm'
+import Schedule from '../components/Schedule'
 
 export const query = graphql`
   query {
@@ -80,7 +81,9 @@ const Index = ({ data }) => {
           }
           credit="[Verena Mack](https://verenamack.com/)"
         />
-        <EventBanner />
+        <Schedule from="2024-05-30" to="2024-09-27">
+          <EventBanner />
+        </Schedule>
         <section className={styles.content}>
           <ol className={styles.filters}>
             {categories.map((category) => {
