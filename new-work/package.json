@@ -31,7 +31,7 @@
     "gatsby-source-filesystem": "^5.13.1",
     "gatsby-transformer-json": "^5.13.1",
     "gatsby-transformer-sharp": "^5.13.1",
-    "hcaptcha": "^0.1.1",
+    "hcaptcha": "^0.2.0",
     "mdast-util-gfm-footnote": "^2.0.0",
     "mdast-util-to-string": "^4.0.0",
     "micromark-extension-gfm-footnote": "^2.0.0",
