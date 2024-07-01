@@ -22,7 +22,7 @@
     "@visx/point": "^3.0.1",
     "@visx/scale": "^3.5.0",
     "@visx/shape": "^3.5.0",
-    "colorjs.io": "^0.5.0",
+    "colorjs.io": "^0.5.2",
     "dotenv": "^16.4.5",
     "gatsby": "^5.13.6",
     "gatsby-adapter-netlify": "^1.1.6",
