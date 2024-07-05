@@ -103,7 +103,7 @@
   width: 3.5rem;
   flex-shrink: 0;
   @include bp(m) {
-    width: 6rem;
+    width: 4.5rem;
   }
 }
 .author-institution {
@@ -198,4 +198,18 @@
   border: 1px solid var(--blue-70);
   display: inline-flex;
   padding: 0.5em 1.5em;
+}
+
+.updates {
+  @extend %caption;
+  list-style: none;
+  li {
+    margin-bottom: 0.75em;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  date {
+    @extend %caption-bold;
+  }
 }
