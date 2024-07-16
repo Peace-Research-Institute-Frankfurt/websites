@@ -31,16 +31,18 @@
 
 .list {
   grid-column: 1 / 6;
+  display: grid;
+  grid-template-columns: repeat(5, 20%);
+  margin: var(--baseline) 0;
+  gap: 3px;
+
   @include bp(m){
     grid-column: 2 / 5;
   }
   @include bp(l){
     grid-column: 3 / 5;
   }
-  display: grid;
-  grid-template-columns: repeat(5, 20%);
-  margin: var(--baseline) 0;
-  gap: 3px;
+
   .container {
     grid-column: span 1;
     background: var(--fc-background, var(--chart-background));

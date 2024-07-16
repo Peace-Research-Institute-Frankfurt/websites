@@ -3,13 +3,13 @@
 .container {
   margin-top: calc(var(--baseline) * 0.5);
   margin-bottom: calc(var(--baseline) * 1);
+  grid-column: 1/ 6;
 
   p {
     a {
       background: transparent;
     }
   }
-  grid-column: 1/ 6;
   @include bp(m) {
     grid-column: 2 / 4;
   }
