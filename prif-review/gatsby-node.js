@@ -74,8 +74,6 @@ exports.createPages = async function ({ actions, graphql }) {
   console.log(`${posts.length} posts found`)
   console.log(`${pages.length} pages found`)
 
-  console.log(credits)
-
   // Create report pages
   reports.forEach((node) => {
     const locale = node.childMdx.fields.locale
