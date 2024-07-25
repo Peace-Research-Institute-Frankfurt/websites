@@ -39,6 +39,8 @@
 
 .answer {
   grid-column: 1 / 4;
+  text-wrap: auto;
+  hyphens: auto;
   @include bp(m) {
     grid-column: 2 / 4;
   }
