@@ -48,13 +48,14 @@
 .title {
   @extend %h1;
 }
+
 .intro {
   @extend %copy-large;
   padding-top: 1em;
+  color: var(--blue-30);
   @include bp(m) {
     padding-top: 0.85em;
   }
-  color: var(--blue-30);
 }
 
 .body {
