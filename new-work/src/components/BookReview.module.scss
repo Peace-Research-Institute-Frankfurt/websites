@@ -28,6 +28,8 @@
     left: 0;
     width: 100%;
     box-shadow: 2px 2px 6px -1px rgba(0, 0, 0, 0.282);
+    max-width: 10em;
+
     @for $i from 1 to 5 {
       &:nth-of-type(#{$i}) {
         top: 0.5em * $i - 0.5em;
@@ -39,7 +41,6 @@
       position: relative !important;
       z-index: 100;
     }
-    max-width: 10em;
     @include bp(m) {
       max-width: 8em;
     }

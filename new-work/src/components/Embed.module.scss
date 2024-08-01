@@ -1,10 +1,11 @@
 @import 'vars';
 .container {
-  margin: calc(var(--baseline) / 2) 0;
+	margin: calc(var(--baseline) / 2) 0;
+  grid-column: 1 / 4;
+
   &:first-child {
     margin-top: 0;
   }
-  grid-column: 1 / 4;
   @include bp(m) {
     grid-column: 1 / 3;
   }
