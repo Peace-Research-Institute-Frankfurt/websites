@@ -26,6 +26,7 @@ ul.slides {
     display: flex;
     flex-flow: column;
     justify-content: space-between;
+    opacity: 0;
 
     @include bp(m) {
       display: contents;
@@ -42,7 +43,6 @@ ul.slides {
         }
       }
     }
-    opacity: 0;
     &.active {
       opacity: 1;
       .image,
