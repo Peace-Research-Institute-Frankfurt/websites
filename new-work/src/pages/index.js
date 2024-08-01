@@ -28,6 +28,7 @@ export const query = graphql`
             category
             published_on
             format
+            order
             authors {
               frontmatter {
                 name

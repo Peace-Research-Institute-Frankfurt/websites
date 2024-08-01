@@ -41,6 +41,9 @@ const PostList = ({ posts, activeFilters, currentPostId }) => {
 				return activeFilters ? activeFilters.includes(node.childMdx.frontmatter.category) : true
 			})
 			.sort((a, b) => {
+				return a.childMdx.frontmatter.order - b.childMdx.frontmatter.order
+			})
+			.sort((a, b) => {
 				return categories.indexOf(a.childMdx.frontmatter.category) - categories.indexOf(b.childMdx.frontmatter.category)
 			})
 			.map((node) => {

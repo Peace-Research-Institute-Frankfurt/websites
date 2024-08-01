@@ -36,7 +36,7 @@
     -1px 0 0 black,
     -1px -1px 0 black,
     0px -1px 0 black;
-  font-size: Max(11.5vw, var(--ms-5));
+  font-size: Max(10vw, var(--ms-5));
   line-height: 0.9;
   @include bp(m) {
     line-height: 0.825;

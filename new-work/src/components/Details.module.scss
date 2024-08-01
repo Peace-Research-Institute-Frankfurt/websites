@@ -47,11 +47,13 @@
   &:hover,
   &:focus-visible {
     text-decoration: underline;
+    text-underline-offset: .2em;
+    text-decoration-color: var(--gray);
   }
 }
 
 .summary-text {
-  @extend %h3;
+	padding-right: 1.5em;
 }
 
 .body {
