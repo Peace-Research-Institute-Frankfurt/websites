@@ -43,7 +43,7 @@
     "gatsby-transformer-csv": "^5.13.1",
     "gatsby-transformer-json": "^5.13.1",
     "gatsby-transformer-sharp": "^5.13.1",
-    "luxon": "^3.4.4",
+    "luxon": "^3.5.0",
     "mdast-util-to-string": "^4.0.0",
     "pagedjs": "^0.4.3",
     "puppeteer": "^22.14.0",
