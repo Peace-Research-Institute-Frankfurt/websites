@@ -8,6 +8,7 @@ import { EmbedAdapter, Youtube, Vimeo } from './EmbedAdapter'
 import TermAdapter from './TermAdapter'
 import { Interview, InterviewQuestion } from '@shared/components/Interview'
 import Quote from '@shared/components/Quote'
+import IconTile from './IconTile'
 import { Tab, Tabs } from './TabsAdapter'
 import Callout from '@shared/components/Callout'
 import Button from './ButtonAdapter'
@@ -65,6 +66,7 @@ const shortCodes = {
   BookReview,
   BookReviewList,
   PlaceholderText,
+  IconTile,
 }
 
 export default function PostBody({ children }) {

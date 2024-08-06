@@ -1,0 +1,34 @@
+@import 'vars';
+
+.wrapper {
+  grid-column: 2 / 3;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin-bottom: var(--baseline);
+}
+
+.container {
+  border: 1px solid var(--gray);
+  border-radius: 1rem;
+  padding: 1rem;
+  svg {
+    width: 2rem;
+    height: auto;
+  }
+  path {
+    fill: white;
+  }
+}
+
+.title {
+  @extend %h3;
+  margin-top: 0 !important;
+}
+
+.copy {
+  @extend %copy;
+}
+
+.icon {
+  width: 2rem;
+}
