@@ -1,0 +1,1228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+<!-- question: 0  -->
+  <question type="category">
+    <category>
+      <text>$cat1$/top/LU19</text>
+    </category>
+    <info format="html">
+      <text></text>
+    </info>
+    <idnumber></idnumber>
+  </question>
+
+<!-- question: 4003  -->
+  <question type="ddwtos">
+    <name>
+      <text>Q05</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<h6>Malicious cyber operations</h6>
+
+One widespread form of non-state cyber activity is “[[1]]”. Everything with a clear criminal intention, including ransomware, that is the encryption of a victim’s hard drive to demand ransom or phishing for passwords to commit identity theft, falls into this category.
+
+Another form is “[[1]]”, for example an attack against critical infrastructure like a traffic-light system or a nuclear power plant with the aim of causing uncertainty, fear and havoc, usually inflicting physical destruction and human casualties. 
+
+The probably most harmless form is called “[[1]]”. Examples would be the defacement of government websites, changing text or visual elements, or so-called Distributed Denial of Service attacks, where a website is overwhelmed by a flood of simultaneous server requests,
+disrupting normal functionality.]]></text>
+    </questiontext>
+    <generalfeedback format="moodle_auto_format">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <shuffleanswers>1</shuffleanswers>
+    <correctfeedback format="html">
+      <text>Your answer is correct.</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Your answer is partially correct.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Your answer is incorrect.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <dragbox>
+      <text>cybercrime</text>
+      <group>1</group>
+    </dragbox>
+    <dragbox>
+      <text>cyberterrorism</text>
+      <group>1</group>
+    </dragbox>
+    <dragbox>
+      <text>hacktivism</text>
+      <group>1</group>
+    </dragbox>
+  </question>
+
+<!-- question: 4011  -->
+  <question type="ddwtos">
+    <name>
+      <text>Q11</text>
+    </name>
+    <questiontext format="moodle_auto_format">
+      <text>Put the stages of the Cyber Kill Chain into the correct order:
+
+[[1]] → [[1]] → [[1]] → [[1]]</text>
+    </questiontext>
+    <generalfeedback format="moodle_auto_format">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <shuffleanswers>1</shuffleanswers>
+    <correctfeedback format="html">
+      <text>Your answer is correct.</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Your answer is partially correct.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Your answer is incorrect.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <dragbox>
+      <text>Reconnaissance and Weaponization</text>
+      <group>1</group>
+    </dragbox>
+    <dragbox>
+      <text>Delivery and Exploitation</text>
+      <group>1</group>
+    </dragbox>
+    <dragbox>
+      <text>Privilege Escalatation</text>
+      <group>1</group>
+    </dragbox>
+    <dragbox>
+      <text>Achieving Objectives</text>
+      <group>1</group>
+    </dragbox>
+  </question>
+
+<!-- question: 4004  -->
+  <question type="cloze">
+    <name>
+      <text>Q06</text>
+    </name>
+    <questiontext format="moodle_auto_format">
+      <text>Over the last two decades, some severe cyber incidents have become known to the general public. In late April 2007, many  {1:MULTICHOICE:=Estonian#OK~Russian#Wrong~Serbian#Wrong} websites, including those of banks and governmental institutions, were flooded with denial-of-service attacks from millions of computers captured in 75 countries for several days. In 2010 security experts discovered a very sophisticated piece of malware, utilizing four previously unknown vulnerabilities as well as stolen security certificates. This software, ‘Stuxnet’, was after something very special: a specific program controlling Siemens industrial hardware to sabotage the  {1:MULTICHOICE:North Korean#Wrong~=Iranian#OK~South African#Wrong} nuclear program. In 2015 a group of hackers penetrated the internal net of the  {1:MULTICHOICE:US Congress#Wrong~=German Bundestag#OK~Knesset#Wrong}, potentially getting hold of emails and confidential documents</text>
+    </questiontext>
+    <generalfeedback format="moodle_auto_format">
+      <text></text>
+    </generalfeedback>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+  </question>
+
+<!-- question: 3999  -->
+  <question type="multichoice">
+    <name>
+      <text>Q01</text>
+    </name>
+    <questiontext format="html">
+      <text>The term cybersecurity describes …</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>none</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text>Your answer is correct.</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Your answer is partially correct.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Your answer is incorrect.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="0" format="html">
+      <text>... the need to have a firewall on one’s personal electronic device.</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>... all measures and practices protecting and defending computer networks, servers, computers.</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>... the cyber task force of the US Department of Defense.</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>none of the above</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 4000  -->
+  <question type="multichoice">
+    <name>
+      <text>Q02</text>
+    </name>
+    <questiontext format="html">
+      <text>Training staff in issues of cybersecurity is very important. Why?</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>none</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text>Your answer is correct.</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Your answer is partially correct.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Your answer is incorrect.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="0" format="html">
+      <text>Untrained staff is more likely to be recruited as foreign agents.</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>Untrained staff will influence trained staff to be lax on cybersecurity.</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>70% of untrained staff occasionally turn off their firewall by mistake.</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>50 to 90 percent of all cyber incidents can be attributed to uninformed or untrained staff.</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 4001  -->
+  <question type="multichoice">
+    <name>
+      <text>Q03</text>
+    </name>
+    <questiontext format="html">
+      <text>Cybersecurity concerns ...</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>none</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text>Your answer is correct.</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Your answer is partially correct.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Your answer is incorrect.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="0" format="html">
+      <text>... private companies and private users.</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>... scientific institutions.</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>... government agencies.</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>all of the above</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 4002  -->
+  <question type="multichoice">
+    <name>
+      <text>Q04</text>
+    </name>
+    <questiontext format="html">
+      <text>The US declared cyberspace an operational domain in …</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>none</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text>Your answer is correct.</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Your answer is partially correct.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Your answer is incorrect.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="0" format="html">
+      <text>1993</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>2011</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>2018</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 4008  -->
+  <question type="multichoice">
+    <name>
+      <text>Q07</text>
+    </name>
+    <questiontext format="html">
+      <text>In 2013 the so-called “Tallinn Manual” was published. The manual is ...</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>none</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text>Your answer is correct.</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Your answer is partially correct.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Your answer is incorrect.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="0" format="html">
+      <text>... a UN report on the issue of ‘developments in the field of information and telecommunications in the context of international security’.</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>... an opinion of independent experts on the applicability of international law to the cyber realm.</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>... the official NATO-doctrine on cyberwar.</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 4009  -->
+  <question type="multichoice">
+    <name>
+      <text>Q08</text>
+    </name>
+    <questiontext format="html">
+      <text>A cyber weapon …</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>none</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text>Your answer is correct.</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Your answer is partially correct.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Your answer is incorrect.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text>... is hard to predict.</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>... is neglectable compared to kinetic attacks.</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>... is always reparable.</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 4010  -->
+  <question type="multichoice">
+    <name>
+      <text>Q09</text>
+    </name>
+    <questiontext format="html">
+      <text>The term autonomous hack-back</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>none</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text>Your answer is correct.</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Your answer is partially correct.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Your answer is incorrect.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text>describes an automated system that initiates a retaliation strike to destroy the attacking computer without human authorization</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>is another word for a lethal autonomous weapon system (LAWS)</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>describes a computerized defense system outlawed under Article 36 of the additional protocol to the Geneva Conventions</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>is tech-talk for an email exchange</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 4019  -->
+  <question type="multichoice">
+    <name>
+      <text>Q10</text>
+    </name>
+    <questiontext format="html">
+      <text>The term autonomous hack-back ...</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>none</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text>Your answer is correct.</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Your answer is partially correct.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Your answer is incorrect.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text>... describes an automated system that initiates a retaliation strike to destroy the attacking computer without human authorization.</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>... is another word for a lethal autonomous weapon system (LAWS).</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>... describes a computerized defense system outlawed under Article 36 of the additional protocol to the Geneva Conventions.</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>... is tech-talk for an email exchange.</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 4012  -->
+  <question type="multichoice">
+    <name>
+      <text>Q12</text>
+    </name>
+    <questiontext format="html">
+      <text>Arms control is said to be very difficult in the cyber realm. Why?</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>false</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>none</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text>Your answer is correct.</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Your answer is partially correct.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Your answer is incorrect.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="33.33333" format="html">
+      <text>It is hard to find a clearly and detailed defined subject to regulate.</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="33.33333" format="html">
+      <text>It is hard to verify compliance.</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="33.33333" format="html">
+      <text>The technological development is too fast for regulation.</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="-100" format="html">
+      <text>none of the above</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 4013  -->
+  <question type="multichoice">
+    <name>
+      <text>Q13</text>
+    </name>
+    <questiontext format="html">
+      <text>Some argue that the cyber realm is best regulated by voluntary normative restraints rather than legally binding treaties. Why?</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>none</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text>Your answer is correct.</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Your answer is partially correct.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Your answer is incorrect.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text>Norms set standards for responsible state behavior.</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>Norms are easier to verify than legally binding treaties.</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>Violation of norms may be brought before the International Criminal Court.</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 4014  -->
+  <question type="multichoice">
+    <name>
+      <text>Q14</text>
+    </name>
+    <questiontext format="html">
+      <text>The cybernorms proposed by the 2015 UN Group of Governmental Experts on Developments in the Field of Information and Telecommunications in the Context of International Security include:</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>false</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>none</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text>Your answer is correct.</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Your answer is partially correct.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Your answer is incorrect.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="50" format="html">
+      <text>States behaving responsibly should not allow “their territory to be used for internationally wrongful acts using ICTs”.</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="-50" format="html">
+      <text>States behaving responsibly should not allow the sale of computers without antivirus software.</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="50" format="html">
+      <text>States behaving responsibly should “take appropriate measures to protect their critical infrastructure”.</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="-100" format="html">
+      <text>all of the above</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 4015  -->
+  <question type="multichoice">
+    <name>
+      <text>Q15</text>
+    </name>
+    <questiontext format="html">
+      <text>In the field of “cyber”, there are more non-setting actors than states. Other actors include ...</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>false</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>none</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text>Your answer is correct.</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Your answer is partially correct.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Your answer is incorrect.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="-50" format="html">
+      <text>religious groups</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="50" format="html">
+      <text>intelligence agencies</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="50" format="html">
+      <text>private companies</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="-50" format="html">
+      <text>the World Wildlife Fund (WFF)</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 4016  -->
+  <question type="multichoice">
+    <name>
+      <text>Q16</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<h6>Are these numbers correct?</h6>
+<img src="@@PLUGINFILE@@/LU19%20Q16%20State%20Sponsored%20Cyber%20Incidents.JPG" alt="State Sponsored Cyber Incidents" width="751" height="364" role="presentation" class="img-responsive atto_image_button_text-bottom">]]></text>
+<file name="LU19 Q16 State Sponsored Cyber Incidents.JPG" path="/" encoding="base64">/9j/4AAQSkZJRgABAQEAYABgAAD/4RDuRXhpZgAATU0AKgAAAAgABAE7AAIAAAAMAAAISodpAAQAAAABAAAIVpydAAEAAAAYAAAQzuocAAcAAAgMAAAAPgAAAAAc6gAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE5JS0xBUyBTQ0hHAAAFkAMAAgAAABQAABCkkAQAAgAAABQAABC4kpEAAgAAAAM5MwAAkpIAAgAAAAM5MwAA6hwABwAACAwAAAiYAAAAABzqAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMjAyMjowMzoxNyAxODozNTowMwAyMDIyOjAzOjE3IDE4OjM1OjAzAAAATgBJAEsATABBAFMAIABTAEMASABHAAAA/+ELHmh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8APD94cGFja2V0IGJlZ2luPSfvu78nIGlkPSdXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQnPz4NCjx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iPjxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+PHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9InV1aWQ6ZmFmNWJkZDUtYmEzZC0xMWRhLWFkMzEtZDMzZDc1MTgyZjFiIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iLz48cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0idXVpZDpmYWY1YmRkNS1iYTNkLTExZGEtYWQzMS1kMzNkNzUxODJmMWIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyI+PHhtcDpDcmVhdGVEYXRlPjIwMjItMDMtMTdUMTg6MzU6MDMuOTI1PC94bXA6Q3JlYXRlRGF0ZT48L3JkZjpEZXNjcmlwdGlvbj48cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0idXVpZDpmYWY1YmRkNS1iYTNkLTExZGEtYWQzMS1kMzNkNzUxODJmMWIiIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyI+PGRjOmNyZWF0b3I+PHJkZjpTZXEgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj48cmRmOmxpPk5JS0xBUyBTQ0hHPC9yZGY6bGk+PC9yZGY6U2VxPg0KCQkJPC9kYzpjcmVhdG9yPjwvcmRmOkRlc2NyaXB0aW9uPjwvcmRmOlJERj48L3g6eG1wbWV0YT4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgPD94cGFja2V0IGVuZD0n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W2k2eUVzvnmxkRRj7zf0HqSBSbSV2NJt2R1Xwn+GbeM786jqqsmi2r4cDg3LjnYD2HqfwHqPpyCCK2t44LaNIoYlCJGi4VVHAAHYVV0fSbPQtHttM0yIQ2tsgSNR/M+pJ5J7k1drzalRzdz2qNJUo26hRRRWRsFFFFABRRRQAUUUUAFFFFABRRRQAV5d8W/hdH4os5Na0OIJrMKZeNRj7WoHQ/7YHQ9+h7Y9RoqoycXdETgpx5WfDJBVirAgg4IPakr2P45/D9dMvf8AhKNJixa3T4vY1HEcp6P9G7+/+9XjlenCSnG6PEqQdOXKwoooqyAooooAKKKKACiiigAr0v4Fa8dJ+ISWMj4g1SJoSCeN4+ZD9eCP+BV5pVrTL+bStWtNQtjia1mSZP8AeUgj+VTKPNFounLkkpH27RUNldR39hb3ducxXESyofVWGR+hqavJPeCiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAqvf3kenabc3s/wDqraF5X+igk/yqxXHfFm/OnfCzW5VbDSQiAY773CH9GNVFXaRMpcsWz5OubiS7u5rmc7pZnaRz6knJqKiivWPACiiigAooooAKKKKACiiigAr6f+Cng5fDvg1NSuo8X+qgTMSOUi/gX8juP19q8C8B+Hv+Ep8caZpTLmGSXfP/ANc1+ZvzAI+pFfYiqEUKgCqowABgAVyYidlynfg6d25sWiiiuI9IKKKKACiiigAooooAKKKKACiiigAooooAKKKKAKmraXa61pF1puoR+ZbXUZjkX2PcehHUH1r438R6Hc+GvEd7pF7/AK20lKbsY3r1Vh7EEH8a+068I/aI8OBJ9N8RwJjzP9EuCB1IyyH8tw/AV04edpcvc48XT5oc3Y8PooorvPKCiiigAooooAKKKKACiiigD6y+EOq/2t8L9JZjmS2RrV/bYxC/+O7a7WvHP2dNR83w3q+nE5NvdLMB6CRcf+0zXsdeXVVptHuUZc1NMKKKKzNQooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACmvLHHGZJHVUHJZjgfnXmf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65crPHI88enYT7L5SylPKI27iSo+9nOTVvxFrer2HjCLw5aan5KeISksE8rDzNNGcSKBj+PGEz/ESO1dC3gDRWvXlP2sWr3H2p9PFw32Vpc53GPp97nHTParN14P0m9/tU3UcksmqFDPK0h3rs/1YQ/w7SMjHfmq5o3I5J2/r+tTkvFOt6rYHxnFY38sRsLXTjaknPlM7uGPvnAzWi9zqfhnxgltLq91qlvcaVcXckd2EG2WIpgptUbQQxGOa3L3whpeoDUvtYmc6nHBHct5mCwhJKY9DknPrV+bSLSfW7fVZFY3NvBJAnzfLscqWyO/3RS5o2/rsPkle/8AW7POTda9beH/AAjr0niS9nm1vUrEXduVjEISZgxRAFyoA+Xrzzntj1SvLbbwJqM2raRAdNuNOstN1BL0htWM9smwlgsEXBGWPVgNozjrXqVFS3QdK+twooorI2CiiigArkPirp/9pfC7XIgMmO388e3lsHP6Ka6+q+oWceo6bdWU3+ruYXif6MCD/OnF2aZMlzRaPiCipru2lsr2e1uF2ywSNG49GU4P6ioa9c8AKKKKACiiigAooooAKKKKAOz+E/iAeHfiNp08r7Le6Y2k5zxtfgE+wbafwr60r4ZBIORwa+ufhn4sHi/wRaXkj7ryAfZ7sZ58xR97/gQw34+1ceJjtI9HB1N4M62iiiuM9AKKKKACiiigAooooAKKKKACiiigAooooAKKKKACuR8f622nafb2sG0y3D7mDf3F/wDrkflXWkhVJYgADJJ7V4v4n1g63r09ypJhU+XCP9gdPz5P41pTjdmVWXLEsQa7C+BOjRn1HI/xrRininXMMiuPY9K4+lVirBlJBHQg9K6OVHKps7Oiuag1i7hwGYSr6OOfzrSg1y3k4mVoj+Y/z+FTystSTNOimRyxzLuidXHqpzT6koKKKKACiiigDrPCMW2ynl/vyBfyH/166Cs3QIPI0WAHq4Ln8en6YrSrCW50R0QUUUUigooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooA+T/i/o50f4n6oAu2K7YXcZ/vbxlj/33u/KuIr379onQfN0vS9eiT5reQ2sxA/h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</file>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>none</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text>Your answer is correct.</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Your answer is partially correct.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Your answer is incorrect.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text>Yes</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>No</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 4017  -->
+  <question type="multichoice">
+    <name>
+      <text>Q17</text>
+    </name>
+    <questiontext format="html">
+      <text>NATO supports its allies by …</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>false</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>none</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text>Your answer is correct.</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Your answer is partially correct.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Your answer is incorrect.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="-50" format="html">
+      <text>... protecting every allies’ network.</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="50" format="html">
+      <text>... sharing real time information.</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="50" format="html">
+      <text>... organizing cyber exercises.</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="-50" format="html">
+      <text>... sharing zero-day exploits.</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 4018  -->
+  <question type="multichoice">
+    <name>
+      <text>Q18</text>
+    </name>
+    <questiontext format="html">
+      <text>NATO supports its allies by …</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>none</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text>Your answer is correct.</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Your answer is partially correct.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Your answer is incorrect.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="0" format="html">
+      <text>2005</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>2008</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>2007</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>2010</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 204  -->
+  <question type="multichoice">
+    <name>
+      <text>Q19</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<h5>According to the Tallinn Manual, the classical rules of international law ...<br></h5>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>none</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text>Your answer is correct.</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Your answer is partially correct.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Your answer is incorrect.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>... do not apply in the cyber realm.<br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>... have to be revised for the cyber realm.<br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>... remain applicable in the cyber realm.<br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 303  -->
+  <question type="multichoice">
+    <name>
+      <text>Q20</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><table width="485" cellspacing="0" cellpadding="0" border="0">
+ <colgroup><col width="485">
+ </colgroup><tbody><tr height="122">
+
+  <td width="485" height="122"><h5>According
+  to the Tallinn Manual, a cyber-operation qualifies as a cyber-attack if it is<br></h5></td>
+
+ </tr>
+</tbody></table><br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>none</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text>Your answer is correct.</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Your answer is partially correct.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Your answer is incorrect.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>reasonably expected to cause significant economic losses<br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>reasonably expected to cause injury or death to persons or damage or destruction to objects<br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>reasonably expected to limit the military to fulfill its function of self-defense<br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 205  -->
+  <question type="multichoice">
+    <name>
+      <text>Q21</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<h5>Which of the following cyber-operation do not qualify as a cyber-attack? (multiple answers)<br></h5>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>false</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>none</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text>Your answer is correct.</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Your answer is partially correct.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Your answer is incorrect.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="33.33333" format="html">
+      <text><![CDATA[<p>DOS-attacks (denial of service attacks)<br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="33.33333" format="html">
+      <text><![CDATA[<p>Hacktivism<br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="33.33333" format="html">
+      <text><![CDATA[<p>Cyber-crime<br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<p>Cyber-terrorism<br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<p>Cyber-war<br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 206  -->
+  <question type="multichoice">
+    <name>
+      <text>Q22</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<h5>When it comes to Cyber-operations people often refer to the so-called “attribution problem”. What is this problem referring to (even though the US claims to have solved the problem)? <br></h5>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>none</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text>Your answer is correct.</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Your answer is partially correct.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Your answer is incorrect.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>The inability to attribute a successful cyber-defense to one particular soldier, making it impossible to hand out medals for successful cyber-defenders.<br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>The fact that some states turn a blind eye to cyber-activities conducted by a third party from their soil.<br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>The fact that it is potentially impossible to know for sure who was behind an incident.<br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 207  -->
+  <question type="multichoice">
+    <name>
+      <text>Q23</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<h5>Many Western experts agree that deterrence is hard to establish in the cyber realm. They suggest instead:</h5><p><br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>none</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text>Your answer is correct.</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Your answer is partially correct.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Your answer is incorrect.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Strengthening the resilience of IT infrastructures<br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>The threat of conventional instead of virtual retaliation<br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Strict “boarder controls” and censorship<br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 208  -->
+  <question type="multichoice">
+    <name>
+      <text>Q24</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<h5>The “Stuxnet” incident in 2010 was ...<br></h5>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>none</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text>Your answer is correct.</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Your answer is partially correct.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Your answer is incorrect.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>...a DOS-attack against Estonian websites<br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>...the (alledged) switching off of Syrian air defenses with cyber-means</p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>...a software-worm designed to manipulate and crash Iran’s nuclear enrichment centrifuges<br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+</quiz>

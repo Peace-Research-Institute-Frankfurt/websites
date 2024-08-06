@@ -1,0 +1,16 @@
+{
+  "name": "parse-moodle-xml",
+  "version": "1.0.0",
+  "description": "Utility to translate Moodle Quiz XML into human-readable text files",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Max Kohler <hello@maxkohler.com>",
+  "license": "ISC",
+  "dependencies": {
+    "fast-xml-parser": "^4.4.1",
+    "luxon": "^3.5.0"
+  }
+}
