@@ -7,7 +7,7 @@ export default function IconTile({ title }) {
     <div className={styles.wrapper}>
       <section className={styles.container}>
         <Icon />
-        <h3 className={styles.title}>Title</h3>
+        <h3 className={styles.title}>Hier steht der Kachel-Titel</h3>
         <p className={styles.copy}>
           Wie kann die Beantragung erfolgen und welche Regelungen gilt es zu beachten? Das ist sozial- und krankenversicherungsrechtlich sowie
           lohnsteuerrechtlich die mit Abstand schwierigste Fragestellung.
