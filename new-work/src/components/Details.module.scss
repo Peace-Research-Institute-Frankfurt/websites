@@ -16,14 +16,14 @@
 }
 
 .summary {
-  padding: 0.5em var(--padding-small);
-  padding-bottom: 0.35em;
+  padding: 0.4em var(--padding-small);
+  padding-bottom: 0.3em;
   cursor: pointer;
   position: relative;
   list-style: none;
   user-select: none;
   [open] & {
-    padding-bottom: 0.1em;
+    padding-bottom: 0;
     &:after {
       transform: rotate(45deg);
     }
@@ -47,18 +47,18 @@
   &:hover,
   &:focus-visible {
     text-decoration: underline;
-    text-underline-offset: .2em;
+    text-underline-offset: 0.2em;
     text-decoration-color: var(--gray);
   }
 }
 
 .summary-text {
-	padding-right: 1.5em;
+  padding-right: 1.5em;
 }
 
 .body {
   padding: 0.35em;
-  padding-left: 0.6em;
+  padding-left: var(--padding-small);
   padding-top: 0.35em;
   &:last-child {
     margin-bottom: 0;
