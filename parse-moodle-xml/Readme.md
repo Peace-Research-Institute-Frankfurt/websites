@@ -14,3 +14,8 @@ Quick tool to parse quiz questions export from moodle in the [Moodle XML format]
 
 1. Install [Pandoc](https://pandoc.org/index.html) for your platform
 2. Run `bash markdownToDoc.bash` to convert the data first to markdown, then to docx.
+
+## Notes
+
+- This produces output similar to Moodle's [Aiken](https://docs.moodle.org/403/en/Aiken_format) format, but that only supports multiple choice questions
+- [Moodle2Word](https://docs.moodle.org/403/en/Word_table_format) might be a more feature-complete alternative to this script
