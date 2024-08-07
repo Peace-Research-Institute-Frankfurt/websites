@@ -93,7 +93,7 @@ function renderAnswers(question) {
       text = question.questiontext.text
       hint = sanitise(question?.hint?.text || '')
     }
-    return `${renderClozeText(text)}${hint && `\nHint: ${hint}`}`
+    return `${renderClozeText(text)}${hint && `\n\nHint: ${hint}`}`
   } else if (question['@_type'] === 'numerical') {
     return `Answer: ${question.answer.text} (Tolerance: ${question.answer.tolerance})`
   } else if (question['@_type'] === 'shortanswer') {
