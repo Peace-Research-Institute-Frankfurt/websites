@@ -78,7 +78,7 @@ function renderAnswers(question) {
   } else if (question['@_type'] === 'matching') {
     return question.subquestion
       .map((sq) => {
-        return `- ${sq.text.length > 0 ? `${sanitise(sq.text)}` : ''}(${sq.answer.text})`
+        return `- ${sq.text.length > 0 ? `${sanitise(sq.text)}` : ''} → **${sq.answer.text}**`
       })
       .join('\n')
   } else if (question['@_type'] === 'cloze') {
@@ -95,7 +95,7 @@ function renderAnswers(question) {
     }
     return `${renderClozeText(text)}${hint && `\n\nHint: ${hint}`}`
   } else if (question['@_type'] === 'numerical') {
-    return `Answer: ${question.answer.text} (Tolerance: ${question.answer.tolerance})`
+    return `Answer: **${question.answer.text}** (Tolerance: ${question.answer.tolerance})`
   } else if (question['@_type'] === 'shortanswer') {
     if (Array.isArray(question.answer)) {
       return `\nAnswer: **${question.answer[0].text}**`
