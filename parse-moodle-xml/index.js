@@ -126,9 +126,12 @@ function processFiles(files, outputDirectory) {
     const exportedOnDate = luxon.DateTime.fromFormat(exportedOn.groups.date, 'yyyyMMdd-hhmm')
 
     const data = parser.parse(xmlData)
+
     const category = data.quiz.question.find((q) => {
       return q?.category
     })
+    const categoryTitle = category ? category.category.text.replace('$cat1$/top/', '') : null
+    const outputFilename = `${outputDirectory}/questions-${categoryTitle.toLowerCase()}.md`
 
     const questions = data.quiz.question
       .filter((q) => {
@@ -136,18 +139,16 @@ function processFiles(files, outputDirectory) {
       })
       .map((q, i) => {
         return `### Question ${i + 1} (${renderQuestionType(q['@_type'])})
-${renderQuestion(q)}${renderAnswers(q)}
-`
+${renderQuestion(q)}
+${renderAnswers(q)}\n`
       })
 
-    const categoryTitle = category ? category.category.text.replace('$cat1$/top/', '') : null
     const output = `# EUNPDC eLearning
 ${categoryTitle ? `## Certificate questions for ${categoryTitle}` : null}
 Exported: ${exportedOnDate.toLocaleString(luxon.DateTime.DATETIME_MED)}
 
 ${questions.join('\n')}`
 
-    const outputFilename = `${outputDirectory}/questions-${categoryTitle.toLowerCase()}.md`
     fs.writeFileSync(outputFilename, output)
     console.log(`Wrote ${questions.length} questions to ${outputFilename}`)
   }
@@ -156,7 +157,7 @@ ${questions.join('\n')}`
 const inputDirectory = './data'
 const inputFiles = fs.readdirSync(inputDirectory).map((filename) => `${inputDirectory}/${filename}`)
 
-const outputDirectory = './output'
+const outputDirectory = './markdown'
 
 if (!fs.existsSync(outputDirectory)) {
   fs.mkdirSync(outputDirectory)
