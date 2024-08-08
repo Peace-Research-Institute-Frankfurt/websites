@@ -73,7 +73,7 @@ export default function BookmarksList({ bookmarks, setBookmarks }) {
     </>
   )
 
-  const emptyState = <p className={styles.empty}>Wenn du Artikel zu deinen Favoriten hinzufügst erscheinen sie hier.</p>
+  const emptyState = <p className={styles.empty}>Wenn du Artikel zu deinen Favoriten hinzufügst, erscheinen sie hier.</p>
 
   return <aside className={styles.container}>{bookmarksItems.length > 0 ? bookmarksContent : emptyState}</aside>
 }

@@ -10,19 +10,19 @@
     "description": " Der Begriff Achtsamkeit stammt ursprünglich aus der buddhistischen Lehre und bezieht sich auf eine Form des mentalen Trainings, bei der es darum geht, bewusst und aufmerksam den gegenwärtigen Moment wahrzunehmen, ohne dabei von Gedanken, Emotionen oder äußeren Ablenkungen vereinnahmt zu werden. In den letzten Jahren hat sich Achtsamkeit auch im Arbeitskontext etabliert. Ihre Praktiken können sich positiv auf das individuelle Wohlbefinden, die Arbeitszufriedenheit und die Leistungsfähigkeit der Beschäftigten auswirken und ein Umfeld schaffen, das Konzentration, Kreativität und Mitgefühl fördert."
   },
   {
-    "title": "Activity-based working",
+    "title": "Activity Based Working",
     "term_id": "activity-based-working",
-    "description": "Beim Activity Based Working werden traditionelle Bürostrukturen zugunsten flexibler Arbeitsformen aufgelöst. Die Mitarbeitenden können ihre Arbeitsumgebung selbst wählen – je nachdem, welche Aufgabe sie erledigen wollen. Das können zum Beispiel schallgeschützte Räume für Telefonate, Ruhezonen für konzentrierte Textarbeit oder Teamräume für Besprechungen sein"
+    "description": "Beim Activity Based Working werden traditionelle Bürostrukturen zugunsten flexibler Arbeitsformen aufgelöst. Die Mitarbeitenden können ihre Arbeitsumgebung selbst wählen – je nachdem, welche Aufgabe sie erledigen wollen. Das können zum Beispiel schallgeschützte Räume für Telefonate, Ruhezonen für konzentrierte Textarbeit oder Teamräume für Besprechungen sein."
   },
   {
     "title": "Agiles Manifest",
     "term_id": "agiles-manifest",
-    "description": "Das Agile Manifest ist ein Thesenpapier, das die Grundprinzipien der modernen Softwareentwicklung beschreibt und auf folgenden Werten basiert:\n\n- Menschen und Interaktionen sind wichtiger als Prozesse und Werkzeuge.\n- Eine funktionierende Software ist wichtiger als die umfassende Dokumentation.\n- Die Zusammenarbeit mit dem Kunden ist wichtiger als Vertragsverhandlungen.\n- Das Reagieren auf Veränderungen ist wichtiger als das Befolgen eines Plans.\n\n Es entstand bereits 2001 als Reaktion auf die althergebrachten und starren Methoden der Softwareerstellung, die die 17 Unterzeichner des Manifests als zu unflexibel und langsam empfanden. Sie wollten eine alternative Arbeitsweise etablieren, die auf Interaktion, Kundenorientierung und Flexibilität beruht. Das Agile Manifest wurde so erfolgreich, dass es nicht nur die Softwarebranche veränderte, sondern auch die Arbeitspraxis von Teams in Wissenschaft und Wirtschaft. Darüber hinaus dient es als Fundament für agile Entwicklungsmethoden wie [Scrum](#scrum), [Kanban](#kanban) und Extreme Programming."
+    "description": "Das Agile Manifest ist ein Thesenpapier, das die Grundprinzipien der modernen Softwareentwicklung beschreibt und auf folgenden Werten basiert:\n\n- Menschen und Interaktionen sind wichtiger als Prozesse und Werkzeuge.\n- Eine funktionierende Software ist wichtiger als die umfassende Dokumentation.\n- Die Zusammenarbeit mit dem Kunden ist wichtiger als Vertragsverhandlungen.\n- Das Reagieren auf Veränderungen ist wichtiger als das Befolgen eines Plans.\n\nEs entstand bereits 2001 als Reaktion auf die althergebrachten und starren Methoden der Softwareerstellung, die die 17 Unterzeichner des Manifests als zu unflexibel und langsam empfanden. Sie wollten eine alternative Arbeitsweise etablieren, die auf Interaktion, Kundenorientierung und Flexibilität beruht. Das Agile Manifest wurde so erfolgreich, dass es nicht nur die Softwarebranche veränderte, sondern auch die Arbeitspraxis von Teams in Wissenschaft und Wirtschaft. Darüber hinaus dient es als Fundament für agile Entwicklungsmethoden wie [Scrum](#scrum), [Kanban](#kanban) und Extreme Programming."
   },
   {
     "title": "Agilität",
     "term_id": "agilitat",
-    "description": "Agilität ist eine Methode, die ursprünglich aus der Softwareentwicklung stammt, aber mittlerweile auch in anderen Branchen angewendet wird. Im Allgemeinen geht es dabei um die Fähigkeit einer Organisation, sich schnell an Veränderungen anzupassen, flexibel zu sein und effektiv auf unvorhergesehene Umstände zu reagieren.\n\nAgilität basiert auf den Grundprinzipien des [Agilen Manifests](#agiles-manifest), Kundenorientierung, enge Zusammenarbeit im Team, Anpassungsfähigkeit und kontinuierliche Verbesserung. Zu den spezifischen agilen Methoden gehören [Scrum](#scrum), [Kanban](#kanban) und Extreme Programming."
+    "description": "Agilität ist eine Methode, die ursprünglich aus der Softwareentwicklung stammt, aber mittlerweile auch in anderen Branchen angewendet wird. Im Allgemeinen geht es dabei um die Fähigkeit einer Organisation, sich schnell an Veränderungen anzupassen, flexibel zu sein und effektiv auf unvorhergesehene Umstände zu reagieren. Agilität basiert auf den Grundprinzipien des [Agilen Manifests](#agiles-manifest), Kundenorientierung, enge Zusammenarbeit im Team, Anpassungsfähigkeit und kontinuierliche Verbesserung. Zu den spezifischen agilen Methoden gehören [Scrum](#scrum), [Kanban](#kanban) und Extreme Programming."
   },
   {
     "title": "Autokratischer Führungsstil",
@@ -112,7 +112,7 @@
   {
     "title": "Compassionate Leadership",
     "term_id": "compassionate-leadership",
-    "description": "Compassionate Leadership ist ein Führungsstil, der auf Mitgefühl, Empathie und Fürsorge für Beschäftigte und Teammitglieder basiert. Es geht darum, sich als Führungskraft nicht nur auf Ziele und Ergebnisse zu fokussieren, sondern auch die Bedürfnisse, Gefühle und das Wohlbefinden der Mitarbeitenden ernst zu nehmen. So sollen die Mitarbeiterzufriedenheit, das Engagement und die Leistung gefördert werden. Durch Mitgefühl und Fürsorge werden Beziehungen gestärkt, wird Vertrauen aufgebaut und eine positive Organisationsskultur geschaffen."
+    "description": "Compassionate Leadership ist ein Führungsstil, der auf Mitgefühl, Empathie und Fürsorge für Beschäftigte und Teammitglieder basiert. Es geht darum, sich als Führungskraft nicht nur auf Ziele und Ergebnisse zu fokussieren, sondern auch die Bedürfnisse, Gefühle und das Wohlbefinden der Mitarbeitenden ernst zu nehmen. So sollen die Mitarbeiterzufriedenheit, das Engagement und die Leistung gefördert werden. Durch Mitgefühl und Fürsorge werden Beziehungen gestärkt, wird Vertrauen aufgebaut und eine positive Organisationskultur geschaffen."
   },
   {
     "title": "Corporate Social Responsibility",
@@ -172,7 +172,7 @@
   {
     "title": "Emotionale Kompetenz",
     "term_id": "emotionale-kompetenz",
-    "description": "Emotionale Kompetenz spielt eine Schlüsselrolle in der zwischenmenschlichen Führung und im Umgang mit den Emotionen und Bedürfnissen der Beschäftigten. Der Begriff bezeichnet die Fähigkeit, sich in andere hineinzuversetzen, indem etwa Führungskräfte mitfühlend und besonnen reagieren, wenn sie feststellen, dass Mitarbeitende durch eine herausfordernde Zeit gehen.Teil des Konzepts ist es auch, gegebenenfalls Unterstützung anzubieten und die  Arbeitsbelastung anzupassen."
+    "description": "Emotionale Kompetenz spielt eine Schlüsselrolle in der zwischenmenschlichen Führung und im Umgang mit den Emotionen und Bedürfnissen der Beschäftigten. Der Begriff bezeichnet die Fähigkeit, sich in andere hineinzuversetzen, indem etwa Führungskräfte mitfühlend und besonnen reagieren, wenn sie feststellen, dass Mitarbeitende durch eine herausfordernde Zeit gehen. Teil des Konzepts ist es auch, gegebenenfalls Unterstützung anzubieten und die Arbeitsbelastung anzupassen."
   },
   {
     "title": "Empowerment",
@@ -207,7 +207,7 @@
   {
     "title": "Gender-Pay-Gap",
     "term_id": "gender-pay-gap",
-    "description": "Als Gender Pay Gap (dt. geschlechtsspezifische Lohnlücke) bezeichnet man die Verdienstunterschiede zwischen Frauen und Männern. Der Begriff steht für die Differenz im durchschnittlichen Bruttoeinkommen oder Stundenlohn, wird in der Regel prozentual berechnet und zeigt, wie viel weniger Frauen im Durchschnitt verdienen als Männer. In vielen Ländern besteht nach wie vor eine bedeutende Lohnlücke zwischen den Geschlechtern, obwohl Frauen die gleiche oder eine ähnliche Arbeit wie Männer leisten."
+    "description": "Als Gender-Pay-Gap (dt. geschlechtsspezifische Lohnlücke) bezeichnet man die Verdienstunterschiede zwischen Frauen und Männern. Der Begriff steht für die Differenz im durchschnittlichen Bruttoeinkommen oder Stundenlohn, wird in der Regel prozentual berechnet und zeigt, wie viel weniger Frauen im Durchschnitt verdienen als Männer. In vielen Ländern besteht nach wie vor eine bedeutende Lohnlücke zwischen den Geschlechtern, obwohl Frauen die gleiche oder eine ähnliche Arbeit wie Männer leisten."
   },
   {
     "title": "Generationenmodell",
@@ -237,7 +237,7 @@
   {
     "title": "Holokratie",
     "term_id": "holokratie",
-    "description": "Holokratie (auch: Holakratie) ist ein Organisationsmodell, das auf [Selbstorganisation](#selbstorganisation), dezentraler Entscheidungsfindung und klaren Rollen basiert. Sie stellt eine Alternative zur [hierarchischen](#hierarchie) Führung dar und ersetzt die traditionelle Befehls- und Kontrollstrukturen durch ein System von autonomen Teams und [rollenbasierten](#rollenbasiertes-arbeiten) Entscheidungsprozessen. Holokratie ist Teil einer Diskussion über neue Formen der Zusammenarbeit, die in den letzten Jahren im Rahmen von [New Work](#new-work) und der Transformation von Organisationen zunehmend an Bedeutung gewonnen hat."
+    "description": "Holokratie (auch: Holakratie) ist ein Organisationsmodell, das auf [Selbstorganisation](#selbstorganisation), dezentraler Entscheidungsfindung und klaren Rollen basiert. Sie stellt eine Alternative zur [hierarchischen](#hierarchie) Führung dar und ersetzt die traditionellen Befehls- und Kontrollstrukturen durch ein System von autonomen Teams und [rollenbasierten](#rollenbasiertes-arbeiten) Entscheidungsprozessen. Holokratie ist Teil einer Diskussion über neue Formen der Zusammenarbeit, die in den letzten Jahren im Rahmen von [New Work](#new-work) und der Transformation von Organisationen zunehmend an Bedeutung gewonnen hat."
   },
   {
     "title": "Homeoffice",
@@ -252,7 +252,7 @@
   {
     "title": "Inner Work",
     "term_id": "inner-work",
-    "description": "Inner Work bezieht sich auf einen Prozess der persönlichen und inneren Entwicklung mit dem Ziel, das eigene Bewusstsein, seine Emotionen, Überzeugungen und Denkmuster zu erforschen und zu transformieren. Zu dem Prozess gehören die Selbstreflexion und die [Achtsamkeit](#achtsamkeit), eigene Muster und Blockaden sollen erkannt und durchbrochen werden, bzw. das Selbstbewusstsein gestärkt werden. Inner Work kann verschiedene Praktiken umfassen, wie Meditation, Tagebuchschreiben, Coaching, Psychotherapie oder andere Methoden der persönlichen Entwicklung. Es geht darum, tiefer in die eigene innere Welt einzutauchen, um sich selbst besser zu verstehen, innere Konflikte aufzulösen und persönliches Wachstum zu ermöglichen. Das Konzept hat im Kontext von [New Work](#new-work) zunehmend an Bedeutung gewonnen. Die Selbstreflexion ermöglicht es den Beschäftigten, ihre [Motivation](#motivation) zu steigern und eine stärkere Identifikation mit ihrer Arbeit zu entwickeln."
+    "description": "Inner Work bezieht sich auf einen Prozess der persönlichen und inneren Entwicklung mit dem Ziel, das eigene Bewusstsein, seine Emotionen, Überzeugungen und Denkmuster zu erforschen und zu transformieren. Zu dem Prozess gehören die Selbstreflexion und die [Achtsamkeit](#achtsamkeit), eigene Muster und Blockaden sollen erkannt und durchbrochen bzw. das Selbstbewusstsein gestärkt werden. Inner Work kann verschiedene Praktiken umfassen, wie Meditation, Tagebuchschreiben, Coaching, Psychotherapie oder andere Methoden der persönlichen Entwicklung. Es geht darum, tiefer in die eigene innere Welt einzutauchen, um sich selbst besser zu verstehen, innere Konflikte aufzulösen und persönliches Wachstum zu ermöglichen. Das Konzept hat im Kontext von [New Work](#new-work) zunehmend an Bedeutung gewonnen. Die Selbstreflexion ermöglicht es den Beschäftigten, ihre [Motivation](#motivation) zu steigern und eine stärkere Identifikation mit ihrer Arbeit zu entwickeln."
   },
   {
     "title": "Integratives Entscheiden",
@@ -262,7 +262,7 @@
   {
     "title": "Iterativ",
     "term_id": "iterativ",
-    "description": "Iterativ leitet sich von dem lateinischen Wort iteratio ab, das „Wiederholung“ oder „wiederholen“ bedeutet. Im Kontext von Prozessen, Projekten oder Entwicklungsmethoden meint iteratives Arbeiten, dass in wiederholten Schleifen oder Zyklen vorgegangen wird, wobei jeder Durchlauf dazu verwendet wird, das Ergebnis schrittweise zu verbessern, anzupassen oder zu verfeinern."
+    "description": "Iterativ leitet sich von dem lateinischen Wort *iteratio* ab, das „wiederholen“ bedeutet. Im Kontext von Prozessen, Projekten oder Entwicklungsmethoden meint iteratives Arbeiten, dass in wiederholten Schleifen oder Zyklen vorgegangen wird, wobei jeder Durchlauf dazu verwendet wird, das Ergebnis schrittweise zu verbessern, anzupassen oder zu verfeinern."
   },
   {
     "title": "Jobsharing",
@@ -272,12 +272,12 @@
   {
     "title": "Kanban",
     "term_id": "kanban",
-    "description": "Kanban ist eine agile Arbeitsmethode, die entwickelt wurde, um die Effizienz, Transparenz und Flexibilität von Arbeitsprozessen zu verbessern. Ursprünglich in der Fertigungsindustrie entwickelt, findet sie heute Anwendung in verschiedenen Bereichen wie Softwareentwicklung, Projektmanagement und Dienstleistungen. Sie basiert auf dem Prinzip der Visualisierung von Arbeitsabläufen mittels eines Kanban-Boards, das aus Spalten und Karten besteht. Jede Karte repräsentiert eine Aufgabe oder ein Arbeitselement. Das Kanban-Board erleichtert es, den Fortschritt und den Status der Aufgaben zu verfolgen. Ziel der Kanban-Methode ist, den Workflow zu optimieren, Engpässe zu identifizieren und die Durchlaufzeiten zu reduzieren. Das System begrenzt auch die Menge der gleichzeitig in Bearbeitung befindlichen Aufgaben, um Überlastungen zu vermeiden."
+    "description": "Kanban ist eine agile Arbeitsmethode, mit der sich die Effizienz, Transparenz und Flexibilität von Arbeitsprozessen verbessern lässt. Ursprünglich in der Fertigungsindustrie entwickelt, findet sie heute Anwendung in verschiedenen Bereichen wie Softwareentwicklung, Projektmanagement und Dienstleistungen. Sie basiert auf dem Prinzip der Visualisierung von Arbeitsabläufen mittels eines Kanban-Boards, das aus Spalten und Karten besteht. Jede Karte repräsentiert eine Aufgabe oder ein Arbeitselement. Das Kanban-Board erleichtert es, den Fortschritt und den Status der Aufgaben zu verfolgen. Ziel der Kanban-Methode ist, den Workflow zu optimieren, Engpässe zu identifizieren und die Durchlaufzeiten zu reduzieren. Das System begrenzt auch die Menge der gleichzeitig in Bearbeitung befindlichen Aufgaben, um Überlastungen zu vermeiden."
   },
   {
     "title": "Kollegiale Führung",
     "term_id": "kollegiale-fuhrung",
-    "description": "Kollegiale Führung ist ein Führungsstil, bei dem die Verantwortung und Entscheidungsbefugnis auf mehrere Teammitglieder verteilt wird. Die Führungskraft gibt nicht mehr Anweisungen an Untergebene, sondern fungiert als Coach und Unterstützer, die Kompetenzen und Erfahrungen jedes Einzelnen werden wertgeschätzt und genutzt. Ziel ist eine offene Kommunikation und ein Klima des Vertrauens. So lassen sich die Potenziale der Beschäftigten voll ausschöpfen, wird die [Teamarbeit](#teamarbeit) gefördert und eine positive Arbeitskultur geschaffen, in der jede bzw. jeder eine aktive Rolle beim Erreichen gemeinsamer Ziele spielt."
+    "description": "Kollegiale Führung ist ein Führungsstil, bei dem die Verantwortung und Entscheidungsbefugnis auf mehrere Teammitglieder verteilt wird. Die Führungskraft gibt nicht mehr Anweisungen an Untergebene, sondern fungiert als Coach und Unterstützer, die Kompetenzen und Erfahrungen jedes Einzelnen werden wertgeschätzt und genutzt. Ziel ist eine offene Kommunikation und ein Klima des Vertrauens. So lassen sich die Potenziale der Beschäftigten voll ausschöpfen, wird die [Teamarbeit](#teamarbeit) gefördert und eine positive Arbeitskultur geschaffen, in der jede:r eine aktive Rolle beim Erreichen gemeinsamer Ziele spielt."
   },
   {
     "title": "Konflikt",
@@ -285,9 +285,9 @@
     "description": "Bei Konflikten im Arbeitsalltag geht es um Meinungsverschiedenheiten, Spannungen oder einen Zusammenstoß zwischen Personen oder Gruppen. Solche Konflikte können verschiedene Ursachen haben: unterschiedliche Ansichten, Arbeitsstile oder Interessen, unklare Kommunikation, unzureichende Ressourcen oder mangelnde Zusammenarbeit. Oft wirken sich Konflikte negativ aus, sie erhöhen den Stress, vermindern die Produktivität, stören das Arbeitsklima und beeinträchtigen die [Teamarbeit](#teamarbeit). Zu einem angemessenen Umgang mit Konflikten gehören das aktive Zuhören, der Dialog, das Verständnis für verschiedene Perspektiven und das gemeinsame Erarbeiten von Lösungen."
   },
   {
-    "title": "Laloux, Frederic",
+    "title": "Laloux, Frédéric",
     "term_id": "laloux-frederic",
-    "description": "Frederic Laloux ist ein belgischer Organisationsentwickler, Berater und Autor – und einer der Vordenker von [New Work](#new-work). Bekannt geworden ist er 2014 mit seinem Buch Reinventing Organizations, das in der Welt der Organisationsentwicklung und des Managements große Aufmerksamkeit erregte. Laloux untersucht darin verschiedene Formen der Organisationsstruktur und Führung und beschreibt eine neue, evolutionäre Stufe von Organisationen, die er als „Teal-Organisationen“ bezeichnet. Teal-Organisationen zeichnen sich durch eine höhere Reife und Bewusstheit aus, durch Ganzheitlichkeit, [Selbstorganisation](#selbstorganisation), Sinnorientierung und dezentrale Entscheidungsstrukturen."
+    "description": "Frédéric Laloux ist ein belgischer Organisationsentwickler, Berater und Autor – und einer der Vordenker von [New Work](#new-work). Bekannt geworden ist er 2014 mit seinem Buch *Reinventing Organizations*, das in der Welt der Organisationsentwicklung und des Managements große Aufmerksamkeit erregte. Laloux untersucht darin verschiedene Formen der Organisationsstruktur und Führung und beschreibt eine neue, evolutionäre Stufe von Organisationen, die er als „Teal-Organisationen“ bezeichnet. Teal-Organisationen zeichnen sich durch eine höhere Reife und Bewusstheit aus, durch Ganzheitlichkeit, [Selbstorganisation](#selbstorganisation), Sinnorientierung und dezentrale Entscheidungsstrukturen."
   },
   {
     "title": "Leadership",
@@ -352,7 +352,7 @@
   {
     "title": "Reinventing Organizations",
     "term_id": "reinventing-organizations",
-    "description": "_Reinventing Organizations – Ein Leitfaden zur Gestaltung sinnstiftender Formen der Zusammenarbeit_ ist ein Buch des belgischen Organisationsentwicklers [Frederic Laloux](#laloux-frederic), das sich mit der Transformation herkömmlicher Arbeitsstrukturen befasst. Darin schlägt er einen evolutionären Ansatz vor, der hierarchische Modelle durch neue, flexiblere Formen der Arbeit ersetzt. Er plädiert dafür, dass Organisationen verstärkt auf [Selbstorganisation](#selbstorganisation) und geteilte Verantwortung setzen sollten. In sogenannten „Teal Organizations“ sollten Entscheidungen auf breiter Basis getroffen werden, wodurch [Hierarchien](#hierarchie) abgebaut und die Beschäftigten befähigt werden, ihr volles Potenzial auszuschöpfen. Stehen individuelles Wachstum und eine [sinnstiftende Arbeit](#sinnstiftende-arbeit) im Vordergrund, so Laloux, sind die Mitarbeitenden motivierter und engagierter. Das Konzept von Reinventing Organizations zielt darauf ab, eine Kultur des Vertrauens und der Zusammenarbeit zu schaffen, um so mehr Innovation und Flexibilität zu ermöglichen."
+    "description": "_Reinventing Organizations – Ein Leitfaden zur Gestaltung sinnstiftender Formen der Zusammenarbeit_ ist ein Buch des belgischen Organisationsentwicklers [Frédéric Laloux](#laloux-frederic), das sich mit der Transformation herkömmlicher Arbeitsstrukturen befasst. Darin schlägt er einen evolutionären Ansatz vor, der hierarchische Modelle durch neue, flexiblere Formen der Arbeit ersetzt. Er plädiert dafür, dass Organisationen verstärkt auf [Selbstorganisation](#selbstorganisation) und geteilte Verantwortung setzen sollten. In sogenannten „Teal Organizations“ sollten Entscheidungen auf breiter Basis getroffen werden, wodurch [Hierarchien](#hierarchie) abgebaut und die Beschäftigten befähigt werden, ihr volles Potenzial auszuschöpfen. Stehen individuelles Wachstum und eine [sinnstiftende Arbeit](#sinnstiftende-arbeit) im Vordergrund, so Laloux, sind die Mitarbeitenden motivierter und engagierter. Das Konzept von *Reinventing Organizations* zielt darauf ab, eine Kultur des Vertrauens und der Zusammenarbeit zu schaffen, um so mehr Innovation und Flexibilität zu ermöglichen."
   },
   {
     "title": "Remote Work",
@@ -362,7 +362,7 @@
   {
     "title": "Remote-First-Company",
     "term_id": "remote-first-company",
-    "description": "Eine Remote-First-Company ist eine Organisation, das seine Organisationsstruktur so gestaltet, dass Beschäftigte die Freiheit haben, von jedem beliebigen Ort aus zu arbeiten. Im Gegensatz zu herkömmlichen Organisationen mit physischen Büros legt eine Remote-First-Company den Schwerpunkt auf Fernarbeit als Grundlage für ihre Aktivitäten. Die Mitarbeitenden haben die Möglichkeit, von zu Hause aus, in [Co-Working](#co-working)-Spaces oder an anderen Orten ihrer Wahl zu arbeiten. Die Kommunikation und Zusammenarbeit erfolgen über digitale [Tools](#tools) und Plattformen."
+    "description": "Eine Remote-First-Company ist eine Organisation, die ihre Organisationsstruktur so gestaltet, dass Beschäftigte die Freiheit haben, von jedem beliebigen Ort aus zu arbeiten. Im Gegensatz zu herkömmlichen Organisationen mit physischen Büros legt eine Remote-First-Company den Schwerpunkt auf Fernarbeit als Grundlage für ihre Aktivitäten. Die Mitarbeitenden haben die Möglichkeit, von zu Hause aus, in [Co-Working](#co-working)-Spaces oder an anderen Orten ihrer Wahl zu arbeiten. Die Kommunikation und Zusammenarbeit erfolgen über digitale [Tools](#tools) und Plattformen."
   },
   {
     "title": "Resilienz",
@@ -372,7 +372,7 @@
   {
     "title": "Retrospektive",
     "term_id": "retrospektive",
-    "description": "Die Retrospektive ist ein regelmäßiges Meeting im Scrum-Framework, in dem der vorangegangene Sprint evaluiert wird. Der Fokus dabei ist nicht die Arbeit selbst, sondern die Prozesse, Werkzeuge, und Interaktionsformate die das Team verwendet."
+    "description": "Die Retrospektive ist ein regelmäßiges Meeting im [Scrum-Framework](#scrum), in dem der vorangegangene Sprint evaluiert wird. Der Fokus liegt dabei nicht auf der Arbeit selbst, sondern auf den Prozessen, Werkzeugen und Interaktionsformaten, die das Team verwendet."
   },
   {
     "title": "Rollenbasiertes Arbeiten",
@@ -387,7 +387,7 @@
   {
     "title": "Scrum Master",
     "term_id": "scrum-master",
-    "description": "Der Scrum Master spielt eine zentrale Rolle innerhalb der Projektmanagementmethode Scrum. Er ist der Servant Leader und dafür verantwortlich sicherzustellen, dass das Scrum-Team effektiv arbeitet und die Scrum-Prinzipien und -Praktiken einhält. Dabei fungiert er nicht als Teamleiter, sondern vielmehr als Mentor und Coach, der das Team befähigt und unterstützt."
+    "description": "Der Scrum Master spielt eine zentrale Rolle innerhalb der Projektmanagementmethode [Scrum](#scrum). Er ist der [Servant Leader](#servant-leadership) und dafür verantwortlich sicherzustellen, dass das Scrum-Team effektiv arbeitet und die Scrum-Prinzipien und -Praktiken einhält. Dabei fungiert er nicht als Teamleiter, sondern vielmehr als Mentor und Coach, der das Team befähigt und unterstützt."
   },
   {
     "title": "Selbstorganisation",
@@ -407,7 +407,7 @@
   {
     "title": "Sinnstiftende Arbeit",
     "term_id": "sinnstiftende-arbeit",
-    "description": "Sinnstiftende Arbeit gibt Beschäftigten das Gefühl, dass ihre Arbeit einen positiven Einfluss hat und einen Beitrag für ihre Einrichtung und Gesellschaft leistet – sie sind dann motivierter und engagierter. Mitarbeitende, die einer sinnstiftenden Arbeit nachgehen, sind bereit, zusätzliche Anstrengungen zu unternehmen und Herausforderungen zu meistern, um ihre Ziele zu erreichen."
+    "description": "Sinnstiftende Arbeit gibt Beschäftigten das Gefühl, dass ihre Arbeit einen positiven Einfluss hat und einen Beitrag für ihre Einrichtung und die Gesellschaft leistet – sie sind dann motivierter und engagierter. Mitarbeitende, die einer sinnstiftenden Arbeit nachgehen, sind bereit, zusätzliche Anstrengungen zu unternehmen und Herausforderungen zu meistern, um ihre Ziele zu erreichen."
   },
   {
     "title": "Smart City",
@@ -426,7 +426,7 @@
   },
   {
     "title": "Starfish-Methode",
-    "description": "![alt texr](/assets/starfish.svg)\n\nRetrospektiven sind regelmäßige Treffen zur gemeinsamen Evaluierung und Verbesserung der Teamleistung. Zu den bekanntesten Varianten gehört die Starfish-Retrospektive, die häufig von Scrum-Teams verwendet wird. Der Seestern (englisch: Starfish) versinnbildlicht mit seinen fünf Armen die fünf Schritte dieser Methode: 1. Keep (Gute Praktiken, die beibehalten werden sollten), 2. Less of (Dinge, die es zu reduzieren gilt), 3. More of (Aspekte, die verstärkt werden sollten) 4. Start (Neue Ideen, die das Projekt voranbringen könnten), 5. Stop (Aktivitäten, die nicht zum Projekterfolg beitragen und beendet werden sollten). Die Starfish-Methode soll Teammitglieder dazu ermutigen, ihr Feedback einzubringen und Probleme systematisch zu analysieren.",
+    "description": "![TODO ALT](/assets/starfish.svg)\n\nRetrospektiven sind regelmäßige Treffen zur gemeinsamen Evaluierung und Verbesserung der Teamleistung. Zu den bekanntesten Varianten gehört die Starfish-Retrospektive, die häufig von [Scrum-Teams](#scrum) erwendet wird. Der Seestern (englisch: Starfish) versinnbildlicht mit seinen fünf Armen die fünf Schritte dieser Methode: 1. Keep doing (Gute Praktiken, die beibehalten werden sollten), 2. Less of (Dinge, die es zu reduzieren gilt), 3. More of (Aspekte, die verstärkt werden sollten), 4. Start doing (Neue Ideen, die das Projekt voranbringen könnten), 5. Stop doing (Aktivitäten, die nicht zum Projekterfolg beitragen und beendet werden sollten). Die Starfish-Methode soll Teammitglieder dazu ermutigen, ihr Feedback einzubringen und Probleme systematisch zu analysieren.",
     "term_id": "starfish-methode"
   },
   {
@@ -477,7 +477,7 @@
   {
     "title": "Unternehmenskultur",
     "term_id": "unternehmenskultur",
-    "description": "Zur Unternehmenskultur zählen die Werte, Normen, Überzeugungen, Verhaltensweisen und Traditionen einer Organisation. Diese Kultur bestimmt, wie Beschäftigte miteinander interagieren, Probleme lösen und wie sie ihre Arbeit wahrnehmen und ausführen. Außerdem charakterisiert sie eine Organisation oder wissenschaftliche Einrichtung und trägt entscheidend zum Erfolg bei, da sie sich prägend auf Innovationspotential, Mitarbeiterführung und Zusammenarbeit auswirkt."
+    "description": "Zur Unternehmenskultur zählen die Werte, Normen, Überzeugungen, Verhaltensweisen und Traditionen einer Organisation. Diese Kultur bestimmt, wie Beschäftigte miteinander interagieren, Probleme lösen und wie sie ihre Arbeit wahrnehmen und ausführen. Außerdem charakterisiert sie eine Organisation oder wissenschaftliche Einrichtung und trägt entscheidend zum Erfolg bei, da sie sich prägend auf Innovationspotenzial, Mitarbeiterführung und Zusammenarbeit auswirkt."
   },
   {
     "title": "VUCA-Welt",
@@ -502,6 +502,6 @@
   {
     "title": "Zwei-Pizza-Regel",
     "term_id": "zwei-pizza-regel",
-    "description": "Die Zwei-Pizza-Regel besagt dass Meetings, Workshops, und Arbeitsgruppen nur so viele Teilnehmer:innen haben sollten, wie von zwei Pizzas satt werden."
+    "description": "Die Zwei-Pizza-Regel besagt, dass Meetings, Workshops und Arbeitsgruppen nur so viele Teilnehmer:innen haben sollten, wie von zwei Pizzas satt werden."
   }
 ]

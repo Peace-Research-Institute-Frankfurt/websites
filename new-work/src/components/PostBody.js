@@ -49,6 +49,7 @@ const shortCodes = {
       <div className={styles.asideInner}>{children}</div>
     </aside>
   ),
+  Keep: ({ children }) => <span class={styles.noBreak}>{children}</span>,
   Tab,
   Tabs,
   Leadin,

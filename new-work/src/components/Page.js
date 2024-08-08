@@ -5,6 +5,8 @@ import StickyHeader from './StickyHeader'
 import SkipToContent from './SkipToContent'
 import PostBody from './PostBody'
 import PageHeader from './PageHeader'
+import SearchForm from './SearchForm'
+
 import * as styles from './Page.module.scss'
 
 export const query = graphql`
@@ -33,7 +35,7 @@ const Page = ({ data, children }) => {
   return (
     <App>
       <SkipToContent />
-      <StickyHeader />
+      <StickyHeader searchForm={<SearchForm />} />
       <main id="content" className={styles.container}>
         <PageHeader intro={frontmatter.intro} title={frontmatter.title} />
         <div className={styles.body}>
