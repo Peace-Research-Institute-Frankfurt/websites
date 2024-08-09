@@ -8,6 +8,7 @@ import MarkdownRenderer from 'react-markdown-renderer'
 import admin0 from '../assets/ne_admin0.json'
 
 import * as styles from './LayeredMap.module.scss'
+import * as figureStyles from './Figure.module.scss'
 
 export default function LayeredMap({
   children,
@@ -20,6 +21,7 @@ export default function LayeredMap({
   title,
   description,
   legendTitle,
+  layout,
   legendPosition = 'top-left',
 }) {
   const min = 263
@@ -32,8 +34,8 @@ export default function LayeredMap({
   const translate = [width / 2, height / 2]
 
   return (
-    <figure className={styles.container}>
-      <div className={styles.mapContainer}>
+    <figure className={`${styles.container} ${figureStyles[layout]}`}>
+      <div className={`${styles.mapContainer} ${figureStyles.imageContainer}`}>
         <NaturalEarth data={admin0.features} scale={scale} translate={translate} center={center}>
           {(projection) => {
             return (
