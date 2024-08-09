@@ -1,0 +1,66 @@
+---
+title: Maps (Placeholder)
+order: 0
+intro: Placeholder chapter for working on maps for this unit
+---
+
+## Post-Soviet States
+
+<LayeredMap
+  centerLat={60}
+  centerLong={85}
+  mapScale={3}
+  legendPosition="bottom-left"
+  title="Post-Soviet States"
+  description="Map showing the boundaries of post-Soviet European states"
+  legendTitle="Legend"
+  credit="Data: [Master Uegly/Wikimedia Commons](https://commons.wikimedia.org/wiki/File:USSR_Republics_numbered_by_Constitution.svg), Natual Earth. Graphic: PRIF"
+  license="cc-by-4"
+>
+  <CountryStatisticsLayer
+    data={[
+      { name: 'Armenia', iso3: 'ARM', value: 'Post-Soviet States' },
+      { name: 'Azerbaijan', iso3: 'AZE', value: 'Post-Soviet States' },
+      { name: 'Belarus', iso3: 'BLR', value: 'Post-Soviet States' },
+      { name: 'Estonia', iso3: 'EST', value: 'Post-Soviet States' },
+      { name: 'Georgia', iso3: 'GEO', value: 'Post-Soviet States' },
+      { name: 'Kazakhstan', iso3: 'KAZ', value: 'Post-Soviet States' },
+      { name: 'Kyrgyzstan', iso3: 'KGZ', value: 'Post-Soviet States' },
+      { name: 'Latvia', iso3: 'LVA', value: 'Post-Soviet States' },
+      { name: 'Lithuania', iso3: 'LTU', value: 'Post-Soviet States' },
+      { name: 'Moldova', iso3: 'MDA', value: 'Post-Soviet States' },
+      { name: 'Russia', iso3: 'RUS', value: 'Post-Soviet States' },
+      { name: 'Tajikistan', iso3: 'TJK', value: 'Post-Soviet States' },
+      { name: 'Turkmenistan', iso3: 'TKM', value: 'Post-Soviet States' },
+      { name: 'Ukraine', iso3: 'UKR', value: 'Post-Soviet States' },
+      { name: 'Uzbekistan', iso3: 'UZB', value: 'Post-Soviet States' },
+    ]}
+    colors={['var(--orange-50)']}
+  />
+</LayeredMap>
+
+
+## Yekaterinburg Locator
+
+<LayeredMap
+  centerLat={60}
+  centerLong={85}
+  mapScale={3}
+  layout="small"
+  legendPosition="top-left"
+  title="Post-Soviet States"
+  description="Map showing the boundaries of post-Soviet European states"
+  legendTitle="Legend"
+  credit="Data: Natual Earth. Graphic: PRIF"
+  license="cc-by-4"
+>
+  <MarkerLayer markerGroupName="Yekaterinburg" data={[
+    {name: "Yekaterinburg", lat: "56°50′08″N", long: "60°36′46″E"}
+  ]} />
+  <CountryStatisticsLayer
+    data={[
+      { name: 'Russia', iso3: 'RUS', value: 'Russia' },
+    ]}
+    colors={['var(--blue-20)']}
+  />
+</LayeredMap>
