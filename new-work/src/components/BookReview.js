@@ -40,7 +40,7 @@ const BookReview = ({ title, covers, meta, children }) => {
     <li className={styles.container}>
       <aside className={styles.meta}>
         {coverImages.length > 0 && (
-          <div style={{ marginBottom: `${0.5 * coverImages.length}em` }} className={styles.covers}>
+          <div style={{ '--offset': `${coverImages.length - 1}` }} className={styles.covers}>
             {coverImages}
           </div>
         )}

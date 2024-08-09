@@ -20,20 +20,24 @@
 }
 
 .covers {
-  margin-bottom: 0.25em;
+  margin-right: calc(var(--offset) * 0.25em);
   position: relative;
+  @include bp(m) {
+    margin-bottom: calc(var(--offset) * 0.5em);
+  }
   & > div {
     position: absolute !important;
     top: 0;
     left: 0;
     width: 100%;
     box-shadow: 2px 2px 6px -1px rgba(0, 0, 0, 0.282);
-    max-width: 10em;
+    width: 6em;
+    height: auto;
 
-    @for $i from 1 to 5 {
+    @for $i from 1 to 7 {
       &:nth-of-type(#{$i}) {
-        top: 0.5em * $i - 0.5em;
-        left: 0.5em * $i - 0.5em;
+        top: 0.45em * $i - 0.45em;
+        left: 0.4em * $i - 0.45em;
         z-index: 100 - $i * 10;
       }
     }
@@ -42,6 +46,7 @@
       z-index: 100;
     }
     @include bp(m) {
+      width: 100%;
       max-width: 8em;
     }
   }
@@ -50,13 +55,22 @@
 .meta {
   grid-column: 1 / 2;
   margin-bottom: calc(var(--baseline) * 2);
+  display: flex;
+  gap: 1em;
+  @include bp(m) {
+    display: block;
+  }
   p {
     text-wrap: balance;
     hyphens: none;
   }
   ul {
     @extend %caption;
+    columns: 2;
     padding-left: 0 !important;
+    @include bp(m) {
+      columns: 1;
+    }
   }
   li {
     margin-bottom: 0.6em;
@@ -80,7 +94,11 @@
 }
 
 .description {
+  grid-column: 2 / 4;
   @include bp(m) {
     margin-bottom: calc(var(--baseline) * 2);
+  }
+  @include bp(l) {
+    grid-column: 2 / 3;
   }
 }
