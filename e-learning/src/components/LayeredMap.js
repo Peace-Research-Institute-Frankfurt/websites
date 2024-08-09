@@ -73,6 +73,7 @@ export default function LayeredMap({
         {caption && <MarkdownRenderer className={styles.caption} markdown={caption} />}
         <div className={styles.credit}>
           {credit && <MarkdownRenderer markdown={credit} />}
+          {credit && license && ' / '}
           {license && <LicenseString license={license} />}
         </div>
       </figcaption>

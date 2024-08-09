@@ -3,7 +3,7 @@ order: 2
 title: Multilateral instruments and standards for arms export controls
 ---
 
-import EmbargoData from "../../data/arms-embargos.csv";
+import EmbargoData from '../../data/arms-embargos.csv'
 import MapExampleCountries from '../../data/map-example-countries.csv'
 
 [Other copy TK]
@@ -23,8 +23,8 @@ UN Security Council arms embargoes are the only legally binding international in
   description="Political world map showing three classes of arms embargoes: UN embargoes, EU embargoes without a UN counterpart, and EU embargoes broader in scope than their UN counterpart."
 >
   <CountryStatisticsLayer
-    statisticsGroupName='Active multilateral arms embargoes (2024)'
+    statisticsGroupName="Active multilateral arms embargoes (2024)"
     data={EmbargoData}
-    colors={["var(--orange-40)", "var(--blue-60)" , "var(--orange-60)"]}
-    />
+    colors={['var(--orange-40)', 'var(--blue-60)', 'var(--orange-60)']}
+  />
 </LayeredMap>
