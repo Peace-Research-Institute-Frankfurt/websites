@@ -35,7 +35,7 @@ const BylineItem = ({ author }) => {
         </TooltipAdapter>
       )}
       {author.parent.body.length > 0 ? (
-        <button onClick={toggleTooltip} className={`${styles.person} ${isActive ? styles.active : ''}`} ref={authorRef}>
+        <button onClick={toggleTooltip} className={`${styles.person}`} ref={authorRef}>
           {copy}
         </button>
       ) : (
