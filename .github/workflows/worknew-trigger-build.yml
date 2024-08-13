@@ -1,0 +1,17 @@
+name: "[New Work] Trigger Netlify Build"
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 7 * 8-10 1-5"
+
+jobs:
+  deploy:
+    runs-on: "ubuntu-latest"
+    steps:
+    - uses: fjogeleit/http-request-action@v1
+      with:
+        url: ${{secrets.WORKNEW_NETLIFY_BUILD_HOOK}}
+        method: 'POST'    
+    
+    
