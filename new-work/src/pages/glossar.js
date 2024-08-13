@@ -30,14 +30,20 @@ const Terms = ({ data }) => {
   const [activeTerms, setActiveTerms] = useState([])
 
   useEffect(() => {
-    if (window.location.hash) {
-      const hash = window.location.hash.slice(1)
-      const term = data.terms.nodes.find((el) => {
+    function getTermByHash(hash) {
+      return data.terms.nodes.find((el) => {
         return slug(el.term_id) === hash
       })
+    }
+    if (window.location.hash) {
+      const term = getTermByHash(window.location.hash.slice(1))
       if (term) {
         setActiveTerms([term.term_id])
       }
+      window.addEventListener('hashchange', (e) => {
+        const term = getTermByHash(window.location.hash.slice(1))
+        setActiveTerms([term.term_id])
+      })
     }
   }, [data.terms.nodes])
 
