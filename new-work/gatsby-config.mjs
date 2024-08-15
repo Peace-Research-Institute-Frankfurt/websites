@@ -16,9 +16,11 @@ const config = {
       src: '/social-image.png',
       alt: 'image alt',
     },
+    devFlags: [{ key: 'DISABLE_POST_SCHEDULING', value: process.env.DISABLE_POST_SCHEDULING || false }],
   },
   flags: {
     FAST_DEV: true,
+    DEV_SSR: false,
   },
   adapter: adapter.default(),
   plugins: [

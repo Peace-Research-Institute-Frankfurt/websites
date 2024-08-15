@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import * as styles from './PostList.module.scss'
-import { Link } from 'gatsby'
+import { Link, useStaticQuery, graphql } from 'gatsby'
 import Button from './ButtonAdapter'
 import ButtonGroup from './ButtonGroup'
 import PlaceholderText from './PlaceholderText'
@@ -104,9 +104,27 @@ const PostList = ({ posts, activeFilters, currentPostId }) => {
 }
 
 const PostListItem = ({ title, authors, intro, prefix, category, isCurrent, publishedOn, slug }) => {
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          devFlags {
+            key
+            value
+          }
+        }
+      }
+    }
+  `)
   const maxWordCount = 35
   let truncatedIntro = ''
   let publishedOnDate = null
+
+  const disablePostScheduling =
+    data.site.siteMetadata.devFlags.find((el) => {
+      return el.key === 'DISABLE_POST_SCHEDULING'
+    }).value === 'true'
+
   if (intro) {
     truncatedIntro = intro.split(' ').length > maxWordCount ? intro.split(' ').slice(0, maxWordCount).join(' ') + '...' : intro
   }
@@ -118,7 +136,9 @@ const PostListItem = ({ title, authors, intro, prefix, category, isCurrent, publ
 
   return (
     <Link
-      className={`${styles.item} ${category ? category : ''} ${isPending ? styles.isPending : ''} ${isCurrent ? styles.current : ''}`}
+      className={`${styles.item} ${category ? category : ''} ${isPending && !disablePostScheduling ? styles.isPending : ''} ${
+        isCurrent ? styles.current : ''
+      }`}
       to={`/${slug}`}
     >
       {isPending && (

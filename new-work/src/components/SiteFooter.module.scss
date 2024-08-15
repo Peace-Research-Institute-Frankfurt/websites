@@ -60,3 +60,15 @@
     fill: white;
   }
 }
+
+.flags {
+  display: flex;
+  gap: 0.2rem;
+  list-style: none;
+  li {
+    background: white;
+    color: black;
+    font-family: monospace;
+    padding: 0.1em 0.4em;
+  }
+}

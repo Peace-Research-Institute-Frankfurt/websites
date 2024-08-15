@@ -6,6 +6,14 @@ import * as styles from './SiteFooter.module.scss'
 export default function Footer() {
   const data = useStaticQuery(graphql`
     query {
+      site {
+        siteMetadata {
+          devFlags {
+            key
+            value
+          }
+        }
+      }
       pages: allFile(filter: { extension: { eq: "mdx" }, sourceInstanceName: { eq: "pages" } }, sort: { childMdx: { frontmatter: { order: ASC } } }) {
         nodes {
           id
@@ -22,6 +30,11 @@ export default function Footer() {
       }
     }
   `)
+
+  const activeDevFlags = data.site.siteMetadata.devFlags.filter((flag) => {
+    return flag.value === 'true'
+  })
+
   return (
     <footer className={styles.container}>
       <div className={styles.logo}>
@@ -48,6 +61,13 @@ export default function Footer() {
         </nav>
         <p className={styles.meta}>
           <span>© PRIF und die Autor*innen {new Date().getFullYear()}</span>
+          {activeDevFlags.length > 0 && (
+            <ul className={styles.flags}>
+              {activeDevFlags.map((flag) => {
+                return <li>{flag.key}</li>
+              })}
+            </ul>
+          )}
         </p>
       </div>
     </footer>
