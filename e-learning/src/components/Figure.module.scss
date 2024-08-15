@@ -98,6 +98,11 @@
     grid-column: 3 / 4;
     width: 14rem;
   }
+  .image-container {
+    grid-column: 3 / 4;
+    width: 20rem;
+    margin: 0 auto;
+  }
 }
 .tiny {
   display: contents;
