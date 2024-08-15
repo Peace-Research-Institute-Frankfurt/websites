@@ -13,7 +13,16 @@ export default function FigureAdapter({ styles, caption, credit, size, alt, src,
           url
         }
       }
-      images: allFile(filter: { extension: { nin: ["mdx", "json", "mp3"] } }) {
+      svgs: allFile(filter: { extension: { eq: "svg" } }) {
+        nodes {
+          relativePath
+          base
+          name
+          extension
+          publicURL
+        }
+      }
+      images: allFile(filter: { extension: { nin: ["mdx", "json", "mp3", "svg"] } }) {
         nodes {
           relativePath
           base
@@ -29,10 +38,11 @@ export default function FigureAdapter({ styles, caption, credit, size, alt, src,
   `)
 
   // Let's find our image
-  let image = null
-  data.images.nodes.forEach((img) => {
-    if (img.base.toLowerCase() === src.toLowerCase()) {
-      image = img
+  let imageNode = null
+  const fileNodes = [...data.images.nodes, ...data.svgs.nodes]
+  fileNodes.forEach((node) => {
+    if (node.base.toLowerCase() === src.toLowerCase()) {
+      imageNode = node
     }
   })
   // Let's find our license
@@ -52,8 +62,8 @@ export default function FigureAdapter({ styles, caption, credit, size, alt, src,
 
   return (
     <Figure
+      image={imageNode}
       styles={styles}
-      image={image}
       src={src}
       expandable={expandable}
       lightboxTargetEl={lightboxTargetEl}
