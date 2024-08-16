@@ -3,7 +3,6 @@ title: Maps (Placeholder)
 order: 0
 intro: Placeholder chapter for working on maps for this unit
 ---
-import BwcTreatyStates from "../../data/bwctreatystates.csv"
 
 ## Post-Soviet States
 
@@ -99,14 +98,25 @@ import BwcTreatyStates from "../../data/bwctreatystates.csv"
 
 ## BWC-Treaty States
 
+import treaties from "../../data/treaties.json"
+
 <LayeredMap
-  centerLat={20}
+  centerLat={32}
   centerLong={0}
-  mapScale={1}
+  mapScale={1.3}
   legendPosition="bottom-left"
-  title="This is a map with states that ratified or signed the treaty"
-  description="This is a map with states that ratified or signed the treaty"
-  legendTitle="States that signed or ratified the treaty"
+  title="BWC Participation"
+  license="cc-by-4"
+  description="World map showing countries who have ratified or signed the BWC."
+  caption="Global participation in the Biological Weapons Convention (BWC), updated weekly."
+  credit="Data: [UNODA Disarmament Treaties Database](https://treaties.unoda.org/t/bwc/participants), [Natural Earth](https://www.naturalearthdata.com/). Graphic: Max Kohler/PRIF"
 >
-  <CountryStatisticsLayer data={BwcTreatyStates} statisticsGroupName="Population Percentage" legendSize={4} roundLegendValues={false} colors={["blue", "red"]} />
+  <CountryStatisticsLayer data={
+    treaties
+      .find(el => { return el.name === "bwc"}).participants
+      .map(p => {
+        const s = ["ratification", "accession", "succession"].includes(p.events[p.events.length - 1].type) ? "Ratified" : "Signed"
+        return ({iso3: p.country, value: s})
+    })}
+    statisticsGroupName="Participation Status" colors={["var(--blue-60)", "var(--blue-30)"]} />
 </LayeredMap>
