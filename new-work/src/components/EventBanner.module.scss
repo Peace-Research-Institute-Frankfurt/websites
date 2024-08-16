@@ -96,6 +96,12 @@
   line-height: 1.4;
 }
 
+.credit {
+  @extend .details;
+  opacity: 0.75;
+  margin-top: 1.5em;
+}
+
 .cta {
   margin-top: 1em;
   position: relative;

@@ -80,7 +80,7 @@ const Index = ({ data }) => {
               Arbeitsformen.
             </>
           }
-          credit="[Verena Mack](https://verenamack.com/)"
+          credits={[{ name: '[Verena Mack](https://verenamack.com/)' }]}
         />
         <Schedule from="2024-05-30" to="2024-09-27">
           <EventBanner />

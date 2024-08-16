@@ -3,7 +3,6 @@ import * as styles from './EventBanner.module.scss'
 import ArrowRightIcon from '../images/arrow-right.svg'
 import StarIcon from '../images/star.svg'
 import { StaticImage } from 'gatsby-plugin-image'
-import Schedule from './Schedule'
 
 export default function EventBanner() {
   return (
@@ -33,13 +32,12 @@ export default function EventBanner() {
         <p>Senckenberg Forschungsinstitut und Naturmuseum Frankfurt, Festsaal Jügelhaus </p>
         <p>Anmeldung bis 17. September 2024 · Die Veranstaltung ist kostenfrei.</p>
       </div>
-      <Schedule to="2024-09-17">
-        <div className={styles.cta}>
-          <a href="https://eveeno.com/100759422">
-            Anmeldung und Agenda <ArrowRightIcon />
-          </a>
-        </div>
-      </Schedule>
+      <div className={styles.cta}>
+        <a href="https://eveeno.com/100759422">
+          Anmeldung und Agenda <ArrowRightIcon />
+        </a>
+      </div>
+      <p className={styles.credit}>Illustration: Rosa Viktoria Ahlers</p>
     </section>
   )
 }
