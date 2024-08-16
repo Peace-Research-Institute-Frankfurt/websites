@@ -115,8 +115,16 @@ import treaties from "../../data/treaties.json"
     treaties
       .find(el => { return el.name === "bwc"}).participants
       .map(p => {
-        const s = ["ratification", "accession", "succession"].includes(p.events[p.events.length - 1].type) ? "Ratified" : "Signed"
+        const labels = {
+          "ratification": "Ratified",
+          "accession":  "Accession or Succession",
+          "succession": "Accession or Succession",
+          "signature": "Signed, but not ratified",
+        }
+        const s = labels[p.events[p.events.length - 1].type] ? labels[p.events[p.events.length - 1].type] : `Unkown event: ${p.events[p.events.length - 1].type}`
         return ({iso3: p.country, value: s})
     })}
-    statisticsGroupName="Participation Status" colors={["var(--blue-50)", "var(--blue-30)"]} />
+    statisticsGroupName="Adoption Status" colors={["var(--blue-50)","var(--blue-40)", "var(--yellow-30)"]} />
 </LayeredMap>
+
+<Treaty name="bwc"/>
