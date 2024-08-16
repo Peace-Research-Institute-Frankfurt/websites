@@ -3,6 +3,7 @@ title: Maps (Placeholder)
 order: 0
 intro: Placeholder chapter for working on maps for this unit
 ---
+import BwcTreatyStates from "../../data/bwctreatystates.csv"
 
 ## Post-Soviet States
 
@@ -26,6 +27,8 @@ intro: Placeholder chapter for working on maps for this unit
   credit="Data: [Master Uegly/Wikimedia Commons](https://commons.wikimedia.org/wiki/File:USSR_Republics_numbered_by_Constitution.svg), Natual Earth. Graphic: PRIF"
   license="cc-by-4"
 >
+
+
   <CountryStatisticsLayer
     data={[
       { name: 'Armenia', iso3: 'ARM', value: 'Post-Soviet States' },
@@ -93,3 +96,17 @@ intro: Placeholder chapter for working on maps for this unit
   alt="TODO"
   license="cc-by-4"
 />
+
+## BWC-Treaty States
+
+<LayeredMap
+  centerLat={20}
+  centerLong={0}
+  mapScale={1}
+  legendPosition="bottom-left"
+  title="This is a map with states that ratified or signed the treaty"
+  description="This is a map with states that ratified or signed the treaty"
+  legendTitle="States that signed or ratified the treaty"
+>
+  <CountryStatisticsLayer data={BwcTreatyStates} statisticsGroupName="Population Percentage" legendSize={4} roundLegendValues={false} colors={["blue", "red"]} />
+</LayeredMap>
