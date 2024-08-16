@@ -262,7 +262,7 @@
   {
     "title": "Iterativ",
     "term_id": "iterativ",
-    "description": "Iterativ leitet sich von dem lateinischen Wort *iteratio* ab, das „wiederholen“ bedeutet. Im Kontext von Prozessen, Projekten oder Entwicklungsmethoden meint iteratives Arbeiten, dass in wiederholten Schleifen oder Zyklen vorgegangen wird, wobei jeder Durchlauf dazu verwendet wird, das Ergebnis schrittweise zu verbessern, anzupassen oder zu verfeinern."
+    "description": "Iterativ leitet sich von dem lateinischen Wort *iterare* ab, das „wiederholen“ bedeutet. Im Kontext von Prozessen, Projekten oder Entwicklungsmethoden meint iteratives Arbeiten, dass in wiederholten Schleifen oder Zyklen vorgegangen wird, wobei jeder Durchlauf dazu verwendet wird, das Ergebnis schrittweise zu verbessern, anzupassen oder zu verfeinern."
   },
   {
     "title": "Jobsharing",
@@ -426,7 +426,7 @@
   },
   {
     "title": "Starfish-Methode",
-    "description": "![TODO ALT](/assets/starfish.svg)\n\nRetrospektiven sind regelmäßige Treffen zur gemeinsamen Evaluierung und Verbesserung der Teamleistung. Zu den bekanntesten Varianten gehört die Starfish-Retrospektive, die häufig von [Scrum-Teams](#scrum) erwendet wird. Der Seestern (englisch: Starfish) versinnbildlicht mit seinen fünf Armen die fünf Schritte dieser Methode: 1. Keep doing (Gute Praktiken, die beibehalten werden sollten), 2. Less of (Dinge, die es zu reduzieren gilt), 3. More of (Aspekte, die verstärkt werden sollten), 4. Start doing (Neue Ideen, die das Projekt voranbringen könnten), 5. Stop doing (Aktivitäten, die nicht zum Projekterfolg beitragen und beendet werden sollten). Die Starfish-Methode soll Teammitglieder dazu ermutigen, ihr Feedback einzubringen und Probleme systematisch zu analysieren.",
+    "description": "![TODO ALT](/assets/starfish.svg)\n\nRetrospektiven sind regelmäßige Treffen zur gemeinsamen Evaluierung und Verbesserung der Teamleistung. Zu den bekanntesten Varianten gehört die Starfish-Retrospektive, die häufig von [Scrum-Teams](#scrum) erwendet wird. Der Seestern (engl. Starfish) versinnbildlicht mit seinen fünf Armen die fünf Schritte dieser Methode: 1. Keep doing (Gute Praktiken, die beibehalten werden sollten), 2. Less of (Dinge, die es zu reduzieren gilt), 3. More of (Aspekte, die verstärkt werden sollten), 4. Start doing (Neue Ideen, die das Projekt voranbringen könnten), 5. Stop doing (Aktivitäten, die nicht zum Projekterfolg beitragen und beendet werden sollten). Die Starfish-Methode soll Teammitglieder dazu ermutigen, ihr Feedback einzubringen und Probleme systematisch zu analysieren.",
     "term_id": "starfish-methode"
   },
   {

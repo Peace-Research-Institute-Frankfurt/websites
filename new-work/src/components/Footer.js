@@ -60,7 +60,7 @@ export default function Footer() {
           </ul>
         </nav>
         <p className={styles.meta}>
-          <span>© PRIF und die Autor*innen {new Date().getFullYear()}</span>
+          <span>© PRIF und die Autor:innen {new Date().getFullYear()}</span>
           {activeDevFlags.length > 0 && (
             <ul className={styles.flags}>
               {activeDevFlags.map((flag) => {
