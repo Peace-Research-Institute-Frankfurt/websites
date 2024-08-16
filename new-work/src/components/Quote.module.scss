@@ -21,6 +21,7 @@
   margin-bottom: var(--baseline);
   .text {
     @extend %copy-italic;
+    line-height: var(--baseline);
     text-wrap: balance;
     hyphens: none;
     margin-bottom: 0;
