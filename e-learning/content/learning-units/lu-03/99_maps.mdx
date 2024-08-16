@@ -101,8 +101,8 @@ intro: Placeholder chapter for working on maps for this unit
 import treaties from "../../data/treaties.json"
 
 <LayeredMap
-  centerLat={32}
-  centerLong={0}
+  centerLat={30}
+  centerLong={2}
   mapScale={1.3}
   legendPosition="bottom-left"
   title="BWC Participation"
@@ -118,5 +118,5 @@ import treaties from "../../data/treaties.json"
         const s = ["ratification", "accession", "succession"].includes(p.events[p.events.length - 1].type) ? "Ratified" : "Signed"
         return ({iso3: p.country, value: s})
     })}
-    statisticsGroupName="Participation Status" colors={["var(--blue-60)", "var(--blue-30)"]} />
+    statisticsGroupName="Participation Status" colors={["var(--blue-50)", "var(--blue-30)"]} />
 </LayeredMap>
