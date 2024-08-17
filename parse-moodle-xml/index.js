@@ -5,7 +5,7 @@ const luxon = require('luxon')
 function sanitise(s) {
   return s
     .toString()
-    .replace(/<[^>]*>/g, '')
+    .replace(/<|>/g, '')
     .replace(/&nbsp;/g, '')
     .replace(/(\r\n|\n|\r)/g, '')
     .trim()
