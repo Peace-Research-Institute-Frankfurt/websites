@@ -23,14 +23,14 @@ function renderClozeText(s) {
   return sanitise(s).replace(/(\{\d:([A-Z]+):=?.+?\})+/g, (match, p1, p2) => {
     if (p2 === 'SHORTANSWER') {
       return `[**${sanitise(match)
-        .replace(/\{\d:(SHORTANSWER:=)/, '')
-        .replace(/\}/, '')
+        .replace(/\{\d:(SHORTANSWER:=)/g, '')
+        .replace(/\}/g, '')
         .split('~=')
         .join('; ')}**]`
     } else if (p2 === 'MULTICHOICE') {
       return `[Multiple choice: ${sanitise(match)
-        .replace(/\{\d:(MULTICHOICE:)/, '')
-        .replace(/\}/, '')
+        .replace(/\{\d:(MULTICHOICE:)/g, '')
+        .replace(/\}/g, '')
         .replace(/#OK|#Wrong/g, '')
         .split('~')
         .map((choice) => {
