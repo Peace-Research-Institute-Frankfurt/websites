@@ -116,7 +116,7 @@
     background: var(--white);
     color: var(--black);
     gap: 0.25em;
-    border-radius: 1000px;
+    border-radius: calc(var(--br) * .275);;
     &:hover,
     &:focus-visible {
       background: white;

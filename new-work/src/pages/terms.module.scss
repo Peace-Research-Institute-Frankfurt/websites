@@ -101,6 +101,9 @@
 .term-description {
   @extend %copy;
   padding: var(--padding-small);
+  ul, ol {
+  	margin: .5em 1em;
+  }
   img {
     width: 100%;
     display: block;

@@ -5,7 +5,7 @@
   font-family: var(--edge);
   cursor: pointer;
   align-items: center;
-  border-radius: var(--br);
+  border-radius: calc(var(--br) * .275);
   color: var(--black);
   background: var(--white);
   font-size: var(--ms--1);
