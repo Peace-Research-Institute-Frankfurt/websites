@@ -83,7 +83,7 @@ export default function EmailShareForm({ posts }) {
           state={formLoadingState === 'loading' ? 'disabled' : 'default'}
           name="userEmail"
           type="email"
-          label="Deine Email-Adresse"
+          label="Ihre Email-Adresse"
           required={true}
           placeholder="you@work.com"
         />
@@ -116,7 +116,7 @@ export default function EmailShareForm({ posts }) {
         </ButtonGroup>
       </Form>
       <p className={styles.privacy}>
-        Bitte beachte unsere <Link to="/datenschutz">Datenschutzhinweise</Link> wenn du diese Funktion benutzt.
+        Bitte beachten Sie unsere <Link to="/datenschutz">Datenschutzhinweise</Link>.
       </p>
     </>
   )
