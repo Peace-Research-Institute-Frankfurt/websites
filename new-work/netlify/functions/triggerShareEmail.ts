@@ -94,7 +94,7 @@ const handler: Handler = async function (event) {
   const requestBody = JSON.parse(event.body) as RequestBody
   const errors = await validateRequestBody(requestBody);
 
-  console.log(`Emails directory exists: ${fs.existsSync(process.env.NETLIFY_EMAILS_DIRECTORY)}`)
+  console.log(`Emails directory (${process.env.NETLIFY_EMAILS_DIRECTORY}) exists: ${fs.existsSync(process.env.NETLIFY_EMAILS_DIRECTORY)}`)
 
   if (errors.length === 0) {
     const userEmail = validator.normalizeEmail(requestBody.userEmail)
