@@ -2,7 +2,7 @@
     package = "@netlify/plugin-emails"
 
 [functions.emails]
-  included_files = ["emails/**", "new-work/emails/**"]
+  included_files = ["emails/**", "new-work/emails/**", "./emails/**"]
 
 [dev]
   framework = "gatsby"
