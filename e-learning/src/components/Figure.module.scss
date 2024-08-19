@@ -7,6 +7,10 @@
   font-size: 0.85em;
   padding-top: 0.1em;
   letter-spacing: 0.01em;
+  div,
+  p {
+    display: contents;
+  }
 }
 .captions {
   @extend %caption;

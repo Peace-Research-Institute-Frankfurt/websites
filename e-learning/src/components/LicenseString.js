@@ -22,5 +22,5 @@ export default function LicenseString({ license }) {
     }
   })
 
-  return <>Licensed under {licenseNode.url ? <a href={licenseNode.url}>{licenseNode.title}</a> : <>{licenseNode.title || license}</>}.</>
+  return <>{licenseNode.url ? <a href={licenseNode.url}>{licenseNode.title}</a> : <>{licenseNode.title || license}</>}.</>
 }
