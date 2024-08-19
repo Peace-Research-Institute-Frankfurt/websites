@@ -113,7 +113,7 @@ const handler: Handler = async function (event) {
         from: process.env.EMAIL_SENDER,
         to: targetEmails,
         replyTo: userEmail,
-        subject: `${userEmail} hat ${requestBody.posts.length} Artikel mit dir geteilt`,
+        subject: `${userEmail} hat ${requestBody.posts.length} Artikel mit Ihnen geteilt`,
         parameters: {
           userEmail: requestBody.userEmail,
           targetEmails: requestBody.targetEmails,
