@@ -63,6 +63,8 @@ const LearningUnit = ({ data, children }) => {
   const [chapterList, setChapterList] = useState([])
   const previewRef = useRef()
   const unit = data.posts.nodes[0].childMdx.frontmatter
+  const authors = unit.authors ?? []
+
   useEffect(() => {
     setTimestamp(new Date().toUTCString())
     window.setTimeout(() => {
@@ -201,7 +203,7 @@ const LearningUnit = ({ data, children }) => {
           </section>
           <section className="coverMeta">
             <ul className="unitAuthors">
-              {unit.authors.map((el, i) => {
+              {authors.map((el, i) => {
                 return (
                   <li key={`author-${el.id}`} className="coverAuthor">
                     <span className="authorName">{el.frontmatter.name}</span>
@@ -212,8 +214,8 @@ const LearningUnit = ({ data, children }) => {
             </ul>
             <div className="coverCitation">
               <p>
-                Cite as: {authorsToString(unit.authors)}, "{unit.title}" in EUNPDC eLearning, ed. Niklas Schoernig, Peace Research Institute
-                Frankfurt. Available at {data.site.siteMetadata.siteUrl}
+                Cite as: {authorsToString(authors)}, "{unit.title}" in EUNPDC eLearning, ed. Niklas Schoernig, Peace Research Institute Frankfurt.
+                Available at {data.site.siteMetadata.siteUrl}
                 {data.posts.nodes[0].childMdx.fields.slug}, last modified {data.site.buildTime}
               </p>
             </div>
