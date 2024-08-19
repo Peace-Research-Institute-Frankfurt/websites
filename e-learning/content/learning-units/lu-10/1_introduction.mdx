@@ -3,7 +3,6 @@ title: Introduction
 order: 1
 ---
 
-
 ## Lecture video
 Note: This is a sample video and will be updated later.
 <LectureVideo lu="15" vl="vl1" provider="">
@@ -189,7 +188,39 @@ Ammunition for small arms is produced in more than 100 countries worldwide and c
 
 Globally, the production of ammunition is unbalanced. Only a limited number of countries are capable of producing significant amounts of ammunition of a consistently high quality. Specifically, 15 countries are responsible for about 90 percent of all international ammunition transfers.
 
-[A Map is missing here!]
+
+<LayeredMap
+  centerLat={30}
+  centerLong={40}
+  mapScale={1}
+  legendPosition="bottom-left"
+  title="Top 15 countries responsible for 90 percent of all international ammunition transfers"
+  description="Top 15 countries responsible for 90 percent of all international ammunition transfers"
+  legendTitle="Legend"
+  credit="Jenzen-Jones (2014)"
+  license="cc-by-4"
+>
+  <CountryStatisticsLayer
+    data={[
+      { name: 'Brazil', iso3: 'BRA', value: 'Top 15 countries' },
+      { name: 'Canada', iso3: 'CAN', value: 'Top 15 countries' },
+      { name: 'China', iso3: 'CHN', value: 'Top 15 countries' },
+      { name: 'France', iso3: 'FRA', value: 'Top 15 countries' },
+      { name: 'Germany', iso3: 'DEU', value: 'Top 15 countries' },
+      { name: 'Israel', iso3: 'ISR', value: 'Top 15 countries' },
+      { name: 'Italy', iso3: 'ITA', value: 'Top 15 countries' },
+      { name: 'Norway', iso3: 'NOR', value: 'Top 15 countries' },
+      { name: 'Russia', iso3: 'RUS', value: 'Top 15 countries' },
+      { name: 'Spain', iso3: 'ESP', value: 'Top 15 countries' },
+      { name: 'South Korea', iso3: 'KOR', value: 'Top 15 countries' },
+      { name: 'Sweden', iso3: 'SWE', value: 'Top 15 countries' },
+      { name: 'Switzerland', iso3: 'CHE', value: 'Top 15 countries' },
+      { name: 'The UK', iso3: 'GBR', value: 'Top 15 countries' },
+      { name: 'The USA', iso3: 'USA', value: 'Top 15 countries' },
+    ]}
+    colors={['var(--orange-50)']}
+  />
+</LayeredMap>
 
 *Figure 8. Top 15 countries responsible for 90 percent of all international ammunition transfers*
 *Source: Jenzen-Jones (2014)*
