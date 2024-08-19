@@ -71,9 +71,9 @@ export default function LayeredMap({
         </NaturalEarth>
         <MapLegend children={children} legendPosition={legendPosition} legendTitle={legendTitle} />
       </div>
-      <figcaption className={styles.captions}>
-        {caption && <MarkdownRenderer className={styles.caption} markdown={caption} />}
-        <div className={styles.credit}>
+      <figcaption className={figureStyles.captions}>
+        {caption && <MarkdownRenderer className={figureStyles.caption} markdown={caption} />}
+        <div className={figureStyles.credit}>
           {credit && <MarkdownRenderer markdown={credit} />}
           {license && <LicenseString license={license} />}
         </div>

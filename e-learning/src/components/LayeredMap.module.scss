@@ -14,20 +14,6 @@
   position: relative;
 }
 
-.captions {
-  @extend %caption;
-  padding-top: 0.25em;
-}
-
-.credit {
-  @extend %caption;
-  color: var(--gray-60);
-  div,
-  p {
-    display: inline;
-  }
-}
-
 .map {
   max-width: 100%;
   width: 100%;
@@ -36,8 +22,7 @@
   }
 
   circle {
-    fill: var(--blue-80);
-    stroke: white;
+    stroke: var(--blue-90);
     stroke-width: 1;
   }
 
@@ -51,17 +36,13 @@
   path {
     fill: var(--gray-30);
     stroke: var(--gray-30);
-    stroke-width: 0.75;
   }
 }
 
 .marker {
-  fill: var(--blue-80);
-
-  r: 16;
-
+  r: 12px;
   @include bp(m) {
-    r: 6;
+    r: 7px;
   }
 }
 
@@ -120,18 +101,18 @@
     height: 1em;
     border-radius: 2px;
     overflow: hidden;
+    circle {
+      stroke: var(--blue-80);
+    }
     &:has(rect) {
       border: 1px solid var(--blue-80);
     }
-  }
-  circle {
-    fill: var(--blue-80);
   }
 }
 
 .legend-title {
   @extend %caption-bold;
-  margin-bottom: 0.2em;
+  margin-bottom: 0.2em !important;
 }
 
 .legend-item {

@@ -38,6 +38,6 @@ export default function CountryStatisticsLayer({
       />
     )
   } else {
-    return <CountryStatisticsLayerCountries projection={projection} data={data} colorRange={scale} />
+    return <CountryStatisticsLayerCountries projection={projection} data={data} scale={scale} />
   }
 }
