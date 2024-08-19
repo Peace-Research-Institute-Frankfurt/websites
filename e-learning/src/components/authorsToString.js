@@ -1,5 +1,8 @@
 export default function authorsToString(authors) {
   let authorNames = ''
+  if (authors.length === 0) {
+    return ''
+  }
   if (authors.length === 1) {
     authorNames = authors[0].frontmatter.name
   } else {

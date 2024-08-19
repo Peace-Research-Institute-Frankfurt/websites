@@ -96,7 +96,7 @@ export const query = graphql`
 
 const LearningUnit = ({ data, children }) => {
   const frontmatter = data.post.childMdx.frontmatter
-  const authors = data.post.childMdx.frontmatter.authors
+  const authors = data.post.childMdx.frontmatter?.authors ?? []
   const heroImage = getImage(frontmatter.hero_image)
   const [bookmarks, setBookmarks] = useLocalStorage('elearning-bookmarks', [])
   const startLink = data.chapters.nodes[0].childMdx.fields.slug
