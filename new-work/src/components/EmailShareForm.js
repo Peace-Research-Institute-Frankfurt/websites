@@ -133,7 +133,7 @@ export default function EmailShareForm({ posts }) {
   const errorView = (
     <div>
       <p className={`${styles.feedback} ${styles.error}`}>
-        Versand fehlgeschlagen. Versuch es in ein paar Minuten erneut oder <a href={mailto}>schick die Email manuell</a> mit deiner Email-App.
+        Versand fehlgeschlagen. Versuchen Sie es in ein paar Minuten erneut oder <a href={mailto}>schicken die Email manuell</a> mit Ihrer Email-App.
       </p>
       <ButtonGroup>
         <Button size="medium" onClick={() => setFlowState('default')} state="" label="Zurück" />
