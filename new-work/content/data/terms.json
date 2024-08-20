@@ -37,12 +37,12 @@
   {
     "title": "Bedarfsermittlung",
     "term_id": "bedarfsermittlung",
-    "description": "Es ist die Aufgabe der Bedarfsermittlung, Ressourcen, Personalaufwand und Güter zu erfassen, die für die Umsetzung der neuen Arbeitsumgebungen nötig sind. Die Bedarfsplanung setzt sich mit der Deckung des zuvor festgestellten Bedarfs auseinander und ordnet finanzielle und personelle Ressourcen den einzelnen Posten zu. Die Bedarfsermittlung ist der erste Schritt, und die Bedarfsplanung baut darauf auf und leitet daraus konkrete Maßnahmen ab."
+    "description": "Aufgabe der Bedarfsermittlung ist es, den aktuellen Bedarf an Ressourcen, Gütern und Personal zu erfassen, der für die Umsetzung eines Projekts wie etwa die Umgestaltung von Büroflächen benötigt wird. Dafür werden heute digitale Tools und Plattformen eingesetzt, mit denen sich Echtzeitdaten erheben lassen. So kann man schneller und agiler auf Änderungen reagieren. Die Bedarfsermittlung ist die Basis für eine spätere [Bedarfsplanung](#bedarfsplanung)."
   },
   {
     "title": "Bedarfsplanung",
     "term_id": "bedarfsplanung",
-    "description": "Im Kontext von [New Work](#new-work) ist es die Aufgabe der Bedarfsplanung, Veränderungen im Arbeitsumfeld sorgfältig zu analysieren, um für die Beschäftigten eine Umgebung zu schaffen, die die [Motivation](#motivation), Zufriedenheit und Leistungsfähigkeit fördert. Die Bedarfsermittlung bringt die Bedürfnisse der Mitarbeitenden und die Anforderungen der Organisation so miteinander in Einklang, dass passende New-Work-Konzepte ([Homeoffice](#homeoffice)-Regelungen, partizipative Prozesse, selbstorganisierte Teams) entwickelt werden können. Dieser Prozess stellt eine wichtige Basis für Architekt:innen und Planer:innen dar, um ein inspirierendes Arbeitsumfeld entwerfen zu können."
+    "description": "Bei der Bedarfsplanung geht es darum, den zukünftigen Bedarf an materiellen und personellen Ressourcen vorherzusagen und festzulegen, der für ein bestimmtes Projekt oder etwa das [Changemanagement](#changemanagement) einer Abteilung veranschlagt werden muss. Es ist ein strategischer Prozess mit [iterativ](#iterativ) eingesetzten Analysetools, damit die Planungen immer wieder angepasst und die Organisationsziele langfristig effizient erreicht werden können. Als Datengrundlage dient die [Bedarfsermittlung](#bedarfsermittlung). "
   },
   {
     "title": "Bergmann, Frithjof",
