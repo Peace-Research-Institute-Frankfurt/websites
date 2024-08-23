@@ -1,6 +1,6 @@
 # EUNPDC eLearning
 
-This folder contains the Gatsby source for EUNPDC eLearning [eunpdc-elearning.netlify.app](https://eunpdc-elearning.netlify.app/). If you're new to working on software, you may want to [start here](https://github.com/Peace-Research-Institute-Frankfurt/websites/wiki/How-to-Contribute) instead.
+This folder contains the [Gatsby](https://www.gatsbyjs.com/docs) source for EUNPDC eLearning [eunpdc-elearning.netlify.app](https://eunpdc-elearning.netlify.app/). If you're new to working on software, you may want to [start here](https://github.com/Peace-Research-Institute-Frankfurt/websites/wiki/How-to-Contribute) instead.
 
 ## Prerequisites
 
