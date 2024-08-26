@@ -43,7 +43,11 @@ export const query = graphql`
           hide_body
           hero_image {
             childImageSharp {
-              gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
+              gatsbyImageData(
+              	layout: FULL_WIDTH,
+               	placeholder: BLURRED
+                breakpoints: [750, 1080, 1366, 1920, 2500],
+              )
             }
           }
           hero_video
