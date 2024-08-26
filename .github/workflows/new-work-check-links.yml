@@ -13,7 +13,7 @@ jobs:
       - uses: lycheeverse/lychee-action@v1.5.4
         id: lychee
         with:
-          args: --verbose --timeout 60 --user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/110.0" --exclude=".+(adobe.com/de/privacy/)|(capterra.com)|(getapp.de)|(vimeo.com/)(instagram.com).+" --no-progress --insecure './new-work/content/**/*.mdx'
+          args: --verbose --timeout 60 --user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/110.0" --exclude=".+(adobe.com/de/privacy/)|(capterra.com)|(getapp.de)|(vimeo.com)(instagram.com).+" --no-progress --insecure './new-work/content/**/*.mdx'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - uses: peter-evans/create-issue-from-file@v4
