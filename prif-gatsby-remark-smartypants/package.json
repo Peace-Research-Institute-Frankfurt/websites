@@ -7,7 +7,7 @@
   "license": "MIT",
   "main": "index.js",
   "dependencies": {
-    "retext-smartypants": "^6.1.0",
+    "retext-smartypants": "^6.1.1",
     "unist-util-visit": "^5.0.0",
     "retext": "^9.0.0"
   }
