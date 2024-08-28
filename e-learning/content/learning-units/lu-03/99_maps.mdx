@@ -122,9 +122,22 @@ import treaties from "../../data/treaties.json"
           "signature": "Signed, but not ratified",
         }
         const s = labels[p.events[p.events.length - 1].type] ? labels[p.events[p.events.length - 1].type] : `Unkown event: ${p.events[p.events.length - 1].type}`
+
         return ({iso3: p.country, value: s})
     })}
     statisticsGroupName="Adoption Status" colors={["var(--blue-50)","var(--blue-40)", "var(--yellow-30)"]} />
 </LayeredMap>
 
-<Treaty name="bwc"/>
+## US Biodefense Spending
+
+import USBioDefenseSpending from "../../data/us-biodefense-spending.csv"
+
+<BarGraph
+    data={USBioDefenseSpending}
+    xAxis="date"
+    xAxisTitle="Year"
+    yAxisTitle="Total Cumulative Spending (in B$)"
+    title="TODO"
+    description="TODO"
+    legendTitle="TODO"
+/>
