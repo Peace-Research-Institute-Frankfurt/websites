@@ -143,10 +143,10 @@ const PostListItem = ({ title, authors, intro, prefix, category, isCurrent, publ
     >
       {isPending && (
         <span className={styles.publishedDate}>
-          <date>
+          <span>
             <ArrowRightIcon />
             {publishedOnDate.toLocaleDateString('de-DE')}
-          </date>
+          </span>
         </span>
       )}
       <span className={`${styles.title} ${prefix ? styles.hasPrefix : ''}`}>

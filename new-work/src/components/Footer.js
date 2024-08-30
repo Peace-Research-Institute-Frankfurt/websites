@@ -59,16 +59,16 @@ export default function Footer() {
             })}
           </ul>
         </nav>
-        <p className={styles.meta}>
-          <span>© PRIF und die Autor:innen {new Date().getFullYear()}</span>
+        <div className={styles.meta}>
+          <p>© PRIF und die Autor:innen {new Date().getFullYear()}</p>
           {activeDevFlags.length > 0 && (
             <ul className={styles.flags}>
               {activeDevFlags.map((flag) => {
-                return <li>{flag.key}</li>
+                return <li key={`flag.${flag.key}`}>{flag.key}</li>
               })}
             </ul>
           )}
-        </p>
+        </div>
       </div>
     </footer>
   )

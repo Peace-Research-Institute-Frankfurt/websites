@@ -6,12 +6,11 @@ import SearchIcon from '../images/search.svg'
 import * as styles from './SearchForm.module.scss'
 
 function prettifyPostType(postType) {
-  if (postType === 'post') {
-    return 'Artikel'
-  } else if (postType === 'term') {
-    return 'Glossar-Begriff'
+  const dictionary = {
+    post: 'Artikel',
+    term: 'Glossarbegriff',
   }
-  return postType
+  return dictionary[postType] ? dictionary[postType] : postType
 }
 
 function DropdownCombobox({ value, setValue, inputItems, addActiveTerm }) {
@@ -34,6 +33,7 @@ function DropdownCombobox({ value, setValue, inputItems, addActiveTerm }) {
       return ''
     },
   })
+  console.log(inputItems)
   return (
     <div className={styles.container}>
       <label className={styles.label} htmlFor="search" {...getLabelProps()}>
@@ -48,23 +48,19 @@ function DropdownCombobox({ value, setValue, inputItems, addActiveTerm }) {
         data-testid="combobox-input"
       />
       <ul className={`${styles.choices} ${isOpen && inputItems.length > 0 ? styles.choicesActive : ''}`} {...getMenuProps({})}>
-        {isOpen &&
-          inputItems.map((item, index) => (
-            <li
-              className={`${styles.choice} ${highlightedIndex === index ? styles.selected : ''}`}
-              key={`${item}.${index}`}
-              {...getItemProps({
-                item,
-                index,
-              })}
-            >
-              <div>
-                <span className={styles.choiceTitle}>{item.title}</span>
-                {item.authors.length > 0 && <span className={styles.choiceAuthors}>{item.authors.split(';').join(', ')}</span>}
-              </div>
-              <span className={styles.choiceType}>{prettifyPostType(item.post_type)}</span>
-            </li>
-          ))}
+        {inputItems.map((item, index) => (
+          <li
+            className={`${styles.choice} ${highlightedIndex === index ? styles.selected : ''}`}
+            key={`${item}.${index}`}
+            {...getItemProps({ item, index })}
+          >
+            <div>
+              <span className={styles.choiceTitle}>{item.title}</span>
+              {item.authors.length > 0 && <span className={styles.choiceAuthors}>{item.authors.split(';').join(', ')}</span>}
+            </div>
+            <span className={styles.choiceType}>{prettifyPostType(item.post_type)}</span>
+          </li>
+        ))}
       </ul>
     </div>
   )

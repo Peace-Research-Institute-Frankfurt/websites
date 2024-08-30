@@ -32,10 +32,6 @@
   cursor: pointer;
   height: 100%;
   width: 100%;
-
-  &:hover,
-  &:focus-visible {
-  }
   svg {
     width: 0.88em;
     height: auto;
@@ -65,14 +61,14 @@
   top: calc(100% + 0.5em);
   opacity: 0;
   transition: var(--fast);
-  transform: translateY(-5px);
+  transform: translateY(-5px) translateX(50%);
   overflow: hidden;
-  left: -1px;
+  right: -1px;
 }
 
 .choices-active {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0) translateX(50%);
 }
 
 .choice {
