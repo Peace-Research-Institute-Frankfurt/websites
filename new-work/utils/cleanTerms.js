@@ -15,5 +15,4 @@ output.sort((a, b) => {
   return a.title > b.title ? 1 : a.title < b.title ? -1 : 0
 })
 
-// console.log(output)
 fs.writeFileSync('./content/data/terms.json', JSON.stringify(output, null, '  '), null)

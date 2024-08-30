@@ -11,7 +11,6 @@ export default function BookmarkToggle({ post, className, bookmarks, setBookmark
   function toggleBookmark() {
     setBookmarks((prevBookmarks) => {
       if (bookmarkIndex === -1) {
-        console.log(post)
         const newBookmark = {
           slug: post.childMdx.fields.slug,
         }

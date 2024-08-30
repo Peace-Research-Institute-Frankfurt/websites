@@ -33,7 +33,6 @@ function DropdownCombobox({ value, setValue, inputItems, addActiveTerm }) {
       return ''
     },
   })
-  console.log(inputItems)
   return (
     <div className={styles.container}>
       <label className={styles.label} htmlFor="search" {...getLabelProps()}>
