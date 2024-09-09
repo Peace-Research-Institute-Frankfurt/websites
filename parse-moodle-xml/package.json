@@ -10,7 +10,7 @@
   "author": "Max Kohler <hello@maxkohler.com>",
   "license": "ISC",
   "dependencies": {
-    "fast-xml-parser": "^4.4.1",
+    "fast-xml-parser": "^4.5.0",
     "luxon": "^3.5.0"
   }
 }
