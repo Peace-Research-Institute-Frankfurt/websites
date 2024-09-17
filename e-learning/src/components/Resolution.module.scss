@@ -4,6 +4,7 @@
   background: var(--yellow-10);
   border-radius: var(--br);
   padding: 1em;
+  margin-bottom: 1em;
 }
 .eyebrow {
   @extend %caption;

@@ -2,10 +2,19 @@
   {
     "name": "S/RES/1540",
     "title": "UN Security Council Resolution 1540",
-    "meeting": "4,956th Meeting of the UNSCR",
+    "meeting": "4956th Meeting of the UNSCR",
     "date": "2004-04-28",
     "status": "adopted",
     "text": "https://undocs.org/Home/Mobile?FinalSymbol=S%2FRES%2F1540(2004)",
     "description": "UNSCR 1540 establishes new obligations for member states to develop and enforce legal and regulatory measures against the proliferation of chemical, biological, radiological, and nuclear weapons and their means of delivery, in particular, to prevent the spread of weapons of mass destruction to non-state actors."
+  },
+  {
+    "name": "A/RES/71/258",
+    "title": "UNGA Resolution 258",
+    "meeting": "71st session of the General Assembly",
+    "date": "2017-01-11",
+    "status": "adopted",
+    "text": "https://daccess-ods.un.org/access.nsf/Get?OpenAgent&DS=A/RES/71/258&Lang=E",
+    "description": "TODO Description"
   }
 ]
