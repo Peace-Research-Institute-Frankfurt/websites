@@ -108,7 +108,7 @@
   }
   .captions {
     grid-column: 1 / 2;
-    padding-top: calc(var(--baseline) * 0.5);
+    padding-top: .5em;
     margin-bottom: calc(var(--baseline) * 0.5);
   }
 
