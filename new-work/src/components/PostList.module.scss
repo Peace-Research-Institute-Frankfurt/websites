@@ -135,9 +135,6 @@
   &:hover,
   &:focus-visible {
     filter: brightness(1.1);
-    .title {
-      transform: scale(1.01);
-    }
   }
 }
 
@@ -159,6 +156,7 @@
   border-radius: 1000px;
   color: var(--black);
   display: inline-block;
+  transition: 300ms;
   @include bp(s) {
     font-size: var(--ms-2);
   }
