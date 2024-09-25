@@ -5,7 +5,7 @@ This folder contains the [Gatsby](https://www.gatsbyjs.com/docs) source for EUNP
 ## Prerequisites
 
 - Git
-- Node (LTS) + npm
+- Node (LTS) + npm in Version 20.* & größer
 
 ## Local development
 
