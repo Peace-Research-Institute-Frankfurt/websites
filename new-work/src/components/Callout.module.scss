@@ -30,4 +30,11 @@
   .inner {
     grid-column: 2 / 3;
   }
+  .title {
+    @extend %h2;
+    letter-spacing: 0;
+    padding-top: 0.5em;
+    margin-bottom: 0.5em;
+    text-transform: none;
+  }
 }
