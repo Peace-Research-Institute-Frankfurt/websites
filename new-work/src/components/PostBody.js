@@ -19,6 +19,7 @@ import Note from './Note'
 import { BubbleQuotes, BubbleQuote } from './BubbleQuote'
 import { ManifestoSignatory, ManifestoSignatories, ManifestoList, ManifestoListItem } from './Manifesto'
 import { BookReview, BookReviewList } from './BookReview'
+import Schedule from './Schedule'
 import PlaceholderText from './PlaceholderText'
 import * as QuoteStyles from './Quote.module.scss'
 import * as CalloutStyles from './Callout.module.scss'
@@ -68,6 +69,7 @@ const shortCodes = {
   BookReviewList,
   PlaceholderText,
   IconTile,
+  Schedule,
 }
 
 export default function PostBody({ children }) {
