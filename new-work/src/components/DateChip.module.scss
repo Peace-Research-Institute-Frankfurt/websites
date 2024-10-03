@@ -1,0 +1,20 @@
+@import 'vars';
+
+.container {
+  @extend %caption;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2em;
+  color: white;
+  padding: 0.1em 0.65em;
+  border-radius: 500px;
+  background: black;
+  border: 1px solid rgba(white, 0.4);
+  box-shadow: 0 2px 4px inset rgba(white, 0.2);
+  svg {
+    height: 0.75em;
+    path {
+      fill: currentColor;
+    }
+  }
+}

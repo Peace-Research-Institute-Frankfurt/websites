@@ -5,15 +5,16 @@ import Meta from './Meta'
 import App from './App'
 import StickyHeader from './StickyHeader'
 import SkipToContent from './SkipToContent'
-import PostBody from './PostBody'
 import PostHeader from './PostHeader'
 import { Bylines } from './Bylines'
 import { PostList } from './PostList'
+import PostBody from './PostBody'
 
-import * as styles from './Post.module.scss'
 import PostHeaderVideo from './PostHeaderVideo'
 import SearchForm from './SearchForm'
 import FallbackIllustration from './FallbackIllustration'
+
+import * as styles from './Post.module.scss'
 
 export const query = graphql`
   query ($id: String!) {
@@ -43,11 +44,7 @@ export const query = graphql`
           hide_body
           hero_image {
             childImageSharp {
-              gatsbyImageData(
-              	layout: FULL_WIDTH,
-               	placeholder: BLURRED
-                breakpoints: [750, 1080, 1366, 1920, 2500],
-              )
+              gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, breakpoints: [750, 1080, 1366, 1920, 2500])
             }
           }
           hero_video

@@ -3,9 +3,9 @@ import React from 'react'
 import App from './App'
 import StickyHeader from './StickyHeader'
 import SkipToContent from './SkipToContent'
-import PostBody from './PostBody'
 import PageHeader from './PageHeader'
 import SearchForm from './SearchForm'
+import PostBody from './PostBody'
 
 import * as styles from './Page.module.scss'
 

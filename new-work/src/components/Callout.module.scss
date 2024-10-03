@@ -3,7 +3,7 @@
 .container {
   grid-column: 1 / 3;
   border: 1px solid var(--gray);
-  box-shadow: 0 0 2em inset var(--gray-dark);
+  box-shadow: 0 0 1em inset rgba(white, 0.2);
   margin-bottom: var(--baseline);
   margin-top: calc(var(--baseline) * 0.5);
   border-radius: var(--br);

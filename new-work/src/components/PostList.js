@@ -6,7 +6,7 @@ import ButtonGroup from './ButtonGroup'
 import PlaceholderText from './PlaceholderText'
 import GridIcon from '../images/grid.svg'
 import ListIcon from '../images/list.svg'
-import ArrowRightIcon from '../images/arrow-right.svg'
+import DateChip from './DateChip'
 
 const PostList = ({ posts, activeFilters, currentPostId }) => {
   const [showList, setShowList] = useState(false)
@@ -142,12 +142,9 @@ const PostListItem = ({ title, authors, intro, prefix, category, isCurrent, publ
       to={`/${slug}`}
     >
       {isPending && (
-        <span className={styles.publishedDate}>
-          <span>
-            <ArrowRightIcon />
-            {publishedOnDate.toLocaleDateString('de-DE')}
-          </span>
-        </span>
+        <div className={styles.publishedDate}>
+          <DateChip date={publishedOnDate} />
+        </div>
       )}
       <span className={`${styles.title} ${prefix ? styles.hasPrefix : ''}`}>
         {prefix && <span className={styles.titlePrefix}>{prefix}</span>}

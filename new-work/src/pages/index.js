@@ -5,11 +5,11 @@ import App from '../components/App'
 import StickyHeader from '../components/StickyHeader'
 import SkipToContent from '../components/SkipToContent'
 import PostHeader from '../components/PostHeader'
-import * as styles from './index.module.scss'
 import { PostList } from '../components/PostList'
 import EventBanner from '../components/EventBanner'
 import SearchForm from '../components/SearchForm'
 import Schedule from '../components/Schedule'
+import * as styles from './index.module.scss'
 
 export const query = graphql`
   query {

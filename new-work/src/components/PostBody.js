@@ -29,6 +29,7 @@ import * as EmbedChoicesStyles from './EmbedChoices.module.scss'
 import * as InterviewStyles from './Interview.module.scss'
 import * as DetailsStyles from './Details.module.scss'
 import * as styles from './PostBody.module.scss'
+import DateChip from './DateChip'
 
 const shortCodes = {
   Figure: ({ ...props }) => <FigureAdapter {...props} styles={FigureStyles} />,
@@ -70,6 +71,7 @@ const shortCodes = {
   PlaceholderText,
   IconTile,
   Schedule,
+  DateChip,
 }
 
 export default function PostBody({ children }) {
