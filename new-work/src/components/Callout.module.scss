@@ -15,7 +15,6 @@
     grid-column: 1 / 4;
     display: grid;
     grid-template-columns: subgrid;
-    margin-top: calc(var(--baseline) * 1.5);
   }
   ol,
   ul {
