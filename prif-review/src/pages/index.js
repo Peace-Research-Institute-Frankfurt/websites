@@ -103,7 +103,7 @@ const Index = ({ data, pageContext, location }) => {
           </ol>
           <div className={styles.notes}>
             <MarkdownRenderer
-              markdown={t('Annual reports from 2009 through 2021 can be found [on our website.](https://www.prif.org/en/about-us/prif-review)')}
+              markdown={t('Annual reports from 2009 through 2021 can be found [on our website.](https://www.prif.org/en/about-us/history-and-annual-review)')}
             />
           </div>
         </section>
