@@ -1,5 +1,7 @@
 import { MDXProvider } from '@mdx-js/react'
 import React from 'react'
+import slug from 'slug'
+
 import EmbedChoicesAdapter from './EmbedChoicesAdapter'
 import Leadin from './Leadin'
 import { FileAdapter, FileList } from './FileAdapter'
@@ -30,6 +32,7 @@ import * as InterviewStyles from './Interview.module.scss'
 import * as DetailsStyles from './Details.module.scss'
 import * as styles from './PostBody.module.scss'
 import DateChip from './DateChip'
+import IconGrid from './IconGrid'
 
 const shortCodes = {
   Figure: ({ ...props }) => <FigureAdapter {...props} styles={FigureStyles} />,
@@ -72,6 +75,9 @@ const shortCodes = {
   IconTile,
   Schedule,
   DateChip,
+  IconGrid,
+  h2: ({ children }) => <h2 id={slug(children)}>{children}</h2>,
+  h3: ({ children }) => <h3 id={slug(children)}>{children}</h3>,
 }
 
 export default function PostBody({ children }) {

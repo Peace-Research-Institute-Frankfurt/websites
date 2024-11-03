@@ -6,15 +6,13 @@
   box-shadow: 0 0 1em inset rgba(white, 0.2);
   margin-bottom: var(--baseline);
   margin-top: calc(var(--baseline) * 0.5);
-  border-radius: var(--br);
+  border-radius: var(--br-medium);
   padding: var(--baseline) 1em;
   &:last-child {
     margin-bottom: 0;
   }
   @include bp(l) {
-    grid-column: 1 / 4;
-    display: grid;
-    grid-template-columns: subgrid;
+    grid-column: 2 / 3;
   }
   ol,
   ul {
@@ -26,13 +24,9 @@
   *:last-child {
     margin-bottom: 0;
   }
-  .inner {
-    grid-column: 2 / 3;
-  }
   .title {
     @extend %h2;
     letter-spacing: 0;
-    padding-top: 0.5em;
     margin-bottom: 0.5em;
     text-transform: none;
   }

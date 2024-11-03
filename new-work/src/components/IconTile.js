@@ -1,18 +1,20 @@
 import React from 'react'
-import Icon from '../images/icon-test.svg'
+import PlaceIcon from '../images/nw-place.svg'
+import TimeIcon from '../images/nw-time.svg'
+import { Link } from 'gatsby'
 import * as styles from './IconTile.module.scss'
 
-export default function IconTile({ title }) {
+export default function IconTile({ eyebrow, body, to, icon }) {
   return (
-    <div className={styles.wrapper}>
-      <section className={styles.container}>
-        <Icon />
-        <h3 className={styles.title}>Hier steht der Kachel-Titel</h3>
-        <p className={styles.copy}>
-          Wie kann die Beantragung erfolgen und welche Regelungen gilt es zu beachten? Das ist sozial- und krankenversicherungsrechtlich sowie
-          lohnsteuerrechtlich die mit Abstand schwierigste Fragestellung.
-        </p>
+    <Link to={to} className={styles.wrapper}>
+      <section className={styles.copy}>
+        <span className={styles.eyebrow}>{eyebrow}</span>
+        <p className={styles.body}>{body}</p>
       </section>
-    </div>
+      <section className={styles.icon}>
+        {icon === 'place' && <PlaceIcon />}
+        {icon === 'time' && <TimeIcon />}
+      </section>
+    </Link>
   )
 }
