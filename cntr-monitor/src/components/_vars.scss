@@ -158,3 +158,23 @@
   letter-spacing: 0.065em;
   word-spacing: 0.02em;
 }
+table{
+  text-align: left;
+  font-size: small;
+  border: 1px solid;
+
+  tr{
+    vertical-align: top;
+  }
+  th,td{
+    border: 1px solid;
+    padding: 5px 5px;
+  }
+  thead{
+    tr{
+      font-size: var(--ms-0);
+      background: var(--fc-light);
+      border-bottom: 1px solid;
+    }
+  }
+}
