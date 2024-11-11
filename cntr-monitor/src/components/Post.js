@@ -176,7 +176,7 @@ export default function Post({ data, pageContext, children }) {
   const next = posts[currentIndex + 1] || null
   const previous = posts[currentIndex - 1] || null
 // media machine: "previous" and "next" relative path wrong? '/2024/' instead of '../' for the english version.
-  // The problem is not yet solved, just patched up
+  // The problem is not yet solved, just patched up.
     const pagination = (
       <nav className={styles.pagination}>
         {previous && (
