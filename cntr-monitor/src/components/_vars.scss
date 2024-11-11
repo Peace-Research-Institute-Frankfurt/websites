@@ -161,18 +161,19 @@
 table{
   text-align: left;
   font-size: small;
+  line-height: 1.1rem;
   border: 1px solid;
-
+  margin-bottom: 0.5rem;
   tr{
     vertical-align: top;
   }
   th,td{
     border: 1px solid;
-    padding: 5px 5px;
+    padding: 15px 5px;
   }
   thead{
     tr{
-      font-size: var(--ms-0);
+      font-weight: bold;
       background: var(--fc-light);
       border-bottom: 1px solid;
     }
