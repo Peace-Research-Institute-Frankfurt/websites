@@ -55,7 +55,7 @@
     width: auto;
     height: calc(var(--baseline) * 4);
     @include bp(m) {
-      height: calc(var(--baseline) * 8);
+      height: calc(var(--baseline) * 6);
     }
   }
 }
