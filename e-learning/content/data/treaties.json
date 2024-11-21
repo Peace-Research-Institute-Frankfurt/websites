@@ -9401,5 +9401,76 @@
         ]
       }
     ]
+  },
+  {
+    "name": "att",
+    "title": "Arms Trade Treaty",
+    "date": "2014-12-24",
+    "description": "Entered into force in 2014. 113 State Parties, 28 Signatories that are not yet State Parties, 54 states that have not joined.Covers eight categories of weapons systems, including battle tanks, armoured combat vehicles, combat aircraft, attack helicopters and warships. While there has been a debate on whether the ATT includes ‘uncrewed systems’ in the past, today’s understanding is that it does – at least if the unmanned system can be assigned to one of the existing categories.",
+    "scrapeURL": "https://thearmstradetreaty.org/",
+    "participants": [
+      {
+        "country": "ALB",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-06-03"
+          },
+          {
+            "type": "ratification",
+            "date": "2014-03-19"
+          }
+        ]
+      },
+      {
+        "country": "AND",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2014-12-19"
+          },
+          {
+            "type": "ratification",
+            "date": "2022-12-02"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "inf",
+    "title": "Intermediate-Range Nuclear Forces Treaty",
+    "date": "1988-06-01",
+    "description": "Entered into force in 1988. Eliminated all intermediate-range ballistic missiles with a range between 500 and 5,500 km. Ceased to be in force in 2019 after US withdrawal over alleged Russian violations. There was a debate on whether long-range UAVs, such as U.S. Raptors, should be covered by the treaty. While the Russian position was that they should, the US position – in contrast to the MTCR understanding – made a clear distinction between UAVs and missiles and rejected the Russian interpretation.",
+    "scrapeURL": "https://2009-2017.state.gov/t/avc/trty/102360.htm",
+    "participants": [
+      {
+        "country": "RUS",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1987-12-08"
+          },
+          {
+            "type": "ratification",
+            "date": "1988-06-01"
+          }
+        ]
+      },
+      {
+        "country": "USA",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1988-05-27"
+          },
+          {
+            "type": "ratification",
+            "date": "1988-06-01"
+          }
+        ]
+      }
+    ]
   }
+
 ]
