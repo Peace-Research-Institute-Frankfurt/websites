@@ -108,5 +108,200 @@
     "term_id": "WMD",
     "title": "Weapons of Mass Destruction (WMD)",
     "description": ""
+  },
+  {
+    "term_id": "GNSS",
+    "title": "Global Navigation Satellite Systems (GNSS)",
+    "description": "Networks of satellites providing signals for navigation, positioning and timing information globally, crucial for military operations and civilian use."
+  },
+  {
+    "term_id": "NEOs",
+    "title": "Near-Earth objects (NEOs)",
+    "description": "Asteroids and comets that come within close proximity to the Earth, posing a potential hazard in the event of impact."
+  },
+  {
+    "term_id": "RFI",
+    "title": "Radio frequency interference (RFI)",
+    "description": "Unwanted energy that negatively affects radio communication systems, leading to disruptions or loss of service in devices using radio frequencies."
+  },
+  {
+    "term_id": "SSA",
+    "title": "Space Situational Awareness (SSA)",
+    "description": "The ability to detect, track, identify and catalogue objects in space, including understanding space hazards such as the risk of collision between space objects, space weather events, near-Earth objects (NEOs) and space debris."
+  },
+  {
+    "term_id": "SDA",
+    "title": "Space Domain Awareness (SDA)",
+    "description": "An expanded concept building on SSA, which includes contextual knowledge such as understanding the operational status and purpose of satellites and space assets."
+  },
+  {
+    "term_id": "SST",
+    "title": "Space surveillance and tracking system (SST)",
+    "description": "A network of ground-based and space-based sensors capable of surveying and tracking space objects, providing data, information and services on these objects’ orbits around Earth."
+  },
+  {
+    "term_id": "Space security",
+    "title": "Space security",
+    "description": "This refers to the safeguarding of space assets and ground segments from threats or disruptions that could impact national security, defence and civilian applications."
+  },
+  {
+    "term_id": "satellite",
+    "title": "Satellite",
+    "description": "An object placed into orbit around the Earth or another celestial body that serves various purposes, including communication, observation, navigation and weather forecasting."
+  },
+  {
+    "term_id": "Space commercialisation",
+    "title": "Space commercialisation",
+    "description": "This involves the entry of private entities into space-related activities, including satellite deployment, launch services and space-based applications, alongside governmental initiatives."
+  },
+  {
+    "term_id": "CubeSats",
+    "title": "CubeSats",
+    "description": "Miniaturised satellites that offer a cost-effective means of more rapid technological advancements, allowing for space technology demonstration in orbit."
+  },
+  {
+    "term_id": "counterspace activities",
+    "title": "Counterspace activities",
+    "description": "Actions and capabilities developed to disrupt, deny, degrade or destroy space systems, including intentional actions, technical mishaps and natural hazards."
+  },
+  {
+    "term_id": "space weather",
+    "title": "Space weather",
+    "description": "Fluctuations and phenomena occurring in the space environment between the sun and Earth, which can impact both orbital systems and technologies on the Earth’s surface."
+  },
+  {
+    "term_id": "space debris",
+    "title": "Space debris",
+    "description": "Defunct human-made objects in space, such as defunct satellites and fragments, which orbit Earth uncontrollably and pose risks to operational spacecraft and satellites."
+  },
+  {
+    "term_id": "spectrum issues",
+    "title": "Spectrum issues",
+    "description": "Concerns related to the electromagnetic spectrum, a range of frequencies used for transmitting signals, including challenges in managing spectrum resources, avoiding interference and ensuring reliable operation of space-based systems."
+  },
+  {
+    "term_id": "space weapons",
+    "title": "Space weapons",
+    "description": "Systems enabling attacks aiming to deceive, disrupt, deny, degrade or destroy space systems or services. Also known as counterspace weapons/capabilities."
+  },
+  {
+    "term_id": "Space hybrid operations",
+    "title": "Space hybrid operations",
+    "description": "Intentional, temporary, mostly reversible and often harmful space actions/activities specifically designed to exploit the links to other domains and conducted just below the threshold where meaningful military or political retaliatory responses would be required."
+  },
+  {
+    "term_id": "Dual-use technology",
+    "title": "Dual-use technology",
+    "description": "Technology with both military and civilian utility/capability."
+  },
+  {
+    "term_id": "Space launch vehicles",
+    "title": "Space launch vehicles",
+    "description": "Carrier rockets designed to deliver satellites or other payloads in orbit."
+  },
+  {
+    "term_id": "HCoC",
+    "title": "Hague Code of Conduct (HCoC)",
+    "description": "The HCoC is a political arrangement established in 2002 to prevent the proliferation of ballistic missiles capable of delivering weapons of mass destruction (WMDs). This international code aims to increase transparency and build confidence among nations regarding their ballistic missile activities."
+  },
+  {
+    "term_id": "UN COPUOS",
+    "title": "UN Committee on the Peaceful Uses of Outer Space (UN COPUOS)",
+    "description": "Established by the United Nations in 1959 after the launch of Sputnik in 1957, this committee focuses on overseeing peaceful utilisation of outer space."
+  },
+  {
+    "term_id": "OST",
+    "title": "Outer Space Treaty (OST)",
+    "description": "Formulated in 1967 during the Cold War, it prohibits the placement of weapons of mass destruction in space and emphasises the use of space for peaceful purposes."
+  },
+  {
+    "term_id": "space governance",
+    "title": "Space governance",
+    "description": "The framework of laws, treaties, principles and international cooperation governing space activities, aiming to ensure peaceful exploration and utilisation of outer space."
+  },
+  {
+    "term_id": "PPWT",
+    "title": "Prevention of the Placement of Weapons in Outer Space Treaty (PPWT)",
+    "description": "Proposed by China and Russia in 2008, this treaty aims to prevent the placement of weapons in outer space and threats or force against space objects. However, its effectiveness is debated due to flaws in defining and verifying terms."
+  },
+  {
+    "term_id": "Destructive direct ascent anti-satellite missile testing",
+    "title": "Destructive direct ascent anti-satellite missile testing",
+    "description": "These are tests involving missiles directed at satellites in space, which can cause disruption or destruction. Efforts to curtail such tests involve self-imposed bans by certain nations and UN resolutions calling for restraint. Achieving global consensus remains a challenge, however."
+  },
+  {
+    "term_id": "LTS Guidelines",
+    "title": "Long-term Sustainability of Outer Space Activities (LTS Guidelines)",
+    "description": "Guidelines developed by the UN COPUOS between 2010 and 2018 aimed at ensuring the security and safety of space activities. The LTS Guidelines are, however, not legally binding."
+  },
+  {
+    "term_id": "Galileo",
+    "title": "Galileo",
+    "description": "Europe’s Global Navigation Satellite System (GNSS) providing accurate positioning and timing information globally."
+  },
+  {
+    "term_id": "Copernicus",
+    "title": "Copernicus",
+    "description": "Europe’s Earth observation programme providing data and information on environmental and security-related issues through satellite imagery."
+  },
+  {
+    "term_id": "EGNOS",
+    "title": "EGNOS",
+    "description": "European Geostationary Navigation Overlay Service, a satellite-based augmentation system that improves the accuracy of GNSS signals."
+  },
+  {
+    "term_id": "GOVSATCOM",
+    "title": "GOVSATCOM",
+    "description": "Governmental Satellite Communications, which typically involves secure communication services provided by satellite technology for government and defence purposes."
+  },
+  {
+    "term_id": "International Code of Conduct for Outer Space Activities",
+    "title": "International Code of Conduct for Outer Space Activities",
+    "description": "A proposal aimed at promoting responsible and safe activities in outer space. It includes guidelines for behaviour in space to prevent conflicts and ensure the sustainability of space activities."
+  },
+  {
+    "term_id": "3SOS",
+    "title": "Safety, Security and Sustainability of Outer Space (3SOS)",
+    "description": "An initiative launched by the EU to promote safety, security and sustainability in outer space activities. It focuses on diplomatic efforts and refrains from defining space weapons or advocating specific arms control measures."
+  },
+  {
+    "term_id": "Artemis Program",
+    "title": "Artemis Program",
+    "description": "Flagship project of the United States Space Program aimed at returning men and women to the Moon, and preparing for Mars exploration through a series of missions, including crewed lunar landings, the Lunar Gateway and establishing a permanent base on the Moon."
+  },
+  {
+    "term_id": "Artemis Accords",
+    "title": "Artemis Accords",
+    "description": "The purpose of the Accords is to establish a common vision via a practical set of principles, guidelines and best practices to enhance the governance of the civil exploration and use of outer space with the intention of advancing the Artemis Program."
+  },
+  {
+    "term_id": "CNSA",
+    "title": "CNSA",
+    "description": "China National Space Administration, the national space agency of China responsible for the country’s space programme and exploration efforts."
+  },
+  {
+    "term_id": "ILRS",
+    "title": "ILRS",
+    "description": "International Lunar Research Station, a joint programme by China and Russia aiming to establish a permanent lunar base by the 2030s, involving partner nations such as Pakistan, the UAE and Venezuela."
+  },
+  {
+    "term_id": "ISS",
+    "title": "ISS",
+    "description": "International Space Station, a multinational collaborative project involving multiple space agencies for research and exploration in space."
+  },
+  {
+    "term_id": "JAXA",
+    "title": "JAXA",
+    "description": "Japan Aerospace Exploration Agency, Japan’s national aerospace agency responsible for space research and exploration."
+  },
+  {
+    "term_id": "NASA",
+    "title": "NASA",
+    "description": "National Aeronautics and Space Administration, the United States government agency responsible for the nation’s civilian space programme and for aeronautics and aerospace research."
+  },
+  {
+    "term_id": "Roscosmos",
+    "title": "Roscosmos",
+    "description": "The Russian space agency responsible for space research and exploration."
   }
 ]

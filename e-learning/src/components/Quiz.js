@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Chip } from './Chip'
 import { Choice } from './MultipleChoice'
+import QuizExpander from './Expander';
 import Check from '../assets/icons/check.svg'
 import * as styles from './Quiz.module.scss'
 
@@ -156,16 +157,19 @@ function Quiz(props) {
 
   return (
     <div className={styles.container}>
+      <QuizExpander title="Questions">
       <div>{questionElements}</div>
       <div className="controls">
         <label htmlFor="show-answers" className={styles.showAnswers}>
           <input id="show-answers" onChange={handleSubmit} checked={resultsVisible} type="checkbox" />
-          <span className={styles.showAnswersLabel}>Show answers</span>
+          <span className={styles.showAnswersLabel}>Submit answers</span>
         </label>
-      </div>
+      </div></QuizExpander>
     </div>
   )
 }
+
+
 
 const Question = function (props) {
   let color = 'red'
