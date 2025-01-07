@@ -68,7 +68,7 @@
   --blue-50: hsl(209, 55%, 55%);
   --blue-40: hsl(209, 40%, 65%);
   --blue-30: #acc0d2;
-  --blue-20: hsl(209, 30%, 85%);
+  --blue-20: #e8eef0;
   --blue-10: hsl(209, 25%, 96%);
   --yellow-60: hsl(46, 89%, 49%);
   --yellow-50: hsl(49, 96%, 60%);
@@ -145,7 +145,6 @@ button {
   background-color: var(--blue-60);
   color: white;
 }
-
 *:focus-visible {
   outline: 4px solid var(--blue-60);
 }
@@ -201,7 +200,7 @@ body {
   ol {
     column-gap: 2.5em;
     @include bp(s) {
-      columns: 2;
+      columns: 1;
     }
   }
   hr {
