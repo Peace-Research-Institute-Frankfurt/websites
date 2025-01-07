@@ -7377,6 +7377,10 @@
           {
             "type": "signature",
             "date": "2017-09-20"
+          },
+          {
+            "type": "ratification",
+            "date": "2024-09-24"
           }
         ]
       },
@@ -7792,6 +7796,23 @@
           {
             "type": "signature",
             "date": "2022-09-22"
+          },
+          {
+            "type": "ratification",
+            "date": "2024-09-24"
+          }
+        ]
+      },
+      {
+        "country": "SLB",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2024-09-24"
+          },
+          {
+            "type": "ratification",
+            "date": "2024-09-24"
           }
         ]
       },
