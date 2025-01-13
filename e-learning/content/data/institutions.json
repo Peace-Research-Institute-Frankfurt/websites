@@ -7,5 +7,33 @@
     "description": "The Organisation for the Prohibition of Chemical Weapons (OPCW) is  the implementing body for the Chemical Weapons Convention (CWC), which entered into force on 29 April 1997.",
     "members": ["AL", "BE"],
     "website": "https://www.opcw.org/"
+  },
+  {
+    "name": "mctr",
+    "title": "Missile Technology Control Regime",
+    "established": "1987-04-16",
+    "text": "https://undocs.org/Home/Mobile?FinalSymbol=S%2FRES%2F1540(2004)",
+    "description": "The Missile Technology Control Regime (MTCR) is a multilateral, voluntary partnership to prevent the proliferation of missile and unmanned aerial vehicle (UAV) technology capable of delivering weapons of mass destruction (WMD). It focuses on controlling exports of missiles, equipment, software, and technology for missiles.",
+    "members": ["AR", "AU", "AT", "BE", "BR", "BG", "CA", "CZ", "DK", "FI", "FR", "DE", "GR", "HU", "IS", "IN", "IE", "IT", "JP", "LU", "NL", "NZ", "NO", "PL", "PT", "KR", "RU", "ZA", "ES", "SE", "CH", "TR", "UA", "UK", "US"],
+    "website": "https://www.opcw.org/"
+  },
+  {
+    "name": "wasse",
+    "title": "Wassenaar Arrangement ",
+    "established": "1996-07-12",
+    "text": "https://undocs.org/Home/Mobile?FinalSymbol=S%2FRES%2F1540(2004)",
+    "description": "The Wassenaar Arrangement is a multilateral export control regime established on July 12, 1996, in Wassenaar, Netherlands. It aims to promote transparency and responsibility in transfers of conventional arms and dual-use goods and technologies, thereby preventing destabilizing accumulations. Participating states implement national policies to ensure that such transfers do not contribute to the development or enhancement of military capabilities that undermine regional and international security. The Arrangement facilitates information exchange on transfers and denials of specified controlled items to non-participating states, enhancing cooperation among members. It is not legally binding and decisions are made by consensus. The Wassenaar Arrangement's Secretariat is located in Vienna, Austria.",
+    "members": ["AR", "AU", "AT", "BE", "BG", "CA", "HR", "CZ", "DK", "EE", "FI", "FR", "DE", "GR", "HU", "IN", "IE", "IT", "JP", "LV", "LT", "LU", "MT", "MX", "NL", "NZ", "NO", "PL", "PT", "KR", "RO", "RU", "SK", "SI", "ZA", "ES", "SE", "CH", "TR", "UA", "UK", "US"],
+    "website": "https://www.opcw.org/"
+  },
+  {
+    "name": "ausgroup",
+    "title": "Australia Group",
+    "established": "1996-06",
+    "text": "https://undocs.org/Home/Mobile?FinalSymbol=S%2FRES%2F1540(2004)",
+    "description": "The Australia Group (AG) is a multilateral export control regime formed in June 1985 to prevent the proliferation of chemical and biological weapons. It harmonizes export controls among member countries to ensure that exports do not contribute to the development of such weapons. The AG maintains control lists of chemicals, biological agents, and related equipment that could be misused for weapons production. Members commit to implementing these controls and sharing information to enhance global security. The group convenes annually to review and update its control measures in response to emerging threats.",
+    "members": ["AR", "AU", "AT", "BE", "BG", "CA", "HR", "CY", "CZ", "DK", "EE", "EU", "FI", "FR", "DE", "GR", "HU", "IS", "IN", "IE", "IT", "JP", "LV", "LT", "LU", "MT", "MX", "NL", "NZ", "NO", "PL", "PT", "KR", "RO", "SK", "SI", "ES", "SE", "CH", "TR", "UA", "UK", "US"],
+    "website": "https://www.opcw.org/"
   }
+
 ]

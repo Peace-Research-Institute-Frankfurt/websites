@@ -9422,5 +9422,85 @@
         ]
       }
     ]
+  },
+  {
+    "name": "inf",
+    "title": "Intermediate-Range Nuclear Forces Treaty (INF)",
+    "date": "1987-12-08",
+    "legalStatus": "Ended",
+    "description": "The Intermediate-Range Nuclear Forces (INF) Treaty was a landmark arms control agreement signed by the United States and the Soviet Union on December 8, 1987. It aimed to eliminate both nations' land-based missiles with ranges between 500 and 5,500 kilometers. The treaty resulted in the destruction of 2,692 missiles and included extensive verification measures, fostering trust during the Cold War. However, the treaty faced challenges due to alleged violations, leading to the U.S.'s withdrawal in 2019. Despite its termination, the INF Treaty set a precedent for arms control negotiations and efforts to limit the proliferation of nuclear-capable missile systems.",
+    "scrapeURL": "https://2009-2017.state.gov/t/avc/trty/102360.htm#text",
+    "participants": [
+      {
+        "country": "RUS",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1987-12-08"
+          },
+          {
+            "type": "ratification",
+            "date": "1887-09-24"
+          },
+          {
+            "type": "withdrawal",
+            "date": "2019-02-02"
+          }
+        ]
+      },
+      {
+        "country": "USA",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1987-12-08"
+          },
+          {
+            "type": "ratification",
+            "date": "1887-09-24"
+          },
+          {
+            "type": "withdrawal",
+            "date": "2019-02-01"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "nstart",
+    "title": "New Strategic Arms Reduction Treaty (New START)",
+    "date": "2010-04-08",
+    "legalStatus": "Legally binding",
+    "description": "The New START Treaty (Strategic Arms Reduction Treaty) is a bilateral arms control agreement between the United States and Russia, signed on April 8, 2010, in Prague. It limits each country to 1,550 deployed nuclear warheads, 700 deployed intercontinental ballistic missiles (ICBMs), submarine-launched ballistic missiles (SLBMs), and heavy bombers, as well as 800 total launchers. The treaty includes robust verification measures, such as data exchanges, on-site inspections, and notifications to ensure compliance. It builds on previous arms control agreements to promote strategic stability. Originally set to expire in 2021, it was extended for five years until February 2026, remaining a critical framework for reducing nuclear arsenals.",
+    "scrapeURL": "https://www.state.gov/new-start/",
+    "participants": [
+      {
+        "country": "RUS",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2010-04-08"
+          },
+          {
+            "type": "ratification",
+            "date": "1887-09-24"
+          }
+        ]
+      },
+      {
+        "country": "USA",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2010-04-08"
+          },
+          {
+            "type": "ratification",
+            "date": "1887-09-24"
+          }
+        ]
+      }
+    ]
   }
 ]

@@ -53,7 +53,9 @@ export default function FigureAdapter({ styles, caption, credit, size, alt, src,
       licenseNode = l
     }
   })
-
+  if (credit!="") {
+    credit = "Source: " + credit;
+  }
   return (
     <Figure
       styles={styles}

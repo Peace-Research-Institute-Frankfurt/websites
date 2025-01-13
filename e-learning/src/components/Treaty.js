@@ -49,13 +49,14 @@ export default function Treaty({ name }) {
     }
   `)
 
+
   let treaty = null
   data.treaties.nodes.forEach((node) => {
     if (node.name === name) {
       treaty = node
     }
   })
-  if (!treaty) {
+  if (!treaty){
     return (
       <p>
         Treaty <code>{name}</code> not found

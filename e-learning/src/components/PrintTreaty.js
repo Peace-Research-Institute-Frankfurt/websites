@@ -43,6 +43,32 @@ export default function PrintTreaty({ name }) {
           }
         }
       }
+      treaties2: allTreatiesJson {
+        nodes {
+          name
+          title
+          shortTitle
+          date: date(formatString: "DD MMMM YYYY")
+          description
+          legalStatus
+          scrapeURL
+          participants {
+            country {
+              alpha2
+              alpha3
+              name {
+                isPlural
+                common
+                article
+              }
+            }
+            events {
+              type
+              date: date(formatString: "DD MMMM YYYY")
+            }
+          }
+        }
+      }
     }
   `)
 
@@ -52,6 +78,15 @@ export default function PrintTreaty({ name }) {
       treaty = node
     }
   })
+  if (!treaty) {
+    let treaty = null
+    data.treaties2.nodes.forEach((node) => {
+      if (node.name === name) {
+        treaty = node
+      }
+    })
+  }
+
   if (!treaty) {
     return <p>Treaty not found</p>
   }
