@@ -45,6 +45,7 @@ export default function PrintTreaty({ name }) {
       }
     }
   `)
+
   let treaty = null
   data.treaties.nodes.forEach((node) => {
     if (node.name === name) {
