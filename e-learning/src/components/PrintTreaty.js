@@ -53,15 +53,6 @@ export default function PrintTreaty({ name }) {
     }
   })
   if (!treaty) {
-    let treaty = null
-    data.treaties2.nodes.forEach((node) => {
-      if (node.name === name) {
-        treaty = node
-      }
-    })
-  }
-
-  if (!treaty) {
     return <p>Treaty not found</p>
   }
 
