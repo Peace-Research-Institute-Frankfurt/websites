@@ -43,32 +43,6 @@ export default function PrintTreaty({ name }) {
           }
         }
       }
-      treaties2: allTreatiesJson {
-        nodes {
-          name
-          title
-          shortTitle
-          date: date(formatString: "DD MMMM YYYY")
-          description
-          legalStatus
-          scrapeURL
-          participants {
-            country {
-              alpha2
-              alpha3
-              name {
-                isPlural
-                common
-                article
-              }
-            }
-            events {
-              type
-              date: date(formatString: "DD MMMM YYYY")
-            }
-          }
-        }
-      }
     }
   `)
 
