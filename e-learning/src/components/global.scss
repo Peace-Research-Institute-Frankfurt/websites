@@ -211,3 +211,6 @@ body {
 .data-footnote-backref {
   display: none;
 }
+header summary::-webkit-details-marker{
+  display:none;
+}
