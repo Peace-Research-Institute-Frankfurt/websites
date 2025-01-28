@@ -154,3 +154,40 @@
     pointer-events: none;
   }
 }
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 5000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--black);
+  pointer-events: none;
+  opacity: 0;
+  transition: var(--fast);
+  visibility: hidden;
+  padding: var(--padding-small);
+}
+
+.lightbox-media {
+  height: 100%;
+  display: flex;
+  position: relative;
+  .image {
+    height: 100%;
+    width: auto;
+    img {
+      object-fit: contain !important;
+    }
+  }
+}
+
+.lightbox-active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
