@@ -140,7 +140,12 @@ button {
   font-family: inherit;
   letter-spacing: inherit;
 }
-
+.timeline-noCollapse{
+  grid-column: 3/4;
+  button{
+    display:none
+  }
+}
 ::selection {
   background-color: var(--blue-60);
   color: white;
