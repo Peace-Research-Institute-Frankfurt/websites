@@ -204,6 +204,7 @@
 .lightbox-media {
   height: 100%;
   display: flex;
+  width:100%;
   position: relative;
   .image {
     height: 100%;
@@ -218,4 +219,11 @@
   opacity: 1;
   visibility: visible;
   pointer-events: all;
+}
+
+.gatsby-image-wrapper {
+  position: initial !important;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: top;
 }
