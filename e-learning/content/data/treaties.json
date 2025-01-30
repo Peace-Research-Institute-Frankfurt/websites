@@ -1,5 +1,29 @@
 [
   {
+    "name": "protocol1925",
+    "title": "Protocol for the Prohibition of the Use in War of Asphyxiating, Poisonous or Other Gases, and of Bacteriological Methods of Warfare",
+    "date": "1925-06-17",
+    "shortTitle": "Geneva Protocol",
+    "legalStatus": "Legally binding",
+    "description": "The Protocol for the Prohibition of the Use in War of Asphyxiating, Poisonous or Other Gases, and of Bacteriological Methods of Warfare, commonly known as the Geneva Protocol, is a treaty prohibiting the use of chemical and biological weapons in war.",
+    "scrapeURL": "https://treaties.unoda.org/t/1925/participants",
+    "participants": [
+      {
+        "country": "AUT",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1925-06-17"
+          },
+          {
+            "type": "ratification",
+            "date": "1928-05-09"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "name": "pelindaba",
     "title": "Treaty of Pelindaba",
     "date": "2015-07-15",
@@ -2368,6 +2392,15 @@
           {
             "type": "ratification",
             "date": "1970-02-04"
+          }
+        ]
+      },
+      {
+        "country": "ALB",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1990-09-12"
           }
         ]
       },
