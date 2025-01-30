@@ -24,6 +24,17 @@
     ]
   },
   {
+    "name": "bwc",
+    "title": "Biological Weapons Convention",
+    "date": "1972-04-10",
+    "shortTitle": "BWC",
+    "legalStatus": "Legally binding",
+    "description": "The Biological Weapons Convention (BWC) is a treaty that prohibits the development, production, and stockpiling of biological and toxin weapons.",
+    "scrapeURL": "https://treaties.unoda.org/t/bwc/participants",
+    "participants": []
+  },
+
+  {
     "name": "pelindaba",
     "title": "Treaty of Pelindaba",
     "date": "2015-07-15",
