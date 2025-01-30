@@ -12,6 +12,7 @@ function App(props) {
       <main>{props.children}</main>
       <SiteFooter />
       <div id="tooltips" />
+      <div id="lightboxes" />
     </>
   )
 }

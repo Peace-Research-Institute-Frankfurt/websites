@@ -171,6 +171,13 @@ body {
 .gatsby-image-wrapper [data-main-image] {
   transition: 100ms;
 }
+#lightboxes  .gatsby-image-wrapper {
+  position: initial !important;
+  overflow: hidden;
+  display: inline-block !important;
+  vertical-align: top;
+}
+
 .footnotes {
   @extend %caption;
   border-top: $text-border;
