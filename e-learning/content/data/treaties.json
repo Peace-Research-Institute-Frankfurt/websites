@@ -25,9 +25,9 @@
   },
   {
     "name": "bwc",
-    "title": "Biological Weapons Convention",
+    "title": "The Biological Weapons Convention",
     "date": "1972-04-10",
-    "shortTitle": "BWC",
+    "shortTitle": "Biological Weapons Convention",
     "legalStatus": "Legally binding",
     "description": "The Biological Weapons Convention (BWC) is a treaty that prohibits the development, production, and stockpiling of biological and toxin weapons.",
     "scrapeURL": "https://treaties.unoda.org/t/bwc/participants",
