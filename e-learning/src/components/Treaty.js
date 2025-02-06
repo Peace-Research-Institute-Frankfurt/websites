@@ -89,7 +89,7 @@ export default function Treaty({ name }) {
   return (
     <section className={styles.container}>
       <Expandable buttonComponent={Button}>
-        <h2 className={styles.title}>{treaty.shortTitle || treaty.title}</h2>
+        <h2 className={styles.title}>{treaty.title || treaty.shortTitle}</h2>
         <ChipGroup>
           {treaty.date && <Chip>Effective {treaty.date}</Chip>}
           {treaty.legalStatus && <Chip>{treaty.legalStatus}</Chip>}

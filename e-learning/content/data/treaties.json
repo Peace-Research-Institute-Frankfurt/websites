@@ -1,5 +1,1051 @@
 [
   {
+    "name": "ost1967",
+    "title": "UN Treaty on Principles Governing the Activities of States in the Exploration and Use of Outer Space, including the Moon and Other Celestial Bodies",
+    "date": "1967-10-10",
+    "shortTitle": "Outer Space Treaty",
+    "legalStatus": "Legally binding",
+    "description": "The Outer Space Treaty (1967) establishes that outer space, including the Moon and celestial bodies, is free for exploration and use by all nations. It prohibits the placement of nuclear weapons in space, claims of sovereignty, and military activities. The treaty emphasizes peaceful purposes and international cooperation.",
+    "scrapeURL": "https://www.unoosa.org/oosa/en/ourwork/spacelaw/treaties/outerspacetreaty.html",
+    "participants": [
+      {
+        "country": "AFG",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "DZA",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "ATG",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "ARG",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "ARM",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "AUS",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "AUT",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "AZE",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "BHS",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "BHR",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "BGD",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "BRB",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "BLR",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "BEL",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "BEN",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "BIH",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "BRA",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "BGR",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "BFA",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "CAN",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "CHL",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "CHN",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "COL",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "HRV",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "CUB",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "CYP",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "CZE",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "DNK",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "DOM",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "ECU",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "EGY",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "SLV",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "GNQ",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "EST",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "FJI",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "FIN",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "FRA",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "DEU",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "GRC",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "GNB",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "HUN",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "ISL",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "IND",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "IDN",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "IRQ",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "IRL",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "ISR",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "ITA",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "JAM",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "JPN",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "KAZ",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "KEN",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "PRK",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "KOR",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "KWT",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "LAO",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "LBN",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "LBY",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "LTU",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "LUX",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "MDG",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "MLI",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "MLT",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "MUS",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "MEX",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "MNG",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "MAR",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "MMR",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "NPL",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "NLD",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "NZL",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "NIC",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "NER",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "NGA",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "NOR",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "OMN",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "PAK",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "PAN",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "PNG",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "PRY",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "PER",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "POL",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "PRT",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "QAT",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "ROU",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "RUS",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "VCT",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "SMR",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "SAU",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "SYC",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "SLE",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "SGP",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "SVK",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "SVN",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "ZAF",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "ESP",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "LKA",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "SWE",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "CHE",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "SYR",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "THA",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "TGO",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "TON",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "TUN",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "TUR",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "UGA",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "UKR",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "ARE",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "GBR",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "USA",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "URY",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "VEN",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "VNM",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "YEM",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "ZMB",
+        "events": [
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
     "name": "protocol1925",
     "title": "Protocol for the Prohibition of the Use in War of Asphyxiating, Poisonous or Other Gases, and of Bacteriological Methods of Warfare",
     "date": "1925-06-17",

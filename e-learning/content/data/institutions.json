@@ -1,5 +1,14 @@
 [
   {
+    "name": "HCoC",
+    "title": "The Hague Code of Conduct against Ballistic Missile Proliferation",
+    "established": "2002-11-26",
+    "text": "https://undocs.org/Home/Mobile?FinalSymbol=S%2FRES%2F1540(2004)",
+    "description": "The Hague Code of Conduct against Ballistic Missile Proliferation (HCoC) is a multilateral, voluntary initiative aimed at preventing the spread of ballistic missiles capable of delivering weapons of mass destruction (WMD). Established in 2002, it complements existing non-proliferation measures like the Missile Technology Control Regime (MTCR). The HCoC promotes transparency and confidence-building through annual declarations on ballistic missile and space-launch programs, as well as pre-launch notifications. While not legally binding, it encourages responsible behavior among its 145 subscribing states, serving as a critical tool for global security by fostering dialogue and cooperation to limit the proliferation of missile technologies.",
+    "members": ["AF", "AL", "AD", "AG", "AR", "AM", "AU", "AT", "AZ", "BY", "BE", "BJ", "BA", "BG", "BF", "BI", "KH", "CM", "CA", "CV", "CF", "TD", "CL", "CO", "KM", "CG", "CK", "CR", "HR", "CY", "CZ", "DK", "DM", "DO", "EC", "SV", "GQ", "ER", "EE", "ET", "FJ", "FI", "FR", "GA", "GM", "GE", "DE", "GH", "GR", "GT", "GN", "GW", "GY", "HT", "VA", "HN", "HU", "IS", "IN", "IQ", "IE", "IT", "JP", "JO", "KZ", "KE", "KI", "LV", "LS", "LR", "LY", "LI", "LT", "LU", "MG", "MW", "MV", "ML", "MT", "MH", "MR", "FM", "MC", "MN", "ME", "MA", "MZ", "NL", "NZ", "NI", "NE", "NG", "MK", "NO", "PW", "PA", "PG", "PY", "PE", "PH", "PL", "PT", "KR", "RO", "RU", "RW", "WS", "SM", "ST", "SN", "RS", "SC", "SL", "SG", "SK", "SI", "SO", "ZA", "ES", "KN", "VC", "SD", "SR", "SE", "CH", "TJ", "TZ", "TL", "TG", "TO", "TN", "TR", "TM", "TV", "UG", "UA", "GB", "US", "UY", "UZ", "VU", "VE", "ZM"],
+      "website": "https://www.hcoc.at/"
+  },
+  {
     "name": "opcw",
     "title": "Organisation for the Prohibition of Chemical Weapons",
     "established": "1997-04-29",
