@@ -183,10 +183,12 @@ body {
   border-top: $text-border;
   margin-top: 1em;
   padding-top: 2em;
+  padding-left:0.5em;
   grid-column: 1 / 6;
   @include bp(m) {
     grid-column: 3 / 4;
   }
+
   #footnote-label {
     position: absolute;
     font-size: 0;
@@ -199,14 +201,14 @@ body {
     overflow-wrap: break-word;
     word-wrap: break-word;
     word-break: break-word;
-    display: inline-block;
     counter-increment: li;
     position: relative;
+    display:block;
 
     &:before {
       content: counter(li) '.';
       position: absolute;
-      left: -1.2em;
+      left: -1.5em;
     }
   }
   ol {
