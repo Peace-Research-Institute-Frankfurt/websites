@@ -1,6 +1,8 @@
 @import 'vars';
 
 .container {
+  margin-bottom: 1.5rem;
+  margin-top: 1rem;
   grid-column: 1/6;
   @include bp(m) {
     grid-column: 3/4;

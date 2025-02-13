@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { useState, useEffect }  from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import Figure from '@shared/components/Figure'
 
-export default function FigureAdapter({ styles, caption, credit, size, alt, src, license, discourageSaving }) {
+export default function FigureAdapter({ styles, caption, credit, size, alt, src, license, discourageSaving, expandable }) {
   const data = useStaticQuery(graphql`
     query ImageQuery {
       licenses: allLicensesJson {
@@ -53,12 +53,23 @@ export default function FigureAdapter({ styles, caption, credit, size, alt, src,
       licenseNode = l
     }
   })
+  if (credit!=="") {
+    credit = "Source: " + credit;
+  }
+  const [lightboxTargetEl, setLightboxTargetEl] = useState(null)
+
+  // Prepare render target for lightboxes
+  useEffect(() => {
+    setLightboxTargetEl(document.querySelector('#lightboxes'))
+  }, [setLightboxTargetEl])
 
   return (
     <Figure
       styles={styles}
       image={image}
       src={src}
+      expandable={expandable}
+      lightboxTargetEl={lightboxTargetEl}
       caption={caption}
       license={licenseNode}
       credit={credit}
