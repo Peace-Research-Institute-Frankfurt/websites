@@ -1,10 +1,14 @@
 [
   {
-  "term_id":"dual-capable",
-  "title":"dual-capable",
-  "description":"Delivery system capable of delivering both nuclear and conventional warheads"
+  "term_id":"CSBMs",
+  "title":"Confidence- and Security Building Measures (CSBMs) ",
+  "description":"Arrangements to increase trust between countries by introducing transparency and predictability regarding operations of the armed forces and other measures to demonstrate the lack of aggressive intentions"
   },
-
+  {
+    "term_id":"dual-capable",
+    "title":"dual-capable",
+    "description":"Delivery system capable of delivering both nuclear and conventional warheads"
+  },
   {
     "term_id": "delivery-vehicle",
     "title": "delivery vehicle",
