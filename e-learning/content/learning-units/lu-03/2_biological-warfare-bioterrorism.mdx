@@ -177,14 +177,36 @@ You can find additional information on the US and Soviet bioweapons programmes i
 
   In the US programme, research, development and pilot-scale production were located at Fort Detrick and at the Edgewood Arsenal in Maryland, with additional facilities at the animal research station at Plum Island, New York. Biological agent and munitions production took place in a large purpose-built ten-floor facility at Pine Bluff, Arkansas. Early trials were carried out at Dugway Proving Ground in Utah.
 
-  <Figure
-    size="medium"
-    src="Locations_of_US_bioweapon_research.png"
-    caption="Locations of US bioweapon research "
-    credit="PRIF (CC-BY-SA)"
-    alt="Locations of US bioweapon research "
-    license=""
-  ></Figure>
+  <LayeredMap
+    centerLat={50}
+    centerLong={-90}
+    mapScale={3}
+    layout="large"
+    legendPosition="bottom-left"
+    title=" Map showing locations of US research production facilities "
+    description="Map showing locations of US research production facilities"
+    legendTitle="Legend"
+    credit="Data: Natual Earth. Graphic: PRIF"
+    license="cc-by-4"
+  >
+    <CountryStatisticsLayer
+      colors={['#7996a5']}
+      data={[
+        {name: 'USA', iso3: 'USA', value: "USA"}
+      ]}
+    />
+
+    <MarkerLayer markerGroupName="Production facilities"
+                 label=" Production facilities "
+                 data={[
+                   {name: "Fort Detrick", lat: "39.4356", long: "-77.4272"},
+                   {name: "Edgewood Arsenal", lat: "39.424831634", long: "-76.30333212"},
+                   {name: "Plum Island", lat: "41.176499294", long: "-72.18749925"},
+                   {name: "Pine Bluff", lat: "34.22843", long: "-92.0032"},
+                   {name: "Dugway Proving Ground", lat: "40.225332432", long: "-112.75083033"}
+                 ]} />
+
+  </LayeredMap>
 
   Open-air field trials to test aerosol dispersion patterns were conducted at a large number of locations throughout the US. A series of trials initiated in 1953 under the ‘St Jo’ programme simulated anthrax attacks on urban targets to estimate munitions requirements for the strategic use of biological agents against typical target cities. Three North American cities were chosen to approximate Soviet cities: St. Louis, Minneapolis and Winnipeg, Canada.
 
@@ -224,14 +246,80 @@ You can find additional information on the US and Soviet bioweapons programmes i
 
   By the end of the 1980s, Biopreparat controlled three dozen institutes, mobilisation plants and other types of facilities that were either involved in biological weapons R&D or supported it in some way. These were spread throughout the Soviet Union. They could be found in Moscow and Leningrad (now St. Petersburg); in Kirov, 500 miles east of Moscow; and, still further away, in Kazakhstan, Uzbekistan and Siberia.
 
-  <Figure
-    size="medium"
-    src="Soviet_facilities.png"
-    caption="Biopreparat controlled institutes involved in or supporting biological weapon development in the Soviet Union"
-    credit="PRIF (CC-BY-SA)"
-    alt="Soviet facilities"
-    license=""
-  ></Figure>
+  LU02 MAP – Soviet research facilities
+  <LayeredMap
+    centerLat={60}
+    centerLong={90}
+    mapScale={3}
+    layout="large"
+    legendPosition="bottom-left"
+    title="Map showing locations of Soviet research facilities"
+    description="Map showing locations of Soviet research facilities"
+    legendTitle="Legend"
+    credit="Data: Natual Earth. Graphic: PRIF"
+    license="cc-by-4"
+  >
+    <MarkerLayer markerGroupName="Biopreparat facilities"
+                 label="Biopreparat facilities"
+                 data={[
+                   {name: "Moscow", lat: "55.75222", long: "37.61556"},
+                   {name: "Saint Petersburg", lat: "59.93863", long: "30.31413"},
+                   {name: "Kirov", lat: "58.59665", long: "49.66007"},
+                   {name: "Vilnius", lat: "54.68916", long: "25.2798"},
+                   {name: "Minsk", lat: "53.893009", long: "27.567444"},
+                   {name: "Kirishi", lat: "59.959", long: "32.923"},
+                   {name: "Kubinka", lat: "55.57957", long: "36.70392"},
+                   {name: "Zagorsk, Sergiyev Posad", lat: "56.3", long: "38.13333"},
+                   {name: "Pokrov", lat: "55.91797", long: "39.17242"},
+                   {name: "Reutov", lat: "55.76111", long: "37.8575"},
+                   {name: "Vladimir", lat: "56.13655", long: "40.39658"},
+                   {name: "Lyubuchany", lat: "55.25088", long: "37.54988"},
+                   {name: "Strizhi", lat: "58.45758", long: "49.28667"},
+                   {name: "Golitsino", lat: "55.60928", long: "36.98212"},
+                   {name: "Omutninsk", lat: "58.67001", long: "52.1932"},
+                   {name: "Yoshkar-Ola", lat: "56.63877", long: "47.89078"},
+                   {name: "Penza", lat: "53.20066", long: "45.00464"},
+                   {name: "Saratov", lat: "51.54056", long: "46.00861"},
+                   {name: "Shikhany", lat: "52.11776", long: "47.1986"},
+                   {name: "Volgograd", lat: "48.71939", long: "44.50183"},
+                   {name: "Sverdlovsk", lat: "56.833332", long: "60.583332"},
+                   {name: "Kurgan", lat: "55.45", long: "65.33333"},
+                   {name: "Stepnogorsk", lat: "52.35533", long: "71.88641"},
+                   {name: "Berdsk", lat: "54.7551", long: "83.0967"},
+                   {name: "Koltsovo", lat: "56.756163642", long: "60.81916339"},
+                   {name: "Zima", lat: "53.9206997", long: "102.0491626"},
+                   {name: "Irkutsk", lat: "52.29778", long: "104.29639"},
+                   {name: "Aralsk", lat: "46.78333", long: "61.66667"},
+                   {name: "Vozrozhdeniya", lat: "45.1499994", long: "59.3166654"},
+                   {name: "Nukus", lat: "42.4666648", long: "59.5999976"},
+                   {name: "Tashkent", lat: "41.33333", long: "69.25"},
+                   {name: "Otar", lat: "43.534", long: "75.214"},
+                   {name: "Almaty", lat: "43.25654", long: "76.92848"},
+                   {name: "Vladivostok", lat: "43.10562", long: "131.87353"}
+                   ]} />
+    <CountryStatisticsLayer
+      colors={['red']}
+      data={[
+        {name: 'Russia', iso3: 'RUS', value: "Soviet Union"},
+        {name: 'Ukraine', iso3: 'UKR', value: "Soviet Union"},
+        {name: 'Belarus', iso3: 'BLR', value: "Soviet Union"},
+        {name: 'Lithuania', iso3: 'LTU', value: "Soviet Union"},
+        {name: 'Latvia', iso3: 'LVA', value: "Soviet Union"},
+        {name: 'Estonia', iso3: 'EST', value: "Soviet Union"},
+        {name: 'Georgia', iso3: 'GEO', value: "Soviet Union"},
+        {name: 'Armenia', iso3: 'ARM', value: "Soviet Union"},
+        {name: 'Azerbaijan', iso3: 'AZE', value: "Soviet Union"},
+        {name: 'Kazakhstan', iso3: 'KAZ', value: "Soviet Union"},
+        {name: 'Uzbekistan', iso3: 'UZB', value: "Soviet Union"},
+        {name: 'Turkmenistan', iso3: 'TKM', value: "Soviet Union"},
+        {name: 'Kyrgisztan', iso3: 'KGZ', value: "Soviet Union"},
+        {name: 'Tajikistan', iso3: 'TJK', value: "Soviet Union"},
+        {name: 'Moldavia', iso3: 'MDA', value: "Soviet Union"}
+      ]}
+    />
+  </LayeredMap>
+
+
 
   Biopreparat created new biological weapons enclaves, at Obolensk and Koltsovo, and built factories dedicated to biological agent production, the most impressive of which was an enormous plant at Stepnogorsk. It is estimated that at least 30,000 people worked for the Biopreparat system, though many argue that the figure could be substantially higher.
 
@@ -312,6 +400,7 @@ You can find additional information on the US and Soviet bioweapons programmes i
   credit="Council on Strategic Risk – Biodefense Budget Breakdown https://councilonstrategicrisks.org/nolan/biodefense-budget-breakdown/"
   alt="Biodefence Spending US"
   license=""
+  expandable="true"
 ></Figure>
 
 ## Reality check: Threat assessment

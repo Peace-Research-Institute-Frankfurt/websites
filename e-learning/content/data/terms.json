@@ -1,11 +1,53 @@
 [
   {
+  "term_id":"dual-capable",
+  "title":"dual-capable",
+  "description":"Delivery system capable of delivering both nuclear and conventional warheads"
+  },
+
+  {
+    "term_id": "delivery-vehicle",
+    "title": "delivery vehicle",
+    "description": "Nuclear weapons can be delivered to an intended target with a variety of delivery vehicles, including bombers and dual-capable aircraft for aerial deployment, submarines for sea-based delivery, and missiles for land-based deployment"
+  },
+
+  {
+    "term_id": "Nuclear-weapons",
+    "title": "Nuclear weapons",
+    "description": "A nuclear weapon is a device built to unleash large destructive power by rapidly releasing nuclear energy through either nuclear fission alone (as seen in the bombs dropped on Hiroshima and Nagasaki) or through a combination of fission and fusion (as in thermonuclear or hydrogen bombs). Beyond their immediate impact, nuclear weapons also pose a threat to human life due to the dispersal of radioactive fallout."
+  },
+  {
+    "term_id": "OpenSkies",
+    "title": "1992 Treaty on Open Skies",
+    "description": "The 1992 Open Skies Tretay, which entered into force in 2002, allows for other participants to conduct observation flights to over the whole territory over which a State Party exercises sovereignty, with the aim of improving openness and military transparency."
+  },
+  {
+    "term_id": "CFE",
+    "title": "1990 Conventional Forces in Europe Treaty",
+    "description": "Described as the cornerstone of European security, the 1990 Treaty on Conventional Armed Forces in Europe established numerical limits and verification measures for five categories of weapons: tanks, armoured combat vehicles, heavy artillery, combat aircraft and attack helicopters"
+  },
+  {
+    "term_id": "genevaprotocol",
+    "title": "Geneva Protocol",
+    "description": "The Protocol for the Prohibition of the Use in War of Asphyxiating, Poisonous or Other Gases, and of Bacteriological Methods of Warfare, commonly known as the Geneva Protocol, is a treaty prohibiting the use of chemical and biological weapons in war."
+  },
+  {
+    "term_id": "OPCW",
+    "title": "Organisation for the Prohibition of Chemical Weapons (OPCW)",
+    "description": "The Organisation for the Prohibition of Chemical Weapons is the implementing body for the Chemical Weapons Convention (CWC), which entered into force on 29 April 1997."
+  },
+  {
+    "term_id": "CWF",
+    "title": "Chemical Warfare",
+    "description": "The military strategy and tactics involving the use of toxic chemical agents, the means of their deployment, and the specialized equipment for protection, detection, and countermeasures. This term encompasses both the offensive use of chemical weapons and the defensive measures taken to mitigate their effects, in accordance with the Chemical Weapons Convention."
+  },
+  {
     "term_id": "CW",
-    "title": "Chemical Weapon (CW)",
+    "title": "Chemical Weapons (CW)",
     "description": "The toxic agent, the delivery system and specially designed equipment to enable the delivery of the toxic agent. The term applies to each category individually or together, according to the Chemical Weapons Convention."
   },
   {
-    "term_id": "Poison",
+    "term_id": "poison",
     "title": "Poison",
     "description": "A generic term for any toxic substance. In the context of chemical warfare, 'poison' may refer to a naturally occurring toxins or mineral toxicants, whereas 'chemical warfare agent' tends to be reserved for human-made or industrially produced toxic substances."
   },

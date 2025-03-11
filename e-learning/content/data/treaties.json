@@ -1,5 +1,313 @@
 [
   {
+    "name": "CFE",
+    "title": "Treaty on Conventional Armed Forces in Europe (CFE)",
+    "date": "1990-11-19",
+    "legalStatus": "Suspended",
+    "description": "The Treaty on Conventional Armed Forces in Europe (CFE) was signed on November 19, 1990, in Paris with the aim of creating a stable balance of conventional forces at lower levels, preventing surprise large-scale attacks, and ensuring stability through verification and information exchange. It entered into force on November 9, 1992. The treaty set numerical limits on key military equipment such as tanks, armored combat vehicles, heavy artillery, combat aircraft, and attack helicopters. Over 52,000 pieces of Treaty-Limited Equipment (TLE) were eliminated within the treaty’s application area, with a total of 69,000 eliminated through voluntary reductions. In 2023, Russia withdrew from the treaty, leading six other states (Belarus, Greece, Poland, Portugal, Turkey, and the United States) to suspend their participation, although they have not formally withdrawn. The treaty remains a key framework for arms control in Europe, though its future remains uncertain.",
+    "scrapeURL": "https://www.osce.org/library/14087",
+    "participants": [
+      {
+        "country": "ARM",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1990-11-19"
+          }
+        ]
+      },
+      {
+        "country": "AZE",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1990-11-19"
+          }
+        ]
+      },
+      {
+        "country": "BLR",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1990-11-19"
+          },
+          {
+            "type": "suspension",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "BEL",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1990-11-19"
+          }
+        ]
+      },
+      {
+        "country": "BGR",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1990-11-19"
+          }
+        ]
+      },
+      {
+        "country": "CAN",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1990-11-19"
+          }
+        ]
+      },
+      {
+        "country": "CZE",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1990-11-19"
+          }
+        ]
+      },
+      {
+        "country": "DNK",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1990-11-19"
+          }
+        ]
+      },
+      {
+        "country": "FRA",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1990-11-19"
+          }
+        ]
+      },
+      {
+        "country": "GEO",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1990-11-19"
+          }
+        ]
+      },
+      {
+        "country": "DEU",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1990-11-19"
+          }
+        ]
+      },
+      {
+        "country": "GRC",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1990-11-19"
+          },
+          {
+            "type": "suspension",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "HUN",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1990-11-19"
+          }
+        ]
+      },
+      {
+        "country": "ISL",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1990-11-19"
+          }
+        ]
+      },
+      {
+        "country": "ITA",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1990-11-19"
+          }
+        ]
+      },
+      {
+        "country": "KAZ",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1990-11-19"
+          }
+        ]
+      },
+      {
+        "country": "LUX",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1990-11-19"
+          }
+        ]
+      },
+      {
+        "country": "MDA",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1990-11-19"
+          }
+        ]
+      },
+      {
+        "country": "NLD",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1990-11-19"
+          }
+        ]
+      },
+      {
+        "country": "NOR",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1990-11-19"
+          }
+        ]
+      },
+      {
+        "country": "POL",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1990-11-19"
+          },
+          {
+            "type": "suspension",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "PRT",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1990-11-19"
+          },
+          {
+            "type": "suspension",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "ROU",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1990-11-19"
+          }
+        ]
+      },
+      {
+        "country": "RUS",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1990-11-19"
+          },
+          {
+            "type": "withdrawal",
+            "date": "2023-11-07"
+          }
+        ]
+      },
+      {
+        "country": "SVK",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1990-11-19"
+          }
+        ]
+      },
+      {
+        "country": "ESP",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1990-11-19"
+          }
+        ]
+      },
+      {
+        "country": "TUR",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1990-11-19"
+          },
+          {
+            "type": "suspension",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "UKR",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1990-11-19"
+          }
+        ]
+      },
+      {
+        "country": "GBR",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1990-11-19"
+          }
+        ]
+      },
+      {
+        "country": "USA",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1990-11-19"
+          },
+          {
+            "type": "suspension",
+            "date": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
     "name": "ost1967",
     "title": "UN Treaty on Principles Governing the Activities of States in the Exploration and Use of Outer Space, including the Moon and Other Celestial Bodies",
     "date": "1967-10-10",
@@ -1055,6 +1363,78 @@
     "scrapeURL": "https://treaties.unoda.org/t/1925/participants",
     "participants": [
       {
+        "country": "AFG",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1986-12-14"
+          }
+        ]
+      },
+      {
+        "country": "ALB",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1989-06-20"
+          }
+        ]
+      },
+      {
+        "country": "DZA",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1992-07-17"
+          }
+        ]
+      },
+      {
+        "country": "AGO",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2007-10-19"
+          }
+        ]
+      },
+      {
+        "country": "ATG",
+        "events": [
+          {
+            "type": "succession",
+            "date": "1988-04-20"
+          }
+        ]
+      },
+      {
+        "country": "ARG",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1969-05-12"
+          }
+        ]
+      },
+      {
+        "country": "ARM",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1994-06-17"
+          }
+        ]
+      },
+      {
+        "country": "AUS",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1930-05-22"
+          }
+        ]
+      },
+      {
         "country": "AUT",
         "events": [
           {
@@ -1064,6 +1444,1568 @@
           {
             "type": "ratification",
             "date": "1928-05-09"
+          }
+        ]
+      },
+      {
+        "country": "BHR",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1988-12-28"
+          }
+        ]
+      },
+      {
+        "country": "BGD",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1989-02-20"
+          }
+        ]
+      },
+      {
+        "country": "BRB",
+        "events": [
+          {
+            "type": "succession",
+            "date": "1971-11-16"
+          }
+        ]
+      },
+      {
+        "country": "BEL",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1925-06-17"
+          },
+          {
+            "type": "ratification",
+            "date": "1930-04-04"
+          }
+        ]
+      },
+      {
+        "country": "BEN",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1973-05-24"
+          }
+        ]
+      },
+      {
+        "country": "BTN",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1973-10-23"
+          }
+        ]
+      },
+      {
+        "country": "BOL",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1976-09-10"
+          }
+        ]
+      },
+      {
+        "country": "BRA",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1925-06-17"
+          },
+          {
+            "type": "ratification",
+            "date": "1970-08-28"
+          }
+        ]
+      },
+      {
+        "country": "BGR",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1925-06-17"
+          },
+          {
+            "type": "ratification",
+            "date": "1933-08-12"
+          }
+        ]
+      },
+      {
+        "country": "BFA",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1971-07-07"
+          }
+        ]
+      },
+      {
+        "country": "CPV",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1979-10-20"
+          }
+        ]
+      },
+      {
+        "country": "KHM",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1960-11-15"
+          }
+        ]
+      },
+      {
+        "country": "CMR",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1984-12-19"
+          }
+        ]
+      },
+      {
+        "country": "CAN",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1925-06-17"
+          },
+          {
+            "type": "ratification",
+            "date": "1930-03-06"
+          }
+        ]
+      },
+      {
+        "country": "CAF",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1966-10-06"
+          }
+        ]
+      },
+      {
+        "country": "CHL",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1925-06-17"
+          },
+          {
+            "type": "ratification",
+            "date": "1930-05-09"
+          }
+        ]
+      },
+      {
+        "country": "CHN",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1952-06-25"
+          }
+        ]
+      },
+      {
+        "country": "COL",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1938-12-08"
+          }
+        ]
+      },
+      {
+        "country": "CRI",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1970-11-19"
+          }
+        ]
+      },
+      {
+        "country": "CIV",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1970-12-15"
+          }
+        ]
+      },
+      {
+        "country": "HRV",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1993-05-28"
+          }
+        ]
+      },
+      {
+        "country": "CUB",
+        "events": [
+          {
+            "type": "accession",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "CYP",
+        "events": [
+          {
+            "type": "succession",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "CZE",
+        "events": [
+          {
+            "type": "succession",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "PRK",
+        "events": [
+          {
+            "type": "accession",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "DNK",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1925-06-17"
+          },
+          {
+            "type": "ratification",
+            "date": "1930-06-06"
+          }
+        ]
+      },
+      {
+        "country": "DOM",
+        "events": [
+          {
+            "type": "accession",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "ECU",
+        "events": [
+          {
+            "type": "accession",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "EGY",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1925-06-17"
+          },
+          {
+            "type": "ratification",
+            "date": "1928-12-06"
+          }
+        ]
+      },
+      {
+        "country": "SLV",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1925-06-17"
+          },
+          {
+            "type": "ratification",
+            "date": "2008-02-26"
+          }
+        ]
+      },
+      {
+        "country": "GNQ",
+        "events": [
+          {
+            "type": "accession",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "EST",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1925-06-17"
+          },
+          {
+            "type": "ratification",
+            "date": "1930-05-12"
+          }
+        ]
+      },
+      {
+        "country": "SWZ",
+        "events": [
+          {
+            "type": "accession",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "ETH",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1925-06-17"
+          },
+          {
+            "type": "ratification",
+            "date": "1935-07-21"
+          }
+        ]
+      },
+      {
+        "country": "FJI",
+        "events": [
+          {
+            "type": "succession",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "FIN",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1925-06-17"
+          },
+          {
+            "type": "ratification",
+            "date": "1929-01-21"
+          }
+        ]
+      },
+      {
+        "country": "FRA",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1925-06-17"
+          },
+          {
+            "type": "ratification",
+            "date": "1926-05-10"
+          }
+        ]
+      },
+      {
+        "country": "GAB",
+        "events": [
+          {
+            "type": "succession",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "DEU",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1925-06-17"
+          },
+          {
+            "type": "ratification",
+            "date": "1929-04-25"
+          }
+        ]
+      },
+      {
+        "country": "GHA",
+        "events": [
+          {
+            "type": "accession",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "GRC",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1925-06-17"
+          },
+          {
+            "type": "ratification",
+            "date": "1931-02-03"
+          }
+        ]
+      },
+      {
+        "country": "GRD",
+        "events": [
+          {
+            "type": "succession",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "GTM",
+        "events": [
+          {
+            "type": "accession",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "GNB",
+        "events": [
+          {
+            "type": "accession",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "VAT",
+        "events": [
+          {
+            "type": "accession",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "HUN",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1929-12-05"
+          },
+          {
+            "type": "ratification",
+            "date": "1930-12-05"
+          }
+        ]
+      },
+      {
+        "country": "ISL",
+        "events": [
+          {
+            "type": "accession",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "IND",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1925-06-17"
+          },
+          {
+            "type": "ratification",
+            "date": "1928-04-09"
+          }
+        ]
+      },
+      {
+        "country": "IDN",
+        "events": [
+          {
+            "type": "succession",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "IRN",
+        "events": [
+          {
+            "type": "accession",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "IRQ",
+        "events": [
+          {
+            "type": "accession",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "IRL",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          },
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "ISR",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          },
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "ITA",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1925-06-17"
+          },
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "JAM",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          },
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "JPN",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1925-06-17"
+          },
+          {
+            "type": "ratification",
+            "date": "1970-11-21"
+          }
+        ]
+      },
+      {
+        "country": "JOR",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          },
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "KAZ",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          },
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "KEN",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          },
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "KWT",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          },
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "KGZ",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          },
+          {
+            "type": "ratification",
+            "date": "2020-06-29"
+          }
+        ]
+      },
+      {
+        "country": "LAO",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          },
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "LVA",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1925-06-17"
+          },
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "LBN",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          },
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "LSO",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          },
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "LBR",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          },
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "LBY",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          },
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "LIE",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          },
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "LTU",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1925-06-17"
+          },
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "LUX",
+        "events": [
+          {
+            "type": "signature",
+            "date": "1925-06-17"
+          },
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "MDG",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          },
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "MWI",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          },
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "MYS",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          },
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "MDV",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          },
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "MLT",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          },
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "MUS",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          },
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "MEX",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          },
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "MCO",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          },
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "MNG",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          },
+          {
+            "type": "ratification",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "MAR",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1970-12-17"
+          }
+        ]
+      },
+      {
+        "country": "MDG",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1963-10-25"
+          }
+        ]
+      },
+      {
+        "country": "MWI",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1964-07-23"
+          }
+        ]
+      },
+      {
+        "country": "MYS",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1971-11-06"
+          }
+        ]
+      },
+      {
+        "country": "MDV",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1967-12-14"
+          }
+        ]
+      },
+      {
+        "country": "MLT",
+        "events": [
+          {
+            "type": "succession",
+            "date": "1966-09-21"
+          }
+        ]
+      },
+      {
+        "country": "MUS",
+        "events": [
+          {
+            "type": "succession",
+            "date": "1969-05-06"
+          }
+        ]
+      },
+      {
+        "country": "MEX",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1937-02-28"
+          }
+        ]
+      },
+      {
+        "country": "MCO",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1930-06-27"
+          }
+        ]
+      },
+      {
+        "country": "MNG",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1963-04-12"
+          }
+        ]
+      },
+      {
+        "country": "MNE",
+        "events": [
+          {
+            "type": "succession",
+            "date": "2006-06-23"
+          }
+        ]
+      },
+      {
+        "country": "MAR",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1970-12-17"
+          }
+        ]
+      },
+      {
+        "country": "MOZ",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1977-11-14"
+          }
+        ]
+      },
+      {
+        "country": "MMR",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1930-06-04"
+          }
+        ]
+      },
+      {
+        "country": "NAM",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1995-04-28"
+          }
+        ]
+      },
+      {
+        "country": "NRU",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1982-06-23"
+          }
+        ]
+      },
+      {
+        "country": "NPL",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1968-02-06"
+          }
+        ]
+      },
+      {
+        "country": "NLD",
+        "events": [
+          {
+            "type": "ratification",
+            "date": "1930-12-09"
+          }
+        ]
+      },
+      {
+        "country": "NZL",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1930-06-25"
+          }
+        ]
+      },
+      {
+        "country": "NIC",
+        "events": [
+          {
+            "type": "ratification",
+            "date": "1934-02-06"
+          }
+        ]
+      },
+      {
+        "country": "NER",
+        "events": [
+          {
+            "type": "succession",
+            "date": "1964-12-21"
+          }
+        ]
+      },
+      {
+        "country": "NGA",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1968-07-24"
+          }
+        ]
+      },
+      {
+        "country": "NOR",
+        "events": [
+          {
+            "type": "ratification",
+            "date": "1930-06-27"
+          }
+        ]
+      },
+      {
+        "country": "OMN",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1974-02-20"
+          }
+        ]
+      },
+      {
+        "country": "PAK",
+        "events": [
+          {
+            "type": "succession",
+            "date": "1950-04-15"
+          }
+        ]
+      },
+      {
+        "country": "PAN",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1930-06-10"
+          }
+        ]
+      },
+      {
+        "country": "PNG",
+        "events": [
+          {
+            "type": "succession",
+            "date": "1980-10-27"
+          }
+        ]
+      },
+      {
+        "country": "PRY",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1933-11-06"
+          }
+        ]
+      },
+      {
+        "country": "PER",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1930-06-12"
+          }
+        ]
+      },
+      {
+        "country": "PHL",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1971-02-11"
+          }
+        ]
+      },
+      {
+        "country": "POL",
+        "events": [
+          {
+            "type": "ratification",
+            "date": "1929-02-04"
+          }
+        ]
+      },
+      {
+        "country": "PRT",
+        "events": [
+          {
+            "type": "ratification",
+            "date": "1930-04-29"
+          }
+        ]
+      },
+      {
+        "country": "QAT",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1976-02-10"
+          }
+        ]
+      },
+      {
+        "country": "KOR",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1989-04-14"
+          }
+        ]
+      },
+      {
+        "country": "MDA",
+        "events": [
+          {
+            "type": "succession",
+            "date": "1994-10-04"
+          }
+        ]
+      },
+      {
+        "country": "MNG",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1963-04-12"
+          }
+        ]
+      },
+      {
+        "country": "MNE",
+        "events": [
+          {
+            "type": "succession",
+            "date": "2006-06-23"
+          }
+        ]
+      },
+      {
+        "country": "MAR",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1970-12-17"
+          }
+        ]
+      },
+      {
+        "country": "MOZ",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1977-11-14"
+          }
+        ]
+      },
+      {
+        "country": "MMR",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1930-06-04"
+          }
+        ]
+      },
+      {
+        "country": "NAM",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1995-04-28"
+          }
+        ]
+      },
+      {
+        "country": "NRU",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1982-06-23"
+          }
+        ]
+      },
+      {
+        "country": "NPL",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1968-02-06"
+          }
+        ]
+      },
+      {
+        "country": "NLD",
+        "events": [
+          {
+            "type": "ratification",
+            "date": "1930-12-09"
+          }
+        ]
+      },
+      {
+        "country": "NZL",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1930-06-25"
+          }
+        ]
+      },
+      {
+        "country": "NIC",
+        "events": [
+          {
+            "type": "ratification",
+            "date": "1934-02-06"
+          }
+        ]
+      },
+      {
+        "country": "NER",
+        "events": [
+          {
+            "type": "succession",
+            "date": "1964-12-21"
+          }
+        ]
+      },
+      {
+        "country": "NGA",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1968-07-24"
+          }
+        ]
+      },
+      {
+        "country": "NOR",
+        "events": [
+          {
+            "type": "ratification",
+            "date": "1930-06-27"
+          }
+        ]
+      },
+      {
+        "country": "OMN",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1974-02-20"
+          }
+        ]
+      },
+      {
+        "country": "PAK",
+        "events": [
+          {
+            "type": "succession",
+            "date": "1950-04-15"
+          }
+        ]
+      },
+      {
+        "country": "PAN",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1930-06-10"
+          }
+        ]
+      },
+      {
+        "country": "PNG",
+        "events": [
+          {
+            "type": "succession",
+            "date": "1980-10-27"
+          }
+        ]
+      },
+      {
+        "country": "PRY",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1933-11-06"
+          }
+        ]
+      },
+      {
+        "country": "PER",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1930-06-12"
+          }
+        ]
+      },
+      {
+        "country": "PHL",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1971-02-11"
+          }
+        ]
+      },
+      {
+        "country": "POL",
+        "events": [
+          {
+            "type": "ratification",
+            "date": "1929-02-04"
+          }
+        ]
+      },
+      {
+        "country": "PRT",
+        "events": [
+          {
+            "type": "ratification",
+            "date": "1930-04-29"
+          }
+        ]
+      },
+      {
+        "country": "QAT",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1976-02-10"
+          }
+        ]
+      },
+      {
+        "country": "KOR",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1989-04-14"
+          }
+        ]
+      },
+      {
+        "country": "ROU",
+        "events": [
+          {
+            "type": "ratification",
+            "date": "1931-12-12"
+          }
+        ]
+      },
+      {
+        "country": "RUS",
+        "events": [
+          {
+            "type": "ratification",
+            "date": "1928-04-05"
+          }
+        ]
+      },
+      {
+        "country": "RWA",
+        "events": [
+          {
+            "type": "succession",
+            "date": "1964-07-16"
+          }
+        ]
+      },
+      {
+        "country": "SAU",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1963-06-17"
+          }
+        ]
+      },
+      {
+        "country": "SEN",
+        "events": [
+          {
+            "type": "succession",
+            "date": "1964-05-26"
+          }
+        ]
+      },
+      {
+        "country": "SRB",
+        "events": [
+          {
+            "type": "succession",
+            "date": "2001-03-19"
+          }
+        ]
+      },
+      {
+        "country": "SYC",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1979-01-17"
+          }
+        ]
+      },
+      {
+        "country": "SGP",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1972-10-05"
+          }
+        ]
+      },
+      {
+        "country": "SVK",
+        "events": [
+          {
+            "type": "succession",
+            "date": "1993-01-01"
+          }
+        ]
+      },
+      {
+        "country": "SVN",
+        "events": [
+          {
+            "type": "succession",
+            "date": "1992-06-07"
+          }
+        ]
+      },
+      {
+        "country": "ZAF",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1930-08-21"
+          }
+        ]
+      },
+      {
+        "country": "ESP",
+        "events": [
+          {
+            "type": "ratification",
+            "date": "1929-07-22"
+          }
+        ]
+      },
+      {
+        "country": "SDN",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1973-10-16"
+          }
+        ]
+      },
+      {
+        "country": "TZA",
+        "events": [
+          {
+            "type": "succession",
+            "date": "1964-09-28"
+          }
+        ]
+      },
+      {
+        "country": "YEM",
+        "events": [
+          {
+            "type": "accession",
+            "date": "1986-04-11"
           }
         ]
       }
