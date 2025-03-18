@@ -105,13 +105,13 @@
 }
 .board4 {
   @include bp(l) {
-    grid-column: 6 / 14;
+    grid-column: 10 / 18;
     grid-row: 2 / 3;
   }
 }
 .board5 {
   @include bp(5) {
-    grid-column: 10 / 18;
+    grid-column: 14 / 21;
     grid-row: 3 / 4;
   }
 }
