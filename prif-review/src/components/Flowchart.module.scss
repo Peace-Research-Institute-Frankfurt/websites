@@ -174,7 +174,7 @@
 
 .comms,
 .admin {
-  grid-column: span 20;
+  grid-column: span 24;
   @include bp(m) {
     grid-column: span 10;
   }
