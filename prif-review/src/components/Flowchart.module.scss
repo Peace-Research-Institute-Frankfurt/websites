@@ -82,27 +82,27 @@
 
 .board2 {
   @include bp(l) {
-    grid-column: 9 / 13;
+    grid-column: 9 / 15;
   }
 }
 
 .board3 {
   @include bp(l) {
-    grid-column: 13 / 19;
+    grid-column: 15 / 21;
     grid-row: 1 / 2;
   }
 }
 
 .board4 {
   @include bp(l) {
-    grid-column: 13 / 19;
+    grid-column: 15 / 21;
     grid-row: 2 / 3;
   }
 }
 
 .board5 {
   @include bp(l) {
-    grid-column: 19 / 25;
+    grid-column: 21 / 25;
     grid-row: 1 / 3;
   }
 }
