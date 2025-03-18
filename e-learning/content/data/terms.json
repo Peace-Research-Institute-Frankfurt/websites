@@ -1,5 +1,42 @@
 [
   {
+    "term_id":"NSG",
+    "title":"Nuclear Suppliers Group (NSG)",
+    "description":"An informal institution currently formed by currently 48 states with nuclear capabilities"
+  },
+  {
+    "term_id":"EEAS",
+    "title":"European External Action Service (EEAS)",
+    "description":"Created in 2009 by the Treaty of Lisbon, the EEAS is a body that bring together units dealing with external relations both at the Commission and in the Council Secretariat. It supports the High Representative and is staffed with both EU civil servants and seconded national diplomats."
+  },
+  {
+    "term_id":"Council-of-the-European-Union",
+    "title":"Council of the European Union",
+    "description":"Programmatic document setting out the approach of the EU to ensure its security with the help of its policies. It was adopted in 2003 at the initiative of the High Representative."
+  },
+  {
+    "term_id":"European-Security-Strategy",
+    "title":"European Security Strategy",
+    "description":"Programmatic document setting out the approach of the EU to ensure its security with the help of its policies. It was adopted in 2003 at the initiative of the High Representative."
+  },
+
+  {
+    "term_id":"European-Parliament",
+    "title":"European Parliament",
+    "description":"One of the main institutions of the EU, it is composed of directly elected representatives from the member states, organised in political groups. Alongside the Council of the EU, it approves legislation proposed by the European Commission and green-lights the organisation’s budget."
+  },
+
+  {
+    "term_id":"European-Commission",
+    "title":"European Commission",
+    "description":"One of the key institutions in the EU, the Commission brings together technical expertise in the EU’s field of action and is in charge of masterminding its policies, which often require the green light from the Council of the EU and the Parliament."
+  },
+  {
+    "term_id":"EEC",
+    "title":"European Economic Community (EEC)",
+    "description":"Created in 1957, this organisation was renamed the ‘European Community’ in 1992 and became one of the pillars of the European Union when the latter came into being with the Maastricht Treaty."
+  },
+  {
   "term_id":"CSBMs",
   "title":"Confidence- and Security Building Measures (CSBMs) ",
   "description":"Arrangements to increase trust between countries by introducing transparency and predictability regarding operations of the armed forces and other measures to demonstrate the lack of aggressive intentions"
@@ -14,7 +51,6 @@
     "title": "delivery vehicle",
     "description": "Nuclear weapons can be delivered to an intended target with a variety of delivery vehicles, including bombers and dual-capable aircraft for aerial deployment, submarines for sea-based delivery, and missiles for land-based deployment"
   },
-
   {
     "term_id": "Nuclear-weapons",
     "title": "Nuclear weapons",
@@ -148,7 +184,7 @@
   {
     "term_id": "IAEA",
     "title": "International Atomic Energy Agency (IAEA)",
-    "description": ""
+    "description": "UN agency based in Vienna in charge of managing atomic energy. It is responsible for verifying that NNWS operating nuclear energy plants for civilian purposes do not divert nuclear material to military programmes."
   },
   {
     "term_id": "WMD",
