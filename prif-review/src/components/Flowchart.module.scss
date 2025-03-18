@@ -114,7 +114,7 @@
 .dep5,
 .dep6 {
   background: rgb(230, 236, 247);
-  grid-column: span 2;
+  grid-column: span 4;
   @include bp(m) {
     grid-column: span 5;
   }
