@@ -61,7 +61,8 @@
 .board1,
 .board2,
 .board3,
-.board4 {
+.board4,
+.board5 {
   background: rgb(197, 216, 240);
   grid-column: span 20;
   @include bp(m) {
@@ -75,7 +76,7 @@
 
 .board1 {
   @include bp(l) {
-    grid-column: span 8;
+    grid-column: span 6;
   }
 }
 
@@ -90,7 +91,8 @@
   }
 }
 
-.board2 {
+.board2,
+.board5 {
   @include bp(l) {
     grid-column: span 5;
   }
@@ -105,6 +107,12 @@
   @include bp(l) {
     grid-column: 14 / 21;
     grid-row: 2 / 3;
+  }
+}
+.board5 {
+  @include bp(5) {
+    grid-column: 14 / 21;
+    grid-row: 3 / 4;
   }
 }
 
