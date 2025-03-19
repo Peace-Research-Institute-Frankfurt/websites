@@ -1,5 +1,10 @@
 [
   {
+    "term_id":"NSAs",
+    "title":"Negative Security Assurances (NSAs)",
+    "description":"NSAs, sometimes referred to as negative security assurances, are a binding commitment by a state that possesses nuclear weapons (a so-called Nuclear Weapon State, NWS) to a Non-Nuclear Weapon State (NNWS) not to use or threaten to use nuclear weapons against the NNWS."
+  },
+  {
     "term_id":"NSG",
     "title":"Nuclear Suppliers Group (NSG)",
     "description":"An informal institution currently formed by currently 48 states with nuclear capabilities"
