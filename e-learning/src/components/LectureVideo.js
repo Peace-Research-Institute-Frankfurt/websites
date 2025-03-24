@@ -3,9 +3,9 @@ import { Tabs, Tab } from './TabsAdapter'
 import * as styles from './LectureVideo.module.scss'
 
 export default function LectureVideo({ lu, vl, subtitles, poster, smil, provider, children }) {
-  let src = ''
+  let src = '';
   if (provider === 'video-stream') {
-    src = `https://start.video-stream-hosting.de/player_videojs.html?serverip=62.113.210.7&serverapp=hsfk2-vod&autostart=0&smil=${smil}&bgimage=https://deploy-preview-879--eunpdc-elearning.netlify.app/Podcast_default_22012025.jpg${
+    src = `https://start.video-stream-hosting.de/player_videojs.html?serverip=62.113.210.7&serverapp=hsfk2-vod&autostart=0&smil=${smil}&bgimage=${poster}${
       subtitles ? `&untertitelDatei=${subtitles}&untertitelLand=en&untertitelAnzeige=English&untertitelAutoaktiv=0` : ''
     }&nocookie=1`
   } else {
