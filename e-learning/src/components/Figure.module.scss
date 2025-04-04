@@ -22,7 +22,8 @@
 }
 
 .container {
-  margin-top: 0.5em;
+  margin-top: 1rem;
+  margin-bottom:1rem;
   &:first-child {
     margin-top: 0;
   }
@@ -40,6 +41,7 @@
   }
   .image-container {
     margin-top: 0.5em;
+    margin-bottom:0.5em;
     grid-column: 1 / 6;
     margin-left: calc(var(--padding) * -1);
     width: calc(100% + var(--padding) * 2);
@@ -89,6 +91,7 @@
     max-height: 80vh;
     width: auto;
     max-width: 100%;
+    overflow: hidden;
   }
 }
 
@@ -153,4 +156,71 @@
   img {
     pointer-events: none;
   }
+}
+
+.image-container {
+  position: relative;
+}
+
+.expand,
+.collapse {
+  position: absolute;
+  bottom: 0.7rem;
+  right: 0.2rem;
+  font-size: 0;
+  background: black;
+  padding: 0.1rem;
+  cursor: pointer;
+  svg {
+    display: block;
+    width: 1.5rem;
+    height: auto;
+    filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.621));
+  }
+  path {
+    fill: white;
+  }
+}
+
+.collapse {
+  bottom: 0;
+}
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 5000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--black);
+  pointer-events: none;
+  opacity: 0;
+  transition: var(--fast);
+  visibility: hidden;
+  padding: var(--padding-small);
+}
+
+.lightbox-media {
+  height: 100%;
+  display: flex;
+  width:100%;
+  position: relative;
+  .image {
+    height: 100%;
+    width: auto;
+    max-width:100%;
+    img {
+      object-fit: contain !important;
+    }
+  }
+}
+
+.lightbox-active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
 }

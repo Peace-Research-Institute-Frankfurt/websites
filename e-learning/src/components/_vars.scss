@@ -34,7 +34,7 @@ $text-border: 2px solid var(--gray-40);
   text-rendering: optimizeLegibility;
   word-spacing: 0.001em;
   letter-spacing: 0.001em;
-  hyphens: auto;
+  hyphens: none;
   font-size: var(--ms-0);
   line-height: 1.4;
   @include bp(m) {
