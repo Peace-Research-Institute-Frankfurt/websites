@@ -79,7 +79,7 @@ export default function Treaty({ name }) {
   })
 
   const memberCount = treaty.participants.reduce((prev, country) => {
-    const s = ['ratification', 'accession', 'acceptance', 'succession']
+    const s = ['ratification', 'accession', 'acceptance', 'succession', 'signature']
     const found = country.events.findIndex((event) => {
       return s.indexOf(event.type) !== -1
     })

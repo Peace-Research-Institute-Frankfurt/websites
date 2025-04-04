@@ -1,5 +1,1024 @@
 [
   {
+    "name": "CCM",
+    "title": "Convention on Cluster Munitions (CCM)",
+    "shortTitle": "Convention on Cluster Munitions (CCM)",
+    "date": "2010-08-01",
+    "legalStatus": "Legally binding",
+    "description": "The Convention on Cluster Munitions (CCM) is a legally binding international treaty that prohibits the use, production, stockpiling, and transfer of cluster bombs due to their indiscriminate effects and long-lasting danger to civilians. It mandates clearance of contaminated areas, destruction of stockpiles, and assistance to victims. Adopted in 2008, it entered into force on August 1, 2010. Over 120 countries have signed, though major military powers such as the U.S., Russia, and China remain non-signatories. The treaty strengthens international humanitarian law by aiming to reduce the human cost of war and prevent future harm from unexploded submunitions.",
+    "scrapeURL": "https://www.clusterconvention.org/states-parties/",
+    "participants": [
+      {
+        "country": "AFG",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "ALB",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "AND",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "ATG",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "AUS",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "AUT",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "BEL",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "BLZ",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "BEN",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "BOL",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "BIH",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "BWA",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "BGR",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "BFA",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "BDI",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "CPV",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "CMR",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "CAN",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "TCD",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "CHL",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "COL",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "COM",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "COG",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "COK",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "CRI",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "CIV",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "HRV",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "CUB",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "CZE",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "DNK",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "DOM",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "ECU",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "SLV",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "SWZ",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "FJI",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "FRA",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "GMB",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "DEU",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "GHA",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "GRD",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "GTM",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "GIN",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "GNB",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "GUY",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "VAT",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "HND",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "HUN",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "ISL",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "IRQ",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "IRL",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "ITA",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "JPN",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "LAO",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "LBN",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "LSO",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "LIE",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "LTU",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "LUX",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "MDG",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "MWI",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "MDV",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "MLI",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "MLT",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "MRT",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "MUS",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "MEX",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "MCO",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "MNE",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "MOZ",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "NAM",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "NRU",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "NLD",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "NZL",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "NIC",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "NER",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "NGA",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "NIU",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "MKD",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "NOR",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "PLW",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "PAN",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "PRY",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "PER",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "PHL",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "PRT",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "MDA",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "RWA",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "KNA",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "LCA",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "VCT",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "WSM",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "SMR",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "STP",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "SEN",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "SYC",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "SLE",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "SVK",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "SVN",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "SOM",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "ZAF",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "SSD",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "ESP",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "LKA",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "PSE",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "SWE",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "CHE",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "TGO",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "TTO",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "TUN",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "GBR",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "URY",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      },
+      {
+        "country": "ZMB",
+        "events": [
+          {
+            "type": "signature",
+            "date": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
     "name": "CFE",
     "title": "Treaty on Conventional Armed Forces in Europe (CFE)",
     "date": "1990-11-19",
@@ -3021,7 +4040,6 @@
     "scrapeURL": "https://treaties.unoda.org/t/bwc/participants",
     "participants": []
   },
-
   {
     "name": "pelindaba",
     "title": "Treaty of Pelindaba",
