@@ -1,5 +1,10 @@
 [
   {
+    "term_id":"MeV",
+    "title":"Megaelectronvolt",
+    "description":"Unit of measurement for energy: megaelectronvolt =1 million electronvolts. MeV It is a unit particularly used in nuclear physics since the SI unit for energy (Joule) is way too large. 1 MeV is ca 10^(-13) Joule."
+  },
+  {
     "term_id":"NSAs",
     "title":"Negative Security Assurances (NSAs)",
     "description":"NSAs, sometimes referred to as negative security assurances, are a binding commitment by a state that possesses nuclear weapons (a so-called Nuclear Weapon State, NWS) to a Non-Nuclear Weapon State (NNWS) not to use or threaten to use nuclear weapons against the NNWS."
