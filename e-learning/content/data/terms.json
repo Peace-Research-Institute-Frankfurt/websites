@@ -1,5 +1,10 @@
 [
   {
+    "term_id":"CSBMs",
+    "title":"Confidence- and security-building measures (CSBMs)",
+    "description":"Confidence- and security-building measures (CSBMs) are actions and agreements designed to reduce tensions, increase transparency, and foster trust among states to prevent conflicts, such as arms control treaties or joint military exercises."
+  },
+  {
     "term_id":"MeV",
     "title":"Megaelectronvolt",
     "description":"Unit of measurement for energy: megaelectronvolt =1 million electronvolts. MeV It is a unit particularly used in nuclear physics since the SI unit for energy (Joule) is way too large. 1 MeV is ca 10^(-13) Joule."
