@@ -1,5 +1,14 @@
 [
   {
+    "name": "PSI",
+    "title": "Proliferation Security Initiative (PSI)",
+    "established": "2003-05-01",
+    "description": "The Proliferation Security Initiative (PSI) was founded by the United States in May 2003 as a reaction to the 9-11 attacks. It aims at combating the proliferation of weapons of mass destruction (WMD), their delivery systems, and related materials and enhancing international cooperation in detecting, intercepting, and preventing the transport of these items. The US invited other states to join voluntarily.",
+    "members": [
+      "AF", "AL", "AD", "AO", "AG", "AR", "AM", "AU", "AT", "AZ", "BS", "BH", "BY", "BE", "BZ", "BJ", "BA", "BN", "BG", "KH", "CA", "CL", "CO", "HR", "CY", "CZ", "DK", "DJ", "DM", "DO", "SV", "GQ", "EE", "FJ", "FI", "FR", "GE", "DE", "GH", "GR", "GW", "VA", "HN", "HU", "IS", "IQ", "IE", "IL", "IT", "JP", "JO", "KZ", "KR", "KW", "KG", "LV", "LR", "LY", "LI", "LT", "LU", "MG", "MY", "MT", "MH", "FM", "MD", "MN", "ME", "MA", "NL", "NZ", "MK", "NO", "OM", "PW", "PA", "PG", "PY", "PH", "PL", "PT", "QA", "RO", "WS", "SM", "SA", "RS", "SG", "SK", "SI", "ES", "LK", "LC", "VC", "SE", "CH", "TJ", "TH", "GM", "TG", "TO", "TT", "TN", "TR", "TM", "UA", "AE", "GB", "US", "UZ", "VU", "VN", "YE", "ZM"],
+    "website": "https://www.psi-online.info"
+  },
+  {
     "name": "HCoC",
     "title": "The Hague Code of Conduct against Ballistic Missile Proliferation",
     "established": "2002-11-26",
