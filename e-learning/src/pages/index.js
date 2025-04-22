@@ -22,6 +22,7 @@ export const query = graphql`
           }
           frontmatter {
             title
+            intro
             order
           }
         }
@@ -36,6 +37,8 @@ const IndexPage = ({ data }) => {
       <li key={`unit-${i}`}>
         <Link className={styles.item} to={node.childMdx.fields.slug}>
           {node.childMdx.frontmatter.order}. {node.childMdx.frontmatter.title}
+          <br/>
+          <blockquote><small>{node.childMdx.frontmatter.intro}</small></blockquote>
         </Link>
       </li>
     )
