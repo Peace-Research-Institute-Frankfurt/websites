@@ -10,14 +10,69 @@ This chapter will present the history of the emergence, development and demise o
 
 During the Cold War, almost the whole of Europe was seen as a potential battleground for the conflict between the Soviet Union-led Warsaw Pact and US-led NATO. Especially during the 1950s and 1960s, heightened Cold War tensions between the United States and the Soviet Union meant that both sides were deeply distrustful and committed to achieving military superiority in Europe, rather than engaging in arms control.
 
-<Figure
-  size="medium"
-  src="LU11MAP-NATO&WarsawPact.png"
-  caption="Countries of NATO and Warsaw Pact (Please note that the map shows the former GDR and the FRG in the area of present-day Germany.)"
-  alt=""
-  credit="Grübelfabrik (CC BY NC)"
-  license=""
-></Figure>
+<LayeredMap
+  centerLat={20}
+  centerLong={0}
+  mapScale={1}
+  layout="large"
+  legendPosition="bottom-left"
+  title="Map showing member states of NATO and Warsaw Pact"
+  description="Map showing member states of NATO and Warsaw Pact"
+  legendTitle="Legend"
+  credit="Data: Natual Earth. Graphic: PRIF"
+  license="cc-by-4"
+>
+  <CountryStatisticsLayer
+    colors={['blue', 'red']}
+    data={[
+
+      //NATO
+    {name: 'Belgium', iso3: 'BEL', value: "NATO"},
+    {name: 'Canada', iso3: 'CAN', value: "NATO"},
+    {name: 'Denmark', iso3: 'DNK', value: "NATO"},
+    {name: 'France', iso3: 'FRA', value: "NATO"},
+    {name: 'Germany', iso3: 'DEU', value: "NATO"},
+    {name: 'Greece', iso3: 'GRC', value: "NATO"},
+    {name: 'Iceland', iso3: 'ISL', value: "NATO"},
+    {name: 'Italy', iso3: 'ITA', value: "NATO"},
+    {name: 'Luxembourg', iso3: 'LUX', value: "NATO"},
+    {name: 'Netherlands', iso3: 'NLD', value: "NATO"},
+    {name: 'Norway', iso3: 'NOR', value: "NATO"},
+    {name: 'Portugal', iso3: 'PRT', value: "NATO"},
+    {name: 'Spain', iso3: 'ESP', value: "NATO"},
+    {name: 'Turkey', iso3: 'TUR', value: "NATO"},
+    {name: 'United Kingdom', iso3: 'GBR', value: "NATO"},
+    {name: 'USA', iso3: 'USA', value: "NATO"},
+
+      //Warsaw Pact
+    {name: 'Albania', iso3: 'ALB', value: "Warsaw Pact"},
+    {name: 'Bulgaria', iso3: 'BGR', value: "Warsaw Pact"},
+    {name: 'Poland', iso3: 'POL', value: "Warsaw Pact"},
+    {name: 'Romania', iso3: 'ROU', value: "Warsaw Pact"},
+    {name: 'Czech Republic', iso3: 'CZE', value: "Warsaw Pact"},
+    {name: 'Slovakia', iso3: 'SVK', value: "Warsaw Pact"},
+    {name: 'Hungary', iso3: 'HUN', value: "Warsaw Pact"},
+    {name: 'Russia', iso3: 'RUS', value: "Warsaw Pact"},
+    {name: 'Ukraine', iso3: 'UKR', value: "Warsaw Pact"},
+    {name: 'Armenia', iso3: 'ARM', value: "Warsaw Pact"},
+    {name: 'Azerbaijan', iso3: 'AZE', value: "Warsaw Pact"},
+    {name: 'Georgia', iso3: 'GEO', value: "Warsaw Pact"},
+    {name: 'Lithuania', iso3: 'LTU', value: "Warsaw Pact"},
+    {name: 'Latvia', iso3: 'LVA', value: "Warsaw Pact"},
+    {name: 'Belarus', iso3: 'BLR', value: "Warsaw Pact"},
+    {name: 'Moldova', iso3: 'MDA', value: "Warsaw Pact"},
+    {name: 'Estonia', iso3: 'EST', value: "Warsaw Pact"},
+    {name: 'Kazakhstan', iso3: 'KAZ', value: "Warsaw Pact"},
+    {name: 'Uzbekistan', iso3: 'UZB', value: "Warsaw Pact"},
+    {name: 'Tajikistan', iso3: 'TJK', value: "Warsaw Pact"},
+    {name: 'Kyrgysztan', iso3: 'KGZ', value: "Warsaw Pact"},
+    {name: 'Turkmenistan', iso3: 'TKM', value: "Warsaw Pact"},
+
+      ]}
+  />
+
+</LayeredMap>
+
 
 Millions of soldiers and hundreds of thousands of pieces of weaponry were deployed by all sides. In addition to conventional weapons, thousands of warheads for so-called non-strategic or tactical nuclear weapons were stationed on the territory of European states.
 

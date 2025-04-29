@@ -56,15 +56,61 @@ The technology and infrastructure used to produce nuclear material for a weapon 
     Nevertheless, the civilian fuel cycle activities, especially the enrichment, the nuclear reactor operation and reprocessing, are strictly monitored by international nuclear safeguards (for states that are part of the non-proliferation treaty) and security systems to guarantee that nuclear material and facilities are being used for peaceful purposes [(see LU05)](/LU-05/).
 
     Uranium is not uncommon on Earth, but the ore deposits are unevenly distributed and their suitability for mining varies.
-    <Figure
-      size="medium"
-      src="LU04MAP-CountriesWithUraniumSources.png"
-      caption="Global distribution of identified recoverable uranium resources"
-      alt="World map showing countries with available uranium resources, marked by black dots. The left side lists countries and their share of global uranium resources. Australia holds the largest share at 28%, followed by Kazakhstan (13%), Canada (10%), and Russia and Namibia (each 8%). Other notable countries include Brazil, South Africa, and Niger (each 5%), China (4%), Ukraine, Uzbekistan, and Mongolia (2% each), and the USA, Tanzania, and Botswana (1% each). Dots on the map correspond to these countries across all inhabited continents, visually indicating uranium distribution worldwide."
+
+    <LayeredMap
+      centerLat={20}
+      centerLong={0}
+      mapScale={1}
+      layout="large"
+      legendPosition="bottom-left"
+      title="Global distribution of identified recoverable uranium resources"
+      description="Map showing countries with natural uranium resources"
+      legendTitle="Legend"
       credit="Data source: Piro, M,/Lipkina, K. (2020): 8 - Mining and milling. In: Piro, M. (ed.): Advances in Nuclear Fuel Chemistry, Woodhead Publishing"
-      expandable={true}
-      license=""
-    ></Figure>
+      license="cc-by-4"
+    >
+      <MarkerLayer markerGroupName="Countries with available uranium resources"
+                   label="Countries with available uranium resources"
+                   data={[
+                     {name: "Canberra", lat: "35°16′55″S", long: "149°7′44″E"},
+                     {name: "Astana", lat: "51°10′9.8112″N", long: "71°26′56.6664″E"},
+                     {name: "Toronto", lat: "43.651070", long: "-79.347015"},
+                     {name: "Moscow", lat: "55.751244", long: "37.618423"},
+                     {name: "Windhoek", lat:"-22.55941", long: "17.08323"},
+                     {name: "Brasilia", lat: "-15.793889", long: "-47.882778"},
+                     {name: "Cape Town", lat: "-33.918861", long: "  18.423300"},
+                     {name: "Niamey", lat: "13.51366", long: "2.1098"},
+                     {name: "Beijing", lat: "39.916668", long: "116.383331"},
+                     {name: "Kyiv", lat: " 50.452194", long: "30.527561"},
+                     {name: "Tashkent", lat: "41.311081", long: "  69.240562"},
+                     {name: "Ulaanbaatar", lat: "47.921230", long: "106.918556"},
+                     {name: "Washington D.C.", lat: "38.889805", long: "-77.009056"},
+                     {name: "Dodoma", lat: "-6.161184", long: "35.745426"},
+                     {name: "Gaborone", lat: "-24.653257", long: "25.906792"}
+
+
+                     ]} />
+      <CountryStatisticsLayer
+        data={[
+          {name: 'Australia', iso3: 'AUS', value: ["Australia 28%", 28]},
+          {name: 'Kazakhstan', iso3: 'KAZ', value: "Kazakhstan 13%"},
+          {name: 'Canada', iso3: 'CAN', value: "Canada 10%"},
+          {name: 'Russia', iso3: 'RUS', value: "Russia 8%"},
+          {name: 'Namibia', iso3: 'NAM', value: "Namibia 8%"},
+          {name: 'Brazil', iso3: 'BRA', value: "Brazil 5%"},
+          {name: 'South Africa', iso3: 'ZAF', value: "South Africa 5%"},
+          {name: 'Niger', iso3: 'NER', value: "Niger 5%"},
+          {name: 'China', iso3: 'CHN', value: "China 4%"},
+          {name: 'Ukraine', iso3: 'UKR', value: "Ukraine 2%"},
+          {name: 'Usbekistan', iso3: 'UZB', value: "Usbekistan 2%"},
+          {name: 'Mongolia', iso3: 'MNG', value: "Mongolia 2%"},
+          {name: 'USA', iso3: 'USA', value: "USA 1%"},
+          {name: 'Tanzania', iso3: 'TZA', value: "Tanzania 1%"},
+          {name: 'Botswana', iso3: 'BWA', value: "Botswana 1%"}
+        ]}
+        colors={['var(--blue-20)']}
+      />
+    </LayeredMap>
 
     A country that pursues an indigenous and independent nuclear weapons programme might face uranium constraints and have to make choices on how to use the available uranium reserves to feed both or one of the proliferation pathways (and perhaps feed electricity-producing nuclear reactors as well). It might, for example, not be possible to feed both an enrichment plant for making HEU and a reactor for making plutonium. Some reactors (heavy water or graphite moderated) can run on natural uranium, removing the demand for enriched fuel, but they still consume uranium.
 
