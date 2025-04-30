@@ -1,6 +1,6 @@
 ---
 title: Introduction
-intro: What is ‘humanitarian arms control’?
+intro:
 order: 1
 reading_time: 5
 ---
@@ -179,20 +179,28 @@ Thus treaties prohibiting or restricting weapons both draw on and, over time, ca
     They killed and maimed innocent people and prevented socio-economic reconstruction. Whatever their military utility during conflict, civilians paid for it with their limbs and lives after the end of fighting.
 
 
-    <BarGraph
-      data={AnnualMineCasualities}
-      xAxis="Year"
-      xAxisTitle="Year"
-      yAxisTitle="Annual mine casualities between 2001-2022"
-      colorRangeStart="#CED9DE"
-      colorRangeEnd="#0D425B"
-      maxValue={10}
-      title="Treaty Quotas of the Open Skies Treaty"
-      description="Treaty Quotas of the Open Skies Treaty"
-      legendTitle="Treaty Quotas of the Open Skies Treaty"
-      caption="Treaty Quotas of the Open Skies Treaty"
-      credit="Data: [Council on Strategic Risks](https://councilonstrategicrisks.org/nolan/biodefense-budget-breakdown/), Graphic: PRIF"
-    />
+    <LayeredMap
+      centerLat={20}
+      centerLong={0}
+      mapScale={1}
+      layout="large"
+      legendPosition="bottom-left"
+      title="Map showing Cambodia, Afghanistan, Colombia and Mozambique"
+      description="Map showing Cambodia, Afghanistan, Colombia and Mozambique"
+      legendTitle="Legend"
+      credit="Data: Natual Earth. Graphic: PRIF"
+      license="cc-by-4"
+    >
+      <CountryStatisticsLayer
+        colors={['#9C0303']}
+        data={[
+          {name: 'Cambodia', iso3: 'KHM', value: "Cambodia, Afghanistan, Colombia, Mozambique"},
+          {name: 'Afghanistan', iso3: 'AFG', value: "Cambodia, Afghanistan, Colombia, Mozambique"},
+          {name: 'Colombia', iso3: 'COL', value: "Cambodia, Afghanistan, Colombia, Mozambique"},
+          {name: 'Mozambique', iso3: 'MOZ', value: "Cambodia, Afghanistan, Colombia, Mozambique"}
+        ]}
+      />
+    </LayeredMap>
     Cluster munitions had a similar post-conflict humanitarian impact, as they comprise small bomblets many of which do not explode as intended and thus function as de facto landmines. In addition, because they cover a large territory when fired by artillery or dropped by airplanes anywhere near populated areas, they often indiscriminately affect civilians at the time of their use.
 
     <Figure

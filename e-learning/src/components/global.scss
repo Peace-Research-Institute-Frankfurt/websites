@@ -228,3 +228,10 @@ body {
 header summary::-webkit-details-marker{
   display:none;
 }
+sup {
+  white-space: nowrap;
+}
+small {
+  font-size: 0.75em;
+  margin-bottom:0.5em;
+}

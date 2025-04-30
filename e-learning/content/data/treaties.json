@@ -4708,6 +4708,41 @@
         ]
       },
       {
+        "country": "GMB",
+        "events": [
+          {
+            "type": "accession",
+            "date": "2024-06-13"
+          }
+        ]
+      },
+      {
+        "country": "MWI",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2014-01-09"
+          },
+          {
+            "type": "ratification",
+            "date": "2024-07-11"
+          }
+        ]
+      },
+      {
+        "country": "COL",
+        "events": [
+          {
+            "type": "signature",
+            "date": "2013-09-24"
+          },
+          {
+            "type": "ratification",
+            "date": "2024-10-15"
+          }
+        ]
+      },
+      {
         "country": "ALB",
         "events": [
           {
