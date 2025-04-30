@@ -220,7 +220,7 @@ const LearningUnit = ({ data, children }) => {
                 Available at {data.site.siteMetadata.siteUrl}
                 {data.post.childMdx.fields.slug}, last modified {data.site.buildTime}
               </p>
-              <h3>Version</h3>
+              <h3>Editorial Note</h3>
               <p>This is a beta version of the learning unit, which is regularly optimised. Please report any factual errors or discrepancies to the publisher. <a href="mailto:support@nonproliferation-elearning.eu">(mailto:support@nonproliferation-elearning.eu)</a>. Please note that although the original text was written by the authors, the video production and simplifications were carried out by PRIF. </p>
             </div>
           </section>
