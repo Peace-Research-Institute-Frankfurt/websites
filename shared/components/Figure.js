@@ -65,7 +65,7 @@ export default function Figure({
               {caption && <MarkdownRenderer className={styles.caption} markdown={caption} />}
               {credit && (
                 <span className={styles.credit}>
-                  <>{credit}</>
+                  <MarkdownRenderer markdown={credit} />
                   {license && (
                     <>
                       {','} {license.url ? <a href={license.url}>{license.title}</a> : <>{license.title}</>}.

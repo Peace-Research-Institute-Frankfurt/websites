@@ -35,15 +35,100 @@ reading_time: 15
 
   Another milestone was reached in August 2020. Again this was down to DARPA, pitching an AI-controlled jet fighter against a human Air Force pilot in a simulated dogfight. While the conditions were not as symmetric as in Go, the fact that AI won five to nil against the human was seen as the start of a new era by many. When it comes to the use of AI, the United States and Russia are not the only countries with a strategic interest in what artificial intelligence has to offer. Many countries have published AI strategies for the coming years and decades.[^1]
 
-  <Figure
-    size="medium"
-    src="LU15_PC05_MAP.png"
-    caption="States with published AI strategies (as by 2022)"
-    credit="PRIF"
-    alt="World map showing countries which had an AI Strategy in 2022"
-    expandable={true}
-    license=""
-  ></Figure>
+
+  <LayeredMap
+    centerLat={20}
+    centerLong={0}
+    mapScale={1}
+    layout="large"
+    legendTitle="States with a national AI strategy"
+    legendPosition="bottom-left"
+    title="States with a national AI strategy"
+    credit="Data: Natural Earth. Graphic: PRIF"
+    license="cc-by-4"
+    altText="States with a national AI strategy"
+  >
+    <CountryStatisticsLayer
+      colors={['#0D425B']}
+      data={[
+        {"name": "Algeria", "iso3": "DZA", "value": "States with a national AI strategy"},
+        {"name": "Argentina", "iso3": "ARG", "value": "States with a national AI strategy"},
+        {"name": "Australia", "iso3": "AUS", "value": "States with a national AI strategy"},
+        {"name": "Austria", "iso3": "AUT", "value": "States with a national AI strategy"},
+        {"name": "Azerbaijan", "iso3": "AZE", "value": "States with a national AI strategy"},
+        {"name": "Bangladesh", "iso3": "BGD", "value": "States with a national AI strategy"},
+        {"name": "Belgium", "iso3": "BEL", "value": "States with a national AI strategy"},
+        {"name": "Benin", "iso3": "BEN", "value": "States with a national AI strategy"},
+        {"name": "Botswana", "iso3": "BWA", "value": "States with a national AI strategy"},
+        {"name": "Bulgaria", "iso3": "BGR", "value": "States with a national AI strategy"},
+        {"name": "Brazil", "iso3": "BRA", "value": "States with a national AI strategy"},
+        {"name": "Canada", "iso3": "CAN", "value": "States with a national AI strategy"},
+        {"name": "Chile", "iso3": "CHL", "value": "States with a national AI strategy"},
+        {"name": "China", "iso3": "CHN", "value": "States with a national AI strategy"},
+        {"name": "Colombia", "iso3": "COL", "value": "States with a national AI strategy"},
+        {"name": "Croatia", "iso3": "HRV", "value": "States with a national AI strategy"},
+        {"name": "Cyprus", "iso3": "CYP", "value": "States with a national AI strategy"},
+        {"name": "Czech Republic", "iso3": "CZE", "value": "States with a national AI strategy"},
+        {"name": "Denmark", "iso3": "DNK", "value": "States with a national AI strategy"},
+        {"name": "Egypt", "iso3": "EGY", "value": "States with a national AI strategy"},
+        {"name": "Estonia", "iso3": "EST", "value": "States with a national AI strategy"},
+        {"name": "Finland", "iso3": "FIN", "value": "States with a national AI strategy"},
+        {"name": "France", "iso3": "FRA", "value": "States with a national AI strategy"},
+        {"name": "Germany", "iso3": "DEU", "value": "States with a national AI strategy"},
+        {"name": "Greece", "iso3": "GRC", "value": "States with a national AI strategy"},
+        {"name": "Hungary", "iso3": "HUN", "value": "States with a national AI strategy"},
+        {"name": "India", "iso3": "IND", "value": "States with a national AI strategy"},
+        {"name": "Indonesia", "iso3": "IDN", "value": "States with a national AI strategy"},
+        {"name": "Ireland", "iso3": "IRL", "value": "States with a national AI strategy"},
+        {"name": "Israel", "iso3": "ISR", "value": "States with a national AI strategy"},
+        {"name": "Italy", "iso3": "ITA", "value": "States with a national AI strategy"},
+        {"name": "Japan", "iso3": "JPN", "value": "States with a national AI strategy"},
+        {"name": "Jordan", "iso3": "JOR", "value": "States with a national AI strategy"},
+        {"name": "Kenya", "iso3": "KEN", "value": "States with a national AI strategy"},
+        {"name": "Latvia", "iso3": "LVA", "value": "States with a national AI strategy"},
+        {"name": "Lithuania", "iso3": "LTU", "value": "States with a national AI strategy"},
+        {"name": "Luxembourg", "iso3": "LUX", "value": "States with a national AI strategy"},
+        {"name": "Malta", "iso3": "MLT", "value": "States with a national AI strategy"},
+        {"name": "Mexico", "iso3": "MEX", "value": "States with a national AI strategy"},
+        {"name": "Morocco", "iso3": "MAR", "value": "States with a national AI strategy"},
+        {"name": "Netherlands", "iso3": "NLD", "value": "States with a national AI strategy"},
+        {"name": "New Zealand", "iso3": "NZL", "value": "States with a national AI strategy"},
+        {"name": "Nigeria", "iso3": "NGA", "value": "States with a national AI strategy"},
+        {"name": "Norway", "iso3": "NOR", "value": "States with a national AI strategy"},
+        {"name": "Oman", "iso3": "OMN", "value": "States with a national AI strategy"},
+        {"name": "Peru", "iso3": "PER", "value": "States with a national AI strategy"},
+        {"name": "Philippines", "iso3": "PHL", "value": "States with a national AI strategy"},
+        {"name": "Poland", "iso3": "POL", "value": "States with a national AI strategy"},
+        {"name": "Portugal", "iso3": "PRT", "value": "States with a national AI strategy"},
+        {"name": "Qatar", "iso3": "QAT", "value": "States with a national AI strategy"},
+        {"name": "Romania", "iso3": "ROU", "value": "States with a national AI strategy"},
+        {"name": "Russia", "iso3": "RUS", "value": "States with a national AI strategy"},
+        {"name": "Saudi Arabia", "iso3": "SAU", "value": "States with a national AI strategy"},
+        {"name": "Serbia", "iso3": "SRB", "value": "States with a national AI strategy"},
+        {"name": "Sierra Leone", "iso3": "SLE", "value": "States with a national AI strategy"},
+        {"name": "Singapore", "iso3": "SGP", "value": "States with a national AI strategy"},
+        {"name": "Slovenia", "iso3": "SVN", "value": "States with a national AI strategy"},
+        {"name": "South Africa", "iso3": "ZAF", "value": "States with a national AI strategy"},
+        {"name": "South Korea", "iso3": "KOR", "value": "States with a national AI strategy"},
+        {"name": "Spain", "iso3": "ESP", "value": "States with a national AI strategy"},
+        {"name": "Sweden", "iso3": "SWE", "value": "States with a national AI strategy"},
+        {"name": "Switzerland", "iso3": "CHE", "value": "States with a national AI strategy"},
+        {"name": "Taiwan", "iso3": "TWN", "value": "States with a national AI strategy"},
+        {"name": "Thailand", "iso3": "THA", "value": "States with a national AI strategy"},
+        {"name": "Tunisia", "iso3": "TUN", "value": "States with a national AI strategy"},
+        {"name": "Turkey", "iso3": "TUR", "value": "States with a national AI strategy"},
+        {"name": "Ukraine", "iso3": "UKR", "value": "States with a national AI strategy"},
+        {"name": "United Arab Emirates", "iso3": "ARE", "value": "States with a national AI strategy"},
+        {"name": "United Kingdom", "iso3": "GBR", "value": "States with a national AI strategy"},
+        {"name": "United States", "iso3": "USA", "value": "States with a national AI strategy"},
+        {"name": "Uruguay", "iso3": "URY", "value": "States with a national AI strategy"},
+        {"name": "Uzbekistan", "iso3": "UZB", "value": "States with a national AI strategy"},
+        {"name": "Vietnam", "iso3": "VNM", "value": "States with a national AI strategy"}
+
+        ]}
+    />
+  </LayeredMap>
+
 
   It is no wonder that militaries worldwide are keen to implement AI to enhance their capabilities.[^2] The number of military applications for AI are vast:
   - Analysis of data collected by all kinds of sensors on the battlefield
@@ -62,7 +147,7 @@ reading_time: 15
   While most people think they know what AI is, it is always important to clarify what is understood by the term ‘AI’ in a specific context. There are two basic forms of AI. On the one hand, we have very complex ‘expert systems’, which can be understood as tremendously complex decision trees, where the system ‘decides’ based on a high number of different variables. In principle, these systems are deterministic as the same starting conditions always lead to the same result. Yet, due to the sheer complexity and number of variables, humans do have difficulty keeping up. While these systems were very common a few decades ago, modern systems use a different approach.
    <Figure
     size="medium"
-    src="LU15_PC06-AIsystems.png"
+    src="LU15_E1_inhalte_grafiken_18022025_LU_15_5.svg"
     caption="Expert system vs neural net"
     credit="Grübelfabrik, CC BY-NC-SA"
     alt="Schematic drawing of an expert system on the one side (based on a complex decision tree) and a machine learning approach on the other (based on a neural network)."
@@ -82,6 +167,85 @@ reading_time: 15
 </LectureVideo>
 
 One of the most important initiatives is the ‘[Political Declaration on Responsible Military Use of Artificial Intelligence and Autonomy](https://www.state.gov/political-declaration-on-responsible-military-use-of-artificial-intelligence-and-autonomy/)’ –  launched in early 2023 by the United States and (as of February 2025) endorsed by 58 states.[^4]
+<LayeredMap
+  centerLat={20}
+  centerLong={0}
+  mapScale={1}
+  layout="large"
+  legendTitle="States with responsible military use of AI"
+  legendPosition="bottom-left"
+  title="States with responsible military use of AI"
+  credit="Data: Natural Earth. Graphic: PRIF"
+  license="cc-by-4"
+  altText="States with responsible military use of AI"
+>
+  <CountryStatisticsLayer
+    colors={['#0D425B']}
+    data={[
+
+    { "name": "Albania", "iso3": "ALB", "value": "States with responsible military use of AI" },
+    { "name": "Antigua and Barbuda", "iso3": "ATG", "value": "States with responsible military use of AI" },
+    { "name": "Armenia", "iso3": "ARM", "value": "States with responsible military use of AI" },
+    { "name": "Australia", "iso3": "AUS", "value": "States with responsible military use of AI" },
+    { "name": "Austria", "iso3": "AUT", "value": "States with responsible military use of AI" },
+    { "name": "Bahrain", "iso3": "BHR", "value": "States with responsible military use of AI" },
+    { "name": "Belgium", "iso3": "BEL", "value": "States with responsible military use of AI" },
+    { "name": "Bulgaria", "iso3": "BGR", "value": "States with responsible military use of AI" },
+    { "name": "Canada", "iso3": "CAN", "value": "States with responsible military use of AI" },
+    { "name": "Croatia", "iso3": "HRV", "value": "States with responsible military use of AI" },
+    { "name": "Cyprus", "iso3": "CYP", "value": "States with responsible military use of AI" },
+    { "name": "Czech Republic", "iso3": "CZE", "value": "States with responsible military use of AI" },
+    { "name": "Denmark", "iso3": "DNK", "value": "States with responsible military use of AI" },
+    { "name": "Djibouti", "iso3": "DJI", "value": "States with responsible military use of AI" },
+    { "name": "Dominican Republic", "iso3": "DOM", "value": "States with responsible military use of AI" },
+    { "name": "Estonia", "iso3": "EST", "value": "States with responsible military use of AI" },
+    { "name": "Ethiopia", "iso3": "ETH", "value": "States with responsible military use of AI" },
+    { "name": "Finland", "iso3": "FIN", "value": "States with responsible military use of AI" },
+    { "name": "France", "iso3": "FRA", "value": "States with responsible military use of AI" },
+    { "name": "Georgia", "iso3": "GEO", "value": "States with responsible military use of AI" },
+    { "name": "Germany", "iso3": "DEU", "value": "States with responsible military use of AI" },
+    { "name": "Greece", "iso3": "GRC", "value": "States with responsible military use of AI" },
+    { "name": "Hungary", "iso3": "HUN", "value": "States with responsible military use of AI" },
+    { "name": "Iceland", "iso3": "ISL", "value": "States with responsible military use of AI" },
+    { "name": "Ireland", "iso3": "IRL", "value": "States with responsible military use of AI" },
+    { "name": "Israel", "iso3": "ISR", "value": "States with responsible military use of AI" },
+    { "name": "Italy", "iso3": "ITA", "value": "States with responsible military use of AI" },
+    { "name": "Japan", "iso3": "JPN", "value": "States with responsible military use of AI" },
+    { "name": "Kosovo", "iso3": "XKX", "value": "States with responsible military use of AI" },
+    { "name": "Latvia", "iso3": "LVA", "value": "States with responsible military use of AI" },
+    { "name": "Liberia", "iso3": "LBR", "value": "States with responsible military use of AI" },
+    { "name": "Libya", "iso3": "LBY", "value": "States with responsible military use of AI" },
+    { "name": "Lithuania", "iso3": "LTU", "value": "States with responsible military use of AI" },
+    { "name": "Luxembourg", "iso3": "LUX", "value": "States with responsible military use of AI" },
+    { "name": "Malawi", "iso3": "MWI", "value": "States with responsible military use of AI" },
+    { "name": "Malta", "iso3": "MLT", "value": "States with responsible military use of AI" },
+    { "name": "Montenegro", "iso3": "MNE", "value": "States with responsible military use of AI" },
+    { "name": "Morocco", "iso3": "MAR", "value": "States with responsible military use of AI" },
+    { "name": "Netherlands", "iso3": "NLD", "value": "States with responsible military use of AI" },
+    { "name": "New Zealand", "iso3": "NZL", "value": "States with responsible military use of AI" },
+    { "name": "North Macedonia", "iso3": "MKD", "value": "States with responsible military use of AI" },
+    { "name": "Panama", "iso3": "PAN", "value": "States with responsible military use of AI" },
+    { "name": "Paraguay", "iso3": "PRY", "value": "States with responsible military use of AI" },
+    { "name": "Poland", "iso3": "POL", "value": "States with responsible military use of AI" },
+    { "name": "Portugal", "iso3": "PRT", "value": "States with responsible military use of AI" },
+    { "name": "Republic of Korea", "iso3": "KOR", "value": "States with responsible military use of AI" },
+    { "name": "Romania", "iso3": "ROU", "value": "States with responsible military use of AI" },
+    { "name": "San Marino", "iso3": "SMR", "value": "States with responsible military use of AI" },
+    { "name": "Singapore", "iso3": "SGP", "value": "States with responsible military use of AI" },
+    { "name": "Slovakia", "iso3": "SVK", "value": "States with responsible military use of AI" },
+    { "name": "Slovenia", "iso3": "SVN", "value": "States with responsible military use of AI" },
+    { "name": "Spain", "iso3": "ESP", "value": "States with responsible military use of AI" },
+    { "name": "Sweden", "iso3": "SWE", "value": "States with responsible military use of AI" },
+    { "name": "Switzerland", "iso3": "CHE", "value": "States with responsible military use of AI" },
+    { "name": "Türkiye", "iso3": "TUR", "value": "States with responsible military use of AI" },
+    { "name": "Ukraine", "iso3": "UKR", "value": "States with responsible military use of AI" },
+    { "name": "United Kingdom", "iso3": "GBR", "value": "States with responsible military use of AI" },
+    { "name": "United States", "iso3": "USA", "value": "States with responsible military use of AI" }
+
+      ]}
+  />
+</LayeredMap>
+
 
 The declaration features ten measures, including, for example, the call for states to take proactive steps to minimise unintended bias; train users to sufficiently understand the capabilities and limitations of AI-powered systems; ensure that AI capabilities only have explicit, well-defined uses; and implement appropriate safeguards, e.g. the ability to deactivate a system when it shows unintended behaviour.
 
@@ -101,7 +265,7 @@ But an even more profound revolution in computing is in the starting blocks, one
   Superposition is the first such phenomenon used for this purpose. It involves superposing different states. Quantum computers use superposition in quantum bits (qubits), which, unlike classical bits with their two discrete states (1 or 0), can take on all states between 1 and 0 at the same time. Quantum computers thus offer massive parallel computing performance compared with classical computers. They are also better at scaling – at least in theory – because ideally every additional qubit doubles the computer’s performance, which thus grows exponentially. With computing tasks of exponentially increasing complexity, quantum computers develop solutions quickly (in seconds or minutes) where even the biggest classical supercomputers would need too much time (tens of thousands of years). This is what is commonly understood by the term ‘quantum supremacy’.
   <Figure
     size="medium"
-    src="LU15_PC07-Computers.png"
+    src="LU15_E1_inhalte_grafiken_18022025_LU_15_6.svg"
     caption="Speed advantage through 'quantum supremacy'"
     credit="Grübelfabrik, CC BY-NC-SA"
     alt=""
