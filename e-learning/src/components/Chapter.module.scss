@@ -93,7 +93,13 @@
 .body-text {
   @extend %copy;
   display: contents;
-
+h2,h3,h4{
+  margin-bottom:1em;
+  margin-top:1em;
+}
+  ol,ul{
+    margin-bottom: 1.5rem;
+  }
   table {
     @extend %caption;
     margin-top: 0.5em;

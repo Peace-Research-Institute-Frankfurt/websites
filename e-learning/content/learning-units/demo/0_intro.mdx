@@ -1,5 +1,5 @@
 ---
-title: This is the Chapter Title
+title: Demo Title
 intro: This is an optional introduction to the chapter. It can give additional context to the chapter title, or otherwise prepare the reader for the text that follows. There is no character limit, but aim for 20-30 words.
 order: 1
 reading_time: 9
@@ -29,13 +29,20 @@ Show an inline table.
 
 <LectureVideo lu="15" vl="vl1" provider="">
 
+
+
 This is the video's transcript. It can contain **bold**, _italics_, [links](#1), and most of the components listed below.
 
 </LectureVideo>
 
+  <LectureVideo smil="/lu03/LU03.05_final.smil" autostart="1" provider="video-stream">
+  </LectureVideo>
+
 ## Glossary Terms
 
 Show an inline definition for technical terms or abbreviations like <Term t="UNSCR-1540"/> or <Term t="CWC"/>. Term definitions are global across all learning units, and you can embed existing definitions into your text. Definitions you provide will in turn become available to all other learning unit authors.
+
+Use **displayBy="title"**  <Term t="UNSCR-1540" displayBy="title"/> if the title is to be displayed instead of the term_id from the glossary
 
 ## Figure
 
@@ -45,10 +52,11 @@ Both raster images (PNG, JPG, etc.) and vector images (SVG) are supported. Raste
   size="medium"
   src="ban-is-coming.jpg"
   caption="This is the caption for this medium-sized image."
-  credit="This is the image credit"
-  alt=""
-  license="cc-by-2"
+  alt="This is the alt text for this medium-sized image."
+  credit="Grübelfabrik (CC BY NC)"
+  license=""
   discourageSaving={true}
+  expandable={true}
 ></Figure>
 
 ## Image gallery
@@ -157,11 +165,27 @@ Our existing learning units include a series of interactive graphics produced by
 
 ### Medium
 
-<Embed src="/treaty/index.html" size="medium" caption="Embeds can have a caption to give additional context. This has no character limit." />
+&lt;Embed src="/treaty/index.html" size="medium" caption="Embeds can have a caption to give additional context. This has no character limit." /&gt;
+
+
+
+<Embed src="https://go2.stream/RKSV21aLYhDN" size="medium" caption="Embeds can have a caption to give additional context. This has no character limit."/>
+
+**doesn't work**
 
 ### Large
 
-<Embed src="/treaty/index.html" size="large" />
+&lt;Embed src="/treaty/index.html" size="large" /&gt;
+
+**doesn't work**
+
+## Video (local in static/Assets)
+<p>
+<video width="100%" autoPlay loop muted playsInline controls>
+  <source src="/Assets/LU01-PC01-01_Grfx---LOOP-outputWEB_1.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+</p>
 
 ## Resolution
 

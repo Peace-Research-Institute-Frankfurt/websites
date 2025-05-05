@@ -24,6 +24,11 @@ export default function LayeredMap({
   layout,
   legendPosition = 'top-left',
 }) {
+  if (!caption && title) {
+    caption = title
+  } else if (!title && caption) {
+    title = caption
+  }
   const min = 263
   const max = 2000
   const scale = min + ((max - min) / 9) * (mapScale - 1)

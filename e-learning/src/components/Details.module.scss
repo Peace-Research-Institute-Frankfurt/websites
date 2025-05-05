@@ -42,7 +42,7 @@
   border: $text-border;
   border-radius: var(--br);
   grid-column: 1/6;
-  margin: 0.5em 0;
+  margin: 0 0 1em 0;
   counter-reset: li;
   @include bp(m) {
     grid-column: 3/4;

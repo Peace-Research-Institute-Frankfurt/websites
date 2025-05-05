@@ -7,5 +7,24 @@
     "status": "adopted",
     "text": "https://undocs.org/Home/Mobile?FinalSymbol=S%2FRES%2F1540(2004)",
     "description": "UNSCR 1540 establishes new obligations for member states to develop and enforce legal and regulatory measures against the proliferation of chemical, biological, radiological, and nuclear weapons and their means of delivery, in particular, to prevent the spread of weapons of mass destruction to non-state actors."
+  },
+  {
+    "name": "A/RES/71/258",
+    "title": "Taking forward multilateral nuclear disarmament negotiations",
+    "meeting": "68th plenary meeting",
+    "date": "2016-12-23",
+    "status": "adopted",
+    "text": "https://docs.un.org/en/A/RES/71/258",
+    "description": "This resolution mandated a 'United Nations Conference to Negotiate a Legally Binding Instrument to Prohibit Nuclear Weapons, Leading Towards their Total Elimination'"
+  },
+  {
+    "name": "A/RES/1(I)",
+    "title": "ESTABLISHMENT 0F A COMMISSION TO DEAL WITH THE PROBLEMS RAISED BY THE DISCOVERY 0F ATOMIC ENERGY",
+    "meeting": "UN General Assembly 1st session",
+    "date": "1946-01-24",
+    "status": "adopted",
+    "text": "https://docs.un.org/en/A/RES/1(I)",
+    "description": "This resolution mandated an Atomic Energy Commission, charged among other things with submitting proposals for 'the elimination of atomic weapons from national armaments'"
   }
 ]
+
