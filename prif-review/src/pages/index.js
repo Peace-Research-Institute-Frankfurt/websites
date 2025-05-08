@@ -75,7 +75,7 @@ const Index = ({ data, pageContext, location }) => {
       <main className={styles.container}>
         <PostHeader
           title={t('PRIF Review')}
-          intro="Die Jahresberichte des Peace Research Institute Frankfurt geben Auskunft über alle relevanten Ergebnisse aus Forschung und Wissens­transfer."
+          intro="Die Jahresberichte des Peace Research Institute Frankfurt geben Auskunft über relevante Ergebnisse aus Forschung und Wissens­transfer."
         />
         <section className={styles.body}>
           <p>
