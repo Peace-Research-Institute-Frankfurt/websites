@@ -49,13 +49,14 @@ export default function Treaty({ name }) {
     }
   `)
 
+
   let treaty = null
   data.treaties.nodes.forEach((node) => {
     if (node.name === name) {
       treaty = node
     }
   })
-  if (!treaty) {
+  if (!treaty){
     return (
       <p>
         Treaty <code>{name}</code> not found
@@ -78,7 +79,7 @@ export default function Treaty({ name }) {
   })
 
   const memberCount = treaty.participants.reduce((prev, country) => {
-    const s = ['ratification', 'accession', 'acceptance', 'succession']
+    const s = ['ratification', 'accession', 'acceptance', 'succession', 'signature']
     const found = country.events.findIndex((event) => {
       return s.indexOf(event.type) !== -1
     })
@@ -88,7 +89,7 @@ export default function Treaty({ name }) {
   return (
     <section className={styles.container}>
       <Expandable buttonComponent={Button}>
-        <h2 className={styles.title}>{treaty.shortTitle || treaty.title}</h2>
+        <h2 className={styles.title}>{treaty.title || treaty.shortTitle}</h2>
         <ChipGroup>
           {treaty.date && <Chip>Effective {treaty.date}</Chip>}
           {treaty.legalStatus && <Chip>{treaty.legalStatus}</Chip>}

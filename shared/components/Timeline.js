@@ -29,11 +29,13 @@ function Event({ styles, date, title, collapsed, children }) {
             <span className={styles.eventDate}>{date}</span>
             <h3 className={styles.eventTitle}>{title}</h3>
           </div>
-          <button className={styles.eventToggle} onClick={handleToggle}>
-            {isCollapsed ? 'Expand' : 'Collapse'}
-          </button>
+          {children && (
+            <button className={styles.eventToggle} onClick={handleToggle}>
+              {isCollapsed ? 'Expand' : 'Collapse'}
+            </button>
+          )}
         </div>
-        {!isCollapsed && <div className={styles.eventContent}>{children}</div>}
+        {children && !isCollapsed && <div className={styles.eventContent}>{children}</div>}
       </div>
     </li>
   )

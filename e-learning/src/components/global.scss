@@ -140,7 +140,12 @@ button {
   font-family: inherit;
   letter-spacing: inherit;
 }
-
+.timeline-noCollapse{
+  grid-column: 3/4;
+  button{
+    display:none
+  }
+}
 ::selection {
   background-color: var(--blue-60);
   color: white;
@@ -166,15 +171,24 @@ body {
 .gatsby-image-wrapper [data-main-image] {
   transition: 100ms;
 }
+#lightboxes  .gatsby-image-wrapper {
+  position: initial !important;
+  overflow: hidden;
+  display: inline-block !important;
+  vertical-align: top;
+}
+
 .footnotes {
   @extend %caption;
   border-top: $text-border;
   margin-top: 1em;
   padding-top: 2em;
+  padding-left:0.5em;
   grid-column: 1 / 6;
   @include bp(m) {
     grid-column: 3 / 4;
   }
+
   #footnote-label {
     position: absolute;
     font-size: 0;
@@ -187,14 +201,14 @@ body {
     overflow-wrap: break-word;
     word-wrap: break-word;
     word-break: break-word;
-    display: inline-block;
     counter-increment: li;
     position: relative;
+    display:block;
 
     &:before {
       content: counter(li) '.';
       position: absolute;
-      left: -1.2em;
+      left: -1.5em;
     }
   }
   ol {
@@ -210,4 +224,14 @@ body {
 
 .data-footnote-backref {
   display: none;
+}
+header summary::-webkit-details-marker{
+  display:none;
+}
+sup {
+  white-space: nowrap;
+}
+small {
+  font-size: 0.75em;
+  margin-bottom:0.5em;
 }

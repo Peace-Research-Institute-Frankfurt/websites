@@ -22,6 +22,7 @@ export const query = graphql`
           }
           frontmatter {
             title
+            intro
             order
           }
         }

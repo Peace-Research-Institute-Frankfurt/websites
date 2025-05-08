@@ -1,5 +1,23 @@
 [
   {
+    "name": "PSI",
+    "title": "Proliferation Security Initiative (PSI)",
+    "established": "2003-05-01",
+    "description": "The Proliferation Security Initiative (PSI) was founded by the United States in May 2003 as a reaction to the 9-11 attacks. It aims at combating the proliferation of weapons of mass destruction (WMD), their delivery systems, and related materials and enhancing international cooperation in detecting, intercepting, and preventing the transport of these items. The US invited other states to join voluntarily.",
+    "members": [
+      "AF", "AL", "AD", "AO", "AG", "AR", "AM", "AU", "AT", "AZ", "BS", "BH", "BY", "BE", "BZ", "BJ", "BA", "BN", "BG", "KH", "CA", "CL", "CO", "HR", "CY", "CZ", "DK", "DJ", "DM", "DO", "SV", "GQ", "EE", "FJ", "FI", "FR", "GE", "DE", "GH", "GR", "GW", "VA", "HN", "HU", "IS", "IQ", "IE", "IL", "IT", "JP", "JO", "KZ", "KR", "KW", "KG", "LV", "LR", "LY", "LI", "LT", "LU", "MG", "MY", "MT", "MH", "FM", "MD", "MN", "ME", "MA", "NL", "NZ", "MK", "NO", "OM", "PW", "PA", "PG", "PY", "PH", "PL", "PT", "QA", "RO", "WS", "SM", "SA", "RS", "SG", "SK", "SI", "ES", "LK", "LC", "VC", "SE", "CH", "TJ", "TH", "GM", "TG", "TO", "TT", "TN", "TR", "TM", "UA", "AE", "GB", "US", "UZ", "VU", "VN", "YE", "ZM"],
+    "website": "https://www.psi-online.info"
+  },
+  {
+    "name": "HCoC",
+    "title": "The Hague Code of Conduct against Ballistic Missile Proliferation",
+    "established": "2002-11-26",
+    "text": "https://undocs.org/Home/Mobile?FinalSymbol=S%2FRES%2F1540(2004)",
+    "description": "The Hague Code of Conduct against Ballistic Missile Proliferation (HCoC) is a multilateral, voluntary initiative aimed at preventing the spread of ballistic missiles capable of delivering weapons of mass destruction (WMD). Established in 2002, it complements existing non-proliferation measures like the Missile Technology Control Regime (MTCR). The HCoC promotes transparency and confidence-building through annual declarations on ballistic missile and space-launch programs, as well as pre-launch notifications. While not legally binding, it encourages responsible behavior among its 145 subscribing states, serving as a critical tool for global security by fostering dialogue and cooperation to limit the proliferation of missile technologies.",
+    "members": ["AF", "AL", "AD", "AG", "AR", "AM", "AU", "AT", "AZ", "BY", "BE", "BJ", "BA", "BG", "BF", "BI", "KH", "CM", "CA", "CV", "CF", "TD", "CL", "CO", "KM", "CG", "CK", "CR", "HR", "CY", "CZ", "DK", "DM", "DO", "EC", "SV", "GQ", "ER", "EE", "ET", "FJ", "FI", "FR", "GA", "GM", "GE", "DE", "GH", "GR", "GT", "GN", "GW", "GY", "HT", "VA", "HN", "HU", "IS", "IN", "IQ", "IE", "IT", "JP", "JO", "KZ", "KE", "KI", "LV", "LS", "LR", "LY", "LI", "LT", "LU", "MG", "MW", "MV", "ML", "MT", "MH", "MR", "FM", "MC", "MN", "ME", "MA", "MZ", "NL", "NZ", "NI", "NE", "NG", "MK", "NO", "PW", "PA", "PG", "PY", "PE", "PH", "PL", "PT", "KR", "RO", "RU", "RW", "WS", "SM", "ST", "SN", "RS", "SC", "SL", "SG", "SK", "SI", "SO", "ZA", "ES", "KN", "VC", "SD", "SR", "SE", "CH", "TJ", "TZ", "TL", "TG", "TO", "TN", "TR", "TM", "TV", "UG", "UA", "GB", "US", "UY", "UZ", "VU", "VE", "ZM"],
+      "website": "https://www.hcoc.at/"
+  },
+  {
     "name": "opcw",
     "title": "Organisation for the Prohibition of Chemical Weapons",
     "established": "1997-04-29",
@@ -7,5 +25,33 @@
     "description": "The Organisation for the Prohibition of Chemical Weapons (OPCW) is  the implementing body for the Chemical Weapons Convention (CWC), which entered into force on 29 April 1997.",
     "members": ["AL", "BE"],
     "website": "https://www.opcw.org/"
+  },
+  {
+    "name": "mctr",
+    "title": "Missile Technology Control Regime",
+    "established": "1987-04-16",
+    "text": "https://undocs.org/Home/Mobile?FinalSymbol=S%2FRES%2F1540(2004)",
+    "description": "The Missile Technology Control Regime (MTCR) is a multilateral, voluntary partnership to prevent the proliferation of missile and unmanned aerial vehicle (UAV) technology capable of delivering weapons of mass destruction (WMD). It focuses on controlling exports of missiles, equipment, software, and technology for missiles.",
+    "members": ["AR", "AU", "AT", "BE", "BR", "BG", "CA", "CZ", "DK", "FI", "FR", "DE", "GR", "HU", "IS", "IN", "IE", "IT", "JP", "LU", "NL", "NZ", "NO", "PL", "PT", "KR", "RU", "ZA", "ES", "SE", "CH", "TR", "UA", "UK", "US"],
+    "website": "https://www.opcw.org/"
+  },
+  {
+    "name": "wasse",
+    "title": "Wassenaar Arrangement ",
+    "established": "1996-07-12",
+    "text": "https://www.wassenaar.org/app/uploads/2019/12/WA-DOC-19-Public-Docs-Vol-I-Founding-Documents.pdf",
+    "description": "The Wassenaar Arrangement is a multilateral export control regime established on July 12, 1996, in Wassenaar, Netherlands. It aims to promote transparency and responsibility in transfers of conventional arms and dual-use goods and technologies, thereby preventing destabilizing accumulations. Participating states implement national policies to ensure that such transfers do not contribute to the development or enhancement of military capabilities that undermine regional and international security. The Arrangement facilitates information exchange on transfers and denials of specified controlled items to non-participating states, enhancing cooperation among members. It is not legally binding and decisions are made by consensus. The Wassenaar Arrangement's Secretariat is located in Vienna, Austria.",
+    "members": ["AR", "AU", "AT", "BE", "BG", "CA", "HR", "CZ", "DK", "EE", "FI", "FR", "DE", "GR", "HU", "IN", "IE", "IT", "JP", "LV", "LT", "LU", "MT", "MX", "NL", "NZ", "NO", "PL", "PT", "KR", "RO", "RU", "SK", "SI", "ZA", "ES", "SE", "CH", "TR", "UA", "UK", "US"],
+    "website": "https://www.wassenaar.org"
+  },
+  {
+    "name": "ausgroup",
+    "title": "Australia Group",
+    "established": "1996-06",
+    "text": "https://www.dfat.gov.au/publications/minisite/theaustraliagroupnet/site/en/background.html",
+    "description": "The Australia Group (AG) is a multilateral export control regime formed in June 1985 to prevent the proliferation of chemical and biological weapons. It harmonizes export controls among member countries to ensure that exports do not contribute to the development of such weapons. The AG maintains control lists of chemicals, biological agents, and related equipment that could be misused for weapons production. Members commit to implementing these controls and sharing information to enhance global security. The group convenes annually to review and update its control measures in response to emerging threats.",
+    "members": ["AR", "AU", "AT", "BE", "BG", "CA", "HR", "CY", "CZ", "DK", "EE", "EU", "FI", "FR", "DE", "GR", "HU", "IS", "IN", "IE", "IT", "JP", "LV", "LT", "LU", "MT", "MX", "NL", "NZ", "NO", "PL", "PT", "KR", "RO", "SK", "SI", "ES", "SE", "CH", "TR", "UA", "UK", "US"],
+    "website": "https://www.dfat.gov.au/publications/minisite/theaustraliagroupnet/site/en/index.html"
   }
+
 ]
