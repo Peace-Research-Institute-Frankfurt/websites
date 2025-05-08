@@ -79,10 +79,7 @@ const Index = ({ data, pageContext, location }) => {
         />
         <section className={styles.body}>
           <p>
-            Der ausführliche Daten- und Faktenteil listet alle Publikationen, organisierte Konferenzen und Panels, Vorträge, Auszeichnungen,
-            Lehrveran­staltungen, Gremien­tätigkeiten und vieles mehr der Wissen­schaft­lerinnen und Wissenschaftler eines Jahres auf. Der
-            redaktionelle Teil stellt Highlights aus den Programm­bereichen und Forschungs­gruppen wie Projekt­abschlüsse, inter­nationale Konferenzen
-            und Transfer­projekte vor.
+          Die PRIF Jahresberichte präsentieren Einblicke in die Ergebnisse aus unserer Forschung und der Wissenschaftskommunikation des vergangenen Jahres. Die redaktionellen Artikel thematisieren verschiedene Forschungsthemen, stellen neue Projekte vor und präsentieren die Ergebnisse abgeschlossener Projekte. Die Beiträge werden ergänzt durch einen Jahresrückblick über Publikationen, Medienarbeit und weitere Zahlen und Fakten zum Institut.
           </p>
           <ol className={styles.reports}>
             <li className={styles.reportLabels}>
