@@ -9,7 +9,7 @@ This folder contains the [Gatsby](https://www.gatsbyjs.com/docs) source for EUNP
 
 ## Local development
 
-- `git pull https://github.com/Peace-Research-Institute-Frankfurt/websites.git`
+- `git clone https://github.com/Peace-Research-Institute-Frankfurt/websites.git`
 - `cd ./websites/e-learning`
 - `npm install` to install Node dependencies
 - `npm run start` to start a live-reloading development server at [localhost:8000](https://localhost:8000)
