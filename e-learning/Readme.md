@@ -14,7 +14,7 @@ This folder contains the [Gatsby](https://www.gatsbyjs.com/docs) source for EUNP
 - `npm install` to install Node dependencies
 - `npm run start` to start a live-reloading development server at [localhost:8000](https://localhost:8000)
 - `npm run start -- --host 0.0.0.0` to start a live-reloading development server at any IP
-- `npm run start` to create the static deployment ready version. It will be place in ./public/
+- `npm run build` to create the static deployment ready version. It will be place in ./public/
 All React code lives in the `src` directory, all content (including author information, images, structured data, etc.) lives in `content`.
 
 ## Deployment
