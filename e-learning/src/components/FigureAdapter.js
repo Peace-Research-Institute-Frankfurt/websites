@@ -53,9 +53,6 @@ export default function FigureAdapter({ styles, caption, credit, size, alt, src,
       licenseNode = l
     }
   })
-  if (credit!=="") {
-    credit = "Source: " + credit;
-  }
   const [lightboxTargetEl, setLightboxTargetEl] = useState(null)
 
   // Prepare render target for lightboxes

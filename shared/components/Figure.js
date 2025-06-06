@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { createPortal } from 'react-dom'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import MarkdownRenderer from 'react-markdown-renderer'
 import ExpandIcon from '../assets/expand.svg'
 import CollapseIcon from '../assets/collapse.svg'
+import ReactMarkdown from 'react-markdown'
 
 export default function Figure({
   styles,
@@ -62,15 +62,19 @@ export default function Figure({
           </div>
           {(credit || caption) && (
             <figcaption className={styles.captions}>
-              {caption && <MarkdownRenderer className={styles.caption} markdown={caption} />}
+              {caption && <span className={styles.caption}>{caption}</span>}
               {credit && (
                 <span className={styles.credit}>
-                  <MarkdownRenderer markdown={credit} />
-                  {license && (
-                    <>
-                      {','} {license.url ? <a href={license.url}>{license.title}</a> : <>{license.title}</>}.
-                    </>
-                  )}
+                  <ReactMarkdown
+                    components={{
+                      p: ({ node, ...props }) => <span {...props} />, // Kein <p>
+                      a: ({ node, ...props }) => (
+                        <a {...props} target="_blank" rel="noopener noreferrer" />
+                      ), // Links im neuen Tab
+                    }}
+                  >
+                    {`Source: ${credit}${license ? `, [${license.title}](${license.url})` : ''}.`}
+                  </ReactMarkdown>
                 </span>
               )}
             </figcaption>
