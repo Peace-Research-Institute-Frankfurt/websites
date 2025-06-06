@@ -4,7 +4,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import ExpandIcon from '../assets/expand.svg'
 import CollapseIcon from '../assets/collapse.svg'
 import ReactMarkdown from 'react-markdown'
-
+//test
 export default function Figure({
   styles,
   image,
