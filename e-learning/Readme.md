@@ -8,6 +8,7 @@ This folder contains the [Gatsby](https://www.gatsbyjs.com/docs) source for EUNP
 - Node (LTS) + npm in Version 20.* & größer
 
 ## Local development
+## read carefully
 
 - `git clone https://github.com/Peace-Research-Institute-Frankfurt/websites.git`
 - `cd ./websites/e-learning`
