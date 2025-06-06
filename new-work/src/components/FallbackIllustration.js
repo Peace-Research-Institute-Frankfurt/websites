@@ -20,11 +20,12 @@ const FallbackIllustration = ({ category }) => {
     let cellsScroll = []
     let cellsFixed = []
     let currentY = 0
+    let transformTo = -1 * offsets[i] - i
     for (let j = 0; j < cellCount; j++) {
       const cellHeight = heights[j] * scale
       const cell = (
         <rect
-          key={`cell.${i}`}
+          key={`cell.${i}.${j}`}
           className={styles.cell}
           x={colWidth * i - width * 0.5 - colWidth / 2}
           y={currentY}
@@ -35,6 +36,7 @@ const FallbackIllustration = ({ category }) => {
           rx={colWidth * 0.5}
         />
       )
+
       if (j % 2 === 0) {
         cellsFixed.push(cell)
       } else {
@@ -42,17 +44,20 @@ const FallbackIllustration = ({ category }) => {
       }
       currentY += cellHeight
     }
-    const colTransform = `translate(0 ${-1 * offsets[i] - i})`
-    colsFixed.push(
-      <g key={`cols.${i}`} transform={colTransform}>
-        {cellsFixed}
-      </g>
-    )
-    colsScroll.push(
-      <g key={`cols.${i}`} transform={colTransform}>
-        {cellsScroll}
-      </g>
-    )
+
+    if (transformTo !== undefined && !isNaN(transformTo)) {
+      const colTransform = `translate(0 ${transformTo})`
+      colsFixed.push(
+        <g key={`cols.${i}`} transform={colTransform}>
+          {cellsFixed}
+        </g>
+      )
+      colsScroll.push(
+        <g key={`cols.${i}`} transform={colTransform}>
+          {cellsScroll}
+        </g>
+      )
+    }
   }
 
   return (

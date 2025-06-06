@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import Figure from '@shared/components/Figure'
-import MarkdownRenderer from 'react-markdown-renderer'
 
 export default function FigureAdapter({ styles, caption, credit, size, alt, src, license, expandable }) {
   const data = useStaticQuery(graphql`
@@ -59,7 +58,7 @@ export default function FigureAdapter({ styles, caption, credit, size, alt, src,
       lightboxTargetEl={lightboxTargetEl}
       caption={caption}
       license={licenseNode}
-      credit={<MarkdownRenderer markdown={credit} />}
+      credit={credit}
       alt={alt}
       size={size}
     />

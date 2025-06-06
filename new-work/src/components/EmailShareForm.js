@@ -17,31 +17,11 @@ export default function EmailShareForm({ posts }) {
   const [flowState, setFlowState] = useState('collapsed')
   const [formLoadingState, setFormLoadingState] = useState('default')
   const [formData, setFormData] = useState(defaultData)
-  const [formErrors, setFormErrors] = useState([])
+  const [formErrors] = useState([])
 
   useEffect(() => {
     setLocation(window.location.origin)
   }, [])
-
-  let flattenedPosts = []
-  if (posts.length > 0) {
-    flattenedPosts = posts.map((p) => {
-      let authors = ''
-      if (p.childMdx.frontmatter.authors) {
-        authors = p.childMdx.frontmatter.authors
-          .map((a) => {
-            return a.frontmatter.name
-          })
-          .join(', ')
-      }
-      return {
-        title: p.childMdx.frontmatter.title,
-        authors: authors,
-        link: `${location}/${p.childMdx.fields.slug}`,
-        origin: location,
-      }
-    })
-  }
 
   // If the server-side email fails, we fall back to a mailto link
   let mailto = ''
@@ -49,32 +29,14 @@ export default function EmailShareForm({ posts }) {
     const emailTitle = `Work New @ Leibniz`
     const emailBody = posts.map((p) => `${p.childMdx.frontmatter.title} – ${location}/${p.childMdx.fields.slug}`).join(`\n`)
     const to = formData.targetEmails.split(',').join(';')
-    mailto = `mailto:${to}?subject=${emailTitle}&body=${encodeURIComponent(`${formData.message}\n\n${emailBody}\n\nPasswort: Leibniz123\n\n`)}`
+    mailto = `mailto:${to}?subject=${emailTitle}&body=${encodeURIComponent(`${formData.message}\n\n${emailBody}`)}`
   }
 
   async function handleSubmit() {
     setFormLoadingState('loading')
-    const res = await fetch('/.netlify/functions/triggerShareEmail', {
-      method: 'POST',
-      body: JSON.stringify({
-        userEmail: formData['userEmail'],
-        targetEmails: formData['targetEmails'].split(','),
-        message: formData['message'],
-        posts: flattenedPosts,
-        origin: location,
-      }),
-    })
+    window.location.href = mailto
     setFormLoadingState('default')
-    if (res.status === 200) {
-      const data = await res.json()
-      if (data.errors) {
-        setFormErrors(data.errors)
-      } else {
-        setFlowState('success')
-      }
-    } else {
-      setFlowState('error')
-    }
+    setFlowState('success')
   }
   const defaultView = (
     <>
@@ -123,7 +85,7 @@ export default function EmailShareForm({ posts }) {
 
   const successView = (
     <div>
-      <p className={`${styles.feedback} ${styles.success}`}>Email erfolgreich verschickt!</p>
+      <p className={`${styles.feedback} ${styles.success}`}>Email erfolgreich vorbereitet!</p>
       <ButtonGroup>
         <Button size="medium" onClick={() => setFlowState('collapsed')} priority="primary" state="" label="Schließen" />
         <Button size="medium" onClick={() => setFlowState('default')} priority="secondary" state="" label="Weitere Email schicken" />
