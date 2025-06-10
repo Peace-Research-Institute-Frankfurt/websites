@@ -60,6 +60,7 @@
 }
 .event-description {
   grid-column: 2/3;
+  word-break: break-word;
   li {
     list-style: disc;
   }
