@@ -46,6 +46,19 @@ export default function FigureAdapter({ styles, caption, credit, size, alt, src,
       image = img
     }
   })
+
+// Check if src is an external URL if image not found
+if (!image && src?.startsWith('http')) {
+  let extension = 'external'
+  const match = src.toLowerCase().match(/\.(svg|jpg|jpeg|png|gif|webp)$/)
+  if (match) extension = match[1]
+  
+  image = {
+    extension: extension,
+    publicURL: src,
+  }
+}
+
   // Let's find our license
   let licenseNode = null
   data.licenses.nodes.forEach((l) => {

@@ -31,13 +31,16 @@ export default function Figure({
 
   let imageEl = <>Image not found ({src})</>
 
-  if (image) {
-    if (image.extension === 'svg') {
-      imageEl = <img className={styles.image} alt={alt} src={image.publicURL} />
-    } else {
-      imageEl = <GatsbyImage className={styles.image} image={getImage(image)} alt={alt} />
-    }
+if (image) {
+  const gatsbyImage = getImage(image)
+  if (gatsbyImage) {
+    // Gatsby-optimiertes Bild
+    imageEl = <GatsbyImage className={styles.image} image={gatsbyImage} alt={alt} />
+  } else if (image.publicURL) {
+    // Externes Bild oder SVG
+    imageEl = <img className={styles.image} alt={alt} src={image.publicURL} />
   }
+}
 
   return (
     <>
