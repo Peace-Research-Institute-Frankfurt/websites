@@ -33,8 +33,20 @@ export default function FigureAdapter({ caption, credit, alt, src, license }) {
     }
   `)
 
-  // Let's find our image
-  let image = null
+// Let's find our image
+let image = null
+const isExternal = typeof src === 'string' && src.startsWith('http')
+
+if (isExternal) {
+  let extension = 'external'
+  const match = src.toLowerCase().match(/\.(svg|jpg|jpeg|png|gif|webp)$/)
+  if (match) extension = match[1]
+  
+  image = { 
+    publicURL: src,
+    extension: extension
+  }
+} else {
   data.images.nodes.forEach((img) => {
     if (img.base === src) {
       image = img
@@ -45,6 +57,7 @@ export default function FigureAdapter({ caption, credit, alt, src, license }) {
       image = img
     }
   })
+}
   // Let's find our license
   let licenseNode = null
   data.licenses.nodes.forEach((l) => {
