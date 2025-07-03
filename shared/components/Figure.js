@@ -4,7 +4,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import ExpandIcon from '../assets/expand.svg'
 import CollapseIcon from '../assets/collapse.svg'
 import ReactMarkdown from 'react-markdown'
-//test
+import remarkGfm from 'remark-gfm'
 export default function Figure({
   styles,
   image,
@@ -69,6 +69,7 @@ if (image) {
               {credit && (
                 <span className={styles.credit}>
                   <ReactMarkdown
+                    remarkPlugins={[remarkGfm]}
                     components={{
                       p: ({ node, ...props }) => <span {...props} />, // Kein <p>
                       a: ({ node, ...props }) => (
