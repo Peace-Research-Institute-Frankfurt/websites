@@ -65,7 +65,21 @@ if (image) {
           </div>
           {(credit || caption) && (
             <figcaption className={styles.captions}>
-              {caption && <span className={styles.caption}>{caption}</span>}
+              {caption && (
+                <span className={styles.caption}>
+                  <ReactMarkdown
+                    remarkPlugins={[remarkGfm]}
+                    components={{
+                      p: ({ node, ...props }) => <span {...props} />, // Kein <p>-Block
+                      a: ({ node, ...props }) => (
+                        <a {...props} target="_blank" rel="noopener noreferrer" />
+                      ), // Links im neuen Tab
+                    }}
+                  >
+                    {caption}
+                  </ReactMarkdown>
+                </span>
+              )}
               {credit && (
                 <span className={styles.credit}>
                   <ReactMarkdown
