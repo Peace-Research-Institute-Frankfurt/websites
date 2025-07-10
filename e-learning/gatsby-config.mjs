@@ -1,5 +1,13 @@
-const adapter = require('gatsby-adapter-netlify')
+import adapter from 'gatsby-adapter-netlify'
+import remarkGfm from 'remark-gfm'
+import path from 'path'
+import { fileURLToPath } from 'url'
 
+// __dirname & __filename für ESM-kompatible Auflösung
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+
+// Wrapper für rehype-Plugins, wenn nötig (dynamisches Importieren von ESM)
 const wrapESMPlugin = (name) =>
   function wrapESM(opts) {
     return async (...args) => {
@@ -9,12 +17,12 @@ const wrapESMPlugin = (name) =>
     }
   }
 
-module.exports = {
+const config = {
   siteMetadata: {
     siteUrl: 'https://eunpdc-elearning.netlify.app',
     title: 'EUNPDC E-Learning',
     description:
-      "This course aimns to cover all aspects of the European Union's non-proliferation and disarmament agenda and provide a comprehensive knowledge resource.",
+      "This course aims to cover all aspects of the European Union's non-proliferation and disarmament agenda and provide a comprehensive knowledge resource.",
     siteTwitter: '@PRIF_org',
     authorTwitter: '@PRIF_org',
     image: {
@@ -22,12 +30,22 @@ module.exports = {
       alt: 'Stylised text: EU Non-Proliferation and Disarmament Consortium eLearning',
     },
   },
+
   pathPrefix: '/lu',
+
   flags: {
     FAST_DEV: true,
   },
-  headers: [{ source: '*', headers: [{ key: 'x-frame-options', value: 'SAMEORIGIN' }] }],
+
+  headers: [
+    {
+      source: '*',
+      headers: [{ key: 'x-frame-options', value: 'SAMEORIGIN' }],
+    },
+  ],
+
   adapter: adapter.default(),
+
   plugins: [
     'gatsby-plugin-sass',
     'gatsby-plugin-image',
@@ -52,10 +70,13 @@ module.exports = {
       resolve: 'gatsby-plugin-mdx',
       options: {
         mdxOptions: {
-          remarkPlugins: [require('remark-gfm')],
+          remarkPlugins: [remarkGfm],
           rehypePlugins: [wrapESMPlugin('rehype-slug')],
         },
-        gatsbyRemarkPlugins: ['gatsby-remark-smartypants', 'gatsby-plugin-remark-footnotes'],
+        gatsbyRemarkPlugins: [
+          'gatsby-remark-smartypants',
+          'gatsby-plugin-remark-footnotes',
+        ],
       },
     },
     {
@@ -88,3 +109,5 @@ module.exports = {
     },
   ],
 }
+
+export default config
