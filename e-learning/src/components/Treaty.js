@@ -79,7 +79,7 @@ export default function Treaty({ name }) {
   })
 
   const memberCount = treaty.participants.reduce((prev, country) => {
-    const s = ['ratification', 'accession', 'acceptance', 'succession', 'signature']
+    const s = ['ratification', 'accession', 'acceptance', 'succession']
     const found = country.events.findIndex((event) => {
       return s.indexOf(event.type) !== -1
     })
@@ -93,7 +93,7 @@ export default function Treaty({ name }) {
         <ChipGroup>
           {treaty.date && <Chip>Effective {treaty.date}</Chip>}
           {treaty.legalStatus && <Chip>{treaty.legalStatus}</Chip>}
-          <Chip>{memberCount} Member States</Chip>
+          <Chip>{memberCount} States Parties</Chip>
         </ChipGroup>
         <p className={styles.description}>{treaty.description}</p>
         <h3 className={styles.subtitle}>Current Adoption</h3>
