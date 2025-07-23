@@ -10,7 +10,7 @@
 }
 
 .iframeContainer {
-  background-color: #000; // kein default image → reines Schwarz
+  background-image: url('../assets/Podcast_default_22012025.jpg');
   width: 100%;
   padding-bottom: 56.25%;
   position: relative;
@@ -20,47 +20,8 @@
     display: block;
     position: absolute;
     width: 100%;
-    height: 100%;
     left: 0;
     border-radius: var(--br);
-  }
-}
-
-.posterOverlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1;
-
-  img {
-    width: 100%;
     height: 100%;
-    object-fit: cover;
-    border-radius: var(--br);
-  }
-
-  .playButton {
-    position: absolute;
-    font-size: 3rem;
-    color: white;
-    background: rgba(0, 0, 0, 0.7);
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-
-    &:hover {
-      background: rgba(0, 0, 0, 0.9);
-      transform: scale(1.1);
-    }
   }
 }
