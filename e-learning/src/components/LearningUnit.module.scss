@@ -200,16 +200,4 @@
   padding: 0.5em 1.5em;
 }
 
-.updates {
-  @extend %caption;
-  list-style: none;
-  li {
-    margin-bottom: 0.75em;
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-  date {
-    @extend %caption-bold;
-  }
-}
+
