@@ -27,7 +27,7 @@
 
 .container {
   margin-top: 1rem;
-  margin-bottom:1rem;
+  margin-bottom: 1rem;
   &:first-child {
     margin-top: 0;
   }
@@ -45,7 +45,7 @@
   }
   .image-container {
     margin-top: 0.5em;
-    margin-bottom:0.5em;
+    margin-bottom: 0.5em;
     grid-column: 1 / 6;
     margin-left: calc(var(--padding) * -1);
     width: calc(100% + var(--padding) * 2);
@@ -92,8 +92,8 @@
     grid-column: 3 / 4;
   }
   .image-container {
-    max-height: 80vh;
     width: auto;
+    max-height: 180vh;
     max-width: 100%;
     overflow: hidden;
   }
