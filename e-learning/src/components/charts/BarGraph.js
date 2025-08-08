@@ -13,7 +13,7 @@ import { PatternCircles, PatternLines, PatternWaves } from '@visx/pattern'
 export default function BarGraph({ data, xAxis, xAxisTitle, yAxisTitle, series, colorRangeStart = '#6889a1', colorRangeEnd = '#203b54', maxValue, title, description,legendTitle,credit,caption }) {
   const xAxisKey = xAxis ? xAxis : Object.keys(data[0])[0]
   const keys = series ? series : Object.keys(data[0]).filter((d) => d !== xAxisKey)
-  const margin = { top: 32, right: 30, bottom: 8, left: 32 }
+  const margin = { top: 32, right: 30, bottom: 32, left: 32 }
   const axisLegendHeight = 44
   const calculatedMaxVal = Math.max(...data.map((d) => Math.max(...keys.map((key) => Number(d[key])))))
   const graphId = useId()
