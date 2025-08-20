@@ -10,19 +10,34 @@
     "url": "https://creativecommons.org/licenses/by/2.0/"
   },
   {
+    "license_id": "cc-by-nc-2",
+    "title": "CC BY-NC 2.0",
+    "url": "https://creativecommons.org/licenses/by-nc/2.0/"
+  },
+  {
     "license_id": "cc-by-nc-4",
     "title": "CC BY-NC 4.0",
     "url": "https://creativecommons.org/licenses/by-nc/4.0/"
   },
   {
     "license_id": "cc-by-nc-nd-2",
-    "title": "CC BY-NC-CD 2.0",
+    "title": "CC BY-NC-ND 2.0",
     "url": "https://creativecommons.org/licenses/by-nc-nd/2.0/"
   },
   {
     "license_id": "cc-by-sa-4",
     "title": "CC BY-SA 4.0",
     "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+  },
+  {
+    "license_id": "cc-by-sa-3",
+    "title": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+  },
+  {
+    "license_id": "cc-by-sa-2",
+    "title": "CC BY-SA 2.0",
+    "url": "https://creativecommons.org/licenses/by-sa/2.0/"
   },
   {
     "license_id": "pd",
