@@ -23,6 +23,7 @@ import CountryStatisticsLayerLegend from './CountryStatisticsLayerLegend'
 
 import BarGraph from './charts/BarGraph'
 import LineChart from './charts/LineChart'
+import MixedChart from './charts/MixedChart'
 import PieChart from './charts/PieChart'
 
 const PostBody = ({ content, unit, site, setChapterList }) => {
@@ -136,6 +137,7 @@ const PostBody = ({ content, unit, site, setChapterList }) => {
     CountryStatisticsLayerLegend,
     BarGraph,
     LineChart,
+    MixedChart,
     PieChart,
   }
 

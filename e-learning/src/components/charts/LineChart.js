@@ -24,7 +24,7 @@ export default function LineChart({
   legendTitle
 }) {
   const xAxisKey = xAxis ? xAxis : Object.keys(data[0])[0]
-  const margin = { top: 32, right: 30, bottom: 8, left: 32 }
+  const margin = { top: 32, right: 30, bottom: 32, left: 32 }
   const axisLegendHeight = 44
   const keys = series ? series : Object.keys(data[0]).filter((d) => d !== xAxisKey)
   const graphId = useId()

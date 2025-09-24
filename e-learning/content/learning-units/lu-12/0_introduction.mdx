@@ -3,6 +3,7 @@ order: 1
 title: Introduction
 ---
 import InternationalArmsTrade from "../../data/international-arms-transfer.csv"
+import ArmsTrade5YearAvg from '../../data/arms-transfer-5year-averages.csv'
 
 ## Introduction to the authors and the unit
 
@@ -58,17 +59,16 @@ For as long as states have exported military and security items there have been 
 
   But the trade in these goods has continued to be seen as legitimate, and continues to be promoted in order to contribute to other objectives, including enhancing a state’s international profile or supporting their national defence industry, foreign policy, security and strategic goals. The Stockholm International Peace Research Institute (SIPRI) has collected data on the volume of transfers of major conventional arms since 1950, an overview of which you can see in the graph on the screen. The graph shows a sharp increase in the volume of transfers in the 1960s and the 1970s, followed by a decline towards the end of the Cold War, with an upward trend in international transfers of major arms being observed since the beginning of the 21st century.
 
-  <BarGraph
-    data={InternationalArmsTrade}
-    xAxis="Year"
-    xAxisTitle="Year"
-    yAxisTitle="Volume of Arms Transfer (billions of trend-indicator values)"
-    title="TODO"
-    description="TODO"
-    legendTitle="TODO"
-    caption="Volume of world-wide arms trade over time"
-    credit="SIPRI Arms Transfer Database, Graphic: PRIF"
-  />
+<MixedChart
+  lineData={InternationalArmsTrade}
+  barData={ArmsTrade5YearAvg}
+  xAxisTitle="Year"
+  yAxisTitle="Volume of Arms Transfer (billions of trend-indicator values)"
+  title="International Arms Transfers since 1950"
+  description="Line shows annual totals, bars show 5-year average annual transfers."
+  caption="The trend in international transfers of major arms, 1950-2023"
+  credit="SIPRI Arms Transfer Database, Graphic: PRIF"
+/>
 
   In the modern era, the significant increase in the international movement of goods, people and scientific knowledge led states to set up more complex national systems of controls over the trade in goods and technology they deemed sensitive. Aside from exports from one state to another, there is a range of other activities to which controls can and do apply, including imports, brokering or transit and transshipment. The policies states put in place to govern all these activities are often referred to as transfer controls, strategic trade controls or export controls. ‘Export controls’ is the term that we will use throughout the unit, but keep in mind that the scope of activities we will look at is broader than just ‘exports’.
 
