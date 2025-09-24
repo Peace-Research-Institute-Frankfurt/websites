@@ -34,6 +34,7 @@ import CountryStatisticsLayerLegend from './CountryStatisticsLayerLegend'
 
 import BarGraph from './charts/BarGraph'
 import LineChart from './charts/LineChart'
+import MixedChart from './charts/MixedChart'
 import PieChart from './charts/PieChart'
 
 import * as CalloutStyles from './Callout.module.scss'
@@ -81,6 +82,7 @@ const shortCodes = {
   BarGraph,
   PieChart,
   LineChart,
+  MixedChart,
 }
 
 const PostBody = ({ content }) => {
