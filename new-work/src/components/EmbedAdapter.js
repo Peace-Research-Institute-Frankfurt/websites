@@ -38,15 +38,6 @@ function EmbedAdapter({ provider, ...props }) {
   )
 }
 
-function Vimeo({ styles, url, width, height, caption }) {
-  const matches = url.match(/(?:vimeo.com\/)(\d+)(?:\/)(.+)/)
-  let src = null
-  if (matches && matches[1]) {
-    src = `https://player.vimeo.com/video/${matches[1]}?h=${matches[2]}&title=0&byline=0&portrait=0`
-  }
-  return <EmbedAdapter styles={styles} provider="vimeo" width={width} height={height} src={src} caption={caption} />
-}
-
 function Youtube({ styles, url, title, caption, width, height }) {
   const matches = url.match(/(?:youtube.com\/watch\?v=)(.+)/)
   return (
@@ -62,4 +53,4 @@ function Youtube({ styles, url, title, caption, width, height }) {
   )
 }
 
-export { EmbedAdapter, Vimeo, Youtube }
+export { EmbedAdapter, Youtube }
