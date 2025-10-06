@@ -13,7 +13,10 @@ import * as styles from './index.module.scss'
 
 export const query = graphql`
   query {
-    posts: allFile(filter: { extension: { eq: "mdx" }, sourceInstanceName: { eq: "posts" } }, sort: { childMdx: { frontmatter: { order: ASC } } }) {
+    posts: allFile(
+      filter: { extension: { eq: "mdx" }, sourceInstanceName: { eq: "posts" } }
+      sort: { childMdx: { frontmatter: { order: ASC } } }
+    ) {
       nodes {
         id
         childMdx {
@@ -54,12 +57,15 @@ const Index = ({ data }) => {
 
   const heroVideo = (
     <div className={styles.heroVideo}>
-      <iframe
-        src="https://player.vimeo.com/video/867440111?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&background=1"
-        frameBorder={0}
-        allow="autoplay; fullscreen; picture-in-picture"
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
         title="Neue Arbeitsformen in der Wissenschaft"
-      ></iframe>
+      >
+        <source src="/videos/homepage_splash_video (1080p).mp4" type="video/mp4" />
+      </video>
     </div>
   )
 
@@ -74,10 +80,10 @@ const Index = ({ data }) => {
           title="Neue Arbeitsformen für die Wissenschaft"
           intro={
             <>
-              Vor dem Hintergrund der Digitalisierung revolutioniert New Work herkömmliche Strukturen, stellt tradierte Arbeitsweisen infrage und
-              stärkt die Bedeutung des Menschen mit seinen Kompetenzen, Talenten, Wünschen und Emotionen. Die Leibniz-Gemeinschaft bietet mit
-              WorkNew@leibniz zahlreiche Interviews, Texte und Tipps und unterstützt so ihre Forschungsinstitute auf dem Weg zu neuen Räumen und
-              Arbeitsformen.
+              Vor dem Hintergrund der Digitalisierung revolutioniert New Work herkömmliche Strukturen, stellt tradierte
+              Arbeitsweisen infrage und stärkt die Bedeutung des Menschen mit seinen Kompetenzen, Talenten, Wünschen und
+              Emotionen. Die Leibniz-Gemeinschaft bietet mit WorkNew@leibniz zahlreiche Interviews, Texte und Tipps und
+              unterstützt so ihre Forschungsinstitute auf dem Weg zu neuen Räumen und Arbeitsformen.
             </>
           }
           credits={[{ name: '[Verena Mack](https://verenamack.com/)' }]}
