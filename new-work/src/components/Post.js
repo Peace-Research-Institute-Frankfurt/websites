@@ -112,7 +112,7 @@ const Post = ({ data, children }) => {
     )
   }
 
-  const videoEl = frontmatter.hero_video ? <PostHeaderVideo url={frontmatter.hero_video} poster={heroImage} /> : null
+const videoEl = frontmatter.hero_video ? <PostHeaderVideo src={frontmatter.hero_video} poster={heroImage} /> : null
 
   return (
     <App className={`${frontmatter.category}`}>
