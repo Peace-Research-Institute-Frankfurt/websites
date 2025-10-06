@@ -1,21 +1,21 @@
-import React, { useRef, useState, useContext } from 'react'
-import { Link } from 'gatsby'
+import React, { useRef, useState } from 'react'
 import Button from './ButtonAdapter'
 import CrossIcon from '../images/cross.svg'
 import * as styles from './PostHeaderVideo.module.scss'
-import { EmbedChoicesContext } from '../context/EmbedChoicesContext'
 
-export default function PostHeaderVideo({ url, poster }) {
+export default function PostHeaderVideo({ src, poster }) {
   const [isActive, setIsActive] = useState(false)
-  const [loadedOnce, setLoadedOnce] = useState(false)
-  const matches = url.match(/(?:vimeo.com\/)(\d+)(?:\/)(.+)/)
   const closeButtonRef = useRef(null)
   const openButtonRef = useRef(null)
-  const { setChoices } = useContext(EmbedChoicesContext)
+
+  const videoUrl = `/videos/${src}`
+  const posterUrl = poster ? `/videos/${poster}` : null
 
   return (
     <div className={`${isActive ? styles.mediaActive : ''}`}>
-      <div className={`${styles.poster}`}>{poster && poster}</div>
+      <div className={`${styles.poster}`}>
+        {posterUrl && <img src={posterUrl} alt="" />}
+      </div>
       <div className={styles.controls}>
         <Button
           label={`Film starten`}
@@ -23,18 +23,9 @@ export default function PostHeaderVideo({ url, poster }) {
           ref={openButtonRef}
           onClick={() => {
             setIsActive(true)
-            setLoadedOnce(true)
-            setChoices((prev) => {
-              let newChoices = { ...prev }
-              newChoices['vimeo'] = true
-              return newChoices
-            })
             closeButtonRef.current.focus()
           }}
         />
-        <p>
-          <Link to="/datenschutz">Datenschutz</Link>
-        </p>
       </div>
 
       <div className={`${styles.media}`}>
@@ -51,14 +42,15 @@ export default function PostHeaderVideo({ url, poster }) {
               }}
             />
           </div>
-          <iframe
-            title="Film"
-            frameBorder="0"
-            allowFullScreen
-            loading="lazy"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            src={loadedOnce ? `https://player.vimeo.com/video/${matches[1]}?h=${matches[2]}&title=0&byline=0&portrait=0` : ''}
-          />
+          <video
+            controls
+            controlsList="nodownload"
+            className={styles.video}
+            autoPlay
+          >
+            <source src={videoUrl} type="video/mp4" />
+            Ihr Browser unterstützt das Video-Tag nicht.
+          </video>
         </div>
       </div>
     </div>
