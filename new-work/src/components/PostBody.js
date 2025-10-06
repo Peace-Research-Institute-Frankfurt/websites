@@ -6,7 +6,8 @@ import EmbedChoicesAdapter from './EmbedChoicesAdapter'
 import Leadin from './Leadin'
 import { FileAdapter, FileList } from './FileAdapter'
 import FigureAdapter from './FigureAdapter'
-import { EmbedAdapter, Youtube, Vimeo } from './EmbedAdapter'
+import VideoAdapter from './VideoAdapter'
+import { EmbedAdapter, Youtube } from './EmbedAdapter'
 import TermAdapter from './TermAdapter'
 import { Interview, InterviewQuestion } from '@shared/components/Interview'
 import Quote from '@shared/components/Quote'
@@ -36,10 +37,10 @@ import IconGrid from './IconGrid'
 
 const shortCodes = {
   Figure: ({ ...props }) => <FigureAdapter {...props} styles={FigureStyles} />,
+  Video: ({ ...props }) => <VideoAdapter {...props} />,
   Quote: ({ ...props }) => <Quote {...props} styles={QuoteStyles} />,
   File: ({ ...props }) => <FileAdapter {...props} />,
   Youtube: ({ ...props }) => <Youtube styles={EmbedStyles} {...props} />,
-  Vimeo: ({ ...props }) => <Vimeo styles={EmbedStyles} {...props} />,
   EmbedChoices: ({ ...props }) => <EmbedChoicesAdapter styles={EmbedChoicesStyles} />,
   Embed: ({ ...props }) => <EmbedAdapter styles={EmbedStyles} {...props} />,
   Term: ({ ...props }) => <TermAdapter {...props} />,
