@@ -151,7 +151,7 @@ const Index = ({ data, pageContext, location }) => {
                       <Link to={`/${year}`}>
                         <span className={styles.archiveTitle}>{year}</span>
                         <div className={styles.archiveIntro}>
-                          <MarkdownRenderer markdown={currentIssue.childMdx.frontmatter.intro} />
+                          <MarkdownRenderer markdown={node.childMdx.frontmatter.intro} />
                         </div>
                       </Link>
                     </li>
