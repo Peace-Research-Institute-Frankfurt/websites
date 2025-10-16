@@ -250,10 +250,12 @@ export function Head({ data, pageContext, location }) {
     currentLanguage: pageContext.language,
     translations: data.translations.nodes,
   }
-  const { primary, dark, light, knockout } = useColors(
-    data.issue.childMdx.frontmatter.color,
-    ['Analyse', 'Analysen', 'Analysis', 'Analyses', 'Focus', 'Fokus', 'Anhang', 'Annex', 'Appendix'].includes(data.post.childMdx.frontmatter.category)
-  )
+const { primary, dark, light, knockout } = useColors(
+  data.issue.childMdx.frontmatter.color,
+  ['Analyse', 'Analysen', 'Focus', 'Fokus', 'Anhang', 'Annex', 'Appendix']
+    .includes(data.post.childMdx.frontmatter.category),
+  data.issue.childMdx.frontmatter.year
+)
 
   const bodyStyles = {
     '--fc-primary': primary.toString(),
