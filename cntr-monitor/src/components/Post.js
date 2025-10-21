@@ -175,25 +175,33 @@ export default function Post({ data, pageContext, children }) {
 
   const next = posts[currentIndex + 1] || null
   const previous = posts[currentIndex - 1] || null
-// media machine: "previous" and "next" relative path wrong? '/2024/' instead of '../' for the english version.
-  // The problem is not yet solved, just patched up.
-    const pagination = (
-      <nav className={styles.pagination}>
-        {previous && (
-          <Link className={`${styles.paginationPrev} ${styles.paginationLink}`} rel="prev" to={`/2024/${previous.childMdx.fields.slug}`}>
-            <Arrow/>
-            <span>{t('Previous')}  </span>
-          </Link>
-        )}
-        {next && (
-          <Link className={`${styles.paginationLink}`} rel="next" to={`/2024/${next.childMdx.fields.slug}`}>
-            <Arrow/>
+  
+  const year = data.issue.childMdx.frontmatter.year
 
-            <span>{t('Next')} ${next.childMdx.fields.slug}</span>
-          </Link>
-        )}
-      </nav>
-    )
+  const pagination = (
+    <nav className={styles.pagination}>
+      {previous && (
+        <Link
+          className={`${styles.paginationPrev} ${styles.paginationLink}`}
+          rel="prev"
+          to={`/${year}/${previous.childMdx.fields.slug}`}
+        >
+          <Arrow />
+          <span>{t('Previous')}</span>
+        </Link>
+      )}
+      {next && (
+        <Link
+          className={`${styles.paginationLink}`}
+          rel="next"
+          to={`/${year}/${next.childMdx.fields.slug}`}
+        >
+          <Arrow />
+          <span>{t('Next')} {next.childMdx.fields.slug}</span>
+        </Link>
+      )}
+    </nav>
+  )
 
   const translationData = {
     translations: data.translations.nodes,
