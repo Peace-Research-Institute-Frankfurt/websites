@@ -6,10 +6,16 @@ import * as styles from './Term.module.scss'
 import MarkdownRenderer from 'react-markdown-renderer'
 import { useTranslation } from 'react-i18next'
 
-export default function TermAdapter({ t, children }) {
+export default function TermAdapter({ t, year, children }) {
   const data = useStaticQuery(graphql`
     query TermQuery {
-      terms: allFile(filter: { sourceInstanceName: { eq: "content" }, extension: { eq: "mdx" }, relativeDirectory: { glob: "*/terms" } }) {
+      terms: allFile(
+        filter: {
+          sourceInstanceName: { eq: "content" }
+          extension: { eq: "mdx" }
+          relativeDirectory: { glob: "**/terms/**" }
+        }
+      ) {
         nodes {
           id
           childMdx {
@@ -22,6 +28,11 @@ export default function TermAdapter({ t, children }) {
               title
               term_id
             }
+            parent {
+              ... on File {
+                relativeDirectory
+              }
+            }
           }
         }
       }
@@ -30,30 +41,28 @@ export default function TermAdapter({ t, children }) {
 
   const { i18n } = useTranslation()
 
+  // Filter nach Sprache und optional nach Jahr
   const termNode = data.terms.nodes
-    .filter((node) => {
-      return node.childMdx.fields.locale === i18n.language
-    })
-    .find((node) => {
-      return node.childMdx.frontmatter.term_id === t
-    })
+    .filter((node) => node.childMdx.fields.locale === i18n.language)
+    .filter((node) => !year || node.childMdx.parent.relativeDirectory.includes(year))
+    .find((node) => node.childMdx.frontmatter.term_id === t)
 
   if (!termNode) {
     console.log(`Could not find term: ${t}`)
     return <>{t}</>
   }
+
   const description = <MarkdownRenderer markdown={termNode.childMdx.body} />
 
   return (
-    <>
-      <Term
-        title={termNode.childMdx.frontmatter.title}
-        term={termNode}
-        description={description}
-        TooltipAdapter={TooltipAdapter}
-        styles={styles}
-        children={children}
-      />
-    </>
+    <Term
+      title={termNode.childMdx.frontmatter.title}
+      term={termNode}
+      description={description}
+      TooltipAdapter={TooltipAdapter}
+      styles={styles}
+    >
+      {children}
+    </Term>
   )
 }
