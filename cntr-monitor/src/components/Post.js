@@ -164,13 +164,12 @@ export default function Post({ data, pageContext, children }) {
   })
 
   let authors = null
-  if (data.post.childMdx.frontmatter.authors) {
-    authors = data.authors.nodes.filter((node) => {
-      const found = data.post.childMdx.frontmatter.authors.findIndex((el) => {
-        return el.frontmatter.author_id === node.childMdx.frontmatter.author_id
-      })
-      return found !== -1
-    })
+  if (frontmatter.authors) {
+    authors = frontmatter.authors
+      .map(({ frontmatter: { author_id } }) =>
+        data.authors.nodes.find(node => node.childMdx.frontmatter.author_id === author_id)
+      )
+      .filter(Boolean) // entfernt mögliche nicht gefundene Autoren
   }
 
   const next = posts[currentIndex + 1] || null
