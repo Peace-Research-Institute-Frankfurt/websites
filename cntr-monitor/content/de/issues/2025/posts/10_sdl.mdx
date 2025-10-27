@@ -1,0 +1,81 @@
+---
+order: 10
+eyebrow: Chemie
+title: Autonome Laboratorien
+intro: 'Autonome Laboratorien stellen eine neue Technologie dar, die künstliche Intelligenz, Chemie und Robotik mit dem Ziel integriert, experimentelle Laborarbeit zu automatisieren, um sie schneller und reproduzierbarer zu machen und um – potenziell – ohne direktes menschliches Eingreifen arbeiten zu können. Obwohl in den letzten Jahren sowohl in der akademischen Forschung als auch in der Industrie bedeutende Fortschritte erzielt wurden, sind autonome Labore immer noch eine neue Technologie. Dennoch ist bereits jetzt klar, dass ein umfassender Steuerungsrahmen für autonome Labore unerlässlich ist. Dieser sollte strukturierte Bildungsinitiativen, eine institutionalisierte Zusammenarbeit mit internationalen Institutionen (z. B. der OVCW) und die Ausweitung bestehender Rechtsinstrumente umfassen, um die Anwendung von KI in für die chemische Sicherheit relevanten Bereichen ausdrücklich zu regeln. Außerdem sollte Zugang zu diesen Systemen nur Fachleuten mit umfassender Begründung gewährt werden.'
+category: Trends
+tags:
+- Automatisierte Synthese
+- Automatisierung
+- Autonome Laboratorien
+- BAM
+- Chemische Sicherheit
+- KIT
+- Retrosynthese
+- RoboRXN
+
+authors: c-g-lopez
+---
+
+<Leadin>Das Konzept der</Leadin> autonomen Labore (SDLs) beruht auf der Verzahnung künstlicher Intelligenz mit Chemie-Software, Robotersystemen und Laborautomatisierungsplattformen. Autonome Labore arbeiten in einem „geschlossenen Kreislauf“, in dem die KI, geleitet von benutzerdefinierten Algorithmen, autonom Experimente entwirft und plant, die dann von robotergestützt automatisierten Laborsystemen ausgeführt werden. Nach jedem Experiment werden die Ergebnisse analysiert, und das System nutzt die daraus resultierenden Daten, um zukünftige Experimente zu optimieren und so den Informationsgewinn zu maximieren, während die Anzahl der erforderlichen Schritte und Versuche minimiert wird.
+
+<Aside>Für mehr Informationen zum Einsatz von KI in der Chemie siehe S. 43 ff.</Aside>
+
+Die Prinzipien, die autonomen Laboren zugrunde liegen, wurden Mitte des 20. Jahrhunderts mit der Automatisierung einfacher Laboraufgaben wie der Probenvorbereitung und der Datenanalyse entwickelt.[^1] Nach T. L. Isenhours Vorschlag aus dem Jahr 1985, KI zur Planung von Roboterexperimenten einzusetzen,[^2] hat sich die Integration von Laborrobotern mit komplexeren Algorithmen des maschinellen Lernens (ML) rasch weiterentwickelt und eine Plattform geschaffen, die in den 2000er-Jahren zur Entwicklung autonomer Labore führte.
+
+Obwohl die Einbindung von autonomen Laboren in die chemische Industrie und Forschung noch keine Routine ist, steht zu erwarten, dass diese Technologie schnell wachsen und sich weiterentwickeln wird. Die Implementierung von autonomen Laboren wird wahrscheinlich zu erheblichen Fortschritten bei der Geschwindigkeit der Aufgabenerledigung, der Prozessoptimierung und der wissenschaftlichen Entdeckung führen. In jüngster Zeit haben zahlreiche Forschungsgruppen bereits verschiedene Arten autonomer Labore beschrieben.[^3] Diese Technologie ist jedoch nicht ohne Risiko, falls sie missbraucht wird.
+
+## Arbeitsabläufe in autonomen Laboren
+
+Die wichtigsten Prozesse, die den Arbeitsablauf eines autonomen Labors ausmachen, werden im Folgenden beschrieben. Zu jedem Schritt ist ein praktisches Beispiel dargestellt (blau und kursiv beschrieben), um das Verständnis des gesamten Prozesses zu erleichtern:
+
+**Menschliche Aufforderung („Prompt“):** Die Forschenden beschreiben die auszuführende Aufgabe in einer klaren und präzisen Weise.
+
+Entwirf und synthetisiere ein neues Molekül **A**, das eine rote Farbe hat und nach Rosen riecht.
+
+**1. Planung.** Das mit Chemiewerkzeugen ausgestattete KI-System ist für die Durchführung dieses ersten Schritts verantwortlich. Die KI führt eine bibliographische Suche nach chemischen Verbindungen durch, die den vorgegebenen Anforderungen entsprechen, und schlägt eine chemische Struktur vor, die diese Anforderungen mutmaßlich erfüllen wird. Als nächstes plant sie einen Syntheseweg, um zur gewünschten Verbindung zu gelangen. In diesem Schritt wird das Molekül in der Regel einer Kontrollprüfung unterzogen, um zu bestätigen, dass die Substanz nicht explosiv ist und keinen chemischen Kampfstoff darstellt.
+
+Die KI sucht nach bereits veröffentlichten Molekülen, die eine rote Farbe aufweisen und nach Rosen riechen. Auf der Grundlage dieser bereits bekannten Strukturen schlägt sie ein neues Molekül **A** vor, das die gewünschten Eigenschaften erfüllen soll. Das System bietet dann einen möglichen Syntheseweg, um Molekül **A** zu erhalten.
+
+**2. Umsetzung.** Das KI-System arbeitet mit der physischen Welt zusammen, indem es Syntheseanweisungen an ein automatisiertes chemisches Labor übermittelt, das diese durch eine Reihe von Roboteroperationen umsetzt. Im Idealfall ist das autonome Labor mit den erforderlichen Chemikalien und Verbrauchsmaterialien bestückt; bestimmte Materialien müssen jedoch möglicherweise noch manuell von einem menschlichen Bedienenden eingespeist werden, d. h. der Prozess ist noch nicht vollständig autonom. Die robotergestützten Verfahren können Aufgaben wie das Wiegen von Vorproduktverbindungen, die Durchführung von Synthesereaktionen und die Implementierung von Trennungs-, Reinigungs- und Charakterisierungsschritten umfassen.
+
+Die KI informiert das automatisierte Labor über den gewählten Weg zur Synthese von **A**. Die Robotersysteme führen die Reaktionsschritte aus, um das Produkt zu erhalten: Sie wiegen die Reagenzien ab und lösen sie in dem gewählten Lösungsmittel auf, führen die Reaktion durch und reinigen schließlich die Verbindung **A** von Verunreinigungen und Nebenprodukten. Schließlich wird mittels Absorptionsspektroskopie im sichtbaren Spektrum geprüft, ob Verbindung **A** rot ist, und mit Hilfe einer „elektronischen Nase“ (maschineller Geruchssinn) kontrolliert, ob das Produkt nach Rosen riecht.
+
+<Figure src="SDL_DE.jpg" size="large" alt="Die Abbildung zeigt den im Text beschriebenen Ablauf vom menschlichen Prompt hin zu den autonomen Arbeitsabläufen im Labor: Von der Planung (1) zu Umsetzung (2) zur Auswertung (3) und dann in einem Zirkelschluss für die Optimierung des Ablaufs wieder zur Planung (1)."/>
+
+**3. Auswertung.** Die KI analysiert, ob die nach dem Aktionsprozess erzielten Ergebnisse der vom Menschen eingegebenen Aufforderung entsprechen. Wenn die Antwort ja lautet, ist das Experiment beendet. Wenn die Antwort nein lautet, wird der Prozess mit einem neuen Planungszyklus wiederholt, wobei die Erkenntnisse aus dem ersten Zyklus einfließen, um die Optimierung zu verstärken.
+
+Die durch sichtbare Absorptionsspektroskopie und maschinellen Geruchssinn erzielten Ergebnisse werden analysiert. Es wird geprüft, ob Verbindung **A** wirklich rot ist und nach Rosen riecht. In diesem Fall ist das Experiment beendet. Andernfalls wird der Planungsprozess wiederholt, um ein anderes Molekül zu synthetisieren, dessen chemische Struktur den gewünschten Eigenschaften besser entspricht.
+
+## Autonome Laboratorien: Entfesselte Anwendungen
+
+Entwurf und Installation von autonomen Laboren sind weltweit im Gange, was darauf hindeutet, dass sich diese neue Technologie durchsetzen wird. Daher haben Chemiker\*innen begonnen, diese Fortschritte zu nutzen und ihre Arbeitsabläufe so anzupassen, dass sie die Vorteile autonomer Labore voll ausschöpfen können. Dazu gehört die Möglichkeit, chemische Aufgaben ohne menschliches Eingreifen automatisiert durchzuführen – besonders wertvoll bei der Arbeit mit toxischen Substanzen –, was experimentelle Prozesse beschleunigt und Reaktionsbedingungen optimiert.
+
+<Aside>Entwurf und Installation von autonomen Laboren sind weltweit im Gange, was darauf hindeutet, dass sich diese neue Technologie durchsetzen wird.</Aside>
+
+Im Jahr 2024 veröffentlichten Gary Tom et al. einen Überblick über den aktuellen Stand der SDL-Technologie, ihre Anwendungen in verschiedenen wissenschaftlichen Disziplinen und ihre möglichen Auswirkungen auf Forschung und Industrie.[^4] Im Folgenden werden einige der wichtigsten Anwendungen vorgestellt.
+
+**Analytische Prozessoptimierung.** In den letzten fünfzig Jahren wurden nach und nach Techniken zur Automatisierung der Probenvorbereitung entwickelt. Im späten 20. Jahrhundert kamen fortschrittlichere Systeme mit Roboterarmen und Flow-basierter Automatisierung auf.[^5] Trenn- und Reinigungsprozesse wie die Gas- und Flüssigkeitschromatographie wurden seitdem durch den Einsatz von autonomen Laboren optimiert.[^6] Darüber hinaus wurden autonome Labore zur Verbesserung anderer Prozesse eingesetzt, darunter Flüssig-Flüssig-Extraktion[^7] und pH-Anpassung.[^8] Durch maschinelles Lernen gesteuerte Röntgenbeugungstechniken (eine Analysetechnik zur Bestimmung der atomaren und molekularen Struktur kristalliner Materialien) haben die Materialcharakterisierung ebenfalls erheblich verbessert und eine effizientere In-situ-Analyse ermöglicht.[^9]
+
+**Reaktionsoptimierung.** Die Anwendung von künstlicher Intelligenz und autonomen Laboren zur Reaktionsoptimierung hat aufgrund der Fortschritte bei der Digitalisierung, der Rechenleistung und der Verfügbarkeit von Spezialsoftware ein erhebliches Wachstum erfahren. Diese Technologien wurden bereits erfolgreich bei einer Vielzahl von Reaktionstypen eingesetzt, u. a. bei der Elektrokatalyse (Erhöhung der Geschwindigkeit elektrochemischer Reaktionen durch den Einsatz eines Katalysators),[^10] der Organokatalyse (Beschleunigung chemischer Reaktionen durch den Einsatz spezifischer organischer Moleküle als Katalysatoren)[^11] und der Abfallverwertung (Umwandlung von Abfallstoffen in wertvolle Produkte).[^12] Es ist jedoch wichtig zu erkennen, dass die Skalierbarkeit eine zentrale Herausforderung bleibt und bei der Entwicklung autonomer Labore für diese Anwendung sorgfältig berücksichtigt werden muss.
+
+**Wirkstoffsuche.** Die Entdeckung von Wirkstoffen für Medikamente ist einer der wichtigsten Innovationsmotoren in der chemischen Industrie. Autonome Labore sind eine vielversprechende Technologie, die das Potenzial hat, Engstellen im Prozess zu überwinden und menschliche Eingriffe bei der Entdeckung neuer Medikamente.
+
+<Term t="NAR">alternativen Reaktorkonzepten</Term>
+
+
+
+[^1]: Nuclear Energy Agency. (2023). The NEA Small Modular Reactor Dashboard.
+[^2]: Krall, L. M., Macfarlane, A. M., & Ewing, R. C. (2022). Nuclear waste from small modular reactors. PNAS (International Energy Forum), Article 119 (23) e2111833119. https://doi.org/10.1073/pnas.2111833119
+[^3]: Nuclear Energy Agency. (2023).; İlhami, Y., & MacEachern, C. (2018). Energy Fundamentals. In Dincer, I. (Hrsg.), Comprehensive Energy Systems. Elsevier.
+[^4]: Stern, W., Gemmill, M., Price, R., Rosenthal, M., & Vestergaard, C. (2021). Implications for IAEA Safeguards of Widespread HALEU Use. Brookhaven National Laboratory, U. S. Department of Energy. https://www.nationalacademies.org/documents/embed/link/LF2255DA3DD1C41C0A42D3BEF0989ACAECE3053A6A9B/file/DE2DA789643A48ABAE0C34352A11F54081D72E871287?noSaveAs=1
+[^5]: Kemp, R. S., Lyman, E., S., Deinert, M. R., Garwin, R. L., & von Hippel, F. N. (2024). The weapons potential of high-assay lowenriched uranium. Science 384, 1071-1073.
+[^6]: Department for Energy Security and Net Zero. 2024. UK first in Europe to invest in next generation of nuclear fuel. Government of the United Kingdom. https://www.gov.uk/government/news/uk-first-in-europe-to-invest-in-next-generation-of-nuclear-fuel
+[^7]: Office of Nuclear Energy. (2025). HALEU Availability Program. U.S. Department of Energy. 2025. https://www.energy.gov/ne/haleu-availability-program
+[^8]: Lamarsh, J. R., & Baratta, A. J. (2001). Introduction to Nuclear Engineering. Prentice-Hall.
+[^9]: Nuclear Energy Agency. (2024). High-Assay Enriched Uranium: Drivers, Implications and Security of Supply. OECD. https://www.oecd-nea.org/upload/docs/application/pdf/2024-09/nea_publication_2_2_2024-09-18_16-53-42_174.pdf
+[^10]: European External Action Services. (2015). Joint Comprehensive Plan of Action. European Union. https://www.eeas.europa.eu/eeas/joint-comprehensive-plan-action_en
+[^11]: Peel, R., Foster, G., & Aghara, S. (2022). Nuclear Security and Safeguards Considerations for Novel Advanced Reactors. King‘s College London.
+[^12]: IAEA. (2024). Two years of IAEA continued presence at the Zaporizhzhya nuclear power plant. https://www.iaea.org/sites/default/files/documents/two-years-of-iaea-continued-presence-at-the-zaporizhzhaya-nuclear-power-plant.pdf
+[^13]: IAEA. (2023). Applicability of IAEA Safety Standards to Non-Water Cooled Reactors and Small Modular Reactors. https://www.iaea.org/publications/15228/applicability-of-iaea-safety-standards-to-non-water-cooled-reactors-and-smallmodular-reactors
+[^14]: IAEA. (2013). International Safeguards in Nuclear Facility Design and Construction. https://www.iaea.org/publications/10361/international-safeguards-in-nuclear-facility-design-and-construction
