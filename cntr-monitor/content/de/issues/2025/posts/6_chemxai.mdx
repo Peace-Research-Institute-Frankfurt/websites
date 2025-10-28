@@ -128,32 +128,6 @@ Die nachstehende Tabelle fasst die wichtigsten Risiken zusammen, die mit dem bö
   ]}
 />
 
-
-<table style={{ margin: '38px' }}>
-    <thead>
-        <tr>
-            <th>Risiken</th>
-            <th>Potentielle Täter\*innen</th>
-            <th>Vorbeugungsmaßnahmen</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td align="left">Zugang zu Informationen</td>
-            <td rowspan="2" align="left">Einzelne Akteure ohne Spezialkenntnisse und Wissenschaftler\*innen</td>
-            <td rowspan="4" style={{ padding: '18px' }}> <ul> <li>Bildung/Ethik</li> <li>Zusammenarbeit mit der OVCW</li> <li>KI-Regulierung</li> <li>KI-Sicherheitsmechanismen</li> <li>Zugangsbeschränkung</li> </ul> </td>
-        </tr>
-        <tr>
-            <td align="left">Entwicklung bekannter oder neuer toxischer Chemikalien</td>
-        </tr>
-        <tr>
-            <td rowspan="2" align="left">Automatisierte Synthese chemischer Kampfstoffe durch autonome Labore</td>
-            <td rowspan="2" align="left">Personen mit Erfahrung oder Wissenschaftler*innen mit Zugang zu Einrichtungen</td>
-        </tr>
-    </tbody>
-</table>
-
-
 1. Zugang zu Informationen. Der Zugang zu sensiblen Informationen über toxische Chemikalien ist über das Internet schon lange möglich, auch schon vor der verbreiteten Einführung von KI-Technologien. So gibt es beispielsweise öffentlich zugängliche Online-Literatur, in der explizit Methoden zur Synthese von Sprengstoffen und chemischen Kampfstoffen beschrieben werden (spezifische Details werden hier absichtlich ausgelassen, um die Verbreitung gefährlicher Informationen zu verhindern). LLMs wie ChatGPT machen den Zugang zu sensiblen Informationen für Akteure ohne Spezialkenntnisse noch schneller und einfacher, wodurch sie potenziell schneller Fachwissen auf dem Gebiet der chemischen Waffen werben können und sie, was noch gefährlicher ist, in die Lage versetzt werden, die Produktion gefährlicher Moleküle ohne spezialisiertes Fachwissen durchzuführen.
 
 2. Konzeption von bekannten oder neuen toxischen Chemikalien. LLMs, die mit chemischen Werkzeugen wie ChemCrow ausgestattet sind, können retrosynthetische Analysen durchführen, so dass sie potenzielle Reaktionswege für die Synthese toxischer chemischer Verbindungen vorschlagen können, die als chemische Kampfstoffe verwendet werden könnten. Obwohl ChemCrow und ähnliche LLM-Assistenten bekanntermaßen über Sicherheitsmaßnahmen verfügen, die den Zugriff auf sensible oder gefährliche Informationen blockieren sollen, können diese Mechanismen leicht umgangen werden, wenn die richtigen Fragen gestellt werden. Oder potenzielle Täter\*innen könnten ein LLM einfach bitten, herauszufinden, wie eine Chemikalie synthetisiert werden kann, die auf keiner Liste gefährlicher Stoffe steht, die sich aber dennoch für den Einsatz als chemische Waffe eignen könnte. Wenn sie die nötige Zeit investieren, um ein entsprechendes Feedback von der KI zu erhalten, können sowohl Wissenschaftler\*innen als auch Akteure ohne Spezialkenntnisse diese Art von Informationen erhalten. So haben Stendall et al. vor kurzem eine Studie veröffentlicht, in der sie zeigen, wie sie die Sicherheitsvorkehrungen mehrerer LLMs umgehen konnten, um Informationen über Synthesewege zur Herstellung von Cyclosarin zu erhalten, einem starken Nervenkampfstoff, dessen chemische Struktur der von Sarin ähnelt.[^28] Die Studie thematisierte auch Methoden, wie die Sicherheitsvorkehrungen von ChatGPT-3.5 umgangen werden können, um einen Angriff mit chemischen Waffen zu simulieren, einschließlich von Anweisungen zur Aerosolisierung feiner Partikel, um die großflächige Verbreitung einer toxischen Chemikalie zu erleichtern. Ein weiteres viel diskutiertes Beispiel wurde von Urbina et al. in Zusammenarbeit mit dem Labor Spiez veröffentlicht. Zwei der Autor\*innen leiten ein Unternehmen, das sich auf den Einsatz von künstlicher Intelligenz zur Entwicklung und Synthese von Chemikalien für die Behandlung seltener und vernachlässigter Krankheiten konzentriert.[^29] Sie haben einen kommerziellen De-novo-Molekülgenerator namens MegaSyn entwickelt,[^30] der die Bioaktivität vorhersagen und bei der Entdeckung neuer therapeutischer Inhibitoren für menschliche Krankheitsziele helfen soll. Das Modell belohnt üblicherweise vorhergesagte biologische Aktivität und benachteiligt vorhergesagte Toxizität. Die Forscher\*innen waren jedoch besorgt über mögliche Dual-Use-Implikationen ihrer Technologie. Um dies zu untersuchen, kehrten sie das Ziel des Modells absichtlich um, indem sie für Toxizität Pluspunkte vergaben, anstatt sie zu bestrafen. Das Ergebnis war zutiefst alarmierend: In weniger als sechs Stunden generierte das Modell 40.000 Moleküle, von denen für viele eine deutlich höhere Toxizität vorhergesagt wurde, als sie bei bekannten Nervenkampfstoffen vorliegt. Trotz des Potenzials von KI-Tools wie MegaSyn, computergestützt neue toxische Verbindungen zu entwickeln, argumentieren einige Expert\*innen wie M. M. Blum, dass sich nicht jede toxische Chemikalie für den Einsatz als chemische Waffe eigne.[^31] Mehrere andere wichtige Faktoren müssten berücksichtigt werden, darunter die Stabilität, die Komplexität des Synthesewegs, die Kosten und die Waffentauglichkeit. Während KI in dieser Hinsicht also Risiken bergen könnte, müssten viele andere Voraussetzungen erfüllt sein, um diese Computerentwürfe in tatsächliche chemische Waffen umzusetzen.
