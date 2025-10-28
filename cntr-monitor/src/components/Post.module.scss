@@ -114,6 +114,10 @@
   }
 }
 
+strong {
+  font-variation-settings: 'wght' 700;
+}
+
 .pagination {
   color: var(--white);
   display: inline-flex;
