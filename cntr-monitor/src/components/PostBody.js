@@ -9,6 +9,7 @@ import Chevron from '../images/chevron.svg'
 import Aside from './Aside'
 import TermsList from './TermsList'
 import TermAdapter from './TermAdapter'
+import Table from './Table'
 import * as CalloutStyles from './Callout.module.scss'
 import * as QuoteStyles from './Quote.module.scss'
 import * as styles from './PostBody.module.scss'
@@ -21,6 +22,7 @@ const shortCodes = {
   Leadin,
   Term: ({ ...props }) => <TermAdapter {...props} />,
   TermsList,
+  Table,
   Quote: ({ ...props }) => <Quote {...props} styles={QuoteStyles} />,
 }
 

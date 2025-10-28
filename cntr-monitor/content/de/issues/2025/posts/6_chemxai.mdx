@@ -101,7 +101,35 @@ Unter der <span style={{ color: 'rgb(151, 36, 84)' }}>**Absicht**</span> versteh
 
 Die nachstehende Tabelle fasst die wichtigsten Risiken zusammen, die mit dem böswilligen Einsatz von KI bei chemischen Waffen verbunden sind, benennt potenzielle Täter\*innen und skizziert mögliche Präventivmaßnahmen:
 
-<table>
+<Table 
+  headers={['Risiken', 'Potentielle Täter*innen', 'Vorbeugungsmaßnahmen']}
+  rows={[
+    [
+      'Zugang zu Informationen',
+      { content: 'Einzelne Akteure ohne Spezialkenntnisse und Wissenschaftler*innen', rowspan: 2 },
+      { 
+        content: [
+          'Bildung/Ethik',
+          'Zusammenarbeit mit der OVCW',
+          'KI-Regulierung',
+          'KI-Sicherheitsmechanismen',
+          'Zugangsbeschränkung'
+        ],
+        rowspan: 4
+      }
+    ],
+    [
+      'Entwicklung bekannter oder neuer toxischer Chemikalien'
+    ],
+    [
+      { content: 'Automatisierte Synthese chemischer Kampfstoffe durch autonome Labore', rowspan: 2 },
+      { content: 'Personen mit Erfahrung oder Wissenschaftler*innen mit Zugang zu Einrichtungen', rowspan: 2 }
+    ]
+  ]}
+/>
+
+
+<table style={{ margin: '38px' }}>
     <thead>
         <tr>
             <th>Risiken</th>
@@ -113,7 +141,7 @@ Die nachstehende Tabelle fasst die wichtigsten Risiken zusammen, die mit dem bö
         <tr>
             <td align="left">Zugang zu Informationen</td>
             <td rowspan="2" align="left">Einzelne Akteure ohne Spezialkenntnisse und Wissenschaftler\*innen</td>
-            <td rowspan="4"> <ul> <li>Bildung/Ethik</li> <li>Zusammenarbeit mit der OVCW</li> <li>KI-Regulierung</li> <li>KI-Sicherheitsmechanismen</li> <li>Zugangsbeschränkung</li> </ul> </td>
+            <td rowspan="4" style={{ padding: '18px' }}> <ul> <li>Bildung/Ethik</li> <li>Zusammenarbeit mit der OVCW</li> <li>KI-Regulierung</li> <li>KI-Sicherheitsmechanismen</li> <li>Zugangsbeschränkung</li> </ul> </td>
         </tr>
         <tr>
             <td align="left">Entwicklung bekannter oder neuer toxischer Chemikalien</td>
