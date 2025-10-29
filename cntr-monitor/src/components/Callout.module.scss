@@ -12,12 +12,15 @@
     margin-left: 1em;
     margin-bottom: 1em;
   }
-}
+
 
   p,
   ul,
   ol {
     margin-bottom: 0.5em;
+    font-family: 'MontserratFlex';
+    font-size: var(--ms-1);
+    font-variation-settings: 'wght' 500;
     &:last-child {
       margin-bottom: 0;
     }
@@ -26,7 +29,7 @@
   ol {
     margin-left: 1em;
   }
-
+}
 
 .inner {
   mask: var(--mask-small);
