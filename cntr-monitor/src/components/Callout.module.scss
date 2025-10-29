@@ -3,11 +3,17 @@
 .container {
   margin: var(--baseline) 0;
   position: relative;
-  color: rgba(black, 0.9);
+  color: var(--fc-primary);
+  
   @include bp(m) {
-    width: calc(100% + var(--corner-size-small) * sqrt(2) * 2);
-    margin-left: calc(var(--corner-size-small) * sqrt(2) * -1);
+    float: right;
+    margin-right: -6rem;
+    max-width: 25rem;
+    margin-left: 1em;
+    margin-bottom: 1em;
   }
+}
+
   p,
   ul,
   ol {
@@ -20,16 +26,12 @@
   ol {
     margin-left: 1em;
   }
-}
+
 
 .inner {
   mask: var(--mask-small);
-  border-top: 0.5em solid var(--fc-primary);
-  padding: 2em;
+  padding: 2.5em;
   background: var(--fc-light);
-  @include bp(m) {
-    padding: 3em calc(var(--corner-size-small) * sqrt(2));
-  }
 }
 
 .title {
