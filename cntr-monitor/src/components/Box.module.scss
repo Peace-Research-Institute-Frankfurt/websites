@@ -1,0 +1,42 @@
+@import 'vars';
+
+.container {
+  margin: calc(var(--baseline) * 1.5) 0;
+  position: relative;
+  color: var(--black);
+  width: 100%;
+  }
+
+  .inner {
+  padding: calc(var(--baseline) * 1);
+  background: var(--fc-light);
+  @include bp(m) {
+    padding: calc(var(--baseline) * 1.5);
+  }
+}
+
+.title {
+  @extend %h3;
+  color: var(--fc-primary);
+  margin-bottom: calc(var(--baseline) * 0.5);
+}
+
+p {
+  margin-bottom: 1em;
+  &:last-child{
+    margin-bottom: 0;
+  }
+}
+
+ul,
+ol {
+  margin-bottom: 1em;
+  padding-left: 1.2em;
+  li {
+    margin-bottom: 0.25em;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
