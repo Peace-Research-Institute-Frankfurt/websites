@@ -257,11 +257,14 @@ export function Head({ data, pageContext, location }) {
     currentLanguage: pageContext.language,
     translations: data.translations.nodes,
   }
+const isAppendix = ['Anhang', 'Annex'].includes(data.post.childMdx.frontmatter.category)
+const isBrand = ['Analyse', 'Analysen', 'Focus', 'Fokus'].includes(data.post.childMdx.frontmatter.category)
+
 const { primary, dark, light, knockout } = useColors(
   data.issue.childMdx.frontmatter.color,
-  ['Analyse', 'Analysen', 'Focus', 'Fokus', 'Anhang', 'Annex', 'Appendix']
-    .includes(data.post.childMdx.frontmatter.category),
-  data.issue.childMdx.frontmatter.year
+  isBrand,
+  data.issue.childMdx.frontmatter.year,
+  isAppendix
 )
 
   const bodyStyles = {
