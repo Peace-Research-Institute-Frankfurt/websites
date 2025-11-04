@@ -10,6 +10,8 @@ import Chevron from '../images/chevron.svg'
 import Aside from './Aside'
 import TermsList from './TermsList'
 import TermAdapter from './TermAdapter'
+import Footnote from './Footnote'
+import FootnoteList from './FootnoteList'
 import Table from './Table'
 import * as BoxStyles from './Box.module.scss'
 import * as CalloutStyles from './Callout.module.scss'
@@ -23,6 +25,8 @@ const shortCodes = {
   Chevron,
   Figure,
   Leadin,
+  Footnote,
+  FootnoteList,
   Term: ({ ...props }) => <TermAdapter {...props} />,
   TermsList,
   Table,
