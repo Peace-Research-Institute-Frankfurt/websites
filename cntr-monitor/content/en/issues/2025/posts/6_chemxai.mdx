@@ -1,0 +1,196 @@
+---
+order: 6
+eyebrow: Chemistry
+title: AI Developments in Chemistry
+intro: 'The integration of AI applications with chemistry tools is revolutionizing the operations of both academic and industrial chemical research. How we utilize these applications today will significantly influence the future of the discipline. The application of AI in chemistry has the potential to enable significant advancements in areas like chemical data analysis, reaction planning, and property prediction. Yet, the inherent dual-use nature of this technology introduces considerable security risks. This chapter proposes diverse policy recommendations to mitigate the potential misuse of AI in chemistry. Key strategies include integrating ethics education into science curricula, strengthening existing AI regulations, and enhancing security mechanisms and access restrictions for AI tools and data.'
+category: Focus
+tags:
+- automated synthesis
+-	CACTUS
+-	CALMS
+-	ChatGPT
+-	ChatMOF
+-	Chem-Reasoner
+-	ChemChat
+-	ChemCrow
+-	Chemical Security
+-	Chemist-X
+-	ChemTech Centre
+-	CoQuest
+-	Coscientist
+-	EDA
+-	Eunomia
+-	Generative AI
+-	MegaSyn
+-	NTI-Bio
+-	Organa
+-	PaperQA
+-	Retrosynthesis
+-	RoboRXN
+-	SciMON
+-	SciMuse
+-	SecureDNA
+-	Self-Driving Laboratories (SDL)
+-	SMILES
+-	WikiCrow
+-	YOLOv8
+
+authors:
+  - c-g-lopez-en
+---
+
+<Leadin>The arrival of AI applications</Leadin> capable of assisting research tasks appears to mark a turning point in the way chemists conduct research. However, it must be acknowledged that the AI technology used in these applications has limitations, as it is not yet equipped to understand visual chemical notation, such as visual diagrams of chemical structures or geometrical arrangements.
+
+To harness the potential of platforms like ChatGPT in chemistry, these applications need to be equipped with tools that enable them to understand and handle chemical notation. Over the past decade, researchers and companies have driven the development of new chemical tools capable of equipping LLMs with this capability.<Footnote number="1" /> There are already numerous LLM-based autonomous agents that have been developed for research purposes: agents for literature review (STORM,<Footnote number="2" /> PaperQA,<Footnote number="3" /> WikiCrow<Footnote number="4" />), for chemical innovation and experiments planning (ChemCrow,<Footnote number="5" /> Coscientist,<Footnote number="6" /> Chemist-X,<Footnote number="7" /> Organa,<Footnote number="8" /> CALMS,<Footnote number="9" /> LLM-RDF<Footnote number="10" />), for automating cheminformatics tasks (CACTUS,<Footnote number="11" /> ChatMOF,<Footnote number="12" /> Eunomia,<Footnote number="13" /> ChemChat<Footnote number="14" />) and for hypothesis creation (SciMON,<Footnote number="15" /> SciMuse,<Footnote number="16" /> CoQuest,<Footnote number="17" /> Chem-Reasoner,<Footnote number="18" /> SGA<Footnote number="19" />). These are just a few recent examples from a field that has seen dramatic growth, with new advancements emerging constantly.
+
+<Box title="ChemCrow">
+
+**ChemCrow** is an example of an innovative LLM-based chemistry agent, reported by White and Schwaller in 2023.<Footnote number="20" /> This advanced tool enhances the capabilities of ChatGPT, enabling it to tackle complex tasks in organic synthesis, drug discovery, and materials design. It functions by integrating GPT-4 with a range of chemistry tools to efficiently carry out a variety of tasks. The tools are divided into four categories:
+
+1. **General tools** allow ChemCrow to access relevant information on the web and in scientific text documents. They also include a tool for writing and running Python code.
+
+2. **Molecule tools** enable the representation of chemical structures, predict their costs, calculate their weights, and check if the molecules under study are patented. SMILES (Simplified Molecular Input Line Entry System) is a key tool that represents chemical structures in an easy-to-understand and processable way for computers.
+
+3. **Chemical reaction tools** allow the recognition and categorization of chemical reactions. They are also able to predict reactions and plan new synthetic routes that enable the production of the molecule under study. The reproducibility of scientific publications significantly influences the quality of the plan. Additionally, they include algorithms that transform the reaction sequence into a machine-readable format, including conditions, additives, and solvents.
+
+4. **Safety tools** provide general information about safety issues regarding a given molecule. They include an explosivity check to identify if the molecules under study are potentially explosive, as well as a chemical warfare agents (CWAs) check. This tool is automatically activated when a request is made to synthesize or modify a molecule, ensuring that the molecule in question is not on the CWA and precursors list contained in the Chemical Weapons Convention (CWC). If this is the case, the tool immediately halts the process. However, this safety check can be bypassed with relative ease, as discussed in detail in the final section of this chapter. Additionally, the absence of numerous toxic and explosive chemicals from both the CWC and diverse explosive inventories represents a notable deficiency in this category of list-dependent safety frameworks.
+
+</Box>
+
+## AI Applications in Chemistry
+
+The rapid advancement of AI, combined with a wide array of chemical tools, has significantly accelerated the integration of this emerging technology across various subfields of chemistry. The most notable areas are outlined in this section:
+
+- **Reaction and Experiment Planning.** AI can support scientists by suggesting synthetic pathways for creating new molecules or materials – a process known as retrosynthetic analysis. This capability significantly accelerates drug discovery and materials science by rapidly identifying efficient and feasible routes to target compounds.
+- **Prediction of Properties.** AI systems can predict the physicochemical properties of a compound by analyzing its chemical structure. However, it is important to be careful with these predictions and always check them against real-world experimental data. Their accuracy strongly depends on the data used to train the model. Some models work exceptionally well for certain types of structures, but they might not be reliable for a broader range of chemicals.
+- **Data Analysis.** AI enhances the analysis and interpretation of chemical data generated by techniques such as chromatography, mass spectrometry, and various forms of spectroscopy. In addition, it is well-suited for processing large and complex chemical datasets, helping to uncover correlations and hidden patterns that are often difficult to identify using conventional methods.
+- **Literature Review and Hypothesis Generation.** AI may be a very helpful tool to consolidate and organize information from a collection of publications, saving researchers great amounts of time and effort. Furthermore, some AI technologies can compile and analyze information from existing scientific literature to help generate new hypotheses. However, AI still faces limitations in this area, such as a lack of common sense, intuition, the generation of incorrect information (hallucinations), and difficulty in recognizing truly novel or groundbreaking concepts.
+<Aside>This emerging technology is discussed in detail in a [dedicated chapter](/en/2025/self-driving-laboratories/).</Aside>
+- **Self-Driving Laboratories (SDLs).** The integration of AI with chemical tools, robotics, and automation has given rise to the concept of ‘self-driving laboratories’. Self-driving laboratories are sophisticated technologies able to perform chemistry and biology assays with minimal human intervention.
+
+## Opportunities and Risks
+
+The dual-use nature of AI should not be underestimated. While AI presents promising applications in the detection, analysis, and verification of CWAs, it also entails risks, including its potential misuse in the design of already known or novel toxic compounds. This section examines the opportunities and associated risks of applying AI in the field of chemistry and concludes with policy recommendations to mitigate the identified risks.
+
+## Opportunities: Defense Against Chemical Weapons
+
+<Aside>AI holds significant potential to strengthen the Chemical Weapons Convention and assist the Organization for the Prohibition of Chemical Weapons in critical areas like detection, verification, and threat analysis.</Aside>
+
+AI can play a crucial role in enhancing existing methods and developing new approaches for the detection and verification of CWAs and threat assessment.
+
+AI has the potential to significantly enhance the **early detection** of CWAs by rapidly analyzing data from various sensors with greater sensitivity and accuracy. Machine learning algorithms can identify complex patterns unique to CWAs, paving the way for the development of real-time, field-deployable detection systems. For example, Lee’s research group recently published a novel AI-based system for on-site CWA detection that combines YOLOv8 – an advanced object detection algorithm – with colorimetric sensors.<Footnote number="21" /> The system interprets color changes on detection papers exposed to CWAs using a model trained on images captured under diverse conditions.
+
+Beyond initial detection, AI might play a critical role in the **verification** and analysis of CWAs. AI can enhance analytical techniques by enabling more precise chemical characterization. This supports the development of detailed chemical fingerprints, enabling the distinction between structurally similar compounds – an essential capability for verification and forensic investigations. AI can also assist verification efforts by predicting experimental information associated with CWAs and identifying chemicals not represented in existing databases. Furthermore, AI can efficiently process large volumes of data and cross-reference findings with extensive chemical databases, thereby increasing detection confidence and reducing the likelihood of false negatives.
+
+<Aside>For a brief introduction to the Chemical Weapons Convention (CWC) see the [annex](/en/2025/international-treaties-and-instruments-related-to-the-governance-of-biological-and-chemical-weapons-disarmament-non-proliferation-and-dual-use-risks/).</Aside>
+
+A 2020 report by the United Nations Institute for Disarmament Research (UNIDIR) already highlighted the significant potential of AI and digitalization for OPCW verification activities.<Footnote number="22" /> More recently, in 2022, A. Kelle and J. E. Forman published a book chapter entitled “Verifying the Prohibition of Chemical Weapons in a Digitalized World”.<Footnote number="23" />  They emphasize the flexibility of the Chemical Weapons Convention (CWC) to adapt and incorporate AI and new technologies for verification purposes.
+
+<Aside>AI can be used to predict the potential toxicity of chemical compounds. It can thus help to identify threats more quickly.</Aside>
+
+AI can also be used to predict the potential toxicity of chemical compounds based on their molecular structure. This capability may allow **faster threat identification** and the development of timely countermeasures. For instance, Jeong’s group in 2022 published a study on vapor pressure and toxicity prediction for Novichok agent candidates using machine learning models.<Footnote number="24" /> In a related context, a report from the U.S. Department of Energy described the application of Heracles, an AI system suited to predicting and identifying novel fentanyl derivatives that pose a significant risk within the wider U.S. opioid crisis.<Footnote number="25" />
+
+Nevertheless, such predictive models must be applied with caution, as their accuracy may not always reflect real-world outcomes. Additionally, this application of AI presents a dual-use risk: it could potentially be misused to design novel toxic agents.
+
+Although some research is already underway in the areas mentioned above, the use of AI in defense against chemical weapons remains in its early stages. To further encourage innovation in this area, the **Organisation for the Prohibition of Chemical Weapons** (OPCW) launched the “Artificial Intelligence Research Challenge” last year.<Footnote number="26" /> The challenge focuses on identifying creative AI applications that support the goals of the CWC. Key areas of interest of the OPCW include the analysis of documents to uncover emerging threats or trends, mining forensic chemical data for investigative insights, designing medical countermeasures, and using open-source data to validate reports of chemical weapons use. As an outcome of this challenge, the OPCW recently funded four research groups to develop their proposals over a one-year period.<Footnote number="27" /> These proposals are focused on (1) prediction of novel toxic compounds (University of Alberta, Canada); (2) automatic identification of scheduled chemicals and extracting relevant chemical forensic information (Netherlands Organisation for Applied Scientific Research, The Netherlands); (3) building a big data repository of organophosphorus compound toxicities and vapor pressures (Korea Military Academy, Republic of Korea); and (4) developing AI tools capable of identifying unique chemical signatures using mass spectrometry data (Defence Science and Technology Laboratory, United Kingdom).
+
+### Risks and Challenges
+The dual-use nature of AI-based technologies presents a significant risk, particularly regarding the potential for malicious applications. The likelihood of a threat can be evaluated using the “threat equation”, which considers both the intent and the capabilities of potential perpetrators.
+
+**Threat** = <span style={{ color: 'rgb(151, 36, 84)' }}>**Intention**</span> **x** <span style={{ color: 'rgb(0, 106, 140)' }}>**Capability**</span>
+
+<span style={{ color: 'rgb(151, 36, 84)' }}>**Intention**</span> is understood as the willingness of the perpetrators to carry out an action, while capability refers to their knowledge and access to the materials and facilities required to make that intention a reality. The actual level of threat depends on the perpetrators’ background – specifically, their expertise. This includes whether they possess knowledge in chemistry, can make or acquire a delivery system, are capable of getting the chemical into the correct form for deployment as a weapon, and are equipped to handle the chemical safely without self-harm, among others.
+
+The table below summarizes the key risks associated with the malicious use of AI in chemical weapons, identifies potential perpetrators, and outlines possible preventive measures:
+
+<Table
+  headers={['Risk', 'Potential Perpetrators', 'Preventive Measures']}
+  rows={[
+    [
+      'Access to information',
+      { content: 'Individual non-specialized actors and scientists', rowspan: 2 },
+      {
+        content: [
+          'Education/ethics',
+          'Collaboration with the OPCW',
+          'AI regulation',
+          'AI security mechanisms',
+          'Access restriction'
+
+        ],
+        rowspan: 4
+      }
+    ],
+    [
+      'Design of known or new toxic chemicals'
+    ],
+    [
+      { content: 'Automated synthesis of CWAs using self-driving laboratories', rowspan: 2 },
+      { content: 'Individuals with prior expertise or scientists with access to facilities', rowspan: 2 }
+    ]
+  ]}
+/>
+
+**1. Access to information.** Access to sensitive information related to toxic chemicals has long been possible via the internet, even before the widespread adoption of AI technologies. For instance, there is publicly available literature online that explicitly outlines methods for synthesizing explosive substances and chemical warfare agents (specific details are intentionally omitted here to prevent the dissemination of hazardous information). LLMs like ChatGPT make accessing sensitive information even faster and easier for non-specialist actors, potentially accelerating their acquisition of expertise in the field of chemical weapons and, more dangerously, putting them in a position to execute the production of dangerous molecules without expert knowledge.
+
+**2. Design of known or new toxic chemicals.** LLMs with chemical tools, such as ChemCrow, are equipped to perform retrosynthetic analysis, enabling them to suggest potential reaction pathways for synthesizing toxic chemical compounds that could be used as CWAs. While ChemCrow and similar LLM assistants are known to have security layers that block access to sensitive or dangerous information, these mechanisms are easily bypassed if the right questions are asked. Alternatively, a potential perpetrator might simply ask an LLM to figure out how to synthesize a chemical not present on any list of dangerous substances, yet which may nonetheless be suitable for use as a chemical weapon. By investing the necessary time to obtain the appropriate feedback from the AI, both scientists and non-specialist actors could access this type of information. For example, Stendall and colleagues recently published a study demonstrating how they were able to bypass the security safeguards of several LLMs to extract information on synthetic routes for producing cyclosarin, a powerful nerve agent whose chemical structure is similar to that of Sarin. The study also detailed methods for circumventing the safety layers of ChatGPT-3.5 to simulate a chemical weapons attack, including instructions on aerosolizing fine particles to facilitate the wide-area dispersal of a toxic chemical. Another widely discussed example was published by Urbina et al. in collaboration with Spiez Laboratory. Two of the authors run a company focused on using AI to design and synthetize chemicals for treating rare and neglected diseases. They developed a commercial de novo molecule generator called MegaSyn. This tool is designed to predict bioactivity and aid in the discovery of novel therapeutic inhibitors for human disease targets. The model typically rewards predicted biological activity while penalizing predicted toxicity. However, the researchers became concerned about the potential dual-use implications of their technology. To explore this, they intentionally reversed the model’s objective – rewarding toxicity instead of penalizing it. The outcome was deeply alarming: in less than six hours, the model generated 40,000 molecules, many of which were predicted to be significantly more toxic than known nerve agents. Despite the potential of AI tools like MegaSyn to computationally design new toxic compounds, some experts, such as M. M. Blum, argue that not every toxic chemical is suitable for use as a chemical weapon. Several other important factors must be considered, including stability, the complexity of the synthetic route, costs, and weaponizability. Thus, while AI might pose risks in this regard, many other requirements would need to be fulfilled to transform these computational designs into actual chemical weapons.
+
+<Aside>Automated synthesis of chemical warfare agents using self-driving laboratories represents an emerging technology that is discussed in more detail in its [own chapter](/en/2025/self-driving-laboratories/).</Aside>
+
+**3. Automated synthesis of CWAs using self-driving laboratories (SDLs).** The main risks associated with SDLs arise from their ability to autonomously synthesize known or new toxic chemicals, raising concerns about their potential misuse in chemical weapon applications.
+
+### Actions and Preventive Measures
+
+In response to the risks posed by the malicious use of AI in chemical weapons development, five policy suggestions are outlined below:
+
+**1. Education and ethics in science.** It is crucial to educate researchers and the broader public on both the positive and potentially harmful applications of AI. Awareness campaigns and structured educational programs should be implemented across all levels of education. These programs should include AI literacy, where understanding what these tools can and cannot do is an important component, as it’s not just about “being a good person” but also comprehending the tools, how to use them, and how to interpret their outputs. Additionally, the curriculum should cover ethics in science, the dual-use nature of AI technologies, and the importance of responsible innovation, particularly in research and development settings.
+
+**2. Enhance cooperation with the OPCW.** Sustaining proactive engagement with the OPCW is crucial for anticipating and responding to new international developments regarding AI in chemistry. Governments and international donors should consider giving funds to bolster OPCW initiatives designed to examine artificial intelligence’s potential to enhance the CWC and determine the scope of misuse risks posed by artificial intelligence in the context of chemical weapons.
+
+<Aside>For more information on the EU AI Act see the [annex](/en/2025/international-initiatives-and-core-principles-for-the-safe-use-of-ai/).</Aside>
+
+**3. Strengthen AI regulation.** The European Union is the only international actor that has established a legal framework for AI, called the “EU AI Act”. However, this regulation does not explicitly establish any law regarding the use of AI for the creation of chemical or biological weapons. Moreover, the regulation explicitly states that it does not apply to AI systems that are placed on the market or used for military, defense, or national security purposes. The AI Act might be revised to introduce a legal framework which explicitly addresses the misuse of AI in biology and chemistry.
+
+**4. Implementation of advanced AI security mechanisms.** AI developers should implement advanced security mechanisms and strengthen their systems with robust safeguards to prevent unauthorized access and misuse. These mechanisms should be capable of detecting and blocking attempts to bypass restrictions, especially those targeting sensitive information related to the synthesis and spread of CWAs.
+
+<Callout>
+It is crucial to achieve an appropriate balance between necessary regulations and the imperative for scientific progress. This means reinforcing AI security mechanisms and access restrictions, but without impeding scientific advancements.
+</Callout>
+
+**5. Restricted access to AI integrated with chemical capabilities.** The use of AI systems enhanced with chemical design or simulation tools – especially in conjunction with SDL facilities – should be strictly limited to qualified scientists. Access should only be granted following a rigorous review process, requiring comprehensive justification and ethical clearance. Non-experts or individuals without specialized training should be excluded from accessing such sensitive technologies. Capabilities should be restricted and carefully managed by developers, research institutions, and relevant regulatory bodies.
+
+Finally, it is crucial to achieve an appropriate balance between necessary regulations and the imperative for scientific progress. This means reinforcing AI security mechanisms and access restrictions, but without impeding scientific advancements.
+
+<FootnoteList notes={[
+<>Ramos, M. C., Collison, C. J., & White, A. D. (2025). A review of large language models and autonomous agents in chemistry. Chemical Science, 16(6), 2514-2572. <a href="https://doi.org/10.1039/d4sc03921a">https://doi.org/10.1039/d4sc03921a</a></>,
+<>Shao, Y., Jiang, Y., Kanell, T. A., Xu, P., Omar, K., & Lam, M. S. (2024). Assisting in Writing Wikipedia-like Articles From Scratch with Large Language Models. arXiv. <a href="https://arxiv.org/abs/2402.14207">https://arxiv.org/abs/2402.14207</a></>,
+<>Lála, J., O‘Donoghue, O., Shtedritski, A., Cox, S., Rodriques, S. G., & White, A. D. (2023). PaperQA: Retrieval-augmented generative agent for scientific research. arXiv. <a href="http://arxiv.org/abs/2312.07559">http://arxiv.org/abs/2312.07559</a></>,
+<>Cox, S., Hammerling, M., L´ala, J., Laurent, J., Rodriques, S., Rubashkin, M., & White, A. (2023). WikiCrow: Automating synthesis of human scientific knowledge. Retrieved March 12, 2025, from <a href="https://www.futurehouse.org/wikicrow">https://www.futurehouse.org/wikicrow</a></>,
+<>Bran, A. M., Cox, S., Schilter, O., Baldassari, C., White, A. D., & Schwaller, P. (2024). Augmenting large language models with chemistry tools. Nature Machine Intelligence, 2054(6), 525–535. <a href="https://doi.org/10.1038/s42256-024-00832-8">https://doi.org/10.1038/s42256-024-00832-8</a></>,
+<>Boiko, D. A., MacKnight, R., Kline, B., & Gomes, G. (2023). Autonomous chemical research with large language models. Nature, 624, 570–578. <a href="https://doi.org/10.1038/s41586-023-06792-0">https://doi.org/10.1038/s41586-023-06792-0</a></>,
+<>Chen, K, Li, J., Wang, K., Du, Y., Yu, J., Lu, J., Li, L., Qiu, J., Pan, J., Huang, Y., Fang, Q., Ann Heng, P., & Chen, G. (2023). Chemist-X: Large language model-empowered agent for reaction condition recommendation in chemical synthesis. arXiv. <a href="http://arxiv.org/abs/2311.10776">http://arxiv.org/abs/2311.10776</a></>,
+<>Darvish, K., Skreta, M., Zhao, Y., Aspuru-Guzik, A., Garg, A., & Shkurti, F. (2025). ORGANA: A robotic assistant for automated chemistry experimentation and characterization. Matter, 8(2), Article 101897. <a href="https://doi.org/10.1016/j.matt.2024.10.015">https://doi.org/10.1016/j.matt.2024.10.015</a></>,
+<>Prince, M. H., Chan, H., Vriza, A., Zhou, T., Sastry, V. K., Dearing, M. T., Harder, R. J., Vasudevan, R. K., & Cherukara, M. J. (2024). Opportunities for retrieval and tool augmented large language models in scientific facilities. npj Computational Materials, 10(1), Article 251. <a href="https://doi.org/10.1038/s41524-024-01423-2">https://doi.org/10.1038/s41524-024-01423-2</a></>,
+<>Ruan, Y., Lu, C., Xu, N., Zhang, J., Xuan, J., Pan, J., Fang, Q., Gao, H., Shen, X., Ye, N., Zhang, Q., & Mo, Y. (2024). An automatic end-to-end chemical synthesis development platform powered by large language models. Nature Communications, 15, Article 10160. <a href="https://doi.org/10.1038/s41467-024-54457-x">https://doi.org/10.1038/s41467-024-54457-x</a></>,
+<>McNaughton, A. D., Ramalaxmi, G. K. S., Kruel, A., Knutson, C. R., Varikoti, R. A., & Kumar, N. (2024). CACTUS: Chemistry agent connecting tool usage to science. ACS Omega, 9(46), 46563−46573. <a href="https://doi.org/10.1021/acsomega.4c08408">https://doi.org/10.1021/acsomega.4c08408</a></>,
+<>Kang, Y., & Kim, J. (2024). ChatMOF: an artificial intelligence system for predicting and generating metal-organic frameworks using large language models. Nature Communications, 15, Article 4705. <a href="https://doi.org/10.1038/s41467-024-48998-4">https://doi.org/10.1038/s41467-024-48998-4</a></>,
+<>Ansari, M., & Moosavi, S. M. (2024). Agent-based learning of materials datasets from the scientific literature. Digital Discovery, 3(12), 2607–2617. <a href="https://doi.org/10.1039/D4DD00252K">https://doi.org/10.1039/D4DD00252K</a></>,
+<>Erdmann, T., Swaminathan, S., Zecevic, S., Ransom, B., & Park, N. (2024, March 3). Chem Chat | Conversational Expert Assistant in Material Science and Data Visualization. [Gespräch]. APS March Meeting 2024, Minneapolis, MN, United States. <a href="https://research.ibm.com/publications/chemchat-or-conversational-expert-assistant-in-material-science-and-data-visualization">https://research.ibm.com/publications/chemchat-or-conversational-expert-assistant-in-material-science-and-data-visualization</a></>,
+<>ca Wang, Q., Downey, D., Ji, H., & Hope, T. (2023). SciMON: Scientific inspiration machines optimized for novelty. arXiv. <a href="http://arxiv.org/abs/2305.14259">http://arxiv.org/abs/2305.14259</a></>,
+<>Gu, X., & Krenn, M. (2024). Interesting Scientific Idea Generation using Knowledge Graphs and LLMs: Evaluations with 100 Research Group Leaders. arXiv. <a href="https://doi.org/10.48550/arXiv.2405.17044">https://doi.org/10.48550/arXiv.2405.17044</a></>,
+<>Liu, Y., Chen, S., Cheng, H., Yu, M., Xiao, R., Mo, A., Tang, Y., & Huang, Y. (2023). CoQuest: Exploring research question co-creation with an LLM-based agent. arXiv. <a href="http://arxiv.org/abs/2310.06155">http://arxiv.org/abs/2310.06155</a></>,
+<>Sprueill, H. W., Edwards, C., Agarwal, K., Olarte, M. V., Sanyal, U., Johnston, C., Liu, H., Ji, H., & Choudhury, S. (2024). ChemReasoner: Heuristic search over a large language model’s knowledge space using quantum-chemical feedback. arXiv. <a href="http://arxiv.org/abs/2402.10980">http://arxiv.org/abs/2402.10980</a></>,
+<>Ma, P., Wang, T.-H., Guo, M., Sun, Z., Tenenbaum, J. B., Rus, D., Gan, C., & Matusik, W. (2024). LLM and simulation as bilevel optimizers: A new paradigm to advance physical scientific discovery. arXiv. <a href="http://arxiv.org/abs/2405.09783">http://arxiv.org/abs/2405.09783</a></>,
+<>Bran et al. (2024)</>,
+<>Bae, S., Kang, K., Kim, Y. K., Jang, Y. J., & Lee, D.-H. (2025). Field-deployable real-time AI System for chemical warfare agent detection using YOLOv8 and colorimetric sensors. Chemometrics and Intelligent Laboratory Systems, 261, Article 105365. <a href="https://doi.org/10.1016/j.chemolab.2025.105365">https://doi.org/10.1016/j.chemolab.2025.105365</a></>,
+<>Åstot, C., Baulig, A., Borrett, V., Borrie, J., Curty, C., Dorner, B. G., Forman, J., Fraga, C., Gonzalez, D., Hanham, M., Jeremias, G., Mikulak, R., Noort, D., Raza, S. K., Revill, J., Tang, C., Timperley, C., Vanninen, P., Van Straten, F. M., Waqar, F., & Van Zalen, E. (2020). Science and Technology for WMD Compliance Monitoring and Investigation, WMD Compliance and Enforcement Series No. 11. UNIDIR. <a href="https://doi.org/10.37559/WMD/20/WMDCE11">https://doi.org/10.37559/WMD/20/WMDCE11</a></>,
+<>Kelle, A., & Forman, J. E. (2022). Verifying the Prohibition of Chemical Weapons in a Digitalized World. In Reinhold, T., & Schörnig, N. (Eds.), Armament, Arms Control and Artificial Intelligence (pp. 73-89). Springer. <a href="https://doi.org/10.1007/978-3-031-11043-6">https://doi.org/10.1007/978-3-031-11043-6</a></>,
+<>Jeong, K., Lee, J.-Y., Woo, S., Kim, D., Jeon, Y., In Ryu, T., Hwang, S.-R., & Jeong, W.-H. (2022). Vapor Pressure and Toxicity Prediction for Novichok Agent Candidates Using Machine Learning Model: Preparation for Unascertained Nerve Agents after Chemical Weapons Convention Schedule 1 Update. Chemical Research in Toxicology 35(5), 774–781.</>,
+<>Schultz, K. J., Nguyen, J. H., Lin, V. S., Kombala, C., Tyrrell, K. J., & Lalli, P. M. (2024). Heracles: Predictive Tools for Opioid Crisis Intervention. Pacific Northwest National Laboratory. <a href="https://www.osti.gov/servlets/purl/2476677">https://www.osti.gov/servlets/purl/2476677</a></>,
+<>OPCW. (2025). The OPCW Artificial Intelligence Research Challenge. <a href="https://www.opcw.org/media-centre/featured-topics/aichallenge">https://www.opcw.org/media-centre/featured-topics/aichallenge</a></>,
+<>OPCW (2025, April 29). OPCW AI Research Challenge: Harnessing AI tools to enhance global chemical security. <a href="https://www.opcw.org/media-centre/news/2025/04/opcw-ai-research-challenge-harnessing-ai-tools-enhance-global-chemical.">https://www.opcw.org/media-centre/news/2025/04/opcw-ai-research-challenge-harnessing-ai-tools-enhance-global-chemical.</a></>,
+<>Stendall, R. T., Martin, F. J. O., & Sandbrink, J. B. (2024). How might large language models aid actors in reaching the competency threshold required to carry out a chemical attack? The Nonproliferation Review, 1–22. <a href="https://doi.org/10.1080/10736700.2024.2399308">https://doi.org/10.1080/10736700.2024.2399308</a></>,
+<>Collaborations Pharmaceuticals, Inc. <a href="https://www.collaborationspharma.com/">https://www.collaborationspharma.com/</a></>,
+<>Urbina, F., Lentzos, F., Invernizzi, C., & Ekins, S. (2022). Dual Use of Artificial Intelligence-powered Drug Discovery. Nature Machine Intelligence, 4(3), 189–191. <a href="https://doi.org/10.1038/s42256-022-00465-9">https://doi.org/10.1038/s42256-022-00465-9</a></>,
+<>Blum, M. M. (2022). No chemical killer AI (yet). Nature Machine Intelligence, 4, 506–507. <a href="https://doi.org/10.1038/s42256-022-00497-1">https://doi.org/10.1038/s42256-022-00497-1</a></>
+]} />

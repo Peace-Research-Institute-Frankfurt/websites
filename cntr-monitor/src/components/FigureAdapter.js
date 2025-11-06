@@ -42,17 +42,30 @@ export default function FigureAdapter({ caption, credit, size, alt, src, license
       licenseNode = l
     }
   })
-  return (
+return (
+  <figure className={className}>
     <Figure
       styles={styles}
       image={image}
       src={src}
-      caption={caption}
       license={licenseNode}
-      credit={credit}
       alt={alt}
       size={size}
-      className={className}
     />
-  )
+    {(caption || credit) && (
+      <figcaption className={styles.captions}>
+        {caption && (
+          <span className={styles.caption}>
+            {caption}
+          </span>
+        )}
+        {credit && (
+          <span className={styles.credit}>
+            Source: {credit}{licenseNode && <>, <a href={licenseNode.url} target="_blank" rel="noopener noreferrer">{licenseNode.title}</a></>}.
+          </span>
+        )}
+      </figcaption>
+    )}
+  </figure>
+)
 }

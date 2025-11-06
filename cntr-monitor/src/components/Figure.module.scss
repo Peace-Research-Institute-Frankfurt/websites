@@ -36,6 +36,8 @@
   padding-top: 1em;
   display: flex;
   flex-flow: column;
+  margin-top: calc(var(--baseline) * -0.5);
+  margin-bottom: calc(var(--baseline) * 0.5);
 }
 .caption {
   p {

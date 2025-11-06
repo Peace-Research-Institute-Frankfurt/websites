@@ -1,0 +1,82 @@
+---
+order: 5
+eyebrow: Biotechnology
+title: 'AI in the Lab: The Future of Biological Design'
+intro: 'This chapter examines how AI is reshaping biological design, with new tools enabling advances in protein engineering and genetic research. It highlights recent developments that expand scientific capabilities while creating security concerns, including the potential design of harmful biological agents and cyber-bio threats. The chapter discusses current efforts to monitor and mitigate these risks through technical safeguards, controlled access, and watermarking, and underscores the need for coordinated international policies to guide safe innovation.'
+category: Focus
+tags:
+-	AlphaFold
+-	AlphaProteo
+- Asilomar Conference
+- BDT
+- Biological agents
+- Biotechnology
+- CASP
+- DNA
+- EvolutionaryScale
+- Genetic engineering
+- Google DeepMind
+- Life sciences
+-	LLM
+-	OpenAI
+-	Rosetta Commons
+authors:
+- k-reis-en25
+---
+
+<Leadin>In last year’s CNTR Monitor,<Footnote number="1" /></Leadin> I explored examples of the intersection between AI and the biological sciences. AI is increasingly used in biosurveillance, helping detect unusual patterns in health data, pathogen sequences, or environmental signals that might indicate infectious disease outbreaks or biological threats. At the same time, new methods are being developed to identify genetically engineered organisms and trace them back to their laboratory of origin. While these advancements offer promising capabilities, they also introduce new risks that require careful mitigation.
+
+## AI Protein Tools
+
+Biological design tools (BDTs) are trained on biological data, compared to large language models (LLMs) which are trained on natural human language. Unlike LLMs, most BDTs are developed by life science researchers or industry for specialized applications rather than public use. However, recognition of their significance is growing, as highlighted by the 2024 Nobel Prize in Chemistry. The award honored David Baker for computational protein design, as well as Demis Hassabis and John Jumper from Google for AlphaFold which solved the long-standing challenge of predicting protein 3D structures from amino acid sequences. The field is evolving rapidly, with breakthroughs such as the already mentioned DeepMind’s AlphaFold for protein structure prediction, and AlphaProteo, a protein design software released in 2024. There is also Rosetta Commons, developed by David Baker and his group, with its diverse applications and tools, such as RFdiffusion, a tool that uses AI to design novel protein structures by predicting how amino acid chains fold into three-dimensional shapes; and EvolutionaryScale’s ESM3, a foundational model for life sciences trained on DNA, RNA, and amino acid sequences.
+
+<Figure src="assets/Protein-structure_EN.jpg" size="large" alt="A diagram illustrating the hierarchical levels of protein structure. 1.	Primary Structure: A linear sequence of amino acids. 2.	Secondary Structure: The sequence folds into regular patterns such as alpha-helices and beta-pleated sheets. 3.	Tertiary Structure: The overall three-dimensional shape of a single protein molecule, formed by the folding of secondary structures into a compact globular form. 4.	Quaternary Structure: The assembly of two or more polypeptide chains, showing how multiple tertiary structures come together to form a functional protein complex. The diagram visually represents the progression from primary to quaternary structure, highlighting the complexity of protein folding and assembly." />
+
+## Predicting Protein Folding at Scale
+
+In the cell, proteins are synthesized as linear chains that fold into specific shapes that determine their function. Under normal conditions, a given sequence folds into one main shape, though some proteins can adopt multiple shapes, leading to different functions or even disease. The shape is crucial because it controls how the protein interacts with other molecules. Scientists aim to computationally predict a protein’s structure from its sequence or design sequences that fold into desired shapes. Experimental methods like <Term t="röntgenkristallographie">X-ray crystallography</Term>, <Term t="kernspinresonanz">nuclear magnetic resonance</Term>, and <Term t="kryoelektronenmikroskopie">cryogenic electron microscopy</Term> remain costly. In contrast, the determination of protein sequences from genomic data has become much more affordable, resulting in billions of protein sequences but only a few hundred thousand experimentally resolved structures.<Footnote number="2" /> The ultimate goal is to design proteins with prescribed structures. To evaluate progress and drive innovation in protein structure prediction, the Critical Assessment of Structure Prediction (CASP) was established, running globally since 1994. CASP is a competition where research teams try to predict the 3D shapes of proteins from their amino acid sequences, testing how close their predictions are to experimentally determined structures. In 2018, CASP13 gained attention when DeepMind’s AI program AlphaFold won. An improved AlphaFold2 then dominated CASP14 in 2020, reaching about 90% accuracy on moderately difficult protein targets using neural networks.
+
+## Beyond Proteins
+
+AI also aids in <Term t="biomarker">biomarker</Term> discovery, enhances diagnostics, and optimizes biomanufacturing. In other sciences, AI can autonomously drive experiments. However, these same advancements also pose security risks, as they could be misused to develop toxins, enhance pathogens, and intensify other biosecurity threats. Advances in protein design tools and other BDTs can pose potential risks, yet few safeguards have been established. While substantial effort and investment have been directed toward LLM safeguards, BDTs have received comparatively little attention. However, with sufficient access, it is possible that someone could intentionally or accidentally create harmful pathogens or toxins.
+
+<Aside>For AI in automation of experiments, see the [chapter on self-driving laboratories](/en/2025/self-driving-laboratories/).</Aside>
+
+One of the most comprehensive reports on this topic is by NTI-Bio,<Footnote number="3" /> which examines three key questions:
+
+- What built-in safeguards could be implemented?
+- How should access to these tools be managed (balancing between open-source and fully controlled models)?
+- How could we develop biosecurity solutions that mitigate risks while preserving the full potential of these technologies for societal benefit?
+
+The authors of the report conducted interviews with experts, organized workshops, and carried out peer reviews to identify potential safeguards for model developers and the broader biosecurity community. They discussed several approaches, for instance, controlling access already at the training data level and at the data collection phase. Another key point was regulating access to computational resources and responsible training methodologies. Before release, built-in safeguards and model pre-evaluations could be implemented, followed by managed access to the model at the final stage to ensure responsible use.
+
+<Aside>For more information on ChemCrow, see the [chapter on AI developments in chemistry](/en/2025/ai-developments-in-chemistry/).</Aside>
+
+Safeguards could include restricting certain types of outputs, monitoring queries for suspicious patterns, or incorporating warning systems for high-risk requests. Compared to chemistry-focused tools like ChemCrow, safeguards in biological applications could be more challenging because harmful biological outputs may be harder to define or detect. While a toxic molecule has clear identifiers, a protein sequence or genetic design might appear harmless yet have dangerous potential, making screening and intervention less straightforward.
+
+Similar to the screening of nucleic acid orders (discussed in the DNA synthesis chapter), model outputs could be monitored to detect potential misuse, allowing for the flagging or denial of requests involving dangerous designs. However, just like DNA synthesis screening, this approach would require global adoption of a shared resource or database, which could itself present an information hazard by spreading knowledge that enables harm.
+
+Another layer involves understanding the user and the intent behind a biological design, and then implementing managed access accordingly. Access could therefore exist on a spectrum, ranging from full access to the tool and code to restricted access limited to outputs via an <Term api25 >API</Term> (Application Programming Interface), which lets users send inputs and receive outputs without seeing or modifying the underlying model. Striking a balance is crucial: security experts may prioritize control over the tool itself to prevent safeguard removal, while the academic community often advocates for openness to ensure equal accessibility, reproducibility, and transparency. No single country or region should have exclusive access to tools that, for example, contribute to vaccine development.
+
+Large companies like Google DeepMind are contributing to mitigating risks associated with the powerful tools they develop.<Footnote number="4" /> This includes restricting access to certain sequences of concern. However, some users argue this limits legitimate research, raising questions about who should determine what qualifies as legitimate scientific inquiry. They have also explored watermarking biomolecular structures to embed identifiable markers or signatures in engineered DNA or biological products. This would help trace their origin, verify authenticity, detect tampering, and support accountability in case of misuse or unintended release. This position has also faced criticism, with concerns that such measures could be seen as anti-competitive, especially from a company like Google.
+
+To address some of these issues, a watermark framework could be set up in the following way: researchers receive an authorized private key linked to their identity, allowing them to add watermarks to generative model-designed protein sequences.<Footnote number="5" /> A watermark detection program can locally verify authorization without storing sequence data on a server. These watermarks securely link synthesized sequences to researchers, enabling traceability. If a suspicious protein is identified, authorities can trace its origin by matching watermarks to private keys. The robust watermarks enhance biosecurity by deterring misuse while also allowing researchers to claim intellectual property rights over their sequences.
+
+<Aside>
+Balancing innovation and security will require both technical guardrails and inclusive governance. Nevertheless, the time to build these frameworks is now.
+</Aside>
+
+These frameworks offer an excellent technical foundation for managing risks associated with AI biological design tools. However, it is equally important to embed these efforts within shared international governance structures, rather than relying solely on voluntary corporate measures or unilateral national controls. As with DNA synthesis screening, we should aim for transparent, compatible safeguards that can be adopted globally and evolve alongside advancing AI capabilities. At the same time, we must remain vigilant to avoid creating new forms of geopolitical inequity, where access to essential scientific tools becomes concentrated in the hands of a few actors. Balancing innovation and security will require both technical guardrails and inclusive governance. Nevertheless, the time to build these frameworks is now.
+
+<Aside>To date, there is no consistent EU-wide requirement for verifying high-risk orders of genetic material or lab tools.</Aside>
+
+The EU is also taking steps toward shaping the governance of biotechnology through its planned Biotech and Biomanufacturing Initiative, sometimes referred to as the “EU Biotech Act.” As of June 2025, the European Commission has released a strategic communication and launched consultations, but no formal legislative proposal has been published. While the initiative primarily focuses on competitiveness, innovation, and reducing regulatory burdens for biotech startups, it also includes references to safety, standardization, and supply chain resilience. Notably, some stakeholders have called for the adoption of an EU-wide “Know Your Order” (KYO) framework for sensitive biological materials and equipment. Experts from the Community for European Research and Innovation for Security have identified bioterrorism among the top ten security priorities. Despite broad awareness of such risks, no consistent EU-wide requirement currently exists for verifying orders of genetic materials or high-risk lab tools. The policy organization Pour Demain has emphasized the importance of such measures, arguing that an EU-wide KYO framework is essential to prevent the misuse of biological and AI-driven design capabilities. Whether these elements will be incorporated into future regulation remains to be seen, but the initiative could offer a regulatory foundation for oversight of AI-enabled biological design tools.
+
+
+<FootnoteList notes={[
+<>Reis, K. (2024). Technological Implications of AI in Biorisk. Göttsche, M., & Daase, C. (Eds.), Perspectives on Dual Use. CNTR Monitor – Technology and Arms Control 2024. PRIF – Peace Research Institute Frankfurt. <a href="https://monitor.cntrarmscontrol.org/en/2024/technological-implications-of-ai-in-biorisk/">https://monitor.cntrarmscontrol.org/en/2024/technological-implications-of-ai-in-biorisk/</a></>,
+<>Jumper, J., Evans, R., Pritzel, A. et al. (2021) Highly accurate protein structure prediction with AlphaFold. Nature, 596, 583–589. <a href="https://doi.org/10.1038/s41586-021-03819-2">https://doi.org/10.1038/s41586-021-03819-2</a></>,
+<>Carter, S. R., Wheeler, N. E., Isaac, C. R., & Yassif, J. (2024). Developing Guardrails for AI Biodesign Tools. Nuclear Threat Initiative. <a href="https://www.nti.org/analysis/articles/developing-guardrails-for-ai-biodesign-tools/">https://www.nti.org/analysis/articles/developing-guardrails-for-ai-biodesign-tools/</a></>,
+<>Paterson, A. (2024, November 14). [Vortrag bei Webinar]. In Nuclear Threat Initiative, Developing Guardrails for AI Biodesign Tools. <a href="https://www.nti.org/events/developing-guardrails-for-ai-biodesign-tools/">https://www.nti.org/events/developing-guardrails-for-ai-biodesign-tools/</a></>,
+<>Chen, Y., Hu, Z., Wu, Y., Chen, R., Jin, Y., Chen, W., & Huang, H. (2024). Enhancing Biosecurity with Watermarked Protein Design. bioRxiv. <a href="https://doi.org/10.1101/2024.05.02.59192">https://doi.org/10.1101/2024.05.02.59192</a></>
+]} />

@@ -164,36 +164,43 @@ export default function Post({ data, pageContext, children }) {
   })
 
   let authors = null
-  if (data.post.childMdx.frontmatter.authors) {
-    authors = data.authors.nodes.filter((node) => {
-      const found = data.post.childMdx.frontmatter.authors.findIndex((el) => {
-        return el.frontmatter.author_id === node.childMdx.frontmatter.author_id
-      })
-      return found !== -1
-    })
+  if (frontmatter.authors) {
+    authors = frontmatter.authors
+      .map(({ frontmatter: { author_id } }) =>
+        data.authors.nodes.find(node => node.childMdx.frontmatter.author_id === author_id)
+      )
+      .filter(Boolean) // entfernt mögliche nicht gefundene Autoren
   }
 
   const next = posts[currentIndex + 1] || null
   const previous = posts[currentIndex - 1] || null
-// media machine: "previous" and "next" relative path wrong? '/2024/' instead of '../' for the english version.
-  // The problem is not yet solved, just patched up.
-    const pagination = (
-      <nav className={styles.pagination}>
-        {previous && (
-          <Link className={`${styles.paginationPrev} ${styles.paginationLink}`} rel="prev" to={`/2024/${previous.childMdx.fields.slug}`}>
-            <Arrow/>
-            <span>{t('Previous')}  </span>
-          </Link>
-        )}
-        {next && (
-          <Link className={`${styles.paginationLink}`} rel="next" to={`/2024/${next.childMdx.fields.slug}`}>
-            <Arrow/>
+  
+  const year = data.issue.childMdx.frontmatter.year
 
-            <span>{t('Next')} ${next.childMdx.fields.slug}</span>
-          </Link>
-        )}
-      </nav>
-    )
+  const pagination = (
+    <nav className={styles.pagination}>
+      {previous && (
+        <Link
+          className={`${styles.paginationPrev} ${styles.paginationLink}`}
+          rel="prev"
+          to={`/${year}/${previous.childMdx.fields.slug}`}
+        >
+          <Arrow />
+          <span>{t('Previous')}</span>
+        </Link>
+      )}
+      {next && (
+        <Link
+          className={`${styles.paginationLink}`}
+          rel="next"
+          to={`/${year}/${next.childMdx.fields.slug}`}
+        >
+          <Arrow />
+          <span>{t('Next')} {next.childMdx.fields.slug}</span>
+        </Link>
+      )}
+    </nav>
+  )
 
   const translationData = {
     translations: data.translations.nodes,
@@ -250,10 +257,15 @@ export function Head({ data, pageContext, location }) {
     currentLanguage: pageContext.language,
     translations: data.translations.nodes,
   }
-  const { primary, dark, light, knockout } = useColors(
-    data.issue.childMdx.frontmatter.color,
-    ['Analyse', 'Analysen', 'Analysis', 'Analyses', 'Focus', 'Fokus', 'Anhang', 'Annex', 'Appendix'].includes(data.post.childMdx.frontmatter.category)
-  )
+const isAppendix = ['Anhang', 'Annex'].includes(data.post.childMdx.frontmatter.category)
+const isBrand = ['Analyse', 'Analysen', 'Focus', 'Fokus'].includes(data.post.childMdx.frontmatter.category)
+
+const { primary, dark, light, knockout } = useColors(
+  data.issue.childMdx.frontmatter.color,
+  isBrand,
+  data.issue.childMdx.frontmatter.year,
+  isAppendix
+)
 
   const bodyStyles = {
     '--fc-primary': primary.toString(),

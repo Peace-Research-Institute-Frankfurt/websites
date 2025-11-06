@@ -1,5 +1,6 @@
 import { MDXProvider } from '@mdx-js/react'
 import React from 'react'
+import Box from './Box'
 import Callout from '@shared/components/Callout'
 import Leadin from './Leadin'
 import Figure from './FigureAdapter'
@@ -9,18 +10,26 @@ import Chevron from '../images/chevron.svg'
 import Aside from './Aside'
 import TermsList from './TermsList'
 import TermAdapter from './TermAdapter'
+import Footnote from './Footnote'
+import FootnoteList from './FootnoteList'
+import Table from './Table'
+import * as BoxStyles from './Box.module.scss'
 import * as CalloutStyles from './Callout.module.scss'
 import * as QuoteStyles from './Quote.module.scss'
 import * as styles from './PostBody.module.scss'
 
 const shortCodes = {
   Aside,
+  Box: ({ ...props }) => <Box buttonComponent={Button} {...props} styles={BoxStyles} />,
   Callout: ({ ...props }) => <Callout expandable={false} buttonComponent={Button} {...props} styles={CalloutStyles} />,
   Chevron,
   Figure,
   Leadin,
+  Footnote,
+  FootnoteList,
   Term: ({ ...props }) => <TermAdapter {...props} />,
   TermsList,
+  Table,
   Quote: ({ ...props }) => <Quote {...props} styles={QuoteStyles} />,
 }
 

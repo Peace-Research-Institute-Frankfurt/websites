@@ -7,6 +7,9 @@
   padding: 0.15em 0.25em;
   border-radius: 1px;
   line-height: 1;
+  font-size: inherit;
+  font-variation-settings: inherit;
+  font-family: inherit;
   &:hover,
   &:focus-visible {
     text-decoration: underline;
