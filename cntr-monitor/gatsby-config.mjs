@@ -13,7 +13,7 @@ const config = {
     siteTwitter: '@PRIF_org',
     authorTwitter: '@PRIF_org',
     image: {
-      src: '/social-image.png',
+      src: 'content/assets/Monitor-title-illustration-landscape.jpg',
       alt: 'image alt',
     },
   },
