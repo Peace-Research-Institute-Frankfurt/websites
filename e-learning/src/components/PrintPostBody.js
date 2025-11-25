@@ -26,6 +26,8 @@ import LineChart from './charts/LineChart'
 import MixedChart from './charts/MixedChart'
 import PieChart from './charts/PieChart'
 
+import ArmsControlPrimer from './ArmsControlPrimer'
+
 const PostBody = ({ content, unit, site, setChapterList }) => {
   const [terms, setTerms] = useState([])
 
@@ -139,6 +141,7 @@ const PostBody = ({ content, unit, site, setChapterList }) => {
     LineChart,
     MixedChart,
     PieChart,
+    ArmsControlPrimer: ({ ...props }) => <ArmsControlPrimer {...props} />,
   }
 
   return (

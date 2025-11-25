@@ -37,6 +37,8 @@ import LineChart from './charts/LineChart'
 import MixedChart from './charts/MixedChart'
 import PieChart from './charts/PieChart'
 
+import ArmsControlPrimer from './ArmsControlPrimer'
+
 import * as CalloutStyles from './Callout.module.scss'
 import * as DetailsStyles from './Details.module.scss'
 import * as FigureStyles from './Figure.module.scss'
@@ -59,6 +61,7 @@ const shortCodes = {
   Tab,
   Tabs,
   Related,
+  ArmsControlPrimer: ({ ...props }) => <ArmsControlPrimer {...props} />,
   Quote: ({ ...props }) => <QuoteAdapter {...props} styles={QuoteStyles} />,
   Term: ({ ...props }) => <TermAdapter styles={TermStyles} {...props} />,
   Figure: ({ ...props }) => <FigureAdapter styles={FigureStyles} {...props} />,
