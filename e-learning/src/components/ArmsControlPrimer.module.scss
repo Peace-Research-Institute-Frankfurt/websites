@@ -74,7 +74,7 @@
   font-size: 0.85rem;
 
   @include bp(s) {
-    font-size: inherit;
+    font-size: 1.25rem;
   }
 }
 
@@ -87,7 +87,7 @@
   font-size: 0.75rem;
 
   @include bp(s) {
-    font-size: inherit;
+    font-size: 1.15rem;
   }
 }
 
