@@ -6,53 +6,90 @@ import { Bar, LinePath } from '@visx/shape'
 import { curveBasis } from '@visx/curve'
 import { AxisBottom, AxisLeft } from '@visx/axis'
 import { scaleLinear, scaleBand, scaleOrdinal } from '@visx/scale'
+import { GridColumns, GridRows } from '@visx/grid'
 import { ParentSize } from '@visx/responsive'
+import * as d3 from 'd3'
 import { LegendOrdinal } from '@visx/legend'
-import { GridRows } from '@visx/grid'
 
-export default function MixedChart({ 
-  lineData, 
-  barData, 
-  xAxisTitle, 
-  yAxisTitle, 
+export default function MixedChart({
+  lineData,
+  barData,
+  xAxis,
+  xAxisTitle,
+  yAxisTitle,
   colorRangeStart = '#FF5733', 
   colorRangeEnd = '#203b54',
-  title, 
+  title,
   description,
   legendTitle,
   credit,
-  caption 
+  caption
 }) {
+  // === Aus LineChart & BarGraph übernommen ===
   const margin = { top: 32, right: 30, bottom: 72, left: 32 }
   const axisLegendHeight = 44
   const graphId = useId()
 
-  const lineXKey = Object.keys(lineData[0])[0]
-  const lineYKey = Object.keys(lineData[0])[1]
+  // Keys für Line und Bar
+  const lineXKey = xAxis ? xAxis : Object.keys(lineData[0])[0]
+  const lineYKey = Object.keys(lineData[0]).filter((d) => d !== lineXKey)[0]
+  const barXKey = 'Period'
   const barYKey = 'Average'
 
-  const getLineX = (d) => Number(d[lineXKey])
+  const keys = ['Annual Totals', '5-Year Averages']
+
+  /** accessors - aus LineChart/BarGraph */
+  const getLineX = (d) => {
+    const val = d[lineXKey]
+    if (isNaN(Number(val))) {
+      return new Date(val)
+    }
+    return val
+  }
   const getLineY = (d) => Number(d[lineYKey])
+  const getBarX = (d) => d[barXKey]
   const getBarY = (d) => Number(d[barYKey])
 
-  const allLineValues = lineData.map(getLineY)
-  const allBarValues = barData.map(getBarY)
-  const maxValue = Math.max(...allLineValues, ...allBarValues)
-  const minValue = Math.min(...allLineValues, ...allBarValues, 0)
+  /** scales - wie in LineChart/BarGraph */
+  const lineXMinMax = [Math.min(...lineData.map(getLineX)), Math.max(...lineData.map(getLineX))]
+  
+  const xScaleLine = isNaN(Number(lineData[0][lineXKey])) 
+    ? scaleLinear({ domain: lineXMinMax }) 
+    : scaleLinear({ domain: lineXMinMax })
+
+  const xScaleBar = scaleBand({
+    domain: barData.map(getBarX),
+    padding: 0.2, // wie in BarGraph
+  })
+
+  const yScale = scaleLinear({
+    domain: [
+      Math.min(...lineData.map(getLineY), ...barData.map(getBarY), 0),
+      Math.max(...lineData.map(getLineY), ...barData.map(getBarY))
+    ],
+    nice: true,
+  })
+
+  // ColorScale wie in LineChart/BarGraph
+  const colorRange = d3
+    .scaleLinear()
+    .domain([0, keys.length - 1])
+    .range([colorRangeStart, colorRangeEnd])
 
   const colorScale = scaleOrdinal({
-    domain: ['Annual Totals', '5-Year Averages'],
-    range: [colorRangeStart, colorRangeEnd],
+    domain: keys,
+    range: Array.from([...Array(keys.length)], (x, i) => colorRange(i)),
   })
 
   return (
     <div className={styles.container}>
+      {/* Legend wie in BarGraph */}
       <div>
-        <div className={styles.srOnly}>{legendTitle ?? ''}</div>
+        <span aria-label={legendTitle ?? ''} className={styles.srOnly} />
         <LegendOrdinal
           scale={colorScale}
           direction="row"
-          labelMargin="3px 18px 0 0"
+          labelMargin="0 18px 0 0"
           className={styles.legend}
           shape={(item) => (
             <svg className={styles.legendShape}>
@@ -70,51 +107,42 @@ export default function MixedChart({
         <ParentSize>
           {({ width, height }) => {
             const responsiveWidth = width < 800 ? 800 : width
+            
+            // bounds - wie in LineChart/BarGraph
             const xMax = responsiveWidth - margin.left - margin.right
             const yMax = height - margin.top - margin.bottom - axisLegendHeight
 
-            const xScaleLine = scaleLinear({
-              domain: [Math.min(...lineData.map(getLineX)), Math.max(...lineData.map(getLineX))],
-              range: [0, xMax]
-            })
-
-            const xScaleBar = scaleBand({
-              domain: barData.map(d => d.Period),
-              range: [0, xMax],
-              padding: 0.3
-            })
-
-            const yScale = scaleLinear({
-              domain: [minValue, maxValue],
-              range: [yMax, 0],
-              nice: true,
-            })
-
-            const barWidth = xScaleBar.bandwidth()
+            // update scale ranges - wie in LineChart/BarGraph
+            xScaleLine.range([0, xMax])
+            xScaleBar.rangeRound([0, xMax])
+            yScale.range([yMax, 0])
 
             return (
               <div style={{ overflow: 'auto' }}>
                 <svg 
                   className={styles.graphContainer} 
                   width={responsiveWidth} 
-                  height={yMax + margin.top + margin.bottom + axisLegendHeight}
                   style={{ overflow: 'visible' }} 
-                  aria-labelledby={`${title && `${graphId}-map-title`} ${description && `${graphId}-map-description`}`} 
+                  aria-labelledby={`${title && `${graphId}-map-title`} ${title && `${graphId}-map-description`}`} 
                   role={'graphics-object'}
                 >
                   {title && <title id={`${graphId}-map-title`}>{title}</title>}
                   {description && <desc id={`${graphId}-map-description`}>{description}</desc>}
 
                   <Group left={margin.left + 24} top={margin.top}>
+                    {/* Grid wie in LineChart */}
                     <GridRows scale={yScale} width={xMax} height={yMax} stroke="#e0e0e0" />
+                    <GridColumns scale={xScaleLine} width={xMax} height={yMax} stroke="#e0e0e0" />
+                    <line x1={xMax} x2={xMax} y1={0} y2={yMax} stroke="#e0e0e0" />
 
-                    {/* Balken */}
+                    {/* Bars - wie in BarGraph strukturiert */}
                     {barData.map((d, i) => {
-                      const barHeight = yMax - yScale(getBarY(d))
-                      const barX = xScaleBar(d.Period)
+                      const barX = xScaleBar(getBarX(d))
                       const barY = yScale(getBarY(d))
+                      const barHeight = yMax - barY
+                      const barWidth = xScaleBar.bandwidth()
 
-                      return (
+                      return barHeight > 0 && (
                         <Bar
                           key={`bar-${i}`}
                           x={barX}
@@ -122,12 +150,11 @@ export default function MixedChart({
                           width={barWidth}
                           height={barHeight}
                           fill={colorScale('5-Year Averages')}
-                         // fillOpacity={0.7}
                         />
                       )
                     })}
 
-                    {/* Linie */}
+                    {/* Line - wie in LineChart */}
                     <LinePath
                       data={lineData}
                       curve={curveBasis}
@@ -138,43 +165,34 @@ export default function MixedChart({
                       strokeOpacity={1}
                     />
 
-                    {/* X-Achse ohne Tick-Labels */}
+                    {/* Axes - wie in LineChart/BarGraph */}
                     <AxisBottom
-                        label={xAxisTitle}
-                        labelProps={{
-                            className: styles.axisLabelBottom,
-                            textAnchor: 'middle',
-                            dy: 40, // verschiebt das Label nach unten (zuvor vielleicht 0)
-                        }}
-                        tickClassName={styles.axisTicks}
-                        top={yMax}
-                        scale={xScaleBar}
-                        tickFormat={() => ''} // keine Tick-Labels
+                      top={yMax}
+                      scale={xScaleBar}
+                      label={xAxisTitle ?? barXKey}
+                      labelProps={{
+                        className: styles.axisLabelBottom,
+                        textAnchor: 'middle',
+                        dy: 40,
+                      }}
+                      tickClassName={styles.axisTicks}
+                      tickLabelProps={() => ({
+                        angle: -45,
+                        textAnchor: 'end',
+                        fontSize: 10,
+                        dx: -5,
+                        dy: 5
+                      })}
                     />
 
-                    {/* Periodenlabels unterhalb der Balken */}
-                    {barData.map((d, i) => {
-                      const x = xScaleBar(d.Period) + barWidth / 2
-                      return (
-                        <text
-                          key={`period-label-${i}`}
-                          x={x}
-                          y={yMax + 25}
-                          textAnchor="end"
-                          fontSize={10}
-                          transform={`rotate(-45, ${x}, ${yMax + 25})`}
-                          className={styles.axisTicks}
-                        >
-                          {d.Period}
-                        </text>
-                      )
-                    })}
-
                     <AxisLeft
-                      label={yAxisTitle}
-                      labelProps={{ className: styles.axisLabelLeft, textAnchor: 'middle' }}
-                      tickClassName={styles.axisTicks}
                       scale={yScale}
+                      label={yAxisTitle ? yAxisTitle : ''}
+                      labelProps={{
+                        className: styles.axisLabelLeft,
+                        textAnchor: 'middle',
+                      }}
+                      tickClassName={styles.axisTicks}
                     />
                   </Group>
                 </svg>
@@ -184,10 +202,20 @@ export default function MixedChart({
         </ParentSize>
       </div>
 
+      {/* Caption wie in BarGraph */}
       {(caption || credit) && (
         <figcaption className="Figure-module--captions--0fbd6">
-          {caption && <div><MarkdownRenderer markdown={caption} /></div>}
-          {credit && <MarkdownRenderer className="Figure-module--credit--a51d2" markdown={credit} />}
+          {caption && (
+            <div>
+              <MarkdownRenderer markdown={caption} />
+            </div>
+          )}
+          {credit && (
+            <MarkdownRenderer
+              className="Figure-module--credit--a51d2"
+              markdown={credit}
+            />
+          )}
         </figcaption>
       )}
     </div>
