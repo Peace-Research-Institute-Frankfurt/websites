@@ -9,6 +9,8 @@ import { ParentSize } from '@visx/responsive'
 import * as d3 from 'd3'
 import { LegendOrdinal } from '@visx/legend'
 import { PatternCircles, PatternLines, PatternWaves } from '@visx/pattern'
+import { GridColumns, GridRows } from '@visx/grid'
+
 
 export default function BarGraph({ data, xAxis, xAxisTitle, yAxisTitle, series, colorRangeStart = '#6889a1', colorRangeEnd = '#203b54', maxValue, title, description,legendTitle,credit,caption }) {
   const xAxisKey = xAxis ? xAxis : Object.keys(data[0])[0]
@@ -106,6 +108,9 @@ export default function BarGraph({ data, xAxis, xAxisTitle, yAxisTitle, series, 
                   {description && <desc id={`${graphId}-map-description`}>{description}</desc>}
 
                   <Group left={margin.left + 24} top={margin.top}>
+                    <GridRows scale={yScale} width={xMax} height={yMax} stroke="#e0e0e0" />
+                    <GridColumns scale={xScale} width={xMax} height={yMax} stroke="#e0e0e0" />
+                    <line x1={xMax} x2={xMax} y1={0} y2={yMax} stroke="#e0e0e0" />
                     <BarGroup
                       data={data}
                       keys={keys}
