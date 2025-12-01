@@ -7,13 +7,21 @@ import JLULogo from '../images/jlu-logo.svg'
 import * as styles from './PartnerLogos.module.scss'
 
 const PartnerLogos = () => {
-  const logos = [<AALogo />, <PRIFLogo />, <TUDLogo />, <JLULogo />]
+  const logos = [
+    { component: <AALogo />, url: 'https://www.auswaertiges-amt.de/' },
+    { component: <PRIFLogo />, url: 'https://www.prif.org/' },
+    { component: <TUDLogo />, url: 'https://www.tu-darmstadt.de/' },
+    { component: <JLULogo />, url: 'https://www.uni-giessen.de/de' },
+  ]
+
   return (
     <div className={styles.container}>
       <ul className={styles.list}>
-        {logos.map((l, i) => (
+        {logos.map((logoObj, i) => (
           <li key={`partner.${i}`} className={styles.item}>
-            {l}
+            <a href={logoObj.url} target="_blank" rel="noopener noreferrer">
+              {logoObj.component}
+            </a>
           </li>
         ))}
       </ul>

@@ -5,6 +5,7 @@ import React from 'react'
 import MarkdownRenderer from 'react-markdown-renderer'
 import useColors from '../hooks/useColors.js'
 import useTranslations from '../hooks/useTranslations.js'
+import BlurbSection from './BlurbSection.js'
 import AboutSection from './AboutSection.js'
 import App from './App.js'
 import Footer from './Footer.js'
@@ -232,6 +233,7 @@ const Issue = ({ data, pageContext, children, location }) => {
               )}
             </div>
           </section>
+          <BlurbSection year={data.post.childMdx.frontmatter.year} />
           <AboutSection />
           <PartnerLogos />
         </div>
