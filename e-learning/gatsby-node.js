@@ -136,6 +136,10 @@ exports.createSchemaCustomization = async ({ getNode, getNodesByType, pathPrefix
   const { createTypes } = actions
 
   const typeDefs = `
+  type UpdateEntry {
+    date: String
+    description: String
+  }
   type CountriesJsonName implements Node {
     common: String
     official: String
@@ -162,6 +166,7 @@ exports.createSchemaCustomization = async ({ getNode, getNodesByType, pathPrefix
   type FrontMatter {
     hero_image: File @fileByRelativePath
     authors: [Author] @link(by: "author_id")
+    updates: [UpdateEntry]
   }
   type Mdx {
     frontmatter: FrontMatter

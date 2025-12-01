@@ -200,4 +200,19 @@
   padding: 0.5em 1.5em;
 }
 
+.updates{
+  @extend %caption;
+  max-width: 50em;
+    li {
+    list-style: none;
+    :last-child{
+      margin-bottom: 1em;
+    }
+  }
+
+  date {
+    display: block;
+    font-weight: 600;
+  }
+}
 
