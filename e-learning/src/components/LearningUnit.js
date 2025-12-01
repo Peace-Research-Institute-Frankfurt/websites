@@ -59,6 +59,10 @@ export const query = graphql`
               gatsbyImageData(layout: FULL_WIDTH, placeholder: DOMINANT_COLOR)
             }
           }
+          updates {
+            date
+            description
+          }
           
         }
       }
