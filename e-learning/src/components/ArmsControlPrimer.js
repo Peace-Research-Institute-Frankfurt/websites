@@ -8,7 +8,7 @@ export default function ArmsControlPrimer({ title, subtitle, link }) {
   const imageSrc = '/assets/BASE_Arms_Control_Primer.png'
   const imageAlt = 'Arms Control Primer Podcast Banner'
 
-  const podcast = 'APPLE PODCASTS >>>'
+  const podcast = 'TO THE IISS PODCAST >>>'
 
   return (
     <div className={styles.wrapper}>
