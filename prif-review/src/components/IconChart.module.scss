@@ -52,6 +52,8 @@
     gap: 1em;
     justify-content: space-between;
     width: 100%;
+    word-break: break-word;
+    overflow-wrap: break-word;
   }
   .double {
     grid-column: span 2;

@@ -1,11 +1,15 @@
 import React from 'react'
 import * as styles from './Flowchart.module.scss'
 
-const Flowchart = ({ title, children }) => {
+const Flowchart = ({ title, children, cols }) => {
   return (
     <figure className={styles.container}>
       {title && <figcaption className={styles.title}>{title}</figcaption>}
-      <div className={styles.nodes}>{children}</div>
+      <div
+      className={styles.nodes}
+      style={{ gridTemplateColumns: `repeat(${cols}, 1fr)` }}
+      >
+     {children}</div>
     </figure>
   )
 }
