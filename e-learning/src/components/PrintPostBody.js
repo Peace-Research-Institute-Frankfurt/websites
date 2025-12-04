@@ -102,6 +102,7 @@ const PostBody = ({ content, unit, site, setChapterList }) => {
       </PrintTerm>
     ),
     Figure,
+    LoopVideo: () => null,
     LectureVideo: ({ children }) => <>{children}</>,
     Event: ({ date, title, children }) => (
       <li className="timelineEvent">
