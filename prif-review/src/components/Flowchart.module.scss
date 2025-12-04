@@ -64,7 +64,8 @@
 .board2,
 .board3,
 .board4 {
-  background: rgb(197, 216, 240);
+  //background: rgb(192, 210, 235);
+  background: rgb(219, 230, 247);
   grid-column: span 10;
   @include bp(m) {
     grid-column: span 10;
@@ -72,6 +73,9 @@
   @include bp(l) {
     grid-column: span 5;
     grid-row: span 2;
+  }
+  .department-title{
+    color: var(--blue-light-hs);
   }
 }
 
@@ -81,7 +85,8 @@
 .board324,
 .board424,
 .board524 {
-  background: rgb(197, 216, 240);
+ // background: rgb(197, 215, 240);
+  background: rgb(219, 230, 247);
   grid-column: span 15;
   @include bp(m) {
     grid-column: span 10;
@@ -89,6 +94,9 @@
   @include bp(l) {
     grid-column: span 6;
     grid-row: span 2;
+  }
+  .department-title{
+    color: var(--blue-light-hs);
   }
 }
 
@@ -98,8 +106,9 @@
 .dep2,
 .dep3,
 .dep4,
-.dep5 {
-  background: rgb(230, 236, 247);
+.dep5,
+.dep523 {
+ // background: rgb(230, 236, 247);
   grid-column: span 10;
   @include bp(m) {
     grid-column: span 10;
@@ -110,6 +119,43 @@
   }
 }
 
+.dep1{
+  .department-title{
+    color: var(--red);
+  }
+}
+
+.dep2{
+  .department-title{
+    color: var(--red-light);
+  }
+}
+
+.dep3{
+  .department-title{
+    color: var(--orange);
+  }
+}
+
+.dep4{
+  .department-title{
+    color: var(--yellow);
+  }
+}
+
+.dep5{
+  .department-title{
+    color: var(--green);
+  }
+}
+
+.dep523{
+  .department-title{
+    color: var(--blue-light-hs);
+  }
+}
+
+
 // 2024
 .dep124,
 .dep224,
@@ -117,7 +163,7 @@
 .dep424,
 .dep524,
 .dep624 {
-  background: rgb(230, 236, 247);
+ // background: rgb(230, 236, 247);
   grid-column: span 15;
   @include bp(m) {
     grid-column: span 10;
@@ -128,14 +174,52 @@
   }
 }
 
-.dep624 {
-  background: rgb(230, 200, 248);
+.dep124{
+  .department-title{
+    color: var(--red);
+  }
+}
+
+.dep224{
+  .department-title{
+    color: var(--red-light);
+  }
+}
+
+.dep324{
+  .department-title{
+    color: var(--orange);
+  }
+}
+
+.dep424{
+  .department-title{
+    color: var(--yellow);
+  }
+}
+
+.dep524{
+  .department-title{
+    color: var(--blue-light-hs);
+  }
+}
+
+.dep624 {  
+ // background: rgb(230, 200, 248);
+  .department-title{
+    color: var(--green);
+  }
 }
 
 
 
+
+
 .comms,
-.admin {
+.admin,
+.comms23,
+.admin23 {
+  background-color: rgb(230, 236, 247);
   grid-column: span 20;
   text-align: center;
   @include bp(m) {
@@ -144,12 +228,41 @@
   }
 }
 
+.comms{
+  .department-title{
+    color: var(--green-dark);
+  }
+}
+
+.admin{
+  .department-title{
+    color: var(--blue-hs);
+  }
+}
+
+.comms23{
+  .department-title{
+    color: var(--green);
+  }
+}
+
+.admin23{
+  .department-title{
+    color: var(--green-dark);
+  }
+}
+
 // 2024
 .admin24 {
+  background: rgb(230, 236, 247);
   grid-column: span 30;
   text-align: center;
   @include bp(m) {
     grid-column: span 30;
     text-align: center;
+  } 
+  .department-title{
+    color: var(--green-dark);
   }
 }
+
