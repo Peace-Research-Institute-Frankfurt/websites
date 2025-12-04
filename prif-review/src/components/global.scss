@@ -40,6 +40,18 @@
   --chart-background: rgb(245, 245, 245);
   --prif-blue-light: hsl(197, 100%, 35%);
   --prif-blue-dark: hsl(207, 49%, 26%);
+  --red: #a91938;
+  --red-light: #d53037;
+  --orange: #ef7d23;
+  --yellow: #dab204;
+  --green-light: #aecc55;
+  --green: #5eb66f;
+  --green-dark: #00736c;
+  --blue-light-hs: #0083b5;
+  --blue-hs: #005a8e;
+  --blue-dark-hs: #224663;
+
+
 
   // Scale type size on high-res displays
   @media (min-resolution: 120dpi) and (min-width: 1200px) {
