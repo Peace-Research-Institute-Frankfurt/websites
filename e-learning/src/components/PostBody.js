@@ -10,7 +10,7 @@ import Institution from './Institution'
 import Treaty from './Treaty'
 import TermAdapter from './TermAdapter'
 
-import LoopVideo from './LoopVideo'
+import LoopVideoAdapter from './LoopVideoAdapter'
 import LectureVideo from './LectureVideo'
 import { Choice } from './MultipleChoice'
 import { Question, Quiz, RadioChoice } from './Quiz.js'
@@ -66,7 +66,7 @@ const shortCodes = {
   Quote: ({ ...props }) => <QuoteAdapter {...props} styles={QuoteStyles} />,
   Term: ({ ...props }) => <TermAdapter styles={TermStyles} {...props} />,
   Figure: ({ ...props }) => <FigureAdapter styles={FigureStyles} {...props} />,
-  LoopVideo,
+  LoopVideo: ({ ...props }) => <LoopVideoAdapter {...props} />,
   LectureVideo,
   Event: ({ ...props }) => <Event styles={TimelineStyles} {...props} />,
   Timeline: ({ ...props }) => <Timeline styles={TimelineStyles} {...props} />,
