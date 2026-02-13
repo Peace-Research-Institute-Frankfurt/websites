@@ -36,6 +36,7 @@ Prompted by the horrific experiences of chemical warfare during World War I, the
   centerLong={0}
   mapScale={1}
   layout="medium"
+  expandable={true}
   legendPosition="bottom-left"
   title="Member states of the Geneva Protocol"
   description="Member states of the Geneva Protocol"
@@ -44,6 +45,7 @@ Prompted by the horrific experiences of chemical warfare during World War I, the
   license="cc-by-4"
 >
   <CountryStatisticsLayer
+    statisticsGroupName='Adoption Status'
     colors={['#0D425B', '#7996A5', '#CED9DE']}
     data={[
       {name: 'Afghanistan', iso3: 'AFG', value: "Accession"},
@@ -92,7 +94,7 @@ Prompted by the horrific experiences of chemical warfare during World War I, the
       {name: 'Fiji', iso3: 'FJI', value: "Succession"},
       {name: 'Finland', iso3: 'FIN', value: "Ratified"},
       {name: 'France', iso3: 'FRA', value: "Ratified"},
-      {name: 'Gambia (Islamic Republic of the)', iso3: 'GAB', value: "Succession"},
+      {name: 'Gambia (Islamic Republic of the)', iso3: 'GMB', value: "Succession"},
       {name: 'Germany', iso3: 'DEU', value: "Ratified"},
       {name: 'Ghana', iso3: 'GHA', value: "Accession"},
       {name: 'Greece', iso3: 'GRC', value: "Ratified"},
@@ -115,7 +117,7 @@ Prompted by the horrific experiences of chemical warfare during World War I, the
       {name: 'Kazakhstan', iso3: 'KAZ', value: "Accession"},
       {name: 'Kenya', iso3: 'KEN', value: "Accession"},
       {name: 'Kuwait', iso3: 'KWT', value: "Accession"},
-      {name: 'Kyrgizstan', iso3: 'KGZ', value: "Accession"},
+      {name: 'Kyrgyzstan', iso3: 'KGZ', value: "Accession"},
       {name: 'Lao Peoples Democratic Republic', iso3: 'LAO', value: "Accession"},
       {name: 'Latvia', iso3: 'LVA', value: "Ratified"},
       {name: 'Lebanon', iso3: 'LBN', value: "Accession"},
@@ -194,11 +196,6 @@ Prompted by the horrific experiences of chemical warfare during World War I, the
       {name: 'Yemen', iso3: 'YEM', value: "Accession"}
     ]}
   />
-  <MarkerLayer markerGroupName="Adoption Status"
-               label="Adoption Status"
-               data={[]}
-  />
-
 </LayeredMap>
 
 
@@ -226,6 +223,220 @@ Today, the cornerstone of the biological arms control and disarmament regime is 
   alt="World map showing global participation in the Biological Weapons Convention (BWC), with countries color-coded according to adoption status: dark blue for 'Ratified', light blue for 'Accession or Succession', yellow for 'Signed, but not ratified', and gray for countries with no action or data."
   license=""
 ></Figure>
+
+<LayeredMap
+  centerLat={20}
+  centerLong={0}
+  mapScale={1}
+  layout="medium"
+  expandable={true}
+  legendPosition="bottom-left"
+  title="Global participation in the Biological Weapons Convention (BWC)"
+  description="Global participation in the Biological Weapons Convention (BWC)"
+  legendTitle="Legend"
+  credit="Data: UNODA Disarmament Treaties Database, Natural Earth, Image: PRIF/CC BY SA"
+  license=""
+>
+  <CountryStatisticsLayer
+    statisticsGroupName='Adoption Status'
+    colors={['#0D425B', '#7996A5', '#CED9DE', 'var(--yellow-30)']}
+    data={[
+      {name: 'Afghanistan', iso3: 'AFG', value: "Ratified"},
+      {name: 'Albania', iso3: 'ALB', value: "Accession"},
+      {name: 'Algeria', iso3: 'DZA', value: "Accession"},
+      {name: 'Andorra', iso3: 'AND', value: "Accession"},
+      {name: 'Angola', iso3: 'AGO', value: "Accession"},
+      {name: 'Antigua and Barbuda', iso3: 'ATG', value: "Accession"},
+      {name: 'Argentina', iso3: 'ARG', value: "Ratified"},
+      {name: 'Armenia', iso3: 'ARM', value: "Accession"},
+      {name: 'Australia', iso3: 'AUS', value: "Ratified"},
+      {name: 'Austria', iso3: 'AUT', value: "Ratified"},
+      {name: 'Azerbaijan', iso3: 'AZE', value: "Accession"},
+      {name: 'Bahamas', iso3: 'BHS', value: "Accession"},
+      {name: 'Bahrain', iso3: 'BHR', value: "Accession"},
+      {name: 'Bangladesh', iso3: 'BGD', value: "Accession"},
+      {name: 'Barbados', iso3: 'BRB', value: "Ratified"},
+      {name: 'Belarus', iso3: 'BLR', value: "Ratified"},
+      {name: 'Belgium', iso3: 'BEL', value: "Ratified"},
+      {name: 'Belize', iso3: 'BLZ', value: "Succession"},
+      {name: 'Benin', iso3: 'BEN', value: "Ratified"},
+      {name: 'Bhutan', iso3: 'BTN', value: "Accession"},
+      {name: 'Bolivia', iso3: 'BOL', value: "Ratified"},
+      {name: 'Bosnia and Herzegovina', iso3: 'BIH', value: "Succession"},
+      {name: 'Botswana', iso3: 'BWA', value: "Ratified"},
+      {name: 'Brazil', iso3: 'BRA', value: "Ratified"},
+      {name: 'Brunei', iso3: 'BRN', value: "Accession"},
+      {name: 'Bulgaria', iso3: 'BGR', value: "Ratified"},
+      {name: 'Burkina Faso', iso3: 'BFA', value: "Accession"},
+      {name: 'Burundi', iso3: 'BDI', value: "Ratified"},
+      {name: 'Cabo Verde', iso3: 'CPV', value: "Accession"},
+      {name: 'Cambodia', iso3: 'KHM', value: "Ratified"},
+      {name: 'Cameroon', iso3: 'CMR', value: "Accession"},
+      {name: 'Canada', iso3: 'CAN', value: "Ratified"},
+      {name: 'Central African Republic', iso3: 'CAF', value: "Ratified"},
+      {name: 'Chile', iso3: 'CHL', value: "Ratified"},
+      {name: 'China', iso3: 'CHN', value: "Accession"},
+      {name: 'Colombia', iso3: 'COL', value: "Ratified"},
+      {name: 'Comoros', iso3: 'COM', value: "Accession"},
+      {name: 'Republic of the Congo', iso3: 'COG', value: "Accession"},
+      {name: 'Cook Islands', iso3: 'COK', value: "Accession"},
+      {name: 'Costa Rica', iso3: 'CRI', value: "Ratified"},
+      {name: 'Cote D Ivoire', iso3: 'CIV', value: "Ratified"},
+      {name: 'Croatia', iso3: 'HRV', value: "Succession"},
+      {name: 'Cuba', iso3: 'CUB', value: "Ratified"},
+      {name: 'Cyprus', iso3: 'CYP', value: "Ratified"},
+      {name: 'Czech Republic', iso3: 'CZE', value: "Succession"},
+      {name: 'Democratic Republic of the Congo', iso3: 'COD', value: "Ratified"},
+      {name: 'Denmark', iso3: 'DNK', value: "Ratified"},
+      {name: 'Dominica', iso3: 'DMA', value: "Succession"},
+      {name: 'Dominican Republic', iso3: 'DOM', value: "Ratified"},
+      {name: 'Ecuador', iso3: 'ECU', value: "Ratified"},
+      {name: 'El Salvador', iso3: 'SLV', value: "Ratified"},
+      {name: 'Equatorial Guinea', iso3: 'GNQ', value: "Accession"},
+      {name: 'Estonia', iso3: 'EST', value: "Accession"},
+      {name: 'Ethiopia', iso3: 'ETH', value: "Ratified"},
+      {name: 'Fiji', iso3: 'FJI', value: "Ratified"},
+      {name: 'Finland', iso3: 'FIN', value: "Ratified"},
+      {name: 'France', iso3: 'FRA', value: "Accession"},
+      {name: 'Gabon', iso3: 'GAB', value: "Ratified"},
+      {name: 'Gambia (Islamic Republic of the)', iso3: 'GMB', value: "Ratified"},
+      {name: 'Georgia', iso3: 'GEO', value: "Accession"},
+      {name: 'Germany', iso3: 'DEU', value: "Ratified"},
+      {name: 'Ghana', iso3: 'GHA', value: "Ratified"},
+      {name: 'Greece', iso3: 'GRC', value: "Ratified"},
+      {name: 'Grenada', iso3: 'GRD', value: "Accession"},
+      {name: 'Guatemala', iso3: 'GTM', value: "Ratified"},
+      {name: 'Guinea', iso3: 'GIN', value: "Accession"},
+      {name: 'Guinea Bissau', iso3: 'GNB', value: "Accession"},
+      {name: 'Guyana', iso3: 'GUY', value: "Ratified"},
+      {name: 'Holy See', iso3: 'VAT', value: "Accession"},
+      {name: 'Honduras', iso3: 'HND', value: "Ratified"},
+      {name: 'Hungary', iso3: 'HUN', value: "Ratified"},
+      {name: 'Iceland', iso3: 'ISL', value: "Ratified"},
+      {name: 'India', iso3: 'IND', value: "Ratified"},
+      {name: 'Indonesia', iso3: 'IDN', value: "Ratified"},
+      {name: 'Iran', iso3: 'IRN', value: "Ratified"},
+      {name: 'Iraq', iso3: 'IRQ', value: "Ratified"},
+      {name: 'Ireland', iso3: 'IRL', value: "Ratified"},
+      {name: 'Italy', iso3: 'ITA', value: "Ratified"},
+      {name: 'Jamaica', iso3: 'JAM', value: "Accession"},
+      {name: 'Japan', iso3: 'JPN', value: "Ratified"},
+      {name: 'Jordan', iso3: 'JOR', value: "Ratified"},
+      {name: 'Kazakhstan', iso3: 'KAZ', value: "Accession"},
+      {name: 'Kenya', iso3: 'KEN', value: "Accession"},
+      {name: 'Kiribati', iso3: 'KIR', value: "Accession"},
+      {name: 'Kuwait', iso3: 'KWT', value: "Ratified"},
+      {name: 'Kyrgyzstan', iso3: 'KGZ', value: "Accession"},
+      {name: 'Laos', iso3: 'LAO', value: "Ratified"},
+      {name: 'Latvia', iso3: 'LVA', value: "Accession"},
+      {name: 'Lebanon', iso3: 'LBN', value: "Ratified"},
+      {name: 'Lesotho', iso3: 'LSO', value: "Ratified"},
+      {name: 'Liberia', iso3: 'LBR', value: "Ratified"},
+      {name: 'Libya', iso3: 'LBY', value: "Ratified"},
+      {name: 'Liechtenstein', iso3: 'LIE', value: "Accession"},
+      {name: 'Lithuania', iso3: 'LTU', value: "Accession"},
+      {name: 'Luxembourg', iso3: 'LUX', value: "Ratified"},
+      {name: 'Madagascar', iso3: 'MDG', value: "Ratified"},
+      {name: 'Malawi', iso3: 'MWI', value: "Ratified"},
+      {name: 'Malaysia', iso3: 'MYS', value: "Ratified"},
+      {name: 'Maldives', iso3: 'MDV', value: "Accession"},
+      {name: 'Mali', iso3: 'MLI', value: "Ratified"},
+      {name: 'Malta', iso3: 'MLT', value: "Ratified"},
+      {name: 'Marshall Islands', iso3: 'MHL', value: "Accession"},
+      {name: 'Mauritania', iso3: 'MRT', value: "Accession"},
+      {name: 'Mauritius', iso3: 'MUS', value: "Ratified"},
+      {name: 'Mexico', iso3: 'MEX', value: "Ratified"},
+      {name: 'Micronesia', iso3: 'FSM', value: "Accession"},
+      {name: 'Moldova', iso3: 'MDA', value: "Accession"},
+      {name: 'Monaco', iso3: 'MCO', value: "Accession"},
+      {name: 'Mongolia', iso3: 'MNG', value: "Ratified"},
+      {name: 'Montenegro', iso3: 'MNE', value: "Succession"},
+      {name: 'Morocco', iso3: 'MAR', value: "Ratified"},
+      {name: 'Mozambique', iso3: 'MOZ', value: "Accession"},
+      {name: 'Myanmar', iso3: 'MMR', value: "Ratified"},
+      {name: 'Namibia', iso3: 'NAM', value: "Accession"},
+      {name: 'Nauru', iso3: 'NRU', value: "Accession"},
+      {name: 'Nepal', iso3: 'NPL', value: "Ratified"},
+      {name: 'Netherlands', iso3: 'NLD', value: "Ratified"},
+      {name: 'New Zealand', iso3: 'NZL', value: "Ratified"},
+      {name: 'Nicaragua', iso3: 'NIC', value: "Ratified"},
+      {name: 'Niger', iso3: 'NER', value: "Ratified"},
+      {name: 'Nigeria', iso3: 'NGA', value: "Ratified"},
+      {name: 'Niue', iso3: 'NIU', value: "Accession"},
+      {name: 'North Korea', iso3: 'PRK', value: "Accession"},
+      {name: 'North Macedonia', iso3: 'MKD', value: "Succession"},
+      {name: 'Norway', iso3: 'NOR', value: "Ratified"},
+      {name: 'Oman', iso3: 'OMN', value: "Accession"},
+      {name: 'Pakistan', iso3: 'PAK', value: "Ratified"},
+      {name: 'Palau', iso3: 'PLW', value: "Accession"},
+      {name: 'Palestine', iso3: 'PSE', value: "Accession"},
+      {name: 'Panama', iso3: 'PAN', value: "Ratified"},
+      {name: 'Papua New Guinea', iso3: 'PNG', value: "Accession"},
+      {name: 'Paraguay', iso3: 'PRY', value: "Accession"},
+      {name: 'Peru', iso3: 'PER', value: "Ratified"},
+      {name: 'Philippines', iso3: 'PHN', value: "Ratified"},
+      {name: 'Poland', iso3: 'POL', value: "Ratified"},
+      {name: 'Portugal', iso3: 'PRT', value: "Ratified"},
+      {name: 'Qatar', iso3: 'QAT', value: "Ratified"},
+      {name: 'Romania', iso3: 'ROU', value: "Ratified"},
+      {name: 'Russia', iso3: 'RUS', value: "Ratified"},
+      {name: 'Rwanda', iso3: 'RWA', value: "Ratified"},
+      {name: 'Saint Kitts and Nevis', iso3: 'KNA', value: "Accession"},
+      {name: 'Saint Lucia', iso3: 'LCA', value: "Succession"},
+      {name: 'Saint Vincent and the Grenadines', iso3: 'VCT', value: "Succession"},
+      {name: 'Samoa', iso3: 'WSM', value: "Accession"},
+      {name: 'San Marino', iso3: 'SMR', value: "Ratified"},
+      {name: 'São Tomé and Príncipe', iso3: 'STP', value: "Accession"},
+      {name: 'Saudi Arabia', iso3: 'SAU', value: "Ratified"},
+      {name: 'Senegal', iso3: 'SEN', value: "Ratified"},
+      {name: 'Serbia', iso3: 'SRB', value: "Succession"},
+      {name: 'Seychelles', iso3: 'SYC', value: "Accession"},
+      {name: 'Sierra Leone', iso3: 'SLE', value: "Ratified"},
+      {name: 'Singapore', iso3: 'SGP', value: "Ratified"},
+      {name: 'Slovakia', iso3: 'SVK', value: "Succession"},
+      {name: 'Slovenia', iso3: 'SVN', value: "Succession"},
+      {name: 'Solomon Islands', iso3: 'SLB', value: "Succession"},
+      {name: 'South Africa', iso3: 'ZAF', value: "Ratified"},
+      {name: 'South Korea', iso3: 'KOR', value: "Ratified"},
+      {name: 'South Sudan', iso3: 'SSD', value: "Accession"},
+      {name: 'Spain', iso3: 'ESP', value: "Ratified"},
+      {name: 'Sri Lanka', iso3: 'LKA', value: "Ratified"},
+      {name: 'Sudan', iso3: 'SDN', value: "Accession"},
+      {name: 'Suriname', iso3: 'SUR', value: "Accession"},
+      {name: 'Eswatini', iso3: 'SWZ', value: "Accession"},
+      {name: 'Sweden', iso3: 'SWE', value: "Ratified"},
+      {name: 'Switzerland', iso3: 'CHE', value: "Ratified"},
+      {name: 'Tajikistan', iso3: 'TJK', value: "Accession"},
+      {name: 'Tanzania', iso3: 'TZA', value: "Ratified"},
+      {name: 'Thailand', iso3: 'THA', value: "Ratified"},
+      {name: 'Timor-Leste', iso3: 'TGO', value: "Accession"},
+      {name: 'Togo', iso3: 'TGO', value: "Ratified"},
+      {name: 'Tonga', iso3: 'TON', value: "Accession"},
+      {name: 'Trinidad and Tobago', iso3: 'TTO', value: "Accession"},
+      {name: 'Tunisia', iso3: 'TUN', value: "Ratified"},
+      {name: 'Turkmenistan', iso3: 'TKM', value: "Accession"},
+      {name: 'Tuvalu', iso3: 'TUV', value: "Accession"},
+      {name: 'Uganda', iso3: 'UGA', value: "Accession"},
+      {name: 'Ukraine', iso3: 'UKR', value: "Ratified"},
+      {name: 'United Arab Emirates', iso3: 'ARE', value: "Ratified"},
+      {name: 'United Kingdom of Great Britain and Northern Ireland', iso3: 'GBR', value: "Ratified"},
+      {name: 'United States of America', iso3: 'USA', value: "Ratified"},
+      {name: 'Uruguay', iso3: 'URY', value: "Accession"},
+      {name: 'Uzbekistan', iso3: 'UZB', value: "Accession"},
+      {name: 'Vanuatu', iso3: 'VUT', value: "Succession"},
+      {name: 'Venezuela', iso3: 'VEN', value: "Ratified"},
+      {name: 'Vietnam', iso3: 'VNM', value: "Ratified"},
+      {name: 'Yemen', iso3: 'YEM', value: "Ratified"},
+      {name: 'Zambia', iso3: 'ZMB', value: "Accession"},
+      {name: 'Zimbabwe', iso3: 'ZWE', value: "Accession"},
+      {name: 'Egypt', iso3: 'EGY', value: "Only signed"},
+      {name: 'Haiti', iso3: 'HTI', value: "Only signed"},
+      {name: 'Somalia', iso3: 'SOM', value: "Only signed"},
+      {name: 'Syria', iso3: 'SYR', value: "Only signed"}
+    ]}
+  />
+</LayeredMap>
+
 
 <LectureVideo smil="/lu03/LU03.05_final.smil" provider="video-stream">
 
