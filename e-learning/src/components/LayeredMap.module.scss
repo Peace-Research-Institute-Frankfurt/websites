@@ -140,3 +140,63 @@ figcaption, .captions{
     margin-bottom:1rem !important;
   }
 }
+
+.expand,
+.collapse {
+  position: absolute;
+  bottom: 0.7rem;
+  right: 0.2rem;
+  font-size: 0;
+  background: black;
+  padding: 0.1rem;
+  cursor: pointer;
+  svg {
+    display: block;
+    width: 1.5rem;
+    height: auto;
+    filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.621));
+  }
+  path {
+    fill: white;
+  }
+}
+
+.collapse {
+  bottom: 0;
+}
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 5000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--black);
+  pointer-events: none;
+  opacity: 0;
+  transition: var(--fast);
+  visibility: hidden;
+  padding: var(--padding-small);
+}
+
+.lightbox-media {
+  height: 100%;
+  display: flex;
+  width: 100%;
+  position: relative;
+  .map {
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+  }
+}
+
+.lightbox-active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
