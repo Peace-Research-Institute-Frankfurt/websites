@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import { createPortal } from 'react-dom'
+import { graphql, useStaticQuery } from 'gatsby'
 import { NaturalEarth } from '@visx/geo'
 import MarkerMapLayer from './MarkerLayer'
 import CountryStatisticsLayer from './CountryStatisticsLayer'
 import MapLegend from './MapLegend'
-import LicenseString from './LicenseString.js'
-import MarkdownRenderer from 'react-markdown-renderer'
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 import admin0 from '../assets/ne_admin0.json'
 import ExpandIcon from '@shared/assets/expand.svg'
 import CollapseIcon from '@shared/assets/collapse.svg'
@@ -29,6 +30,29 @@ export default function LayeredMap({
 }) {
   const [isExpanded, setIsExpanded] = useState(false)
   const [lightboxTargetEl, setLightboxTargetEl] = useState(null)
+
+  // License-Daten aus GraphQL holen
+  const data = useStaticQuery(graphql`
+    query LicenseQuery {
+      licenses: allLicensesJson {
+        nodes {
+          title
+          license_id
+          url
+        }
+      }
+    }
+  `)
+
+  // License-Node finden
+  let licenseNode = null
+  if (license) {
+    data.licenses.nodes.forEach((l) => {
+      if (l.license_id === license) {
+        licenseNode = l
+      }
+    })
+  }
 
   // Prepare render target for lightboxes
   useEffect(() => {
@@ -92,12 +116,12 @@ export default function LayeredMap({
 
   return (
     <>
-        <figure 
-          onKeyUp={handleKeyUp} 
-          className={`${styles.container} ${figureStyles[layout]}`}
-          role="presentation"
-          tabIndex={-1}
-        >
+      <figure 
+        onKeyUp={handleKeyUp} 
+        className={`${styles.container} ${figureStyles[layout]}`}
+        role="presentation"
+        tabIndex={-1}
+      >
         <div className={`${styles.mapContainer} ${figureStyles.imageContainer}`}>
           {mapContent}
           {expandable && (
@@ -114,11 +138,40 @@ export default function LayeredMap({
           <MapLegend children={children} legendPosition={legendPosition} legendTitle={legendTitle} />
         </div>
         <figcaption className={figureStyles.captions}>
-          {caption && <MarkdownRenderer className={figureStyles.caption} markdown={caption} />}
-          <div className={figureStyles.credit}>
-            {credit && <MarkdownRenderer markdown={credit} />}
-            {license && <LicenseString license={license} />}
-          </div>
+          {caption && (
+            <span className={figureStyles.caption}>
+              <ReactMarkdown
+                remarkPlugins={[remarkGfm]}
+                components={{
+                  p: ({ node, ...props }) => <span {...props} />,
+                  a: ({ node, children, ...props }) => (
+                    <a {...props} target="_blank" rel="noopener noreferrer">
+                      {children}
+                    </a>
+                  ),
+                }}
+              >
+                {caption}
+              </ReactMarkdown>
+            </span>
+          )}
+          {credit && (
+            <span className={figureStyles.credit}>
+              <ReactMarkdown
+                remarkPlugins={[remarkGfm]}
+                components={{
+                  p: ({ node, ...props }) => <span {...props} />,
+                  a: ({ node, children, ...props }) => (
+                    <a {...props} target="_blank" rel="noopener noreferrer">
+                      {children}
+                    </a>
+                  ),
+                }}
+              >
+                {`Data: ${credit}${licenseNode ? `, [${licenseNode.title}](${licenseNode.url})` : ''}.`}
+              </ReactMarkdown>
+            </span>
+          )}
         </figcaption>
       </figure>
       {expandable && lightboxTargetEl &&
