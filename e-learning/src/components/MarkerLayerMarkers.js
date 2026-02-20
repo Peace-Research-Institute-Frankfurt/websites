@@ -23,14 +23,14 @@ const coordinateStringtoDecimal = (s) => {
   return d * sign
 }
 
-export default function MarkerLayerMarkers({ data, scale, projection }) {
+export default function MarkerLayerMarkers({ data, scale, projection, getCategory }) {
   return (
     <g>
       {data.map((marker, i) => (
         <circle
           key={`markerCircle.${i}`}
           r={1}
-          fill={scale(marker.category)}
+          fill={scale(getCategory(marker))}
           className={styles.marker}
           transform={`translate(${projection.projection([
             Number.isNaN(Number(marker.long)) ? coordinateStringtoDecimal(marker.long) : Number(marker.long),

@@ -62,7 +62,8 @@ The technology and infrastructure used to produce nuclear material for a weapon 
       centerLong={0}
       mapScale={1}
       layout="large"
-      legendPosition="bottom-left"
+      expandable={true}
+      legendPosition="top-left"
       title="Global distribution of identified recoverable uranium resources"
       description="Map showing countries with natural uranium resources"
       legendTitle="Legend"
@@ -90,7 +91,7 @@ The technology and infrastructure used to produce nuclear material for a weapon 
                      ]} />
       <CountryStatisticsLayer
         data={[
-          {name: 'Australia', iso3: 'AUS', value: ["Australia 28%", 28]},
+          {name: 'Australia', iso3: 'AUS', value: ["Australia 28%"]},
           {name: 'Kazakhstan', iso3: 'KAZ', value: "Kazakhstan 13%"},
           {name: 'Canada', iso3: 'CAN', value: "Canada 10%"},
           {name: 'Russia', iso3: 'RUS', value: "Russia 8%"},
