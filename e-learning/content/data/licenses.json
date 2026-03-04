@@ -1,5 +1,10 @@
 [
   {
+    "license_id": "cc0-1",
+    "title": "CC0 1.0",
+    "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+  },
+  {
     "license_id": "cc-by-4",
     "title": "CC BY 4.0",
     "url": "https://creativecommons.org/licenses/by/4.0/"
