@@ -52,7 +52,7 @@ This chapter will now present the nuclear dimension of European arms control. It
   | North Korea   | 0                                 | N.A.                                   | 50                   | 50                 | 50             |
   | **Totals**    | **3,804**                         | **100**                                | **5,681**            | **9,585**          | **12,121**     |
 
-  (These numbers are based on estimates by the Federation of American Scientists (FAS) Source: https://fas.org/initiative/status-world-nuclear-forces/)
+  <p><small>Estimates of Nuclear Weapons per Country<br/>Source: Federation of American Scientist (FAS) https://fas.org/initiative/status-world-nuclear-forces/</small></p>
 
   There is currently uncertainty regarding the number of Russian non-strategic nuclear weapons (NSWS) and their deployment status, with the Kremlin formally announcing its intention, in March 2023, to deploy nuclear weapons in Belarus. Russian NSNWs are declared to be in central storage, not located in bases together with delivery systems.
 
@@ -68,7 +68,7 @@ The United States currently possesses only one type of NSWS: the B-61 gravity bo
   mapScale={4.5}
   layout="medium"
   legendPosition="bottom-left"
-  title="European military airbases with US nuclear weapons deployed under the nuclear sharing programme in 2024"
+  title="European Military Airbases with US Nuclear Weapons deployed under the Nuclear Sharing Programme in 2024"
   description="Map showing the boundaries of post-Soviet European states"
   legendTitle="Legend"
   credit="Natual Earth. Graphic: PRIF"
@@ -102,32 +102,13 @@ The United States currently possesses only one type of NSWS: the B-61 gravity bo
 
 The exact locations and quantities of the current deployments have not been publicly disclosed, however, and remain subject to expert estimates. They represent a significant reduction compared to the Cold War era when the US maintained over 7,000 forward-deployed nuclear weapons in Europe.
 
-import NonStrategicNuclearWeaponsRussiaAndUSA from "../../data/charts-nonstrategicnuclearweapons.csv"
-
-<LineChart
-  data={NonStrategicNuclearWeaponsRussiaAndUSA}
-  xAxis={"Year"}
-  xAxisTitle={"Year"}
-  yAxisTitle={"US/Russia Non-Strategic Nuclear Weapons in thousands"}
-  colorRangeStart="#FF5733"
-  colorRangeEnd="#33FF57"
-  maxValue={24}
-  xAxisDateOptions={{
-    year: "numeric",
-    month: "numeric",
-  }}
-  title={"Example title"}
-  description={"Example description"}
-  legendTitle={"Example legend title"}
-/>
-(Figure based on estimates from the James Martin Center for Nonproliferation Studies, May 2022. Source: https://nonproliferation.org/wp-content/uploads/2022/05/op55-everything-counts.pdf (p. vi).  )
 
 <Figure
   size="medium"
   src="LU11_E1_inhalte_grafiken_25022025_1_alternativ.svg"
-  caption="Chart based on: Kristensen/ Hans M./Korda, Matt/Johns, Eliana/Knight, Mackenzie. 2023. Nuclear weapons sharing, 2023, in: Bulletin of Atomic Sciences, 79 (6): 393–406. https://doi.org/10.1080/00963402.2023.2266944"
+  caption="US Air Force Nuclear Storage Sites in Europe from 1985 to 2023"
   alt=""
-  credit="Grübelfabrik"
+  credit="Data: Chart based on: Kristensen/ Hans M./Korda, Matt/Johns, Eliana/Knight, Mackenzie. 2023. Nuclear weapons sharing, 2023, in: Bulletin of Atomic Sciences, 79 (6): 393–406. https://doi.org/10.1080/00963402.2023.2266944, Grübelfabrik"
   license="cc-by-nc-sa-4"
   expandable={true}
 ></Figure>
@@ -141,7 +122,7 @@ During periods of conflict, the US forward-deployed weapons may be made availabl
 
 According to [**NATO’s own communications**](https://www.nato.int/nato_static_fl2014/assets/pdf/2022/2/pdf/220204-factsheet-nuclear-sharing-arrange.pdf)
 
-  <Quote type="document" fullDocument="https://www.nato.int/nato_static_fl2014/assets/pdf/2022/2/pdf/220204-factsheet-nuclear-sharing-arrange.pdf" cite='NATO Headquarter'>
+  <Quote type="document" fullDocument="https://www.nato.int/nato_static_fl2014/assets/pdf/2022/2/pdf/220204-factsheet-nuclear-sharing-arrange.pdf" cite='Statement by NATO'>
     ‘a nuclear mission can only be undertaken after explicit political approval is given by NATO’s Nuclear Planning Group (NPG) and authorization is received from the US President and UK Prime Minister’.
   </Quote>
 
@@ -155,11 +136,13 @@ It is important to note, however, that there are major uncertainties surrounding
 
 During the Cold War, the Soviet Union deployed nuclear weapons in several of its republics and satellites. Following the collapse of the Soviet Union, these weapons were repatriated to Russia.
 
+import NonStrategicNuclearWeaponsRussiaAndUSA from "../../data/charts-nonstrategicnuclearweapons.csv"
+
 <LineChart
   data={NonStrategicNuclearWeaponsRussiaAndUSA}
-  xAxis={"Year"}
-  xAxisTitle={"Year"}
-  yAxisTitle={"US/Russia Non-Strategic Nuclear Weapons in thousands"}
+  xAxis="Year"
+  xAxisTitle="Year"
+  yAxisTitle="US/Russia Non-Strategic Nuclear Weapons in thousands"
   colorRangeStart="#FF5733"
   colorRangeEnd="#33FF57"
   maxValue={24}
@@ -167,12 +150,11 @@ During the Cold War, the Soviet Union deployed nuclear weapons in several of its
     year: "numeric",
     month: "numeric",
   }}
-  title={"Example title"}
-  description={"Example description"}
-  legendTitle={"Example legend title"}
+  title="Example title"
+  description="US/Russia Non-Strategic Nuclear Weapons"
+  legendTitle="Example legend title"
 />
-Graph based on estimates from the James Martin Center for Nonproliferation Studies, May 2022
-Source: https://nonproliferation.org/wp-content/uploads/2022/05/op55-everything-counts.pdf (p. vi)
+<p><small>US/Russia Non-Strategic Nuclear Weapons<br/>Source: James Martin Center for Nonproliferation Studies, May 2022. https://nonproliferation.org/wp-content/uploads/2022/05/op55-everything-counts.pdf (p. vi).</small></p>
 
 Russia recently announced that it planned to resume the practice of deploying nuclear weapons abroad. In a formal announcement on 25 March 2023, the Kremlin declared its intention to deploy non-strategic nuclear weapons in Belarus. Experts remain uncertain about whether the weapons have since been transferred to Belarus or where they might be stored.
 
@@ -208,7 +190,8 @@ Over the past five decades, the United States and the Soviet Union/Russia have c
 | Date entered into force     | 3 October 1972 | N/A                       | 5 December 1994 | N/A                      | N/A                      | 1 June 2003           | 5 February 2011  |
 | Expiration date             | 3 October 1977 | N/A                        | 5 December 2009 | N/A                      | N/A                      | 5 February 2011       | 5 February 2026  |
 
-(Table based on the overview provided by the Arms Control Association. For more information on the bilateral treaties between the US and the Soviet Union/Russia [see learning unit 20](/lu-20/). Source: https://www.armscontrol.org/factsheets/USRussiaNuclearAgreements)
+<p><small>Key Bilateral Nuclear Arms Control Treaties<br/>Source: Arms Control Association (https://www.armscontrol.org/factsheets/USRussiaNuclearAgreements)</small></p>
+For more information on the bilateral treaties between the US and the Soviet Union/Russia [see learning unit 20](/lu-20/).
 
 In February 2023, the Kremlin announced the suspension of Russia’s participation in New START.
 
