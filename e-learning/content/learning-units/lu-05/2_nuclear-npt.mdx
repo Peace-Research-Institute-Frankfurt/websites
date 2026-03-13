@@ -95,17 +95,153 @@ Today, there are five NWFZs worldwide:
 - Africa (Treaty of Pelindaba, 1996)
 - Central Asia (Treaty of Semipalatinsk, 2006)
 
-<Figure
-size="medium"
-src="All-NWFZs---upscale.png"
-caption="Map showing the Nuclear Weapon Free Zones."
-alt=""
-credit="Own Figure, Data Source:  https://www.un.org/nwfz/content/overview-nuclear-weapon-free-zones"
-license=""
-></Figure>
+<LayeredMap
+  centerLat={45}
+  centerLong={0}
+  mapScale={1}
+  layout="large"
+  expandable={true}
+  legendPosition="top-left"
+  title="Map showing the Nuclear Weapon Free Zones."
+  description="Map showing the Nuclear Weapon Free Zones."
+  legendTitle="Legend"
+  credit="https://www.un.org/nwfz/content/overview-nuclear-weapon-free-zones. Graphic: PRIF"
+  license="cc-by-4"
+>
+  <CountryStatisticsLayer
+    statisticsGroupName='Treaties governing the five existing NWFZ - States Parties and Signatory States to the:'
+    colors={['var(--orange-50)', 'var(--green-60)', 'var(--orange-70)', 'var(--blue-60)', 'var(--blue-40)', 'var(--yellow-60)']}
+    data={[
+      {name: 'Antigua and Barbuda', iso3: 'ATG', value: "Treaty of Tlatelolco – Treaty for the Prohibition of Nuclear Weapons in Latin America and the Caribbean (1967)"},
+      {name: 'Argentina', iso3: 'ARG', value: "Treaty of Tlatelolco – Treaty for the Prohibition of Nuclear Weapons in Latin America and the Caribbean (1967)"},
+      {name: 'Bahamas', iso3: 'BHS', value: "Treaty of Tlatelolco – Treaty for the Prohibition of Nuclear Weapons in Latin America and the Caribbean (1967)"},
+      {name: 'Barbados', iso3: 'BRB', value: "Treaty of Tlatelolco – Treaty for the Prohibition of Nuclear Weapons in Latin America and the Caribbean (1967)"},
+      {name: 'Belize', iso3: 'BLZ', value: "Treaty of Tlatelolco – Treaty for the Prohibition of Nuclear Weapons in Latin America and the Caribbean (1967)"},
+      {name: 'Bolivia', iso3: 'BOL', value: "Treaty of Tlatelolco – Treaty for the Prohibition of Nuclear Weapons in Latin America and the Caribbean (1967)"},
+      {name: 'Brazil', iso3: 'BRA', value: "Treaty of Tlatelolco – Treaty for the Prohibition of Nuclear Weapons in Latin America and the Caribbean (1967)"},
+      {name: 'Chile', iso3: 'CHL', value: "Treaty of Tlatelolco – Treaty for the Prohibition of Nuclear Weapons in Latin America and the Caribbean (1967)"},
+      {name: 'Colombia', iso3: 'COL', value: "Treaty of Tlatelolco – Treaty for the Prohibition of Nuclear Weapons in Latin America and the Caribbean (1967)"},
+      {name: 'Costa Rica', iso3: 'CRI', value: "Treaty of Tlatelolco – Treaty for the Prohibition of Nuclear Weapons in Latin America and the Caribbean (1967)"},
+      {name: 'Cuba', iso3: 'CUB', value: "Treaty of Tlatelolco – Treaty for the Prohibition of Nuclear Weapons in Latin America and the Caribbean (1967)"},
+      {name: 'Dominica', iso3: 'DMA', value: "Treaty of Tlatelolco – Treaty for the Prohibition of Nuclear Weapons in Latin America and the Caribbean (1967)"},
+      {name: 'Dominican Republic', iso3: 'DOM', value: "Treaty of Tlatelolco – Treaty for the Prohibition of Nuclear Weapons in Latin America and the Caribbean (1967)"},
+      {name: 'Ecuador', iso3: 'ECU', value: "Treaty of Tlatelolco – Treaty for the Prohibition of Nuclear Weapons in Latin America and the Caribbean (1967)"},
+      {name: 'El Salvador', iso3: 'SLV', value: "Treaty of Tlatelolco – Treaty for the Prohibition of Nuclear Weapons in Latin America and the Caribbean (1967)"},
+      {name: 'Grenada', iso3: 'GRD', value: "Treaty of Tlatelolco – Treaty for the Prohibition of Nuclear Weapons in Latin America and the Caribbean (1967)"},
+      {name: 'Guatemala', iso3: 'GTM', value: "Treaty of Tlatelolco – Treaty for the Prohibition of Nuclear Weapons in Latin America and the Caribbean (1967)"},
+      {name: 'Guyana', iso3: 'GUY', value: "Treaty of Tlatelolco – Treaty for the Prohibition of Nuclear Weapons in Latin America and the Caribbean (1967)"},
+      {name: 'Haiti', iso3: 'HTI', value: "Treaty of Tlatelolco – Treaty for the Prohibition of Nuclear Weapons in Latin America and the Caribbean (1967)"},
+      {name: 'Honduras', iso3: 'HND', value: "Treaty of Tlatelolco – Treaty for the Prohibition of Nuclear Weapons in Latin America and the Caribbean (1967)"},
+      {name: 'Jamaica', iso3: 'JAM', value: "Treaty of Tlatelolco – Treaty for the Prohibition of Nuclear Weapons in Latin America and the Caribbean (1967)"},
+      {name: 'Mexico', iso3: 'MEX', value: "Treaty of Tlatelolco – Treaty for the Prohibition of Nuclear Weapons in Latin America and the Caribbean (1967)"},
+      {name: 'Nicaragua', iso3: 'NIC', value: "Treaty of Tlatelolco – Treaty for the Prohibition of Nuclear Weapons in Latin America and the Caribbean (1967)"},
+      {name: 'Panama', iso3: 'PAN', value: "Treaty of Tlatelolco – Treaty for the Prohibition of Nuclear Weapons in Latin America and the Caribbean (1967)"},
+      {name: 'Paraguay', iso3: 'PRY', value: "Treaty of Tlatelolco – Treaty for the Prohibition of Nuclear Weapons in Latin America and the Caribbean (1967)"},
+      {name: 'Peru', iso3: 'PER', value: "Treaty of Tlatelolco – Treaty for the Prohibition of Nuclear Weapons in Latin America and the Caribbean (1967)"},
+      {name: 'Saint Kitts and Nevis', iso3: 'KNA', value: "Treaty of Tlatelolco – Treaty for the Prohibition of Nuclear Weapons in Latin America and the Caribbean (1967)"},
+      {name: 'Saint Lucia', iso3: 'LCA', value: "Treaty of Tlatelolco – Treaty for the Prohibition of Nuclear Weapons in Latin America and the Caribbean (1967)"},
+      {name: 'Saint Vincent and the Grenadines', iso3: 'VCT', value: "Treaty of Tlatelolco – Treaty for the Prohibition of Nuclear Weapons in Latin America and the Caribbean (1967)"},
+      {name: 'Suriname', iso3: 'SUR', value: "Treaty of Tlatelolco – Treaty for the Prohibition of Nuclear Weapons in Latin America and the Caribbean (1967)"},
+      {name: 'Trinidad and Tobago', iso3: 'TTO', value: "Treaty of Tlatelolco – Treaty for the Prohibition of Nuclear Weapons in Latin America and the Caribbean (1967)"},
+      {name: 'Uruguay', iso3: 'URY', value: "Treaty of Tlatelolco – Treaty for the Prohibition of Nuclear Weapons in Latin America and the Caribbean (1967)"},
+      {name: 'Venezuela', iso3: 'VEN', value: "Treaty of Tlatelolco – Treaty for the Prohibition of Nuclear Weapons in Latin America and the Caribbean (1967)"},
 
 
-Two additions should be made to this list. In 1961, the Antarctic Treaty entered into force. Among other things, the treaty prohibits nuclear explosions, radioactive waste disposal and military deployments in the Antarctic Treaty Area (ATA). Moreover, in 1992, Mongolia declared its territory a a nuclear-weapon-free zone. This status was formally recognised with the General Assembly resolution 53/77 D, entitled ‘Mongolia’s international security and nuclear-weapon-free status’.[^5]
+      {name: 'Australia', iso3: 'AUS', value: "Treaty of Rarotonga – South Pacific Nuclear Free Zone Treaty (1985)"},
+      {name: 'Cook Islands', iso3: 'COK', value: "Treaty of Rarotonga – South Pacific Nuclear Free Zone Treaty (1985)"},
+      {name: 'Fiji', iso3: 'FJI', value: "Treaty of Rarotonga – South Pacific Nuclear Free Zone Treaty (1985)"},
+      {name: 'Kiribati', iso3: 'KIR', value: "Treaty of Rarotonga – South Pacific Nuclear Free Zone Treaty (1985)"},
+      {name: 'Nauru', iso3: 'NRU', value: "Treaty of Rarotonga – South Pacific Nuclear Free Zone Treaty (1985)"},
+      {name: 'New Zealand', iso3: 'NZL', value: "Treaty of Rarotonga – South Pacific Nuclear Free Zone Treaty (1985)"},
+      {name: 'Niue', iso3: 'NIU', value: "Treaty of Rarotonga – South Pacific Nuclear Free Zone Treaty (1985)"},
+      {name: 'Papua New Guinea', iso3: 'PNG', value: "Treaty of Rarotonga – South Pacific Nuclear Free Zone Treaty (1985)"},
+      {name: 'Samoa', iso3: 'WSM', value: "Treaty of Rarotonga – South Pacific Nuclear Free Zone Treaty (1985)"},
+      {name: 'Solomon Islands', iso3: 'SLB', value: "Treaty of Rarotonga – South Pacific Nuclear Free Zone Treaty (1985)"},
+      {name: 'Tonga', iso3: 'TON', value: "Treaty of Rarotonga – South Pacific Nuclear Free Zone Treaty (1985)"},
+      {name: 'Tuvalu', iso3: 'TUV', value: "Treaty of Rarotonga – South Pacific Nuclear Free Zone Treaty (1985)"},
+      {name: 'Vanuatu', iso3: 'VUT', value: "Treaty of Rarotonga – South Pacific Nuclear Free Zone Treaty (1985)"},
+
+
+      {name: 'Brunei', iso3: 'BRN', value: "Treaty of Bangkok – Treaty on the Southeast Asia Nuclear Weapon-Free Zone (1995)"},
+      {name: 'Cambodia', iso3: 'KHM', value: "Treaty of Bangkok – Treaty on the Southeast Asia Nuclear Weapon-Free Zone (1995)"},
+      {name: 'Indonesia', iso3: 'IDN', value: "Treaty of Bangkok – Treaty on the Southeast Asia Nuclear Weapon-Free Zone (1995)"},
+      {name: 'Laos', iso3: 'LAO', value: "Treaty of Bangkok – Treaty on the Southeast Asia Nuclear Weapon-Free Zone (1995)"},
+      {name: 'Malaysia', iso3: 'MYS', value: "Treaty of Bangkok – Treaty on the Southeast Asia Nuclear Weapon-Free Zone (1995)"},
+      {name: 'Myanmar', iso3: 'MMR', value: "Treaty of Bangkok – Treaty on the Southeast Asia Nuclear Weapon-Free Zone (1995)"},
+      {name: 'Philippines', iso3: 'PHL', value: "Treaty of Bangkok – Treaty on the Southeast Asia Nuclear Weapon-Free Zone (1995)"},
+      {name: 'Singapore', iso3: 'SGP', value: "Treaty of Bangkok – Treaty on the Southeast Asia Nuclear Weapon-Free Zone (1995)"},
+      {name: 'Thailand', iso3: 'THA', value: "Treaty of Bangkok – Treaty on the Southeast Asia Nuclear Weapon-Free Zone (1995)"},
+      {name: 'Vietnam', iso3: 'VNM', value: "Treaty of Bangkok – Treaty on the Southeast Asia Nuclear Weapon-Free Zone (1995)"},
+
+
+      {name: 'Algeria', iso3: 'DZA', value: "Treaty of Pelindaba – African Nuclear-Weapon-Free Zone Treaty (1996)"},
+      {name: 'Angola', iso3: 'AGO', value: "Treaty of Pelindaba – African Nuclear-Weapon-Free Zone Treaty (1996)"},
+      {name: 'Benin', iso3: 'BEN', value: "Treaty of Pelindaba – African Nuclear-Weapon-Free Zone Treaty (1996)"},
+      {name: 'Botswana', iso3: 'BWA', value: "Treaty of Pelindaba – African Nuclear-Weapon-Free Zone Treaty (1996)"},
+      {name: 'Burkina Faso', iso3: 'BFA', value: "Treaty of Pelindaba – African Nuclear-Weapon-Free Zone Treaty (1996)"},
+      {name: 'Burundi', iso3: 'BDI', value: "Treaty of Pelindaba – African Nuclear-Weapon-Free Zone Treaty (1996)"},
+      {name: 'Cabo Verde', iso3: 'CPV', value: "Treaty of Pelindaba – African Nuclear-Weapon-Free Zone Treaty (1996)"},
+      {name: 'Cameroon', iso3: 'CMR', value: "Treaty of Pelindaba – African Nuclear-Weapon-Free Zone Treaty (1996)"},
+      {name: 'Chad', iso3: 'TCD', value: "Treaty of Pelindaba – African Nuclear-Weapon-Free Zone Treaty (1996)"},
+      {name: 'Comoros', iso3: 'COM', value: "Treaty of Pelindaba – African Nuclear-Weapon-Free Zone Treaty (1996)"},
+      {name: 'Republic of the Congo', iso3: 'COG', value: "Treaty of Pelindaba – African Nuclear-Weapon-Free Zone Treaty (1996)"},
+      {name: 'Cote D Ivoire', iso3: 'CIV', value: "Treaty of Pelindaba – African Nuclear-Weapon-Free Zone Treaty (1996)"},
+      {name: 'Democratic Republic of the Congo', iso3: 'COD', value: "Treaty of Pelindaba – African Nuclear-Weapon-Free Zone Treaty (1996)"},
+      {name: 'Equatorial Guinea', iso3: 'GNQ', value: "Treaty of Pelindaba – African Nuclear-Weapon-Free Zone Treaty (1996)"},
+      {name: 'Eswatini', iso3: 'SWZ', value: "Treaty of Pelindaba – African Nuclear-Weapon-Free Zone Treaty (1996)"},
+      {name: 'Ethiopia', iso3: 'ETH', value: "Treaty of Pelindaba – African Nuclear-Weapon-Free Zone Treaty (1996)"},
+      {name: 'Gabon', iso3: 'GAB', value: "Treaty of Pelindaba – African Nuclear-Weapon-Free Zone Treaty (1996)"},
+      {name: 'Gambia (Islamic Republic of the)', iso3: 'GMB', value: "Treaty of Pelindaba – African Nuclear-Weapon-Free Zone Treaty (1996)"},
+      {name: 'Ghana', iso3: 'GHA', value: "Treaty of Pelindaba – African Nuclear-Weapon-Free Zone Treaty (1996)"},
+      {name: 'Guinea', iso3: 'GIN', value: "Treaty of Pelindaba – African Nuclear-Weapon-Free Zone Treaty (1996)"},
+      {name: 'Guinea Bissau', iso3: 'GNB', value: "Treaty of Pelindaba – African Nuclear-Weapon-Free Zone Treaty (1996)"},
+      {name: 'Kenya', iso3: 'KEN', value: "Treaty of Pelindaba – African Nuclear-Weapon-Free Zone Treaty (1996)"},
+      {name: 'Lesotho', iso3: 'LSO', value: "Treaty of Pelindaba – African Nuclear-Weapon-Free Zone Treaty (1996)"},
+      {name: 'Libya', iso3: 'LBY', value: "Treaty of Pelindaba – African Nuclear-Weapon-Free Zone Treaty (1996)"},
+      {name: 'Madagascar', iso3: 'MDG', value: "Treaty of Pelindaba – African Nuclear-Weapon-Free Zone Treaty (1996)"},
+      {name: 'Malawi', iso3: 'MWI', value: "Treaty of Pelindaba – African Nuclear-Weapon-Free Zone Treaty (1996)"},
+      {name: 'Mali', iso3: 'MLI', value: "Treaty of Pelindaba – African Nuclear-Weapon-Free Zone Treaty (1996)"},
+      {name: 'Mauritania', iso3: 'MRT', value: "Treaty of Pelindaba – African Nuclear-Weapon-Free Zone Treaty (1996)"},
+      {name: 'Mauritius', iso3: 'MUS', value: "Treaty of Pelindaba – African Nuclear-Weapon-Free Zone Treaty (1996)"},
+      {name: 'Morocco', iso3: 'MAR', value: "Treaty of Pelindaba – African Nuclear-Weapon-Free Zone Treaty (1996)"},
+      {name: 'Mozambique', iso3: 'MOZ', value: "Treaty of Pelindaba – African Nuclear-Weapon-Free Zone Treaty (1996)"},
+      {name: 'Namibia', iso3: 'NAM', value: "Treaty of Pelindaba – African Nuclear-Weapon-Free Zone Treaty (1996)"},
+      {name: 'Niger', iso3: 'NER', value: "Treaty of Pelindaba – African Nuclear-Weapon-Free Zone Treaty (1996)"},
+      {name: 'Nigeria', iso3: 'NGA', value: "Treaty of Pelindaba – African Nuclear-Weapon-Free Zone Treaty (1996)"},
+      {name: 'Rwanda', iso3: 'RWA', value: "Treaty of Pelindaba – African Nuclear-Weapon-Free Zone Treaty (1996)"},
+      {name: 'Senegal', iso3: 'SEN', value: "Treaty of Pelindaba – African Nuclear-Weapon-Free Zone Treaty (1996)"},
+      {name: 'Seychelles', iso3: 'SYC', value: "Treaty of Pelindaba – African Nuclear-Weapon-Free Zone Treaty (1996)"},
+      {name: 'South Africa', iso3: 'ZAF', value: "Treaty of Pelindaba – African Nuclear-Weapon-Free Zone Treaty (1996)"},
+      {name: 'Tanzania', iso3: 'TZA', value: "Treaty of Pelindaba – African Nuclear-Weapon-Free Zone Treaty (1996)"},
+      {name: 'Togo', iso3: 'TGO', value: "Treaty of Pelindaba – African Nuclear-Weapon-Free Zone Treaty (1996)"},
+      {name: 'Tunisia', iso3: 'TUN', value: "Treaty of Pelindaba – African Nuclear-Weapon-Free Zone Treaty (1996)"},
+      {name: 'Zambia', iso3: 'ZMB', value: "Treaty of Pelindaba – African Nuclear-Weapon-Free Zone Treaty (1996)"},
+      {name: 'Zimbabwe', iso3: 'ZWE', value: "Treaty of Pelindaba – African Nuclear-Weapon-Free Zone Treaty (1996)"},
+ 
+      {name: 'Central African Republic', iso3: 'CAF', value: "Treaty of Pelindaba – States that have signed but not yet ratified the Treaty of Pelindaba"},
+      {name: 'Djibouti', iso3: 'DJI', value: "Treaty of Pelindaba – States that have signed but not yet ratified the Treaty of Pelindaba"},
+      {name: 'Egypt', iso3: 'EGY', value: "Treaty of Pelindaba – States that have signed but not yet ratified the Treaty of Pelindaba"},
+      {name: 'Eritrea', iso3: 'ERI', value: "Treaty of Pelindaba – States that have signed but not yet ratified the Treaty of Pelindaba"},
+      {name: 'Liberia', iso3: 'LBR', value: "Treaty of Pelindaba – States that have signed but not yet ratified the Treaty of Pelindaba"},
+      {name: 'São Tomé and Príncipe', iso3: 'STP', value: "Treaty of Pelindaba – States that have signed but not yet ratified the Treaty of Pelindaba"},
+      {name: 'Sierra Leone', iso3: 'SLE', value: "Treaty of Pelindaba – States that have signed but not yet ratified the Treaty of Pelindaba"},
+      {name: 'Somalia', iso3: 'SOM', value: "Treaty of Pelindaba – States that have signed but not yet ratified the Treaty of Pelindaba"},
+      {name: 'Sudan', iso3: 'SDN', value: "Treaty of Pelindaba – States that have signed but not yet ratified the Treaty of Pelindaba"},
+      {name: 'Uganda', iso3: 'UGA', value: "Treaty of Pelindaba – States that have signed but not yet ratified the Treaty of Pelindaba"},
+
+
+      {name: 'Kazakhstan', iso3: 'KAZ', value: "Semipalatinsk Treaty – Central Asian Nuclear-Weapon-Free Zone Treaty (2006)"},
+      {name: 'Kyrgyzstan', iso3: 'KGZ', value: "Semipalatinsk Treaty – Central Asian Nuclear-Weapon-Free Zone Treaty (2006)"},
+      {name: 'Tajikistan', iso3: 'TJK', value: "Semipalatinsk Treaty – Central Asian Nuclear-Weapon-Free Zone Treaty (2006)"},
+      {name: 'Turkmenistan', iso3: 'TKM', value: "Semipalatinsk Treaty – Central Asian Nuclear-Weapon-Free Zone Treaty (2006)"},
+      {name: 'Uzbekistan', iso3: 'UZB', value: "Semipalatinsk Treaty – Central Asian Nuclear-Weapon-Free Zone Treaty (2006)"},
+
+    ]}
+  />
+</LayeredMap>
+
+
+Two additions should be made to this list. In 1961, the Antarctic Treaty entered into force. Among other things, the treaty prohibits nuclear explosions, radioactive waste disposal and military deployments in the Antarctic Treaty Area (ATA). Moreover, in 1992, Mongolia declared its territory a nuclear-weapon-free zone. This status was formally recognised with the General Assembly resolution 53/77 D, entitled ‘Mongolia’s international security and nuclear-weapon-free status’.[^5]
 
 Treaties establishing NWFZs can be seen as successful experiments in **regional disarmament**. They include a **legally binding protocol** signed and ratified by the nuclear-armed states, which commit to **respect the status** of these regions and to abide by a defined set of **security assurances**. Today, NWFZs cover most of the world.
 | Treaty        | Protocol | Signed                 | Ratified               |
