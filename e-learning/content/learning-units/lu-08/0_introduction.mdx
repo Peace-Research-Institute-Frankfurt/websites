@@ -240,17 +240,33 @@ In the US, private investors, such as Elon Musk, Jeff Bezos and Richard Branson,
 
 ## Conclusion
 
-The space sector has witnessed a surge of activities, ranging from satellite launches and telecommunications to space tourism and resource exploitation [a list of all satellite launches worldwide since 1957 can be found here](https://planet4589.org/space/gcat/data/derived/launchlog.html).
+The space sector has witnessed a surge of activities, ranging from satellite launches and telecommunications to space tourism and resource exploitation [a list of all satellite launches worldwide since 1957 can be found here](https://planet4589.org/space/gcat/data/derived/launchlog.html).<br/><br/>
 
-<Figure
-  size="medium"
-  src="LU08CHART-Satellitestartsfrom1957-2024.png"
-  caption="Overview of the number of satellite launches between 1957 and 2024"
-  alt="Overview of the number of satellite launches between 1957 and 2024"
-  credit="https://planet4589.org/space/gcat/data/derived/launchlog.html, own consolidation and graphic"
-  license=""
-  expandable={true}
-></Figure>
+
+import SatelliteLaunches from '../../data/satellite-launches.csv'
+
+<LineChart
+    xAxisTitle={'Year'}
+    yAxisTitle={'Launches per year (in hundreds)'}
+    data={SatelliteLaunches}
+    title={"Satellite Launches"}
+    description={"Overview of the Number of Satellite Launches per Year between 1957 and 2025"}
+    caption="Overview of the Number of Satellite Launches per Year between 1957 and 2025"
+    credit="https://planet4589.org/space/gcat/data/derived/launchlog.html, own consolidation and graphic, adjusted for false start"
+/>
+
+import SatelliteLaunchesCumulative from '../../data/satellite-launches-cumulative.csv'
+
+<LineChart
+    xAxisTitle={'Year'}
+    yAxisTitle={'Cumulative Launches per year (in hundreds)'}
+    data={SatelliteLaunchesCumulative}
+    title={"Satellite Launches"}
+    description="Overview of the Number of Cumulative Launches per Year between 1957 and 2025"
+    caption="Overview of the Number of Cumulative Launches per Year between 1957 and 2025"
+    credit="https://planet4589.org/space/gcat/data/derived/launchlog.html, own consolidation and graphic, adjusted for false start"
+/>
+
 
 Moreover, there is a growing number of nations actively participating in space activities. Space has become a realm of strategic interest for many countries, with an emphasis on national security, intelligence gathering and communication networks. The dual-use nature of space technologies further emphasises the necessity of safeguarding these assets, highlighting the emergence of dedicated space forces and the need for protective measures to secure national interests in this critical domain. The expansion of space capabilities and the increasing number of actors involved create both opportunities and challenges in terms of international cooperation, governance and potential conflicts.
 

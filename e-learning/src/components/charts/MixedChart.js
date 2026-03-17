@@ -118,7 +118,7 @@ export default function MixedChart({
             yScale.range([yMax, 0])
 
             return (
-              <div style={{ overflow: 'auto' }}>
+              <div style={{ overflow: 'visible' }}>
                 <svg 
                   className={styles.graphContainer} 
                   width={responsiveWidth} 
