@@ -34,15 +34,87 @@ Although NASA has taken a leading role in the project, the Artemis Program is, b
 
 Conjointly with the programme, the US has advanced a body of non-binding arrangements, serving as a prerequisite for participation, called the Artemis Accords.[^3] They are intended to serve as a comprehensive framework that outlines the principles and procedures for international cooperation in the exploration and exploitation of the Moon and other celestial bodies. The Accords consist of ten core principles derived from the foundational framework established by the 1967 Outer Space Treaty. These are principally designed to guide international partners towards sustainable practices and ensure the responsible and transparent use of outer space for peaceful purposes. The Artemis Accords are a significant multilateral attempt at reinforcing the aging body of space law that has been in existence since the Cold War. By signing the Accords, countries demonstrate their commitment to a democratic, fair and multilateral approach to space exploration. At the time of writing (December 2023), 33 nations are currently party to the Accords[^4]
 
-<Figure
-  size="medium"
-  src="LU08MAP-MembersofArtemisAccords.png"
-  caption="Member countries of the Artemis Accords"
-  credit="Grübelfabrik"
-  alt="Member countries of the Artemis Accords"
+<LayeredMap
+  centerLat={20}
+  centerLong={0}
+  mapScale={1}
+  layout="medium"
   expandable={true}
-  license="cc-by-nc-sa-4"
-></Figure>
+  legendPosition="bottom-left"
+  title="Member Countries of the Artemis Accords"
+  description="Member Countries of the Artemis Accords"
+  legendTitle="Legend"
+  credit="Graphic: PRIF"
+  license="cc-by-4"
+>
+  <CountryStatisticsLayer
+    colors={['var(--blue-70)']}
+    data={[
+      {name: 'Angola', iso3: 'AGO', value: "Members of the Artemis Accords"},
+      {name: 'Argentina', iso3: 'ARG', value: "Members of the Artemis Accords"},
+      {name: 'Armenia', iso3: 'ARM', value: "Members of the Artemis Accords"},
+      {name: 'Australia', iso3: 'AUS', value: "Members of the Artemis Accords"},
+      {name: 'Austria', iso3: 'AUT', value: "Members of the Artemis Accords"},
+      {name: 'Bahrain', iso3: 'BHR', value: "Members of the Artemis Accords"},
+      {name: 'Bangladesh', iso3: 'BGD', value: "Members of the Artemis Accords"},
+      {name: 'Belgium', iso3: 'BEL', value: "Members of the Artemis Accords"},
+      {name: 'Brazil', iso3: 'BRA', value: "Members of the Artemis Accords"},
+      {name: 'Bulgaria', iso3: 'BGR', value: "Members of the Artemis Accords"},
+      {name: 'Canada', iso3: 'CAN', value: "Members of the Artemis Accords"},
+      {name: 'Chile', iso3: 'CHL', value: "Members of the Artemis Accords"},
+      {name: 'Colombia', iso3: 'COL', value: "Members of the Artemis Accords"},
+      {name: 'Cyprus', iso3: 'CYP', value: "Members of the Artemis Accords"},
+      {name: 'Czech Republic', iso3: 'CZE', value: "Members of the Artemis Accords"},
+      {name: 'Denmark', iso3: 'DNK', value: "Members of the Artemis Accords"},
+      {name: 'Dominican Republic', iso3: 'DOM', value: "Members of the Artemis Accords"},
+      {name: 'Ecuador', iso3: 'ECU', value: "Members of the Artemis Accords"},
+      {name: 'Estonia', iso3: 'EST', value: "Members of the Artemis Accords"},
+      {name: 'Finland', iso3: 'FIN', value: "Members of the Artemis Accords"},
+      {name: 'France', iso3: 'FRA', value: "Members of the Artemis Accords"},
+      {name: 'Germany', iso3: 'DEU', value: "Members of the Artemis Accords"},
+      {name: 'Greece', iso3: 'GRC', value: "Members of the Artemis Accords"},
+      {name: 'Hungary', iso3: 'HUN', value: "Members of the Artemis Accords"},
+      {name: 'Iceland', iso3: 'ISL', value: "Members of the Artemis Accords"},
+      {name: 'India', iso3: 'IND', value: "Members of the Artemis Accords"},
+      {name: 'Israel', iso3: 'ISR', value: "Members of the Artemis Accords"},
+      {name: 'Italy', iso3: 'ITA', value: "Members of the Artemis Accords"},
+      {name: 'Japan', iso3: 'JPN', value: "Members of the Artemis Accords"},
+      {name: 'Liechtenstein', iso3: 'LIE', value: "Members of the Artemis Accords"},
+      {name: 'Lithuania', iso3: 'LTU', value: "Members of the Artemis Accords"},
+      {name: 'Luxembourg', iso3: 'LUX', value: "Members of the Artemis Accords"},
+      {name: 'Malaysia', iso3: 'MYS', value: "Members of the Artemis Accords"},
+      {name: 'Mexico', iso3: 'MEX', value: "Members of the Artemis Accords"},
+      {name: 'Netherlands', iso3: 'NLD', value: "Members of the Artemis Accords"},
+      {name: 'New Zealand', iso3: 'NZL', value: "Members of the Artemis Accords"},
+      {name: 'Nigeria', iso3: 'NGA', value: "Members of the Artemis Accords"},
+      {name: 'Norway', iso3: 'NOR', value: "Members of the Artemis Accords"},
+      {name: 'Oman', iso3: 'OMN', value: "Members of the Artemis Accords"},
+      {name: 'Panama', iso3: 'PAN', value: "Members of the Artemis Accords"},     
+      {name: 'Peru', iso3: 'PER', value: "Members of the Artemis Accords"},
+      {name: 'Philippines', iso3: 'PHL', value: "Members of the Artemis Accords"},
+      {name: 'Poland', iso3: 'POL', value: "Members of the Artemis Accords"},
+      {name: 'Portugal', iso3: 'PRT', value: "Members of the Artemis Accords"},
+      {name: 'Romania', iso3: 'ROU', value: "Members of the Artemis Accords"},
+      {name: 'Rwanda', iso3: 'RWA', value: "Members of the Artemis Accords"},
+      {name: 'Saudi Arabia', iso3: 'SAU', value: "Members of the Artemis Accords"},
+      {name: 'Senegal', iso3: 'SEN', value: "Members of the Artemis Accords"},
+      {name: 'Singapore', iso3: 'SGP', value: "Members of the Artemis Accords"},
+      {name: 'Slovakia', iso3: 'SVK', value: "Members of the Artemis Accords"},
+      {name: 'Slovenia', iso3: 'SVN', value: "Members of the Artemis Accords"},
+      {name: 'South Korea', iso3: 'KOR', value: "Members of the Artemis Accords"},
+      {name: 'Spain', iso3: 'ESP', value: "Members of the Artemis Accords"},
+      {name: 'Sweden', iso3: 'SWE', value: "Members of the Artemis Accords"},
+      {name: 'Switzerland', iso3: 'CHE', value: "Members of the Artemis Accords"},
+      {name: 'Thailand', iso3: 'THA', value: "Members of the Artemis Accords"},
+      {name: 'Ukraine', iso3: 'UKR', value: "Members of the Artemis Accords"},
+      {name: 'United Arab Emirates', iso3: 'ARE', value: "Members of the Artemis Accords"},
+      {name: 'United Kingdom of Great Britain and Northern Ireland', iso3: 'GBR', value: "Members of the Artemis Accords"},
+      {name: 'United States of America', iso3: 'USA', value: "Members of the Artemis Accords"},
+      {name: 'Uruguay', iso3: 'URY', value: "Members of the Artemis Accords"},
+    ]}
+  />
+</LayeredMap>
+
 
 The Accords have also attracted some criticism. In particular, the clauses regarding the extraction of space resources are based on a limited interpretation of space being ‘not subject to national appropriation’ as outlined by the 1966 Outer Space Treaty.[^5] The view taken by the Accords is that this only applies to national claims of sovereignty but not to private interests, and would thus allow some forms of space mining for commercial exploitation. This view is debated by legal scholars, although the only openly contradictory interpretation in international law exists in the 1979 Moon Treaty, which has been ratified by only three of the Accords’ current signatories – Australia, the Netherlands and Saudi Arabia.[^6]
 
