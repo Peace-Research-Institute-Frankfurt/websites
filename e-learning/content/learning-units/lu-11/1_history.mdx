@@ -23,7 +23,7 @@ During the Cold War, almost the whole of Europe was seen as a potential battlegr
   license="cc-by-4"
 >
   <CountryStatisticsLayer
-    colors={['blue', 'red']}
+    colors={['var(--blue-60)', 'var(--orange-60)']}
     data={[
 
       //NATO
@@ -133,14 +133,14 @@ import MilitaryExpenditureInEurope from "../../data/charts-militaryexpenditurein
   layout="small"
   xAxis="Year"
   xAxisTitle="Year"
-  yAxisTitle="Volume of Military Expenditure in US$"
+  yAxisTitle="Volume of Military Expenditure in US$ (in billions)"
   colorRangeStart="#CED9DE"
   colorRangeEnd="#0D425B"
   maxValue={700}
-  title="Military Expenditure in Europe, 1991–2023"
-  description="Military expenditure in Europe, 1991–2023 (in const. 2021 USD prices and exchange rates, except for the last figure which is in USD at 2022 prices and exchange rates)"
-  legendTitle="Military Expenditure in Europe, 1991–2023"
-  caption="Military expenditure in Europe, 1991–2023 (in const. 2021 USD prices and exchange rates, except for the last figure which is in USD at 2022 prices and exchange rates)."
+  title="Military Expenditure in Europe, 1992–2024"
+  description="Military expenditure in Europe, 1992–2024 (in US$ b., at constant 2024 prices and exchange rates)."
+  legendTitle="Military Expenditure in Europe, 1992–2024"
+  caption="Military expenditure in Europe, 1992–2024 (in US$ b., at constant 2024 prices and exchange rates)."
   credit="Data: [SIPRI Military Expenditure Database](https://milex.sipri.org/sipri), Graphic: PRIF"
 />
 
@@ -150,14 +150,14 @@ import MilitaryExpenditureInRussia from "../../data/charts-militaryexpenditurein
   data={MilitaryExpenditureInRussia}
   xAxis="Year"
   xAxisTitle="Year"
-  yAxisTitle="Volume of Military Expenditure in US$"
+  yAxisTitle="Volume of Military Expenditure in US$ (in millions)"
   colorRangeStart="#CED9DE"
   colorRangeEnd="#0D425B"
   maxValue={140}
-  title="Russian military expenditure 1992–2022 (in const. 2022 USD)"
-  description="TODO"
-  legendTitle="TODO"
-  caption="Russian Military Expenditure 1992–2022 (in const. 2022 USD)"
+  title="Russian military expenditure 1992–2024 (in US$ m., at constant 2024 prices and exchange rates)."
+  description="Russian military expenditure 1992–2024 (in const. 2024 US$ m.)"
+  legendTitle="Russian military expenditure 1992–2024"
+  caption="Russian Military Expenditure 1992–2024 (in US$ m., at constant 2024 prices and exchange rates)."
   credit="Data: [SIPRI Military Expenditure Database](https://milex.sipri.org/sipri), Graphic: PRIF"
 />
 
