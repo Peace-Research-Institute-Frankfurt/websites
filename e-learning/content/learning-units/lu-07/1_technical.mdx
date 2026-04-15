@@ -53,14 +53,12 @@ reading_time: 15
 
   In principle, missiles can be flexibly equipped with conventional, nuclear or other types of warheads (e.g. chemical or biological), provided of course the state deploying the missile has access to the relevant warhead technology. Missiles that can carry both conventional and nuclear warheads are typically referred to as "dual-capable".
 
-	<Figure
-		src="LU07_inhalte_grafiken_f_03012025_pfade_6.svg"
-		caption="Dual-capable missile"
-		alt="Dual-capable missile"
-		credit="Grübelfabrik"
-    license="cc-by-nc-sa-4"
-		size="medium"
-	></Figure>
+<LoopVideo
+  src="/Assets/LU01_Icon---LOOP-outputWEB.mp4"
+  caption="Dual-capable missile"
+  credit="Grübelfabrik"
+  license="cc-by-nc-sa-4"
+/>
 
   Turning a conventional missile into a weapon of mass destruction (WMD) is not as simple as replacing the warhead, however. Depending on the warhead configuration, it may be necessary to rebalance the missile to account for changes in internal weight. Additionally, the missile fusing system must be adapted to match the new warhead’s characteristics. But with proper preparation and the appropriate design choices, warheads can be replaced at relatively short notice. Dual-capable missiles whose warheads can be rapidly replaced in the field or at forward-deployed bases are sometimes referred to as “hot-swappable”.
 </LectureVideo>
@@ -276,6 +274,38 @@ Ballistic missile technology was initially advanced and dominated by the Cold Wa
   license="cc-by-nc-sa-4"
   size="medium"
 ></Figure>
+
+<LayeredMap
+  centerLat={20}
+  centerLong={0}
+  mapScale={1}
+  layout="medium"
+  expandable={true}
+  legendPosition="bottom-left"
+  title="Member states of the Geneva Protocol"
+  description="Member states of the Geneva Protocol"
+  legendTitle="Legend"
+  credit="Natural Earth. Graphic: PRIF"
+  license="cc-by-4"
+>
+  <CountryStatisticsLayer
+    colors={['#0D425B', '#7996A5', '#CED9DE']}
+    data={[
+      {name: 'Australia', iso3: 'AUS', value: "States confirmed to operationally deploy ballistic missiles"},
+      {name: 'China', iso3: 'CHN', value: "States confirmed to operationally deploy ballistic missiles"},
+      {name: 'France', iso3: 'FRA', value: "States confirmed to operationally deploy ballistic missiles"},
+      {name: 'India', iso3: 'IND', value: "States confirmed to operationally deploy ballistic missiles"},
+      {name: 'Iran', iso3: 'IRN', value: "States confirmed to operationally deploy ballistic missiles"},
+      {name: 'Israel', iso3: 'ISR', value: "States confirmed to operationally deploy ballistic missiles"},
+      {name: 'Lithuania', iso3: 'LTU', value: "States confirmed to operationally deploy ballistic missiles"},
+      {name: 'Norway', iso3: 'NOR', value: "States confirmed to operationally deploy ballistic missiles"},
+      {name: 'Poland', iso3: 'POL', value: "States confirmed to operationally deploy ballistic missiles"},
+      {name: 'Russia', iso3: 'RUS', value: "States confirmed to operationally deploy ballistic missiles"},
+      {name: 'United Kingdom of Great Britain and Northern Ireland', iso3: 'GBR', value: "States confirmed to operationally deploy ballistic missiles"},
+      {name: 'United States of America', iso3: 'USA', value: "States confirmed to operationally deploy ballistic missiles"},
+    ]}
+  />
+</LayeredMap>
 
 #### Boost-glide vehicles
 
