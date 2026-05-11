@@ -1,12 +1,15 @@
 name,lat,long,country
+Abidjan,5.3364,-4.0267,ci
 "Abuja, Nigeria",9.0643305,7.4892974,ng
 "Accra,Ghana",5.55602, -0.1969,gha
 Addis Abeba,8.96562,38.788059,et
 "Al-Quds, Israel",32.4249354,35.0354383,il
+Aleppo,36.2000,37.1500,sy
 "Almaty, Kazakhstan",43.2363924,76.9457275,kz
 Amman,31.9515694,35.9239625,jo
 "Amsterdam, Niederlande",52.370216,4.895168
 Ankara,39.9207759,32.8540497,tr
+"Arlington, Virginia",38.8786,-77.1011,us
 Asansol,23.6833,86.9667,in
 "Athens, Greece",37.9755648,23.7348324,gr
 "Austin, Texas",30.2711286,-97.7436995,us
@@ -43,6 +46,7 @@ Budapest,47.4978918,19.0401609,hu
 Cairo,30.0443879,31.2357257,eg
 "Cambridge, Mass",42.3655767,-71.1040018,us
 "Cambridge, UK",52.2055314,0.1186637,gb
+Cape Town,-33.9250,18.4250,za
 "Carthage, Tunisia",36.8548083,10.3309924,tn
 Casablanca,33.5992,-7.6200,ma
 "Catania, Sicily",37.5023612,15.0873718,it
@@ -53,6 +57,7 @@ Christchurch,-43.5309,172.6365,nz
 "College Station, Texas",30.5955289,-96.3071042,us
 Copenhagen,55.6867243,12.5700724,dk
 Cracow,-25.330132499999998,150.29240746995595,au
+Damascus,33.5131,36.2919,sy
 Dar es Salaam,-6.776012,39.178326,tz
 Darmstadt,49.8851869,8.6736295,de
 Dresden,51.0493286,13.7381437,de
@@ -74,6 +79,7 @@ Friedrichshafen,47.6500279,9.4800858,de
 "Gaza, Palestine",31.4663213,34.3995028,ps
 Geneva,46.2017559,6.1466014,ch
 Gießen,50.5862066,8.6742306,de
+Genua,44.4072,8.9340,it
 "Gent, Belgien",51.05434,23.717424
 Glasgow,55.861155,-4.2501687,gb
 Granada,37.1781,-3.6008,es
@@ -89,6 +95,7 @@ Heidelberg,49.4093582,8.694724,de
 Helsinki,60.1674881,24.9427473,fi
 "Hevel Eilot, Israel",29.9850027,34.92792013812848,il
 "Houston, TX",29.7863,-95.3889,us
+Idlib,35.9333,36.6333,sy
 Innsbruck,47.2654296,11.3927685,at
 Iringa,-7.773094,35.699120,tz
 Istanbul,41.0766019,29.052495,tr
@@ -129,8 +136,10 @@ Lund,55.7046601,13.1910073,se
 Maastricht,50.85798545,5.6969881818221095,nl
 Macerata,43.298427,13.45347,it
 Macleod,49.71671,-113.41857,ca
+"Madison, Wisconsin",43.0826,-89.3931,us
 Madrid,40.4167047,-3.7035825,es
 Mainz,50.0012314,8.2762513,de
+Malmoe,55.5932,13.0214,se
 Mannheim,49.4892913,8.4673098,de
 Marburg,50.8090106,8.7704695,de
 Marseille,43.2961743,5.3699525,fr
@@ -152,6 +161,7 @@ München,48.1371079,11.5753822,de
 Nairobi,-1.30326415,36.826384099341595,ke
 "Naples, Italy",40.8358846,14.2487679,it
 New York City,40.7127281,-74.0060152,us
+"Newcastle upon Tyne",55.0077,-1.6578,uk
 "Niamey, Niger",13.524834,2.109823,ne
 Nicosia,35.1748976,33.3638568,cy
 Nürnberg,49.453872,11.077298,de
@@ -164,6 +174,7 @@ Ottawa,45.4247,-75.6950,ca
 "Oxford, UK",51.7520131,-1.2578499,gb
 Pamplona,42.8167,-1.6500,es
 Paris, 48.8566,2.3522, fr
+Perth,-31.9522,115.8589,au
 Piran,45.5271,13.5685,si
 "Podgorica, Montenegro",42.4415238,19.2621081,me
 "Potrerillo, Colombia",2.46722,-75.4875,co
@@ -209,6 +220,7 @@ Tel Aviv,32.0852997,34.7818064,il
 Temara,33.920327,-6.927397,ma
 The Hague,52.0799838,4.3113461,nl
 Tirana,41.3281482,19.8184435,al
+Torino,45.0667,7.7000,it
 Toronto,43.7417,-79.3733,ca
 "Toulon, France",43.1257311,5.9304919,fr
 "Trento, Italy",46.0664228,11.1257601,it
