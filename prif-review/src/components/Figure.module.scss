@@ -38,6 +38,14 @@
   }
 }
 
+.tiny {
+  display: contents;
+  .inner {
+    grid-column: 3 / 4;
+    width: 8rem;
+  }
+}
+
 .captions {
   @extend %caption;
 }
