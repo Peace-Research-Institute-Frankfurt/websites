@@ -5,7 +5,7 @@ import * as styles from './CallToAction.module.scss'
 const CallToAction = ({ url, children }) => {
   return (
     <aside className={styles.container}>
-      <a href={url} className={styles.button}>
+      <a href={url} className={styles.button} target="_blank" rel="noopener noreferrer">
         {children}
         <Arrow />
       </a>
