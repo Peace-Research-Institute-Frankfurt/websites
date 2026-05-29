@@ -4,7 +4,7 @@ import Term from '@shared/components/Term'
 import TooltipAdapter from './TooltipAdapter'
 import * as styles from './Term.module.scss'
 import MarkdownRenderer from 'react-markdown-renderer'
-import { useTranslation } from 'react-i18next'
+import { useI18next } from 'gatsby-plugin-react-i18next'
 
 export default function TermAdapter({ t, year, children }) {
   const data = useStaticQuery(graphql`
@@ -39,11 +39,11 @@ export default function TermAdapter({ t, year, children }) {
     }
   `)
 
-  const { i18n } = useTranslation()
+ const { language } = useI18next()
 
   // Filter nach Sprache und optional nach Jahr
   const termNode = data.terms.nodes
-    .filter((node) => node.childMdx.fields.locale === i18n.language)
+      .filter((node) => node.childMdx.fields.locale === language)
     .filter((node) => !year || node.childMdx.parent.relativeDirectory.includes(year))
     .find((node) => node.childMdx.frontmatter.term_id === t)
 
