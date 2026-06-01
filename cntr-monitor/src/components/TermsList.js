@@ -1,6 +1,6 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import { useTranslation } from 'react-i18next'
+import { useI18next } from 'gatsby-plugin-react-i18next'
 import MarkdownRenderer from 'react-markdown-renderer'
 import * as styles from './TermsList.module.scss'
 
@@ -36,12 +36,12 @@ const TermsList = ({ year }) => {
     }
   `)
 
-  const { i18n } = useTranslation()
+  const { language } = useI18next()
 
   // Nur die aktuelle Sprache
   const localTerms = data.terms.nodes.filter(
     (node) =>
-      node.childMdx.fields.locale === i18n.language &&
+      node.childMdx.fields.locale === language &&
       (!year || node.childMdx.parent.relativeDirectory.includes(year))
   )
 

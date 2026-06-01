@@ -5,6 +5,7 @@ import { useCombobox } from 'downshift'
 import SearchIcon from '../images/search.svg'
 import * as styles from './SearchForm.module.scss'
 import { useTranslation } from 'react-i18next'
+import { useI18next } from 'gatsby-plugin-react-i18next'
 
 function DropdownCombobox({ value, setValue, inputItems }) {
   const { t } = useTranslation()
@@ -71,13 +72,13 @@ function SearchForm({ addActiveTerm }) {
       }
     }
   `)
-  const { i18n } = useTranslation()
+  const { language } = useI18next()
   const [query, setQuery] = useState('')
   const index = data.search.index
   const store = data.search.store
   const results = useFlexSearch(query, index, store)
     .filter((result) => {
-      return result.locale === i18n.language
+      return result.locale === language
     })
     .slice(0, 5)
 
