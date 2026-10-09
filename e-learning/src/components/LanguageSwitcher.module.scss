@@ -1,0 +1,47 @@
+@import 'vars';
+
+.container {
+  display: inline-flex;
+  color: var(--blue-70);
+  border: 1px solid var(--blue-70);
+ // border-radius: var(--br);
+  overflow: hidden;
+  font-size: inherit;
+}
+
+.item {
+  display: block;
+  list-style: none;
+  border-right: 1px solid var(--blue-70);
+  &:last-of-type {
+    border-right: 0;
+  }
+}
+
+.item-current {
+  background: var(--blue-70);
+  color: #f0f4ff;
+  .inner {
+    &:hover,
+    &:focus-visible {
+      text-decoration: none;
+      background: transparent;
+    }
+  }
+}
+
+.inner {
+  display: flex;
+  text-transform: uppercase;
+  padding: 0.35em 0.5em;
+  line-height: 1;
+  height: 100%;
+  align-items: center;
+  transition: var(--fast);
+  &:hover,
+  &:focus-visible {
+    background: var(--gray-20);
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+  }
+}

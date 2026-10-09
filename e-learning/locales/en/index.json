@@ -1,0 +1,49 @@
+{
+  "index.tempNotice": "Hi! This is a temporary index page intended for development purposes only. It will be replaced by",
+  "index.tempNoticeEnd": ".",
+  "Start learning unit":"Start learning unit",
+  "Above":"Above",
+  "On this page": "On this page",
+  "Chapters":"Chapters",
+  "Bookmarks": "Bookmarks",
+  "Delete bookmark": "Delete bookmark",
+  "Add bookmark": "Add bookmark",
+  "Remove bookmark": "Remove bookmark",
+  "Your bookmarks": "Your bookmarks",
+  "When you add bookmarks": "When you add chapters to your bookmarks they'll appear here.",
+  "All chapters": "All chapters",
+  "Previous Chapter": "Previous Chapter",
+  "Next Chapter": "Next Chapter",
+  "Unit": "Unit",
+  "Chapter": "Chapter",
+  "Learning Objectives": "Learning Objectives",
+  "Credits": "Credits",
+  "Download PDF": "Download PDF",
+  "Updates": "Updates",
+  "Disclosures": "Disclosures",
+  "Content Warning": "Content Warning",
+  "Funding": "Funding",
+  "External Links": "External Links",
+  "Preferred Citation": "Preferred Citation",
+  "Editorial Note": "Editorial Note",
+  "Expand": "Expand",
+  "Collapse": "Collapse",
+
+  "Treaty": "Treaty",
+  "treaty.effective": "Effective",
+  "treaty.memberStates": "Member States",
+  "treaty.currentAdoption": "Current Adoption",
+  "treaty.statesParties": "States Parties",
+
+  "content_warning_text": "This learning unit may contain audio-visual material or texts, which may not be suitable for all audiences.",
+
+  "funding_text": "This Learning Unit was produced with financial assistance from the European Union. The contents of this Learning Unit are however the sole responsibility of the author(s) and should under no circumstances be regarded as reflecting the position of the European Union.",
+
+  "external_links_text": "The site may contain hyperlink text references ('Links') to other sites that are offered by third parties. These Links are made available solely for the purpose of information and as an additional service for users. Only the respective operator is responsible for all content and statements on linked Internet sites. Therefore, PRIF cannot guarantee the correctness and accuracy or any other aspect of third party sites.",
+
+  "editorial_note_text": "This is a beta version of the learning unit, which is regularly optimised. Please report any factual errors or discrepancies to the publisher. Please note that although the original text was written by the authors, the video production and simplifications were carried out by PRIF.",
+
+  "404.title": "Page not found",
+  "404.sorry": "Sorry 😔, we couldn't find what you were looking for.",
+  "404.goHome": "Go home"
+}

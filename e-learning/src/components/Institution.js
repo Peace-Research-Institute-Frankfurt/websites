@@ -1,6 +1,6 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import Expandable from '@shared/components/Expandable'
+import Expandable from './Expandable'
 import Button from './ButtonAdapter'
 import { Chip, ChipGroup } from './Chip'
 import * as styles from './Institution.module.scss'
