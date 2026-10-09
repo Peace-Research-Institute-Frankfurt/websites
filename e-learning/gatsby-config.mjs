@@ -82,6 +82,43 @@ const config = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
+        path: `${__dirname}/locales`,
+        name: 'locale',
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-react-i18next',
+      options: {
+        localeJsonSourceName: 'locale',
+        languages: ['en', 'fr'],
+        defaultLanguage: 'en',
+        fallbackLanguage: 'en',
+        redirect: false,
+        i18nextOptions: {
+          interpolation: {
+            escapeValue: false,
+          },
+          keySeparator: false,
+          nsSeparator: false,
+        },
+        pages: [
+          {
+            matchPath: '/:lang?/:slug+', // Match all paths except the top-level index
+            getLanguageFromPath: true,
+          },
+        ],
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'assets',
+        path: `${__dirname}/content/assets/`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
         name: 'authors',
         path: `${__dirname}/content/authors/`,
       },
@@ -93,12 +130,17 @@ const config = {
         path: `${__dirname}/content/data/`,
       },
     },
-    {
-      resolve: 'gatsby-source-filesystem',
+    { resolve: 'gatsby-source-filesystem',
       options: {
         name: 'luContent',
-        path: `${__dirname}/content/learning-units/`,
-      },
+        path: `${__dirname}/content/en/`
+      }
+    },
+    { resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'luContent',
+        path: `${__dirname}/content/fr/`
+      }
     },
     {
       resolve: 'gatsby-source-filesystem',

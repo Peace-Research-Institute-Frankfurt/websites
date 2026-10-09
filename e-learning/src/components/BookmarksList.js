@@ -1,10 +1,12 @@
 import { Link, graphql, useStaticQuery } from 'gatsby'
 import React from 'react'
+import { useTranslation } from 'gatsby-plugin-react-i18next'
 import DeleteIcon from '../assets/icons/delete.svg'
 import Button from './ButtonAdapter'
 import * as styles from './BookmarksList.module.scss'
 
 export default function BookmarksList({ bookmarks, setBookmarks }) {
+  const { t } = useTranslation()
   const data = useStaticQuery(graphql`
     query {
       units: allFile(filter: { extension: { eq: "mdx" }, name: { eq: "index" }, sourceInstanceName: { eq: "luContent" } }) {
@@ -89,6 +91,6 @@ export default function BookmarksList({ bookmarks, setBookmarks }) {
     )
   })
 
-  const emptyState = <p className={styles.empty}>When you add chapters to your bookmarks they'll appear here.</p>
+  const emptyState = <p className={styles.empty}>{t('When you add bookmarks')}</p>
   return <>{bookmarksItems.length > 0 ? <ul className={styles.list}>{bookmarksItems}</ul> : emptyState}</>
 }

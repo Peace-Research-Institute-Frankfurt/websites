@@ -1,18 +1,30 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 import { getSrc } from 'gatsby-plugin-image'
+import { useTranslation } from 'gatsby-plugin-react-i18next'
+import useTranslations from '../hooks/useTranslations'
 import App from './App'
 import Meta from './Meta'
 import PostBody from './PostBody'
 import StickyHeader from './StickyHeader'
 import TableOfContents from './TableOfContents'
+import LanguageSwitcher from './LanguageSwitcher'
 import * as styles from './Chapter.module.scss'
 
 export const query = graphql`
-  query ($id: String, $lu_id: String) {
+  query ($id: String!, $lu_id: String!, $language: String!, $translations: [String!]) {
     site: site {
       siteMetadata {
         title
+      }
+    }
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
       }
     }
     post: file(id: { eq: $id }) {
@@ -30,8 +42,36 @@ export const query = graphql`
         }
       }
     }
+    translations: allFile(filter: { id: { in: $translations } }) {
+      nodes {
+        name
+        id
+        childMdx {
+          fields {
+            locale
+            slug
+          }
+          frontmatter {
+            title
+            intro
+            order
+          }
+        }
+      }
+    }
+    allSitePage {
+      nodes {
+        path
+        pageContext
+      }
+    }
     chapters: allFile(
-      filter: { relativeDirectory: { eq: $lu_id }, name: { nin: ["index", "__print"] }, ext: { eq: ".mdx" } }
+      filter: {
+        relativeDirectory: { eq: $lu_id }
+        name: { nin: ["index", "__print"] }
+        ext: { eq: ".mdx" }
+        childMdx: { fields: { locale: { eq: $language } } }
+      }
       sort: { childMdx: { frontmatter: { order: ASC } } }
     ) {
       nodes {
@@ -49,25 +89,43 @@ export const query = graphql`
         }
       }
     }
-    unit: file(name: { eq: "index" }, relativeDirectory: { eq: $lu_id }) {
-      name
-      childMdx {
-        fields {
-          slug
-        }
-        frontmatter {
-          title
-          short_title
-          order
-          hero_background
+    unit: allFile(
+      filter: {
+        name: { eq: "index" }
+        relativeDirectory: { eq: $lu_id }
+        childMdx: { fields: { locale: { eq: $language } } }
+      }
+    ) {
+      nodes {
+        name
+        childMdx {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            short_title
+            order
+            hero_background
+          }
         }
       }
     }
   }
 `
 
-const Chapter = ({ data, children }) => {
+const Chapter = ({ data, children, pageContext }) => {
+  const { t } = useTranslation()
   const frontmatter = data.post.childMdx.frontmatter
+  const unit = data.unit.nodes[0]
+
+  const translationData = {
+    translations: data.translations.nodes,
+    currentLanguage: pageContext.language,
+    currentSlug: data.post.childMdx.fields.slug,
+  }
+  const translations = useTranslations(translationData, data.allSitePage.nodes)
+
   const currentIndex = data.chapters.nodes.findIndex((el) => {
     return el.childMdx.frontmatter.order === frontmatter.order
   })
@@ -77,7 +135,12 @@ const Chapter = ({ data, children }) => {
 
   return (
     <App>
-      <StickyHeader unit={data.unit} post={data.post} next={next} prev={prev} chapters={data.chapters.nodes} />
+      <StickyHeader unit={unit} post={data.post} next={next} prev={prev} chapters={data.chapters.nodes}>
+        {data.translations.nodes.length > 0 && (
+          <LanguageSwitcher translations={translations} translationData={translationData} />
+        )}
+      </StickyHeader>
+
       <article id="content">
         <header className={styles.header}>
           <div className={styles.headerCopy}>
@@ -90,7 +153,7 @@ const Chapter = ({ data, children }) => {
           {data.post.childMdx.tableOfContents.items?.length > 1 && (
             <aside className={styles.tocContainer}>
               <div className={styles.tocInner}>
-                <h4>On this page</h4>
+                <h4>{t('On this page')}</h4>
                 <TableOfContents items={data.post.childMdx.tableOfContents.items} />
               </div>
             </aside>
@@ -105,12 +168,15 @@ const Chapter = ({ data, children }) => {
                 <span className={styles.paginationTitle}>
                   {next.childMdx.frontmatter.order}. {next.childMdx.frontmatter.title}
                 </span>
-                {next.childMdx.frontmatter.intro && <p className={styles.paginationIntro}>{next.childMdx.frontmatter.intro}</p>}
+                {next.childMdx.frontmatter.intro && (
+                  <p className={styles.paginationIntro}>{next.childMdx.frontmatter.intro}</p>
+                )}
               </Link>
             )}
             {prev && (
               <p className={styles.previous}>
-                <span>Previous Chapter:</span> <Link to={`../${prev.childMdx.fields.slug}`}>{prev.childMdx.frontmatter.title}</Link>
+                <span>Previous Chapter:</span>{' '}
+                <Link to={`../${prev.childMdx.fields.slug}`}>{prev.childMdx.frontmatter.title}</Link>
               </p>
             )}
           </nav>
@@ -120,13 +186,21 @@ const Chapter = ({ data, children }) => {
   )
 }
 
-export function Head({ data }) {
+export function Head({ data, pageContext, location }) {
   const chapter = data.post.childMdx.frontmatter
-  const unit = data.unit.childMdx.frontmatter
+  const unit = data.unit.nodes[0].childMdx.frontmatter
   const intro = ''
+
+  const translationData = {
+    currentPath: location,
+    currentSlug: data.post.childMdx.fields.slug,
+    currentLanguage: pageContext.language,
+    translations: data.translations.nodes,
+  }
 
   return (
     <Meta
+      translationData={translationData}
       socialTitle={`${chapter.title} – ${unit.title}`}
       title={`${chapter.title} – ${unit.title} / ${data.site.siteMetadata.title}`}
       description={intro}

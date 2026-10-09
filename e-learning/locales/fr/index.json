@@ -1,0 +1,47 @@
+{
+  "Above":"Image",
+  "On this page": "Sur cette page",
+  "Chapters":"Chapitres",
+  "Bookmarks": "Signets",
+  "Delete bookmark": "Supprimer le signet",
+  "Add bookmark": "Ajouter un signet",
+  "Remove bookmark": "Retirer le signet",
+  "Your bookmarks": "Vos signets",
+  "When you add bookmarks": "Lorsque vous ajoutez des chapitres à vos favoris, ceux-ci apparaissent ici.",
+  "All chapters": "Tous les chapitres",
+  "Previous Chapter": "Chapitre précédent",
+  "Next Chapter": "Chapitre suivant",
+  "Unit": "Unité",
+  "Chapter": "Chapitre",
+  "Learning Objectives": "Objectifs d'apprentissage",
+  "Credits": "Crédits",
+  "Start learning unit": "Commencer l'unité",
+  "Download PDF": "Télécharger le PDF",
+  "Updates": "Mises à jour",
+  "Disclosures": "Mentions",
+  "Content Warning": "Avertissement sur le contenu",
+  "Funding": "Financement",
+  "External Links": "Liens externes",
+  "Preferred Citation": "Citation recommandée",
+  "Editorial Note": "Note éditoriale",
+  "Expand": "Développer",
+  "Collapse": "Réduire",
+
+  "Treaty": "Traité",
+  "treaty.effective": "En vigueur depuis le",
+  "treaty.memberStates": "États membres",
+  "treaty.currentAdoption": "Adoption actuelle",
+  "treaty.statesParties": "États parties",
+
+  "content_warning_text": "Cette unité d’apprentissage peut contenir des supports audiovisuels ou des textes qui peuvent ne pas convenir à tous les publics.",
+
+  "funding_text": "Cette unité d’apprentissage a été réalisée avec le soutien financier de l’Union européenne. Son contenu relève toutefois de la seule responsabilité de son ou ses auteurs et ne peut en aucun cas être considéré comme reflétant la position de l’Union européenne.",
+
+  "external_links_text": "Le site peut contenir des références sous forme d’hyperliens (« Liens ») vers d’autres sites proposés par des tiers. Ces liens sont fournis uniquement à titre informatif et comme service complémentaire aux utilisateurs. Seuls les exploitants respectifs sont responsables du contenu et des déclarations figurant sur les sites liés. Par conséquent, PRIF ne peut garantir l’exactitude, la précision ou tout autre aspect des sites tiers.",
+
+  "editorial_note_text": "Il s’agit d’une version bêta de cette unité d’apprentissage, qui est régulièrement optimisée. Veuillez signaler toute erreur factuelle ou incohérence à l’éditeur. Veuillez noter que bien que le texte original ait été rédigé par les auteurs, la production vidéo et les simplifications ont été réalisées par PRIF.",
+
+  "404.title": "Page introuvable",
+  "404.sorry": "Désolé 😔, nous n'avons pas trouvé ce que vous cherchiez.",
+  "404.goHome": "Retour à l'accueil"
+}
