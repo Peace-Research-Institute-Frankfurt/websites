@@ -61,6 +61,7 @@
 
   & > h2 {
     @extend %h3;
+    color: var(--fc-primary);
     margin-top: calc(var(--baseline) * 1);
     margin-bottom: calc(var(--baseline) * 0.25);
     @include bp(s) {
