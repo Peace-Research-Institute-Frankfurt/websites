@@ -76,6 +76,7 @@
   }
   & > h3 {
     @extend %h4;
+    color: var(--fc-primary);
     margin-top: calc(var(--baseline) * 1);
     margin-bottom: calc(var(--ms-0) * 1);
     @include bp(m) {
