@@ -40,7 +40,7 @@
   }
 
   sup {
-    vertical-align: baseline;
+    vertical-align: center;
     display: inline-block;
     font-size: 0.75em;
     height: 1.3em;
@@ -49,7 +49,6 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    vertical-align: baseline;
     margin-right: 0.2em;
     font-feature-settings: 'tnum' 1;
     background: var(--fc-light);
