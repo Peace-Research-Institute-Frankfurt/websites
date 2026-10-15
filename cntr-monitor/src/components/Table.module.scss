@@ -69,3 +69,21 @@
     }
   }
 }
+
+.captions {
+  @extend %caption;
+ // margin: 0 auto;
+  color: #636362;
+  font-style: italic;
+  max-width: var(--measure);
+  padding-top: 1em;
+  display: flex;
+  flex-flow: column;
+  margin-top: calc(var(--baseline) * 0.5);
+  margin-bottom: calc(var(--baseline) * 0.5);
+}
+.caption {
+  p {
+    margin: 0;
+  }
+}
