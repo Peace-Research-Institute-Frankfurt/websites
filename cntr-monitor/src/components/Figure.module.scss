@@ -32,6 +32,7 @@
 .captions {
   @extend %caption;
   margin: 0 auto;
+  font-style: italic;
   max-width: var(--measure);
   padding-top: 1em;
   display: flex;

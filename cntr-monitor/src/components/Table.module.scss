@@ -70,7 +70,7 @@
 
 .captions {
   @extend %caption;
- // margin: 0 auto;
+  margin: 0 auto;
   //color: #636362;
   font-style: italic;
   max-width: var(--measure);
