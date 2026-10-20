@@ -21,6 +21,13 @@ But verification is a highly political endeavor. Introducing AI into its process
 
 The opacity of AI systems, in particular, seems to contradict the prerequisites for effective verification mechanisms. This so-called “black box” character of AI<Footnote number="2" /> has two closely interconnected dimensions: limited transparency and traceability of the system’s internal workings and, consequently, limited explainability of the outcomes it produces. This is rooted in the logic of machine learning methods, which are composed of large numbers of interconnected mathematical operations. In practice, users may receive a classification or recommendation without being able to directly identify which specific characteristics of the input data, or which effects of the training data, led to the result. While the inner workings of simple neural networks for classification and regression tasks can be explored reasonably well with explainable AI (XAI) techniques,<Footnote number="3" /> this process is much more intricate for large language models (LLMs) and generative AI systems.<Footnote number="4" /> These AI techniques enable the processing of complex textual information corpora and are therefore well suited to verification tasks for which human analysis was previously considered indispensable. However, the algorithms used are stochastic in nature, meaning that data processing is not mathematically deterministic and identical inputs may not necessarily produce identical outputs. These characteristics are not merely technical inconveniences. They affect the core function of verification, which depends on processes capable of producing results that are considered reliable and credible. Artificial intelligence thus enters the verification debate not only as a promising tool, but also as a potential new source of contestation, with actors seeking to exploit its limitations to question verification findings or even justify noncompliance by challenging the reliability of the verification system itself.
 
+<Figure
+    src="assets/AI-Veri_1.jpg"
+    size="large"
+    alt="Illustration showing how two measurement systems behave when they analyse the same warhead repeatedly: While the same measurements (A, A, & A) are given to the AI verification system, the output differs between mathematically deterministic and nondeterministic but consistent systems. The Warhead ID score of the mathematically deterministic system is always 94.8 %. The three illustrated Warhead ID scores of the nondeterministic but consistent system are 96.1 %, 94.3 %, and 95 %."
+    credit={<>CNTR</>}
+/>
+
 <Aside>The stochastic nature of AI techniques presents a challenge because of the reliability and credibility expected from verification mechanisms.</Aside>
 
 Upon closer inspection, however, the picture is more nuanced. Verification usually involves balancing transparency against the protection of sensitive information. The more intrusive or sensitive the verification provisions, the more difficult it becomes to strike this balance. For example, national technical means were accepted earlier in nuclear arms control than on-site inspections involving physical measurements. States seek to avoid disclosing more than is strictly necessary for verification purposes, while still providing sufficient evidence to establish compliance. From this perspective, opacity is not entirely new. Even traditional verification technologies are often complex and not fully transparent to all parties. Consider nuclear warhead verification. High-resolution spectra of emitted particles could confirm the presence of a warhead and rule out a hoax object. However, these spectra would also reveal sensitive design information, rendering their use politically unacceptable. While some approaches try to avoid gathering any sensitive information at all,<Footnote number="5" /> others apply what are referred to as “information barriers”,<Footnote number="6" /> which intentionally reduce the resolution of the measured data while still preserving enough information for the verification task.
@@ -40,6 +47,20 @@ Given this shift away from the necessity of an explainable AI system, the questi
 <Aside>Sensitive information must be protected at all stages of the life cycle of an AI model, from design to training to testing to implementation.</Aside>
 
 First, AI systems must be designed to protect sensitive information at all stages of the AI life cycle. Training modern AI models requires large volumes of data which, in an arms control context, may in some cases be open source, but will often originate from states, inspectors, and international organizations. Such data can contain information that extends beyond the scope of the treaty concerned and may reveal military capabilities, operational procedures, or technical characteristics that states are unwilling to disclose. Artificial intelligence models used for verification should therefore be developed according to the principle of data minimization. The technical parameters for this should ideally be developed and assessed by dedicated expert groups, thereby reducing the risk that highly technical issues become obstacles in political negotiations. Training data should be limited to the information necessary for the verification task, while remaining sufficiently informative to ensure that the AI’s capabilities are not constrained. Where the boundary should be drawn here may not be clear-cut and will depend on both technical requirements and political circumstances. Rather than seeking to provide broad analytical capabilities, model architectures should be designed to answer narrowly defined verification questions. As research has shown that data can be extracted from trained models<Footnote number="7" /> despite safeguard measures, such measures must ensure that generated outputs do not exceed the agreed verification mandate. This design principle is especially critical with AI being such a fast-paced technology, which continually develops new capabilities as well as new vulnerabilities and attack vectors.
+
+<Figure
+    src="assets/AI-Veri_2.jpg"
+    size="large"
+    alt="Infographic showing six conditions for credible use of AI in verification:
+1.	Protect sensitive information at all stages of the AI life cycle. Verification questions should be narrowly defined and data minimized.
+2.	Guarantee integrity of training data and models.
+3.	Reproducibility as central design principle.
+4.	Decentralized verification architectures.
+5.	Balanced transparency.
+6.	Reduce asymmetries in hardware access.
+Each condition is accompanied by icons representing them, e.g. a balance balancing a lock and a magnifying glass to depict the condition balanced transparency."
+    credit={<>CNTR</>}
+/>
 
 <Aside>The integrity of both training data and AI models must be guaranteed to ensure credibility of the verification process.</Aside>
 
