@@ -1,12 +1,12 @@
 @import 'vars';
 
 .wrapper {
-  margin: calc(var(--baseline) * 1) 0;
+ // margin: calc(var(--baseline) * 1) 0;
   overflow-x: auto;
   
-  @include bp(m) {
-    margin: calc(var(--baseline) * 1.5) 0;
-  }
+ // @include bp(m) {
+  //  margin: calc(var(--baseline) * 1.5) 0;
+ // }
 }
 
 .table {
@@ -21,7 +21,7 @@
 
   thead {
     tr {
-      border-bottom: 1px solid var(--black);
+      border-bottom: 1px solid;
     }
     
     th {
@@ -37,34 +37,50 @@
   }
 
   tbody {
-    tr {
-      border-bottom: 1px solid var(--gray-light);
-      
-      &:last-child {
-        border-bottom: none;
-      }
-    }
+   // tr {
+     // border-bottom: 1px solid;
+   // }
 
     td {
       padding: calc(var(--baseline) * 0.05) calc(var(--baseline) * 0.05);
-      vertical-align: top;
-      
+     // vertical-align: top;
+      p{
+        margin-bottom: 0;
+      }
       @include bp(s) {
         padding: calc(var(--baseline) * 0.3) calc(var(--baseline) * 0.3);
       }
 
       ul {
         margin: 0;
-        padding-left: 1.2em;
+       // padding-left: 1.2em;
+        padding-right: 0.2em;
         
-        li {
-          margin-bottom: 0.5em;
-          
-          &:last-child {
-            margin-bottom: 0;
-          }
-        }
+        //li {
+        //  margin-bottom: 0.5em;
+
+        // &:last-child {
+           // margin-bottom: 0;
+         // }
+       // }
       }
     }
+  }
+}
+
+.captions {
+  @extend %caption;
+  margin: 0 auto;
+  //color: #636362;
+  font-style: italic;
+  max-width: var(--measure);
+  display: flex;
+  flex-flow: column;
+  margin-top: calc(var(--baseline) * 0.5);
+  margin-bottom: calc(var(--baseline) * 0.5);
+}
+.caption {
+  p {
+    margin: 0;
   }
 }

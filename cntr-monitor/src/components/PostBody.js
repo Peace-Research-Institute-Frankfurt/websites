@@ -13,6 +13,7 @@ import TermAdapter from './TermAdapter'
 import Footnote from './Footnote'
 import FootnoteList from './FootnoteList'
 import Table from './Table'
+import TableCopy from './TableCopy'
 import * as BoxStyles from './Box.module.scss'
 import * as CalloutStyles from './Callout.module.scss'
 import * as QuoteStyles from './Quote.module.scss'
@@ -30,6 +31,7 @@ const shortCodes = {
   Term: ({ ...props }) => <TermAdapter {...props} />,
   TermsList,
   Table,
+  TableCopy,
   Quote: ({ ...props }) => <Quote {...props} styles={QuoteStyles} />,
 }
 
