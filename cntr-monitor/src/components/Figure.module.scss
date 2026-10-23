@@ -1,7 +1,7 @@
 @import 'vars';
 
 .container {
-  margin-left: auto;
+  margin-left: 0;
   margin-right: auto;
   margin-top: calc(var(--baseline) * 0.5);
   margin-bottom: calc(var(--baseline) * 0.5);
@@ -14,19 +14,34 @@
   margin-bottom: calc(var(--baseline) * 1);
 }
 
+.tiny{
+  width: calc(var(--measure) * 0.15);
+  display: inline-block;
+}
+
+.tinyright{
+  width: calc(var(--measure) * 0.25);
+  float: right;
+}
+
+.tinyleft{
+  width: calc(var(--measure) * 0.25);
+  float: left;
+}
+
 .large {
   width: calc(var(--measure) * 1.5);
   margin-top: calc(var(--baseline) * 1.5);
   margin-bottom: calc(var(--baseline) * 1);
 }
 .full {
-  width: 100%;
-  padding: 0 var(--padding);
+  width: calc(var(--measure) * 0.6);
+  padding: 0;
   display: flex;
   flex-flow: column;
   align-items: center;
-  margin-top: calc(var(--baseline) * 2);
-  margin-bottom: var(--baseline);
+ // margin-top: calc(var(--baseline) * 2);
+ // margin-bottom: var(--baseline);
 }
 
 .captions {

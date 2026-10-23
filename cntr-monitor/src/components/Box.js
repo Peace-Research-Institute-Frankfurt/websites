@@ -7,7 +7,7 @@ function Box({ styles, buttonComponent, title, expandable, children, id }) {
 
   const inner = (
     <div className={styles.inner}>
-      {title && <h3 className={styles.title}>{title}</h3>}
+      {title && <h2 className={styles.title}>{title}</h2>}
       {children}
     </div>
   )
