@@ -49,6 +49,7 @@ export const query = graphql`
           color
           publication_date(locale: $language, formatString: "LL")
           download_url
+          download_url_new
           cover_image {
             childImageSharp {
               gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
@@ -229,6 +230,12 @@ const Issue = ({ data, pageContext, children, location }) => {
                 <a rel="download" href={data.post.childMdx.frontmatter.download_url}>
                   <DownloadIcon />
                   {t('Complete Issue (PDF)')}
+                </a>
+              )}
+              {data.post.childMdx.frontmatter.download_url_new && (
+                <a rel="download" href={data.post.childMdx.frontmatter.download_url_new}>
+                  <DownloadIcon />
+                  {t('Executive Summary (PDF)')}
                 </a>
               )}
             </div>
