@@ -146,7 +146,14 @@ const config = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'pages',
-        path: `${__dirname}/content/pages/`,
+        path: `${__dirname}/content/pages/en/`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'pages',
+        path: `${__dirname}/content/pages/fr/`,
       },
     },
   ],
