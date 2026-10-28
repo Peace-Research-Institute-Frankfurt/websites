@@ -1,5 +1,6 @@
 import { Link } from 'gatsby'
 import React, { useState, useEffect } from 'react'
+import { useTranslation } from 'gatsby-plugin-react-i18next'
 import useScrollPosition from '@shared/hooks/useScrollPosition'
 import useLocalStorage from '@shared/hooks/useLocalStorage'
 
@@ -15,7 +16,9 @@ import Popover from './Popover'
 
 import * as styles from './StickyHeader.module.scss'
 
-export default function StickyHeader({ post, unit, next, chapters, prev }) {
+export default function StickyHeader({ post, unit, next, chapters, prev, children }) {
+  const { t } = useTranslation()
+
   const scrollPosition = useScrollPosition()
   const [bookmarksActive, setBookmarksActive] = useState(false)
   const [chaptersActive, setChaptersActive] = useState(false)
@@ -59,11 +62,11 @@ export default function StickyHeader({ post, unit, next, chapters, prev }) {
   if (unit && post) {
     unitChip = (
       <Link to={`../`} className={styles.unit}>
-        <UnitChip>Unit {unit.childMdx.frontmatter.order}</UnitChip>
+        <UnitChip>{t('Unit')} {unit.childMdx.frontmatter.order}</UnitChip>
       </Link>
     )
   } else if (unit) {
-    unitChip = <UnitChip>Unit {unit.childMdx.frontmatter.order}</UnitChip>
+    unitChip = <UnitChip>{t('Unit')} {unit.childMdx.frontmatter.order}</UnitChip>
   }
 
   return (
@@ -85,7 +88,7 @@ export default function StickyHeader({ post, unit, next, chapters, prev }) {
             {unit && <span className={styles.unitName}>{unit.childMdx.frontmatter.title}</span>}
             {post && (
               <span className={styles.post}>
-                Chapter {post.childMdx.frontmatter.order}: {post.childMdx.frontmatter.title}
+                {t('Chapter')} {post.childMdx.frontmatter.order}: {post.childMdx.frontmatter.title}
               </span>
             )}
           </span>
@@ -97,13 +100,13 @@ export default function StickyHeader({ post, unit, next, chapters, prev }) {
           <nav className={styles.statusPagination}>
             {prev && (
               <Link className={styles.paginationLink} to={`../${prev.childMdx.fields.slug}`}>
-                Previous Chapter
+                {t('Previous Chapter')}
                 <ArrowLeft />
               </Link>
             )}
             {next && (
               <Link className={styles.paginationLink} to={`../${next.childMdx.fields.slug}`}>
-                Next Chapter
+                {t('Next Chapter')}
                 <ArrowRight />
               </Link>
             )}
@@ -113,12 +116,12 @@ export default function StickyHeader({ post, unit, next, chapters, prev }) {
             <Popover
               isActive={chaptersActive}
               setIsActive={setChaptersActive}
-              title={<Link to="../">All chapters</Link>}
+              title={<Link to="../">{t('All chapters')}</Link>}
               trigger={
                 <Button
                   state={chaptersActive ? 'active' : 'default'}
                   priority="secondary"
-                  label="Chapters"
+                  label={t('Chapters')}
                   onClick={() => {
                     setChaptersActive(!chaptersActive)
                   }}
@@ -151,7 +154,7 @@ export default function StickyHeader({ post, unit, next, chapters, prev }) {
             {post && (
               <Button
                 priority="secondary"
-                label={bookmarkIndex === -1 ? 'Add bookmark' : 'Remove bookmark'}
+                label={bookmarkIndex === -1 ? t('Add bookmark') : t('Remove bookmark')}
                 hideLabel={true}
                 onClick={() => {
                   toggleBookmark()
@@ -162,10 +165,10 @@ export default function StickyHeader({ post, unit, next, chapters, prev }) {
             <Popover
               isActive={bookmarksActive}
               setIsActive={setBookmarksActive}
-              title="Your bookmarks"
+              title={t('Your bookmarks')}
               trigger={
                 <Button
-                  label="Bookmarks"
+                  label={t('Bookmarks')}
                   priority="secondary"
                   state={bookmarksActive ? 'active' : 'default'}
                   className="toggleBookmarks"
@@ -177,6 +180,9 @@ export default function StickyHeader({ post, unit, next, chapters, prev }) {
             >
               <BookmarksList bookmarks={faves} setBookmarks={setBookmarks} />
             </Popover>
+
+            {children}
+
           </ButtonGroup>
         </div>
       </header>

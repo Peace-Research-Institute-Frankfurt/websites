@@ -6,47 +6,58 @@
 
 const fs = require('fs')
 const gm = require('gray-matter')
-const basePath = `./content/learning-units`
+
+const locales = ['en', 'fr']
 
 console.log('Generating print templates... ')
 
-const units = fs.readdirSync(basePath)
-units.forEach((unit) => {
-  const chapters = fs.readdirSync(`${basePath}/${unit}`)
-  const hasChapters = chapters.length > 0
-  let unitData = []
+locales.forEach((locale) => {
+  const basePath = `./content/${locale}`
 
-  if (hasChapters) {
-    chapters.forEach((chapter) => {
-      if (chapter === 'index.mdx') {
-        const chapterPath = `${basePath}/${unit}/${chapter}`
-        const frontmatter = gm.read(chapterPath)
-      }
-      if (chapter !== 'index.mdx' && chapter !== 'assets' && chapter !== '__print.mdx') {
-        const chapterPath = `${basePath}/${unit}/${chapter}`
-        const frontmatter = gm.read(chapterPath)
-        if (frontmatter.data.title) {
-          unitData.push({
-            filename: chapter,
-            data: frontmatter.data,
-          })
+  if (!fs.existsSync(basePath)) {
+    console.log(`Skipping locale "${locale}" (folder not found)`)
+    return
+  }
+
+  console.log(`\nProcessing locale "${locale}"...`)
+
+  const units = fs.readdirSync(basePath)
+  units.forEach((unit) => {
+    const unitPath = `${basePath}/${unit}`
+
+    if (!fs.statSync(unitPath).isDirectory()) return
+
+    const chapters = fs.readdirSync(unitPath)
+    const hasChapters = chapters.length > 0
+    let unitData = []
+
+    if (hasChapters) {
+      chapters.forEach((chapter) => {
+        if (chapter !== 'index.mdx' && chapter !== 'assets' && chapter !== '__print.mdx') {
+          const chapterPath = `${unitPath}/${chapter}`
+          const frontmatter = gm.read(chapterPath)
+          if (frontmatter.data.title) {
+            unitData.push({
+              filename: chapter,
+              data: frontmatter.data,
+            })
+          }
         }
-      }
-    })
-
-    // Sort files by "order" frontmatter parameter
-    unitData.sort((a, b) => {
-      if (a.data.order > b.data.order) return 1
-      if (a.data.order < b.data.order) return -1
-      return 0
-    })
-
-    // Generate output
-    output = `${unitData
-      .map((chapter, i) => {
-        return `import Chapter${i} from './${chapter.filename}'`
       })
-      .join('\n')}
+
+      // Sort files by "order" frontmatter parameter
+      unitData.sort((a, b) => {
+        if (a.data.order > b.data.order) return 1
+        if (a.data.order < b.data.order) return -1
+        return 0
+      })
+
+      // Generate output
+      const output = `${unitData
+        .map((chapter, i) => {
+          return `import Chapter${i} from './${chapter.filename}'`
+        })
+        .join('\n')}
 
 ${unitData
   .map((chapter, i) => {
@@ -57,12 +68,13 @@ ${unitData
   .join('\n')}
 `
 
-    // Write the output
-    fs.writeFileSync(`${basePath}/${unit}/__print.mdx`, output)
-    console.log(`Wrote ${unit}`)
-  } else {
-    console.log(`Skipped ${unit} (no chapters found)`)
-  }
+      // Write the output
+      fs.writeFileSync(`${unitPath}/__print.mdx`, output)
+      console.log(`Wrote ${locale}/${unit}`)
+    } else {
+      console.log(`Skipped ${locale}/${unit} (no chapters found)`)
+    }
+  })
 })
 
 console.log(`Done\n`)

@@ -8,7 +8,7 @@ import './paged.scss'
 import authorsToString from './authorsToString'
 
 export const query = graphql`
-  query ($lu_id: String, $id: String) {
+  query ($lu_id: String!, $id: String!, $language: String!, $translations: [String!]) {
     site: site {
       buildTime(formatString: "D MMMM Y")
       siteMetadata {
@@ -16,10 +16,40 @@ export const query = graphql`
         siteUrl
       }
     }
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+    translations: allFile(filter: { id: { in: $translations } }) {
+      nodes {
+        id
+        childMdx {
+          fields {
+            locale
+            slug
+          }
+          frontmatter {
+            title
+          }
+        }
+      }
+    }
     post: file(id: { eq: $id }) {
       id
     }
-    posts: allFile(filter: { name: { eq: "index" }, sourceInstanceName: { eq: "luContent" }, relativeDirectory: { eq: $lu_id } }) {
+    posts: allFile(
+      filter: {
+        name: { eq: "index" }
+        sourceInstanceName: { eq: "luContent" }
+        relativeDirectory: { eq: $lu_id }
+        childMdx: { fields: { locale: { eq: $language } } }
+      }
+    ) {
       nodes {
         childMdx {
           body
@@ -114,7 +144,9 @@ const LearningUnit = ({ data, children }) => {
         })
 
         // Remove Gatsby elements
-        const removeElements = document.querySelectorAll('gatsby-qod,div#query-on-demand-indicator-element,div#gatsby-announcer')
+        const removeElements = document.querySelectorAll(
+          'gatsby-qod,div#query-on-demand-indicator-element,div#gatsby-announcer'
+        )
         removeElements.forEach((el) => el.remove())
 
         // Draw table strokes and outlines
@@ -190,40 +222,37 @@ const LearningUnit = ({ data, children }) => {
             <h1 className="unitTitle">{unit.title}</h1>
             <p className="unitIntro">{unit.intro}</p>
             <ol className="toc">
-              {chapterList.map((el, i) => {
-                return (
-                  <li key={`toc.${i}`}>
-                    <a data-label={`${el.order}. ${el.title}`} className="tocItem" href={`#chapter-${el.order}`}>
-                      {el.title}
-                    </a>
-                  </li>
-                )
-              })}
+              {chapterList.map((el, i) => (
+                <li key={`toc.${i}`}>
+                  <a data-label={`${el.order}. ${el.title}`} className="tocItem" href={`#chapter-${el.order}`}>
+                    {el.title}
+                  </a>
+                </li>
+              ))}
             </ol>
           </section>
           <section className="coverMeta">
             <ul className="unitAuthors">
-              {authors.map((el, i) => {
-                return (
-                  <li key={`author-${el.id}`} className="coverAuthor">
-                    <span className="authorName">{el.frontmatter.name}</span>
-                    <span className="authorInstitution">{el.frontmatter.institution}</span>
-                  </li>
-                )
-              })}
+              {authors.map((el) => (
+                <li key={`author-${el.id}`} className="coverAuthor">
+                  <span className="authorName">{el.frontmatter.name}</span>
+                  <span className="authorInstitution">{el.frontmatter.institution}</span>
+                </li>
+              ))}
             </ul>
             <div className="coverCitation">
               <p>
-                Cite as: {authorsToString(authors)}, "{unit.title}" in EUNPDC eLearning, ed. Niklas Schoernig, Peace Research Institute Frankfurt.
-                Available at {data.site.siteMetadata.siteUrl}
+                Cite as: {authorsToString(authors)}, "{unit.title}" in EUNPDC eLearning, ed. Niklas Schoernig, Peace Research
+                Institute Frankfurt. Available at {data.site.siteMetadata.siteUrl}
                 {data.posts.nodes[0].childMdx.fields.slug}, last modified {data.site.buildTime}
               </p>
             </div>
             <div className="coverAbout">
               <p>
-                The EU Non-Proliferation and Disarmament eLearning Course aims to cover all aspects of the EU non-proliferation and disarmament
-                agenda. It's produced by PRIF with financial assistance of the European Union. The contents of individual learning units are the sole
-                responsibility of the respective authors and don't necessariy reflect the position of the European Union.
+                The EU Non-Proliferation and Disarmament eLearning Course aims to cover all aspects of the EU non-proliferation
+                and disarmament agenda. It's produced by PRIF with financial assistance of the European Union. The contents of
+                individual learning units are the sole responsibility of the respective authors and don't necessarily reflect the
+                position of the European Union.
               </p>
             </div>
             <div className="coverFunding">

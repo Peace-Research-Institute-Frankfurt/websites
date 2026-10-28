@@ -1,17 +1,28 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import useTranslations from '../hooks/useTranslations'
 import App from './App'
 import Meta from './Meta'
 import PostBody from './PostBody'
 import StickyHeader from './StickyHeader'
+import LanguageSwitcher from './LanguageSwitcher'
 
 import * as styles from './Chapter.module.scss'
 
 export const query = graphql`
-  query ($id: String) {
+  query ($id: String!, $language: String!, $translations: [String!]) {
     site: site {
       siteMetadata {
         title
+      }
+    }
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
       }
     }
     mdx(id: { eq: $id }) {
@@ -32,15 +43,40 @@ export const query = graphql`
         tableOfContents
       }
     }
+    translations: allFile(filter: { id: { in: $translations } }) {
+      nodes {
+        id
+        childMdx {
+          fields {
+            slug
+          }
+        }
+      }
+    }
+
+    allSitePage {
+      nodes {
+        path
+        pageContext
+      }
+    }
   }
 `
 
-const Page = ({ data, children }) => {
+const Page = ({ data, children, pageContext }) => {
   const frontmatter = data.post.childMdx.frontmatter
+
+  let translationData = { translations: data.translations.nodes, currentLanguage: pageContext.language, currentSlug: data.post.childMdx.fields.slug }
+  let translations = useTranslations(translationData, data.allSitePage.nodes)
 
   return (
     <App>
-      <StickyHeader post={data.post} />
+      <StickyHeader post={data.post}>
+        {data.translations.nodes.length > 0 && (
+          <LanguageSwitcher translations={translations} translationData={translationData} />
+        )}
+      </StickyHeader>
+
       <article id="content">
         <header className={styles.header}>
           <div className={styles.headerCopy}>

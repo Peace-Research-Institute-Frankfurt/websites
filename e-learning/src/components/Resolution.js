@@ -2,7 +2,7 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { Chip, ChipGroup } from './Chip'
 
-import Expandable from '@shared/components/Expandable'
+import Expandable from './Expandable'
 
 import Button from './ButtonAdapter'
 import CheckIcon from '../assets/icons/check.svg'
