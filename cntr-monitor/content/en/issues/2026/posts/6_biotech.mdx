@@ -5,47 +5,146 @@ title: 'Genetic Engineering Attribution: Contribution to Verification and Practi
 intro: 'This chapter examines whether genetic engineering attribution (GEA) can meaningfully contribute to biosecurity and verification. It asks what current methods can actually infer from engineered biological material, how far results from curated datasets (e.g., plasmid repositories) can be applied to real-world incidents, and what this means for verification and compliance. The analysis suggests that sequence-based attribution may support screening, prioritization, and the narrowing of hypotheses, but that its value remains limited by incomplete data, uneven metadata, and the gap between repository benchmarks and realistic forensic settings. For this reason, the priorities are to improve data standards, evaluate attribution methods under more realistic conditions, and use sequence-based results only in combination with other forms of evidence.'
 category: Focus
 tags:
--	Abschreckung
--	Abwassersequenzierung
--	Addgene
--	Amerithrax
--	Attribution
--	Biodefense
--	Bioforensik
--	Biosicherheit
--	Biotechnologie
--	Bioterrorismus
--	Bioüberwachung
--	Biowaffen
--	Biowaffen-Übereinkommen
--	Cas
--	Corona-Virus
--	CRISPR
--	DETECTR
--	DNA
--	Erregernachweis
--	Geheimdienste
--	Gentechnik
--	Krankheitserreger
--	Lipidomik
--	Mammoth Biosciences
--	Massenspektrometrie
--	Metagenomik
--	Mikroorganismen
--	Nachrichtendienste
--	Pandemie
--	Polymerase-Kettenreaktion
--	Proteomik
--	RNA
--	SARS-CoV2
--	Synthetische Biologie
--	Toxine
--	USA
--	Verifikation
-
+- Addgene
+- AI
+- Artificial intelligence
+- Attribution
+- Biological agents
+- Biological Weapons Convention
+- Biological weapons
+- Biologische Agenzien
+- Biologische Waffen
+- Biotechnologie
+- Biotechnology
+- Biosecurity
+- Biosafety
+- BWC
+- COVID-19
+- DDBJ
+- DNA
+- Dual-Use
+- Dual-use
+- ENA
+- GenBank
+- Genetic Engineering
+- Gentechnik
+- KI
+- Künstliche Intelligenz
+- Machine learning
+- Maschinelles Lernen
+- Microbial forensics
+- Mikrobielle Forensik
+- Nukleotide
+- Nucleotide
+- Plasmid design
+- Plasmid repository
+- Plasmid-Design
+- Plasmid-Datenbanken
+- United States of America
+- USA
+- Vereinigte Staaten von Amerika
+- Weltgesundheitsorganisation
+- WHO
+- World Health Organization
+- Übereinkommen über das Verbot biologischer Waffen
 authors:
   - k-reis26
 ---
 
-<Leadin>Efforts to </Leadin>attribute the origin of biological agents are not new. Microbial forensics was developed to investigate biological incidents, identify the agent involved, where it came from, and who may have been responsible. While microbes have been used for harmful purposes for centuries, the 2001 anthrax letter attacks in the United States gave particular urgency to the development of forensic capabilities to support investigation and attribution. These events highlighted the need for analytical tools and knowledge bases that could provide investigative leads, identify likely sources, and help establish responsibility with a high degree of scientific confidence. In practice, this meant combining genomic analysis with epidemiological information, environmental and clinical samples, and documented chains of custody.
+<Leadin>Efforts to </Leadin>attribute the origin of biological agents are not new. Microbial forensics was developed to investigate biological incidents, identify the agent involved, where it came from, and who may have been responsible. While microbes have been used for harmful purposes for centuries, the 2001 anthrax letter attacks<Footnote number="1" /> in the United States gave particular urgency to the development of forensic capabilities to support investigation and attribution. These events highlighted the need for analytical tools and knowledge bases that could provide investigative leads, identify likely sources, and help establish responsibility with a high degree of scientific confidence. In practice, this meant combining genomic analysis with epidemiological information, environmental and clinical samples, and documented chains of custody.
 
+This task remains highly relevant. Biological events can have major political and security consequences, yet attribution often remains difficult and contested. The prolonged disputes over the origin of COVID-19, including WHO-related reporting as late as July 2025, more than five years after the peak of the pandemic, illustrate how scientifically and politically contentious such questions can become.<Footnote number="2" /> Even where substantial data exist, uncertainty may persist for years, especially when key evidence is inaccessible, incomplete, or contested. Attribution, therefore, has direct implications for accountability, deterrence, and international stability.
+
+In recent years, these questions have gained renewed significance in the context of modern biotechnology. As genetic engineering has become increasingly standardized, accessible, and data rich, attention has shifted toward whether engineered biological constructs contain detectable traces of their origin. This has given rise to growing interest in genetic engineering attribution, or GEA,<Footnote number="3" /> as a possible extension of microbial forensics into an era of <Term t="plasmid-design">plasmid design</Term>, synthetic biology, and large biological sequence repositories.
+
+## Why Attribution Matters
+
+In this chapter, verification is understood in a broad sense: not as confirming stockpiles or declared facilities, but as supporting assessments of whether suspicious biological activity is consistent with prohibited development, use, or concealment. GEA contributes to this narrower evidentiary task by helping determine whether a construct appears engineered, what methods may have been used, and what further inquiries should follow.
+
+Attribution offers several possible benefits for security and verification.<Footnote number="4" /> First, identifying the likely origin of a biological construct can help guide response efforts by clarifying which actor may be involved, their likely capabilities, and their motives. Second, by facilitating the identification of responsible parties, attribution can enable civil, criminal, or diplomatic consequences. Third, the realistic prospect of attribution may help deter misuse. In this sense, attribution has implications beyond the incident itself, since it may influence future behavior through the possibility of later scrutiny or consequences.
+
+These points are particularly relevant in discussions about the verification of biological weapons obligations. Unlike some other arms control domains, biology offers relatively few opportunities for straightforward verification through inspection or material accounting alone.<Footnote number="5" /> Biological materials can be replicated, modified, concealed, and redistributed. This increases the importance of methods that can extract information from the agent or construct itself. In biotechnology, conclusions about origin therefore often rely on indirect, data-driven evidence, including sequence data and associated metadata, rather than on direct inspection alone.
+
+## Methodological Signatures and Sequence Clues
+
+The central premise of GEA is that genetic engineering leaves traces. Design decisions are rarely random; they are shaped by training, available tools, routine laboratory practices, preferred methods, and access to particular equipment and materials. Taken together, these decisions may create a kind of “methodological signature” that can help indicate who was likely responsible for a given modification<Footnote number="6" />.
+
+In practice, such traces can take different forms. Some are more direct, such as the insertion of foreign genetic material, the use of recognizable laboratory components, or the presence of short sequence scars associated with particular cloning techniques. Others are more indirect, including <Term t="codon">codon usage patterns</Term>, <Term t="backbon">backbone</Term> selection, <Term t="promoter">promoter</Term> choice, guanine-cytosine (GC) composition, or other sequence-level regularities that reflect design habits rather than explicit markers. The attraction of GEA lies in the possibility that such patterns may be detectable at scale using statistical and machine-learning methods, enabling investigators to infer whether, and perhaps how, a biological construct was engineered.
+
+<Aside>GEA is based on the idea that engineering can leave detectable traces in biological sequences, but current methods rely heavily on curated repository data.</Aside>
+
+Databases such as <Term t="addgene">Addgene</Term><Footnote number="7" /> have played a major role in advancing this line of work because they provide large, curated collections of <Term t="plasmid">plasmid</Term> sequences together with information about depositors, authors, backbone elements, and other construct features. Consequently, <Term t="plasmid-repo">plasmid repositories</Term> became one of the main testbeds for GEA. Engineered biology is increasingly designed, stored, and shared in digital form, leaving behind sequence records, repository entries, and other traces of laboratory work in addition to physical material. These traces made attribution more tractable as a measurable computational problem. Researchers could then test whether recurring patterns in sequences and metadata were associated with particular contributors or engineering contexts. Early benchmark results suggested that such signals do exist, and that repository-based attribution is possible under structured conditions.<Footnote number="8" /> In practice, these studies indicated that likely lab-of-origin patterns could be recovered with considerable accuracy from curated plasmid datasets.<Footnote number="9" /> This framing also attracted attention beyond academia, including through programs such as DARPA’s Bio Attribution Challenge, which approaches attribution as a large-scale computational problem using genomic and environmental datasets designed to simulate realistic scenarios.<Footnote number="10" />
+
+## Repositories and Sequence Archives as Data Sources
+
+Repositories and sequence archives support attribution in different ways. Plasmid repositories such as Addgene preserve laboratory-made constructs together with relatively rich contextual information, including depositor identity, plasmid maps, backbone descriptions, and links to publications. This makes them particularly useful for benchmarking attribution methods, as engineered sequences can be analyzed alongside their documented design context.
+
+Broad-coverage sequence archives, such as GenBank, ENA, and DDBJ (all part of the International Nucleotide Sequence Database Collaboration),<Footnote number="11" /> serve a different function. These databases provide much broader range of biological sequences, including natural and engineered material, but often with less standardized information on whether and how a sequence has been engineered, as well as much weaker laboratory provenance. Raw-read repositories such as SRA add another important layer, because real-world samples may be fragmentary, mixed, or environmental rather than complete and well-annotated constructs. Metadata resources such as BioProject and BioSample can provide useful contextual information, but they do not, on their own, offer the structured engineering descriptions on which repository-based GEA often relies.
+
+<Aside>Different biological databases preserve different types of sequence and metadata information, which means they are suited to different attribution tasks.</Aside>
+
+Different databases make it possible to address different attribution questions, but each also imposes its own constraints. Addgene-like repositories are useful for determining whether attribution is possible under curated conditions. Resources such as GenBank, ENA, or SRA are useful for illustrating how difficult attribution becomes once sequences are heterogeneous, incomplete, and no longer embedded in a clearly documented engineering setting.
+
+These repository-based results are promising, but they should be treated with caution. Public repositories provide a particularly favorable setting for attribution research, and success in these datasets does not mean that the same methods will perform reliably in real-world incidents. They contain (nearly) complete sequences, known labels, and relatively structured metadata, whereas real-world incidents are typically much messier. Samples may be incomplete, degraded, mixed with natural background material, or collected long after the relevant event. Metadata may be missing or inconsistently recorded, and investigators often do not begin with a clearly defined set of potential actors. In other words, repositories help demonstrate what is technically possible, but not what is operationally reliable.
+
+<Figure
+    src="assets/GEA.jpg"
+    size="large"
+    alt="Infographic titled ‘From microbial forensics to genetic engineering attribution’ showing its step-by-step process in four steps. 1. Traditional microbial forensics: Answers the question ‘What is this organism and where does it come from?’ and indicates the organism, strain, outbreak, geographic or environmental context. The data is used for step 2 where existing reference repositories support comparison and interpretation to provide sequence data, taxonomic information, and epidemiological links. In step 3, the genetic engineering attribution (GEA), the data is used to answer a different question: What engineering process or design context does this resemble? The GEA may provide closer information on the engineering, design, workflow, and possible provenance. This data can then be used in the last step: Reference-data requirements for operational GEA. In addition to traditional reference data, operational GEA needs four more things. A. sequence evidence. B. engineering metadata (constructs, components, methods). C. provenance and context (publications, sources, dates, organizations). D. Links between records (links between constructs and publications, publications and sequences, sequences and sources). The outcome of the fourth step is integrated, standardized, linkable and interpretable data to support attribution. Each step is accompanied by icons symbolizing parts of the steps."
+    credit={<>CNTR</>}
+/>
+
+A somewhat different question is whether engineered DNA can be distinguished from natural sequences at all. One example is the detection tool Synsor,<Footnote number="12" /> which uses differences between natural plasmids and <Term t="eng-vector">engineered vectors</Term> to classify sequences as either natural or engineered. This suggests that engineering-related signals can sometimes be detected, but remain dependent on the underlying dataset and they do not by themselves indicate who was responsible. It is one thing to infer that a sequence may have been engineered, another to identify the laboratory, actor, or process responsible. That said, a system that can flag suspicious sequences may still be useful, even if it cannot identify their origin. Such a tool could support screening, triage, and the narrowing of hypotheses, while helping investigators prioritize samples for follow-up analysis. This would still be a meaningful contribution, but it is different from claiming that sequence analysis alone can establish responsibility.
+
+A more challenging question is whether such signals can go beyond merely indicating engineering to also help distinguish between possible sources. Some engineering practices may leave small traces in DNA, including differences in GC content (the proportion of guanine and cytosine bases in the sequence) and other broad patterns in sequence composition. Yet these differences are often limited in their discriminatory value. A preliminary look at GC-related variation suggests that simple compositional features can reflect some variation between groups of constructs, but this is not strong enough for reliable source attribution. In many cases, the variation within the sequences associated with a single depositor is of a similar magnitude to the variation observed between different depositors. This makes reliable attribution difficult when relying on simple sequence features alone.
+
+A further limitation concerns the structure of the available data. Repositories may contain large numbers of plasmids, but these are not evenly distributed across contributors. Many laboratories are represented by only a handful of sequences, while a smaller number account for a substantial proportion of the total dataset. This unevenness makes robust inference difficult, and raises a broader question of how far repository-based results can be applied to the threat scenarios that matter most for biosecurity and verification.
+
+## Promises and Limits of GEA
+
+These findings suggest that GEA remains promising, but also constrained. Biological constructs do appear to contain information about their design history. Even with no explicit watermark or identifier, traces of laboratory practice may remain visible in the sequence. This means that attribution is not purely speculative. Some forms of sequence-based inference are possible, and they may become more useful as datasets and analytical methods improve.
+
+<Aside>GEA can support screening and the narrowing of hypotheses, but its signals are often weak, overlapping, and insufficient on their own for strong attribution claims.</Aside>
+
+The limitations are equally important. In practice, attribution-relevant signals are often weak, overlapping, and highly context dependent. Any meaningful inference is therefore likely to require a combination of multiple partial indicators, potentially aided by machine learning or other statistical methods. Even then, the outcome is more likely to be probabilistic than definitive. This is particularly important in forensic or verification contexts, where the question is whether the pattern carries enough evidentiary weight to support a meaningful judgment. Standardized components reduce variability, sparse datasets limit confidence, and deliberate obfuscation remains possible. A malicious actor could, in principle, adopt common design practices, reuse widely shared elements, or intentionally imitate characteristics associated with another laboratory or country. This creates not only technical uncertainty but also political risk, since attribution claims can carry serious diplomatic consequences.
+
+For this reason, GEA should not be seen as a standalone solution to biotechnology verification.<Footnote number="13" /> Its role is better understood as one source of evidence among several, useful for generating leads, narrowing possibilities, and supporting broader assessments. In combination with other measures, such as DNA synthesis screening, documentation requirements, epidemiological analysis, environmental sampling, or intentional traceability mechanisms, it could make a meaningful contribution. On its own, however, it is unlikely to provide the level of certainty that strong attribution claims require. A detectable signal is not the same as usable evidence.
+
+## Verification and Compliance
+
+<Aside>For a short introduction to the BWC, see [the annex.](/2026/international-treaties-and-instruments-related-to-the-governance-of-biological-and-chemical-weapons-disarmament-non-proliferation-and-dual-use-risks/)</Aside>
+
+Although GEA methodologies remain at an early stage, they are still relevant to discussions on verification and compliance under the Biological Weapons Convention. Their main value lies not in providing definitive proof, but in strengthening the technical basis for assessing suspicious biological activity. In a field where verification has long been considered challenging, even partial attribution capabilities may prove valuable.
+
+In practical terms, GEA would serve as a trigger for further inquiry rather than a final judgment. A sequence-based finding might indicate that a sample is probably engineered, that a particular vector or design pattern was used, or that the construct resembles material associated with a known repository, laboratory practice, or technical community. Each of these findings would then point investigators toward specific follow-up questions, helping to structure the investigation and prioritize investigative resources. This role is relevant both to routine oversight, where it may help flag inconsistencies, and in post-incident investigation, where it may help narrow down possible methods, sources, or technical pathways.
+
+<Aside>GEA can support both routine oversight and post-incident investigation, but only as one input in a broader evidentiary process.</Aside>
+
+At the same time, expectations should remain realistic. The presence of detectable engineering signatures does not mean that origin can always be established with confidence. If GEA is to become more useful for verification, progress will depend not only on better algorithms, but also on stronger data standards, broader reference datasets, more realistic evaluation settings, and clearer standards for interpreting attribution evidence. More consistent metadata on construct type, vector system, backbone, and engineering method would improve analysis. Benchmarks that include partial, mixed, or degraded samples would provide a more realistic test of performance. Sequence-based outputs will need to be interpreted alongside other forms of evidence rather than treated as self-explanatory.
+
+The task ahead is therefore twofold: to improve the science of attribution, and to integrate it carefully into broader governance and verification discussions without overstating what present methods can deliver. As biotechnology and artificial intelligence continue to evolve, the pressure to develop stronger attribution tools will only increase. These capabilities may support response, accountability, and deterrence, but only if their limitations are understood as clearly as their promise.<Footnote number="14" />
+
+## Policy Recommendations
+
+**1. Improve data standards for engineered biological sequences.** National and international efforts to strengthen biosecurity and research governance should support more consistent documentation of engineered biological material in repositories and sequence archives. This should include better systems for recording construct type, vector system, backbone, engineering method, and relevant depositor context.
+
+**2. Evaluate attribution methods under realistic conditions before operational use.** Public-sector support for research and capability development should prioritize testing genetic engineering attribution methods under conditions closer to real-world incidents, including partial, degraded, mixed, or poorly documented samples. Evaluation should distinguish clearly between engineering detection and source attribution, and should include uncertainty reporting suited to high-stakes use.
+
+**3. Use genetic engineering attribution as one component of a broader evidentiary framework.** Sequence-based attribution should be treated as one source of information among several, not as standalone proof. In practice, it is most useful when combined with epidemiological, environmental, and investigative evidence, including in discussions on compliance and verification.
+
+<FootnoteList notes={[
+<>The United States Department of Justice. (2010, February 19). Amerithrax Investigative Summary. <a href="https://www.justice.gov/archive/amerithrax/docs/amx-investigative-summary.pdf">https://www.justice.gov/archive/amerithrax/docs/amx-investigative-summary.pdf</a></>,
+<>Scientific Advisory Group on the Origins of Novel Pathogens (SAGO). (2025). Independent assessment of the origins of SARS‑CoV‑2. World Health Organization. <a href="https://www.who.int/publications/m/item/independent-assessment-of-the-origins-of-sars-cov-2-from-the-scientific-advisory-group-for-the-origins-of-novel-pathogens">https://www.who.int/publications/m/item/independent-assessment-of-the-origins-of-sars-cov-2-from-the-scientific-advisory-group-for-the-origins-of-novel-pathogens</a></>,
+<>Alley, E. C., Turpin, M., Liu, A. B., Kulp-McDowall, T., Swett, J., Edison, R., Von Stetina, S. E., Church, G. M., & Esvelt, K. M. (2020). A machine learning toolkit for genetic engineering attribution to facilitate biosecurity. Nature Communications, 11(1), 6293. <a href="https://doi.org/10.1038/s41467-020-19612-0">https://doi.org/10.1038/s41467-020-19612-0</a>; Lewis, G., Jordan, J. L., Relman, D. A., Koblentz, G. D., Leung, J., Dafoe, A., Nelson, C., Epstein, G. L., Katz, R., Montague, M., Alley, E. C., Filone, C. M., Luby, S., Church, G. M., Millett, P., Esvelt, K. M., Cameron, E. E., & Inglesby, T. V. (2020). The biosecurity benefits of genetic engineering attribution. Nature Communications, 11(1), 6294. <a href="https://doi.org/10.1038/s41467-020-19149-2">https://doi.org/10.1038/s41467-020-19149-2</a></>,
+<>Lewis et al. (2020)</>,
+<>Cropper, N., Rath, S., & Teo, R. (2022). Creating a Verification Protocol for the Biological Weapons Convention: A MODULAR-INCREMENTAL APPROACH. Nuclear Threat Initiative. <a href="https://www.nti.org/wp-content/uploads/2022/06/Creating-a-Verification-Protocol_FINAL_June2022.pdf">https://www.nti.org/wp-content/uploads/2022/06/Creating-a-Verification-Protocol_FINAL_June2022.pdf</a></>,
+<>Lewis et al. (2020)</>,
+<>Kamens, J. (2015). The Addgene repository: An international nonprofit plasmid and data resource. Nucleic Acids Research, 43(D1), D1152–D1157. <a href="https://doi.org/10.1093/nar/gku893">https://doi.org/10.1093/nar/gku893</a></>,
+<>Alley et al. (2020); Crook, O. M., Warmbrod, K. L., Lipstein, G., Chung, C., Bakerlee, C. W., McKelvey, T. G., Holland, S. R., Swett, J. L., Esvelt, K. M., Alley, E. C., & Bradshaw, W. J. (2022). Analysis of the first genetic engineering attribution challenge. Nature Communications, 13(1), 7374. <a href="https://doi.org/10.1038/s41467-022-35032-8">https://doi.org/10.1038/s41467-022-35032-8</a></>,
+<>Lewis et al. (2020)</>,
+<>Biological Technologies Office. (2026). Bio-attribution Challenge. Defense Advanced Research Projects Agency. <a href="https://www.darpa.mil/research/challenges/bio-attribution">https://www.darpa.mil/research/challenges/bio-attribution</a></>,
+<>Arita, M., Karsch-Mizrachi, I., & Cochrane, G. (2021). The international nucleotide sequence database collaboration. Nucleic Acids Research, 49(D1), D121–D124. <a href="https://doi.org/10.1093/nar/gkaa967">https://doi.org/10.1093/nar/gkaa967</a></>,
+<>Tay, A. P., Didi, K., Wickramarachchi, A., Bauer, D. C., Wilson, L. O. W., & Maselko, M. (2024). Synsor: A tool for alignment-free detection of engineered DNA sequences. Frontiers in Bioengineering and Biotechnology, 12, 1375626. <a href="https://doi.org/10.3389/fbioe.2024.1375626">https://doi.org/10.3389/fbioe.2024.1375626</a></>,
+<>Lewis et al. (2020)</>,
+<>Lewis et al. (2020)</>
+]} />
