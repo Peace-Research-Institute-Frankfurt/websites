@@ -7,7 +7,7 @@ export default function useColors(color, isBrand, year, isAppendix = false) {
 
   // Anhang/Annex = immer Blau, unabhängig vom Jahr
   if (isAppendix) {
-    primary = new Color('rgb(34,70,99)')
+    primary = new Color('rgb(0,124,160)')
     dark = new Color('rgb(34,70,99)')
     light = new Color('rgb(222,242,251)')
   } else {
@@ -16,7 +16,7 @@ export default function useColors(color, isBrand, year, isAppendix = false) {
     if (!isAfter2024) {
       // 2024: unverändert
       if (isBrand) {
-        primary = new Color('rgb(34,70,99)')
+        primary = new Color('rgb(0,124,160)')
         dark = new Color('rgb(34,70,99)')
         light = new Color('rgb(222,242,251)')
       } else {
@@ -31,7 +31,7 @@ export default function useColors(color, isBrand, year, isAppendix = false) {
         dark = new Color(color).set({ 'lch.l': 25, 'lch.c': 40, 'lch.h': (h) => h + 10 })
         light = new Color(color).set({ 'lch.l': 93, 'lch.c': 12, 'lch.h': (h) => h + 10 })
       } else {
-        primary = new Color('rgb(34,70,99)')
+        primary = new Color('rgb(0,124,160)')
         dark = new Color('rgb(34,70,99)')
         light = new Color('rgb(222,242,251)')
       }
