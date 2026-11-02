@@ -3,13 +3,32 @@
 .container {
   margin: calc(var(--baseline) * 1.5) 0;
   position: relative;
-  color: var(--black);
+ // color: var(--black);
   width: 100%;
+  h2{
+    @extend %h2;
+    font-size: var(--ms-3);
+    line-height: calc(var(--baseline) * 1.666);
+    color: var(--fc-primary);
+  }
+  h3{
+    @extend %h3;
+    color: var(--fc-primary);
+  }
+  h4{
+    @extend %h4;
+    color: var(--fc-primary);
+    margin-bottom: calc(var(--baseline) * 0.15);
+  }
+  h5{
+    @extend %h5;
+    color: var(--fc-primary);
+  }
   }
 
   .inner {
   padding: calc(var(--baseline) * 1);
-  background: var(--fc-light);
+  background: color-mix(in srgb, var(--fc-primary), transparent 92%);
   @include bp(m) {
     padding: calc(var(--baseline) * 1.5);
   }

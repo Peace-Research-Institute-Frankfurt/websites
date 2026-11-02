@@ -1,19 +1,19 @@
 import React from 'react'
 import Expandable from '@shared/components/Expandable'
 
-function Box({ styles, buttonComponent, title, expandable, children }) {
+function Box({ styles, buttonComponent, title, expandable, children, id }) {
   if (!styles) styles = {}
   if (typeof expandable === 'undefined') expandable = false
 
   const inner = (
     <div className={styles.inner}>
-      {title && <h3 className={styles.title}>{title}</h3>}
+      {title && <h2 className={styles.title}>{title}</h2>}
       {children}
     </div>
   )
 
   return (
-    <section className={styles.container}>
+    <section id={id} className={styles.container}>
       {expandable === true ? (
         <Expandable buttonComponent={buttonComponent}>{inner}</Expandable>
       ) : (

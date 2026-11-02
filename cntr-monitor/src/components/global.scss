@@ -48,6 +48,7 @@
   --measure: 45rem;
   --padding: 2.5vw;
   --header-height: 3rem;
+  --alpha: 0.8;
 
   @include bp(s) {
     --header-height: 3.5rem;
