@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import { useTranslation } from 'gatsby-plugin-react-i18next'
 
 const pageStyles = {
@@ -40,7 +40,7 @@ const NotFoundPage = () => {
           </>
         ) : null}
         <br />
-        <a href="https://nonproliferation-elearning.eu/">{t('404.goHome')}</a>.
+        <a href="https://nonproliferation-elearning.eu/" target="_self">{t('404.goHome')}</a>.
       </p>
     </main>
   )
