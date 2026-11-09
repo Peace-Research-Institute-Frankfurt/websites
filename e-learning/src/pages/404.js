@@ -40,7 +40,7 @@ const NotFoundPage = () => {
           </>
         ) : null}
         <br />
-        <Link to="/">{t('404.goHome')}</Link>.
+        <a href="https://nonproliferation-elearning.eu/">{t('404.goHome')}</a>.
       </p>
     </main>
   )
