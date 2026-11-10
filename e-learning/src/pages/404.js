@@ -1,6 +1,4 @@
 import * as React from 'react'
-import { graphql } from 'gatsby'
-import { useTranslation } from 'gatsby-plugin-react-i18next'
 
 const pageStyles = {
   color: '#232129',
@@ -25,12 +23,11 @@ const codeStyles = {
 }
 
 const NotFoundPage = () => {
-  const { t } = useTranslation()
   return (
     <main style={pageStyles}>
-      <h1 style={headingStyles}>{t('404.title')}</h1>
+      <h1 style={headingStyles}>Page not found</h1>
       <p style={paragraphStyles}>
-        {t('404.sorry')}
+        Sorry 😔, we couldn't find what you were looking for.
         <br />
         {process.env.NODE_ENV === 'development' ? (
           <>
@@ -40,7 +37,7 @@ const NotFoundPage = () => {
           </>
         ) : null}
         <br />
-        <a href="https://nonproliferation-elearning.eu/" target="_self">{t('404.goHome')}</a>.
+        <a href="https://nonproliferation-elearning.eu/" target="_self">Go home</a>.
       </p>
     </main>
   )
@@ -50,17 +47,3 @@ export default NotFoundPage
 
 export const Head = () => <title>Not found</title>
 
-// Nötig damit gatsby-plugin-react-i18next die Locale-Daten lädt:
-export const query = graphql`
-  query($language: String!) {
-    locales: allLocale(filter: { language: { eq: $language } }) {
-      edges {
-        node {
-          ns
-          data
-          language
-        }
-      }
-    }
-  }
-`
