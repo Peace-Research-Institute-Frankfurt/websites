@@ -126,7 +126,7 @@
   font-variation-settings: 'wght' 700, 'wdth' 110;
   letter-spacing: -0.01em;
   hyphens: none;
-  text-wrap: balance;
+//  text-wrap: balance;
   font-size: var(--ms-1);
   line-height: calc(var(--baseline) * 1.1);
   @include bp(s) {
@@ -170,11 +170,12 @@ table{
   th,td{
     border: 1px solid;
     padding: 15px 5px;
+    border-color: var(--fc-primary);
   }
   thead{
     tr{
       font-weight: bold;
-      background: var(--fc-light);
+      background-color: color-mix(in srgb, var(--fc-primary), transparent 92%);
       border-bottom: 1px solid;
     }
   }

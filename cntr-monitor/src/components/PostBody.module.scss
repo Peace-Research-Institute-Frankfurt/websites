@@ -40,7 +40,7 @@
   }
 
   sup {
-    vertical-align: baseline;
+    vertical-align: center;
     display: inline-block;
     font-size: 0.75em;
     height: 1.3em;
@@ -49,7 +49,6 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    vertical-align: baseline;
     margin-right: 0.2em;
     font-feature-settings: 'tnum' 1;
     background: var(--fc-light);
@@ -61,6 +60,7 @@
 
   & > h2 {
     @extend %h3;
+    color: var(--fc-primary);
     margin-top: calc(var(--baseline) * 1);
     margin-bottom: calc(var(--baseline) * 0.25);
     @include bp(s) {
@@ -76,6 +76,7 @@
   }
   & > h3 {
     @extend %h4;
+    color: var(--fc-primary);
     margin-top: calc(var(--baseline) * 1);
     margin-bottom: calc(var(--ms-0) * 1);
     @include bp(m) {

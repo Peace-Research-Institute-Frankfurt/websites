@@ -8,7 +8,7 @@ import * as styles from './Table.module.scss'
  * - rows: Array von Arrays (Zellen)
  * - bulleted: true = Listen mit Punkten, false = Inline/Komma-getrennt
  */
-export default function Table({ headers, rows, bulleted = true }) {
+export default function Table({ caption, headers, rows, bulleted = true }) {
   return (
     <div className={styles.wrapper}>
       <table className={styles.table}>
@@ -79,6 +79,15 @@ export default function Table({ headers, rows, bulleted = true }) {
           ))}
         </tbody>
       </table>
+      {(caption) && (
+        <figcaption className={styles.captions}>
+          {caption && (
+            <span className={styles.caption}>
+              {caption}
+            </span>
+          )}
+        </figcaption>
+      )}
     </div>
   )
 }
