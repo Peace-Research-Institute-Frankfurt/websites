@@ -1,0 +1,26 @@
+.container {
+  overflow: hidden;
+  position: relative;
+  max-height: 12em;
+}
+
+.content {
+  mask-image: linear-gradient(to bottom, black 20%, transparent 12em);
+}
+
+.expanded {
+  max-height: none;
+  .content {
+    mask-image: none;
+  }
+  .toggle {
+    position: static;
+  }
+}
+
+.toggle {
+  position: absolute;
+  bottom: 0;
+  margin-top: 1rem;
+  z-index: 100;
+}

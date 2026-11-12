@@ -1,12 +1,14 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import Expandable from '@shared/components/Expandable'
+import Expandable from './Expandable'
 import { Chip, ChipGroup } from './Chip.js'
 import { TreatyParticipantGraph } from './TreatyParticipantGraph'
+import { useTranslation } from 'gatsby-plugin-react-i18next'
 import Button from './ButtonAdapter.js'
 import * as styles from './Treaty.module.scss'
 
 export default function Treaty({ name }) {
+  const { t } = useTranslation()
   const data = useStaticQuery(graphql`
     query treatyQuery {
       countries: allCountriesJson {
@@ -91,12 +93,12 @@ export default function Treaty({ name }) {
       <Expandable buttonComponent={Button}>
         <h2 className={styles.title}>{treaty.title || treaty.shortTitle}</h2>
         <ChipGroup>
-          {treaty.date && <Chip>Effective {treaty.date}</Chip>}
+          {treaty.date && <Chip>{t('treaty.effective')} {treaty.date}</Chip>}
           {treaty.legalStatus && <Chip>{treaty.legalStatus}</Chip>}
-          <Chip>{memberCount} States Parties</Chip>
+          <Chip>{memberCount} {t('treaty.statesParties')}</Chip>
         </ChipGroup>
         <p className={styles.description}>{treaty.description}</p>
-        <h3 className={styles.subtitle}>Current Adoption</h3>
+        <h3 className={styles.subtitle}>{t('treaty.currentAdoption')}</h3>
         <TreatyParticipantGraph treaty={treaty} candidates={data.countries.nodes} />
       </Expandable>
     </section>

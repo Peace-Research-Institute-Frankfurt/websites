@@ -1,9 +1,13 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Link } from 'gatsby-plugin-react-i18next'
+import { useI18next, useTranslation } from 'gatsby-plugin-react-i18next'
 import FundingLogo from '../assets/icons/funded-by-eu.svg'
 import * as styles from './SiteFooter.module.scss'
 
 export default function SiteFooter() {
+  const { language } = useI18next()
+  const { t } = useTranslation()
+  const embedChoicesPath = language === 'fr' ? '/choix-relatifs-au-contenu-integre' : '/embedded-content-choices'
   return (
     <footer className={styles.container}>
       <div className={styles.inner}>
@@ -25,7 +29,7 @@ export default function SiteFooter() {
               <a href="https://nonproliferation-elearning.eu/imprint">Contact</a>
             </li>
             <li>
-              <Link to="/embedded-content-choices">Embedded content choices</Link>
+              <Link to={embedChoicesPath}>{t('Embedded content choices')}</Link>
             </li>
           </ul>
         </nav>

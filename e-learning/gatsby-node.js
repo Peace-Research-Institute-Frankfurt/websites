@@ -1,7 +1,34 @@
 const path = require('path')
 const { createFilePath } = require(`gatsby-source-filesystem`)
 const slug = require('slug')
+
 slug.extend({ '—': '-', '–': '-' })
+
+const locales = ['en', 'fr']
+const defaultLocale = 'en'
+
+function findTranslationNodes(n, nodes) {
+  if (!n.childMdx?.fields?.locale) return []
+
+  const locale = n.childMdx.fields.locale
+  const translationTargets = locales.filter((el) => el !== locale)
+
+  const translationCandidates = nodes.filter((el) => {
+    if (!el.childMdx?.fields?.locale) return false
+    return el.relativeDirectory === n.relativeDirectory
+  })
+
+  const rootFileName = n.base
+
+  const translations = translationCandidates.filter((el) => {
+    const foundIndex = translationTargets.findIndex((t) => {
+      return rootFileName === el.base && el.childMdx.fields.locale !== locale
+    })
+    return foundIndex !== -1
+  })
+
+  return translations
+}
 
 exports.createPages = async function ({ actions, graphql }) {
   const { data } = await graphql(`
@@ -9,10 +36,12 @@ exports.createPages = async function ({ actions, graphql }) {
       chapters: allFile(filter: { extension: { eq: "mdx" }, name: { nin: ["index", "__print"] }, sourceInstanceName: { eq: "luContent" } }) {
         nodes {
           id
+          base
           relativeDirectory
           childMdx {
             fields {
               slug
+              locale
             }
             internal {
               contentFilePath
@@ -23,10 +52,11 @@ exports.createPages = async function ({ actions, graphql }) {
       units: allFile(filter: { extension: { eq: "mdx" }, name: { eq: "index" }, sourceInstanceName: { eq: "luContent" } }) {
         nodes {
           id
+          base
           relativeDirectory
           childMdx {
             fields {
-              slug
+              locale
             }
             internal {
               contentFilePath
@@ -37,8 +67,12 @@ exports.createPages = async function ({ actions, graphql }) {
       printUnits: allFile(filter: { extension: { eq: "mdx" }, name: { eq: "__print" }, sourceInstanceName: { eq: "luContent" } }) {
         nodes {
           id
+          base
           relativeDirectory
           childMdx {
+            fields {
+              locale
+            }
             internal {
               contentFilePath
             }
@@ -48,9 +82,12 @@ exports.createPages = async function ({ actions, graphql }) {
       pages: allFile(filter: { sourceInstanceName: { eq: "pages" }, extension: { eq: "mdx" } }) {
         nodes {
           id
+          base
+          relativeDirectory
           childMdx {
             fields {
               slug
+              locale
             }
             internal {
               contentFilePath
@@ -62,46 +99,63 @@ exports.createPages = async function ({ actions, graphql }) {
   `)
 
   data.chapters.nodes.forEach((node) => {
-    const slug = node.childMdx.fields.slug
+    if (!node.childMdx?.fields?.locale) return
+    const chapterSlug = node.childMdx.fields.slug
+    const locale = node.childMdx.fields.locale
     const lu_id = node.relativeDirectory
-    const id = node.id
+    const localePath = locale !== defaultLocale ? `${locale}/` : ''
+    const translations = findTranslationNodes(node, data.chapters.nodes)
+    const translationIds = translations.map((t) => t.id)
     const template = require.resolve(`./src/components/Chapter.js`)
     actions.createPage({
-      path: `${lu_id}/${slug}`,
+      path: `${localePath}${lu_id}/${chapterSlug}`,
       component: `${template}?__contentFilePath=${node.childMdx.internal.contentFilePath}`,
-      context: { id: id, lu_id: lu_id },
+      context: { id: node.id, lu_id, language: locale, translations: translationIds },
     })
   })
 
   data.units.nodes.forEach((node) => {
-    const id = node.id
+    if (!node.childMdx?.fields?.locale) return
+    const locale = node.childMdx.fields.locale
     const lu_id = node.relativeDirectory
+    const localePath = locale !== defaultLocale ? `${locale}/` : ''
+    const translations = findTranslationNodes(node, data.units.nodes)
+    const translationIds = translations.map((t) => t.id)
     const template = require.resolve(`./src/components/LearningUnit.js`)
     actions.createPage({
-      path: lu_id,
+      path: `${localePath}${lu_id}`,
       component: `${template}?__contentFilePath=${node.childMdx.internal.contentFilePath}`,
-      context: { id: id, lu_id: lu_id },
+      context: { id: node.id, lu_id, language: locale, translations: translationIds },
     })
   })
 
   data.printUnits.nodes.forEach((node) => {
-    const id = node.id
+    if (!node.childMdx?.fields?.locale) return
+    const locale = node.childMdx.fields.locale
     const lu_id = node.relativeDirectory
+    const localePath = locale !== defaultLocale ? `${locale}/` : ''
+    const translations = findTranslationNodes(node, data.printUnits.nodes)
+    const translationIds = translations.map((t) => t.id)
     const template = require.resolve(`./src/components/LearningUnitPrint.js`)
     actions.createPage({
-      path: `${lu_id}/print`,
+      path: `${localePath}${lu_id}/print`,
       component: `${template}?__contentFilePath=${node.childMdx.internal.contentFilePath}`,
-      context: { id: id, lu_id: lu_id },
+      context: { id: node.id, lu_id, language: locale, translations: translationIds },
     })
   })
 
   data.pages.nodes.forEach((node) => {
-    const postTemplate = require.resolve(`./src/components/Page.js`)
-    const path = node.childMdx.fields.slug
+    if (!node.childMdx?.fields?.slug) return
+    const locale = node.childMdx?.fields?.locale || defaultLocale
+    const localePath = locale !== defaultLocale ? `${locale}/` : ''
+    const rawSlug = node.childMdx.fields.slug.replace(/^\/(fr|en)\//, '/')
+    const translations = findTranslationNodes(node, data.pages.nodes)
+    const translationIds = translations.map((t) => t.id)
+    const template = require.resolve(`./src/components/Page.js`)
     actions.createPage({
-      path: path,
-      component: `${postTemplate}?__contentFilePath=${node.childMdx.internal.contentFilePath}`,
-      context: { id: node.id },
+      path: `${localePath}${rawSlug}`,
+      component: `${template}?__contentFilePath=${node.childMdx.internal.contentFilePath}`,
+      context: { id: node.id, language: locale, translations: translationIds },
     })
   })
 }
@@ -119,22 +173,26 @@ exports.onCreateNode = ({ node, actions, createNodeId, getNode }) => {
       },
     })
   }
+
   if (node.internal.type === 'Mdx') {
-    let path = createFilePath({ node, getNode })
-    if (node.frontmatter.title && node.internal.contentFilePath.indexOf('index.mdx') === -1) {
-      path = slug(node.frontmatter.title)
-    }
-    actions.createNodeField({
-      node,
-      name: 'slug',
-      value: path,
+    let nodeLocale = defaultLocale
+    locales.forEach((locale) => {
+      if (node.internal.contentFilePath.indexOf(`/${locale}/`) !== -1) {
+        nodeLocale = locale
+      }
     })
+    actions.createNodeField({ node, name: 'locale', value: nodeLocale })
+
+    let nodePath = createFilePath({ node, getNode })
+    if (node.frontmatter.title && node.internal.contentFilePath.indexOf('index.mdx') === -1) {
+      nodePath = slug(node.frontmatter.title)
+    }
+    actions.createNodeField({ node, name: 'slug', value: nodePath })
   }
 }
 
-exports.createSchemaCustomization = async ({ getNode, getNodesByType, pathPrefix, reporter, cache, actions, schema }) => {
+exports.createSchemaCustomization = async ({ actions }) => {
   const { createTypes } = actions
-
   const typeDefs = `
   type UpdateEntry {
     date: String
@@ -171,6 +229,10 @@ exports.createSchemaCustomization = async ({ getNode, getNodesByType, pathPrefix
   type Mdx {
     frontmatter: FrontMatter
   }
+  type MdxFields {
+    slug: String
+    locale: String
+  }
   `
   createTypes(typeDefs)
 }
@@ -182,6 +244,7 @@ exports.onCreateWebpackConfig = ({ rules, actions, getConfig }) => {
   cfg.resolve.alias = {
     ...cfg.resolve.alias,
     '@shared': path.resolve(__dirname, '../shared'),
+    '@data': path.resolve(__dirname, 'content/data'),
   }
 
   // The following code:
