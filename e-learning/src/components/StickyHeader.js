@@ -180,10 +180,10 @@ export default function StickyHeader({ post, unit, next, chapters, prev, childre
             >
               <BookmarksList bookmarks={faves} setBookmarks={setBookmarks} />
             </Popover>
-
-            {children}
-
           </ButtonGroup>
+
+          {children}
+
         </div>
       </header>
     </>
