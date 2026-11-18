@@ -90,7 +90,7 @@ const config = {
       resolve: 'gatsby-plugin-react-i18next',
       options: {
         localeJsonSourceName: 'locale',
-        languages: ['en', 'fr'],
+        languages: ['en', 'fr', 'es'],
         defaultLanguage: 'en',
         fallbackLanguage: 'en',
         redirect: false,
@@ -142,6 +142,12 @@ const config = {
         path: `${__dirname}/content/fr/`
       }
     },
+    { resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'luContent',
+        path: `${__dirname}/content/es/`
+      }
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -154,6 +160,13 @@ const config = {
       options: {
         name: 'pages',
         path: `${__dirname}/content/pages/fr/`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'pages',
+        path: `${__dirname}/content/pages/es/`,
       },
     },
   ],

@@ -7,7 +7,7 @@ import * as styles from './SiteFooter.module.scss'
 export default function SiteFooter() {
   const { language } = useI18next()
   const { t } = useTranslation()
-  const embedChoicesPath = language === 'fr' ? '/choix-relatifs-au-contenu-integre' : '/embedded-content-choices'
+  const embedChoicesPath = language === 'fr' ? '/choix-relatifs-au-contenu-integre' : language === 'es' ? '/opciones-de-contenido-incrustado' : '/embedded-content-choices' 
   return (
     <footer className={styles.container}>
       <div className={styles.inner}>

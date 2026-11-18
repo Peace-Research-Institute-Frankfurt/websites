@@ -4,7 +4,7 @@ const slug = require('slug')
 
 slug.extend({ '—': '-', '–': '-' })
 
-const locales = ['en', 'fr']
+const locales = ['en', 'fr', 'es']
 const defaultLocale = 'en'
 
 function findTranslationNodes(n, nodes) {
@@ -148,7 +148,7 @@ exports.createPages = async function ({ actions, graphql }) {
     if (!node.childMdx?.fields?.slug) return
     const locale = node.childMdx?.fields?.locale || defaultLocale
     const localePath = locale !== defaultLocale ? `${locale}/` : ''
-    const rawSlug = node.childMdx.fields.slug.replace(/^\/(fr|en)\//, '/')
+    const rawSlug = node.childMdx.fields.slug.replace(/^\/(fr|en|es)\//, '/')
     const translations = findTranslationNodes(node, data.pages.nodes)
     const translationIds = translations.map((t) => t.id)
     const template = require.resolve(`./src/components/Page.js`)

@@ -1,11 +1,11 @@
 function removeLanguagePrefix(s) {
-  return s.replace('/fr', '')
+  return s.replace('/fr', '/es', '')
 }
 
 export default function useTranslations(translationData, pageNodes) {
   let translations = []
 
-  const languages = ['fr', 'en']
+  const languages = ['fr', 'en', 'es']
   const targetLanguages = languages.filter((el) => el !== translationData.currentLanguage)
   const basePath = removeLanguagePrefix(translationData.currentSlug)
 

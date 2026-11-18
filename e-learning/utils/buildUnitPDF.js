@@ -7,7 +7,7 @@ const express = require('express')
 const { setOutline } = require('./setOutline')
 const gm = require('gray-matter')
 
-const locales = ['en', 'fr']
+const locales = ['en', 'fr', 'es']
 const defaultLocale = 'en'
 
 console.log(`\nGenerating Unit PDFs...`)

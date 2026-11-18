@@ -7,7 +7,7 @@
 const fs = require('fs')
 const gm = require('gray-matter')
 
-const locales = ['en', 'fr']
+const locales = ['en', 'fr', 'es']
 
 console.log('Generating print templates... ')
 

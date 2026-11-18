@@ -1,0 +1,47 @@
+{
+"Above":"Imagen",
+"On this page": "En esta página",
+"Chapters":"Capítulos",
+"Bookmarks": "Marcadores",
+"Delete bookmark": "Eliminar marcador",
+"Add bookmark": "Añadir marcador",
+"Remove bookmark": "Eliminar marcador",
+"Your bookmarks": "Tus marcadores",
+"When you add bookmarks": "Cuando añades capítulos a tus favoritos, estos aparecen aquí.",
+"All chapters": "Todos los capítulos",
+"Previous Chapter": "Capítulo anterior",
+"Next Chapter": "Capítulo siguiente",
+"Unit": "Unidad",
+  "Chapter": "Capítulo",
+  "Learning Objectives": "Objetivos de aprendizaje",
+  "Credits": "Créditos",
+  "Start learning unit": "Comenzar la unidad",
+  "Download PDF": "Descargar el PDF",
+  "Updates": "Actualizaciones",
+  "Disclosures": "Avisos legales",
+  "Content Warning": "Advertencia sobre el contenido",
+  "Funding": "Financiación",
+  "External Links": "Enlaces externos",
+  "Preferred Citation": "Cita recomendada",
+  "Editorial Note": "Nota editorial",
+  "Expand": "Expandir",
+  "Collapse": "Contraer",
+
+  "Embedded content choices": "Opciones de contenido incrustado",
+
+  "Treaty": "Tratado",
+  "treaty.effective": "En vigor desde el",
+  "treaty.memberStates": "Estados miembros",
+  "treaty.currentAdoption": "Adopción actual",
+  "treaty.statesParties": "Estados parte",
+
+  "content_warning_text": "Esta unidad didáctica puede contener material audiovisual o textos que quizá no sean adecuados para todos los públicos.",
+
+  "funding_text": "Esta unidad de aprendizaje se ha elaborado con el apoyo financiero de la Unión Europea. No obstante, su contenido es responsabilidad exclusiva de su autor o autores y en ningún caso puede considerarse que refleje la posición de la Unión Europea.",
+
+  "external_links_text": "El sitio web puede contener referencias en forma de hipervínculos («Enlaces») a otros sitios web ofrecidos por terceros. Estos enlaces se proporcionan únicamente con fines informativos y como servicio complementario a los usuarios. Los respectivos administradores son los únicos responsables del contenido y de las declaraciones que figuran en los sitios web enlazados. Por lo tanto, PRIF no puede garantizar la exactitud, la precisión ni ningún otro aspecto de los sitios web de terceros.",
+
+  "editorial_note_text": "Se trata de una versión beta de esta unidad didáctica, que se optimiza periódicamente. Por favor, comunique cualquier error factual o incoherencia al editor. Tenga en cuenta que, aunque el texto original ha sido redactado por los autores, la producción del vídeo y las simplificaciones han sido realizadas por PRIF."
+
+
+}
