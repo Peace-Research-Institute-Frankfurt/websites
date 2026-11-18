@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { Link } from 'gatsby'
 import { useI18next } from 'gatsby-plugin-react-i18next'
 import * as styles from './LanguageSwitcher.module.scss'
@@ -6,23 +6,71 @@ import * as styles from './LanguageSwitcher.module.scss'
 export default function LanguageSwitcher({ translationData, translations }) {
   const { languages } = useI18next()
   const currentLanguage = translationData.currentLanguage
+  const [isOpen, setIsOpen] = useState(false)
+  const containerRef = useRef(null)
 
-  const languageLinks = languages.map((l, i) => {
-    const t = translations.find((el) => el.language === l)
-    let inner = <span className={styles.inner}>{l}</span>
-    if (t) {
-      inner = (
-        <Link className={styles.inner} to={t.path}>
-          {l}
-        </Link>
-      )
+  // Schließt das Dropdown bei einem Klick außerhalb
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        containerRef.current &&
+        !containerRef.current.contains(event.target)
+      ) {
+        setIsOpen(false)
+      }
     }
+
+    document.addEventListener('mousedown', handleClickOutside)
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [])
+
+  const otherLanguages = languages.filter((l) => l !== currentLanguage)
+
+  const languageLinks = otherLanguages.map((l) => {
+    const t = translations.find((el) => el.language === l)
+
     return (
-      <li key={`language-link-${i}`} className={`${styles.item} ${l === currentLanguage && styles.itemCurrent}`}>
-        {inner}
+      <li key={`language-link-${l}`} className={styles.item}>
+        {t ? (
+          <Link
+            className={styles.inner}
+            to={t.path}
+            onClick={() => setIsOpen(false)}
+          >
+            {l}
+          </Link>
+        ) : (
+          <span className={styles.inner}>{l}</span>
+        )}
       </li>
     )
   })
 
-  return <ul className={styles.container}>{languageLinks}</ul>
+  return (
+    <div className={styles.container} ref={containerRef}>
+      <button
+        type="button"
+        className={styles.current}
+        onClick={() => setIsOpen((prev) => !prev)}
+        aria-expanded={isOpen}
+        aria-controls="language-menu"
+        aria-label={`Current language: ${currentLanguage}. Change language`}
+      >
+        <span>{currentLanguage}</span>
+        <span
+          className={`${styles.arrow} ${isOpen ? styles.arrowOpen : ''}`}
+          aria-hidden="true"
+        />
+      </button>
+
+      {isOpen && (
+        <ul id="language-menu" className={styles.dropdown}>
+          {languageLinks}
+        </ul>
+      )}
+    </div>
+  )
 }
