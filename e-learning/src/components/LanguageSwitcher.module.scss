@@ -3,20 +3,21 @@
 .container {
   display: inline-block;
   position: relative;
-  color: var(--blue-70);
   font-size: inherit;
+  color: var(--blue-90);
 }
 
 .current {
   display: flex;
   align-items: center;
   gap: 0.5em;
-  padding: 0.3em 0.5em;
-  border: 1px solid var(--blue-70);
+  padding: 0.35em 0.5em;
+  border: 1px solid var(--blue-90);
   background: transparent;
-  color: var(--blue-70);
+  color: var(--blue-90);
   font: inherit;
   text-transform: uppercase;
+  line-height: 1;
   cursor: pointer;
   transition: var(--fast);
 
@@ -26,12 +27,26 @@
   }
 }
 
+.current-open {
+  background: var(--blue-90);
+  color: #f0f4ff;
+
+  &:hover,
+  &:focus-visible {
+    background: var(--blue-90);
+  }
+
+  .arrow {
+    border-top-color: #f0f4ff;
+  }
+}
+
 .arrow {
   width: 0;
   height: 0;
   border-left: 0.3em solid transparent;
   border-right: 0.3em solid transparent;
-  border-top: 0.4em solid var(--blue-70);
+  border-top: 0.4em solid var(--blue-90);
   transition: transform var(--fast);
 }
 
@@ -48,14 +63,14 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  border: 1px solid var(--blue-70);
+  border: 1px solid var(--blue-90);
   border-top: 0;
   background: white;
 }
 
 .item {
   display: block;
-  border-bottom: 1px solid var(--blue-70);
+  border-bottom: 1px solid var(--blue-90);
 
   &:last-child {
     border-bottom: 0;
@@ -63,9 +78,10 @@
 }
 
 .inner {
-  display: block;
+  display: flex;
+  align-items: center;
   padding: 0.35em 0.5em;
-  color: var(--blue-70);
+  color: var(--blue-90);
   text-decoration: none;
   text-transform: uppercase;
   line-height: 1;

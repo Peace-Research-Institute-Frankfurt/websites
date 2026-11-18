@@ -53,7 +53,7 @@ export default function LanguageSwitcher({ translationData, translations }) {
     <div className={styles.container} ref={containerRef}>
       <button
         type="button"
-        className={styles.current}
+        className={`${styles.current} ${isOpen ? styles.currentOpen : ''}`}
         onClick={() => setIsOpen((prev) => !prev)}
         aria-expanded={isOpen}
         aria-controls="language-menu"
