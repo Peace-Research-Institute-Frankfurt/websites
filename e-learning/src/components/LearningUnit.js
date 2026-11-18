@@ -2,20 +2,31 @@ import React from 'react'
 import MarkdownRenderer from 'react-markdown-renderer'
 import { graphql, Link } from 'gatsby'
 import { GatsbyImage, getImage, getSrc } from 'gatsby-plugin-image'
+import { useTranslation } from 'gatsby-plugin-react-i18next'
 import useLocalStorage from '@shared/hooks/useLocalStorage'
+import useTranslations from '../hooks/useTranslations'
 
 import App from './App'
 import Meta from './Meta'
 import StickyHeader from './StickyHeader'
 import LearningUnitHeader from './LearningUnitHeader'
+import LanguageSwitcher from './LanguageSwitcher'
 import ArrowRight from '../assets/icons/arrow-right.svg'
 import * as ButtonStyles from './Button.module.scss'
-
 import * as styles from './LearningUnit.module.scss'
 import authorsToString from './authorsToString'
 
 export const query = graphql`
-  query ($id: String, $lu_id: String) {
+  query ($id: String!, $lu_id: String!, $language: String!, $translations: [String!]) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     site: site {
       buildTime(formatString: "D MMMM Y")
       siteMetadata {
@@ -63,8 +74,28 @@ export const query = graphql`
             date
             description
           }
-          
         }
+      }
+    }
+    translations: allFile(filter: { id: { in: $translations } }) {
+      nodes {
+        name
+        id
+        childMdx {
+          fields {
+            locale
+            slug
+          }
+          frontmatter {
+            title
+          }
+        }
+      }
+    }
+    allSitePage {
+      nodes {
+        path
+        pageContext
       }
     }
     chapters: allFile(
@@ -73,6 +104,7 @@ export const query = graphql`
         name: { nin: ["index", "__print"] }
         sourceInstanceName: { eq: "luContent" }
         relativeDirectory: { eq: $lu_id }
+        childMdx: { fields: { locale: { eq: $language } } }
       }
       sort: { childMdx: { frontmatter: { order: ASC } } }
     ) {
@@ -95,12 +127,21 @@ export const query = graphql`
   }
 `
 
-const LearningUnit = ({ data, children }) => {
+const LearningUnit = ({ data, children, pageContext }) => {
+  const { t } = useTranslation()
+
   const frontmatter = data.post.childMdx.frontmatter
   const authors = data.post.childMdx.frontmatter?.authors ?? []
   const heroImage = getImage(frontmatter.hero_image)
   const [bookmarks, setBookmarks] = useLocalStorage('elearning-bookmarks', [])
   const startLink = data.chapters.nodes[0].childMdx.fields.slug
+
+  const translationData = {
+    translations: data.translations.nodes,
+    currentLanguage: pageContext.language,
+    currentSlug: data.post.childMdx.fields.slug,
+  }
+  const translations = useTranslations(translationData, data.allSitePage.nodes)
 
   const bios = authors.map((author) => {
     const fm = author.frontmatter
@@ -108,7 +149,9 @@ const LearningUnit = ({ data, children }) => {
     return (
       <li className={styles.author} key={fm.author_id}>
         <div className={styles.authorHeader}>
-          {authorImage && <GatsbyImage className={styles.authorImage} image={authorImage} alt={`${fm.name} profile image`} />}
+          {authorImage && (
+            <GatsbyImage className={styles.authorImage} image={authorImage} alt={`${fm.name} profile image`} />
+          )}
           <div>
             <h3 className={styles.authorTitle}>{fm.name}</h3>
             <span className={styles.authorInstitution}>{fm.institution}</span>
@@ -118,6 +161,7 @@ const LearningUnit = ({ data, children }) => {
       </li>
     )
   })
+
   const chapterLinks = data.chapters.nodes.map((node, index) => {
     const frontmatter = node.childMdx.frontmatter
     return (
@@ -134,7 +178,12 @@ const LearningUnit = ({ data, children }) => {
 
   return (
     <App>
-      <StickyHeader chapters={data.chapters.nodes} bookmarks={bookmarks} setBookmarks={setBookmarks} unit={data.post} />
+      <StickyHeader chapters={data.chapters.nodes} bookmarks={bookmarks} setBookmarks={setBookmarks} unit={data.post}>
+        {data.translations.nodes.length > 0 && (
+          <LanguageSwitcher translations={translations} translationData={translationData} />
+        )}
+      </StickyHeader>
+
       <article className={styles.container} id="content">
         <LearningUnitHeader
           frontmatter={frontmatter}
@@ -142,25 +191,30 @@ const LearningUnit = ({ data, children }) => {
           intro={frontmatter.intro}
           alt={frontmatter.hero_alt}
           order={frontmatter.order}
-          image={{ src: heroImage, alt: frontmatter.hero_alt, caption: frontmatter.hero_caption, credit: frontmatter.hero_credit }}
+          image={{
+            src: heroImage,
+            alt: frontmatter.hero_alt,
+            caption: frontmatter.hero_caption,
+            credit: frontmatter.hero_credit,
+          }}
           background={frontmatter.hero_background}
           startLink={startLink}
         />
         <main className={styles.main}>
           <section className={styles.chapters}>
-            <h2 className={styles.sectionTitle}>Chapters</h2>
+            <h2 className={styles.sectionTitle}>{t('Chapters')}</h2>
             <div id="chapters" className={styles.sectionContent}>
               <ol>{chapterLinks}</ol>
             </div>
           </section>
           {data.post.childMdx.body.length > 0 && (
             <section>
-              <h2 className={styles.sectionTitle}>Learning Objectives</h2>
+              <h2 className={styles.sectionTitle}>{t('Learning Objectives')}</h2>
               <div className={`${styles.sectionContent} ${styles.copy}`}>{children}</div>
             </section>
           )}
           <section>
-            <h2 className={styles.sectionTitle}>Credits</h2>
+            <h2 className={styles.sectionTitle}>{t('Credits')}</h2>
             <div className={styles.sectionContent}>
               <ul>{bios}</ul>
             </div>
@@ -168,7 +222,7 @@ const LearningUnit = ({ data, children }) => {
           <section>
             <div className={`${styles.sectionContent} ${styles.unitActions}`}>
               <Link to={startLink} className={`${ButtonStyles.container} ${ButtonStyles.primary}`}>
-                Start learning unit
+                {t('Start learning unit')}
                 <div className={ButtonStyles.icon}>
                   <ArrowRight />
                 </div>
@@ -177,52 +231,42 @@ const LearningUnit = ({ data, children }) => {
                 className={`${ButtonStyles.container} ${ButtonStyles.secondary}`}
                 href={`/static/eunpdc-${data.post.childMdx.fields.slug.replace(/\//g, '')}.pdf`}
               >
-                Download PDF
+                {t('Download PDF')}
               </a>
             </div>
           </section>
           {frontmatter.updates && frontmatter.updates.length > 0 && (
             <section>
-              <h2 className={styles.sectionTitle}>Updates</h2>
+              <h2 className={styles.sectionTitle}>{t('Updates')}</h2>
               <div className={styles.sectionContent}>
                 <ul className={styles.updates}>
-                  {frontmatter.updates.map((el, i) => {
-                    return (
-                      <li key={`update.${i}`}>
-                        <date>{el.date}</date>
-                        <p>{el.description}</p>
-                      </li>
-                    )
-                  })}
+                  {frontmatter.updates.map((el, i) => (
+                    <li key={`update.${i}`}>
+                      <date>{el.date}</date>
+                      <p>{el.description}</p>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </section>
           )}
           <section>
-            <h2 className={styles.sectionTitle}>Disclosures</h2>
+            <h2 className={styles.sectionTitle}>{t('Disclosures')}</h2>
             <div className={`${styles.disclosures} ${styles.sectionContent}`}>
-              <h3>Content Warning</h3>
-              <p>This learning unit may contain audio-visual material or texts, which may not be suitable for all audiences. </p>
-              <h3>Funding</h3>
+              <h3>{t('Content Warning')}</h3>
+              <p>{t('content_warning_text')}</p>
+              <h3>{t('Funding')}</h3>
+              <p>{t('funding_text')}</p>
+              <h3>{t('External Links')}</h3>
+              <p>{t('external_links_text')}</p>
+              <h3>{t('Preferred Citation')}</h3>
               <p>
-                This Learning Unit was produced with financial assistance from the European Union. The contents of this Learning Unit are however the
-                sole responsibility of the author(s) and should under no circumstances be regarded as reflecting the position of the European Union.
-              </p>
-              <h3>External Links</h3>
-              <p>
-                The site may contain hyperlink text references (’Links’) to other sites that are offered by third parties. These Links are made
-                available solely for the purpose of information and as an additional service for users. Only the respective operator is responsible
-                for all content and statements on linked Internet sites. Therefore, PRIF cannot guarantee the correctness and accuracy or any other
-                aspect of third party sites.
-              </p>
-              <h3>Preferred Citation</h3>
-              <p>
-                {authorsToString(authors)}, "{frontmatter.title}" in EUNPDC eLearning, ed. Niklas Schörnig, Peace Research Institute Frankfurt.
-                Available at {data.site.siteMetadata.siteUrl}
+                {authorsToString(authors)}, "{frontmatter.title}" in EUNPDC eLearning, ed. Niklas Schörnig, Peace Research
+                Institute Frankfurt. Available at {data.site.siteMetadata.siteUrl}
                 {data.post.childMdx.fields.slug}, last modified {data.site.buildTime}
               </p>
-              <h3>Editorial Note</h3>
-              <p>This is a beta version of the learning unit, which is regularly optimised. Please report any factual errors or discrepancies to the publisher. <a href="mailto:support@nonproliferation-elearning.eu">(support(at)nonproliferation-elearning.eu)</a>. Please note that although the original text was written by the authors, the video production and simplifications were carried out by PRIF. </p>
+              <h3>{t('Editorial Note')}</h3>
+              <p>{t('editorial_note_text')}</p>
             </div>
           </section>
         </main>

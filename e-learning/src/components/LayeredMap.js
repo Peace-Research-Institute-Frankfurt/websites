@@ -7,6 +7,7 @@ import CountryStatisticsLayer from './CountryStatisticsLayer'
 import MapLegend from './MapLegend'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
+import { useTranslation } from 'gatsby-plugin-react-i18next'
 import admin0 from '../assets/ne_admin0.json'
 import ExpandIcon from '@shared/assets/expand.svg'
 import CollapseIcon from '@shared/assets/collapse.svg'
@@ -28,6 +29,7 @@ export default function LayeredMap({
   legendPosition = 'top-left',
   expandable,
 }) {
+  const { t } = useTranslation()
   const [isExpanded, setIsExpanded] = useState(false)
   const [lightboxTargetEl, setLightboxTargetEl] = useState(null)
 
@@ -132,7 +134,7 @@ export default function LayeredMap({
               className={styles.expand}
             >
               <ExpandIcon />
-              Expand
+              {t('Expand')}
             </button>
           )}
           <MapLegend children={children} legendPosition={legendPosition} legendTitle={legendTitle} />
@@ -186,7 +188,7 @@ export default function LayeredMap({
                 }}
               >
                 <CollapseIcon />
-                Collapse
+                {t('Collapse')}
               </button>
             </div>
           </div>,

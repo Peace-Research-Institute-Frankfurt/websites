@@ -1,9 +1,11 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
+import { useTranslation } from 'gatsby-plugin-react-i18next'
 import PrintTreatyParticipantGraph from './PrintTreatyParticipantGraph.js'
 import * as styles from './Treaty.module.scss'
 
 export default function PrintTreaty({ name }) {
+  const { t } = useTranslation()
   const data = useStaticQuery(graphql`
     query treatyQuery {
       countries: allCountriesJson {
@@ -83,15 +85,15 @@ export default function PrintTreaty({ name }) {
       <svg preserveAspectRatio="none" className="asideBackdrop" width={100} height={100} viewBox="0 0 100 100">
         <rect x={0} y={0} width={100} height={100} />
       </svg>
-      <span className="eyebrow">Treaty</span>
+      <span className="eyebrow">{t('Treaty')}</span>
       <h2 className={styles.title}>{treaty.shortTitle || treaty.title}</h2>
       <ul className="chipGroup">
-        {treaty.date && <li>Effective {treaty.date}</li>}
+        {treaty.date && <li>{t('treaty.effective')} {treaty.date}</li>}
         {treaty.legalStatus && <li>{treaty.legalStatus}</li>}
-        <li>{memberCount} Member States</li>
+        <li>{memberCount} {t('treaty.memberStates')}</li>
       </ul>
       <p className={styles.description}>{treaty.description}</p>
-      <h3 className={styles.subtitle}>Current Adoption</h3>
+      <h3 className={styles.subtitle}>{t('treaty.currentAdoption')}</h3>
       <PrintTreatyParticipantGraph treaty={treaty} candidates={data.countries.nodes} />
     </aside>
   )
